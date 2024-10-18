@@ -1,3 +1,4 @@
+@use '../core/all' as *;
 .swiper-wrapper > .swiper-slide:not(.swiper-slide-active) {
 	.main-slide__title {
 		transition: opacity 0.9s ease-in-out;

@@ -1,3 +1,4 @@
+@use '../core/all' as *;
 .menu-float {
 	display: none;
 	color: #fff;
@@ -9,11 +10,9 @@
 	opacity: 1;
 	pointer-events: none;
 	transition: all 0.3s ease-in-out;
-	z-index: 9;
-	pointer-events: none;
 	z-index: 12;
 
-	@include _920 {
+	@include screen-920 {
 		display: block;
 	}
 
@@ -62,6 +61,7 @@
 	&__top {
 		overflow: hidden;
 		@extend .is-open;
+
 		&._is-open {
 			.main-menu__column {
 				&:nth-child(1) {
@@ -124,7 +124,7 @@
 		i {
 			font-size: 2rem;
 		}
-		@include _425 {
+		@include screen-425 {
 			display: block;
 		}
 	}
@@ -133,7 +133,7 @@
 	&__breadcrumb {
 		font-family: IrmCIEUcs, sans-serif;
 		letter-spacing: 4px;
-		@include _425 {
+		@include screen-425 {
 			display: none;
 		}
 	}
@@ -178,7 +178,7 @@
 	&__layout--primary {
 		.menu-float__content {
 			background-color: $color;
-			@include _425 {
+			@include screen-425 {
 				width: 5rem;
 			}
 		}
@@ -189,7 +189,7 @@
 		flex: 1 1 auto;
 		.menu-float__content {
 			background-color: #0f0b1af6;
-			@include _425 {
+			@include screen-425 {
 				font-size: 1.2rem;
 			}
 		}
@@ -251,7 +251,6 @@
 			1.5rem Roboto,
 			sans-serif;
 		font-weight: 300;
-		font-size: 1.5rem;
 		white-space: nowrap;
 		&:not(:last-child) {
 			margin-bottom: 1rem;

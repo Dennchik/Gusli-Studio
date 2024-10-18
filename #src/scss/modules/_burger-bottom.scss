@@ -1,10 +1,12 @@
+@use '../core/mixins.scss' as*;
+@use '../core/variables.scss' as*;
 .burger-bottom {
 	position: sticky;
-	top: 0rem;
+	top: 0;
 	flex: 0;
 	left: 0;
 	transform: translateX(var(--mob-hidden-width));
-	@include _min-768 {
+	@include screen-768 {
 		display: none;
 	}
 	&__items {

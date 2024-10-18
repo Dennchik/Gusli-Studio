@@ -11,9 +11,8 @@ export function fontsStyle(done) {
 			console.error(`Ошибка при чтении файла: ${filePath}`, err);
 			return done();
 		}
-		//? Очищаем содержимое файла
-		fs.writeFile(filePath, '', cb);
-
+		//? Очищаем содержимое файла и добавляем строку импорта 
+		fs.writeFile(filePath, '@use "variables.scss" as *;\r\n@use "mixins.scss" as *;\r\n', cb);
 		//? Чтение директории со шрифтами
 		fs.readdir($.path.fontsStyle.dest, (err, items) => {
 			if (err) {

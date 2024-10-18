@@ -1,9 +1,12 @@
+@use 'variables' as *;
+@use 'mixins.scss' as *;
+@use 'extend.scss' as *;
 html {
 	font: {
 		style: normal;
 		size: 62.5%;
-		weight: $font-weight-defoult;
-		family: $font-defoult;
+		weight: $font-weight-default;
+		family: $font-default;
 	}
 	height: 100%;
 	// overflow-x: hidden;
@@ -13,7 +16,7 @@ html {
 	letter-spacing: 1.7px;
 	// user-select: none;
 
-	@include _1024 {
+	@include screen-1024 {
 		font-size: 50%;
 	}
 }
@@ -24,13 +27,14 @@ body {
 	font:
 		1.6rem/1.6 Roboto,
 		sans-serif;
-	@include _1024 {
+
+	@include screen-1024 {
 		font:
 			1.8rem/1.6 Roboto,
 			sans-serif;
 	}
 
-	@include _320 {
+	@include screen-320 {
 		font:
 			1rem/1.6 Roboto,
 			sans-serif;
@@ -38,8 +42,8 @@ body {
 }
 
 * {
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
 	border: none;
 	box-sizing: border-box;
 	scrollbar-width: none;
@@ -86,8 +90,7 @@ button,
 input[type='submit'] {
 	display: inline-block;
 	box-shadow: none;
-	background-color: transparent;
-	background: none;
+	background: transparent none;
 	cursor: pointer;
 }
 

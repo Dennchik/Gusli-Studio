@@ -2,26 +2,28 @@ import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { createRoot } from 'react-dom/client';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 // import { Link } from 'react-scroll';
-// -------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // import {
 // 	initSectionTriggerMove
 // } from '../animations/animation-index.jsx';
-// -------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 const baseUrl = '..';
-//* ------------------------------------- Components------------------------------------------------
+//* ---------------------------- Components-------------------------------------
 import { Header } from '../layouts/Header.jsx';
-import Footer from '../layouts/Footer.jsx';
-import Menufloat from '../components/Menu-float.jsx';
-//* ------------------------------------- Header ---------------------------------------------------
+import { Achievements } from '../components/Achievements.jsx';
+import { Footer } from '../layouts/Footer.jsx';
+// import { MenuFloat } from '../components/Menu-float.jsx';
+//* ---------------------------- Header ----------------------------------------
 createRoot(document.querySelector('.page__header')).render(<Header
-	baseUrl={baseUrl} />);
-//* ------------------------------------- About ----------------------------------------------------
-// /**
-//  * Компонент Header.
-//  * @param {{ baseUrl: string }} props - Объект пропсов.
-//  */
+	baseUrl={baseUrl}/>);
+//* ---------------------------- About -----------------------------------------
+/**
+ * Компонент Header.
+ // * @param {{ baseUrl: string }} props - Объект пропсов.
+ */
 const About = () => {
-	const [isContentExpanded, setIsContentExpanded] = useState(window.innerWidth > 920);
+	const [isContentExpanded, setIsContentExpanded] = useState(
+		window.innerWidth > 920);
 	const toggleButtonRef = useRef(null);
 	const textBlockRef = useRef(null);
 	const hideBoxRef = useRef(null);
@@ -76,29 +78,35 @@ const About = () => {
 	};
 
 	return (
-		<div className="about" id='about'>
+		<div className="about"
+		     id='about'>
 			<div className="about__bg-image _ibg">
 				<picture>
 					{isWebpSupported()
-						? <img src={getPath('../img/about/ab-img-01.webp')} alt="image"
-							type="image/webp" />
-						: <img src={getPath('../img/about/ab-img-01.png')} alt="image" />}
+						? <img src={getPath('img/about/ab-img-01.webp')}
+						       alt="image"
+						       type="image/webp"/>
+						: <img src={getPath('img/about/ab-img-01.png')}
+						       alt="image"/>}
 				</picture>
 			</div>
 			<div className="about__container">
 				<div className="content-body about__content">
 					{/* <div className="content-body__column"></div> */}
 					<div className="content-body__column">
-						<div ref={textBlockRef} className="content-body__text">
+						<div ref={textBlockRef}
+						     className="content-body__text">
 							<h1 className="content-body__title">В нашей студии:</h1>
 							<p>- описав свой проект, Вы получаете уникальные предложения от
 								ведущих профессионалов. Наймите именно того специалиста, который
 								идеально подходит для воплощения вашей музыкальной идеи!
-								<span ref={toggleButtonRef} className="content-body__icon">
+								<span ref={toggleButtonRef}
+								      className="content-body__icon">
 									<i className="content-body__ellipsis"></i>
 								</span>
 							</p>
-							<div ref={hideBoxRef} className="content-body__hide-box">
+							<div ref={hideBoxRef}
+							     className="content-body__hide-box">
 								<div className="content-body__wrapper">
 									<span>- мы понимаем, что талант без правильного оборудования
 										может оставаться скрытым. Именно поэтому мы предлагаем все
@@ -119,79 +127,16 @@ const About = () => {
 		</div>
 	);
 };
-// ----------------------------- Achievements ----------------------------------
-const Achievements = () => {
-	useEffect(() => {
-
-	});
-	return (
-		<div className="achieve-items" id='achieve'>
-			<div className="achieve-items__body">
-				<div className="achieve-items__bg-image _ibg">
-					<picture>
-						{isWebpSupported()
-							? <img src={'../img/about/achieve/pattern-11.webp'} alt="image"
-								type="image/webp" />
-							: <img src={'../img/about/achieve/pattern-11.png'} alt="image" />}
-					</picture>
-				</div>
-				<div className="achieve-items__wrapper">
-					<div className="achieve-items__item">
-						<div className="achieve-items__image _ibg">
-							<picture>
-								{isWebpSupported()
-									?
-									<img src={'../img/about/slide/sert1.webp'} alt="image"
-										type="image/webp" />
-									: <img src={'../img/about/slide/sert1.png'} alt="image" />}
-							</picture>
-						</div>
-					</div>
-					{/* <div className="achieve-items__image">
-						<picture>
-							{isWebpSupported()
-								? <img src="../img/about/slide/sert2.webp" type="image/webp" />
-								: <img src="../img/about/slide/sert2.png" alt="image" />}
-						</picture>
-					</div>
-					<div className="achieve-items__image">
-						<picture>
-							{isWebpSupported()
-								? <img src="../img/about/slide/sert3.webp" type="image/webp" />
-								: <img src="../img/about/slide/sert3.png" alt="image" />}
-						</picture>
-					</div>
-					<div className="achieve-items__image">
-						<picture>
-							{isWebpSupported()
-								? <img src="../img/about/slide/sert4.webp" type="image/webp" />
-								: <img src="../img/about/slide/sert4.png" alt="image" />}
-						</picture>
-					</div>
-					<div className="achieve-items__image">
-						<picture>
-							{isWebpSupported()
-								? <img src="../img/about/slide/sert5.webp" type="image/webp" />
-								: <img src="../img/about/slide/sert5.png" alt="image" />}
-						</picture>
-					</div> */}
-				</div>
-				{/* <div class="achieve-items__new-container">new container</div> */}
-			</div>
-		</div>
-	);
-};
-
-// -----------------------------------------------------------------------------
-createRoot(document.querySelector('.main-content__about')).render(<About />);
-// -----------------------------------------------------------------------------
+//* ----------------------------------------------------------------------------
+createRoot(document.querySelector('.main-content__about')).render(
+	<About baseUrl={baseUrl}/>);
+//* ----------------------------------------------------------------------------
 createRoot(document.querySelector('.main-content__achievements')).render(
-	<Achievements />);
-// -------------------------------------- Footer
-// ---------------------------------------------------
-createRoot(document.querySelector('.main-content__footer')).render(<Footer
-	baseUrl={baseUrl} />);
-// -------------------------------------- Menufloat
-// ------------------------------------------------
-createRoot(document.querySelector('.page__menu-float')).render(<Menufloat />);
-// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	<Achievements/>);
+//* ----------------------------------------------------------------------------
+createRoot(document.querySelector('.main-content__footer')).render(
+	<Footer baseUrl={baseUrl}/>);
+//* ---------------------------- Menufloat -------------------------------------
+// createRoot(document.querySelector('.page__menu-float')).render(
+// 	<MenuFloat/>);
+//* ----------------------------------------------------------------------------

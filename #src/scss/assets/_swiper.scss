@@ -1,4 +1,4 @@
-@import './core/swiper-vars.scss';
+@use '../core/all' as *;
 @at-root {
 	@font-face {
 		font-family: 'swiper-icons';

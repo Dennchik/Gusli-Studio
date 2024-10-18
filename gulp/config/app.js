@@ -80,6 +80,8 @@ export const app = {
 			minimizer: [
 				new TerserPlugin({
 					terserOptions: {
+						keep_fnames: true, // сохраняем имена функций
+						keep_classnames: true, // сохраняем имена классов
 						format: {
 							comments: false,
 						},
@@ -93,7 +95,7 @@ export const app = {
 			'home-components': { import: ['./#src/js/app/MainComponents.jsx'], dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'] },
 
 			'about-components': { import: ['./#src/js/app/AboutComponents.jsx'], dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'] },
-			//* depend On - vendors
+			//! depend On - vendors
 			'react-vendors': ['react', 'react-dom', 'prop-types'],
 			'anime-vendors': ['gsap', 'animejs', 'gsap/ScrollSmoother', 'gsap/ScrollTrigger'],
 			'swiper-bundle': ['swiper/bundle']
@@ -104,13 +106,18 @@ export const app = {
 		output: {
 			filename: '[name].min.js',
 		},
-
+		devtool: 'source-map',
 		module: {
 			rules: [
 				{
 					test: /\.(js|jsx)$/,
 					exclude: /node_modules/,
-					use: ['babel-loader'],
+					use: {
+						loader: 'babel-loader', // преобразуем JSX в обычный JS
+						options: {
+							presets: ['@babel/preset-react', '@babel/preset-env'],
+						},
+					},
 				},
 				{
 					test: /\.css$/,
@@ -143,7 +150,9 @@ export const app = {
 				}
 			],
 		},
-
+		resolve: {
+			extensions: ['.js', '.jsx'], // разрешаем импорт файлов с расширениями .js и .jsx
+		},
 	},
 	scss: {
 		outputStyle: 'expanded'
@@ -175,7 +184,9 @@ export const app = {
 		]
 	},
 	fonter: {
-		formats: ['ttf', 'woff', 'eot', 'svg'],
+		// formats: ['ttf', 'woff', 'eot', 'svg'],
+
+		formats: ['ttf', 'woff', 'svg'],
 	},
 	svgMin: {
 		js2svg: {

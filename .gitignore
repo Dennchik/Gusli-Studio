@@ -2,7 +2,7 @@
 /.idea
 .idea
 /.vscode
-/Temp
+/Temp 
 .vscode
 node_modules
 desktop.ini

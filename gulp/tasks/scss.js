@@ -3,11 +3,11 @@ import autoprefixer from 'gulp-autoprefixer';
 import csso from 'gulp-csso';
 import postcss from 'gulp-postcss';
 import rename from 'gulp-rename';
-import gulpSass from 'gulp-sass';
+// import gulpSass from 'gulp-sass';
 import combineMediaQuery from 'postcss-combine-media-query';
-import * as dartSass from 'sass';
-const sass = gulpSass(dartSass);
-
+// import * as dartSass from 'sass';
+// const sass = gulpSass(dartSass);
+import sass from 'gulp-dart-sass';
 //* Task for compiling SCSS files to CSS files
 export function scss() {
 	return $.gulp.src($.path.scss.src)
@@ -42,5 +42,5 @@ export function scss() {
 		.pipe($.gulpIf($.app.isDev, $.debug({
 			title: ' (WRITE Source-Maps)'
 		})))
-		.pipe($.gulpIf($.app.isDev, $.gulp.dest($.path.scss.dest)));
+		.pipe($.gulp.dest($.path.scss.dest));
 }

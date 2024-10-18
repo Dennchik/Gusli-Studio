@@ -36,7 +36,7 @@
 	}
 
 	// .main-content__list
-	&__list
+	&__list{}
 
 	// .main-content__items 
 	&__items {
@@ -113,7 +113,7 @@
 		overflow: visible;
 	}
 
-	// .main-content__rellax-wrappe
+	// .main-content__rellax-wrapper
 	&__rellax-wrapper {
 		min-height: 0;
 	}
@@ -125,7 +125,7 @@
 		@include flex-justify-center;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		@include _768 {
+		@include screen-768 {
 			grid-template-columns: 1fr;
 			flex-direction: column;
 		}

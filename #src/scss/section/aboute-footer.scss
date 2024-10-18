@@ -1,14 +1,15 @@
+@use '../core/all' as *;
 .about {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	width: 100%;
 	gap: 4rem;
 	padding-top: 4rem;
-	@include _690-920 {
+	@include minmax-690-920 {
 		grid-template-columns: 1fr 1fr;
 	}
 
-	@include _690 {
+	@include screen-690 {
 		grid-template-columns: auto;
 	}
 
@@ -20,7 +21,7 @@
 
 		&:nth-child(3) {
 			height: 100%;
-			@include _690-920 {
+			@include minmax-690-920 {
 				grid-column: -3 / -1;
 			}
 			.about__body {

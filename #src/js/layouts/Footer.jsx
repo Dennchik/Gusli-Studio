@@ -1,28 +1,23 @@
 import React, { useEffect } from 'react';
-// -------------------------------------------------------------------------------------------------
-import isMobile from '../libraries/Js-devise.js';
-// -------------------------------------------------------------------------------------------------
-const baseUrl = '..';
-
+import { Element } from 'react-scroll';
 import { tlFooterParallel } from '../animations/animation-index.jsx';
-// -------------------------------------------------------------------------------------------------
-import AboutCompany from '../components/AboutCompany.jsx';
+import { Members } from '../components/Members.jsx';
 
-const Footer = () => {
+// -----------------------------------------------------------------------------
+const baseUrl = '.';
 
+export const Footer = () => {
 	useEffect(() => {
-		if (isMobile.any()) {
-			// console.log();
-
-		} else {
+		const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+		if (!isMobile) {
 			tlFooterParallel();
 		}
 	});
 	return (
-		<footer className='footer' name='footer'>
+		<Element className='footer' name="contacts">
 			<div className="footer__content">
 				<div className="footer__info _container">
-					<AboutCompany baseUrl={baseUrl} />
+					<Members baseUrl={baseUrl}/>
 					<div className="footer__help el-4">
 						<i className='icon-achievements'></i>
 						<i className='icon-services'></i>
@@ -61,32 +56,41 @@ const Footer = () => {
 					<div className="community__items">
 						<div className="community__title">
 							<span>Media-Studio GROUP ©  2024.</span>
-							<a className='community__link' href="">Privacy Policy.
+							<a className='community__link'
+							   href="">Privacy Policy.
 								<i className='icon-angles-right-solid'></i>
 							</a>
 						</div>
 						<div className="community__icons">
 							<div className="community__icon">
-								<a className="wa" title="WhatsApp" target="blank"
-									href="https://wa.me/79106044424">
+								<a className="wa"
+								   title="WhatsApp"
+								   target="blank"
+								   href="https://wa.me/79106044424">
 									<i className="icon-whatsapp"></i>
 								</a>
 							</div>
 							<div className="community__icon">
-								<a className="wa" title="VK" target="blank"
-									href="https://vk.com/studio_gusli">
+								<a className="wa"
+								   title="VK"
+								   target="blank"
+								   href="https://vk.com/studio_gusli">
 									<i className="icon-vk-brand"></i>
 								</a>
 							</div>
 							<div className="community__icon">
-								<a className="wa" title="TG" target="blank"
-									href="https://t.me/gusli_studio">
+								<a className="wa"
+								   title="TG"
+								   target="blank"
+								   href="https://t.me/gusli_studio">
 									<i className="icon-telegram-fly"></i>
 								</a>
 							</div>
 							<div className="community__icon">
-								<a className="wa" title="youtube" target="blank"
-									href="https://youtube.com/@guslistudio6257?si=36fe20TYpLAJyB3m">
+								<a className="wa"
+								   title="youtube"
+								   target="blank"
+								   href="https://youtube.com/@guslistudio6257?si=36fe20TYpLAJyB3m">
 									<i className="icon-youtube-logo"></i>
 								</a>
 							</div>
@@ -94,7 +98,6 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-		</footer>
+		</Element>
 	);
 };
-export default Footer;  

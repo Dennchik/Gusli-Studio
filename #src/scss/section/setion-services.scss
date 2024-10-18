@@ -1,3 +1,4 @@
+@use '../core/all' as *;
 .services {
 	// .services__body
 	&__body {
@@ -24,7 +25,6 @@
 		padding: 0 5rem 2rem;
 		z-index: 9;
 		//! ------------------------------------------------------------------------
-
 		filter: $filter;
 		// ------------------------------------------------------------------------
 		&::before {
@@ -35,8 +35,6 @@
 			top: 0;
 			left: 0;
 			z-index: -1;
-			// border-radius: 50%;
-			// @extend .gradient-title;
 		}
 
 		&:nth-child(1) {
@@ -44,10 +42,12 @@
 			transform-style: preserve-3d;
 			perspective: 100px;
 			margin-top: 6rem;
-			@include _690 {
+
+			@include screen-690 {
 				font-size: 5.1rem;
 			}
-			@include _425 {
+
+			@include screen-425 {
 				font-size: 3.4rem;
 				margin-top: 4rem;
 			}
@@ -63,9 +63,6 @@
 				height: 70%;
 				font: {
 					weight: 900;
-				}
-				@include _425 {
-					// padding: 0 5.5rem;
 				}
 				transform: rotateX(15deg) translateZ(-11px);
 				@extend .shadow-after;
@@ -132,7 +129,8 @@
 		gap: 2.5rem;
 		display: flex;
 		justify-content: space-between;
-		@include _490 {
+
+		@include screen-490 {
 			margin: 6rem 1.5rem;
 		}
 	}
@@ -285,21 +283,21 @@
 		letter-spacing: 0;
 		color: $neon-blue;
 		z-index: 9;
-		@include _690 {
-			font-size: 2.6rem;
-		}
-		@include _490 {
-			font-size: 2.2rem;
-			padding: 0 2rem 2rem;
-			margin: 0 6rem 6rem;
-			line-height: 120%;
-		}
 		//! ------------------------------------------------------------------------
 		perspective-origin: 45% 320%;
 		transform-style: preserve-3d;
 		perspective: 100px;
 		filter: $filter;
-		//! ------------------------------------------------------------------------
+
+		@include screen-690 {
+			font-size: 2.6rem;
+		}
+		@include screen-490 {
+			font-size: 2.2rem;
+			padding: 0 2rem 2rem;
+			margin: 0 6rem 6rem;
+			line-height: 120%;
+		}
 
 		&::before {
 			content: '';
@@ -336,7 +334,8 @@
 		grid-template-rows: auto auto;
 		gap: 2rem;
 		height: 100%;
-		@include _690 {
+
+		@include screen-690 {
 			grid-template-columns: 1fr;
 		}
 	}
@@ -355,6 +354,7 @@
 		filter: $filter;
 		z-index: 9;
 		@extend .gradient-spec;
+
 		&:hover {
 			.offer-container__thumbnail {
 				opacity: 1;
@@ -379,12 +379,12 @@
 		pointer-events: none;
 		inset: 0;
 		transition: all 0.7s ease-in-out;
+		background: linear-gradient(-45deg, #04d9ff81, #170e3181 83%);
+		background-size: 200% 200%;
 		&::before {
 			content: '';
 			@extend .border-present;
 		}
-		background: linear-gradient(-45deg, #04d9ff81, #170e3181 83%);
-		background-size: 200% 200%;
 	}
 
 	// .offer-container__link
@@ -424,7 +424,7 @@
 				}
 			}
 
-			@include _425 {
+			@include screen-425 {
 				font-size: 2rem;
 			}
 		}
@@ -434,7 +434,8 @@
 	&__text {
 		color: gray;
 		font-size: 1.8rem;
-		@include _425 {
+
+		@include screen-425 {
 			font-size: 1.6rem;
 		}
 	}

@@ -3,28 +3,30 @@ import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 // import { Flip } from 'gsap/Flip';
-// -----------------------------------------------------------------------------
+//* ----------------------------------------------------------------------------
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
-ScrollTrigger.config({ ignoreMobileResize: true });
+ScrollTrigger.config({ignoreMobileResize: true});
 // ScrollTrigger.normalizeScroll(true); 
-// -----------------------------------------------------------------------------
+//* ----------------------------------------------------------------------------
 // Check if the device is mobile 
 const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 export let smoother;
-//todo: Устанавливаем плавную прокрутку страницы 
+
+//* Устанавливаем плавную прокрутку страницы
 if (!isMobile) {
 	smoother = ScrollSmoother.create({
 		wrapper: '#wrapper',
 		content: '#content',
-		smooth: 2,
+		smooth: 1,
 		effects: true,
 		normalizeScroll: true,
-		ignoreMobile: true,
+		// ignoreMobile: true,
 	});
 }
-// -----------------------------------------------------------------------------
+
+//* ----------------------------------------------------------------------------
 export function applyEffects(smoother) {
-	smoother.effects(".content-box__column", {
+	smoother.effects('.content-box__column', {
 		speed: (i) => {
 			// Desktop three columns layout
 			if (window.matchMedia('(min-width:730)').matches) {
@@ -38,8 +40,7 @@ export function applyEffects(smoother) {
 	});
 }
 
-// -----------------------------------------------------------------------------
-//todo: Секция "Parallax Effects".
+//* ----------------------- Секция "Parallax Effects" --------------------------
 export function applyParallaxEffects(smoother, element) {
 
 	if (smoother) {
@@ -51,7 +52,7 @@ export function applyParallaxEffects(smoother, element) {
 	}
 }
 
-// -----------------------------------------------------------------------------
+//* ----------------------------------------------------------------------------
 export function animateTitles(element, trigger, endTrigger, start, end) {
 	gsap.from(element, {
 		y: 150,
@@ -68,25 +69,26 @@ export function animateTitles(element, trigger, endTrigger, start, end) {
 	});
 }
 
-// -----------------------------------------------------------------------------
-//todo: Секция "#main-slide".
+//* Секция "#main-slide".
 export function initSectionTriggerMove(trigger, targets) {
 	ScrollTrigger.create({
 		trigger: trigger,
-		//*Начинаем событие, когда верхняя граница элемента-1 находится на 100px ниже верха окна браузера
-		start: "top center",
-		endTrigger: trigger, // Конец события - конец документа
-		//*Закончить событие, когда верхняя граница элемента 1 достигнет верха окна браузера
-		end: "bottom center",
+		/* Начинаем событие, когда верхняя граница элемента-1 находится на 100px
+    ниже верха окна браузера*/
+		start: 'top center',
+		endTrigger: trigger, //* Конец события - конец документа
+		/*Конец событие когда верхняя граница элемента 1 достигнет верха окна
+		 браузера*/
+		end: 'bottom center',
 		toggleClass: {
 			targets: targets,
-			className: "active"
+			className: 'active'
 		},
 		// markers: true
 	});
 }
 
-// -----------------------------------------------------------------------------
+//* ----------------------------------------------------------------------------
 export function tlFooterParallel() {
 	const tlFooter = gsap.timeline({
 		scrollTrigger: {
@@ -95,7 +97,6 @@ export function tlFooterParallel() {
 			endTrigger: '.footer',
 			end: 'bottom bottom',
 			scrub: 0.1,
-			ease: 'linear',
 			toggleActions: 'play none none reverse',
 			// markers: true,
 		}
@@ -104,6 +105,7 @@ export function tlFooterParallel() {
 		x: -250,
 		duration: 1,
 		opacity: 0,
+		ease: 'linear',
 	});
 
 	tlFooter.from('.el-2', {
@@ -111,6 +113,7 @@ export function tlFooterParallel() {
 		y: window.innerWidth > 680 ? 150 : 0,
 		duration: 1,
 		opacity: 0,
+		ease: 'linear',
 	}, '-=1');
 
 	tlFooter.from('.el-3', {
@@ -138,7 +141,7 @@ export function tlFooterParallel() {
 	}, '-=1');
 }
 
-// -----------------------------------------------------------------------------
+//* ----------------------------------------------------------------------------
 export function tlServices1() {
 	const tlServices1 = gsap.timeline({
 		scrollTrigger: {
@@ -147,7 +150,6 @@ export function tlServices1() {
 			endTrigger: '.services__offer',
 			end: 'bottom center+=300',
 			scrub: 1,
-			ease: 'linear',
 			toggleActions: 'play none none reverse',
 			// markers: true,
 		}
@@ -156,6 +158,7 @@ export function tlServices1() {
 		x: -150,
 		duration: 1,
 		opacity: 0,
+		ease: 'linear',
 	});
 	tlServices1.from('.sr-2', {
 		x: 150,
@@ -164,7 +167,7 @@ export function tlServices1() {
 	}, '-=1');
 }
 
-// -----------------------------------------------------------------------------
+//* ----------------------------------------------------------------------------
 export function tlServices2() {
 	const tlServices2 = gsap.timeline({
 		scrollTrigger: {
@@ -173,7 +176,6 @@ export function tlServices2() {
 			endTrigger: '.services__offer',
 			end: 'bottom center+=150',
 			scrub: 1,
-			ease: 'linear',
 			toggleActions: 'play none none reverse',
 			// markers: true,
 		}
@@ -182,10 +184,12 @@ export function tlServices2() {
 		x: -150,
 		duration: 1,
 		opacity: 0,
+		ease: 'linear',
 	});
 	tlServices2.from('.sr-4', {
 		x: 150,
 		duration: 1,
 		opacity: 0,
+		ease: 'linear',
 	}, '-=1');
 }
