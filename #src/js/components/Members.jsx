@@ -64,7 +64,7 @@ export const Members = ({baseUrl}) => {
 						<ul className="team-mates__list">
 							<li>
 								<div className="team-mates__image">
-									<img src={getPath('img/footer/team-1.png')}
+									<img src={getPath('@@webRoot/img/footer/team-1.png')}
 									     alt="image"/>
 								</div>
 							</li>
