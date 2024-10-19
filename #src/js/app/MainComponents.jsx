@@ -23,4 +23,4 @@ createRoot(document.querySelector('.main-content__footer')).render(
 //* -------------------------------------- Menufloat ---------------------------
 createRoot(document.querySelector('.page__menu-float')).render(
 	<MenuFloat baseUrl={baseUrl}/>);
-// -----------------------------------------------------------------------------
+//* ----------------------------------------------------------------------------

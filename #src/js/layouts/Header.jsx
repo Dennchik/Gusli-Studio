@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'; 
+import React, { useEffect } from 'react';
 import { timeLineHeaderItem } from '../animations/anime-js.jsx';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 import PropTypes from 'prop-types';
-import { Link,animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 export const Header = ({baseUrl}) => {
-	// Именованная функция для обработки скроллинга
+	//* Именованная функция для обработки скроллинга
 	const handleScroll = () => {
 		const header = document.querySelector('.header');
 		const mainContent = document.querySelector(
@@ -39,14 +39,7 @@ export const Header = ({baseUrl}) => {
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
 	};
-	const customScroll = () => {
-		scroll.scrollTo('contacts', {
-			// duration: 1000,
-			// delay: 0,
-			smooth: 'easeInQuad', // Здесь задаём easing-функцию
-			// offset: -100,
-		});
-	};
+
 	return (
 		<div className="header">
 			<div className="header__container">
@@ -74,14 +67,13 @@ export const Header = ({baseUrl}) => {
 							<i className="icon-home"></i>
 						</a>
 						<div className="header__item header__item--services">
-							<Link className="link-key key-services" href={'#services'}
-								// activeClass="active"
-								    to="services"
-								    // duration={1000}
-							      // spy={true}
-								    // smooth={true}
-							      // offset={-100}
-								onSetActive={handleSetActive}
+							<Link className="link-key key-services"
+							      to="services"
+							      duration={1000}
+								// spy={true}
+								    offset={-100}
+								    smooth='easeInQuad'
+								    onSetActive={handleSetActive}
 							>
 								<span>Услуги</span>
 							</Link>
@@ -98,13 +90,12 @@ export const Header = ({baseUrl}) => {
 							<a href={getPath('')}>Новости</a>
 						</div>
 						<div className="header__item header__item--contacts">
-							<Link className="link-key key-services" href={'#contacts'}
+							<Link className="link-key key-services"
 							      to="footer"
 							      duration={1000}
-							      spy={true}
-							      offset={-100}
-							      smooth={true} // Используем стандартное плавное поведение
-							      onClick={customScroll} // Вешаем кастомную функцию на onClick
+								// spy={true}
+								    offset={-100}
+								    smooth='easeInQuad'
 							>
 								<span>Контакты</span>
 							</Link>

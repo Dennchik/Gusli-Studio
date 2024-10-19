@@ -82,7 +82,7 @@ export function initSectionTriggerMove(trigger, targets) {
 		end: 'bottom center',
 		toggleClass: {
 			targets: targets,
-			className: 'active'
+			className: '_active'
 		},
 		// markers: true
 	});

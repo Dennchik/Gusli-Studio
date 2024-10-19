@@ -92,13 +92,30 @@ export const app = {
 			runtimeChunk: 'single',
 		},
 		entry: {
-			'home-components': { import: ['./#src/js/app/MainComponents.jsx'], dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'] },
+			'home-components': {
+				import: ['./#src/js/app/MainComponents.jsx'],
+				dependOn: [
+					'react-vendors',
+					'anime-vendors',
+					'swiper-bundle'
+				]
+			},
 
-			'about-components': { import: ['./#src/js/app/AboutComponents.jsx'], dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'] },
+			'about-components': {
+				import: ['./#src/js/app/AboutComponents.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors']
+			},
 			//! depend On - vendors
 			'react-vendors': ['react', 'react-dom', 'prop-types'],
-			'anime-vendors': ['gsap', 'animejs', 'gsap/ScrollSmoother', 'gsap/ScrollTrigger'],
-			'swiper-bundle': ['swiper/bundle']
+			'anime-vendors': [
+				'gsap',
+				'animejs',
+				'gsap/ScrollSmoother',
+				'gsap/ScrollTrigger'
+			],
+			'swiper-bundle': [
+				'swiper/bundle'
+			]
 
 			// dependOn: 'shared',
 			// shared: 'lodash',
@@ -151,7 +168,8 @@ export const app = {
 			],
 		},
 		resolve: {
-			extensions: ['.js', '.jsx'], // разрешаем импорт файлов с расширениями .js и .jsx
+			extensions: ['.js', '.jsx'], // разрешаем импорт файлов с расширениями
+		                               // .js и .jsx
 		},
 	},
 	scss: {
@@ -200,7 +218,7 @@ export const app = {
 			$('[stroke]').removeAttr('stroke');
 			$('[style]').removeAttr('style');
 		},
-		parserOptions: { xmlMode: true }
+		parserOptions: {xmlMode: true}
 	},
 	svgSprite: {
 		shape: {
@@ -236,17 +254,17 @@ export const app = {
 	imageMin: ([
 		svgo({
 			plugins: [
-				{ optimizationLevel: 5 },
-				{ progessive: true },
-				{ interlaced: true },
-				{ removeViewBox: false },
-				{ removeUselessStrokeAndFill: false },
-				{ cleanupIDs: false }
+				{optimizationLevel: 5},
+				{progessive: true},
+				{interlaced: true},
+				{removeViewBox: false},
+				{removeUselessStrokeAndFill: false},
+				{cleanupIDs: false}
 			],
 		}),
-		gifsicle({ interlaced: true }),
-		optipng({ optimizationLevel: 3 }),
-		mozjpeg({ quality: 75, progressive: true }),
+		gifsicle({interlaced: true}),
+		optipng({optimizationLevel: 3}),
+		mozjpeg({quality: 75, progressive: true}),
 	]),
 	include: {
 		prefix: '@@',

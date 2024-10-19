@@ -1,13 +1,13 @@
 extends ../layouts/app_layout
-append link 
-	link(rel="stylesheet" type="text/css" href="@@webRoot/css/index.min.css")
-prepend script 
+prepend script
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/runtime.min.js")
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/anime-vendors.min.js")
-	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/react-vendors.min.js")
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/swiper-bundle.min.js")
+	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/react-vendors.min.js")
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/home-components.min.js")
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/index.min.js")
+append link
+	link(rel="stylesheet" type="text/css" href="@@webRoot/css/index.min.css")
 block title
 	- var text='Студия звукозаписи "Gusli" Обнинск'
 
@@ -16,7 +16,7 @@ block page-content
 		block header
 			header._header
 		._main-content
-			block main-content 
+			block main-content
 				main.main-content#wrapper
 					._content#content
 						block section
@@ -25,6 +25,6 @@ block page-content
 						block footer
 							footer._footer#footer
 				._menu-float
-		block button 
+		block button
 			._aside#scrollButton
 				+iconfont('angle-down', '_button')

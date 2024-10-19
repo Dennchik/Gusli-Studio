@@ -1,23 +1,23 @@
 //todo ---------------------------- Core ---------------------------------------
-@use 'core/all.scss' as *; // Используем файл для перенаправления
+@use 'core/all.scss' as *;
 // todo --------------------------- Modules ------------------------------------
 @use 'modules/preloader';
 // @use 'modules/breadcrumbs';
 // todo --------------------------- Assets -------------------------------------
-@use './assets/burger-button';
+@use 'assets/burger-button';
 @use 'assets/button';
+@use 'assets/menu-float';
 // todo --------------------------- layout -------------------------------------
 @use 'layouts/bem-block';
 @use 'layouts/header';
 @use 'layouts/footer';
 // todo --------------------------- Fonts --------------------------------------
 @use 'core/_fonts.scss';
-//todo  ------------------------ Icon Fonts ------------------------------------
+//todo  --------------------------- Icon Fonts ---------------------------------
 @use 'core/_iconfonts.scss';
-// todo -------------------------- Plugins -------------------------------------
+// todo --------------------------- Plugins ------------------------------------
 @use 'assets/swiper';
-
-//todo ------------------------- Default fonts ---------------------------------
+//todo ---------------------------- Default fonts ------------------------------
 // &display=swap&subset=cyrillic-ext
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap&subset=cyrillic-ext');
 // todo -------------------------- Classes -------------------------------------

@@ -1,4 +1,5 @@
 @use '../core/all' as *;
+
 .header {
 	position: relative;
 	width: 100%;
@@ -83,7 +84,7 @@
 			font-weight: 100;
 			font-family: $font-family-exclude;
 			transform: translateY(-7px);
-			text-shadow: 0 0 3px #000000;
+			text-shadow: 0 0 3px #000;
 			opacity: 0.7;
 			color: #919191;
 
@@ -147,7 +148,7 @@
 			}
 		}
 
-		&.active {
+		&._active {
 			color: $neon-blue;
 			text-shadow: 2px 2px 3px #000;
 
@@ -189,6 +190,7 @@
 		color: $electric-lime;
 		margin-right: 1rem;
 		text-shadow: 1px 1px 3px #000;
+
 		&:hover {
 			color: $neon-blue;
 		}
@@ -209,16 +211,19 @@
 		text-transform: uppercase;
 		font-size: 1rem;
 	}
+
 	span {
 		font-size: 1.2rem;
 		color: $neon-blue;
 	}
 }
+
 @keyframes fadeOutGradient {
 	100% {
 		background-position: 100% 0;
 	}
 }
+
 @keyframes fadeInGradient {
 	100% {
 		background-position: 100% 0;

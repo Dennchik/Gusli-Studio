@@ -49,10 +49,12 @@ import { sprite } from './gulp/tasks/sprite.js';
 //* Watcher
 const change = gulp.series(clearFonts, fonts, fontsStyle);
 const changejson = gulp.series(json, pugJade);
+
 function reload(done) {
 	browserSync.reload();
 	done();
 }
+
 const watcher = () => {
 	gulp.watch(path.js.watch, gulp.series(js, reload));
 	gulp.watch(path.pug.watch, pugJade).on('all', browserSync.reload);
@@ -72,8 +74,21 @@ const end = gulp.series(
 	gulp.parallel(scss, js, react, pugJade, fonts, image, sprite), fontsStyle,
 );
 const dev = gulp.series(end, gulp.parallel(watcher, server));
-//* Call back 
-export { clear, clearFonts, fonts, fontsStyle, image, js, json, pugJade, react, scss, server, sprite };
+//* Call back
+export {
+	clear,
+	clearFonts,
+	fonts,
+	fontsStyle,
+	image,
+	js,
+	json,
+	pugJade,
+	react,
+	scss,
+	server,
+	sprite
+};
 //* Default Task
 export default app.isProd ? end : dev;
 

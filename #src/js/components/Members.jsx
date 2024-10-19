@@ -1,7 +1,7 @@
 import React, {} from 'react';
 import PropTypes from 'prop-types';
 
-export const Members= ({baseUrl}) => {
+export const Members = ({baseUrl}) => {
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
 	};
@@ -26,7 +26,7 @@ export const Members= ({baseUrl}) => {
 				</div>
 				<div className='about__footer'>
 					<a className='about__button'
-					   href={getPath('pages/about.html')}>Read
+					   href={'pages/about.html'}>Read
 						more</a>
 				</div>
 			</div>
@@ -64,7 +64,7 @@ export const Members= ({baseUrl}) => {
 						<ul className="team-mates__list">
 							<li>
 								<div className="team-mates__image">
-									<img src={'@@webRoot/img/footer/team-1.png'}
+									<img src={getPath('img/footer/team-1.png')}
 									     alt="image"/>
 								</div>
 							</li>
@@ -81,7 +81,7 @@ export const Members= ({baseUrl}) => {
 						<ul className="team-mates__list">
 							<li>
 								<div className="team-mates__image">
-									<img src={getPath('img/footer/team-2.png')}
+									<img src={'img/footer/team-2.png'}
 									     alt="image"/>
 								</div>
 							</li>
@@ -97,7 +97,7 @@ export const Members= ({baseUrl}) => {
 						<ul className="team-mates__list">
 							<li>
 								<div className="team-mates__image">
-									<img src={getPath('@@webRoot/img/footer/team-3.png')}
+									<img src={'@@webRoot/img/footer/team-3.png'}
 									     alt="image"/>
 								</div>
 							</li>
@@ -113,7 +113,7 @@ export const Members= ({baseUrl}) => {
 						<ul className="team-mates__list">
 							<li>
 								<div className="team-mates__image">
-									<img src={getPath('img/footer/team-4.png')}
+									<img src={'img/footer/team-4.png'}
 									     alt="image"/>
 								</div>
 							</li>

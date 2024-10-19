@@ -1,60 +1,20 @@
 //todo ---------------------------- Core ---------------------------------------
-@use 'core/all.scss' as *; // Используем файл для перенаправления
+@use 'core/all.scss' as *;
+// Используем файл для перенаправления
 
-// // todo --------------------------- Assets -------------------------------------
+// todo --------------------------- Assets -------------------------------------
 // @import 'assets/burger-button';
 // @import 'assets/button';
 // // @import 'assets/audio-player';
-// // todo --------------------------- layout -------------------------------------
+// todo --------------------------- layout -------------------------------------
 // @import 'layouts/bem-block';
 // @import 'layouts/header';
 // @import 'layouts/footer';
 // todo --------------------------- Pages --------------------------------------
 @use 'pages/page-bio';
-// todo -------------------------- Sections ------------------------------------
+// todo --------------------------- Sections -----------------------------------
 
 // @use 'section/menu-float';
 @use 'section/section-about';
 // @import 'section/section-achieve.scss';
 @use 'section/aboute-footer';
-
-// // -----------------------------------------------------------------------------
-// // todo --------------------------- Fonts --------------------------------------
-// @use 'core/fonts';
-// //todo  ------------------------ Icon Fonts ------------------------------------
-// @import 'core/iconfonts';
-// //todo ------------------------- Default fonts ---------------------------------
-// // &display=swap&subset=cyrillic-ext
-// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap&subset=cyrillic-ext');
-// // todo -------------------------- Plugins -------------------------------------
-// @import 'assets/swiper';
-// // todo -------------------------- Classes -------------------------------------
-// // #region
-// .wrapper {
-// 	display: flex;
-// 	flex-direction: column;
-// 	min-height: 100%;
-// 	margin: 0 auto;
-// }
-
-// [class*='_container'] {
-// 	max-width: $maxWidthContainer;
-// 	box-sizing: content-box;
-// 	margin: 0 auto;
-// 	padding: 0 15px;
-// }
-
-// [class*='grid-'] {
-// 	display: grid;
-// }
-
-// [class*='icon-'] {
-// 	cursor: pointer;
-// 	height: 100%;
-// 	@include flex-align-center-justify-center;
-// }
-
-// [class*='_stretch'] {
-// 	position: relative;
-// 	z-index: 0;
-// }

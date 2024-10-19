@@ -1,4 +1,5 @@
 @use '../core/all' as *;
+
 .main-slide {
 	position: relative;
 
@@ -51,6 +52,7 @@
 				width: calc(100% - 16px);
 				scale: 1;
 			}
+
 			&::before {
 				content: '';
 				position: absolute;
@@ -97,9 +99,11 @@
 			size: 3.6rem;
 			weight: 700;
 		}
+
 		span {
 			color: $liquid-neon;
 		}
+
 		@include screen-690 {
 			font-size: 3.2rem;
 		}
@@ -140,3 +144,4 @@
 		z-index: 99;
 	}
 }
+

@@ -1,14 +1,14 @@
 extends ../../layouts/app_layout
 append link  
-	link(rel="stylesheet" type="text/css" href="@@webRoot/css/about-style.min.css" ) 
+	link(rel="stylesheet" type="text/css" href="@@webRoot/css/about-style.min.css" )
 prepend script 
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/runtime.min.js")
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/anime-vendors.min.js")
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/react-vendors.min.js")
-	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/swiper-bundle.min.js")
+	//script(defer="defer" type="text/javascript" src="@@webRoot/js/app/swiper-bundle.min.js")
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/about-components.min.js")
 block title
-	- var text='Услуги / Студия зувукозаписи "Gusli" Обнинск' 
+	- var text='Услуги / Студия звукозаписи "Gusli" Обнинск'
 
 block page-content 
 	.page
@@ -16,7 +16,7 @@ block page-content
 			._header
 		._main-content
 			block main-content 
-				main.main-content#wrapper 
+				main.main-content#wrapper
 					._content#content
 						block section 
 							section._about

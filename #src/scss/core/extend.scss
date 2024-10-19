@@ -4,21 +4,21 @@
 .grad_underline {
 	/* Определяем фоновые изображения */
 	background-image: linear-gradient(to left, transparent, transparent),
-		linear-gradient(
-			to left,
-			var(--background-selected),
-			var(--font-color-active)
-		);
+	linear-gradient(
+					to left,
+					var(--background-selected),
+					var(--font-color-active)
+	);
 
 	/* Размер фона для каждого слоя */
-	background-size:
-		100% 1px,
-		/* Первое изображение */ 0 1px; /* Второе изображение */
+	background-size: 100% 1px,
+		/* Первое изображение */
+	0 1px; /* Второе изображение */
 
 	/* Позиционирование фона */
-	background-position:
-		100% 100%,
-		/* Первое изображение */ 0 100%; /* Второе изображение */
+	background-position: 100% 100%,
+		/* Первое изображение */
+	0 100%; /* Второе изображение */
 
 	/* Повторение фона */
 	background-repeat: no-repeat;
@@ -49,13 +49,14 @@
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
 .gradient-header {
 	background: linear-gradient(
-		-45deg,
-		#1a1530,
-		#332764 60%,
-		rgb(42, 53, 20) 10%,
-		#000 70%
+					-45deg,
+					#1a1530,
+					#332764 60%,
+					rgb(42, 53, 20) 10%,
+					#000 70%
 	);
 }
 
@@ -79,10 +80,10 @@
 
 .gradient-border-right {
 	background: linear-gradient(
-		to right,
-		rgba(42, 53, 20, 0.685) 20%,
-		#332764 50%,
-		#2a3514 80%
+					to right,
+					rgba(42, 53, 20, 0.685) 20%,
+					#332764 50%,
+					#2a3514 80%
 	);
 }
 
@@ -97,21 +98,23 @@
 	padding: 0 1.5rem;
 	@include flex-align-center;
 }
+
 .shadow-after {
 	transform: rotateX(15deg) translateZ(-10px);
 	color: rgba(23, 14, 49, 0.479);
-	text-shadow:
-		5px 0 5px $color,
-		0 0 40px rgba(125, 248, 255, 0.26),
-		0 0 20px rgba(204, 255, 0, 0.267);
+	text-shadow: 5px 0 5px $color,
+	0 0 40px rgba(125, 248, 255, 0.26),
+	0 0 20px rgba(204, 255, 0, 0.267);
 	z-index: -1;
 }
+
 // background: linear-gradient(to right, #04d9ff 20%, #ffff 50%, #04d9ff 80%);
 //! ----------------------------------------------------------------------------
 .overflow-hidden {
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
 	scrollbar-width: none;
+
 	&::-webkit-scrollbar {
 		height: 0;
 	}
@@ -122,52 +125,32 @@
 	display: block;
 	position: absolute;
 	inset: 0.7rem;
-	background-size:
-		100% 1px,
-		100% 1px,
-		1px 100%,
-		1px 100%;
-	background:
-		linear-gradient(
-				to right,
-				currentColor 0%,
-				$liquid-neon 8%,
-				transparent 8%,
-				transparent 92%,
-				$liquid-neon 92%,
-				currentColor 100%
-			)
-			linear-gradient(
-				to right,
-				currentColor 0%,
-				$liquid-neon 8%,
-				transparent 8%,
-				transparent 92%,
-				$liquid-neon 92%,
-				currentColor 100%
-			)
-			linear-gradient(
-				to bottom,
-				currentColor 0%,
-				$liquid-neon 11%,
-				transparent 11%,
-				transparent 89%,
-				$liquid-neon 89%,
-				currentColor 100%
-			)
-			linear-gradient(
-				to bottom,
-				currentColor 0%,
-				$liquid-neon 11%,
-				transparent 11%,
-				transparent 89%,
-				$liquid-neon 89%,
-				currentColor 100%
-			)
-			no-repeat 0 0,
-		0 100%,
-		0 0,
-		100% 0;
+	background-image: linear-gradient(
+					to right,
+					currentColor 0%,
+					$liquid-neon 8%,
+					transparent 8%,
+					transparent 92%,
+					$liquid-neon 92%,
+					currentColor 100%
+	) linear-gradient(
+					to bottom,
+					currentColor 0%,
+					$liquid-neon 11%,
+					transparent 11%,
+					transparent 89%,
+					$liquid-neon 89%,
+					currentColor 100%
+	);
+	background-size: 100% 1px,
+	100% 1px,
+	1px 100%,
+	1px 100%;
+	background-position: 0 0,
+	0 100%,
+	0 0,
+	100% 0;
+	background-repeat: no-repeat;
 }
 
 .link_underline {
@@ -185,6 +168,7 @@
 		right: 0;
 		bottom: 0;
 	}
+
 	&::after {
 		bottom: -3px;
 		left: 0;
@@ -192,9 +176,11 @@
 
 	&.active {
 		text-shadow: 2px 2px 3px #000;
+
 		&::before {
 			width: 50%;
 		}
+
 		&::after {
 			width: 40%;
 		}
@@ -203,12 +189,15 @@
 	&:hover {
 		color: $neon-blue;
 		text-shadow: 2px 2px 3px #000;
+
 		&::before {
 			width: 50%;
 		}
+
 		&::after {
 			width: 40%;
 		}
+
 		a {
 			opacity: 1;
 		}
@@ -221,6 +210,7 @@
 	width: 100%;
 	grid-template-rows: 0fr;
 	transition: grid-template-rows 0.4s ease-in-out;
+
 	&._is-open {
 		grid-template-rows: 1fr;
 	}

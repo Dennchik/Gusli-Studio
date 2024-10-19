@@ -31,21 +31,23 @@ const Services = () => {
 	useEffect(() => {
 		const handleMouseOver = (event) => {
 			const target = event.currentTarget;
-			animationSvgLine(target, false); // Запускаем анимацию при наведении
+			//* Запускаем анимацию при наведении
+			animationSvgLine(target, false);
 			animationSvgText(target, false);
 		};
 		const handleMouseLeave = (event) => {
 			const target = event.currentTarget;
 			setTimeout(() => {
-				animationSvgLine(target, true); // Запускаем анимацию в обратном
-			                                  // направлении с задержкой при уходе
-			                                  // мыши 
+				/* Запускаем анимацию в обратном направлении с задержкой при уходе
+				мыши  */
+				animationSvgLine(target, true);
 				animationSvgText(target, true);
 			}, 500);
 		};
 		const boxImages = Array.from(document.querySelectorAll(
 			'.content-box__image'));
-		boxImagesRef.current = boxImages; // Сохраняем ссылку на элементы в useRef 
+		//* Сохраняем ссылку на элементы в useRef
+		boxImagesRef.current = boxImages;
 		boxImages.forEach(boxImage => {
 			boxImage.addEventListener('mouseover', handleMouseOver);
 			boxImage.addEventListener('mouseleave', handleMouseLeave);
@@ -75,7 +77,8 @@ const Services = () => {
 	}, []);
 
 	return (
-		<Element className="services key-object" id="services">
+		<Element className="services key-object"
+		         name={'services'}>
 			<div className="material-parallax parallax">
 				<div className="parallax__image">
 					<picture>{isWebpSupported() ? (

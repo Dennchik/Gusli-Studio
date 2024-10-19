@@ -1,10 +1,13 @@
 import loaded from './modules/preloader.js';
+
 loaded('.preloader');
 
 import dinamicAdaptive from './libraries/move-elements.js';
+
 dinamicAdaptive();
 
 import returnToSavedPosition from './modules/return-position.js';
+
 returnToSavedPosition();
 //* ----------------------------------------------------------------------------
 

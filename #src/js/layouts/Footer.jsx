@@ -4,7 +4,7 @@ import { tlFooterParallel } from '../animations/animation-index.jsx';
 import { Members } from '../components/Members.jsx';
 
 // -----------------------------------------------------------------------------
-const baseUrl = '.';
+const baseUrl = '..';
 
 export const Footer = () => {
 	useEffect(() => {
@@ -14,7 +14,7 @@ export const Footer = () => {
 		}
 	});
 	return (
-		<Element className='footer' name="contacts">
+		<Element className='footer'>
 			<div className="footer__content">
 				<div className="footer__info _container">
 					<Members baseUrl={baseUrl}/>
