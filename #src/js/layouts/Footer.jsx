@@ -5,9 +5,15 @@ import { Members } from '../components/Members.jsx';
 import { initSectionTriggerMove } from '../animations/animation-index.jsx';
 
 // -----------------------------------------------------------------------------
-const baseUrl = '..';
 
+// const baseUrl = window.location.pathname === '/' ? '.' : '..';
+// console.log(baseUrl);
 export const Footer = () => {
+	// Получаем путь к текущей странице
+	const isRoot = window.location.pathname === '/' || window.location.pathname.match(/^\/[^/]*$/);
+	const baseUrl = isRoot ? '.' : '..';
+	console.log(baseUrl);
+
 	useEffect(() => {
 		const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 		if (!isMobile) {
@@ -20,6 +26,7 @@ export const Footer = () => {
 		<Element className='footer' name='contacts'>
 			<div className="footer__content">
 				<div className="footer__info _container">
+					{/* <Members baseUrl={baseUrl} /> */}
 					<Members baseUrl={baseUrl} />
 					<div className="footer__help el-4">
 						<i className='icon-achievements'></i>
