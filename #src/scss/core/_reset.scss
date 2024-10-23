@@ -13,7 +13,7 @@ html {
 	counter-reset: heading;
 	color: var(--font-body-color);
 
-	letter-spacing: 1.7px;
+	letter-spacing: 1.1px;
 	// user-select: none;
 
 	@include screen-1024 {
@@ -24,20 +24,10 @@ html {
 body {
 	@extend .gradient-services;
 	// overscroll-behavior: none;
-	font:
-		1.6rem/1.6 Roboto,
-		sans-serif;
+	font: 1.6rem/1.6 $font-default;
 
-	@include screen-1024 {
-		font:
-			1.8rem/1.6 Roboto,
-			sans-serif;
-	}
-
-	@include screen-320 {
-		font:
-			1rem/1.6 Roboto,
-			sans-serif;
+	@include screen-490 {
+		font: 1.5rem/1.5 $font-default;
 	}
 }
 

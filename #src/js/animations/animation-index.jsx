@@ -5,7 +5,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 // import { Flip } from 'gsap/Flip';
 //* ----------------------------------------------------------------------------
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
-ScrollTrigger.config({ignoreMobileResize: true});
+ScrollTrigger.config({ ignoreMobileResize: true });
 // ScrollTrigger.normalizeScroll(true); 
 //* ----------------------------------------------------------------------------
 // Check if the device is mobile 
@@ -26,7 +26,7 @@ if (!isMobile) {
 
 //* ----------------------------------------------------------------------------
 export function applyEffects(smoother) {
-	smoother.effects('.content-box__column', {
+	smoother.effects('.services-slide__column', {
 		speed: (i) => {
 			// Desktop three columns layout
 			if (window.matchMedia('(min-width:730)').matches) {
@@ -74,11 +74,11 @@ export function initSectionTriggerMove(trigger, targets) {
 	ScrollTrigger.create({
 		trigger: trigger,
 		/* Начинаем событие, когда верхняя граница элемента-1 находится на 100px
-    ниже верха окна браузера*/
+		ниже верха окна браузера*/
 		start: 'top center',
 		endTrigger: trigger, //* Конец события - конец документа
 		/*Конец событие когда верхняя граница элемента 1 достигнет верха окна
-		 браузера*/
+		браузера*/
 		end: 'bottom center',
 		toggleClass: {
 			targets: targets,
@@ -90,66 +90,89 @@ export function initSectionTriggerMove(trigger, targets) {
 
 //* ----------------------------------------------------------------------------
 export function tlFooterParallel() {
-	const tlFooter = gsap.timeline({
+	const tlParallel = gsap.timeline({
+		scrollTrigger: {
+			trigger: '.footer',
+			start: 'top bottom',
+			endTrigger: '.footer',
+			end: 'bottom bottom+=300',
+			scrub: 2,
+			toggleActions: 'play none none reverse',
+			// markers: true,
+		}
+	});
+	tlParallel.from('.footer .el-1', {
+		x: -250,
+		duration: 1,
+		opacity: 0,
+		ease: 'sine.inOut',
+	});
+
+	tlParallel.from('.el-2', {
+		x: window.innerWidth <= 680 ? 350 : 0,
+		y: window.innerWidth > 680 ? 150 : 0,
+		duration: 1,
+		opacity: 0,
+		ease: 'sine.inOut',
+	}, '-=1');
+
+	tlParallel.from('.el-3', {
+		x: window.innerWidth <= 680 ? -350 : (window.innerWidth > 680 ? 350 : 0),
+		duration: 1,
+		opacity: 0,
+		ease: 'sine.inOut',
+	}, '-=1');
+}
+
+//* ----------------------------------------------------------------------------
+export function tlFooterHorizontal() {
+	const tlHorizontal = gsap.timeline({
 		scrollTrigger: {
 			trigger: '.footer',
 			start: 'top bottom',
 			endTrigger: '.footer',
 			end: 'bottom bottom',
-			scrub: 0.1,
+			scrub: 2,
 			toggleActions: 'play none none reverse',
 			// markers: true,
 		}
 	});
-	tlFooter.from('.footer .el-1', {
-		x: -250,
-		duration: 1,
-		opacity: 0,
-		ease: 'linear',
-	});
 
-	tlFooter.from('.el-2', {
-		x: window.innerWidth <= 680 ? 350 : 0,
-		y: window.innerWidth > 680 ? 150 : 0,
-		duration: 1,
-		opacity: 0,
-		ease: 'linear',
-	}, '-=1');
-
-	tlFooter.from('.el-3', {
-		x: window.innerWidth <= 680 ? -350 : (window.innerWidth > 680 ? 350 : 0),
-		duration: 1,
-		opacity: 0,
-	}, '-=1');
-
-	tlFooter.from('.el-4', {
+	tlHorizontal.from('.el-4', {
 		y: 150,
 		duration: 1,
 		opacity: 0,
+		ease: 'sine.inOut',
 	}, '-=0.5');
 
-	tlFooter.from('.el-5', {
+	tlHorizontal.from('.el-5', {
 		y: 350,
 		duration: 1,
 		opacity: 0,
+		ease: 'sine.inOut',
 	}, '-=1');
 
-	tlFooter.from('.contacts__items', {
+	tlHorizontal.from('.contacts__items', {
 		x: 450,
 		duration: 1,
 		opacity: 0,
+		ease: 'sine.inOut',
 	}, '-=1');
 }
 
 //* ----------------------------------------------------------------------------
 export function tlServices1() {
+
+	const endValue = window.innerWidth >= 490 ? 'bottom bottom+=70' :
+		'bottom bottom+=150';
 	const tlServices1 = gsap.timeline({
 		scrollTrigger: {
-			trigger: '.services__offer',
-			start: 'top center+=300',
-			endTrigger: '.services__offer',
-			end: 'bottom center+=300',
-			scrub: 1,
+			trigger: '.offer-container__body',
+			start: 'top bottom-=50',
+			endTrigger: '.offer-container__body',
+			// end: 'bottom bottom+=70',
+			end: endValue,
+			scrub: 2,
 			toggleActions: 'play none none reverse',
 			// markers: true,
 		}
@@ -158,24 +181,28 @@ export function tlServices1() {
 		x: -150,
 		duration: 1,
 		opacity: 0,
-		ease: 'linear',
+		ease: 'sine.inOut',
 	});
 	tlServices1.from('.sr-2', {
 		x: 150,
 		duration: 1,
 		opacity: 0,
+		ease: 'sine.inOut',
 	}, '-=1');
 }
 
 //* ----------------------------------------------------------------------------
 export function tlServices2() {
+	const endValue = window.innerWidth >= 490 ? 'bottom bottom+=70' :
+		'bottom bottom+=150';
 	const tlServices2 = gsap.timeline({
 		scrollTrigger: {
-			trigger: '.services__offer',
-			start: 'top center+=50',
-			endTrigger: '.services__offer',
-			end: 'bottom center+=150',
-			scrub: 1,
+			trigger: '.offer-container__body',
+			start: 'top bottom-=300',
+			endTrigger: '.offer-container__body',
+			// end: 'bottom bottom+=70',
+			end: endValue,
+			scrub: 2,
 			toggleActions: 'play none none reverse',
 			// markers: true,
 		}
@@ -184,12 +211,12 @@ export function tlServices2() {
 		x: -150,
 		duration: 1,
 		opacity: 0,
-		ease: 'linear',
+		ease: 'sine.in',
 	});
 	tlServices2.from('.sr-4', {
 		x: 150,
 		duration: 1,
 		opacity: 0,
-		ease: 'linear',
+		ease: 'sine.in',
 	}, '-=1');
 }

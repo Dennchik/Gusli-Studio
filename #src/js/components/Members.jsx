@@ -1,7 +1,7 @@
-import React, {} from 'react';
+import React, { } from 'react';
 import PropTypes from 'prop-types';
 
-export const Members = ({baseUrl}) => {
+export const Members = ({ baseUrl }) => {
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
 	};
@@ -9,7 +9,7 @@ export const Members = ({baseUrl}) => {
 		<div className="about">
 			<div className="about__column el-1">
 				<div className="about__body">
-					<div className="about__title">ABOUT OUR STUDIO</div>
+					<div className="about__title">КОМПАНИЯ</div>
 					<div className="about__text">
 						<p>Наша медиа-группа представляет собой превосходную студию
 							звукозаписи и продюсерскую компанию. Мы специализируемся на
@@ -26,13 +26,12 @@ export const Members = ({baseUrl}) => {
 				</div>
 				<div className='about__footer'>
 					<a className='about__button'
-					   href={'pages/about.html'}>Read
-						more</a>
+						href={'pages/about.html'}>читать всё</a>
 				</div>
 			</div>
 			<div className="about__column el-2">
 				<div className='about__body'>
-					<div className="about__title">SERVICES</div>
+					<div className="about__title">СЕРВИС</div>
 					<div className="about__item-services">
 						<i className='icon-microphone'></i>
 						<span>Мы предлагаем услуги аналоговой и цифровой записи, а также
@@ -53,27 +52,27 @@ export const Members = ({baseUrl}) => {
 				</div>
 				<div className='about__footer'>
 					<a className='about__button'
-					   href="#"
-					   type='button'>Read more</a>
+						href="#"
+						type='button'>читать всё</a>
 				</div>
 			</div>
 			<div className="about__column el-3">
 				<div className='about__body'>
-					<div className="about__title">OUR TEAM</div>
+					<div className="about__title">НАША КОМАНДА</div>
 					<div className="team-mates about__team-items">
 						<ul className="team-mates__list">
 							<li>
 								<div className="team-mates__image">
-									<img src={getPath('@@webRoot/img/footer/team-1.png')}
-									     alt="image"/>
+									<img src={getPath('img/footer/team-1.png')}
+										alt="image" />
 								</div>
 							</li>
 							<li>
 								<div className="team-mates__name">
-									<a href="#">Ryan Gosling</a>
+									<a href="#">Георгий Дудунов</a>
 								</div>
 								<div className="team-mates__text">
-									<p>Райан - основатель студии и ведущий звукорежиссер.
+									<p>Георгий - основатель студии и ведущий звукорежиссер.
 										Engineer.</p>
 								</div>
 							</li>
@@ -81,8 +80,8 @@ export const Members = ({baseUrl}) => {
 						<ul className="team-mates__list">
 							<li>
 								<div className="team-mates__image">
-									<img src={'img/footer/team-2.png'}
-									     alt="image"/>
+									<img src={getPath('img/footer/team-2.png')}
+										alt="image" />
 								</div>
 							</li>
 							<li>
@@ -97,8 +96,8 @@ export const Members = ({baseUrl}) => {
 						<ul className="team-mates__list">
 							<li>
 								<div className="team-mates__image">
-									<img src={'@@webRoot/img/footer/team-3.png'}
-									     alt="image"/>
+									<img src={getPath('img/footer/team-3.png')}
+										alt="image" />
 								</div>
 							</li>
 							<li>
@@ -113,13 +112,13 @@ export const Members = ({baseUrl}) => {
 						<ul className="team-mates__list">
 							<li>
 								<div className="team-mates__image">
-									<img src={'img/footer/team-4.png'}
-									     alt="image"/>
+									<img src={getPath('img/footer/team-4.png')}
+										alt="image" />
 								</div>
 							</li>
 							<li>
 								<div className="team-mates__name">
-									<a href="#">Ryan Gosling</a>
+									<a href="#">Маргарита Калан</a>
 								</div>
 								<div className="team-mates__text">
 									<p>Adam is the studio’s founder and leading sound

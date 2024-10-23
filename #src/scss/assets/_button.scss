@@ -3,9 +3,8 @@
 	//. page_buttom
 	&__aside {
 		position: fixed;
-		bottom: 14rem;
-		left: 0;
-		// height: 100vh;
+		bottom: 20rem;
+		right: 0;
 		width: 45px;
 		z-index: 13;
 		padding-left: 1rem;
@@ -22,7 +21,7 @@
 			font-size: 3.8rem;
 			color: $neon-blue;
 			background: $black-color;
-			margin-left: 1rem;
+			margin-right: 1rem;
 			transition: all 0.5s ease-in-out; /* Плавное изменение фона */
 			&:hover {
 				box-shadow: 0 0 4px $neon-blue;

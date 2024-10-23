@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
-import { initSectionTriggerMove } from '../animations/animation-index.jsx';
-
 import PropTypes from 'prop-types';
+// import { initSectionTriggerMove } from '../animations/animation-index.jsx';
 
-export const MenuFloat = ({baseUrl}) => {
+
+
+export const MenuFloat = ({ baseUrl }) => {
 	const [offset, setOffset] = useState(-100);
 	useEffect(() => {
 
@@ -12,8 +13,8 @@ export const MenuFloat = ({baseUrl}) => {
 			const screenWidth = window.innerWidth;
 			/* Настроить логику для установки различных значений offset в
 			 зависимости от ширины экрана */
-			if (screenWidth < 768) {
-				setOffset(-150);
+			if (screenWidth < 920) {
+				setOffset(-80);
 			} else {
 				setOffset(-100);
 			}
@@ -27,7 +28,6 @@ export const MenuFloat = ({baseUrl}) => {
 		размонтировании компонента */
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
-
 	useEffect(() => {
 
 		document.querySelector('.burger-button').addEventListener(
@@ -37,12 +37,6 @@ export const MenuFloat = ({baseUrl}) => {
 				menuFloatTop.classList.toggle('_is-open');
 			});
 	}, []);
-
-	useEffect(() => {
-		initSectionTriggerMove('.main-slide', '.menu-float__menu-link--home');
-		initSectionTriggerMove('.services', '.menu-float__menu-link--services');
-		initSectionTriggerMove('#footer', '.menu-float__menu-link--footer');
-	});
 
 	const getPath = (filename) => {
 		return `${baseUrl}/${filename}`;
@@ -64,23 +58,23 @@ export const MenuFloat = ({baseUrl}) => {
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-													   href="">Видео</a>
+														href="">Видео</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-													   href="">Звук</a>
+														href="">Звук</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-													   href="">Текст</a>
+														href="">Текст</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-													   href="">Ивенты</a>
+														href="">Ивенты</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-													   href="">Услуги</a>
+														href="">Услуги</a>
 												</li>
 											</ul>
 										</div>
@@ -91,22 +85,22 @@ export const MenuFloat = ({baseUrl}) => {
 												</div>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-													   href={getPath('pages/about.html')}>Биография</a>
+														href={getPath('pages/about.html')}>Биография</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-													   href="">С кем работали</a>
+														href="">С кем работали</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-													   href="">Отзывы клиентов</a>
+														href="">Отзывы клиентов</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-													   href="">Галерея</a></li>
+														href="">Галерея</a></li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-													   href="">Контакты</a></li>
+														href="">Контакты</a></li>
 											</ul>
 										</div>
 									</div>
@@ -117,7 +111,7 @@ export const MenuFloat = ({baseUrl}) => {
 							<div className="menu-float__layout menu-float__layout--primary">
 								<div className="menu-float__content">
 									<a className="menu-float__mail"
-									   href="tel:+79106044424">
+										href="tel:+79106044424">
 										<div className="menu-float__logo">
 											<i className="icon-phone-call"></i></div>
 										<div className="menu-float__breadcrumb">
@@ -130,27 +124,33 @@ export const MenuFloat = ({baseUrl}) => {
 								<div className="menu-float__content">
 									<div className="menu-float__nav">
 										<div className="menu-float__menu-link menu-float__menu-link--home">
-											<Link to='footer'
-											      duration={700}
-											      smooth={true}
-											      offset={offset}>
-												Home
-											</Link>
+											<a className="menu-float__link" href={getPath('index.html')}>
+												<i className="icon-home"></i>
+											</a>
 										</div>
 										<div className="menu-float__menu-link menu-float__menu-link--services">
-											<Link to='services'
-											      duration={700}
-											      smooth={true}
-											      offset={offset}>
-												Services
+											<Link className="menu-float__link"
+												to='services'
+												activeClass="_active"
+												spy={true}
+												smooth='easeInQuad'
+												ignoreCancelEvents={false}
+												duration={500}
+												offset={offset}
+											>
+												<span>Услуги</span>
 											</Link>
 										</div>
 										<div className="menu-float__menu-link menu-float__menu-link--footer">
-											<Link to='footer'
-											      duration={700}
-											      smooth={true}
-											      offset={offset}>
-												Contacts
+											<Link className='menu-float__link'
+												to='footer'
+												activeClass="_active"
+												spy={true}
+												duration={500}
+												smooth='easeInQuad'
+												offset={offset}
+											>
+												<span>Контакты</span>
 											</Link>
 										</div>
 									</div>

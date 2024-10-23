@@ -23,9 +23,7 @@ html(lang="ru")
 		include ../includes/mixins
 		div(class="wrapper")
 			block page-content 
-				//- block header 
+				block header 
 				block main-content
-					//- block section 
-					//- block footer 
-					//- block mobile-menu 
-		//- script(defer="defer" type="text/javascript" src="@@webRoot/js/main.min.js")
+	block page-grid 
+		include ../layouts/page-grid-3

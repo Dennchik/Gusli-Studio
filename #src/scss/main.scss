@@ -11,6 +11,8 @@
 @use 'layouts/bem-block';
 @use 'layouts/header';
 @use 'layouts/footer';
+// todo --------------------------- Temp ---------------------------------------
+@use 'layouts/page-grid.scss';
 // todo --------------------------- Fonts --------------------------------------
 @use 'core/_fonts.scss';
 //todo  --------------------------- Icon Fonts ---------------------------------
@@ -19,25 +21,31 @@
 @use 'assets/swiper';
 //todo ---------------------------- Default fonts ------------------------------
 // &display=swap&subset=cyrillic-ext
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap&subset=cyrillic-ext');
-// todo -------------------------- Classes -------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,regular,500,600,700&display=swap&subset=cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700&display=swap&subset=cyrillic-ext');
+// todo --------------------------- Classes ------------------------------------
 // #region
 .wrapper {
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-	margin: 0 auto;
 }
 
 [class*='_container'] {
+	// width: 100%;
 	max-width: $maxWidthContainer;
 	box-sizing: content-box;
 	margin: 0 auto;
-	padding: 0 15px;
-}
+	padding: 0 30px;
 
-[class*='grid-'] {
-	display: grid;
+	@include screen-690 {
+		padding: 0 15px;
+	}
+
+	@include screen-375 {
+		padding: 0 10px;
+	}
 }
 
 [class*='icon-'] {

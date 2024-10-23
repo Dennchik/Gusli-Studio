@@ -3,7 +3,6 @@
 // Используем файл для перенаправления
 
 // todo --------------------------- Assets -------------------------------------
-
 // @use 'assets/button';
 @use 'assets/audio-player';
 // todo --------------------------- Pages --------------------------------------
@@ -11,4 +10,5 @@
 // todo -------------------------- Sections ------------------------------------
 @use 'section/section-mainslide';
 @use 'section/setion-services';
+@use 'section/section-partners.scss';
 @use 'section/aboute-footer';

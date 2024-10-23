@@ -18,17 +18,17 @@ import { MenuFloat } from '../components/Menu-float.jsx';
 
 //* ---------------------------- Header ----------------------------------------
 createRoot(document.querySelector('.page__header')).render(
-	<Header baseUrl={baseUrl}/>);
+	<Header baseUrl={baseUrl} />);
 //* ---------------------------- About -----------------------------------------
 createRoot(document.querySelector('.main-content__about')).render(
-	<About baseUrl={baseUrl}/>);
+	<About baseUrl={baseUrl} />);
 //* ----------------------------------------------------------------------------
 // createRoot(document.querySelector('.main-content__achievements')).render(
 // 	<Achievements/>);
 //* ----------------------------------------------------------------------------
 createRoot(document.querySelector('.main-content__footer')).render(
-	<Footer baseUrl={baseUrl}/>);
+	<Footer baseUrl={baseUrl} />);
 //* ---------------------------- Menufloat -------------------------------------
 createRoot(document.querySelector('.page__menu-float')).render(
-	<MenuFloat baseUrl={baseUrl}/>);
+	<MenuFloat baseUrl={baseUrl} />);
 //* ----------------------------------------------------------------------------

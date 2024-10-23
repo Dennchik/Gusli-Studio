@@ -13,69 +13,33 @@
 	}
 }
 
-@mixin flex-align-center {
-	display: flex;
-	align-items: center;
+//* ----------------------------------------------------------------------------
+@mixin screen-1920 {
+	@media screen and (max-width: 1920px) {
+		@content;
+	}
 }
 
-@mixin flex-align-end {
-	display: flex;
-	align-items: end;
+@mixin screen-1440 {
+	@media screen and (max-width: 1440px) {
+		@content;
+	}
 }
-
-@mixin flex-justify-center {
-	display: flex;
-	justify-content: center;
-}
-
-@mixin flex-align-center-justify-end {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-}
-
-@mixin flex-align-center-justify-start {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-}
-
-@mixin flex-justify-space-between {
-	display: flex;
-	justify-content: space-between;
-}
-
-@mixin flex-justify-space-evenly {
-	display: flex;
-	justify-content: space-evenly;
-}
-
-@mixin flex-align-center-justify-center {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-@mixin flex-align-center-justify-space-evenly {
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-}
-
-@mixin flex-align-center-justify-space-between {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-// -----------------------------------------------------------------------------
 
 @mixin screen-1140 {
 	@media screen and (max-width: 1140px) {
 		@content;
 	}
 }
+
 @mixin screen-1024 {
 	@media screen and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin screen-960 {
+	@media screen and (max-width: 960px) {
 		@content;
 	}
 }
@@ -121,8 +85,7 @@
 		@content;
 	}
 }
-
-// -----------------------------------------------------------------------------
+//* ----------------------------------------------------------------------------
 @mixin min-1140 {
 	@media (min-width: 1140.99px) {
 		@content;
@@ -175,7 +138,19 @@
 	}
 }
 
-// -----------------------------------------------------------------------------
+//* ----------------------------------------------------------------------------
+@mixin minmax-1440-1920 {
+	@media (min-width: 1440.98px) and (max-width: 1920px) {
+		@content;
+	}
+}
+
+@mixin minmax-490-1920 {
+	@media (min-width: 490.98px) and (max-width: 1920px) {
+		@content;
+	}
+}
+
 @mixin minmax-920-1170 {
 	@media (min-width: 920.98px) and (max-width: 1170px) {
 		@content;
@@ -271,3 +246,4 @@
 		@content;
 	}
 }
+//* ----------------------------------------------------------------------------

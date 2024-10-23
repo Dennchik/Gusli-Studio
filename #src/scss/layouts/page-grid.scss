@@ -1,0 +1,67 @@
+@use '../core/all.scss' as *;
+
+.pqge-grid-5 {
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	height: 100vh;
+
+	&__content {
+		margin: 0 auto;
+		height: 100%;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 30px;
+		box-sizing: border-box;
+
+		@include screen-1024 {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		@include screen-768 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include screen-490 {
+			grid-template-columns: repeat(2, 1fr) !important;
+			gap: 20px;
+		}
+
+		@include screen-375 {
+			grid-template-columns: repeat(1, 1fr) !important;
+		}
+	}
+
+	&__column {
+		width: 100%;
+		height: 100%;
+		// background: #43f9ff0a;
+
+		@include screen-1024 {
+			&:nth-child(5) {
+				display: none;
+			}
+		}
+
+		@include screen-768 {
+			&:nth-child(4) {
+				display: none;
+			}
+		}
+
+		@include screen-490 {
+			&:nth-child(3) {
+				display: none;
+			}
+		}
+
+		@include screen-375 {
+			&:nth-child(2) {
+				display: none;
+			}
+		}
+	}
+}

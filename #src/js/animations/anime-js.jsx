@@ -8,7 +8,7 @@ export function timeLineHeaderItem() {
 	timeline
 		.add({
 			targets: '.header__item',
-			opacity: [0, 0.7],
+			opacity: [0, 1],
 			translateY: [-100, 0],
 			delay: anime.stagger(100, { start: 100 }),
 			easing: 'easeInOutSine',
@@ -40,6 +40,8 @@ export function timeLineHeaderItem() {
 			targets: '.el-community',
 			opacity: [0, 1],
 			translateX: [200, 0],
+
+			translateY: [9, 9],
 			// rotate: [-90, 0],
 			duration: 1250,
 			easing: 'easeInOutSine',
@@ -85,7 +87,7 @@ export function fadeInSlide() {
 		}, 130);
 }
 export function animationSvgLine(target, reverse) {
-	const path = target.querySelector('.content-box__svg .lines path');
+	const path = target.querySelector('.services-slide .lines path');
 	// Создаем переменную path
 	anime({
 		targets: path,
@@ -107,7 +109,7 @@ export function animationSvgLine(target, reverse) {
 	});
 }
 export function animationSvgText(target, reverse) {
-	const textPath = target.querySelectorAll('.content-box__image .lines-text path');
+	const textPath = target.querySelectorAll('.services-slide__image .lines-text path');
 	// Создаем переменную path
 	anime({
 		targets: textPath,

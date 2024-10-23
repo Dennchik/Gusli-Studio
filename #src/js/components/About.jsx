@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 import PropTypes from 'prop-types';
 //* ----------------------------------------------------------------------------
-export const About = ({baseUrl}) => {
+export const About = ({ baseUrl }) => {
 	const [isContentExpanded, setIsContentExpanded] = useState(
 		window.innerWidth > 920);
 	const toggleButtonRef = useRef(null);
@@ -60,15 +60,15 @@ export const About = ({baseUrl}) => {
 
 	return (
 		<div className="about"
-		     id='about'>
+			id='about'>
 			<div className="about__bg-image _ibg">
 				<picture>
 					{isWebpSupported()
 						? <img src={getPath('img/about/ab-img-01.webp')}
-						       alt="image"
-						       type="image/webp"/>
+							alt="image"
+							type="image/webp" />
 						: <img src={getPath('img/about/ab-img-01.png')}
-						       alt="image"/>}
+							alt="image" />}
 				</picture>
 			</div>
 			<div className="about__container">
@@ -76,18 +76,18 @@ export const About = ({baseUrl}) => {
 					{/* <div className="content-body__column"></div> */}
 					<div className="content-body__column">
 						<div ref={textBlockRef}
-						     className="content-body__text">
+							className="content-body__text">
 							<h1 className="content-body__title">В нашей студии:</h1>
 							<p>- описав свой проект, Вы получаете уникальные предложения от
 								ведущих профессионалов. Наймите именно того специалиста, который
 								идеально подходит для воплощения вашей музыкальной идеи!
 								<span ref={toggleButtonRef}
-								      className="content-body__icon">
+									className="content-body__icon">
 									<i className="content-body__ellipsis"></i>
 								</span>
 							</p>
 							<div ref={hideBoxRef}
-							     className="content-body__hide-box">
+								className="content-body__hide-box">
 								<div className="content-body__wrapper">
 									<span>- мы понимаем, что талант без правильного оборудования
 										может оставаться скрытым. Именно поэтому мы предлагаем все

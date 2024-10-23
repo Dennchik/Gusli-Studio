@@ -12,15 +12,16 @@ export default function mainSlide(
 ) {
 	if (mainslide) {
 		new Swiper(mainslide, {
-			autoplay: {
-				delay: 7000,
-				disableOnInteraction: true,
-			},
+			// autoplay: {
+			// 	delay: 7000,
+			// 	disableOnInteraction: true,
+			// },
 			speed: 800,
 			loop: true,
 			grabCursor: true,
 			// mousewheel: true, 
 			slidesPerView: 1,
+			// spaceBetween: 130,
 			// autoHeight: true,
 			pagination: {
 				el: pagination,

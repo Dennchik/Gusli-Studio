@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { Element } from 'react-scroll';
-import { tlFooterParallel } from '../animations/animation-index.jsx';
+import { tlFooterParallel, tlFooterHorizontal } from '../animations/animation-index.jsx';
 import { Members } from '../components/Members.jsx';
+import { initSectionTriggerMove } from '../animations/animation-index.jsx';
 
 // -----------------------------------------------------------------------------
 const baseUrl = '..';
@@ -12,12 +13,14 @@ export const Footer = () => {
 		if (!isMobile) {
 			tlFooterParallel();
 		}
+		tlFooterHorizontal();
+		initSectionTriggerMove('#footer', '.link-key--contacts');
 	});
 	return (
-		<Element className='footer'>
+		<Element className='footer' name='contacts'>
 			<div className="footer__content">
 				<div className="footer__info _container">
-					<Members baseUrl={baseUrl}/>
+					<Members baseUrl={baseUrl} />
 					<div className="footer__help el-4">
 						<i className='icon-achievements'></i>
 						<i className='icon-services'></i>
@@ -57,40 +60,40 @@ export const Footer = () => {
 						<div className="community__title">
 							<span>Media-Studio GROUP ©  2024.</span>
 							<a className='community__link'
-							   href="">Privacy Policy.
+								href="">Privacy Policy.
 								<i className='icon-angles-right-solid'></i>
 							</a>
 						</div>
 						<div className="community__icons">
 							<div className="community__icon">
 								<a className="wa"
-								   title="WhatsApp"
-								   target="blank"
-								   href="https://wa.me/79106044424">
+									title="WhatsApp"
+									target="blank"
+									href="https://wa.me/79106044424">
 									<i className="icon-whatsapp"></i>
 								</a>
 							</div>
 							<div className="community__icon">
 								<a className="wa"
-								   title="VK"
-								   target="blank"
-								   href="https://vk.com/studio_gusli">
+									title="VK"
+									target="blank"
+									href="https://vk.com/studio_gusli">
 									<i className="icon-vk-brand"></i>
 								</a>
 							</div>
 							<div className="community__icon">
 								<a className="wa"
-								   title="TG"
-								   target="blank"
-								   href="https://t.me/gusli_studio">
+									title="TG"
+									target="blank"
+									href="https://t.me/gusli_studio">
 									<i className="icon-telegram-fly"></i>
 								</a>
 							</div>
 							<div className="community__icon">
 								<a className="wa"
-								   title="youtube"
-								   target="blank"
-								   href="https://youtube.com/@guslistudio6257?si=36fe20TYpLAJyB3m">
+									title="youtube"
+									target="blank"
+									href="https://youtube.com/@guslistudio6257?si=36fe20TYpLAJyB3m">
 									<i className="icon-youtube-logo"></i>
 								</a>
 							</div>

@@ -6,7 +6,7 @@ import mainSlide from '../assets/main-slide.jsx';
 import AudioPlayer from './AudioPlayer.jsx';
 import PropTypes from 'prop-types';
 
-export default function Mainslide({baseUrl}) {
+export const Mainslide = ({ baseUrl }) => {
 	useEffect(() => {
 		swiperLayout();
 		mainSlide();
@@ -15,7 +15,7 @@ export default function Mainslide({baseUrl}) {
 		const slideWrappers = document.querySelectorAll(
 			'.main-slide__slide-wrapper');
 		if (!slideWrappers.length) return; // Проверка, что слайд-контейнеры
-	                                     // существуют
+		// существуют
 
 		// Проверяем активен ли первый слайд при загрузке страницы
 		const firstSlideWrapper = slideWrappers[0];
@@ -42,7 +42,7 @@ export default function Mainslide({baseUrl}) {
 				});
 			});
 
-			observer.observe(slideWrapper, {attributes: true});
+			observer.observe(slideWrapper, { attributes: true });
 			// Отключение наблюдателя при размонтировании компонента
 			return () => {
 				observer.disconnect();
@@ -62,21 +62,20 @@ export default function Mainslide({baseUrl}) {
 						<picture> {
 							isWebpSupported()
 								? <img src={getPath('@@webRoot/img/main/slides/slide_1.webp')}
-								       alt="slide-1"/>
+									alt="slide-1" />
 								: <img src={getPath('@@webRoot/img/main/slides/slide_1.jpg')}
-								       alt="slide-1"/>
+									alt="slide-1" />
 						}
 						</picture>
 					</div>
-					<div className="main-slide__content">
-						<div className="main-slide__title el-slidetitle">
-							<span>Профессиональная </span>Студия Звукозаписи
-						</div>
+					<div className="main-slide__content _container">
+						<h1 className="main-slide__title el-slidetitle">
+							<span>Профессиональная </span>
+							<span>студия&nbsp;звукозаписи </span>
+							<span>ГУСЛИ</span> в&nbsp;Обнинске
+						</h1>
 						<div className="main-slide__text">Мы - современная студия
-							звукозаписи, в которой работают лучшие российские специалисты в
-							области записи и продюсирования музыки, предоставляющие самый
-							лучший сервис и удобства для современных артистов, как
-							подписанных, так и независимых.
+							звукозаписи, в&nbsp;которой работают лучшие специалисты в&nbsp;области записи и&nbsp;продюсирования музыки, предоставляем самый лучший сервис и&nbsp;удобства для&nbsp;современных артистов, как&nbsp;подписанных, так и&nbsp;независимых.
 						</div>
 					</div>
 				</div>
@@ -85,20 +84,17 @@ export default function Mainslide({baseUrl}) {
 						<picture>
 							{isWebpSupported()
 								? <img src={getPath('@@webRoot/img/main/slides/slide_4.webp')}
-								       alt="slide-4"/>
+									alt="slide-4" />
 								: <img src={getPath('@@webRoot/img/main/slides/slide_4.jpg')}
-								       alt="slide-4"/>}
+									alt="slide-4" />}
 						</picture>
 					</div>
-					<div className="main-slide__content">
-						<div className="main-slide__title el-slidetitle"><span>Атмосфера Звука </span>Музыкального
+					<div className="main-slide__content _container">
+						<div className="main-slide__title el-slidetitle">
+							<span>Атмосфера Звука </span>Музыкального
 							Пространства
 						</div>
-						<div className="main-slide__text">Мы создаем звуковые шедевры, где
-							каждая нота оживает и звучит волшебно. Наша команда гарантирует,
-							что ваше музыкальное произведение будет звучать так же
-							эмоционально и мощно, как в самом сердце концертного зала.
-							Доверьте нам ваше творчество и ощутите магию звука в каждой ноте.
+						<div className="main-slide__text">Мы создаем звуковые шедевры, где&nbsp;каждая нота оживает и&nbsp;звучит волшебно. Ваше музыкальное произведение будет звучать так&nbsp;же эмоционально и&nbsp;мощно, какв&nbsp;самом сердце концертного зала. Доверьте нам ваше&nbsp;творчество и&nbsp;ощутите магию звука в&nbsp;каждой ноте.
 						</div>
 					</div>
 				</div>
@@ -107,19 +103,18 @@ export default function Mainslide({baseUrl}) {
 						<picture>
 							{isWebpSupported()
 								? <img src={getPath('@@webRoot/img/main/slides/slide_2.webp')}
-								       alt="slide-2"/>
+									alt="slide-2" />
 								: <img src={getPath('@@webRoot/img/main/slides/slide_2.jpg')}
-								       alt="slide-2"/>}
+									alt="slide-2" />}
 						</picture>
 					</div>
-					<div className="main-slide__content">
-						<div className="main-slide__title el-slidetitle"><span>Индивидуальный  подход  </span>к
+					<div className="main-slide__content _container">
+						<div className="main-slide__title el-slidetitle">
+							<span>Индивидуальный  подход  </span>к
 							Нашим Клиентам
 						</div>
-						<div className="main-slide__text">В нашей студии мы всегда стараемся
-							делать все возможное, чтобы процесс записи был вдохновляющим и
-							творческим. Мы индивидуально подбираем подход к каждому клиенту, с
-							которым работаем.
+						<div className="main-slide__text">
+							В нашей студии мы всегда стараемся делать все возможное, чтобы процесс записи был вдохновляющим и творческим. Мы индивидуально подбираем подход к каждому клиенту, с которым работаем.
 						</div>
 					</div>
 				</div>
@@ -128,14 +123,14 @@ export default function Mainslide({baseUrl}) {
 						<picture>
 							{isWebpSupported()
 								? <img src={getPath('@@webRoot/img/main/slides/slide_3.webp')}
-								       alt="slide-3"/>
+									alt="slide-3" />
 								: <img src={getPath('@@webRoot/img/main/slides/slide_3.jpg')}
-								       alt="slide-3"/>}
+									alt="slide-3" />}
 						</picture>
 					</div>
-					<div className="main-slide__content">
+					<div className="main-slide__content _container">
 						<div className="main-slide__title el-slidetitle">
-							<span>Все виды  </span> Микширования Звука
+							<span>Все виды</span> Микширования Звука
 						</div>
 						<div className="main-slide__text">Если вы ищете качественное
 							сведение звука, то в нашей студии есть все, что вам нужно! Помимо
@@ -147,7 +142,7 @@ export default function Mainslide({baseUrl}) {
 			</div>
 			<div className="main-slide__pagination"></div>
 			<div className="main-slide__media">
-				<AudioPlayer/>
+				<AudioPlayer />
 			</div>
 		</div>
 
