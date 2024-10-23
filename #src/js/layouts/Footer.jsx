@@ -3,16 +3,16 @@ import { Element } from 'react-scroll';
 import { tlFooterParallel, tlFooterHorizontal } from '../animations/animation-index.jsx';
 import { Members } from '../components/Members.jsx';
 import { initSectionTriggerMove } from '../animations/animation-index.jsx';
-
+import PropTypes from 'prop-types';
 // -----------------------------------------------------------------------------
-
+// Получаем путь к текущей странице
+const pathSegments = window.location.pathname.split('/').filter(Boolean);
+const baseUrl = pathSegments.length === 0 ? '.' : '..';
+console.log(baseUrl);
 // const baseUrl = window.location.pathname === '/' ? '.' : '..';
 // console.log(baseUrl);
 export const Footer = () => {
-	// Получаем путь к текущей странице
-	const isRoot = window.location.pathname === '/' || window.location.pathname.match(/^\/[^/]*$/);
-	const baseUrl = isRoot ? '.' : '..';
-	console.log(baseUrl);
+
 
 	useEffect(() => {
 		const isMobile = /Mobi|Android/i.test(navigator.userAgent);
@@ -110,4 +110,8 @@ export const Footer = () => {
 			</div>
 		</Element>
 	);
+};
+
+Footer.propTypes = {
+	baseUrl: PropTypes.string.isRequired,
 };
