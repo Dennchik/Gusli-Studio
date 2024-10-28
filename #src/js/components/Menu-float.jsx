@@ -21,11 +21,11 @@ export const MenuFloat = ({ baseUrl }) => {
 		}
 
 		/* Вызов функции handleResize сразу после монтирования компонента,
-			чтобы установить начальное значение */
+		 чтобы установить начальное значение */
 		handleResize();
 
 		/* Убираем слушатель события изменения размера окна при
-		размонтировании компонента */
+		 размонтировании компонента */
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
 	useEffect(() => {
@@ -58,23 +58,23 @@ export const MenuFloat = ({ baseUrl }) => {
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														href="">Видео</a>
+														 href="">Видео</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														href="">Звук</a>
+														 href="">Звук</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														href="">Текст</a>
+														 href="">Текст</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														href="">Ивенты</a>
+														 href="">Ивенты</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														href="">Услуги</a>
+														 href="">Услуги</a>
 												</li>
 											</ul>
 										</div>
@@ -85,22 +85,22 @@ export const MenuFloat = ({ baseUrl }) => {
 												</div>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														href={getPath('pages/about.html')}>Биография</a>
+														 href={getPath('pages/about.html')}>Биография</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														href="">С кем работали</a>
+														 href="">С кем работали</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														href="">Отзывы клиентов</a>
+														 href="">Отзывы клиентов</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														href="">Галерея</a></li>
+														 href="">Галерея</a></li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														href="">Контакты</a></li>
+														 href="">Контакты</a></li>
 											</ul>
 										</div>
 									</div>
@@ -111,7 +111,7 @@ export const MenuFloat = ({ baseUrl }) => {
 							<div className="menu-float__layout menu-float__layout--primary">
 								<div className="menu-float__content">
 									<a className="menu-float__mail"
-										href="tel:+79106044424">
+										 href="tel:+79106044424">
 										<div className="menu-float__logo">
 											<i className="icon-phone-call"></i></div>
 										<div className="menu-float__breadcrumb">
@@ -130,25 +130,25 @@ export const MenuFloat = ({ baseUrl }) => {
 										</div>
 										<div className="menu-float__menu-link menu-float__menu-link--services">
 											<Link className="menu-float__link"
-												to='services'
-												activeClass="_active"
-												spy={true}
-												smooth='easeInQuad'
-												ignoreCancelEvents={false}
-												duration={500}
-												offset={offset}
+														to='services'
+														activeClass="_active"
+														spy={true}
+														smooth='easeInQuad'
+														ignoreCancelEvents={false}
+														duration={500}
+														offset={offset}
 											>
 												<span>Услуги</span>
 											</Link>
 										</div>
 										<div className="menu-float__menu-link menu-float__menu-link--footer">
 											<Link className='menu-float__link'
-												to='footer'
-												activeClass="_active"
-												spy={true}
-												duration={500}
-												smooth='easeInQuad'
-												offset={offset}
+														to='footer'
+														activeClass="_active"
+														spy={true}
+														duration={500}
+														smooth='easeInQuad'
+														offset={offset}
 											>
 												<span>Контакты</span>
 											</Link>
