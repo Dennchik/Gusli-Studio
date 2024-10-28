@@ -1,11 +1,12 @@
 @use '../core/all' as *;
+
 .about {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	width: 100%;
 	gap: 4rem;
 	padding-top: 4rem;
-
+	color: $maxWidth;
 	@include minmax-690-920 {
 		grid-template-columns: 1fr 1fr;
 	}
@@ -46,6 +47,7 @@
 
 		p {
 			color: $gray;
+
 			&:nth-child(1) {
 				color: rgb(85, 85, 255);
 			}
@@ -73,7 +75,7 @@
 	// .about__title
 	&__title {
 		font-size: 2rem;
-		text-shadow: 0px 0px 1px $neon-electric;
+		text-shadow: 0 0 1px $neon-electric;
 	}
 
 	// .about__item-services
@@ -111,9 +113,8 @@
 		font-weight: 500;
 		text-transform: uppercase;
 		text-shadow: 1px 1px 2px #000;
-		transition:
-			color 0.4s,
-			background 0.4s ease-in-out;
+		transition: color 0.4s,
+		background 0.4s ease-in-out;
 
 		&:hover {
 			background: #392b7c;

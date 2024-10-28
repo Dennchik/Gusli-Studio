@@ -13,7 +13,7 @@ import { MenuFloat } from '../components/Menu-float.jsx';
 //* ---------------------------- About -----------------------------------------
 /**
  * Компонент Header.
- * @param {{ baseUrl: string }} props - Объект пропсов.
+//  * @param {{ baseUrl: string }} props - Объект пропсов.
  */
 // const isRoot = window.location.pathname === '/' || window.location.pathname.match(/^\/[^/]*$/);
 // const baseUrl = isRoot ? '.' : '..';

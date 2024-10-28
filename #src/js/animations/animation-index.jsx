@@ -6,7 +6,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 //* ----------------------------------------------------------------------------
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 ScrollTrigger.config({ ignoreMobileResize: true });
-// ScrollTrigger.normalizeScroll(true); 
+ScrollTrigger.normalizeScroll(true);
 //* ----------------------------------------------------------------------------
 // Check if the device is mobile 
 const isMobile = /Mobi|Android/i.test(navigator.userAgent);

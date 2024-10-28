@@ -4,7 +4,7 @@ import { animationSvgLine, animationSvgText } from '../animations/anime-js.jsx';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 import swiperLayout from '../layouts/init-swiper.jsx';
 import { servicesSlide } from '../assets/services-slide.jsx';
-import PropTypes from 'prop-types';
+
 import {
 	smoother,
 	applyParallaxEffects,
@@ -13,7 +13,6 @@ import {
 	tlServices1,
 	tlServices2, initSectionTriggerMove
 } from '../animations/animation-index.jsx';
-
 
 
 const isMobile = /Mobi|Android/i.test(navigator.userAgent);
@@ -28,7 +27,6 @@ export const Services = () => {
 			servicesSlide();
 		}
 	}, []);
-
 	const boxImagesRef = useRef([]);
 	useEffect(() => {
 		const handleMouseOver = (event) => {
@@ -41,7 +39,7 @@ export const Services = () => {
 			const target = event.currentTarget;
 			setTimeout(() => {
 				/* Запускаем анимацию в обратном направлении с задержкой при уходе
-				мыши  */
+				 мыши  */
 				animationSvgLine(target, true);
 				animationSvgText(target, true);
 			}, 500);
@@ -72,8 +70,10 @@ export const Services = () => {
 		applyParallaxEffects(smoother, '.material-parallax');
 		tlServices1();
 		tlServices2();
-		animateTitles('.services__title', '.services', '.services', '=150', '=0');
-		animateTitles('.offer-container__title', '.services__offer', '.services', '=150', '=0');
+		animateTitles('.services__title', '.services',
+			'.services', '=150', '=0');
+		animateTitles('.offer-container__title', '.services__offer',
+			'.services', '=150', '=0');
 		// initSectionTriggerMove('.main-slide', '.header__item--home');
 		initSectionTriggerMove('.services', '.link-key--services');
 		// initSectionTriggerMove('#footer', '.header__item--contacts');
@@ -506,8 +506,4 @@ export const Services = () => {
 			</div>
 		</Element>
 	);
-};
-
-Services.propTypes = {
-	baseUrl: PropTypes.bool.isRequired
 };

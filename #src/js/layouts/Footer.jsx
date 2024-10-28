@@ -1,18 +1,17 @@
 import React, { useEffect } from 'react';
 import { Element } from 'react-scroll';
+import { useLocation } from 'react-router-dom';
 import { tlFooterParallel, tlFooterHorizontal } from '../animations/animation-index.jsx';
 import { Members } from '../components/Members.jsx';
 import { initSectionTriggerMove } from '../animations/animation-index.jsx';
-import PropTypes from 'prop-types';
-// -----------------------------------------------------------------------------
-// Получаем путь к текущей странице
-const pathSegments = window.location.pathname.split('/').filter(Boolean);
-const baseUrl = pathSegments.length === 0 ? '.' : '..';
-console.log(baseUrl);
-// const baseUrl = window.location.pathname === '/' ? '.' : '..';
+// import PropTypes from 'prop-types';
+//* ----------------------------------------------------------------------------
+
 // console.log(baseUrl);
 export const Footer = () => {
-
+	const location = useLocation();
+	const isRoot = location.pathname === '/' || location.pathname.endsWith('/');
+	const baseUrl = isRoot ? '.' : '..';
 
 	useEffect(() => {
 		const isMobile = /Mobi|Android/i.test(navigator.userAgent);
@@ -112,6 +111,6 @@ export const Footer = () => {
 	);
 };
 
-Footer.propTypes = {
-	baseUrl: PropTypes.string.isRequired,
-};
+// Footer.propTypes = {
+// 	baseUrl: PropTypes.string.isRequired,
+// };
