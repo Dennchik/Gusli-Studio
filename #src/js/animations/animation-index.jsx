@@ -1,12 +1,12 @@
-import { gsap } from 'gsap';
-import { ScrollSmoother } from 'gsap/ScrollSmoother';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import {gsap} from 'gsap';
+import {ScrollSmoother} from 'gsap/ScrollSmoother';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import {ScrollToPlugin} from 'gsap/ScrollToPlugin';
 // import { Flip } from 'gsap/Flip';
 //* ----------------------------------------------------------------------------
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
-ScrollTrigger.config({ ignoreMobileResize: true });
-ScrollTrigger.normalizeScroll(true);
+ScrollTrigger.config({ignoreMobileResize: true});
+ScrollTrigger.normalizeScroll(false);
 //* ----------------------------------------------------------------------------
 // Check if the device is mobile 
 const isMobile = /Mobi|Android/i.test(navigator.userAgent);
@@ -74,11 +74,11 @@ export function initSectionTriggerMove(trigger, targets) {
 	ScrollTrigger.create({
 		trigger: trigger,
 		/* Начинаем событие, когда верхняя граница элемента-1 находится на 100px
-		ниже верха окна браузера*/
+		 ниже верха окна браузера*/
 		start: 'top center',
 		endTrigger: trigger, //* Конец события - конец документа
 		/*Конец событие когда верхняя граница элемента 1 достигнет верха окна
-		браузера*/
+		 браузера*/
 		end: 'bottom center',
 		toggleClass: {
 			targets: targets,
