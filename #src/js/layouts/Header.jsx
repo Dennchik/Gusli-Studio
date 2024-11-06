@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
-import { timeLineHeaderItem } from '../animations/anime-js.jsx';
-import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
+import React, {useEffect} from 'react';
+import {timeLineHeaderItem} from '../animations/anime-js.jsx';
+import {isWebpSupported} from 'react-image-webp/dist/utils/index.js';
 import PropTypes from 'prop-types';
-import { Link } from 'react-scroll';
+import {Link} from 'react-scroll';
 // import { initSectionTriggerMove } from '../animations/animation-index.jsx';
-export const Header = ({ baseUrl }) => {
+export const Header = ({baseUrl}) => {
 	//* Именованная функция для обработки скроллинга
 	const handleScroll = () => {
 		const header = document.querySelector('.header');
@@ -49,11 +49,10 @@ export const Header = ({ baseUrl }) => {
 							<div className="header__logo">
 								{isWebpSupported() ? (
 									<img src={getPath('img/header/logo.webp')}
-										alt="Logo"
-										type="image/webp" />
+											 alt="Logotip Gusli"/>
 								) : (
-									<img src={getPath('.img/header/logo.png')}
-										alt="Logo" />
+									<img src={getPath('img/header/logo.png')}
+											 alt="Logotip Gusli"/>
 								)}
 							</div>
 						</a>
@@ -64,26 +63,28 @@ export const Header = ({ baseUrl }) => {
 					<div className="header__column">
 						<div className="header__menu">
 							<a className="header__item header__item--home"
-								href={getPath('index.html')}>
+								 href={getPath('index.html')}>
 								<i className="icon-home"></i>
 							</a>
 							<div className="header__item">
 								<Link className="header__link-key link-key--services"
-									to="services"
-									duration={500}
-									offset={-100}
-									smooth='easeInQuad'
+											to="services"
+											duration={500}
+											offset={-100}
+											smooth='easeInQuad'
 								>
 									<span>Услуги</span>
 								</Link>
 							</div>
 							<div className="header__item">
-								<a className="header__link-key" href={getPath('pages/videos.html')}>
+								<a className="header__link-key"
+									 href={getPath('pages/videos.html')}>
 									<span>Видео</span>
 								</a>
 							</div>
 							<div className="header__item">
-								<a className="header__link-key" href={getPath('pages/about.html')}>
+								<a className="header__link-key"
+									 href={getPath('pages/about.html')}>
 									<span>Компания</span>
 								</a>
 							</div>
@@ -94,11 +95,11 @@ export const Header = ({ baseUrl }) => {
 							</div>
 							<div className="header__item">
 								<Link className="header__link-key link-key--contacts"
-									to="contacts"
-									duration={500}
-									offset={-100}
-									isDynamic={true}
-									smooth='easeInQuad'
+											to="contacts"
+											duration={500}
+											offset={-100}
+											isDynamic={true}
+											smooth='easeInQuad'
 								>
 									<span>Контакты</span>
 								</Link>
@@ -108,7 +109,7 @@ export const Header = ({ baseUrl }) => {
 					</div>
 					<div className="header__column el-community">
 						<a href="tel:++79106044424"
-							className="el-community__phone">
+							 className="el-community__phone">
 							<i className="icon-phone-ringing"></i>
 							<div className="el-community__content">
 								<h5 className="el-community__title">Связаться с нами</h5>

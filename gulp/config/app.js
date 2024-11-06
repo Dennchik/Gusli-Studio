@@ -1,4 +1,4 @@
-import { gifsicle, mozjpeg, optipng, svgo } from 'gulp-imagemin';
+import {gifsicle, mozjpeg, optipng, svgo} from 'gulp-imagemin';
 import pugbem from 'gulp-pugbem';
 import TerserPlugin from 'terser-webpack-plugin';
 
@@ -169,7 +169,7 @@ export const app = {
 		},
 		resolve: {
 			extensions: ['.js', '.jsx'], // разрешаем импорт файлов с расширениями
-		                               // .js и .jsx
+																	 // .js и .jsx
 		},
 	},
 	scss: {
@@ -266,8 +266,8 @@ export const app = {
 		optipng({optimizationLevel: 3}),
 		mozjpeg({quality: 75, progressive: true}),
 	]),
-	include: {
-		prefix: '@@',
-		basepath: '@#src'
-	},
+	// include: {
+	// 	prefix: '@@',
+	// 	basepath: '@#src'
+	// },
 }; 

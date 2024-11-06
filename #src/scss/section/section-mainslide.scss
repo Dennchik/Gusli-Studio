@@ -89,10 +89,6 @@
 	&__content {
 		padding-right: 3.6rem;
 		position: absolute;
-		// display: flex;
-		// flex-direction: column;
-		// gap: 4rem;
-		// justify-content: center;
 	}
 
 	// .main-slide__title
@@ -101,6 +97,7 @@
 		text-align: left;
 		text-shadow: 1px 1px 7px #000;
 		line-height: 130.952381%; /* 76px/42 */
+		margin-bottom: 30px;
 		font: {
 			size: 54px;
 			weight: 300;
@@ -125,21 +122,21 @@
 				}
 
 				@include minmax-490-1920 {
-					font-size: calc(28px + (54 - 28) * ((100vw - 490px) / (1920 - 490)));
+					font-size: calc(32px + (54 - 32) * ((100vw - 490px) / (1920 - 490)));
 				}
 
 				@include screen-490 {
-					font-size: 28px;
+					font-size: 32px;
 				}
 			}
 		}
 
 		@include minmax-490-1920 {
-			font-size: calc(24px + (54 - 24) * ((100vw - 490px) / (1920 - 490)));
+			font-size: calc(28px + (54 - 28) * ((100vw - 490px) / (1920 - 490)));
 		}
 
 		@include screen-490 {
-			font-size: 24px;
+			font-size: 28px;
 		}
 	}
 
@@ -151,18 +148,13 @@
 		letter-spacing: 1.5px;
 		max-width: 1100px;
 		text-shadow: rgb(0, 0, 0) 1px 0 10px;
-		text-shadow:
-			0px 0px 15px #000000,
-			0 0 1em #000,
-			0 0 0.2em blue;
-		line-height: 150%;
 
 		@include minmax-490-1920 {
-			font-size: calc(13px + (24 - 13) * ((100vw - 490px) / (1920 - 490)));
+			font-size: calc(14px + (24 - 13) * ((100vw - 490px) / (1920 - 490)));
 		}
 
 		@include screen-490 {
-			font-size: 1.6rem;
+			font-size: 14px;
 		}
 	}
 

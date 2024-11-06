@@ -1,4 +1,5 @@
 @use '../core/all' as *;
+
 .services {
 	// .services__body
 	&__body {
@@ -9,7 +10,6 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		// margin: 12rem 0 6rem;
 	}
 
 	// .services__title
@@ -25,7 +25,8 @@
 			weight: normal;
 		}
 		display: inline;
-		padding: 0 5rem 2rem;
+		padding: 0 5rem;
+		margin-top: 8rem;
 		z-index: 9;
 		filter: $filter;
 
@@ -43,15 +44,6 @@
 			perspective-origin: 45% 320%;
 			transform-style: preserve-3d;
 			perspective: 100px;
-
-			@include screen-690 {
-				font-size: 5.1rem;
-			}
-
-			@include screen-425 {
-				font-size: 3.4rem;
-				margin-top: 4rem;
-			}
 
 			&::before {
 				transform: translate(0, 58%);
@@ -71,17 +63,28 @@
 				@extend .shadow-after;
 			}
 		}
+
 		@include minmax-490-1024 {
 			font-size: calc(27px + (75 - 27) * ((100vw - 490px) / (1920 - 490)));
 		}
+
+		@include screen-690 {
+			font-size: 5.1rem;
+		}
+
 		@include screen-490 {
 			font-size: 27px;
+		}
+
+		@include screen-425 {
+			font-size: 3.4rem;
 		}
 	}
 
 	// .services__content
 	&__content {
 		width: 100%;
+		padding: 6rem 0;
 	}
 
 	// .services__offer
@@ -132,14 +135,9 @@
 	// .services-slide__body
 	&__body {
 		position: relative;
-		margin: 12rem 0;
 		gap: 2.5rem;
 		display: flex;
 		justify-content: space-between;
-
-		@include screen-490 {
-			margin: 6rem 0;
-		}
 	}
 
 	// .services-slide__column
@@ -178,6 +176,7 @@
 				bottom: -3px;
 				opacity: 0.8;
 			}
+
 			.services-slide__image {
 				// img {
 				scale: 1.1;
@@ -188,6 +187,7 @@
 				transform: translateY(0);
 				opacity: 1;
 			}
+
 			.services-slide__text {
 				transform: translateY(-150%);
 			}
@@ -211,11 +211,10 @@
 		img {
 			top: 0;
 			left: 0;
-			z-index: 1;
+			z-index: 2;
 			width: 100%;
 			object-fit: cover;
 			object-position: center;
-			transition: scale 0.4s ease-in-out;
 		}
 
 		svg {
@@ -226,26 +225,25 @@
 	// .services-slide__bg-img
 	&__bg-img {
 		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 2;
 		opacity: 0;
-		transition:
-			opacity 1.5s,
-			box-shadow 0.3s ease-in-out 0.2s;
+		transition: opacity 1.5s, scale 0.4s,
+		box-shadow 0.3s ease-in-out 0.2s;
 	}
 
 	// .services-slide__svg
 	&__svg {
 		width: 100%;
 		object-fit: cover;
+
 		img {
 			max-width: 100%;
 		}
+
 		svg {
 			position: absolute;
 			right: 0;
 			max-width: 195px;
+
 			path {
 				opacity: 0;
 				stroke: $electric-lime;
@@ -269,8 +267,10 @@
 		justify-content: center;
 		color: $neon-blue;
 		transition: transform 0.4s ease-in-out;
+
 		svg {
 			height: 32px;
+
 			path {
 				fill: url(#grad);
 				stroke: currentColor;
@@ -292,8 +292,7 @@
 		white-space: nowrap;
 		position: relative;
 		display: inline;
-		padding: 0 5rem 2rem;
-		margin-bottom: 6rem;
+		margin-top: 8rem;
 		font: {
 			family: 'aa_neon', serif;
 			size: 5rem;
@@ -315,7 +314,6 @@
 
 		@include screen-490 {
 			font-size: 17px;
-			padding: 0 0 2rem;
 			margin: 0 0 6rem;
 			line-height: 120%;
 		}
@@ -347,6 +345,7 @@
 
 	// .offer-container__body
 	&__body {
+		padding: 6rem 0;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto auto;
@@ -378,6 +377,7 @@
 				opacity: 1;
 			}
 		}
+
 		&:nth-child(2) {
 			@extend .gradient-spec-comfort;
 		}

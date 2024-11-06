@@ -1,210 +1,101 @@
+@use '../core/all' as *;
+
 .achieve-items {
-	height: 100%;
+	position: relative;
+
 	// .achieve-items__body
 	&__body {
 		position: relative;
-		padding: 5rem 4rem 10rem;
+		z-index: 9;
 		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		padding: 8rem 0 13rem;
+
 	}
 
-	// .achieve-items__bg-image
-	&__bg-image {
-		position: absolute;
-		pointer-events: none;
-		z-index: 0;
-		top: 0;
-		left: 0;
+	// .achieve-items__title
+	&__title {
+		font: {
+			family: 'AA Neon', Helvetica, sans-serif;
+			size: 5rem;
+			weight: normal;
+		}
+		line-height: 100%;
+		position: relative;
+		z-index: 9;
+		display: inline-block;
 		width: 100%;
-		height: 100%;
-		img {
-			width: 100%;
+		margin-bottom: 6rem;
+		padding: 0 5rem 2rem;
+		text-align: center;
+		white-space: nowrap;
+		letter-spacing: 0;
+		color: $neon-blue;
+		perspective-origin: 45% 320%;
+		transform-style: preserve-3d;
+		perspective: 100px;
+		filter: $filter;
+
+		@include minmax-490-1920 {
+			font-size: calc(17px + (50 - 17) * ((100vw - 490px) / (1920 - 490)));
+		}
+
+		@include screen-490 {
+			font-size: 17px;
+			line-height: 120%;
+			margin: 0 0 6rem;
+			padding: 0 0 2rem;
+		}
+
+		&::before {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
 			height: 100%;
-			object-fit: cover;
-			object-position: top;
-			filter: blur(1px);
-			opacity: 0.15;
+			content: '';
+			transform: translate(0, 10%);
+		}
+
+		&::after {
+			font: {
+				weight: 900;
+			}
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 70%;
+			content: 'наши достижения';
+			transform: rotateX(15deg) translateZ(-5px);
+			@extend .shadow-after;
 		}
 	}
 
 	// .achieve-items__wrapper
 	&__wrapper {
-		border: groove;
-		width: 100%;
-		height: 100%;
-//		height: 400px;
-		z-index: 1;
-		gap: 3rem;
-		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
-	}
-
-	// .achieve-items__item
-	&__item {
-		position: relative;
-		// width: 100%;
-		min-width: 350px;
-		height: 100%;
+		// height: 100% !important;
+		pointer-events: all !important;
+		gap: 3rem;
 	}
 
 	// .achieve-items__image
 	&__image {
-		overflow: hidden;
-		padding-bottom: 20%;
-		filter: $filter;
-		// -----------------------------------------------------------------------
+		position: relative !important;
+		flex: 0 0 30%;
+		width: 100%;
+		cursor: pointer !important;
+
 		img {
-			max-width: 250px;
-			// min-width: 350px;
-			// pointer-events: none;
-			cursor: grab;
-			object-position: left;
+			// position: absolute;
+			width: 100%;
+			height: 100%;
+			max-height: 310px;
+			background-size: contain;
+			filter: grayscale(.5);
 		}
-		// &::before {
-		// 	// position: absolute;
-		// 	content: '';
-		// 	display: block;
-		// 	transition: all 0.5s ease-in-out;
-		// }
-
-		// &:nth-child(1) {
-		// 	// perspective-origin: 45% 320%;
-		// 	// transform-style: preserve-3d;
-		// 	// perspective: 100px;
-		// 	// -----------------------------------------------------------------------
-
-		// 	height: 250px;
-
-		// 	&::before {
-		// 		position: relative;
-		// 		top: 0;
-		// 		left: 0;
-		// 		background: url('../img/about/slide/sert1.png') center / contain
-		// 			no-repeat;
-		// 		width: 350px;
-		// 		height: 100%;
-		// 		// transform: rotateX(5deg) translateZ(1px) translate(1px, 1px);
-		// 	}
-
-		// 	&:hover {
-		// 		&::before {
-		// 			transform: rotateX(0deg) translateZ(1px) translate(50px, 1px);
-		// 		}
-		// 	}
-		// }
-
-		// &:nth-child(2) {
-		// 	// width: 150px;
-		// 	// perspective-origin: 45% 320%;
-		// 	// transform-style: preserve-3d;
-		// 	// perspective: 100px;
-		// 	// -----------------------------------------------------------------------
-		// 	// width: 350px;
-		// 	height: 250px;
-		// 	z-index: 3;
-		// 	&::before {
-		// 		background: url('../img/about/slide/sert2.png') center / 100% 100%
-		// 			no-repeat;
-		// 		width: 200px;
-		// 		height: 250px;
-		// 		// transform: rotateX(5deg) translateZ(1px) translate(-35px, 1px);
-		// 		// scale: 1.4;
-		// 	}
-		// 	&:hover {
-		// 		&::before {
-		// 			transform: rotateX(0deg) translateZ(1px) translate(-50px, 1px);
-		// 			scale: 1;
-		// 		}
-		// 	}
-		// }
-
-		// &:nth-child(3) {
-		// 	// perspective-origin: 45% 320%;
-		// 	// transform-style: preserve-3d;
-		// 	// perspective: 100px;
-		// 	// -----------------------------------------------------------------------
-
-		// 	height: 250px;
-
-		// 	&::before {
-		// 		position: relative;
-		// 		top: 0;
-		// 		left: 0;
-		// 		background: url('../img/about/slide/sert3.png') center / 100% 100%
-		// 			no-repeat;
-		// 		width: 350px;
-		// 		height: 100%;
-		// 		// transform: rotateX(5deg) translateZ(1px) translate(1px, 1px);
-		// 	}
-
-		// 	&:hover {
-		// 		&::before {
-		// 			transform: rotateX(0deg) translateZ(1px) translate(50px, 1px);
-		// 		}
-		// 	}
-		// }
-		// &:nth-child(4) {
-		// 	// perspective-origin: 45% 320%;
-		// 	// transform-style: preserve-3d;
-		// 	// perspective: 100px;
-		// 	// -----------------------------------------------------------------------
-		// 	width: 350px;
-		// 	height: 250px;
-
-		// 	&::before {
-		// 		background: url('../img/about/slide/sert4.png') center / cover no-repeat;
-		// 		width: 350px;
-		// 		height: 250px;
-		// 		// transform: rotateX(5deg) translateZ(0px) translateX(1px);
-		// 	}
-
-		// 	&:hover {
-		// 		z-index: 9;
-		// 		&::before {
-		// 			transform: rotateX(0deg) translateZ(0px) translate(50px, 1px);
-		// 		}
-		// 	}
-		// }
-
-		// &:nth-child(5) {
-		// 	// width: 150px;
-		// 	// perspective-origin: 45% 320%;
-		// 	// transform-style: preserve-3d;
-		// 	// perspective: 100px;
-		// 	// -----------------------------------------------------------------------
-		// 	// width: 350px;
-		// 	height: 250px;
-		// 	z-index: 3;
-		// 	&::before {
-		// 		background: url('../img/about/slide/sert5.png') center / 100% 100%
-		// 			no-repeat;
-		// 		width: 200px;
-		// 		height: 250px;
-		// 		// transform: rotateX(5deg) translateZ(1px) translate(-35px, 1px);
-		// 		// scale: 1.4;
-		// 	}
-		// 	&:hover {
-		// 		&::before {
-		// 			transform: rotateX(0deg) translateZ(1px) translate(-50px, 1px);
-		// 			scale: 1;
-		// 		}
-		// 	}
-		// }
 	}
-
-	// .achieve-items__new-container
-	// &__new-container {
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 50%;
-	// 	transform: translate(-50%, 0);
-	// 	margin: 0 auto;
-	// 	width: 450px;
-	// 	height: 100%;
-	// 	border: groove;
-	// 	z-index: 12;
-	// }
 }
+

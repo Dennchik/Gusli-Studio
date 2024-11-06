@@ -1,13 +1,13 @@
-import { gsap } from 'gsap';
-import { ScrollSmoother } from 'gsap/ScrollSmoother';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Flip } from 'gsap/Flip';
+import {gsap} from 'gsap';
+import {ScrollSmoother} from 'gsap/ScrollSmoother';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import {Flip} from 'gsap/Flip';
 // -----------------------------------------------------------------------------
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, Flip);
 ScrollTrigger.normalizeScroll(true);
 export let smoother = ScrollSmoother.create({
-	wrapper: "#wrapper",
-	content: "#content",
+	wrapper: '#wrapper',
+	content: '#content',
 	smooth: 1,
 	effects: true,
 	normalizeScroll: true
@@ -39,16 +39,17 @@ export function applyParallaxEffects(smoother, element) {
 // -----------------------------------------------------------------------------
 export function flippElement() {
 
-	const box = document.querySelector("._button-flip"),
-		originalContainer = document.querySelector(".achieve-items__body"),
-		newContainer = document.querySelector(".achieve-items__new-container");
+	const box = document.querySelector('._button-flip'),
+		originalContainer = document.querySelector('.achieve-items__body'),
+		newContainer = document.querySelector('.achieve-items__new-container');
 
-	document.querySelector("._button-flip").addEventListener('click', () => {
+	document.querySelector('._button-flip').addEventListener('click', () => {
 		const state = Flip.getState(box);
 
-		(box.parentNode === originalContainer ? newContainer : originalContainer).appendChild(box);
+		(box.parentNode === originalContainer ? newContainer : originalContainer).appendChild(
+			box);
 
-		Flip.from(state, { duration: 1, ease: "power1.inOut", scale: true });
+		Flip.from(state, {duration: 1, ease: 'power1.inOut', scale: true});
 	});
 
 }

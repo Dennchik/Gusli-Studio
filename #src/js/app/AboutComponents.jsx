@@ -6,7 +6,7 @@ import {createRoot} from 'react-dom/client';
 const baseUrl = '..';
 //* ---------------------------- Components-------------------------------------
 import {Header} from '../layouts/Header.jsx';
-// import { Achievements } from '../components/Achievements.jsx';
+// import {Achievements} from '../components/Achievements.jsx';
 import {Footer} from '../layouts/Footer.jsx';
 import {About} from '../components/About.jsx';
 import {MenuFloat} from '../components/Menu-float.jsx';
@@ -28,7 +28,7 @@ createRoot(document.querySelector('.main-content__about')).render(
 // 	<Achievements/>);
 //* ------------------------------ Footer --------------------------------------
 createRoot(document.querySelector('.main-content__footer')).render(
-	<Footer baseUrl={baseUrl}/>);
+	<Footer baseUrl={baseUrl} isHomePage={false}/>);
 //* ------------------------------ MenuFloat -----------------------------------
 createRoot(document.querySelector('.page__menu-float')).render(
 	<MenuFloat baseUrl={baseUrl}/>);
