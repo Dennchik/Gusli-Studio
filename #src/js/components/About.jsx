@@ -69,28 +69,28 @@ export const About = () => {
 			<div className="about__container">
 				<div className="content-body about__content">
 					<div className="content-body__column">
-						<div ref={textBlockRef}
-								 className="content-body__text">
-							<h1 className="content-body__title">В нашей студии:</h1>
-							<p>- описав свой проект, Вы получаете уникальные предложения от
-								ведущих профессионалов. Наймите именно того специалиста, который
-								идеально подходит для воплощения вашей музыкальной идеи!
-								<span ref={toggleButtonRef}
-											className="content-body__icon">
-									<i className="content-body__ellipsis"></i>
+						<h1 className="content-body__title h1_01901">В нашей студии:</h1>
+						<div ref={textBlockRef} className="content-body__text t_01901">
+							<p>- описав свой проект, Вы&nbsp;получаете уникальные
+								предложения от&nbsp;ведущих профессионалов. Наймите именно
+								того&nbsp;специалиста, который идеально подходит
+								для&nbsp;воплощения вашей музыкальной идеи!
+								<span ref={toggleButtonRef} className="content-body__icon">
+										<i className="content-body__ellipsis"></i>
 								</span>
 							</p>
-							<div ref={hideBoxRef}
-									 className="content-body__hide-box">
+							<div ref={hideBoxRef} className="content-body__hide-box">
 								<div className="content-body__wrapper">
-									<span>- мы понимаем, что талант без правильного оборудования
-										может оставаться скрытым. Именно поэтому мы предлагаем все
-										необходимое для раскрытия вашего потенциала.</span>
-									<span>- но наша студия - это не просто место для работы.
-										Здесь создается особое настроение, которое способствует
-										вашему вдохновению. Дружеская атмосфера позволяет вам
-										чувствовать себя комфортно и свободно, чтобы в полной мере
-										насладиться процессом создания музыки.</span>
+									<span>- мы понимаем, что&nbsp;талант без&nbsp;правильного
+										оборудования может оставаться скрытым. Именно поэтому
+										мы&nbsp;предлагаем все&nbsp; необходимое для&nbsp;раскрытия
+										вашего потенциала.</span>
+									<span>- но&nbsp;наша студия - это не&nbsp;просто место
+										для&nbsp;работы. Здесь создается особое настроение,
+										которое способствует вашему вдохновению. Дружеская
+										атмосфера позволяет вам&nbsp;чувствовать себя комфортно
+										и&nbsp;свободно, чтобы в&nbsp;полной мере насладиться
+										процессом создания музыки.</span>
 								</div>
 							</div>
 						</div>

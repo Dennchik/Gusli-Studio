@@ -98,6 +98,7 @@
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "^5.0.1",
     "react-scroll": "^1.9.0",
+    "react-scroll-parallax": "^3.4.5",
     "react-transition-group": "^4.4.5",
     "require-dir": "^1.2.0",
     "sass": "^1.79.5",
@@ -109,6 +110,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "animateplus": "^2.1.1",
     "animejs": "^3.2.2",
     "gsap": "^3.12.5",
     "gulp": "^4.0.2",

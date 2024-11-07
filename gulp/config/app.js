@@ -145,6 +145,11 @@ export const app = {
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
+			services: {
+				import: ['./#src/js/services.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				filename: '[name].min.js'
+			},
 			//! depend On - vendors
 			'react-vendors': {
 				import: ['react', 'react-dom', 'react-router-dom', 'prop-types']

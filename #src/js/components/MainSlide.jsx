@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
+import { fadeInSlide } from '../animations/anime-js.jsx';
 
 //* ------------------------ Component's MainSlide -----------------------------
 import { buildSwiper } from '../layouts/build-swiper.js';
-import { fadeInSlide } from '../animations/anime-js.jsx';
 import { mainSlide } from '../layouts/main-slide.js';
 import { AudioPlayer } from './AudioPlayer.jsx';
 
@@ -70,26 +70,21 @@ export const MainSlide = ({baseUrl}) => {
 				<div className="main-slide__slide-wrapper">
 					<div className="main-slide__slide-image _img">
 						<picture>
-							{' '}
-							{isWebpSupported() ? (
-								<img
-									src={getPath('img/main/slides/slide_1.webp')}
-									alt="slide-1"
-								/>
-							) : (
-								<img
-									src={getPath('img/main/slides/slide_1.jpg')}
-									alt="slide-1" />
-							)}
+							{isWebpSupported()
+								? (<img src={getPath('img/main/slides/slide_1.webp')}
+												alt="slide-1" />)
+								: (<img src={getPath('img/main/slides/slide_1.jpg')}
+												alt="slide-1" />)
+							}
 						</picture>
 					</div>
 					<div className="main-slide__content _container">
-						<h1 className="main-slide__title el-slidetitle">
+						<h1 className="main-slide__title el-slidetitle h1_01901">
 							<span>Профессиональная </span>
 							<span>студия&nbsp;звукозаписи </span>
 							<span>ГУСЛИ</span> в&nbsp;Обнинске
 						</h1>
-						<div className="main-slide__text">
+						<div className="main-slide__text t_01901">
 							Мы - современная студия звукозаписи, в&nbsp;которой работают
 							лучшие специалисты в&nbsp;области записи и&nbsp;продюсирования
 							музыки, предоставляем самый лучший сервис и&nbsp;удобства
@@ -101,24 +96,19 @@ export const MainSlide = ({baseUrl}) => {
 				<div className="main-slide__slide-wrapper">
 					<div className="main-slide__slide-image _img">
 						<picture>
-							{isWebpSupported() ? (
-								<img
-									src={getPath('@@webRoot/img/main/slides/slide_4.webp')}
-									alt="slide-4"
-								/>
-							) : (
-								<img
-									src={getPath('@@webRoot/img/main/slides/slide_4.jpg')}
-									alt="slide-4"
-								/>
-							)}
+							{isWebpSupported()
+								? (<img src={getPath('@@webRoot/img/main/slides/slide_4.webp')}
+												alt="slide-4" />)
+								: (<img src={getPath('@@webRoot/img/main/slides/slide_4.jpg')}
+												alt="slide-4" />)
+							}
 						</picture>
 					</div>
 					<div className="main-slide__content _container">
 						<div className="main-slide__title el-slidetitle">
 							<span>атмосфера звука </span>музыкального пространства
 						</div>
-						<div className="main-slide__text">
+						<div className="main-slide__text t_01901">
 							Мы создаем звуковые шедевры, где&nbsp;каждая нота оживает
 							и&nbsp;звучит волшебно. Ваше музыкальное произведение будет
 							звучать так&nbsp;же эмоционально и&nbsp;мощно,
@@ -131,24 +121,19 @@ export const MainSlide = ({baseUrl}) => {
 				<div className="main-slide__slide-wrapper">
 					<div className="main-slide__slide-image _img">
 						<picture>
-							{isWebpSupported() ? (
-								<img
-									src={getPath('@@webRoot/img/main/slides/slide_2.webp')}
-									alt="slide-2"
-								/>
-							) : (
-								<img
-									src={getPath('@@webRoot/img/main/slides/slide_2.jpg')}
-									alt="slide-2"
-								/>
-							)}
+							{isWebpSupported()
+								? (<img src={getPath('@@webRoot/img/main/slides/slide_2.webp')}
+												alt="slide-2" />)
+								: (<img src={getPath('@@webRoot/img/main/slides/slide_2.jpg')}
+												alt="slide-2" />)
+							}
 						</picture>
 					</div>
 					<div className="main-slide__content _container">
 						<div className="main-slide__title el-slidetitle">
 							<span>Индивидуальный подход </span>к Нашим Клиентам
 						</div>
-						<div className="main-slide__text">
+						<div className="main-slide__text t_01901">
 							В нашей студии мы всегда стараемся делать все возможное, чтобы
 							процесс записи был вдохновляющим и творческим. Мы индивидуально
 							подбираем подход к каждому клиенту, с которым работаем.
@@ -158,24 +143,19 @@ export const MainSlide = ({baseUrl}) => {
 				<div className="main-slide__slide-wrapper">
 					<div className="main-slide__slide-image _img">
 						<picture>
-							{isWebpSupported() ? (
-								<img
-									src={getPath('@@webRoot/img/main/slides/slide_3.webp')}
-									alt="slide-3"
-								/>
-							) : (
-								<img
-									src={getPath('@@webRoot/img/main/slides/slide_3.jpg')}
-									alt="slide-3"
-								/>
-							)}
+							{isWebpSupported()
+								? (<img src={getPath('@@webRoot/img/main/slides/slide_3.webp')}
+												alt="slide-3" />)
+								: (<img src={getPath('@@webRoot/img/main/slides/slide_3.jpg')}
+												alt="slide-3" />)
+							}
 						</picture>
 					</div>
 					<div className="main-slide__content _container">
 						<div className="main-slide__title el-slidetitle">
 							<span>Все виды</span> микширования звука
 						</div>
-						<div className="main-slide__text">
+						<div className="main-slide__text t_01901">
 							Если вы ищете качественное сведение звука, то в нашей студии есть
 							все, что вам нужно! Помимо первоклассных решений для микширования
 							и мастеринга, мы также предлагаем полный цикл услуг по созданию

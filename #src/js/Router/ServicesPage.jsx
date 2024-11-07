@@ -2,21 +2,22 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
-// import parallaxEffect from '../animations/parallax.jsx';
 
 import { Header } from '../layouts/Header.jsx';
-import { MainSlide } from '../components/MainSlide.jsx';
-import { Services } from '../components/Services.jsx';
+import { About } from '../components/About.jsx';
+import { Partners } from '../components/Partners.jsx';
+import { Achievements } from '../components/Achievements.jsx';
 import { Footer } from '../layouts/Footer.jsx';
 import { MenuFloat } from '../layouts/Menu-float.jsx';
 
 import returnToSavedPosition from '../modules/return-position.js';
+import parallaxEffect from '../animations/parallax.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '.';
 
 
-function HomePage() {
+function ServicesPage() {
 	useGSAP(
 		() => {
 			// create the smooth scroller FIRST!
@@ -33,7 +34,7 @@ function HomePage() {
 		},
 	);
 	useEffect(() => {
-		// parallaxEffect();
+		parallaxEffect();
 		returnToSavedPosition();
 	}, []);
 
@@ -45,11 +46,14 @@ function HomePage() {
 			<main className="page__main-content">
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
-						<section className="main-content__slide">
-							<MainSlide baseUrl={baseUrl} />
+						<section className="main-content__about">
+							<About baseUrl={baseUrl} />
 						</section>
-						<section className="main-content__services">
-							<Services baseUrl={baseUrl} />
+						<section className="main-content__partners">
+							<Partners baseUrl={baseUrl} />
+						</section>
+						<section className="main-content__achievements">
+							<Achievements baseUrl={baseUrl} />
 						</section>
 						<footer className="main-content__footer" id="footer">
 							<Footer baseUrl={baseUrl} isHomePage={true} />
@@ -67,4 +71,4 @@ function HomePage() {
 	);
 }
 
-export default HomePage;
+export default ServicesPage;

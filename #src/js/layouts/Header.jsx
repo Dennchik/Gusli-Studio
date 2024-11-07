@@ -64,14 +64,9 @@ export const Header = ({baseUrl}) => {
 								<i className="icon-home"></i>
 							</a>
 							<div className="header__item">
-								<Link className="header__link-key link-key--services"
-											to="services"
-											duration={500}
-											offset={-100}
-											smooth='easeInQuad'
-								>
+								<a className="header__link-key" href={getPath('services.html')}>
 									<span>Услуги</span>
-								</Link>
+								</a>
 							</div>
 							<div className="header__item">
 								<a className="header__link-key"

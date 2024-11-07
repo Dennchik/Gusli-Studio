@@ -3,10 +3,10 @@ import React, { useEffect } from 'react';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 import {
 	partnersSlide
-} from '../../../../Gusli-St-SPA/#src/js/layouts/partners-slide.js';
+} from '../layouts/partners-slide.js';
 import {
 	buildSwiper
-} from '../../../../Gusli-St-SPA/#src/js/layouts/build-swiper.js';
+} from '../layouts/build-swiper.js';
 
 export const Partners = () => {
 	useEffect(() => {

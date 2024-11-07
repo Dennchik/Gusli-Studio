@@ -52,7 +52,7 @@ export default function parallaxEffect() {
 					end: 'bottom top',
 					scrub: true, // Связывает анимацию с прокруткой
 					invalidateOnRefresh: true, // Обновление при изменении размеров
-					markers: true,
+					// markers: true,
 				},
 			});
 

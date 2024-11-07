@@ -32,22 +32,22 @@
 	&__column {
 		display: inline-flex;
 		flex: 0 0 100%;
-		justify-content: flex-end;
+		max-width: 670px;
+		flex-direction: column;
 	}
 
 	// .content-body__text
 	&__text {
-		max-width: 670px;
 		color: $gray;
-		text-shadow: 1px 1px 2px #000;
-		@include min-490 {
-			text-align: justify;
-		}
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 170%;
+		max-width: 1100px;
+		text-align: left;
+		letter-spacing: 1.5px;
+		text-shadow: rgb(0, 0, 0) 1px 0 10px;
 
 		p {
-			font-size: 1.5rem;
-			font-weight: 300;
-			line-height: 170%;
 			position: relative;
 			display: inline-block;
 			margin-bottom: 2rem;
@@ -56,9 +56,7 @@
 		}
 
 		span {
-			font-size: 1.4rem;
-			font-weight: 200;
-			line-height: 200%;
+
 			display: block;
 			color: #d4d4d4;
 

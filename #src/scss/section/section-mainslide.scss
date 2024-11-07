@@ -133,10 +133,6 @@
 			}
 		}
 
-		@include minmax-490-1920 {
-			font-size: calc(28px + (50 - 28) * ((100vw - 490px) / (1920 - 490)));
-		}
-
 		@include screen-490 {
 			font-size: 28px;
 		}
@@ -150,11 +146,7 @@
 		text-align: left;
 		letter-spacing: 1.5px;
 		text-shadow: rgb(0, 0, 0) 1px 0 10px;
-
-		@include minmax-490-1920 {
-			font-size: calc(14px + (24 - 13) * ((100vw - 490px) / (1920 - 490)));
-		}
-
+ 
 		@include screen-490 {
 			font-size: 14px;
 		}

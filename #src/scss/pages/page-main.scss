@@ -9,7 +9,7 @@
 		position: fixed;
 		z-index: 13;
 		right: 0;
-		bottom: 20rem;
+		bottom: 12rem;
 		width: 45px;
 		padding-left: 1rem;
 
@@ -28,7 +28,7 @@
 			height: 35px;
 			margin-right: 1rem;
 			cursor: pointer;
-			transition: all 0.5s ease-in-out; /* Плавное изменение фона */
+			transition: all 0.5s ease-in-out;
 			color: $neon-blue;
 			border-radius: 50%;
 			background: $black-color;

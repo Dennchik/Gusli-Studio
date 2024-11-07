@@ -56,6 +56,22 @@
 	}
 }
 
-h_01901 {
+.h1_01901 {
+	@include minmax-490-1920 {
+		font-size: calc(28px + (50 - 28) * ((100vw - 490px) / (1920 - 490))) !important;
+	}
 
+}
+
+.h2_01901 {
+	@include minmax-490-1920 {
+		font-size: calc(28px + (50 - 28) * ((100vw - 490px) / (1920 - 490))) !important;
+	}
+
+}
+
+.t_01901 {
+	@include minmax-490-1920 {
+		font-size: calc(14px + (18 - 14) * ((100vw - 490px) / (1920 - 490))) !important;
+	}
 }

@@ -9,9 +9,12 @@ gsap.registerPlugin(ScrollTrigger);
 export function Achievements() {
 
 	useEffect(() => {
+		const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 		const scene = document.querySelector('.scene');
 		const parallax = new Parallax(scene);
-
+		if (isMobile) {
+			parallax.destroy();
+		}
 		ScrollTrigger.refresh();
 		// Очистка эффекта при размонтировании компонента
 		return () => {
@@ -20,7 +23,7 @@ export function Achievements() {
 	}, []);
 
 	return (
-		<div className="achieve-items">
+		<div className="achieve-items _container">
 			<div className="material-parallax parallax _image-achieve">
 				<div className="parallax__image">
 					<picture>
@@ -35,7 +38,7 @@ export function Achievements() {
 					{/* 		 src={'img/patterns/pattern-8.webp'} alt="image" /> */}
 				</div>
 			</div>
-			<div className="achieve-items__body _container">
+			<div className="achieve-items__body">
 				<div className="achieve-items__title">наши достижения</div>
 				<div className="achieve-items__wrapper scene">
 					<div data-depth="1.00" className="achieve-items__image">

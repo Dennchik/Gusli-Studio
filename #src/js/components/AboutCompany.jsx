@@ -21,40 +21,40 @@ export const AboutCompany = () => {
 							лучших произведений.</p>
 					</div>
 				</div>
-				<div className='about-company__footer'>
-					<a className='about-company__button'
-						 href={'pages/about.html'}>читать всё</a>
+				<div className="about-company__footer">
+					<a className="about-company__button"
+						 href={'about.html'}>читать всё</a>
 				</div>
 			</div>
 			<div className="about-company__column el-2">
-				<div className='about-company__body'>
+				<div className="about-company__body">
 					<div className="about-company__title">СЕРВИС</div>
 					<div className="about-company__item-services">
-						<i className='icon-microphone'></i>
+						<i className="icon-microphone"></i>
 						<span>Мы предлагаем услуги аналоговой и цифровой записи, а также
 							микширования в широком спектре жанров.</span>
 					</div>
 					<div className="about-company__item-services">
-						<i className='icon-fast-forward'></i>
+						<i className="icon-fast-forward"></i>
 						<span>Наша студия привлекает великолепным интерьером и оборудованными
 							комфортабельными помещениями, идеально подходящими для создания
 							лучших произведений.</span>
 					</div>
 					<div className="about-company__item-services">
-						<i className='icon-music'></i>
+						<i className="icon-music"></i>
 						<span>В нашей студии мы внедряем передовое оборудование и программное
 							обеспечение для микширования, обеспечивая высочайшее качество
 							звучания ваших треков. Ваше творчество - наш приоритет.</span>
 					</div>
 				</div>
-				<div className='about-company__footer'>
-					<a className='about-company__button'
-						 href="#"
-						 type='button'>читать всё</a>
+				<div className="about-company__footer">
+					<a className="about-company__button"
+						 href={'services.html'}
+						 type="button">читать всё</a>
 				</div>
 			</div>
 			<div className="about-company__column el-3">
-				<div className='about-company__body'>
+				<div className="about-company__body">
 					<div className="about-company__title">НАША КОМАНДА</div>
 					<div className="team-mates about-company__team-items">
 						<ul className="team-mates__list">
@@ -62,7 +62,7 @@ export const AboutCompany = () => {
 								<div className="team-mates__image">
 									<picture> {isWebpSupported()
 										? <img src={'img/footer/team-1.webp'} alt="image" />
-										: <img src={'img/footer/team-1.png'} alt='image' />}
+										: <img src={'img/footer/team-1.png'} alt="image" />}
 									</picture>
 								</div>
 							</li>
@@ -81,8 +81,8 @@ export const AboutCompany = () => {
 								<div className="team-mates__image">
 									<picture>
 										{isWebpSupported()
-											? <img src={'img/footer/team-2.webp'} alt='image' />
-											: <img src={'img/footer/team-2.png'} alt='image' />}
+											? <img src={'img/footer/team-2.webp'} alt="image" />
+											: <img src={'img/footer/team-2.png'} alt="image" />}
 									</picture>
 								</div>
 							</li>

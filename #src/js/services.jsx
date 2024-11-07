@@ -1,10 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother, useGSAP);
-import HomePage from './Router/HomePage.jsx';
+import ServicesPage from './Router/ServicesPage.jsx';
 
 
 createRoot(document.querySelector('.page')).render(
-	<HomePage />,
+	<ServicesPage />,
 );

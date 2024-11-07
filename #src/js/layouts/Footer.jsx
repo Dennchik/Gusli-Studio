@@ -2,23 +2,23 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
 import {
+	initSectionTriggerMove,
 	tlFooterHorizontal,
 	tlFooterParallel,
 } from '../animations/animations.jsx';
 import { AboutCompany } from '../components/AboutCompany.jsx';
-import { Members } from '../components/Members.jsx';
+// import { Members } from '../components/Members.jsx';
 //* ----------------------------------------------------------------------------
 export const Footer = ({baseUrl, isHomePage}) => {
-	const isHomepage = location.pathname === '/';
-
 	useEffect(() => {
 		const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-		if (isHomepage) {
-			if (!isMobile) {
+		if (!isMobile) {
+			if (isHomePage) {
 				tlFooterParallel();
 			}
 		}
 		tlFooterHorizontal();
+		initSectionTriggerMove('#footer', '.link-key--contacts');
 	}, []);
 
 	return (
@@ -27,10 +27,15 @@ export const Footer = ({baseUrl, isHomePage}) => {
 				<div className="footer__info _container">
 					{isHomePage && <AboutCompany baseUrl={baseUrl} />}
 					<div className="footer__help el-4">
-						<i className="icon-achievements"></i>
+						<a href={'about.html'}>
+							<i className="icon-achievements">
+							</i>
+						</a>
 						<i className="icon-services"></i>
 						<i className="icon-reviews"></i>
-						<i className="icon-contacts"></i>
+						<a href="mailto:mailto:studio@obninsk-gusli.ru">
+							<i className="icon-contacts"></i>
+						</a>
 					</div>
 				</div>
 				<div className="contacts footer__contacts el-5">
@@ -120,6 +125,7 @@ export const Footer = ({baseUrl, isHomePage}) => {
 		</Element>
 	);
 };
+
 Footer.propTypes = {
 	baseUrl: PropTypes.string.isRequired,
 	isHomePage: PropTypes.bool.isRequired,
