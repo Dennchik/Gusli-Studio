@@ -12,7 +12,7 @@ import { servicesSlide } from '../layouts/services-slide.js';
 import { buildSwiper } from '../layouts/build-swiper.js';
 import { ScrollSmoother } from 'gsap/ScrollSmoother.js';
 
-import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+// import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 //* ----------------------------------------------------------------------------
 export const Services = () => {
 	const isHomepage = location.pathname === '/';
@@ -109,26 +109,26 @@ export const Services = () => {
 
 	return (
 		<div className="services key-object">
-			<ParallaxProvider>
-				<Parallax speed={-10} easing="easeInOut">
-					<div className="material-parallax parallax">
-						<div className="parallax__image">
-							<picture>
-								{isWebpSupported() ? (
-										<img className="parallax__image-services bg"
-												 src={'@@webRoot/img/main/body/serv_bg.webp'}
-												 alt="image" />
-									)
-									: (
-										<img className="bgs"
-												 src={'@@webRoot/img/main/body/serv_bg.png'}
-												 alt="image" />
-									)}
-							</picture>
-						</div>
-					</div>
-				</Parallax>
-			</ParallaxProvider>
+			{/* <ParallaxProvider> */}
+			{/* <Parallax speed={-10} easing="easeInOut"> */}
+			<div className="material-parallax parallax">
+				<div className="parallax__image">
+					<picture>
+						{isWebpSupported() ? (
+								<img className="parallax__image-services bg"
+										 src={'@@webRoot/img/main/body/serv_bg.webp'}
+										 alt="image" />
+							)
+							: (
+								<img className="bgs"
+										 src={'@@webRoot/img/main/body/serv_bg.png'}
+										 alt="image" />
+							)}
+					</picture>
+				</div>
+			</div>
+			{/* </Parallax> */}
+			{/* </ParallaxProvider> */}
 			<div className="services__body _container">
 				<div className="services__title">Наши услуги</div>
 				<div className="services__content">

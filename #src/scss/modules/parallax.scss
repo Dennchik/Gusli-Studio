@@ -1,20 +1,69 @@
-.material-parallax {
-	position: absolute; /* Позиционирование блока абсолютно */
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden; /* Для скрытия части изображения при смещении */
-}
-
 .parallax {
-	position: absolute; /* Для внутреннего позиционирования контента */
-	height: 100%; /* Подгоняет контент под родительский блок */
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	will-change: transform; /* Оптимизация для плавного эффекта */
-	transition: transform 0.2s ease-out; /* Плавность движения */
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	height: 100vh;
+	min-height: 100%;
+	pointer-events: none;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+
+	&__image-blur {
+		position: absolute;
+		z-index: 9;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		backdrop-filter: blur(3px);
+	}
+
+	// .parallax__image
+	&__image {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+
+		img {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			opacity: 0.4;
+			object-fit: cover;
+			object-position: top left;
+			will-change: transform;
+
+			&:nth-child(1) {
+				z-index: 1;
+			}
+
+			&:nth-child(2) {
+				z-index: 2;
+				opacity: 0.2;
+				backdrop-filter: blur(50px);
+			}
+		}
+	}
+
+	&__image-achieve {
+		filter: grayscale(91%);
+
+	}
+
+	// .parallax__image-services
+	&__image-services {
+		object-position: bottom center !important;
+	}
+
+	._image-achieve {
+		// max-height: calc(90%);
+
+	}
 
 	picture {
 		position: absolute;
@@ -25,14 +74,5 @@
 	}
 }
 
-.parallax__image {
-	position: absolute;
-	z-index: 9;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	backdrop-filter: blur(3px);
-	object-fit: cover; /* Избегает искажения при изменении масштаба */
-	will-change: transform; /* Оптимизация */
-}
+
+
