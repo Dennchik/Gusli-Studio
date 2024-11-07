@@ -1,0 +1,172 @@
+@use '../core/all' as *;
+@use '../core/mixins';
+
+.about-company {
+	display: grid;
+	width: 100%;
+	padding-top: 4rem;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 4rem;
+
+	@include minmax-690-920 {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@include screen-690 {
+		grid-template-columns: auto;
+	}
+
+	// .about-company__column
+	&__column {
+		display: flex;
+		flex-direction: column;
+
+		&:nth-child(3) {
+			height: 100%;
+
+			@include minmax-690-920 {
+				grid-column: -3 / -1;
+			}
+
+			.about-company__body {
+				border: none;
+			}
+		}
+	}
+
+	// .about-company__body
+	&__body {
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+		border-bottom: 1px solid #9999992c;
+	}
+
+	// .about-company__text
+	&__text {
+		padding: 2rem 0;
+
+		p {
+			color: $gray;
+
+			&:nth-child(1) {
+				color: rgb(85, 85, 255);
+			}
+
+			&:nth-child(2) {
+				color: $gray;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+
+	// .about-company__footer
+	&__footer {
+		padding-top: 4rem;
+
+		@include screen-690 {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	// .about-company__title
+	&__title {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		text-shadow: 0 0 1px $neon-electric;
+	}
+
+	// .about-company__item-services
+	&__item-services {
+		display: flex;
+		align-items: center;
+		flex-wrap: nowrap;
+		padding: 2.5rem 0;
+		gap: 2rem;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid #9999992c;
+		}
+
+		[class*='icon-'] {
+			&::before {
+				font-size: 3.2rem;
+				cursor: pointer;
+				color: $gray;
+			}
+		}
+
+		span {
+			color: $gray;
+		}
+	}
+
+	// .about-company__button
+	&__button {
+		font-weight: 500;
+		display: block;
+		width: fit-content;
+		padding: 1rem 2rem;
+		transition: color 0.4s,
+		background 0.4s ease-in-out;
+		text-transform: uppercase;
+		border-radius: 4px;
+		background-color: #3d3d3d;
+		text-shadow: 1px 1px 2px #000;
+
+		&:hover {
+			color: #392b7c;
+			background: #392b7c;
+		}
+
+		@include screen-375 {
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	// .about-company__team-items
+	&__team-items {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+		gap: 2rem;
+	}
+}
+
+.team-mates {
+
+	// .team-mates__list
+	&__list {
+		display: flex;
+	}
+
+	// .team-mates__image
+	&__image {
+		overflow: hidden;
+		width: 104px;
+		height: 104px;
+		margin-right: 2rem;
+		opacity: 0.5;
+		border-radius: 5px;
+		box-shadow: 3px 3px 10px #000;
+	}
+
+	// .team-mates__name
+	&__name {
+		font-size: 1.6rem;
+		margin-bottom: 1rem;
+		color: $neon-blue-dark;
+	}
+
+	// .team-mates__text
+	&__text {
+		font-size: 1.4rem;
+		color: $gray;
+	}
+}

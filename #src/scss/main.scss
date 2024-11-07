@@ -1,8 +1,10 @@
 //todo ---------------------------- Core ---------------------------------------
 @use 'core/all.scss' as *;
+// todo ---------------------------- Pages -------------------------------------
+@use 'pages/page-main';
 // todo --------------------------- Modules ------------------------------------
 @use 'modules/preloader';
-// @use 'modules/breadcrumbs';
+@use 'modules/parallax';
 // todo --------------------------- Assets -------------------------------------
 @use 'assets/burger-button';
 @use 'assets/button';

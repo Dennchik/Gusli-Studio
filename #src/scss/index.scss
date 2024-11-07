@@ -5,10 +5,8 @@
 // todo --------------------------- Assets -------------------------------------
 // @use 'assets/button';
 @use 'assets/audio-player';
-// todo --------------------------- Pages --------------------------------------
-@use 'pages/page-main';
 // todo -------------------------- Sections ------------------------------------
 @use 'section/section-mainslide';
 @use 'section/setion-services';
-@use 'section/section-partners.scss';
-@use 'section/aboute-footer';
+@use 'section/section-about';
+@use 'section/about-footer';

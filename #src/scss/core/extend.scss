@@ -1,34 +1,67 @@
 @use 'variables' as *;
 @use 'mixins.scss' as *;
+
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 6rem;
+
+	.swiper-pagination-bullet {
+		// position: absolute;
+		width: 15px;
+		height: 15px;
+		content: '';
+		transition: background .5s ease-in-out;
+		border-radius: 50%;
+		background: #2a3514;
+
+		&:not(:last-child) {
+			margin-right: 2rem;
+		}
+	}
+
+	.swiper-pagination-bullet-active {
+		width: 12px;
+		height: 12px;
+		content: '';
+		transition: scale .5s ease-in-out;
+		border-radius: 50%;
+		background: #9acd32;
+		scale: 1.2;
+	}
+}
+
 // @import '_variables.scss';
 .grad_underline {
 	/* Определяем фоновые изображения */
-	background-image: linear-gradient(to left, transparent, transparent),
-		linear-gradient(
-			to left,
-			var(--background-selected),
-			var(--font-color-active)
-		);
+	transition: background-size 400ms;
 
 	/* Размер фона для каждого слоя */
-	background-size:
-		100% 1px,
-		/* Первое изображение */ 0 1px; /* Второе изображение */
+	background-image: linear-gradient(to left, transparent, transparent),
+	linear-gradient(
+									to left,
+									var(--background-selected),
+									var(--font-color-active)
+	);
 
 	/* Позиционирование фона */
-	background-position:
-		100% 100%,
-		/* Первое изображение */ 0 100%; /* Второе изображение */
-
-	/* Повторение фона */
 	background-repeat: no-repeat;
 
+	/* Повторение фона */
+	background-position: 100% 100%,
+		/* Первое изображение */
+	0 100%; /* Второе изображение */
+
 	/* Переход для изменения размера фона */
-	transition: background-size 400ms;
+	background-size: 100% 1px,
+		/* Первое изображение */
+	0 1px; /* Второе изображение */
 }
 
-.gradient {
-	background: linear-gradient(to left, #0b0813, #392b7c 50%, #0c0814 100%);
+.gradient-black {
+	background: linear-gradient(-45deg, #20193c, #020101 70%);
 }
 
 .gradient-default {
@@ -51,17 +84,13 @@
 }
 
 .gradient-header {
-	background: linear-gradient(
-		-45deg,
-		#1a1530,
-		#332764 60%,
-		rgb(42, 53, 20) 10%,
-		#000 70%
+	background: linear-gradient(-45deg, #1a1530, #332764 60%, rgb(42, 53, 20) 10%,
+					#000 70%
 	);
 }
 
 .gradient-services {
-	background: linear-gradient(to right, #0b0813 20%, #1c153f 50%, #0b0813 80%);
+	background: linear-gradient(to right, #050202ff 20%, #1c153f 50%, #050202ff 80%);
 }
 
 .gradient-title {
@@ -80,10 +109,10 @@
 
 .gradient-border-right {
 	background: linear-gradient(
-		to right,
-		rgba(42, 53, 20, 0.685) 20%,
-		#332764 50%,
-		#2a3514 80%
+									to right,
+									rgba(42, 53, 20, 0.685) 20%,
+									#332764 50%,
+									#2a3514 80%
 	);
 }
 
@@ -92,22 +121,21 @@
 }
 
 .icon-style {
-	border: 1px var(--border-color);
-	border-style: none solid;
-	height: 100%;
-	padding: 0 1.5rem;
 	display: flex;
 	align-items: center;
+	height: 100%;
+	padding: 0 1.5rem;
+	border: 1px var(--border-color);
+	border-style: none solid;
 }
 
 .shadow-after {
+	z-index: -1;
 	transform: rotateX(15deg) translateZ(-10px);
 	color: rgba(23, 14, 49, 0.479);
-	text-shadow:
-		5px 0 5px $color,
-		0 0 40px rgba(125, 248, 255, 0.26),
-		0 0 20px rgba(204, 255, 0, 0.267);
-	z-index: -1;
+	text-shadow: 5px 0 5px $color,
+	0 0 40px rgba(125, 248, 255, 0.26),
+	0 0 20px rgba(204, 255, 0, 0.267);
 }
 
 // background: linear-gradient(to right, #04d9ff 20%, #ffff 50%, #04d9ff 80%);
@@ -123,69 +151,67 @@
 }
 
 .border-present {
-	color: $neon-blue;
-	display: block;
 	position: absolute;
-	inset: 0.7rem;
+	display: block;
+	color: $neon-blue;
 	background-image: linear-gradient(
-			to right,
-			currentColor 0%,
-			$liquid-neon 8%,
-			transparent 8%,
-			transparent 92%,
-			$liquid-neon 92%,
-			currentColor 100%
-		),
-		linear-gradient(
-			to right,
-			currentColor 0%,
-			$liquid-neon 8%,
-			transparent 8%,
-			transparent 92%,
-			$liquid-neon 92%,
-			currentColor 100%
-		),
-		linear-gradient(
-			to bottom,
-			currentColor 0%,
-			$liquid-neon 11%,
-			transparent 11%,
-			transparent 89%,
-			$liquid-neon 89%,
-			currentColor 100%
-		),
-		linear-gradient(
-			to bottom,
-			currentColor 0%,
-			$liquid-neon 11%,
-			transparent 11%,
-			transparent 89%,
-			$liquid-neon 89%,
-			currentColor 100%
-		);
-	background-size:
-		100% 1px,
-		100% 1px,
-		1px 100%,
-		1px 100%;
-	background-position:
-		0 0,
-		0 100%,
-		0 0,
-		100% 0;
+									to right,
+									currentColor 0%,
+									$liquid-neon 8%,
+									transparent 8%,
+									transparent 92%,
+									$liquid-neon 92%,
+									currentColor 100%
+	),
+	linear-gradient(
+									to right,
+									currentColor 0%,
+									$liquid-neon 8%,
+									transparent 8%,
+									transparent 92%,
+									$liquid-neon 92%,
+									currentColor 100%
+	),
+	linear-gradient(
+									to bottom,
+									currentColor 0%,
+									$liquid-neon 11%,
+									transparent 11%,
+									transparent 89%,
+									$liquid-neon 89%,
+									currentColor 100%
+	),
+	linear-gradient(
+									to bottom,
+									currentColor 0%,
+									$liquid-neon 11%,
+									transparent 11%,
+									transparent 89%,
+									$liquid-neon 89%,
+									currentColor 100%
+	);
 	background-repeat: no-repeat;
+	background-position: 0 0,
+	0 100%,
+	0 0,
+	100% 0;
+	background-size: 100% 1px,
+	100% 1px,
+	1px 100%,
+	1px 100%;
+	inset: 0.7rem;
 }
 
 .link_underline {
 	&::before,
 	&::after {
-		content: '';
 		position: absolute;
 		width: 0;
 		height: 1px;
-		background-color: $neon-blue;
+		content: '';
 		transition: width 0.4s ease-in-out;
 		opacity: 0.6;
+		background-color: $neon-blue;
 	}
 
 	&::before {
@@ -211,8 +237,8 @@
 	}
 
 	&:hover {
-		color: $neon-blue;
 		transition: color 0.4s ease-in-out;
+		color: $neon-blue;
 
 		&::before {
 			width: 45%;
@@ -230,10 +256,10 @@
 
 .is-open {
 	display: grid;
-	grid-template-columns: 1fr;
 	width: 100%;
-	grid-template-rows: 0fr;
 	transition: grid-template-rows 0.4s ease-in-out;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0fr;
 
 	&._is-open {
 		grid-template-rows: 1fr;

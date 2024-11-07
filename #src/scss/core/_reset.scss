@@ -1,6 +1,7 @@
 @use 'variables' as *;
 @use 'mixins.scss' as *;
 @use 'extend.scss' as *;
+
 html {
 	font: {
 		style: normal;
@@ -9,11 +10,9 @@ html {
 		family: $font-default;
 	}
 	height: 100%;
-	// overflow-x: hidden;
 	counter-reset: heading;
-	color: var(--font-body-color);
-
 	letter-spacing: 1.1px;
+	color: var(--font-body-color);
 	// user-select: none;
 
 	@include screen-1024 {
@@ -22,20 +21,20 @@ html {
 }
 
 body {
-	@extend .gradient-services;
+
 	// overscroll-behavior: none;
 	font: 1.6rem/1.6 $font-default;
-
+	@extend .gradient-services;
 	@include screen-490 {
 		font: 1.5rem/1.5 $font-default;
 	}
 }
 
 * {
-	padding: 0;
-	margin: 0;
-	border: none;
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: none;
 	scrollbar-width: none;
 }
 
@@ -51,13 +50,13 @@ img {
 
 img,
 svg {
-	max-width: 100%;
 	height: auto;
+	max-width: 100%;
 }
 
 a {
-	text-decoration: none;
 	cursor: pointer;
+	text-decoration: none;
 	color: inherit;
 }
 
@@ -79,9 +78,9 @@ textarea {
 button,
 input[type='submit'] {
 	display: inline-block;
-	box-shadow: none;
-	background: transparent none;
 	cursor: pointer;
+	background: transparent none;
+	box-shadow: none;
 }
 
 // input::-ms-clear {
@@ -178,27 +177,27 @@ h6 {
 	border-radius: 2px;
 	background-color: var(--themes-color);
 	background-image: -webkit-linear-gradient(
-		45deg,
-		var(--background-thumb) 25%,
-		transparent 25%,
-		transparent 50%,
-		var(--background-thumb) 50%,
-		var(--background-thumb) 75%,
-		transparent 75%,
-		transparent
+									45deg,
+									var(--background-thumb) 25%,
+									transparent 25%,
+									transparent 50%,
+									var(--background-thumb) 50%,
+									var(--background-thumb) 75%,
+									transparent 75%,
+									transparent
 	);
 }
 
 ::-webkit-scrollbar-thumb:hover {
 	background-color: var(--background-thumb);
 	background-image: -webkit-linear-gradient(
-		45deg,
-		var(--themes-color) 25%,
-		transparent 25%,
-		transparent 50%,
-		var(--themes-color) 50%,
-		var(--themes-color) 75%,
-		transparent 75%,
-		transparent
+									45deg,
+									var(--themes-color) 25%,
+									transparent 25%,
+									transparent 50%,
+									var(--themes-color) 50%,
+									var(--themes-color) 75%,
+									transparent 75%,
+									transparent
 	);
 }

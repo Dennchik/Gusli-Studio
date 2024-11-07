@@ -12,7 +12,8 @@ $font-path: '../fonts';
 $font-default: 'Manrope', sans-serif;
 $font-family-secondary: 'Oswald', sans-serif;
 $font-family-exclude: 'Architectural', sans-serif;
-$font-weight-default: 470;
+$font-family-exclude-secondary: 'irmologion Caps ieUcs', sans-serif;
+$font-weight-default: 400;
 $font-size: 1.6rem;
 $font-size-default: 1.4rem;
 //* ------------------------------ [Font color] --------------------------------
@@ -79,7 +80,7 @@ $text-color-selection: #9b9999;
 	--scrollbar-thumb-bgcolor: rgb(71, 83, 45);
 	//* -------------------------- [Other colors] --------------------------------
 	--border-color: #3c548d49;
-
+	--color-active: rgb(4, 217, 255);
 	// ---------------------------------------------------------------------------
 	--pos: left center;
 	--size: 0;

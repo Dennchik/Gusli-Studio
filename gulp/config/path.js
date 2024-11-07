@@ -23,8 +23,8 @@ export const path = {
 		dest: pathDest + '/css',
 	},
 	js: {
-		src: pathSrc + '/js/*.js',
-		watch: pathSrc + '/js/**/*.{js,scss}',
+		src: pathSrc + '/js/*.{js,jsx}',
+		watch: pathSrc + '/js/**/*.{js,jsx,scss}',
 		dest: pathDest + '/js'
 	},
 	react: {

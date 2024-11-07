@@ -1,16 +1,65 @@
 @use '../core/all' as *;
+
 .page {
-	height: 100%;
 	overflow: hidden;
+	height: 100%;
+
+	//. page__aside
+	&__aside {
+		position: fixed;
+		z-index: 13;
+		right: 0;
+		bottom: 20rem;
+		width: 45px;
+		padding-left: 1rem;
+
+		i {
+			box-shadow: 0 0 5px $neon-blue;
+			text-shadow: 2px 2px 3px #000;
+		}
+
+		._button {
+			font-size: 3.8rem;
+			position: absolute;
+			z-index: 13;
+			top: 50%;
+			left: 0;
+			width: 35px;
+			height: 35px;
+			margin-right: 1rem;
+			cursor: pointer;
+			transition: all 0.5s ease-in-out; /* Плавное изменение фона */
+			color: $neon-blue;
+			border-radius: 50%;
+			background: $black-color;
+
+			&:hover {
+				animation: fadeInBackground;
+				box-shadow: 0 0 4px $neon-blue;
+			}
+
+		}
+
+		&._rotate {
+			i {
+				text-shadow: -2px -2px 3px #000;
+				scale: -1;
+			}
+
+			._button {
+				color: $neon-blue-dark;
+			}
+		}
+	}
 
 	// .page__header
 	&__header {
 		position: fixed;
-		top: 0;
-		left: 0;
-
-		width: 100%;
 		z-index: 11;
+		top: 0;
+
+		left: 0;
+		width: 100%;
 		height: 10rem;
 	}
 
@@ -18,26 +67,25 @@
 	&__fade-in {
 		@include screen-920 {
 			position: fixed;
-			opacity: 0;
-			right: 0;
-			top: 10rem;
 			z-index: 19;
-			transform: translate3d(300px, 0, 0);
+			top: 10rem;
+			right: 0;
+			visibility: hidden;
 			padding: 1.5rem 3rem;
+			transition: transform 0.5s,
+			opacity 0.5s ease-in-out;
+			transform: translate3d(300px, 0, 0);
+			opacity: 0;
 			border: 1px $neon-blue-dark;
 			border-style: none none solid solid;
 			border-radius: 0 0 0 6px;
 			box-shadow: 0 1px 10px #000;
-			visibility: hidden;
-			transition:
-				transform 0.5s,
-				opacity 0.5s ease-in-out;
 
 			&._active {
 				display: flex;
+				visibility: visible;
 				transform: translate3d(0, 0, 0);
 				opacity: 1;
-				visibility: visible;
 			}
 			&.with-border {
 				background: linear-gradient(to right, #271e4d 60%, #1a1530);
@@ -45,44 +93,62 @@
 		}
 	}
 
-	// .page__content
+	// .page__main-content
 	&__main-content {
 		position: relative;
-		inset: 0;
-		height: 100%;
-		width: 100%;
 		z-index: 8;
+		width: 100%;
+		height: 100%;
+		inset: 0;
 	}
+
 }
 
 .main-content {
+	// .main-content__about-page
+	&__about-page {
+		position: relative;
+		height: 100%;
+	}
+
+	// . main-content__about
+	&__about {
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+		width: 100%;
+		height: 100vh;
+	}
+
 	// .main-content__content
 	&__content {
 		position: relative;
-		@extend .gradient-services;
+		// @extend .gradient-services;
 	}
 
 	// .main-content__slide
 	&__slide {
 		position: relative;
 		z-index: 7;
-		@extend .gradient;
+		// @extend .gradient;
 
 		&::before {
 			left: 0;
 		}
+
 		&::after {
 			right: 0;
 			@extend .gradient-border-right;
 		}
+
 		&::before,
 		&::after {
-			content: '';
 			position: absolute;
 			z-index: 10;
 			bottom: 0;
 			width: 100%;
 			height: 2px;
+			content: '';
 		}
 	}
 
@@ -90,26 +156,68 @@
 	&__services {
 		position: relative;
 		z-index: 6;
+		// overflow: hidden;
 	}
 
 	// .main-content__footer
 	&__footer {
 		position: relative;
 		z-index: 9;
-		@extend .gradient-services;
+
+		@extend .gradient-black;
 	}
 
-	// .main-content__equalizer
-	&__equalizer {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		top: 100px;
-		bottom: 200px;
-		margin: auto;
-		left: -1;
-		right: -1;
-		display: flex;
-		align-items: center;
+	//. main-content__partners
+	&__partners {
+		position: relative;
+		z-index: 9;
+		backdrop-filter: blur(3px);
+		@extend .gradient-black;
+
+		&::before {
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			content: '';
+			background: linear-gradient(to left top, #8164ff 40%, rgb(42, 53, 20) 70%);
+		}
+
+		&::after {
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			content: '';
+			background: linear-gradient(to left top, #8164ff 40%, rgb(42, 53, 20) 70%);
+		}
+	}
+
+	//. main-content__achievements
+	&__achievements {
+		position: relative;
+		overflow: hidden;
+		background: linear-gradient(-45deg, #20193c, #050202 90%);
+	}
+
+	//.main-content__equalizer
+	/* 	&__equalizer {
+			position: absolute;
+			top: 100px;
+			right: -1;
+			bottom: 200px;
+			left: -1;
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			margin: auto;
+		} */
+}
+
+@keyframes fadeInBackground {
+	0% {
+		background: rgb(28, 21, 63);
+	}
+	100% {
+		background: $black-color;
 	}
 }

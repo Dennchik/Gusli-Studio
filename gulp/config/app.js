@@ -1,4 +1,4 @@
-import {gifsicle, mozjpeg, optipng, svgo} from 'gulp-imagemin';
+import { gifsicle, mozjpeg, optipng, svgo } from 'gulp-imagemin';
 import pugbem from 'gulp-pugbem';
 import TerserPlugin from 'terser-webpack-plugin';
 
@@ -9,68 +9,6 @@ const isDev = !isProd;
 export const app = {
 	isProd: isProd,
 	isDev: isDev,
-
-	webpack: {
-		// mode: isProd ? 'production' : 'development',
-		mode: 'production',
-		optimization: {
-			minimize: true,
-			minimizer: [
-				new TerserPlugin({
-					terserOptions: {
-						format: {
-							comments: false,
-						},
-					},
-					extractComments: false,
-				}),
-			],
-			splitChunks: {
-				chunks: 'async',
-				cacheGroups: {
-					vendor: {
-						test: /[\\/]module[\\/]/,
-						name: 'vendors',
-						chunks: 'all',
-					},
-				},
-			},
-		},
-		entry: {
-			about: './#src/js/about.js',
-			index: './#src/js/index.js',
-			main: './#src/js/main.js'
-		},
-		output: {
-			filename: '[name].min.js',
-		},
-		module: {
-			rules: [
-				{
-					test: /\.(js|jsx)$/,
-					exclude: /node_modules/,
-					use: ['babel-loader'],
-				},
-				{
-					test: /\.css$/,
-					use: [
-						'style-loader',
-						'css-loader'
-					],
-				},
-				{
-					test: /\.scss$/,
-					exclude: /node_modules/,
-					use: [
-						'style-loader',
-						'css-loader',
-						'sass-loader'   // компилирует Sass в CSS
-					]
-				},
-			],
-		},
-
-	},
 
 	webpackReact: {
 		// mode: isProd ? 'production' : 'development',
@@ -91,37 +29,35 @@ export const app = {
 			],
 			runtimeChunk: 'single',
 		},
+		devServer: {
+			historyApiFallback: {
+				rewrites: [{from: /\//, to: '/404.html'}],
+			},
+		},
 		entry: {
-			'home-components': {
-				import: ['./#src/js/app/MainComponents.jsx'],
-				dependOn: [
-					'react-vendors',
-					'anime-vendors',
-					'swiper-bundle'
-				]
-			},
 
-			'about-components': {
-				import: ['./#src/js/app/AboutComponents.jsx'],
-				dependOn: ['react-vendors', 'anime-vendors']
-			},
-			//! depend On - vendors
-			'react-vendors': ['react', 'react-dom', 'prop-types'],
-			'anime-vendors': [
-				'gsap',
-				'animejs',
-				'gsap/ScrollSmoother',
-				'gsap/ScrollTrigger'
-			],
-			'swiper-bundle': [
-				'swiper/bundle'
-			]
+
+			/* 	index: {
+			 import: ['./#src/js/layouts/HomePage.jsx'],
+			 dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+			 filename: '[name].min.js'
+			 },
+			 //! depend On - vendors
+			 'react-vendors': {
+			 import: ['react', 'react-dom', 'react-router-dom',
+			 'prop-types']
+			 },
+			 'anime-vendors': {
+			 import: ['gsap', 'animejs', 'gsap/ScrollSmoother',
+			 'gsap/ScrollTrigger']
+			 },
+			 'swiper-bundle': { import: ['swiper/bundle'] } */
 
 			// dependOn: 'shared',
 			// shared: 'lodash',
 		},
 		output: {
-			filename: '[name].min.js',
+			filename: 'app/[name].min.js',
 		},
 		devtool: 'source-map',
 		module: {
@@ -149,7 +85,7 @@ export const app = {
 					use: [
 						'style-loader',
 						'css-loader',
-						'sass-loader'   // компилирует Sass в CSS
+						'sass-loader' // компилирует Sass в CSS
 					]
 				},
 				{
@@ -159,7 +95,8 @@ export const app = {
 							loader: 'file-loader',
 							options: {
 								name: '[name].[ext]',
-								outputPath: 'images', // папка, куда будут сохранены изображения
+								outputPath: 'images',
+								// папка, куда будут сохранены изображения
 							},
 						},
 
@@ -168,10 +105,93 @@ export const app = {
 			],
 		},
 		resolve: {
-			extensions: ['.js', '.jsx'], // разрешаем импорт файлов с расширениями
-																	 // .js и .jsx
+			extensions: ['.js', '.jsx'],
+			// разрешаем импорт файлов с расширениями .js и .jsx
 		},
 	},
+
+	webpack: {
+		// mode: isProd ? 'production' : 'development',
+		mode: 'production',
+		optimization: {
+			minimize: true,
+			minimizer: [
+				new TerserPlugin({
+					terserOptions: {
+						keep_fnames: true, // сохраняем имена функций
+						keep_classnames: true, // сохраняем имена классов
+						format: {
+							comments: false,
+						},
+					},
+					extractComments: false,
+				}),
+			],
+			runtimeChunk: 'single',
+		},
+
+		entry: {
+			main: {
+				import: ['./#src/js/main.js'],
+				filename: '[name].min.js'
+			},
+			index: {
+				import: ['./#src/js/index.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				filename: '[name].min.js'
+			},
+			about: {
+				import: ['./#src/js/about.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				filename: '[name].min.js'
+			},
+			//! depend On - vendors
+			'react-vendors': {
+				import: ['react', 'react-dom', 'react-router-dom', 'prop-types']
+			},
+
+			'anime-vendors': {
+				import: ['gsap', 'gsap/ScrollSmoother', 'gsap/ScrollTrigger']
+			},
+
+			'swiper-bundle': {import: ['swiper/bundle']}
+
+		},
+		output: {
+			filename: 'app/[name].min.js',
+		},
+		devtool: 'source-map',
+		module: {
+			rules: [
+				{
+					test: /\.(js|jsx)$/,
+					exclude: /node_modules/,
+					use: ['babel-loader'],
+				},
+				{
+					test: /\.css$/,
+					use: [
+						'style-loader',
+						'css-loader'
+					],
+				},
+				{
+					test: /\.scss$/,
+					exclude: /node_modules/,
+					use: [
+						'style-loader',
+						'css-loader',
+						'sass-loader'   // компилирует Sass в CSS
+					]
+				},
+			],
+		},
+		resolve: {
+			extensions: ['.js', '.jsx'],
+			// разрешаем импорт файлов с расширениями .js и .jsx
+		},
+	},
+
 	scss: {
 		outputStyle: 'expanded'
 	},
@@ -251,23 +271,24 @@ export const app = {
 			},
 		},
 	},
-	imageMin: ([
-		svgo({
-			plugins: [
-				{optimizationLevel: 5},
-				{progessive: true},
-				{interlaced: true},
-				{removeViewBox: false},
-				{removeUselessStrokeAndFill: false},
-				{cleanupIDs: false}
-			],
-		}),
-		gifsicle({interlaced: true}),
-		optipng({optimizationLevel: 3}),
-		mozjpeg({quality: 75, progressive: true}),
-	]),
-	// include: {
-	// 	prefix: '@@',
-	// 	basepath: '@#src'
-	// },
+	imageMin: (
+		[
+			svgo({
+				plugins: [
+					{optimizationLevel: 5},
+					{progessive: true},
+					{interlaced: true},
+					{removeViewBox: false},
+					{removeUselessStrokeAndFill: false},
+					{cleanupIDs: false}
+				],
+			}),
+			gifsicle({interlaced: true}),
+			optipng({optimizationLevel: 3}),
+			mozjpeg({quality: 75, progressive: true}),
+		]),
+	include: {
+		prefix: '@@',
+		basepath: '@#src'
+	},
 }; 

@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
-import {timeLineHeaderItem} from '../animations/anime-js.jsx';
-import {isWebpSupported} from 'react-image-webp/dist/utils/index.js';
 import PropTypes from 'prop-types';
-import {Link} from 'react-scroll';
-// import { initSectionTriggerMove } from '../animations/animation-index.jsx';
+import React, { useEffect } from 'react';
+import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
+import { Link } from 'react-scroll';
+import { timeLineHeaderItem } from '../animations/anime-js.jsx';
+
 export const Header = ({baseUrl}) => {
 	//* Именованная функция для обработки скроллинга
 	const handleScroll = () => {
@@ -33,9 +33,7 @@ export const Header = ({baseUrl}) => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
-	// const handleSetActive = (to) => {
-	// 	console.log(`${to} Element is now active`);
-	// };
+
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
 	};
@@ -47,13 +45,12 @@ export const Header = ({baseUrl}) => {
 					<div className="header__column el-logo">
 						<a href={getPath('index.html')}>
 							<div className="header__logo">
-								{isWebpSupported() ? (
-									<img src={getPath('img/header/logo.webp')}
-											 alt="Logotip Gusli"/>
-								) : (
-									<img src={getPath('img/header/logo.png')}
-											 alt="Logotip Gusli"/>
-								)}
+								{isWebpSupported()
+									? (<img src={getPath('img/header/logo.webp')}
+													alt="Logotip Gusli" />)
+									: (<img src={getPath('img/header/logo.png')}
+													alt="Logotip Gusli" />)
+								}
 							</div>
 						</a>
 						<div className="header__text">
@@ -84,7 +81,7 @@ export const Header = ({baseUrl}) => {
 							</div>
 							<div className="header__item">
 								<a className="header__link-key"
-									 href={getPath('pages/about.html')}>
+									 href={getPath('about.html')}>
 									<span>Компания</span>
 								</a>
 							</div>

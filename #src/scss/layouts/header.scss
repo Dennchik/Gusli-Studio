@@ -69,9 +69,11 @@
 			display: flex;
 			align-items: flex-end;
 		}
+
 		&:nth-child(2) {
 			transform: translateY(7px);
 		}
+
 		@include screen-920 {
 			&:nth-child(2) {
 				display: none;
@@ -84,6 +86,7 @@
 		width: 50px;
 		height: 53px;
 		opacity: 0.9;
+		background: url('../img/header/logo.png') center / contain no-repeat;
 	}
 
 	// .header__text
@@ -130,6 +133,7 @@
 		cursor: pointer;
 		position: relative;
 		text-shadow: 1px 1px 2px #000;
+
 		&:not(:last-child) {
 			margin-right: 2rem;
 		}
@@ -149,10 +153,9 @@
 		.icon-home {
 			&::before {
 				transition: all 0.4s ease 0s;
-				text-shadow:
-					0px 0px 15px #000000,
-					0 0 1em #000,
-					0 0 0.2em blue;
+				text-shadow: 0 0 15px #000,
+				0 0 1em #000,
+				0 0 0.2em blue;
 			}
 		}
 	}
@@ -160,15 +163,17 @@
 	// .header__link-key
 	&__link-key {
 		@extend .link_underline;
+
 		span {
-			text-shadow:
-				0px 0px 15px #000000,
-				0 0 1em #000,
-				0 0 0.2em blue;
+			text-shadow: 0 0 15px #000,
+			0 0 1em #000,
+			0 0 0.2em blue;
 		}
+
 		&:not(:first-child) {
 			opacity: 1;
 		}
+
 		&:hover {
 			color: $neon-blue;
 

@@ -1,4 +1,4 @@
-import loaded from './modules/preloader.js';
+import loaded from './assets/preloader.js';
 
 loaded('.preloader');
 
@@ -6,9 +6,6 @@ import dynamicAdaptive from './libraries/move-elements.js';
 
 dynamicAdaptive();
 
-import returnToSavedPosition from './modules/return-position.js';
-
-returnToSavedPosition();
 //* ----------------------------------------------------------------------------
 
 

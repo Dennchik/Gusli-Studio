@@ -1,13 +1,13 @@
 @use 'variables' as *;
+
 @mixin font-face($font_name, $file_name, $weight, $style) {
 	@font-face {
 		font-family: $font_name;
 		font-display: swap;
-		src:
-			url('#{$font-path}/#{$file_name}.eot') format('eot'),
-			url('#{$font-path}/#{$file_name}.woff') format('woff'),
-			url('#{$font-path}/#{$file_name}.woff2') format('woff2'),
-			url('#{$font-path}/#{$file_name}.ttf') format('truetype');
+		src: url('#{$font-path}/#{$file_name}.eot') format('eot'),
+		url('#{$font-path}/#{$file_name}.woff') format('woff'),
+		url('#{$font-path}/#{$file_name}.woff2') format('woff2'),
+		url('#{$font-path}/#{$file_name}.ttf') format('truetype');
 		font-weight: #{$weight};
 		font-style: #{$style};
 	}
@@ -51,13 +51,13 @@
 }
 
 @mixin screen-768 {
-	@media screen and (max-width: 768px) {
+	@media (max-width: 768px) {
 		@content;
 	}
 }
 
 @mixin screen-690 {
-	@media screen and (max-width: 690px) {
+	@media (max-width: 690px) {
 		@content;
 	}
 }
@@ -85,6 +85,7 @@
 		@content;
 	}
 }
+
 //* ----------------------------------------------------------------------------
 @mixin min-1140 {
 	@media (min-width: 1140.99px) {
@@ -121,11 +122,13 @@
 		@content;
 	}
 }
+
 @mixin min-425 {
 	@media (min-width: 425.99px) {
 		@content;
 	}
 }
+
 @mixin min-375 {
 	@media (min-width: 375.99px) {
 		@content;
@@ -141,6 +144,12 @@
 //* ----------------------------------------------------------------------------
 @mixin minmax-1440-1920 {
 	@media (min-width: 1440.98px) and (max-width: 1920px) {
+		@content;
+	}
+}
+
+@mixin minmax-320-1920 {
+	@media (min-width: 320.98px) and (max-width: 1920px) {
 		@content;
 	}
 }
@@ -199,6 +208,12 @@
 	}
 }
 
+@mixin minmax-490-768 {
+	@media (min-width: 490.98px) and (max-width: 768px) {
+		@content;
+	}
+}
+
 @mixin minmax-375-920 {
 	@media (min-width: 375.98px) and (max-width: 920px) {
 		@content;
@@ -213,6 +228,12 @@
 
 @mixin minmax-690-768 {
 	@media (min-width: 690.99px) and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin minmax-425-768 {
+	@media (min-width: 425.99px) and (max-width: 768px) {
 		@content;
 	}
 }
@@ -246,4 +267,5 @@
 		@content;
 	}
 }
+
 //* ----------------------------------------------------------------------------

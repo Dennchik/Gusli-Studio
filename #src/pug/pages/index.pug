@@ -4,7 +4,6 @@ prepend script
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/anime-vendors.min.js")
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/swiper-bundle.min.js")
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/react-vendors.min.js")
-	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/home-components.min.js")
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/index.min.js")
 append link
 	link(rel="stylesheet" type="text/css" href="@@webRoot/css/index.min.css")
@@ -13,24 +12,6 @@ block title
 
 block page-content
 	.page
-		block header
-			header._header
-		._main-content
-			block main-content
-				main.main-content#wrapper
-					._content#content
-
-						//- div.material-parallax.parallax
-						//- 	div.parallax__image
-						//- 		img(src="@@webRoot/img/main/body/parallax_bg.png", alt="")
-						block section
-							section._slide
-							section._services
-						block prtners 
-							section._partners._container
-						block footer
-							footer._footer#footer
-				._menu-float
 		block button
 			._aside#scrollButton
 				+iconfont('angle-down', '_button')

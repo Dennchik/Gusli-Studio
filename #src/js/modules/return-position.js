@@ -1,6 +1,6 @@
-
 export default function returnToSavedPosition() {
 	var savedScrollPosition = 0;
+	console.log(savedScrollPosition);
 
 	// Функция для возврата к исходной позиции
 	function returnToSavedPosition() {
@@ -11,13 +11,15 @@ export default function returnToSavedPosition() {
 				behavior: 'smooth'
 			});
 		} else if (savedScrollPosition !== 0) {
-			// Если прокрутка находится в самом верху и есть сохраненная позиция, возвращаемся к сохраненной позиции
+			// Если прокрутка находится в самом верху и есть сохраненная позиция,
+			// возвращаемся к сохраненной позиции
 			window.scrollTo({
 				top: savedScrollPosition,
 				behavior: 'smooth'
 			});
 		}
 	}
+
 	// Добавляем обработчик события для кнопки
 	const scrollButton = document.getElementById('scrollButton');
 	scrollButton.addEventListener('click', function () {
@@ -32,7 +34,8 @@ export default function returnToSavedPosition() {
 
 	// Отслеживаем событие прокрутки страницы
 	window.addEventListener('scroll', function () {
-		// Если прокрутка больше, чем половина высоты окна браузера, добавляем класс "_rotate" кнопке 
+		// Если прокрутка больше, чем половина высоты окна браузера, добавляем
+		// класс "_rotate" кнопке
 		if ((window.scrollY || document.documentElement.scrollTop) > window.innerHeight * 0.2) {
 			scrollButton.classList.add('_rotate');
 		} else {
