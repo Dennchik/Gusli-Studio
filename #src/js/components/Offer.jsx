@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
 import {
-	animateTitles, refreshScrollTrigger,
+	animateTitles,
+	refreshScrollTrigger,
 	tlServices1,
 	tlServices2
 } from '../animations/animations.jsx';
@@ -20,6 +21,7 @@ export const Offer = () => {
 		tlServices2();
 		refreshScrollTrigger();
 	}, [location.pathname, isHomepage]);
+
 	return (
 		<div className="offer-container _container">
 			<div className="offer-container__body">
@@ -96,11 +98,14 @@ export const Offer = () => {
 						<div className="offer-container__thumbnail"></div>
 					</div>
 				</div>
-				<div className="offer-container__button _clip-circle">
-					<button className="submit-button" type={'submit'}>
+				<div className="offer-container__button _clip-circle _open-button">
+					<button className="order-button"
+									type={'button'}>
 						<span>оставить заявку</span>
 					</button>
 				</div>
+
+
 			</div>
 		</div>
 	);

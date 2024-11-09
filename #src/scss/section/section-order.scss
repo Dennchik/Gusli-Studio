@@ -1,0 +1,256 @@
+@use '../core/all' as *;
+
+.order-place {
+	height: 100%;
+	// . order-place__container
+	&__container {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	// .order-place__drawer
+	&__drawer {
+		max-width: 690px;
+	}
+
+	//order-place__line
+	&__line {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .order-place__close-button
+	&__close-button {
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+		box-shadow: 0 0 3px 1px $neon-blue-dark;
+		@extend .gradient-black;
+
+		.icon-angles-down-solid {
+			color: $neon-blue-dark;
+		}
+	}
+
+	// .order-place__title
+	&__title {
+
+		display: flex;
+		justify-content: space-between;
+		font-size: 2.8rem;
+		font-weight: 600;
+		margin-bottom: 4rem;
+		color: #55f;
+		text-transform: uppercase;
+		@include minmax-320-1920 {
+			font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1920 - 320)));
+		}
+
+		@include screen-320 {
+			font-size: 20px;
+		}
+	}
+
+	// .order-place__body
+	&__body {
+	}
+
+	// .order-place__form
+	&__form {
+	}
+
+	// .order-place__row
+	&__row {
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+		}
+
+		&:last-child {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	// .order-place__button
+	&__button {
+		border-radius: 7px;
+		margin-top: 5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+		transition: all 0.5s ease-in-out;
+		background: linear-gradient(-45deg, #020101, #20193c 70%);
+		box-shadow: 0 0 6px #000;
+
+		&:before {
+			border-radius: 7px;
+		}
+
+		&:hover {
+			.submit-button {
+				animation: shadow-pulse 0;
+			}
+		}
+
+		@include screen-375 {
+			width: 100%;
+		}
+
+		.submit-button {
+			border: 0;
+			border-radius: 7px;
+			color: white;
+			font-size: 1.6rem;
+			font-weight: 500;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1),
+			0 6px 6px rgba(0, 0, 0, 0.05);
+			animation: shadow-pulse 1.5s infinite;
+
+		}
+
+		button {
+			transition: color 0.5s ease-in-out;
+			position: relative;
+			z-index: 9;
+			display: inline-flex;
+			padding: 2rem 5rem;
+			text-transform: uppercase;
+			justify-content: center;
+			font-weight: 400;
+			overflow: hidden;
+			@include screen-375 {
+				width: 100%;
+			}
+
+			span {
+				text-shadow: 1px 1px 1px #000;
+			}
+		}
+	}
+}
+
+.form-order {
+	// .form-order__column
+	&__column {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+	}
+
+	// .form-order__input
+	&__input {
+
+		border-radius: 5px;
+		border: 1px solid $neon-blue-dark;
+
+		.input {
+			padding: 10px 15px;
+			font-size: 14px;
+			width: 100%;
+			height: 40px;
+			transition: all 0.4s ease-in-out;
+
+			&:focus {
+				border-radius: 5px;
+				box-shadow: 0 0 7px 1px $neon-blue-dark;
+			}
+		}
+
+	}
+
+	// .form-order__message
+	&__message {
+		resize: none;
+		width: 100%;
+		min-height: 100px;
+		border-radius: 5px;
+		border: 1px solid $neon-blue-dark;
+
+		padding: 10px 15px;
+		font-size: 14px;
+		height: 100%;
+		transition: all 0.4s ease-in-out;
+
+		&:focus {
+			border-radius: 5px;
+			box-shadow: 0 0 7px 1px $neon-blue-dark;
+		}
+
+	}
+
+	// .form-order__checkbox
+	&__checkbox {
+	}
+}
+
+.checkbox {
+	// .checkbox__input
+	&__input {
+		// display: none;
+	}
+
+	// .checkbox__label
+	&__label {
+		display: inline-flex;
+		line-height: 110%;
+		position: relative;
+		align-items: center;
+		font-size: 16px;
+
+		&:before {
+			content: '';
+			position: relative;
+			margin-right: 10px;
+			flex: 0 0 20px;
+			height: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			align-self: center;
+			border: 1px solid $neon-blue-dark;
+			border-radius: 4px;
+		}
+
+		span {
+			font-size: 10px;
+
+			a {
+				text-decoration: underline;
+				font-weight: 600;
+			}
+		}
+
+		.icon {
+			position: relative;
+			margin-right: 0.5rem;
+			height: 20px;
+			width: 20px;
+
+			.icon-angle-down {
+				position: absolute;
+				transition: all 0.3s ease-in-out;
+				margin-left: -30px;
+				opacity: 0;
+				left: 0;
+
+				&:before {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-size: 2.8rem !important;
+					color: $neon-blue-dark;
+					height: 20px;
+					width: 20px;
+				}
+			}
+
+		}
+	}
+
+}
+
+

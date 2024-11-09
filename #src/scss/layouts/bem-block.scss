@@ -12,21 +12,36 @@
 	}
 }
 
-// .button {
-// 	cursor: pointer;
-// 	white-space: nowrap;
-// 	position: relative;
-// 	display: inline-flex;
-// 	justify-content: space-between;
-// 	align-items: center;
-// 	padding: 4px;
-// 	width: 268px;
-// 	max-width: 268px;
-// 	max-height: 58px;
-// 	overflow: hidden;
-// 	transition: all .4s ease-in-out;
-// 	border: 1px solid transparent;
-// }
+//* ----------------------------------------------------------------------------
+.checkbox {
+	&._error {
+		.checkbox__label::before {
+			box-shadow: 0 0 14px 3px #f16666;
+		}
+	}
+
+	// .checkbox__input
+	&__input {
+		display: none;
+
+		&:checked + .checkbox__label .icon-angle-down {
+			display: block;
+			scale: 1;
+			opacity: 1;
+		}
+	}
+
+	&__checed {
+		cursor: pointer;
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		line-height: 140%;
+	}
+
+}
+
 ._clip-circle {
 	@include min-960 {
 		cursor: pointer;

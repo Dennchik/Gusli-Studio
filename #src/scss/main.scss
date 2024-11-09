@@ -7,7 +7,7 @@
 @use 'modules/parallax';
 // todo --------------------------- Assets -------------------------------------
 @use 'assets/burger-button';
-// @use 'assets/button';
+@use 'section/section-order';
 @use 'assets/menu-float';
 // todo --------------------------- layout -------------------------------------
 @use 'layouts/bem-block';

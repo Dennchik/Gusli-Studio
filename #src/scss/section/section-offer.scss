@@ -183,7 +183,7 @@
 
 	// .offer-container__button
 	&__button {
-		border-radius: 50%;
+		border-radius: 7px;
 		margin-top: 5rem;
 		display: flex;
 		align-items: center;
@@ -195,7 +195,7 @@
 		box-shadow: 0 0 6px #000;
 
 		&:before {
-			border-radius: 50%;
+			border-radius: 7px;
 		}
 
 		&:hover {
@@ -204,9 +204,9 @@
 			}
 		}
 
-		.submit-button {
+		.order-button {
 			border: 0;
-			border-radius: 50%;
+			border-radius: 7px;
 			color: white;
 			font-size: 1.6rem;
 			font-weight: 500;
@@ -231,6 +231,7 @@
 			}
 		}
 	}
+
 }
 
 @keyframes shadow-pulse {

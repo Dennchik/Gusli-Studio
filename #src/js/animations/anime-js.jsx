@@ -1,6 +1,77 @@
 import anime from 'animejs';
 
 //* ----------------------------------------------------------------------------
+
+export function buttonShow() {
+	let drawer_open = false;
+	document.querySelector('._open-button').addEventListener(
+		'mouseup', function () {
+			cta_button_hide.play();
+		});
+
+	document.querySelector('._close-button').addEventListener(
+		'mouseup', function () {
+			if (drawer_open) {
+				slideDown.play();
+				cta_button_show.play();
+			}
+		});
+	let cta_button_show = anime({
+		targets: '._open-button',
+		translateY: ['-15', '0'],
+		opacity: ['0', '1'],
+		easing: 'easeInOutSine',
+		delay: anime.stagger(200),
+		autoplay: false,
+		// loop: false
+		duration: 500,
+		complete: function () {
+		}
+	});
+
+	let cta_button_hide = anime({
+		targets: '._open-button',
+		translateY: ['0', '-15'],
+		opacity: ['1', '0'],
+		easing: 'easeInOutSine',
+		delay: anime.stagger(200),
+		autoplay: false,
+		// loop: false
+		duration: 500,
+		complete: function () {
+			slideUp.play();
+			drawer_open = true;
+		}
+	});
+
+	let slideDown = anime({
+		targets: '.page__form-modal',
+		translateY: ['0', '100%'],
+		duration: 1000,
+		autoplay: false,
+		begin: function () {
+			show_hideCTA('flex');
+			drawer_open = false;
+		}
+	});
+
+	let slideUp = anime({
+		targets: '.page__form-modal',
+		translateY: ['100%', '0'],
+		autoplay: false,
+		begin: function () {
+			show_hideCTA('none');
+		}
+	});
+
+
+	function show_hideCTA(param) {
+		document.querySelector('._open-button').style.display = param;
+		// document.querySelector('.cta-text').style.display = param;
+	}
+}
+
+//* ----------------------------------------------------------------------------
 export function timeLineHeaderItem() {
 	let timeline = anime.timeline({
 		duration: 750,

@@ -11,6 +11,7 @@ import { Footer } from '../layouts/Footer.jsx';
 import { MenuFloat } from '../layouts/Menu-float.jsx';
 
 import returnToSavedPosition from '../modules/return-position.js';
+import { FormModal } from '../сontext/FormModal .jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '.';
@@ -35,6 +36,7 @@ function HomePage() {
 	useEffect(() => {
 		parallaxEffect();
 		returnToSavedPosition();
+
 	}, []);
 
 	return (
@@ -63,6 +65,12 @@ function HomePage() {
 			<div className="page__aside" id="scrollButton">
 				<i className="icon-angle-down _button"></i>
 			</div>
+			<section className="page__form-modal"
+							 role="dialog"
+							 aria-labelledby="modalTitle"
+							 aria-modal="true">
+				<FormModal />
+			</section>
 		</>
 	);
 }

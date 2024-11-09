@@ -6,10 +6,12 @@
 	.services {
 		padding-top: 10rem;
 
+		// .categories__content
 		&__content {
 			overflow-x: scroll;
 		}
 
+		// .categories__body
 		&__body {
 			justify-content: flex-end;
 
@@ -17,15 +19,14 @@
 	}
 
 	.services-slide {
-
-		// overflow-y: visible;
-
+		// .services-slide__body
 		&__body {
 			display: flex;
 			flex-direction: column;
 			gap: 8rem;
 		}
 
+		// .services-slide__row
 		&__row {
 			width: 100%;
 			display: flex;
@@ -39,6 +40,7 @@
 			}
 		}
 
+		// .services-slide__info
 		&__info {
 			font-family: $font-family-secondary;
 			font-size: 38px;

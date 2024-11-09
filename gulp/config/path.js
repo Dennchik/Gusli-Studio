@@ -24,12 +24,12 @@ export const path = {
 	},
 	js: {
 		src: pathSrc + '/js/*.{js,jsx}',
-		watch: pathSrc + '/js/**/*.{js,jsx,scss}',
+		watch: pathSrc + '/js/**/*.{js,jsx}',
 		dest: pathDest + '/js'
 	},
 	react: {
 		src: pathSrc + '/js/**/*.{jsx}',
-		watch: pathSrc + '/js/**/*.{jsx,scss}',
+		watch: pathSrc + '/js/**/*.{jsx}',
 		dest: pathDest + '/js/app/'
 	},
 	image: {
