@@ -60,9 +60,9 @@
 		object-position: bottom center !important;
 	}
 
-	._image-achieve {
-		// max-height: calc(90%);
-
+	&__services-company {
+		filter: grayscale(1);
+		opacity: 0.1 !important;
 	}
 
 	picture {

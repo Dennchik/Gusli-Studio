@@ -137,9 +137,9 @@ export function tlServices1() {
 		window.innerWidth >= 490 ? 'bottom bottom+=70' : 'bottom bottom+=150';
 	const tlServices1 = gsap.timeline({
 		scrollTrigger: {
-			trigger: '.offer-container__body',
+			trigger: '.offer-container__content',
 			start: 'top bottom-=50',
-			endTrigger: '.offer-container__body', // end: 'bottom bottom+=70',
+			endTrigger: '.offer-container__content', // end: 'bottom bottom+=70',
 			end: endValue,
 			scrub: 2,
 			toggleActions: 'play none none reverse', // markers: true,
@@ -169,9 +169,9 @@ export function tlServices2() {
 		window.innerWidth >= 490 ? 'bottom bottom+=70' : 'bottom bottom+=150';
 	const tlServices2 = gsap.timeline({
 		scrollTrigger: {
-			trigger: '.offer-container__body',
+			trigger: '.offer-container__content',
 			start: 'top bottom-=300',
-			endTrigger: '.offer-container__body', // end: 'bottom bottom+=70',
+			endTrigger: '.offer-container__content', // end: 'bottom bottom+=70',
 			end: endValue,
 			scrub: 2,
 			toggleActions: 'play none none reverse', // markers: true,

@@ -1,6 +1,5 @@
 export default function returnToSavedPosition() {
 	var savedScrollPosition = 0;
-	console.log(savedScrollPosition);
 
 	// Функция для возврата к исходной позиции
 	function returnToSavedPosition() {

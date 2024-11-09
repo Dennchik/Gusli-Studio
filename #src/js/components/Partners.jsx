@@ -2,18 +2,29 @@ import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 import {
-	partnersSlide
-} from '../layouts/partners-slide.js';
-import {
-	buildSwiper
-} from '../layouts/build-swiper.js';
+	animateTitles,
+	refreshScrollTrigger
+} from '../animations/animations.jsx';
+import { buildSwiper } from '../layouts/build-swiper.js';
+import { partnersSlide } from '../layouts/partners-slide.js';
+
 
 export const Partners = () => {
 	useEffect(() => {
 		buildSwiper();
 		partnersSlide();
 	}, []);
-
+	useEffect(() => {
+		animateTitles(
+			'.partners__title',
+			'.partners__title',
+			'.partners__title',
+			'=150',
+			'=150',
+		);
+		refreshScrollTrigger();
+	}, []);
+	
 	return (
 		<div className="partners _container">
 			<div className="partners__body">
@@ -21,7 +32,7 @@ export const Partners = () => {
 				<div className="partners__content">
 					<div className="partners-slide">
 						<div className="partners-slide__body _swiper">
-							<div className="partners-slide__column">
+							<div className="partners-slide__column container">
 								<div className="partners-slide__content">
 									<div className="partners-slide__image">
 										<picture> {isWebpSupported()
@@ -31,7 +42,9 @@ export const Partners = () => {
 														 alt="Игорь Угольников" />}
 										</picture>
 									</div>
-									<div className="partners-slide__title"> Игорь Угольников</div>
+									<div className="box partners-slide__title el"> Игорь
+										Угольников
+									</div>
 									<div className="partners-slide__text">Советский и
 										российский актёр, кинорежиссёр, сценарист, продюсер,
 										телеведущий.

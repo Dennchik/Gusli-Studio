@@ -1,20 +1,20 @@
+import { ScrollSmoother } from 'gsap/ScrollSmoother.js';
+import PropTypes from 'prop-types';
 import React, { useEffect, useRef } from 'react';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 
 import {
-	refreshScrollTrigger,
 	animateTitles,
-	tlServices1,
-	tlServices2
+	refreshScrollTrigger,
 } from '../animations/animations.jsx';
 import { animationSvgLine, animationSvgText } from '../animations/anime-js.jsx';
-import { servicesSlide } from '../layouts/services-slide.js';
 import { buildSwiper } from '../layouts/build-swiper.js';
-import { ScrollSmoother } from 'gsap/ScrollSmoother.js';
+import { servicesSlide } from '../layouts/services-slide.js';
+import { Offer } from './Offer.jsx';
 
 // import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 //* ----------------------------------------------------------------------------
-export const Services = () => {
+export const Services = ({baseUrl}) => {
 	const isHomepage = location.pathname === '/';
 	// const prevLocation = useRef(location.pathname);
 	useEffect(() => {
@@ -91,26 +91,11 @@ export const Services = () => {
 			'=150',
 			'=150',
 		);
-		animateTitles(
-			'.offer-container__title',
-			'.offer-container__title',
-			'.offer-container__title',
-			'=150',
-			'=150',
-		);
-		tlServices1();
-		tlServices2();
 		refreshScrollTrigger();
-
-
-		// prevLocation.current = location.pathname; // Обновляем предыдущее
-		// значение
 	}, [location.pathname, isHomepage]);
 
 	return (
-		<div className="services key-object">
-			{/* <ParallaxProvider> */}
-			{/* <Parallax speed={-10} easing="easeInOut"> */}
+		<div className="services">
 			<div className="material-parallax parallax">
 				<div className="parallax__image">
 					<picture>
@@ -120,15 +105,13 @@ export const Services = () => {
 										 alt="image" />
 							)
 							: (
-								<img className="bgs"
+								<img className="parallax__image-services bg"
 										 src={'@@webRoot/img/main/body/serv_bg.png'}
 										 alt="image" />
 							)}
 					</picture>
 				</div>
 			</div>
-			{/* </Parallax> */}
-			{/* </ParallaxProvider> */}
 			<div className="services__body _container">
 				<div className="services__title">Наши услуги</div>
 				<div className="services__content">
@@ -670,82 +653,11 @@ export const Services = () => {
 						<div className="services-slide__pagination"></div>
 					</div>
 				</div>
-				<div className="services__offer offer-container">
-					<div className="offer-container__title">Специальное предложение</div>
-					<div className="offer-container__body">
-						<div className="offer-container__column sr-1">
-							<div className="offer-container__wrapper">
-								<a className="offer-container__link" href="#">
-									<div className="offer-container__title-box">
-										<span>Пакет Домашний</span>
-										<span>
-                      5 000<i className="icon-rub"> </i>
-                    </span>
-									</div>
-								</a>
-								<div className="offer-container__text">
-									Включает час звукозаписи сведение и мастеринг.
-								</div>
-							</div>
-							<div className="offer-container__thumbnail"></div>
-						</div>
-						<div className="offer-container__column sr-2">
-							<div className="offer-container__wrapper">
-								<a className="offer-container__link" href="#">
-									<div className="offer-container__title-box">
-										<span>Пакет Комфорт</span>
-										<span>
-                      8 000<i className="icon-rub"></i>
-                    </span>
-									</div>
-								</a>
-								<div className="offer-container__text">
-									Час звукозаписи, Продюсирование, отбор лучших дублей, нотная
-									коррекция, сведение и мастеринг.
-								</div>
-							</div>
-							<div className="offer-container__thumbnail"></div>
-						</div>
-						<div className="offer-container__column sr-3">
-							<div className="offer-container__wrapper">
-								<a className="offer-container__link" href="#">
-									<div className="offer-container__title-box">
-										<span>Пакет Профи</span>
-										<span>
-                      12 000<i className="icon-rub"></i>
-                    </span>
-									</div>
-								</a>
-								<div className="offer-container__text">
-									Час звукозаписи, Педагог по вокалу поможет раскрыть ваш голос
-									присутствуя на звукозаписи, Продюсирование, отбор лучших
-									дублей, нотная коррекция, сведение и мастеринг.
-								</div>
-							</div>
-							<div className="offer-container__thumbnail"></div>
-						</div>
-						<div className="offer-container__column sr-4">
-							<div className="offer-container__wrapper">
-								<a className="offer-container__link" href="#">
-									<div className="offer-container__title-box">
-										<span>Съемка клипа в студии</span>
-										<span>
-                      от 5 000<i className="icon-rub"></i>
-                    </span>
-									</div>
-								</a>
-								<div className="offer-container__text">
-									При заказе клипа в нашей студии вы получаете не только
-									профессиональное видео высокого качества, но и дополнительные
-									преимущества! Мы рады предоставить вам скидку в размере 10% на
-									ваш заказ.
-								</div>
-							</div>
-							<div className="offer-container__thumbnail"></div>
-						</div>
-					</div>
-				</div>
+				{<Offer baseUrl={baseUrl} />}
 			</div>
 		</div>
 	);
+};
+Services.propTypes = {
+	baseUrl: PropTypes.string.isRequired,
 };

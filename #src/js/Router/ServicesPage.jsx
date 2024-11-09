@@ -4,8 +4,8 @@ import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
 import { Header } from '../layouts/Header.jsx';
-import { About } from '../components/About.jsx';
-import { Partners } from '../components/Partners.jsx';
+import { Categories } from '../components/Categories.jsx';
+import { Offer } from '../components/Offer.jsx';
 import { Achievements } from '../components/Achievements.jsx';
 import { Footer } from '../layouts/Footer.jsx';
 import { MenuFloat } from '../layouts/Menu-float.jsx';
@@ -46,11 +46,11 @@ function ServicesPage() {
 			<main className="page__main-content">
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
-						<section className="main-content__about">
-							<About baseUrl={baseUrl} />
+						<section className="main-content__categories">
+							<Categories baseUrl={baseUrl} />
 						</section>
-						<section className="main-content__partners">
-							<Partners baseUrl={baseUrl} />
+						<section className="main-content__offer">
+							<Offer baseUrl={baseUrl} />
 						</section>
 						<section className="main-content__achievements">
 							<Achievements baseUrl={baseUrl} />

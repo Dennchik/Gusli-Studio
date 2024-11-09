@@ -99,6 +99,12 @@
 	}
 }
 
+@mixin min-960 {
+	@media (min-width: 960.99px) {
+		@content;
+	}
+}
+
 @mixin min-920 {
 	@media (min-width: 920.99px) {
 		@content;

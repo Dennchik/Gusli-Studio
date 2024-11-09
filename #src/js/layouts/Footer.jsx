@@ -7,7 +7,6 @@ import {
 	tlFooterParallel,
 } from '../animations/animations.jsx';
 import { AboutCompany } from '../components/AboutCompany.jsx';
-// import { Members } from '../components/Members.jsx';
 //* ----------------------------------------------------------------------------
 export const Footer = ({baseUrl, isHomePage}) => {
 	useEffect(() => {

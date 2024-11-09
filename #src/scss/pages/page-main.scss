@@ -123,7 +123,6 @@
 	// .main-content__content
 	&__content {
 		position: relative;
-		// @extend .gradient-services;
 	}
 
 	// .main-content__slide
@@ -152,11 +151,41 @@
 		}
 	}
 
+	//. main-content__categories
+	&__categories {
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+		width: 100%;
+		height: 100vh;
+	}
+
 	// .main-content__services
 	&__services {
 		position: relative;
 		z-index: 6;
-		// overflow: hidden;
+	}
+
+	// .main-content__offer
+	&__offer {
+		@extend .gradient-black;
+
+		&::before {
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			content: '';
+			background: linear-gradient(to left top, #8164ff 40%, rgb(42, 53, 20) 70%);
+		}
+
+		&::after {
+			position: absolute;
+			z-index: 9;
+			width: 100%;
+			height: 1px;
+			content: '';
+			background: linear-gradient(to left top, #8164ff 40%, rgb(42, 53, 20) 70%);
+		}
 	}
 
 	// .main-content__footer
@@ -198,19 +227,6 @@
 		background: linear-gradient(-45deg, #20193c, #050202 90%);
 	}
 
-	//.main-content__equalizer
-	/* 	&__equalizer {
-			position: absolute;
-			top: 100px;
-			right: -1;
-			bottom: 200px;
-			left: -1;
-			display: flex;
-			align-items: center;
-			width: 100%;
-			height: 100%;
-			margin: auto;
-		} */
 }
 
 @keyframes fadeInBackground {

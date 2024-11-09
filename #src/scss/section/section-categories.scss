@@ -1,0 +1,52 @@
+@use '../core/all' as *;
+
+.categories {
+	height: 100%;
+
+	.services {
+		padding-top: 10rem;
+
+		&__content {
+			overflow-x: scroll;
+		}
+
+		&__body {
+			justify-content: flex-end;
+
+		}
+	}
+
+	.services-slide {
+
+		// overflow-y: visible;
+
+		&__body {
+			display: flex;
+			flex-direction: column;
+			gap: 8rem;
+		}
+
+		&__row {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			gap: 3rem;
+
+			&:nth-child(even) {
+				justify-content: flex-start;
+				flex-direction: row-reverse;
+				text-align: right;
+			}
+		}
+
+		&__info {
+			font-family: $font-family-secondary;
+			font-size: 38px;
+			font-weight: 500;
+			flex: 0 1 70%;
+			height: 100%;
+			text-transform: uppercase;
+			color: #808080;
+		}
+	}
+}
