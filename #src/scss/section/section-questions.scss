@@ -1,0 +1,148 @@
+@use '../core/all' as *;
+
+.questions {
+	display: flex;
+	justify-content: center;
+
+	// .questions__body
+	&__body {
+		display: inline-flex;
+		flex-direction: column;
+		padding: 8rem 0;
+		justify-content: center;
+		max-width: 960px;
+	}
+	// .questions__title
+	&__title {
+		font: {
+			family: 'AA Neon', Helvetica, sans-serif;
+			size: 5rem;
+			weight: normal;
+		}
+		line-height: 100%;
+		position: relative;
+		z-index: 9;
+		display: inline;
+		margin-bottom: 4rem;
+		padding-bottom: 2rem;
+		text-align: center;
+		letter-spacing: 0;
+		color: $neon-blue;
+		perspective-origin: 45% 320%;
+		transform-style: preserve-3d;
+		perspective: 100px;
+		filter: $filter;
+
+		@include minmax-320-1920 {
+			font-size: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
+		}
+
+		@include screen-490 {
+			font-size: 20px;
+			line-height: 120%;
+			margin-bottom: 2rem;
+		}
+
+		&::before {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			height: 100%;
+			content: '';
+			transform: translate(0, 10%);
+		}
+
+		&::after {
+			font: {
+				weight: 900;
+			}
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 70%;
+			content: 'Вопросы и ответы';
+			transform: rotateX(15deg) translateZ(-5px);
+			@extend .shadow-after;
+		}
+	}
+
+	// .questions__list
+	&__list {
+	}
+
+	// .questions__item
+
+	&__item {
+		border-bottom: 1px solid #4e4e4e;
+		margin-bottom: 2rem;
+
+		&._collapsed {
+			.questions__collapse {
+				grid-template-rows: 1fr;
+			}
+
+			h3 {
+				color: $neon-blue-dark;
+			}
+
+			.icon-angles-down-solid {
+				scale: -1;
+				&::before {
+					color: $neon-blue-dark;
+				}
+			}
+		}
+	}
+
+	// .questions__head
+	&__head {
+		cursor: pointer;
+		display: flex;
+		gap: 3rem;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 2rem;
+
+		.icon-angles-down-solid {
+			transition:
+				scale 0.4s,
+				color 0.4s ease-in-out;
+			pointer-events: none;
+			padding: 0 2rem;
+			&::before {
+				color: $electric-lime;
+			}
+		}
+
+		h3 {
+			pointer-events: none;
+			font-size: 24px;
+			line-height: 125%; /* 75px/28 */
+			transition: color 0.4s ease-in-out;
+		}
+	}
+
+	// .questions__collapse
+	&__collapse {
+		display: grid;
+		grid-template-rows: 0fr;
+		overflow: hidden;
+		transition: grid-template-rows 0.4s ease-in-out;
+	}
+
+	// .questions__text
+	&__text {
+		min-height: 0;
+		p {
+			font-size: 16px;
+			opacity: 0.7;
+			line-height: 125%;
+			margin-bottom: 2rem;
+		}
+		li {
+			list-style: disc inside;
+		}
+	}
+}

@@ -6,13 +6,13 @@ import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import { Header } from '../layouts/Header.jsx';
 import { Categories } from '../components/Categories.jsx';
 import { Offer } from '../components/Offer.jsx';
-import { Achievements } from '../components/Achievements.jsx';
 import { Footer } from '../layouts/Footer.jsx';
 import { MenuFloat } from '../layouts/Menu-float.jsx';
+import { Answers } from '../components/Answers.jsx';
+import { FormModal } from '../сontext/FormModal .jsx';
 
 import returnToSavedPosition from '../modules/return-position.js';
 import parallaxEffect from '../animations/parallax.jsx';
-import { FormModal } from '../сontext/FormModal .jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '.';
@@ -53,8 +53,8 @@ function ServicesPage() {
 						<section className="main-content__offer">
 							<Offer baseUrl={baseUrl} />
 						</section>
-						<section className="main-content__achievements">
-							<Achievements baseUrl={baseUrl} />
+						<section className="main-content__questions">
+							<Answers baseUrl={baseUrl} />
 						</section>
 						<footer className="main-content__footer" id="footer">
 							<Footer baseUrl={baseUrl} isHomePage={true} />
@@ -69,9 +69,9 @@ function ServicesPage() {
 				<i className="icon-angle-down _button"></i>
 			</div>
 			<section className="page__form-modal"
-							 role="dialog"
-							 aria-labelledby="modalTitle"
-							 aria-modal="true">
+				role="dialog"
+				aria-labelledby="modalTitle"
+				aria-modal="true">
 				<FormModal />
 			</section>
 		</>

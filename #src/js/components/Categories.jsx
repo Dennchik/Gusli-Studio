@@ -1,62 +1,47 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
+import { LagTextFunction } from '../animations/animations.jsx';
 
+import { animationSvgLine, animationSvgText } from '../animations/anime-js.jsx';
 export const Categories = () => {
 	// const isHomepage = location.pathname === '/';
 	// const boxImagesRef = useRef([]);
 	//
-	// useEffect(() => {
-	// 	const handleMouseOver = (event) => {
-	// 		const target = event.currentTarget;
-	// 		// Запускаем анимацию при наведении
-	// 		animationSvgLine(target, false);
-	// 		animationSvgText(target, false);
-	// 	};
-	// 	const handleMouseLeave = (event) => {
-	// 		const target = event.currentTarget;
-	// 		setTimeout(() => {
-	// 			/*  Запускаем анимацию в обратном направлении с задержкой при уходе
-	// 			 мыши */
-	// 			animationSvgLine(target, true);
-	// 			animationSvgText(target, true);
-	// 		}, 500);
-	// 	};
-	// 	const boxImages = Array.from(
-	// 		document.querySelectorAll('.services-slide__image'),
-	// 	);
-	// 	// Сохраняем ссылку на элементы в useRef
-	// 	boxImagesRef.current = boxImages;
-	// 	boxImages.forEach((boxImage) => {
-	// 		boxImage.addEventListener('mouseover', handleMouseOver);
-	// 		boxImage.addEventListener('mouseleave', handleMouseLeave);
-	// 	});
-	//
-	// 	return () => {
-	// 		boxImages.forEach((boxImage) => {
-	// 			boxImage.removeEventListener('mouseover', handleMouseOver);
-	// 			boxImage.removeEventListener('mouseleave', handleMouseLeave);
-	// 		});
-	// 	};
-	// }, []);
-	// useEffect(() => {
-	// 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-	// 	const smoother = ScrollSmoother.get();
-	// 	if (smoother) {
-	// 		if (!isMobile || innerWidth > 1024) {
-	// 			smoother.effects('.services-slide__column', {
-	// 				speed: (i) => {
-	// 					return window.matchMedia('(min-width:730px)').matches
-	// 						? i % 2 === 1
-	// 							? 1.15
-	// 							: 1
-	// 						: i % 2 === 0
-	// 							? 0.9
-	// 							: 1.15;
-	// 				},
-	// 			});
-	// 		}
-	// 	}
-	// }, [location.pathname, isHomepage]);
+	const boxImagesRef = useRef([]);
+	useEffect(() => {
+		LagTextFunction();
+		const handleMouseOver = (event) => {
+			const target = event.currentTarget;
+			// Запускаем анимацию при наведении
+			animationSvgLine(target, false);
+			animationSvgText(target, false);
+		};
+		const handleMouseLeave = (event) => {
+			const target = event.currentTarget;
+			setTimeout(() => {
+				/*  Запускаем анимацию в обратном направлении с задержкой при уходе
+				 мыши */
+				animationSvgLine(target, true);
+				animationSvgText(target, true);
+			}, 500);
+		};
+		const boxImages = Array.from(
+			document.querySelectorAll('.services-slide__image'),
+		);
+		// Сохраняем ссылку на элементы в useRef
+		boxImagesRef.current = boxImages;
+		boxImages.forEach((boxImage) => {
+			boxImage.addEventListener('mouseover', handleMouseOver);
+			boxImage.addEventListener('mouseleave', handleMouseLeave);
+		});
+
+		return () => {
+			boxImages.forEach((boxImage) => {
+				boxImage.removeEventListener('mouseover', handleMouseOver);
+				boxImage.removeEventListener('mouseleave', handleMouseLeave);
+			});
+		};
+	}, []);
 
 	return (
 		<div className="categories">
@@ -64,14 +49,14 @@ export const Categories = () => {
 				<div className="parallax__image">
 					<picture>
 						{isWebpSupported() ? (
-								<img className="parallax__services-company bg"
-										 src={'@@webRoot/img/patterns/space.webp'}
-										 alt="image" />
-							)
+							<img className="parallax__services-company bg"
+								src={'@@webRoot/img/patterns/space.webp'}
+								alt="image" />
+						)
 							: (
 								<img className="parallax__services-company bg"
-										 src={'@@webRoot/img/patterns/space.jpg'}
-										 alt="image" />
+									src={'@@webRoot/img/patterns/space.jpg'}
+									alt="image" />
 							)}
 					</picture>
 				</div>
@@ -83,7 +68,7 @@ export const Categories = () => {
 						<div className="services-slide">
 							<div className="services-slide__body">
 								<div className="services-slide__row">
-									<div className="services-slide__column line">
+									<div className="services-slide__column line col-1">
 										<div className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -131,11 +116,11 @@ export const Categories = () => {
 													<picture>
 														{isWebpSupported()
 															? (<img className="services-slide__bg-img"
-																			src={'@@webRoot/img/main/body/bg_img.webp'}
-																			alt="bg-image" />)
+																src={'@@webRoot/img/main/body/bg_img.webp'}
+																alt="bg-image" />)
 															: (<img className="services-slide__bg-img"
-																			src={'.@@webRoot/img/main/body/bg_img.png'}
-																			alt="bg-image" />
+																src={'.@@webRoot/img/main/body/bg_img.png'}
+																alt="bg-image" />
 															)}
 													</picture>
 												</a>
@@ -239,13 +224,12 @@ export const Categories = () => {
 											</div>
 										</div>
 									</div>
-									<div className="services-slide__info">
-										чистый звук, профессиональное оборудование, опытные
-										специалисты.
+									<div className="services-slide__info split-stagger lag-1">
+										чистый звук, профессиональное оборудование, опытные специалисты.
 									</div>
 								</div>
 								<div className="services-slide__row">
-									<div className="services-slide__column line">
+									<div className="services-slide__column line col-2">
 										<div className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -332,13 +316,12 @@ export const Categories = () => {
 											</div>
 										</div>
 									</div>
-									<div className="services-slide__info">
-										видеозапись: сохранение важных моментов жизни в высоком
-										качестве.
+									<div className="services-slide__info split-stagger lag-2">
+										видеозапись: сохранение важных моментов жизни в высоком качестве.
 									</div>
 								</div>
 								<div className="services-slide__row">
-									<div className="services-slide__column line">
+									<div className="services-slide__column line col-1">
 										<div className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -425,13 +408,12 @@ export const Categories = () => {
 											</div>
 										</div>
 									</div>
-									<div className="services-slide__info">
-										видеозапись: сохранение важных моментов жизни в высоком
-										качестве.
+									<div className="services-slide__info split-stagger lag-1">
+										видеозапись: сохранение важных моментов жизни в высоком качестве.
 									</div>
 								</div>
 								<div className="services-slide__row">
-									<div className="services-slide__column line">
+									<div className="services-slide__column line col-2">
 										<div className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -542,13 +524,12 @@ export const Categories = () => {
 											</div>
 										</div>
 									</div>
-									<div className="services-slide__info">
-										видеозапись: сохранение важных моментов жизни в высоком
-										качестве.
+									<div className="services-slide__info split-stagger lag-2">
+										видеозапись: сохранение важных моментов жизни в высоком качестве.
 									</div>
 								</div>
 								<div className="services-slide__row">
-									<div className="services-slide__column line">
+									<div className="services-slide__column line col-1">
 										<div className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -639,9 +620,8 @@ export const Categories = () => {
 											</div>
 										</div>
 									</div>
-									<div className="services-slide__info">
-										видеозапись: сохранение важных моментов жизни в высоком
-										качестве.
+									<div className="services-slide__info split-stagger lag-1">
+										видеозапись: сохранение важных моментов жизни в высоком качестве.
 									</div>
 								</div>
 							</div>

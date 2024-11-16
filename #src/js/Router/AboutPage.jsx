@@ -9,7 +9,6 @@ import { Partners } from '../components/Partners.jsx';
 import { Achievements } from '../components/Achievements.jsx';
 import { Footer } from '../layouts/Footer.jsx';
 import { MenuFloat } from '../layouts/Menu-float.jsx';
-import { FormModal } from '../сontext/FormModal .jsx';
 
 import returnToSavedPosition from '../modules/return-position.js';
 import parallaxEffect from '../animations/parallax.jsx';

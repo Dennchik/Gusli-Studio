@@ -119,6 +119,7 @@
     "nouislider": "^15.8.1",
     "parallax-js": "^3.1.0",
     "rellax": "^1.12.1",
+    "stats.js": "^0.17.0",
     "swiper": "^11.1.14"
   }
 }

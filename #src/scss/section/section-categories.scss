@@ -8,13 +8,12 @@
 
 		// .categories__content
 		&__content {
-			overflow-x: scroll;
+			padding: 8rem 0;
 		}
 
 		// .categories__body
 		&__body {
 			justify-content: flex-end;
-
 		}
 	}
 
@@ -37,18 +36,36 @@
 				justify-content: flex-start;
 				flex-direction: row-reverse;
 				text-align: right;
+				@include screen-690 {
+					flex-direction: column;
+				}
+			}
+
+			@include screen-690 {
+				flex-direction: column;
 			}
 		}
 
 		// .services-slide__info
 		&__info {
 			font-family: $font-family-secondary;
-			font-size: 38px;
+			font-size: 30px;
 			font-weight: 500;
-			flex: 0 1 70%;
+			flex: 0 1 60%;
 			height: 100%;
+			max-width: 570px;
 			text-transform: uppercase;
 			color: #808080;
+
+			@include minmax-320-1920 {
+				font-size: calc(16px + (30 - 16) * ((100vw - 320px) / (1920 - 320)));
+			}
+			@include screen-690 {
+				text-align: center;
+			}
+			@include screen-320 {
+				font-size: 16px;
+			}
 		}
 	}
 }

@@ -1,11 +1,11 @@
-import {gsap} from 'gsap';
-import {ScrollSmoother} from 'gsap/ScrollSmoother';
-import {ScrollTrigger} from 'gsap/ScrollTrigger';
-import {ScrollToPlugin} from 'gsap/ScrollToPlugin';
+import { gsap } from 'gsap';
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 // import { Flip } from 'gsap/Flip';
 //* ----------------------------------------------------------------------------
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
-ScrollTrigger.config({ignoreMobileResize: true});
+ScrollTrigger.config({ ignoreMobileResize: true });
 ScrollTrigger.normalizeScroll(false);
 //* ----------------------------------------------------------------------------
 // Check if the device is mobile 

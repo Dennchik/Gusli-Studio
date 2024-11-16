@@ -14,7 +14,7 @@ import { Offer } from './Offer.jsx';
 
 // import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 //* ----------------------------------------------------------------------------
-export const Services = ({baseUrl}) => {
+export const Services = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
 	// const prevLocation = useRef(location.pathname);
 	useEffect(() => {
@@ -100,14 +100,14 @@ export const Services = ({baseUrl}) => {
 				<div className="parallax__image">
 					<picture>
 						{isWebpSupported() ? (
-								<img className="parallax__image-services bg"
-										 src={'@@webRoot/img/main/body/serv_bg.webp'}
-										 alt="image" />
-							)
+							<img className="parallax__image-services bg"
+								src={'@@webRoot/img/main/body/serv_bg.webp'}
+								alt="image" />
+						)
 							: (
 								<img className="parallax__image-services bg"
-										 src={'@@webRoot/img/main/body/serv_bg.png'}
-										 alt="image" />
+									src={'@@webRoot/img/main/body/serv_bg.png'}
+									alt="image" />
 							)}
 					</picture>
 				</div>
@@ -165,11 +165,11 @@ export const Services = ({baseUrl}) => {
 											<picture>
 												{isWebpSupported()
 													? (<img className="services-slide__bg-img"
-																	src={'@@webRoot/img/main/body/bg_img.webp'}
-																	alt="bg-image" />)
+														src={'@@webRoot/img/main/body/bg_img.webp'}
+														alt="bg-image" />)
 													: (<img className="services-slide__bg-img"
-																	src={'.@@webRoot/img/main/body/bg_img.png'}
-																	alt="bg-image" />
+														src={'.@@webRoot/img/main/body/bg_img.png'}
+														alt="bg-image" />
 													)}
 											</picture>
 										</a>
