@@ -134,3 +134,13 @@
 		font-size: calc(14px + (18 - 14) * ((100vw - 490px) / (1920 - 490))) !important;
 	}
 }
+
+//
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+	// width: 100% !important;
+	// height: 100% !important;
+}

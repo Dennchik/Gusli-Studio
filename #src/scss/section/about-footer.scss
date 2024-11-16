@@ -1,5 +1,4 @@
 @use '../core/all' as *;
-@use '../core/mixins';
 
 .about-company {
 	display: grid;
@@ -45,6 +44,8 @@
 	// .about-company__text
 	&__text {
 		padding: 2rem 0;
+		text-shadow: $text-shadow-color;
+		text-shadow: 0 0 1px $liquid-neon;
 
 		p {
 			color: $gray;
