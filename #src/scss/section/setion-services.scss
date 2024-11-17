@@ -17,7 +17,7 @@
 	&__title {
 		font: {
 			family: 'AA Neon', Helvetica, sans-serif;
-			size: 7.5rem;
+			size: 60px;
 			weight: normal;
 		}
 		line-height: 100%;
@@ -32,7 +32,7 @@
 		filter: $filter;
 
 		@include minmax-320-1920 {
-			font-size: calc(27px + (75 - 27) * ((100vw - 320px) / (1920 - 320)));
+			font-size: calc(27px + (60 - 27) * ((100vw - 320px) / (1920 - 320)));
 		}
 
 		@include screen-320 {
@@ -73,13 +73,12 @@
 				@extend .shadow-after;
 			}
 		}
-
 	}
 
 	// .services__content
 	&__content {
 		width: 100%;
-		padding-top: 8rem;
+		padding-top: 5rem;
 	}
 }
 
@@ -90,14 +89,13 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 2.5rem;
-
 	}
 
 	// .services-slide__column
 	&__column {
 		position: relative;
 		min-width: 150px;
-		max-width: 350px;
+		max-width: 300px;
 
 		&::before {
 			position: absolute;
@@ -161,9 +159,6 @@
 		filter: $filter;
 
 		img {
-			z-index: 1;
-			top: 0;
-			left: 0;
 			width: 100%;
 			transition: scale 0.4s ease-in-out;
 			object-fit: cover;
@@ -178,11 +173,13 @@
 	// .services-slide__bg-img
 	&__bg-img {
 		position: absolute;
+		pointer-events: none;
 		z-index: 2;
 		top: 0;
 		left: 0;
-		transition: opacity 1.5s,
-		box-shadow 0.3s ease-in-out 0.2s;
+		transition:
+			opacity 1.5s,
+			box-shadow 0.3s ease-in-out 0.2s;
 		opacity: 0;
 	}
 
@@ -239,4 +236,3 @@
 		@extend .pagination;
 	}
 }
-

@@ -1,0 +1,70 @@
+@use '../core/all' as *;
+
+.categories-sound {
+	// categories-sound__body
+	&__body {
+		padding: 2rem 0 5rem;
+	}
+
+	.services {
+		// .services__title
+		&__title {
+			&:nth-child(1) {
+				&::after {
+					content: 'звук';
+				}
+			}
+		}
+	}
+
+	.services-slide {
+		// .services-slide__column
+		&__column {
+		}
+		// .services-slide__content
+		&__content {
+		}
+
+		//  .services-slide__image
+		&__image {
+			width: 100%;
+			img {
+				max-height: 290px;
+				width: auto;
+				max-width: 100%;
+				height: auto;
+				object-fit: cover;
+			}
+		}
+		// .services-slide__text
+		&__text {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			font-size: 16px;
+			line-height: 100%;
+
+			p {
+				&:first-child {
+					color: $neon-blue;
+				}
+			}
+			color: $electric-lime;
+
+			@include minmax-320-1920 {
+				font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+			}
+			@include screen-320 {
+				font-size: 14px;
+			}
+		}
+
+		// .services-slide__body
+		&__body {
+			display: grid;
+			grid-template-columns: repeat(5, minmax(150px, 220px));
+			column-gap: 2rem;
+			row-gap: 5rem;
+		}
+	}
+}

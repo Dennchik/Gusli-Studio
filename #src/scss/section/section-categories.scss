@@ -4,7 +4,7 @@
 	height: 100%;
 
 	.services {
-		padding-top: 10rem;
+		padding-top: 4rem;
 
 		// .categories__content
 		&__content {
@@ -22,7 +22,7 @@
 		&__body {
 			display: flex;
 			flex-direction: column;
-			gap: 8rem;
+			gap: 0;
 		}
 
 		// .services-slide__row
@@ -31,6 +31,9 @@
 			display: flex;
 			align-items: center;
 			gap: 3rem;
+			&:not(:first-child) {
+				margin-top: -6rem;
+			}
 
 			&:nth-child(even) {
 				justify-content: flex-start;

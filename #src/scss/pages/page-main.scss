@@ -231,7 +231,12 @@
 		@extend .gradient-black;
 	}
 
-	//. main-content__partners
+	// .main-content__categories-sound
+	&__categories-sound {
+		position: relative;
+	}
+
+	// .main-content__partners
 	&__partners {
 		position: relative;
 		z-index: 9;

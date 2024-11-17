@@ -36,7 +36,6 @@ function HomePage() {
 	useEffect(() => {
 		parallaxEffect();
 		returnToSavedPosition();
-
 	}, []);
 
 	return (
@@ -74,5 +73,4 @@ function HomePage() {
 		</>
 	);
 }
-
 export default HomePage;

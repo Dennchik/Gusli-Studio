@@ -5,14 +5,13 @@ import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 
 import {
 	animateTitles,
-	refreshScrollTrigger,
+	refreshScrollTrigger
 } from '../animations/animations.jsx';
 import { animationSvgLine, animationSvgText } from '../animations/anime-js.jsx';
 import { buildSwiper } from '../layouts/build-swiper.js';
 import { servicesSlide } from '../layouts/services-slide.js';
 import { Offer } from './Offer.jsx';
 
-// import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 //* ----------------------------------------------------------------------------
 export const Services = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
@@ -83,7 +82,6 @@ export const Services = ({ baseUrl }) => {
 	}, [location.pathname, isHomepage]);
 
 	useEffect(() => {
-
 		animateTitles(
 			'.services__title',
 			'.services__title',
@@ -148,7 +146,7 @@ export const Services = ({ baseUrl }) => {
 												</g>
 											</svg>
 										</div>
-										<a href="#">
+										<a href="@@webRoot/service-sound.html">
 											<picture>
 												{isWebpSupported() ? (
 													<img
@@ -295,7 +293,7 @@ export const Services = ({ baseUrl }) => {
 												</g>
 											</svg>
 										</div>
-										<a href="">
+										<a href="@@webRoot/service-video.html">
 											<picture>
 												{isWebpSupported() ? (
 													<img
@@ -382,7 +380,7 @@ export const Services = ({ baseUrl }) => {
 												</g>
 											</svg>
 										</div>
-										<a href="">
+										<a href="@@webRoot/service-text.html">
 											<picture>
 												{isWebpSupported() ? (
 													<img
@@ -469,7 +467,7 @@ export const Services = ({ baseUrl }) => {
 												</g>
 											</svg>
 										</div>
-										<a href="">
+										<a href="@@webRoot/service-events.html">
 											<picture>
 												{isWebpSupported() ? (
 													<img
@@ -580,7 +578,7 @@ export const Services = ({ baseUrl }) => {
 												</g>
 											</svg>
 										</div>
-										<a href="">
+										<a href="@@webRoot/other-services.html">
 											<picture>
 												{isWebpSupported() ? (
 													<img

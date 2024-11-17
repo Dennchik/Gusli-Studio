@@ -104,13 +104,10 @@ export const Offer = () => {
 						<span>оставить заявку</span>
 					</button>
 				</div>
-
-
 			</div>
 		</div>
 	);
 };
-
 Offer.propTypes = {
 	baseUrl: PropTypes.string.isRequired,
 };

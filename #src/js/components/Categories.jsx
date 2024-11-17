@@ -99,7 +99,7 @@ export const Categories = () => {
 														</g>
 													</svg>
 												</div>
-												<a href="#">
+												<a href="@@webRoot/service-sound.html">
 													<picture>
 														{isWebpSupported() ? (
 															<img
@@ -162,9 +162,7 @@ export const Categories = () => {
 																d="M91.3,19.4c-0.5,0-0.7,0.2-0.7,0.6s0.2,0.6,0.7,
                             0.6c1.3,0,2.4,0.4,3.3,1.3c0.9,0.9,1.3,2,1.3,3.3c0,
                             1.3-0.4,2.4-1.3,3.3c-0.9,0.9-2,1.3-3.3,1.3c-1.3,
-                            0-2.4-0.4-3.3-1.3c-0.9-0.9-1.3-2-1.3-3.3v-1.5c0-0.4-0.2-0.7-0.6-0.7s-0.6,
-                            0.2-0.6,0.7v6.7c0,0.7-0.2,1.2-0.7,
-                            1.7c-0.4,0.4-1,0.7-1.7,0.7h-0.9v-1.7H83c0.4,
+                            0-2.4-0.4-3.3-1.3c-0.9-0.9-1.3-2-1.3-3.3v-1.5c0-0.4-0.2-0.7-0.6-0.7s-0.6,0.2-0.6,0.7v6.7c0,0.7-0.2,1.2-0.7,1.7c-0.4,0.4-1,0.7-1.7,0.7h-0.9v-1.7H83c0.4,
                             0,0.7-0.2,0.7-0.6v-6.7c0-0.7,0.2-1.3,
                             0.6-1.7c0.4-0.4,1-0.6,1.7-0.6c0.7,0,1.3,0.2,1.7,
                             0.6c0.4,0.4,0.6,1,0.6,1.7v1.5c0,1.2,0.4,2,1.3,
@@ -251,7 +249,7 @@ export const Categories = () => {
 														</g>
 													</svg>
 												</div>
-												<a href="">
+												<a href="@@webRoot/service-video.html">
 													<picture>
 														{isWebpSupported() ? (
 															<img
@@ -343,7 +341,7 @@ export const Categories = () => {
 														</g>
 													</svg>
 												</div>
-												<a href="">
+												<a href="@@webRoot/service-text.html">
 													<picture>
 														{isWebpSupported() ? (
 															<img
@@ -435,7 +433,7 @@ export const Categories = () => {
 														</g>
 													</svg>
 												</div>
-												<a href="">
+												<a href="@@webRoot/service-events.html">
 													<picture>
 														{isWebpSupported() ? (
 															<img
@@ -551,7 +549,7 @@ export const Categories = () => {
 														</g>
 													</svg>
 												</div>
-												<a href="">
+												<a href="@@webRoot/other-services.html">
 													<picture>
 														{isWebpSupported() ? (
 															<img
