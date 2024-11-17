@@ -4,7 +4,7 @@ import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 import { Link } from 'react-scroll';
 import { timeLineHeaderItem } from '../animations/anime-js.jsx';
 
-export const Header = ({baseUrl}) => {
+export const Header = ({ baseUrl }) => {
 	//* Именованная функция для обработки скроллинга
 	const handleScroll = () => {
 		const header = document.querySelector('.header');
@@ -42,25 +42,25 @@ export const Header = ({baseUrl}) => {
 		<div className="header">
 			<div className="header__container">
 				<div className="header__content">
-					<div className="header__column el-logo">
-						<a href={getPath('index.html')}>
+					<a href={getPath('index.html')}>
+						<div className="header__column el-logo">
 							<div className="header__logo">
 								{isWebpSupported()
 									? (<img src={getPath('img/header/logo.webp')}
-													alt="Logotip Gusli" />)
+										alt="Logotip Gusli" />)
 									: (<img src={getPath('img/header/logo.png')}
-													alt="Logotip Gusli" />)
+										alt="Logotip Gusli" />)
 								}
 							</div>
-						</a>
-						<div className="header__text">
-							<span>Media-Group</span>
+							<div className="header__text">
+								<span>Media-Group</span>
+							</div>
 						</div>
-					</div>
+					</a>
 					<div className="header__column">
 						<div className="header__menu">
 							<a className="header__item header__item--home"
-								 href={getPath('index.html')}>
+								href={getPath('index.html')}>
 								<i className="icon-home"></i>
 							</a>
 							<div className="header__item">
@@ -70,13 +70,13 @@ export const Header = ({baseUrl}) => {
 							</div>
 							<div className="header__item">
 								<a className="header__link-key"
-									 href={getPath('pages/videos.html')}>
+									href={getPath('pages/videos.html')}>
 									<span>Видео</span>
 								</a>
 							</div>
 							<div className="header__item">
 								<a className="header__link-key"
-									 href={getPath('about.html')}>
+									href={getPath('about.html')}>
 									<span>Компания</span>
 								</a>
 							</div>
@@ -87,11 +87,11 @@ export const Header = ({baseUrl}) => {
 							</div>
 							<div className="header__item">
 								<Link className="header__link-key link-key--contacts"
-											to="contacts"
-											duration={500}
-											offset={-100}
-											isDynamic={true}
-											smooth='easeInQuad'
+									to="contacts"
+									duration={500}
+									offset={-100}
+									isDynamic={true}
+									smooth='easeInQuad'
 								>
 									<span>Контакты</span>
 								</Link>
@@ -101,7 +101,7 @@ export const Header = ({baseUrl}) => {
 					</div>
 					<div className="header__column el-community">
 						<a href="tel:++79106044424"
-							 className="el-community__phone">
+							className="el-community__phone">
 							<i className="icon-phone-ringing"></i>
 							<div className="el-community__content">
 								<h5 className="el-community__title">Связаться с нами</h5>

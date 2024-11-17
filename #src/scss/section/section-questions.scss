@@ -71,13 +71,20 @@
 	// .questions__list
 	&__list {
 		max-width: 960px;
+		backdrop-filter: blur(20px);
+		box-shadow: 0 0 7px 10px rgba(0, 0, 0, 0.1);
+		padding: 1rem 1rem 0 1rem;
+		border-radius: 1rem;
+		background: rgba(28, 21, 63, 0.27);
 	}
 
 	// .questions__item
-
 	&__item {
-		border-bottom: 1px solid #4e4e4e;
 		margin-bottom: 2rem;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid #4e4e4e;
+		}
 
 		&._collapsed {
 			.questions__collapse {
@@ -85,15 +92,11 @@
 			}
 
 			h3 {
-				color: $neon-blue-dark;
+				color: $electric-lime;
 			}
 
 			.icon-angles-down-solid {
 				scale: -1;
-
-				&::before {
-					color: $neon-blue-dark;
-				}
 			}
 		}
 	}
@@ -102,28 +105,38 @@
 	&__head {
 		cursor: pointer;
 		display: flex;
-		gap: 3rem;
 		justify-content: space-between;
 		align-items: center;
 		padding-bottom: 2rem;
-		text-shadow: $text-shadow-color;
 
 		.icon-angles-down-solid {
-			transition: scale 0.4s,
-			color 0.4s ease-in-out;
+			transition:
+				scale 0.4s,
+				color 0.4s ease-in-out;
 			pointer-events: none;
 			padding: 0 2rem;
 
+			text-shadow: 0 0 1px $liquid-neon;
+
 			&::before {
-				color: $electric-lime;
+				color: $neon-blue-dark;
 			}
 		}
 
 		h3 {
 			pointer-events: none;
-			font-size: 24px;
+			font-size: 20px;
 			line-height: 125%; /* 75px/28 */
 			transition: color 0.4s ease-in-out;
+			text-shadow: 0 0 1px #7df9ff;
+
+			@include minmax-320-1920 {
+				font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
+			}
+
+			@include screen-320 {
+				font-size: 14px;
+			}
 		}
 	}
 
@@ -138,11 +151,33 @@
 	// .questions__text
 	&__text {
 		min-height: 0;
+		font-size: 16px;
+
+		text-shadow: 0 0 1px #7df9ff;
+
+		@include minmax-320-1920 {
+			font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
+		}
+
+		@include screen-320 {
+			font-size: 12px;
+		}
 
 		p {
-			font-size: 16px;
 			opacity: 0.7;
-			line-height: 125%;
+			line-height: 155%;
+			margin-bottom: 2rem;
+
+			a {
+				display: inline-block;
+				white-space: nowrap;
+				color: $neon-blue;
+				text-decoration: underline;
+				opacity: 1;
+			}
+		}
+
+		ul {
 			margin-bottom: 2rem;
 		}
 
@@ -151,4 +186,3 @@
 		}
 	}
 }
-

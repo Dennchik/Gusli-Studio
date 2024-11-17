@@ -33,8 +33,8 @@ export const Offer = () => {
 								<div className="offer-container__title-box">
 									<span>Пакет Домашний</span>
 									<span>
-                      5 000<i className="icon-rub"> </i>
-                    </span>
+										5 000<i className="icon-rub"> </i>
+									</span>
 								</div>
 							</a>
 							<div className="offer-container__text">
@@ -49,8 +49,8 @@ export const Offer = () => {
 								<div className="offer-container__title-box">
 									<span>Пакет Комфорт</span>
 									<span>
-                      8 000<i className="icon-rub"></i>
-                    </span>
+										8 000<i className="icon-rub"></i>
+									</span>
 								</div>
 							</a>
 							<div className="offer-container__text">
@@ -66,8 +66,8 @@ export const Offer = () => {
 								<div className="offer-container__title-box">
 									<span>Пакет Профи</span>
 									<span>
-                      12 000<i className="icon-rub"></i>
-                    </span>
+										12 000<i className="icon-rub"></i>
+									</span>
 								</div>
 							</a>
 							<div className="offer-container__text">
@@ -84,8 +84,8 @@ export const Offer = () => {
 								<div className="offer-container__title-box">
 									<span>Съемка клипа в студии</span>
 									<span>
-                      от 5 000<i className="icon-rub"></i>
-                    </span>
+										от 5 000<i className="icon-rub"></i>
+									</span>
 								</div>
 							</a>
 							<div className="offer-container__text">
@@ -98,9 +98,9 @@ export const Offer = () => {
 						<div className="offer-container__thumbnail"></div>
 					</div>
 				</div>
-				<div className="offer-container__button _clip-circle _open-button">
-					<button className="order-button"
-									type={'button'}>
+				<div className="offer-container__button _open-button">
+					<button className="order-button btn-grad"
+						type={'button'}>
 						<span>оставить заявку</span>
 					</button>
 				</div>

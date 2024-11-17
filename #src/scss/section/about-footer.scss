@@ -45,13 +45,13 @@
 	&__text {
 		padding: 2rem 0;
 		text-shadow: $text-shadow-color;
-		text-shadow: 0 0 1px $liquid-neon;
+		text-shadow: 0 0 1px $neon-electric;
 
 		p {
 			color: $gray;
 
 			&:nth-child(1) {
-				color: rgb(85, 85, 255);
+				color: rgb(87, 87, 255);
 			}
 
 			&:nth-child(2) {
@@ -112,8 +112,9 @@
 		display: block;
 		width: fit-content;
 		padding: 1rem 2rem;
-		transition: color 0.4s,
-		background 0.4s ease-in-out;
+		transition:
+			color 0.4s,
+			background 0.4s ease-in-out;
 		text-transform: uppercase;
 		border-radius: 4px;
 		background-color: #3d3d3d;
@@ -141,7 +142,6 @@
 }
 
 .team-mates {
-
 	// .team-mates__list
 	&__list {
 		display: flex;

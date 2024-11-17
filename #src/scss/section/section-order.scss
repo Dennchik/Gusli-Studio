@@ -28,6 +28,10 @@
 		border-radius: 50%;
 		box-shadow: 0 0 3px 1px $neon-blue-dark;
 		@extend .gradient-black;
+		transition: scale 0.4s ease-in-out;
+		&:hover {
+			scale: 1.3;
+		}
 
 		.icon-angles-down-solid {
 			color: $neon-blue-dark;
@@ -36,7 +40,6 @@
 
 	// .order-place__title
 	&__title {
-
 		display: flex;
 		justify-content: space-between;
 		font-size: 2.8rem;
@@ -51,14 +54,6 @@
 		@include screen-320 {
 			font-size: 20px;
 		}
-	}
-
-	// .order-place__body
-	&__body {
-	}
-
-	// .order-place__form
-	&__form {
 	}
 
 	// .order-place__row
@@ -81,8 +76,6 @@
 		align-items: center;
 		justify-content: center;
 		width: fit-content;
-		transition: all 0.5s ease-in-out;
-		background: linear-gradient(-45deg, #020101, #20193c 70%);
 		box-shadow: 0 0 6px #000;
 
 		&:before {
@@ -105,21 +98,20 @@
 			color: white;
 			font-size: 1.6rem;
 			font-weight: 500;
-			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1),
-			0 6px 6px rgba(0, 0, 0, 0.05);
+			box-shadow:
+				0 10px 20px rgba(245, 0, 0, 0.1),
+				0 6px 6px rgba(0, 0, 0, 0.05);
 			animation: shadow-pulse 1.5s infinite;
-
+			transition: all 0.4s ease-in-out;
 		}
 
 		button {
-			transition: color 0.5s ease-in-out;
 			position: relative;
 			z-index: 9;
 			display: inline-flex;
 			padding: 2rem 5rem;
 			text-transform: uppercase;
 			justify-content: center;
-			font-weight: 400;
 			overflow: hidden;
 			@include screen-375 {
 				width: 100%;
@@ -138,12 +130,10 @@
 		&:not(:last-child) {
 			margin-bottom: 20px;
 		}
-
 	}
 
 	// .form-order__input
 	&__input {
-
 		border-radius: 5px;
 		border: 1px solid $neon-blue-dark;
 
@@ -159,7 +149,6 @@
 				box-shadow: 0 0 7px 1px $neon-blue-dark;
 			}
 		}
-
 	}
 
 	// .form-order__message
@@ -179,18 +168,13 @@
 			border-radius: 5px;
 			box-shadow: 0 0 7px 1px $neon-blue-dark;
 		}
-
-	}
-
-	// .form-order__checkbox
-	&__checkbox {
 	}
 }
 
 .checkbox {
 	// .checkbox__input
 	&__input {
-		// display: none;
+		display: none;
 	}
 
 	// .checkbox__label
@@ -247,10 +231,6 @@
 					width: 20px;
 				}
 			}
-
 		}
 	}
-
 }
-
-
