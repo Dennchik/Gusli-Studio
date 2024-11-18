@@ -458,8 +458,8 @@ export const CategoriesSound = () => {
 													</picture>
 												</a>
 												<div className="services-slide__text">
-													<p>Звуковой дизайн</p>
-													<p>от 2 500₽ минута</p>
+													<p>Аудио-подкасты (возможен выезд)</p>
+													<p>от 2 000₽ в час</p>
 												</div>
 											</div>
 										</div>
@@ -541,15 +541,11 @@ export const CategoriesSound = () => {
 												<a href="@@webRoot/service-sound.html">
 													<picture>
 														{isWebpSupported() ? (
-															<img
-																src={'@@webRoot/img/main/body/img_1.webp'}
-																alt="image-1"
-															/>
+															<img src={'@@webRoot/img/main/body/img_1.webp'}
+																alt="image-1" />
 														) : (
-															<img
-																src={'@@webRoot/img/main/body/img_1.png'}
-																alt="image-1"
-															/>
+															<img src={'@@webRoot/img/main/body/img_1.png'}
+																alt="image-1" />
 														)}
 													</picture>
 													<picture>
