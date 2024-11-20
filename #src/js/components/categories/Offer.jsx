@@ -5,7 +5,7 @@ import {
 	refreshScrollTrigger,
 	tlServices1,
 	tlServices2
-} from '../animations/animations.jsx';
+} from '../../animations/animations.jsx';
 
 export const Offer = () => {
 	const isHomepage = location.pathname === '/';
@@ -23,7 +23,7 @@ export const Offer = () => {
 	}, [location.pathname, isHomepage]);
 
 	return (
-		<div className="offer-container">
+		<div className="offer-container _container">
 			<div className="offer-container__body">
 				<div className="offer-container__title">Специальное предложение</div>
 				<div className="offer-container__content">

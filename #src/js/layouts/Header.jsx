@@ -24,7 +24,6 @@ export const Header = ({ baseUrl }) => {
 		}
 	};
 
-
 	useEffect(() => {
 		timeLineHeaderItem();
 		window.addEventListener('scroll', handleScroll);
@@ -60,7 +59,7 @@ export const Header = ({ baseUrl }) => {
 					<div className="header__column">
 						<div className="header__menu">
 							<a className="header__item header__item--home"
-								href={getPath('index.html')}>
+								href={getPath('@@webRoot/index.html')}>
 								<i className="icon-home"></i>
 							</a>
 							<div className="header__item">
@@ -70,7 +69,7 @@ export const Header = ({ baseUrl }) => {
 							</div>
 							<div className="header__item">
 								<a className="header__link-key"
-									href={getPath('pages/videos.html')}>
+									href={getPath('services/videos.html')}>
 									<span>Видео</span>
 								</a>
 							</div>

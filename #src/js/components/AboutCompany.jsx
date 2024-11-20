@@ -1,7 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 //* ----------------------------------------------------------------------------
-export const AboutCompany = () => {
+export const AboutCompany = ({ baseUrl }) => {
+	const getPath = (fileName) => {
+		return `${baseUrl}/${fileName}`;
+	};
 	return (
 		<div className="about-company">
 			<div className="about-company__column el-1">
@@ -23,7 +27,7 @@ export const AboutCompany = () => {
 				</div>
 				<div className="about-company__footer">
 					<a className="about-company__button"
-						 href={'about.html'}>читать всё</a>
+						href={'about.html'}>читать всё</a>
 				</div>
 			</div>
 			<div className="about-company__column el-2">
@@ -49,8 +53,8 @@ export const AboutCompany = () => {
 				</div>
 				<div className="about-company__footer">
 					<a className="about-company__button"
-						 href={'services.html'}
-						 type="button">читать всё</a>
+						href={'services.html'}
+						type="button">читать всё</a>
 				</div>
 			</div>
 			<div className="about-company__column el-3">
@@ -61,8 +65,10 @@ export const AboutCompany = () => {
 							<li>
 								<div className="team-mates__image">
 									<picture> {isWebpSupported()
-										? <img src={'img/footer/team-1.webp'} alt="image" />
-										: <img src={'img/footer/team-1.png'} alt="image" />}
+										? <img src={getPath(
+											'img/footer/team-1.webp')} alt="image" />
+										: <img src={getPath(
+											'img/footer/team-1.png')} alt="image" />}
 									</picture>
 								</div>
 							</li>
@@ -81,8 +87,10 @@ export const AboutCompany = () => {
 								<div className="team-mates__image">
 									<picture>
 										{isWebpSupported()
-											? <img src={'img/footer/team-2.webp'} alt="image" />
-											: <img src={'img/footer/team-2.png'} alt="image" />}
+											? <img src={getPath(
+												'img/footer/team-2.webp')} alt="image" />
+											: <img src={getPath(
+												'img/footer/team-2.png')} alt="image" />}
 									</picture>
 								</div>
 							</li>
@@ -100,8 +108,10 @@ export const AboutCompany = () => {
 								<div className="team-mates__image">
 									<picture>
 										{isWebpSupported()
-											? <img src={'img/footer/team-3.webp'} alt="image" />
-											: <img src={'img/footer/team-3.png'} alt="image" />}
+											? <img src={getPath(
+												'img/footer/team-3.webp')} alt="image" />
+											: <img src={getPath(
+												'img/footer/team-3.png')} alt="image" />}
 									</picture>
 								</div>
 							</li>
@@ -119,8 +129,10 @@ export const AboutCompany = () => {
 								<div className="team-mates__image">
 									<picture>
 										{isWebpSupported()
-											? <img src={'img/footer/team-4.webp'} alt="image" />
-											: <img src={'img/footer/team-4.png'} alt="image" />}
+											? <img src={getPath(
+												'img/footer/team-4.webp')} alt="image" />
+											: <img src={getPath(
+												'img/footer/team-4.png')} alt="image" />}
 									</picture>
 								</div>
 							</li>
@@ -139,4 +151,7 @@ export const AboutCompany = () => {
 			</div>
 		</div>
 	);
+};
+AboutCompany.propTypes = {
+	baseUrl: PropTypes.string.isRequired
 };

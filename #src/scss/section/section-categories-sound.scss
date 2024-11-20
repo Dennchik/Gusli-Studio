@@ -4,9 +4,21 @@
 	// categories-sound__body
 	&__body {
 		padding: 2rem 0 5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		min-height: 100vh;
 	}
 
 	.services {
+		// .services__body
+		&__body {
+			width: 100%;
+		}
+
 		// .services__title
 		&__title {
 			&:nth-child(1) {
@@ -21,6 +33,7 @@
 		// .services-slide__column
 		&__column {
 		}
+
 		// .services-slide__content
 		&__content {
 		}
@@ -28,6 +41,7 @@
 		//  .services-slide__image
 		&__image {
 			width: 100%;
+
 			img {
 				max-height: 290px;
 				width: auto;
@@ -36,27 +50,10 @@
 				object-fit: cover;
 			}
 		}
+
 		// .services-slide__text
 		&__text {
-			display: flex;
 			flex-direction: column;
-			gap: 0.5rem;
-			font-size: 16px;
-			line-height: 100%;
-
-			p {
-				&:first-child {
-					color: $neon-blue;
-				}
-			}
-			color: $electric-lime;
-
-			@include minmax-320-1920 {
-				font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
-			}
-			@include screen-320 {
-				font-size: 14px;
-			}
 		}
 
 		// .services-slide__body

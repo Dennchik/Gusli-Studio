@@ -1,8 +1,8 @@
 import { gsap } from 'gsap';
 import React, { useEffect } from 'react';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
-import Parallax from 'parallax-js';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Parallax from 'parallax-js';
 
 import {
 	animateTitles,
@@ -41,9 +41,9 @@ export function Achievements() {
 					<picture>
 						{isWebpSupported()
 							? <img className='parallax__image-achieve bg'
-										 src={'img/about/pattern.webp'} alt="image" />
+								src={'img/about/pattern.webp'} alt="image" />
 							: <img className='parallax__image-achieve bg'
-										 src={'img/about/pattern.png'} alt="image" />}
+								src={'img/about/pattern.png'} alt="image" />}
 					</picture>
 					<div className="parallax__image-blur">
 						<picture>

@@ -13,7 +13,7 @@ import { servicesSlide } from '../layouts/services-slide.js';
 import { Offer } from './Offer.jsx';
 
 //* ----------------------------------------------------------------------------
-export const Services = ({ baseUrl }) => {
+export const Services = ({baseUrl}) => {
 	const isHomepage = location.pathname === '/';
 	// const prevLocation = useRef(location.pathname);
 	useEffect(() => {
@@ -98,14 +98,14 @@ export const Services = ({ baseUrl }) => {
 				<div className="parallax__image">
 					<picture>
 						{isWebpSupported() ? (
-							<img className="parallax__image-services bg"
-								src={'@@webRoot/img/main/body/serv_bg.webp'}
-								alt="image" />
-						)
+								<img className="parallax__image-services bg"
+										 src={'@@webRoot/img/main/body/serv_bg.webp'}
+										 alt="image" />
+							)
 							: (
 								<img className="parallax__image-services bg"
-									src={'@@webRoot/img/main/body/serv_bg.png'}
-									alt="image" />
+										 src={'@@webRoot/img/main/body/serv_bg.png'}
+										 alt="image" />
 							)}
 					</picture>
 				</div>
@@ -146,7 +146,7 @@ export const Services = ({ baseUrl }) => {
 												</g>
 											</svg>
 										</div>
-										<a href="@@webRoot/service-sound.html">
+										<a href={'@@webRoot/services/service-sound.html'}>
 											<picture>
 												{isWebpSupported() ? (
 													<img
@@ -163,11 +163,11 @@ export const Services = ({ baseUrl }) => {
 											<picture>
 												{isWebpSupported()
 													? (<img className="services-slide__bg-img"
-														src={'@@webRoot/img/main/body/bg_img.webp'}
-														alt="bg-image" />)
+																	src={'@@webRoot/img/main/body/bg_img.webp'}
+																	alt="bg-image" />)
 													: (<img className="services-slide__bg-img"
-														src={'.@@webRoot/img/main/body/bg_img.png'}
-														alt="bg-image" />
+																	src={'.@@webRoot/img/main/body/bg_img.png'}
+																	alt="bg-image" />
 													)}
 											</picture>
 										</a>
@@ -293,7 +293,7 @@ export const Services = ({ baseUrl }) => {
 												</g>
 											</svg>
 										</div>
-										<a href="@@webRoot/service-video.html">
+										<a href={'@@webRoot/service-video.html'}>
 											<picture>
 												{isWebpSupported() ? (
 													<img
@@ -380,7 +380,7 @@ export const Services = ({ baseUrl }) => {
 												</g>
 											</svg>
 										</div>
-										<a href="@@webRoot/service-text.html">
+										<a href={'@@webRoot/service-text.html'}>
 											<picture>
 												{isWebpSupported() ? (
 													<img
@@ -467,7 +467,7 @@ export const Services = ({ baseUrl }) => {
 												</g>
 											</svg>
 										</div>
-										<a href="@@webRoot/service-events.html">
+										<a href={'@@webRoot/service-events.html'}>
 											<picture>
 												{isWebpSupported() ? (
 													<img
@@ -578,7 +578,7 @@ export const Services = ({ baseUrl }) => {
 												</g>
 											</svg>
 										</div>
-										<a href="@@webRoot/other-services.html">
+										<a href={'@@webRoot/other-services.html'}>
 											<picture>
 												{isWebpSupported() ? (
 													<img

@@ -76,6 +76,7 @@
 		padding: 1rem 1rem 0 1rem;
 		border-radius: 1rem;
 		background: rgba(28, 21, 63, 0.27);
+		border: 1px solid rgba(128, 128, 128, 0.09);
 	}
 
 	// .questions__item
@@ -110,9 +111,8 @@
 		padding-bottom: 2rem;
 
 		.icon-angles-down-solid {
-			transition:
-				scale 0.4s,
-				color 0.4s ease-in-out;
+			transition: scale 0.4s,
+			color 0.4s ease-in-out;
 			pointer-events: none;
 			padding: 0 2rem;
 

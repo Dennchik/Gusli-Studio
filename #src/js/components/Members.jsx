@@ -28,7 +28,7 @@ export const Members = () => {
 				</div>
 				<div className='about-company__footer'>
 					<a className='about-company__button'
-						 href={'pages/about.html'}>читать всё</a>
+						 href={'services/about.html'}>читать всё</a>
 				</div>
 			</div>
 			<div className="about-company__column el-2">

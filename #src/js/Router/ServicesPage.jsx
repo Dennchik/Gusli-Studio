@@ -5,7 +5,7 @@ import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
 import { Header } from '../layouts/Header.jsx';
 import { Categories } from '../components/Categories.jsx';
-import { Offer } from '../components/Offer.jsx';
+import { Offer } from '../components/categories/Offer.jsx';
 import { Footer } from '../layouts/Footer.jsx';
 import { MenuFloat } from '../layouts/Menu-float.jsx';
 import { Answers } from '../components/Answers.jsx';
@@ -15,7 +15,7 @@ import returnToSavedPosition from '../modules/return-position.js';
 import parallaxEffect from '../animations/parallax.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
-const baseUrl = '.';
+const baseUrl = '..';
 
 
 function ServicesPage() {
@@ -69,9 +69,9 @@ function ServicesPage() {
 				<i className="icon-angle-down _button"></i>
 			</div>
 			<section className="page__form-modal"
-				role="dialog"
-				aria-labelledby="modalTitle"
-				aria-modal="true">
+							 role="dialog"
+							 aria-labelledby="modalTitle"
+							 aria-modal="true">
 				<FormModal />
 			</section>
 		</>

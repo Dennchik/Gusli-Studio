@@ -3,6 +3,7 @@ import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 import { LagTextFunction } from '../animations/animations.jsx';
 
 import { animationSvgLine, animationSvgText } from '../animations/anime-js.jsx';
+
 export const Categories = () => {
 	// const isHomepage = location.pathname === '/';
 	// const boxImagesRef = useRef([]);
@@ -83,9 +84,7 @@ export const Categories = () => {
 															<style type="text/css">
 																{`.el{fill:none;stroke:#fff;stroke-width:8;stroke-miterlimit:10;}`}
 															</style>
-															<path
-																className="el"
-																d="M11.6,12.2c69.8,144.5,138.5,245,178.9,
+															<path className="el" d="M11.6,12.2c69.8,144.5,138.5,245,178.9,
                             277.9c29.8,24.2,60.5,32.7,60.5,32.7c5.6,1.5,
                             31.8,8.4,65.9,3.4c28.1-4.1,47.3-14.2,
                             68-25c34.2-17.9,55.5-37.6,61.9-43.7c13.8-13.2,
@@ -99,7 +98,7 @@ export const Categories = () => {
 														</g>
 													</svg>
 												</div>
-												<a href="@@webRoot/service-sound.html">
+												<a href={'@@webRoot/services/service-sound.html'}>
 													<picture>
 														{isWebpSupported() ? (
 															<img
@@ -223,7 +222,8 @@ export const Categories = () => {
 										</div>
 									</div>
 									<div className="services-slide__info split-stagger lag-1">
-										чистый звук, профессиональное оборудование, опытные специалисты.
+										Чистый звук, профессиональное оборудование, опытные
+										специалисты.
 									</div>
 								</div>
 								<div className="services-slide__row">
@@ -249,7 +249,7 @@ export const Categories = () => {
 														</g>
 													</svg>
 												</div>
-												<a href="@@webRoot/service-video.html">
+												<a href={'@@webRoot/services/service-video.html'}>
 													<picture>
 														{isWebpSupported() ? (
 															<img
@@ -315,7 +315,8 @@ export const Categories = () => {
 										</div>
 									</div>
 									<div className="services-slide__info split-stagger lag-2">
-										видеозапись: сохранение важных моментов жизни в высоком качестве.
+										Видеозапись: сохранение важных моментов жизни в высоком
+										качестве.
 									</div>
 								</div>
 								<div className="services-slide__row">
@@ -341,7 +342,7 @@ export const Categories = () => {
 														</g>
 													</svg>
 												</div>
-												<a href="@@webRoot/service-text.html">
+												<a href={'@@webRoot/services/service-text.html'}>
 													<picture>
 														{isWebpSupported() ? (
 															<img
@@ -407,7 +408,8 @@ export const Categories = () => {
 										</div>
 									</div>
 									<div className="services-slide__info split-stagger lag-1">
-										видеозапись: сохранение важных моментов жизни в высоком качестве.
+										Видеозапись: сохранение важных моментов жизни в высоком
+										качестве.
 									</div>
 								</div>
 								<div className="services-slide__row">
@@ -433,7 +435,7 @@ export const Categories = () => {
 														</g>
 													</svg>
 												</div>
-												<a href="@@webRoot/service-events.html">
+												<a href={'@@webRoot/services/service-events.html'}>
 													<picture>
 														{isWebpSupported() ? (
 															<img
@@ -523,7 +525,8 @@ export const Categories = () => {
 										</div>
 									</div>
 									<div className="services-slide__info split-stagger lag-2">
-										видеозапись: сохранение важных моментов жизни в высоком качестве.
+										Видеозапись: сохранение важных моментов жизни в высоком
+										качестве.
 									</div>
 								</div>
 								<div className="services-slide__row">
@@ -549,7 +552,7 @@ export const Categories = () => {
 														</g>
 													</svg>
 												</div>
-												<a href="@@webRoot/other-services.html">
+												<a href={'@@webRoot/services/other-services.html'}>
 													<picture>
 														{isWebpSupported() ? (
 															<img
@@ -619,7 +622,8 @@ export const Categories = () => {
 										</div>
 									</div>
 									<div className="services-slide__info split-stagger lag-1">
-										видеозапись: сохранение важных моментов жизни в высоком качестве.
+										Видеозапись: сохранение важных моментов жизни в высоком
+										качестве.
 									</div>
 								</div>
 							</div>

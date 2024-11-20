@@ -30,7 +30,8 @@
 			width: 100%;
 			display: flex;
 			align-items: center;
-			gap: 3rem;
+			gap: 2rem;
+
 			&:not(:first-child) {
 				margin-top: -6rem;
 			}
@@ -51,22 +52,26 @@
 
 		// .services-slide__info
 		&__info {
-			font-size: 30px;
+			font-size: 20px;
 			font-weight: 500;
 			flex: 0 1 60%;
 			height: 100%;
 			max-width: 690px;
-			text-transform: uppercase;
 			color: #808080;
+			border: 1px solid rgba(128, 128, 128, 0.09);
+			border-radius: 10px;
+			backdrop-filter: blur(20px);
+			box-shadow: 0 0 7px 10px rgba(0, 0, 0, .1);
+			padding: 1rem;
 
 			@include minmax-320-1920 {
-				font-size: calc(16px + (30 - 16) * ((100vw - 320px) / (1920 - 320)));
+				font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
 			}
 			@include screen-690 {
 				text-align: center;
 			}
 			@include screen-320 {
-				font-size: 16px;
+				font-size: 14px;
 			}
 		}
 	}

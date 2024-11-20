@@ -58,23 +58,26 @@ export const MenuFloat = ({baseUrl}) => {
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														 href="">Видео</a>
+														 href={getPath('service.html')}>Услуги</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														 href="">Звук</a>
+														 href={getPath('service-sound.html')}>Звук</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														 href="">Текст</a>
+														 href={getPath(
+															 'service/service-video.html')}>Видео</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														 href="">Ивенты</a>
+														 href={getPath(
+															 'service/service-text.html')}>Текс</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														 href="">Услуги</a>
+														 href={getPath(
+															 'service/service-event.html')}>Ивенты</a>
 												</li>
 											</ul>
 										</div>
@@ -85,7 +88,8 @@ export const MenuFloat = ({baseUrl}) => {
 												</div>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														 href={getPath('pages/about.html')}>Биография</a>
+														 href={getPath(
+															 'about.html')}>Биография</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
