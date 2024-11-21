@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
 import { Header } from '../layouts/Header.jsx';
-import { CategoriesSound } from '../components/categories/CategoriesSound.jsx';
+import { ServiceSound } from '../components/categories/ServiceSound.jsx';
 import { Offer } from '../components/categories/Offer.jsx';
 import { Answers } from '../components/Answers.jsx';
 import { Footer } from '../layouts/Footer.jsx';
@@ -40,6 +40,7 @@ function SoundPage() {
 		parallaxEffect();
 		returnToSavedPosition();
 	}, []);
+
 	return (
 		<>
 			<header className="page__header">
@@ -49,7 +50,7 @@ function SoundPage() {
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
 						<section className="main-content__categories-sound">
-							<CategoriesSound baseUrl={baseUrl} isHomePage={true} />
+							<ServiceSound baseUrl={baseUrl} isHomePage={true} />
 						</section>
 						<section className="main-content__offer">
 							<Offer baseUrl={baseUrl} />

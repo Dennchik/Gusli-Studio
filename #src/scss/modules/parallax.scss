@@ -26,6 +26,7 @@
 		bottom: 0;
 		width: 100%;
 		height: 100%;
+		opacity: 0.5;
 
 		img {
 			position: absolute;
@@ -52,7 +53,6 @@
 
 	&__image-achieve {
 		filter: grayscale(91%);
-
 	}
 
 	// .parallax__image-services
@@ -73,6 +73,3 @@
 		will-change: transform;
 	}
 }
-
-
-

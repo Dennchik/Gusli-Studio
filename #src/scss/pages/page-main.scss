@@ -80,8 +80,9 @@
 			right: 0;
 			visibility: hidden;
 			padding: 1.5rem 3rem;
-			transition: transform 0.5s,
-			opacity 0.5s ease-in-out;
+			transition:
+				transform 0.5s,
+				opacity 0.5s ease-in-out;
 			transform: translate3d(300px, 0, 0);
 			opacity: 0;
 			border: 1px $neon-blue-dark;
@@ -112,9 +113,9 @@
 		width: 100%;
 		height: 100vh;
 		background: linear-gradient(
-										-45deg,
-										rgba(32, 25, 60, 70%),
-										rgba(2, 1, 1, 0.7) 70%
+			-45deg,
+			rgba(32, 25, 60, 70%),
+			rgba(2, 1, 1, 0.7) 70%
 		);
 		backdrop-filter: blur(10px);
 
@@ -202,9 +203,9 @@
 			height: 1px;
 			content: '';
 			background: linear-gradient(
-											to left top,
-											#8164ff 40%,
-											rgb(42, 53, 20) 70%
+				to left top,
+				#8164ff 40%,
+				rgb(42, 53, 20) 70%
 			);
 		}
 
@@ -215,9 +216,9 @@
 			height: 1px;
 			content: '';
 			background: linear-gradient(
-											to left top,
-											#8164ff 40%,
-											rgb(42, 53, 20) 70%
+				to left top,
+				#8164ff 40%,
+				rgb(42, 53, 20) 70%
 			);
 		}
 	}
@@ -235,7 +236,13 @@
 		position: relative;
 		z-index: 1;
 		overflow: hidden;
+	}
 
+	// .main-content__musician
+	&__musician {
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
 	}
 
 	// .main-content__partners
@@ -251,9 +258,9 @@
 			height: 1px;
 			content: '';
 			background: linear-gradient(
-											to left top,
-											#8164ff 40%,
-											rgb(42, 53, 20) 70%
+				to left top,
+				#8164ff 40%,
+				rgb(42, 53, 20) 70%
 			);
 		}
 
@@ -263,9 +270,9 @@
 			height: 1px;
 			content: '';
 			background: linear-gradient(
-											to left top,
-											#8164ff 40%,
-											rgb(42, 53, 20) 70%
+				to left top,
+				#8164ff 40%,
+				rgb(42, 53, 20) 70%
 			);
 		}
 	}

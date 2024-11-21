@@ -38,10 +38,12 @@ export function SplitTextFunction() {
 }
 export function LagTextFunction() {
 	const smoother = ScrollSmoother.get();
-	smoother.effects('.lag-1', { lag: 2, speed: 1 });
-	smoother.effects('.lag-2', { lag: 2, speed: 1.2 });
-	smoother.effects('.col-1', { lag: 1.5, speed: 0.8 });
-	smoother.effects('.col-2', { lag: 1.5, speed: 1 });
+	if (window.innerWidth > 490) {
+		smoother.effects('.lag-1', { lag: 2, speed: 1 });
+		smoother.effects('.lag-2', { lag: 2, speed: 1.2 });
+		smoother.effects('.col-1', { lag: 1.5, speed: 0.8 });
+		smoother.effects('.col-2', { lag: 1.5, speed: 1 });
+	}
 }
 
 //* -------------------- Уничтожение ScrollSmoother ----------------------------

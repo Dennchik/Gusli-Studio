@@ -2,7 +2,7 @@
 
 .services {
 	height: 100%;
-	
+
 	// .services__body
 	&__body {
 		height: 100%;
@@ -79,7 +79,7 @@
 	// .services__content
 	&__content {
 		width: 100%;
-		padding-top: 5rem;
+		padding-top: 8rem;
 	}
 }
 
@@ -183,8 +183,9 @@
 		z-index: 2;
 		top: 0;
 		left: 0;
-		transition: opacity 1.5s,
-		box-shadow 0.3s ease-in-out 0.2s;
+		transition:
+			opacity 1.5s,
+			box-shadow 0.3s ease-in-out 0.2s;
 		opacity: 0;
 	}
 

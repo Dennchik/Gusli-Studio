@@ -71,12 +71,12 @@
 	// .questions__list
 	&__list {
 		max-width: 960px;
-		backdrop-filter: blur(20px);
-		box-shadow: 0 0 7px 10px rgba(0, 0, 0, 0.1);
 		padding: 1rem 1rem 0 1rem;
 		border-radius: 1rem;
-		background: rgba(28, 21, 63, 0.27);
+		backdrop-filter: blur(20px);
 		border: 1px solid rgba(128, 128, 128, 0.09);
+		box-shadow: 0 0 7px 10px rgba(0, 0, 0, 0.1);
+		background: rgba(28, 21, 63, 0.27);
 	}
 
 	// .questions__item
@@ -111,8 +111,9 @@
 		padding-bottom: 2rem;
 
 		.icon-angles-down-solid {
-			transition: scale 0.4s,
-			color 0.4s ease-in-out;
+			transition:
+				scale 0.4s,
+				color 0.4s ease-in-out;
 			pointer-events: none;
 			padding: 0 2rem;
 

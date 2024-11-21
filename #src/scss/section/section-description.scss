@@ -1,0 +1,174 @@
+@use '../core/all' as *;
+
+.service-description {
+	// .service-description__column
+	&__column {
+		position: relative;
+		z-index: 99;
+		height: 100%;
+		min-height: 100vh;
+		overflow: hidden;
+
+		&:not(:first-child) {
+			&::before {
+				position: absolute;
+				width: 100%;
+				height: 1px;
+				content: '';
+				background: linear-gradient(to left top, #8164ff 40%, #2a3514 70%);
+			}
+		}
+	}
+	.parallax__image {
+		filter: sepia(50%) hue-rotate(10deg);
+	}
+	// .musician__body
+	&__body {
+		height: 100%;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		padding: 8rem 0;
+	}
+
+	//.musician__content
+	&__content {
+		display: flex;
+		height: 100%;
+		min-height: 100vh;
+		max-width: 960px;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	//.musician__title
+	&__title {
+		font: {
+			family: 'AA Neon', Helvetica, sans-serif;
+			size: 60px;
+			weight: normal;
+		}
+		text-align: center;
+		line-height: 100%;
+		position: relative;
+		z-index: 9;
+		display: inline;
+		margin: 4rem 0 6rem;
+		padding: 0 5rem;
+		text-align: center;
+		letter-spacing: 0;
+		color: $neon-blue;
+		filter: $filter;
+
+		@include minmax-320-1920 {
+			font-size: calc(27px + (60 - 27) * ((100vw - 320px) / (1920 - 320)));
+		}
+
+		@include screen-320 {
+			font-size: 27px;
+			margin-bottom: 2rem;
+		}
+
+		&::before {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 70%;
+			content: '';
+		}
+
+		&:nth-child(1) {
+			perspective-origin: 45% 320%;
+			transform-style: preserve-3d;
+			perspective: 100px;
+
+			&::before {
+				transform: translate(0, 58%);
+			}
+
+			&::after {
+				font: {
+					weight: 900;
+				}
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 70%;
+				transform: rotateX(15deg) translateZ(-11px);
+				@extend .shadow-after;
+			}
+		}
+
+		&.musician-title {
+			&::after {
+				content: 'композитор';
+			}
+		}
+
+		&.recording-title {
+			&::after {
+				content: 'звукозапись';
+			}
+		}
+
+		&.arrangement-title {
+			&::after {
+				content: 'aранжировка';
+			}
+		}
+	}
+
+	//.musician__subtitle
+
+	//.musician__description
+	&__description {
+		font-size: 20px;
+		max-width: 960px;
+		padding: 3rem 2rem;
+		border-radius: 1rem;
+		backdrop-filter: blur(20px);
+		border: 1px solid rgba(128, 128, 128, 0.09);
+		box-shadow: 0 0 7px 10px rgba(0, 0, 0, 0.1);
+		background: rgba(28, 21, 63, 0.27);
+
+		ul {
+			&:not(:last-child) {
+				margin-bottom: 6rem;
+			}
+		}
+
+		li {
+			display: flex;
+			gap: 1rem;
+			// list-style: inside url('../img/icons/piano.svg');
+			&:not(:last-child) {
+				margin-bottom: 3rem;
+			}
+		}
+
+		@include minmax-320-1920 {
+			font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 120)));
+		}
+
+		@include screen-320 {
+			font-size: 12px;
+		}
+	}
+
+	//.musician__social
+	&__social {
+		display: flex;
+		gap: 1rem;
+	}
+
+	//.musician__image
+	&__image {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+}

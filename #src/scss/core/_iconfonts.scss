@@ -24,109 +24,9 @@
   font-variant-ligatures: discretionary-ligatures;
 }
 
-.icon-home {
+.icon-piano {
   &:before {
-    content: $icon-home;
-  }
-}
-.icon-phone-ringing {
-  &:before {
-    content: $icon-phone-ringing;
-  }
-}
-.icon-cellular-phone {
-  &:before {
-    content: $icon-cellular-phone;
-  }
-}
-.icon-phone-hand {
-  &:before {
-    content: $icon-phone-hand;
-  }
-}
-.icon-angles-left-solid {
-  &:before {
-    content: $icon-angles-left-solid;
-  }
-}
-.icon-angles-right-solid {
-  &:before {
-    content: $icon-angles-right-solid;
-  }
-}
-.icon-angles-up-solid {
-  &:before {
-    content: $icon-angles-up-solid;
-  }
-}
-.icon-angles-down-solid {
-  &:before {
-    content: $icon-angles-down-solid;
-  }
-}
-.icon-reviews {
-  &:before {
-    content: $icon-reviews;
-  }
-}
-.icon-contacts {
-  &:before {
-    content: $icon-contacts;
-  }
-}
-.icon-achievements {
-  &:before {
-    content: $icon-achievements;
-  }
-}
-.icon-services {
-  &:before {
-    content: $icon-services;
-  }
-}
-.icon-head-phones {
-  &:before {
-    content: $icon-head-phones;
-  }
-}
-.icon-youtube {
-  &:before {
-    content: $icon-youtube;
-  }
-}
-.icon-camera {
-  &:before {
-    content: $icon-camera;
-  }
-}
-.icon-movie {
-  &:before {
-    content: $icon-movie;
-  }
-}
-.icon-video {
-  &:before {
-    content: $icon-video;
-  }
-}
-.icon-record {
-  &:before {
-    content: $icon-record;
-  }
-}
-.icon-film {
-  &:before {
-    content: $icon-film;
-  }
-}
-.icon-microphone {
-  &:before {
-    content: $icon-microphone;
-  }
-}
-.icon-record-voice {
-  &:before {
-    content: $icon-record-voice;
+    content: $icon-piano;
   }
 }
 .icon-step-backward {
@@ -242,6 +142,111 @@
 .icon-telegram-fly {
   &:before {
     content: $icon-telegram-fly;
+  }
+}
+.icon-home {
+  &:before {
+    content: $icon-home;
+  }
+}
+.icon-phone-ringing {
+  &:before {
+    content: $icon-phone-ringing;
+  }
+}
+.icon-cellular-phone {
+  &:before {
+    content: $icon-cellular-phone;
+  }
+}
+.icon-phone-hand {
+  &:before {
+    content: $icon-phone-hand;
+  }
+}
+.icon-angles-left-solid {
+  &:before {
+    content: $icon-angles-left-solid;
+  }
+}
+.icon-angles-right-solid {
+  &:before {
+    content: $icon-angles-right-solid;
+  }
+}
+.icon-angles-up-solid {
+  &:before {
+    content: $icon-angles-up-solid;
+  }
+}
+.icon-angles-down-solid {
+  &:before {
+    content: $icon-angles-down-solid;
+  }
+}
+.icon-reviews {
+  &:before {
+    content: $icon-reviews;
+  }
+}
+.icon-contacts {
+  &:before {
+    content: $icon-contacts;
+  }
+}
+.icon-achievements {
+  &:before {
+    content: $icon-achievements;
+  }
+}
+.icon-services {
+  &:before {
+    content: $icon-services;
+  }
+}
+.icon-head-phones {
+  &:before {
+    content: $icon-head-phones;
+  }
+}
+.icon-youtube {
+  &:before {
+    content: $icon-youtube;
+  }
+}
+.icon-camera {
+  &:before {
+    content: $icon-camera;
+  }
+}
+.icon-movie {
+  &:before {
+    content: $icon-movie;
+  }
+}
+.icon-video {
+  &:before {
+    content: $icon-video;
+  }
+}
+.icon-record {
+  &:before {
+    content: $icon-record;
+  }
+}
+.icon-film {
+  &:before {
+    content: $icon-film;
+  }
+}
+.icon-microphone {
+  &:before {
+    content: $icon-microphone;
+  }
+}
+.icon-record-voice {
+  &:before {
+    content: $icon-record-voice;
   }
 }
 .icon-location {
