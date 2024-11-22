@@ -70,6 +70,41 @@ export const app = {
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
+			bits: {
+				import: ['./#src/js/bits.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				filename: '[name].min.js'
+			},
+			'session-musicians': {
+				import: ['./#src/js/session-musicians.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				filename: '[name].min.js'
+			},
+			'sound-design': {
+				import: ['./#src/js/sound-design.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				filename: '[name].min.js'
+			},
+			'audio-podcasts': {
+				import: ['./#src/js/audio-podcasts.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				filename: '[name].min.js'
+			},
+			'voice-acting': {
+				import: ['./#src/js/voice-acting.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				filename: '[name].min.js'
+			},
+			dubbing: {
+				import: ['./#src/js/dubbing.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				filename: '[name].min.js'
+			},
+			mastering: {
+				import: ['./#src/js/mastering.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				filename: '[name].min.js'
+			},
 			//! depend On - vendors
 			'react-vendors': {
 				import: ['react', 'react-dom', 'react-router-dom', 'prop-types']

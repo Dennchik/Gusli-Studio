@@ -19,10 +19,29 @@
 			}
 		}
 	}
+
+	// .service-description__column-separator
+	&__column-separator {
+		width: 100%;
+		min-height: 100px;
+		height: 100%;
+		&::before {
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			content: '';
+			background: linear-gradient(to left top, #8164ff 40%, #2a3514 70%);
+		}
+		.service-description__body {
+			padding-bottom: 8rem;
+		}
+	}
+
 	.parallax__image {
 		filter: sepia(50%) hue-rotate(10deg);
 	}
-	// .musician__body
+
+	// .service-description_body
 	&__body {
 		height: 100%;
 		min-height: 100vh;
@@ -31,18 +50,18 @@
 		padding: 8rem 0;
 	}
 
-	//.musician__content
+	// .service-description__content
 	&__content {
 		display: flex;
 		height: 100%;
+		width: 100%;
 		min-height: 100vh;
-		max-width: 960px;
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
 	}
 
-	//.musician__title
+	// .service-description__title
 	&__title {
 		font: {
 			family: 'AA Neon', Helvetica, sans-serif;
@@ -54,8 +73,7 @@
 		position: relative;
 		z-index: 9;
 		display: inline;
-		margin: 4rem 0 6rem;
-		padding: 0 5rem;
+		margin: 6rem 0 6rem;
 		text-align: center;
 		letter-spacing: 0;
 		color: $neon-blue;
@@ -65,9 +83,12 @@
 			font-size: calc(27px + (60 - 27) * ((100vw - 320px) / (1920 - 320)));
 		}
 
+		@include screen-580 {
+			max-width: 350px;
+		}
+
 		@include screen-320 {
 			font-size: 27px;
-			margin-bottom: 2rem;
 		}
 
 		&::before {
@@ -120,33 +141,116 @@
 				content: 'aранжировка';
 			}
 		}
-	}
 
-	//.musician__subtitle
-
-	//.musician__description
-	&__description {
-		font-size: 20px;
-		max-width: 960px;
-		padding: 3rem 2rem;
-		border-radius: 1rem;
-		backdrop-filter: blur(20px);
-		border: 1px solid rgba(128, 128, 128, 0.09);
-		box-shadow: 0 0 7px 10px rgba(0, 0, 0, 0.1);
-		background: rgba(28, 21, 63, 0.27);
-
-		ul {
-			&:not(:last-child) {
-				margin-bottom: 6rem;
+		&.bits-title {
+			&::after {
+				content: 'биты';
 			}
 		}
 
+		&.session-musicians-title {
+			&::after {
+				content: 'сессионные музыканты';
+			}
+		}
+
+		&.sound-design-title {
+			&::after {
+				content: 'Звуковой дизайн';
+			}
+		}
+
+		&.audio-podcasts-title {
+			&::after {
+				content: 'аудио подкасты';
+			}
+		}
+
+		&.voice-acting-title {
+			&::after {
+				content: 'дикторская озвучка';
+			}
+		}
+
+		&.dubbing-title {
+			&::after {
+				content: 'дубляж';
+			}
+		}
+
+		&.mastering-title {
+			&::after {
+				content: 'cведение и мастеринг';
+			}
+		}
+	}
+
+	//.service-description__description
+	&__description {
+		font-size: 20px;
+		width: 100%;
+		max-width: 1240px;
+		padding: 3rem 2rem;
+		border-radius: 1rem;
+		backdrop-filter: blur(4px);
+		border: 1px solid rgba(128, 128, 128, 0.09);
+		box-shadow: 0 0 7px 10px rgba(0, 0, 0, 0.1);
+		background: rgba(28, 21, 63, 0.144);
+
+		[class*='icon-'] {
+			display: inline-flex;
+			font-size: 1.8rem;
+			color: $electric-lime;
+		}
+		.icon-guitar-line,
+		.icon-volume-high {
+			color: $neon-blue-dark;
+		}
+
+		.icon-group {
+			font-size: 1.2rem;
+			&::before {
+				font-weight: 300;
+			}
+		}
+
+		._icon {
+			margin-right: 10px;
+		}
+
+		.icon-hand-pointer {
+			transform: rotate(90deg);
+		}
+
+		h2 {
+			margin-bottom: 2rem;
+			font-weight: 450;
+			color: $neon-blue;
+			opacity: 0.5;
+			line-height: 110%;
+			&:not(:first-child) {
+				margin-top: 4rem;
+			}
+			@include screen-690 {
+				text-align: center;
+			}
+		}
+
+		p {
+			margin-bottom: 1.5rem;
+		}
+		span {
+			font-weight: 500;
+			color: $electric-lime;
+		}
+
 		li {
-			display: flex;
-			gap: 1rem;
-			// list-style: inside url('../img/icons/piano.svg');
+			span {
+				color: $electric-lime;
+			}
+
 			&:not(:last-child) {
-				margin-bottom: 3rem;
+				margin-bottom: 1rem;
 			}
 		}
 
@@ -159,13 +263,49 @@
 		}
 	}
 
-	//.musician__social
-	&__social {
-		display: flex;
-		gap: 1rem;
+	// .service-description__linck
+	&__linck {
+		color: $neon-blue;
+		opacity: 0.6;
+		font-size: 14px;
+
+		@include minmax-320-1920 {
+			font-size: calc(10px + (14 - 10) * ((100vw - 320px) / (1920 - 120)));
+		}
+
+		@include screen-320 {
+			font-size: 10px;
+		}
 	}
 
-	//.musician__image
+	// .service-description__sub-items
+	&__sub-items {
+		margin: 1rem 0 1rem 3rem;
+	}
+
+	// .service-description__row
+	&__row {
+		width: 100%;
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+		}
+	}
+	//.service-description__ps
+	&__ps {
+		font-size: 14px;
+		opacity: 0.7;
+		margin: 2rem 0 3rem;
+
+		@include minmax-320-1920 {
+			font-size: calc(10px + (14 - 10) * ((100vw - 320px) / (1920 - 120)));
+		}
+
+		@include screen-320 {
+			font-size: 10px;
+		}
+	}
+
+	//.service-description__image
 	&__image {
 		width: 100%;
 		height: auto;

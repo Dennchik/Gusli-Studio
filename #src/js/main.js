@@ -8,7 +8,6 @@ dynamicAdaptive();
 
 //* ----------------------------------------------------------------------------
 import Waves from './animations/waves.jsx';
-
 document.addEventListener('DOMContentLoaded', () => {
 	const waves = new Waves('#holder', {
 		waves: 3,

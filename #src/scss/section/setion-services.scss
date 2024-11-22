@@ -213,6 +213,7 @@
 	// .services-slide__text
 	&__text {
 		position: absolute;
+		pointer-events: none;
 		left: 0;
 		right: 0;
 		bottom: 1rem;

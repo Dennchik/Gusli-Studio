@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
 import { Header } from '../layouts/Header.jsx';
-import { ServiceArrangement } from '../components/categories/ServiceArrangement.jsx';
+import { SectionArrangement } from '../components/categories/SectionArrangement.jsx';
 import { Offer } from '../components/categories/Offer.jsx';
 import { Answers } from '../components/Answers.jsx';
 import { Footer } from '../layouts/Footer.jsx';
@@ -49,7 +49,7 @@ function ArrangementPage() {
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
 						<section className="main-content__musician">
-							<ServiceArrangement baseUrl={baseUrl} isHomePage={true} />
+							<SectionArrangement baseUrl={baseUrl} isHomePage={true} />
 						</section>
 						<section className="main-content__offer">
 							<Offer baseUrl={baseUrl} />

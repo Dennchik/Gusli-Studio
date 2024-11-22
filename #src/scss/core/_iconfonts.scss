@@ -24,6 +24,66 @@
   font-variant-ligatures: discretionary-ligatures;
 }
 
+.icon-check {
+  &:before {
+    content: $icon-check;
+  }
+}
+.icon-file-download {
+  &:before {
+    content: $icon-file-download;
+  }
+}
+.icon-group {
+  &:before {
+    content: $icon-group;
+  }
+}
+.icon-guitar-line {
+  &:before {
+    content: $icon-guitar-line;
+  }
+}
+.icon-guitar {
+  &:before {
+    content: $icon-guitar;
+  }
+}
+.icon-hand-grab {
+  &:before {
+    content: $icon-hand-grab;
+  }
+}
+.icon-hand-paper {
+  &:before {
+    content: $icon-hand-paper;
+  }
+}
+.icon-hand-scissors {
+  &:before {
+    content: $icon-hand-scissors;
+  }
+}
+.icon-hand-lizard {
+  &:before {
+    content: $icon-hand-lizard;
+  }
+}
+.icon-hand-spock {
+  &:before {
+    content: $icon-hand-spock;
+  }
+}
+.icon-hand-pointer {
+  &:before {
+    content: $icon-hand-pointer;
+  }
+}
+.icon-hand-peace {
+  &:before {
+    content: $icon-hand-peace;
+  }
+}
 .icon-piano {
   &:before {
     content: $icon-piano;
@@ -144,6 +204,11 @@
     content: $icon-telegram-fly;
   }
 }
+.icon-volume-high {
+  &:before {
+    content: $icon-volume-high;
+  }
+}
 .icon-home {
   &:before {
     content: $icon-home;
@@ -214,29 +279,9 @@
     content: $icon-youtube;
   }
 }
-.icon-camera {
+.icon-camera-film {
   &:before {
-    content: $icon-camera;
-  }
-}
-.icon-movie {
-  &:before {
-    content: $icon-movie;
-  }
-}
-.icon-video {
-  &:before {
-    content: $icon-video;
-  }
-}
-.icon-record {
-  &:before {
-    content: $icon-record;
-  }
-}
-.icon-film {
-  &:before {
-    content: $icon-film;
+    content: $icon-camera-film;
   }
 }
 .icon-microphone {

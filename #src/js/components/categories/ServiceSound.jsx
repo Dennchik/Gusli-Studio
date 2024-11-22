@@ -271,8 +271,7 @@ export const ServiceSound = ({ baseUrl }) => {
 													</g>
 												</svg>
 											</div>
-											<a href={getPath(
-												'@@webRoot/service-events.html')}>
+											<a href={getPath('@@webRoot/services/bits.html')}>
 												<picture>
 													{isWebpSupported()
 														? (<img src={getPath(
@@ -329,35 +328,34 @@ export const ServiceSound = ({ baseUrl }) => {
 													</svg>
 												</div>
 											</div>
-											<a href={getPath('@@webRoot/other-services.html')}>
+											<a href={getPath('@@webRoot/services/session-musicians.html')}>
 												<picture>
 													{isWebpSupported() ? (
-														<img
-															src={getPath(
-																'@@webRoot/img/main/body/img_10.webp')}
-															alt="image-10"
-														/>)
-														: (<img
-															src={getPath(
-																'@@webRoot/img/main/body/img_10.png')}
-															alt="image-10"
-														/>
-														)}
+														<img src={getPath(
+															'@@webRoot/img/main/body/img_10.webp')}
+															alt="image-10" />
+													)
+														: (<img src={getPath(
+															'@@webRoot/img/main/body/img_10.png')}
+															alt="image-10" />
+														)
+													}
 												</picture>
 												<picture>
 													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
+														<img className="services-slide__bg-img"
 															src={getPath(
 																'@@webRoot/img/main/body/bg_img.webp')}
-															alt="bg-img" />)
-														: (<img
-															className="services-slide__bg-img"
-															src={getPath(
-																'@@webRoot/img/main/body/bg_img.png')}
-															alt="bg-img"
-														/>
-														)}
+															alt="bg-img" />
+													)
+														: (
+															<img className="services-slide__bg-img"
+																src={getPath(
+																	'@@webRoot/img/main/body/bg_img.png')
+																}
+																alt="bg-img" />
+														)
+													}
 												</picture>
 											</a>
 											<div className="services-slide__text">
@@ -389,31 +387,33 @@ export const ServiceSound = ({ baseUrl }) => {
 													</svg>
 												</div>
 											</div>
-											<a href={getPath('@@webRoot/service-sound.html')}>
+											<a href={getPath('@@webRoot/services/sound-design.html')}>
 												<picture>
 													{isWebpSupported() ? (
 														<img src={getPath(
 															'@@webRoot/img/main/body/img_11.webp')}
-															alt="image-11"
-														/>)
+															alt="image-11" />
+													)
 														: (
 															<img src={getPath(
 																'@@webRoot/img/main/body/img_11.png')}
-																alt="image-1"
-															/>
-														)}
+																alt="image-1" />
+														)
+													}
 												</picture>
 												<picture>
 													{isWebpSupported()
 														? (<img className="services-slide__bg-img"
 															src={getPath(
 																'@@webRoot/img/main/body/bg_img.webp')}
-															alt="bg-image" />)
+															alt="bg-image" />
+														)
 														: (<img className="services-slide__bg-img"
 															src={getPath(
 																'@@webRoot/img/main/body/bg_img.png')}
 															alt="bg-image" />
-														)}
+														)
+													}
 												</picture>
 											</a>
 											<div className="services-slide__text">
@@ -445,30 +445,34 @@ export const ServiceSound = ({ baseUrl }) => {
 													</svg>
 												</div>
 											</div>
-											<a href={getPath('@@webRoot/service-sound.html')}>
+											<a href={getPath(
+												'@@webRoot/services/audio-podcasts.html')
+											}>
 												<picture>
 													{isWebpSupported()
 														? (<img src={getPath(
 															'@@webRoot/img/main/body/img_12.webp')}
-															alt="image-12"
-														/>)
+															alt="image-12" />
+														)
 														: (<img src={getPath(
 															'@@webRoot/img/main/body/img_12.png')}
-															alt="image-12"
-														/>
-														)}
+															alt="image-12" />
+														)
+													}
 												</picture>
 												<picture>
 													{isWebpSupported()
 														? (<img className="services-slide__bg-img"
 															src={getPath(
 																'@@webRoot/img/main/body/bg_img.webp')}
-															alt="bg-image" />)
+															alt="bg-image" />
+														)
 														: (<img className="services-slide__bg-img"
 															src={getPath(
 																'@@webRoot/img/main/body/bg_img.png')}
 															alt="bg-image" />
-														)}
+														)
+													}
 												</picture>
 											</a>
 											<div className="services-slide__text">
@@ -500,7 +504,7 @@ export const ServiceSound = ({ baseUrl }) => {
 													</svg>
 												</div>
 											</div>
-											<a href={getPath('@@webRoot/service-sound.html')}>
+											<a href={getPath('@@webRoot/services/voice-acting.html')}>
 												<picture>
 													{isWebpSupported()
 														? (<img src={getPath(
@@ -555,7 +559,7 @@ export const ServiceSound = ({ baseUrl }) => {
 													</svg>
 												</div>
 											</div>
-											<a href={getPath('@@webRoot/service-sound.html')}>
+											<a href={getPath('@@webRoot/services/dubbing.html')}>
 												<picture>
 													{isWebpSupported()
 														? (<img src={getPath(
@@ -608,7 +612,7 @@ export const ServiceSound = ({ baseUrl }) => {
 													</svg>
 												</div>
 											</div>
-											<a href={getPath('@@webRoot/service-sound.html')}>
+											<a href={getPath('@@webRoot/services/mastering.html')}>
 												<picture>
 													{isWebpSupported()
 														? (<img src={getPath(
