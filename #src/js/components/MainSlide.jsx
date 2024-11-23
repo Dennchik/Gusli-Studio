@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 import { fadeInSlide } from '../animations/anime-js.jsx';
-
+import videojs from 'video.js';
 //* ------------------------ Component's MainSlide -----------------------------
 import { buildSwiper } from '../layouts/build-swiper.js';
 import { mainSlide } from '../layouts/main-slide.js';
-import { AudioPlayer } from './AudioPlayer.jsx';
+// import { AudioPlayer } from './AudioPlayer.jsx';
 //* ----------------------------------------------------------------------------
-import Showreel from '../сontext/Showreel.jsx';
+// import Showreel from '../сontext/Showreel.jsx';
 
 export const MainSlide = ({ baseUrl }) => {
 	useEffect(() => {
@@ -84,41 +84,36 @@ export const MainSlide = ({ baseUrl }) => {
 	// 		};
 	// 	}
 	// }, []);  
-	const videoRef = useRef(null);
-	const [isPlaying, setIsPlaying] = useState(false);
+	// const videoRef = useRef(null);
+	// const [isPlaying, setIsPlaying] = useState(false);
 
 	useEffect(() => {
-		const video = videoRef.current;
+		// Инициализация видеоплеера
+		var player = videojs('my-player', {
+			controls: true,
+			autoplay: false,
+			preload: 'auto',
+		}, function onPlayerReady() {
+			console.log('Your player is ready!');
 
-		if (video) {
-			// Устанавливаем mute программно
-			video.muted = true;
-			console.log('Muted:', video.muted);
+			// Запуск видео при готовности к воспроизведению
+			this.play();
 
-			// Пробуем сразу вызвать play
-			const handleCanPlay = () => {
-				video.play().catch((error) => {
-					console.error('Ошибка воспроизведения:', error);
-				});
-			};
+			// Обработка события завершения воспроизведения
+			this.on('ended', function () {
+				console.log('Awww...over so soon?!');
+			});
+		});
 
-			video.addEventListener('canplay', handleCanPlay);
-
-			return () => {
-				video.removeEventListener('canplay', handleCanPlay);
-			};
-		}
+		// Очистка видеоплеера при размонтировании компонента
+		return () => {
+			if (player) {
+				player.dispose();
+			}
+		};
 	}, []);
 
-	const handlePlay = () => {
-		const video = videoRef.current;
-		if (video) {
-			video.play().catch((error) => {
-				console.error('Ошибка воспроизведения:', error);
-			});
-			setIsPlaying(true);
-		}
-	};
+
 
 
 	return (
@@ -127,17 +122,17 @@ export const MainSlide = ({ baseUrl }) => {
 				<div className="main-slide__slide-wrapper">
 					<div className="main-slide__slide-image _img">
 						<video
-							ref={videoRef}
-							src="/img/audio/showreel-1.mp4"
-							id="showreel-1"
-							loop
-							muted
+							id="my-player"
+							className="video-js"
+							controls
 							preload="auto"
-							autoPlay
-						/>
-						{!isPlaying && (
-							<button className='btn-play' onClick={handlePlay}>Воспроизвести видео</button>
-						)}
+							data-setup='{}'>
+							<source src="/img/audio/showreel-1.mp4" type="video/mp4"></source>
+							<p className="vjs-no-js">
+								To view this video please enable JavaScript, and consider upgrading to a
+								web browser that
+							</p>
+						</video>
 					</div>
 					<div className="main-slide__content _container">
 						<h1 className="main-slide__title el-slidetitle h1_01901">
@@ -227,7 +222,7 @@ export const MainSlide = ({ baseUrl }) => {
 			</div>
 			<div className="main-slide__pagination"></div>
 			<div className="main-slide__media">
-				<AudioPlayer />
+				{/* <AudioPlayer /> */}
 			</div>
 		</div>
 	);
