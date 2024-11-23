@@ -5,7 +5,7 @@ import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
 import { Header } from '../layouts/Header.jsx';
 import { SectionMusician } from '../components/categories/SectionMusician.jsx';
-import { Offer } from '../components/categories/Offer.jsx';
+import { Offer } from '../components/Offer.jsx';
 import { Answers } from '../components/Answers.jsx';
 import { Footer } from '../layouts/Footer.jsx';
 import { MenuFloat } from '../layouts/Menu-float.jsx';

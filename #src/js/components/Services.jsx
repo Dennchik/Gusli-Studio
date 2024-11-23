@@ -15,6 +15,7 @@ import { Offer } from './Offer.jsx';
 //* ----------------------------------------------------------------------------
 export const Services = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
+	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	useEffect(() => {
 		const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 		const initSwiper = document.querySelector('.services-slide__body');
@@ -61,7 +62,6 @@ export const Services = ({ baseUrl }) => {
 	}, []);
 
 	useEffect(() => {
-		const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 		const smoother = ScrollSmoother.get();
 		if (smoother) {
 			if (!isMobile || innerWidth > 1024) {
@@ -76,19 +76,17 @@ export const Services = ({ baseUrl }) => {
 								: 1.15;
 					},
 				});
+
+				animateTitles(
+					'.services__title',
+					'.services__title',
+					'.services__title',
+					'=150',
+					'=150',
+				);
+				refreshScrollTrigger();
 			}
 		}
-	}, [location.pathname, isHomepage]);
-
-	useEffect(() => {
-		animateTitles(
-			'.services__title',
-			'.services__title',
-			'.services__title',
-			'=150',
-			'=150',
-		);
-		refreshScrollTrigger();
 	}, [location.pathname, isHomepage]);
 
 	return (

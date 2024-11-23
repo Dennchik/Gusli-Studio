@@ -9,17 +9,21 @@ import {
 
 export const Offer = () => {
 	const isHomepage = location.pathname === '/';
+	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
 	useEffect(() => {
-		animateTitles(
-			'.offer-container__title',
-			'.offer-container__title',
-			'.offer-container__title',
-			'=150',
-			'=150',
-		);
-		tlServices1();
-		tlServices2();
-		refreshScrollTrigger();
+		if (!isMobile) {
+			animateTitles(
+				'.offer-container__title',
+				'.offer-container__title',
+				'.offer-container__title',
+				'=150',
+				'=150',
+			);
+			tlServices1();
+			tlServices2();
+			refreshScrollTrigger();
+		};
 	}, [location.pathname, isHomepage]);
 
 	return (
@@ -100,7 +104,7 @@ export const Offer = () => {
 				</div>
 				<div className="offer-container__button _open-button">
 					<button className="order-button btn-grad"
-									type={'button'}>
+						type={'button'}>
 						<span>оставить заявку</span>
 					</button>
 				</div>

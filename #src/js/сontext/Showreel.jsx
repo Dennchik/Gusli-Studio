@@ -1,6 +1,6 @@
 export default function Showreel() {
 	document.addEventListener('DOMContentLoaded', function () {
-		var v = document.getElementById('showreel');
+		var v = document.getElementById('showreel-1');
 		var canvas = document.getElementById('mycanvas');
 		var context = canvas.getContext('2d');
 		var ch = $('#showreel').height();

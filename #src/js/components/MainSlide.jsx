@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 import { fadeInSlide } from '../animations/anime-js.jsx';
 
@@ -7,12 +7,14 @@ import { fadeInSlide } from '../animations/anime-js.jsx';
 import { buildSwiper } from '../layouts/build-swiper.js';
 import { mainSlide } from '../layouts/main-slide.js';
 import { AudioPlayer } from './AudioPlayer.jsx';
-
+//* ----------------------------------------------------------------------------
+import Showreel from '../сontext/Showreel.jsx';
 
 export const MainSlide = ({ baseUrl }) => {
 	useEffect(() => {
 		buildSwiper();
 		mainSlide();
+		// Showreel();
 	}, []);
 	useEffect(() => {
 		const slideWrappers = document.querySelectorAll(
@@ -64,17 +66,30 @@ export const MainSlide = ({ baseUrl }) => {
 		return `${baseUrl}/${fileName}`;
 	};
 
+	// const videoRef = useRef(null);
+	// useEffect(() => {
+	// 	const video = videoRef.current;
+	// 	if (video) {
+	// 		video.muted = true; // Программно устанавливаем muted
+	// 		console.log('Muted:', video.muted); // Проверяем, что muted = true
+	// 		video.play().catch((error) => {
+	// 			console.error('Ошибка воспроизведения:', error);
+	// 		});
+	// 	} 
+
+
+	// }, []);
+
+
 	return (
 		<div className="main-slide">
 			<div className="main-slide__body _swiper">
 				<div className="main-slide__slide-wrapper">
 					<div className="main-slide__slide-image _img">
-						<video id="video1" autoPlay loop muted>
-							<source
-								src="https://vk.com/video_ext.php?oid=-34047302&id=456239248&hash=42aa88248137bc7e"
-								type="video/mp4"
-							/>
+						<video src={'./img/audio/showreel-1.mp4'} type="video/mp4" id="showreel-1" loop muted preload="auto" autoPlay>
+							{/* <source src={'/img/audio/showreel-1.mp4'} type="video/mp4" /> */}
 						</video>
+
 					</div>
 					<div className="main-slide__content _container">
 						<h1 className="main-slide__title el-slidetitle h1_01901">

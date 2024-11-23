@@ -33,8 +33,8 @@ export const path = {
 		dest: pathDest + '/js/app/'
 	},
 	image: {
-		src: pathSrc + '/img/**/*.{png,jpg,jpeg,gif,svg,ico,mp4,mv4,mp3,pdf}',
-		watch: pathSrc + '/img/**/*.{png,jpg,jpeg,gif,svg,ico,,mp4,mv4,mp3,pdf}',
+		src: pathSrc + '/img/**/*.{png,jpg,jpeg,gif,svg,ico,mp4,mp3,pdf}',
+		watch: pathSrc + '/img/**/*.{png,jpg,jpeg,gif,svg,ico,,mp4,mp3,pdf}',
 		dest: pathDest + '/img/',
 	},
 	sprite: {
