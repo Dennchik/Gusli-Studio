@@ -1,8 +1,31 @@
-video {
-	position: relative;
-	left: 0;
-	top: 0;
-	width: 100vw;
-	height: 100vh;
-	object-fit: cover;
+.main-video {
+	// .main-video__box
+	&__box {
+		height: 100vh;
+		video {
+			position: relative;
+			left: 0;
+			top: 0;
+			width: 100vw;
+			height: 100vh;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}
+.vjs-control-bar {
+	display: none;
+}
+.vjs-modal-dialog {
+	display: none;
+}
+.video-js .vjs-control-bar {
+	display: none !important;
+}
+
+.video-js .vjs-big-play-button {
+	display: none !important;
+}
+.vjs-loading-spinner {
+	display: none;
 }
