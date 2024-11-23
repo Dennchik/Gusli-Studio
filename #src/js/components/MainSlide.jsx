@@ -90,8 +90,9 @@ export const MainSlide = ({ baseUrl }) => {
 	useEffect(() => {
 		// Инициализация видеоплеера
 		var player = videojs('my-player', {
-			controls: true,
-			autoplay: false,
+			controls: false,
+			loop: true,
+			autoplay: true,
 			preload: 'auto',
 		}, function onPlayerReady() {
 			console.log('Your player is ready!');
