@@ -116,4 +116,4 @@ export const Header = ({ baseUrl }) => {
 
 Header.propTypes = {
 	baseUrl: PropTypes.string.isRequired
-};
+}; 

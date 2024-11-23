@@ -9,7 +9,7 @@ import { mainSlide } from '../layouts/main-slide.js';
 import { AudioPlayer } from './AudioPlayer.jsx';
 
 
-export const MainSlide = ({baseUrl}) => {
+export const MainSlide = ({ baseUrl }) => {
 	useEffect(() => {
 		buildSwiper();
 		mainSlide();
@@ -52,7 +52,7 @@ export const MainSlide = ({baseUrl}) => {
 				});
 			});
 
-			observer.observe(slideWrapper, {attributes: true});
+			observer.observe(slideWrapper, { attributes: true });
 			// Отключение наблюдателя при размонтировании компонента
 			return () => {
 				observer.disconnect();
@@ -69,14 +69,12 @@ export const MainSlide = ({baseUrl}) => {
 			<div className="main-slide__body _swiper">
 				<div className="main-slide__slide-wrapper">
 					<div className="main-slide__slide-image _img">
-						<picture>
-							{isWebpSupported()
-								? (<img src={getPath('img/main/slides/slide_1.webp')}
-												alt="slide-1" />)
-								: (<img src={getPath('img/main/slides/slide_1.jpg')}
-												alt="slide-1" />)
-							}
-						</picture>
+						<video id="video1" autoPlay loop muted>
+							<source
+								src="https://vk.com/video_ext.php?oid=-34047302&id=456239248&hash=42aa88248137bc7e"
+								type="video/mp4"
+							/>
+						</video>
 					</div>
 					<div className="main-slide__content _container">
 						<h1 className="main-slide__title el-slidetitle h1_01901">
@@ -98,9 +96,9 @@ export const MainSlide = ({baseUrl}) => {
 						<picture>
 							{isWebpSupported()
 								? (<img src={getPath('@@webRoot/img/main/slides/slide_4.webp')}
-												alt="slide-4" />)
+									alt="slide-4" />)
 								: (<img src={getPath('@@webRoot/img/main/slides/slide_4.jpg')}
-												alt="slide-4" />)
+									alt="slide-4" />)
 							}
 						</picture>
 					</div>
@@ -123,9 +121,9 @@ export const MainSlide = ({baseUrl}) => {
 						<picture>
 							{isWebpSupported()
 								? (<img src={getPath('@@webRoot/img/main/slides/slide_2.webp')}
-												alt="slide-2" />)
+									alt="slide-2" />)
 								: (<img src={getPath('@@webRoot/img/main/slides/slide_2.jpg')}
-												alt="slide-2" />)
+									alt="slide-2" />)
 							}
 						</picture>
 					</div>
@@ -145,9 +143,9 @@ export const MainSlide = ({baseUrl}) => {
 						<picture>
 							{isWebpSupported()
 								? (<img src={getPath('@@webRoot/img/main/slides/slide_3.webp')}
-												alt="slide-3" />)
+									alt="slide-3" />)
 								: (<img src={getPath('@@webRoot/img/main/slides/slide_3.jpg')}
-												alt="slide-3" />)
+									alt="slide-3" />)
 							}
 						</picture>
 					</div>
