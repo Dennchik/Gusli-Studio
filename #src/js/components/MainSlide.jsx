@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 import { fadeInSlide } from '../animations/anime-js.jsx';
 
@@ -66,19 +66,59 @@ export const MainSlide = ({ baseUrl }) => {
 		return `${baseUrl}/${fileName}`;
 	};
 
-	// const videoRef = useRef(null);
 	// useEffect(() => {
 	// 	const video = videoRef.current;
+
 	// 	if (video) {
-	// 		video.muted = true; // Программно устанавливаем muted
-	// 		console.log('Muted:', video.muted); // Проверяем, что muted = true
-	// 		video.play().catch((error) => {
-	// 			console.error('Ошибка воспроизведения:', error);
-	// 		});
-	// 	} 
+	// 		const handleCanPlay = () => {
+	// 			video.play().catch((error) => {
+	// 				console.error('Ошибка воспроизведения:', error);
+	// 			});
+	// 		};
 
+	// 		video.muted = true; // Устанавливаем mute программно
+	// 		video.addEventListener('canplay', handleCanPlay);
 
-	// }, []);
+	// 		return () => {
+	// 			video.removeEventListener('canplay', handleCanPlay);
+	// 		};
+	// 	}
+	// }, []);  
+	const videoRef = useRef(null);
+	const [isPlaying, setIsPlaying] = useState(false);
+
+	useEffect(() => {
+		const video = videoRef.current;
+
+		if (video) {
+			// Устанавливаем mute программно
+			video.muted = true;
+			console.log('Muted:', video.muted);
+
+			// Пробуем сразу вызвать play
+			const handleCanPlay = () => {
+				video.play().catch((error) => {
+					console.error('Ошибка воспроизведения:', error);
+				});
+			};
+
+			video.addEventListener('canplay', handleCanPlay);
+
+			return () => {
+				video.removeEventListener('canplay', handleCanPlay);
+			};
+		}
+	}, []);
+
+	const handlePlay = () => {
+		const video = videoRef.current;
+		if (video) {
+			video.play().catch((error) => {
+				console.error('Ошибка воспроизведения:', error);
+			});
+			setIsPlaying(true);
+		}
+	};
 
 
 	return (
@@ -86,10 +126,18 @@ export const MainSlide = ({ baseUrl }) => {
 			<div className="main-slide__body _swiper">
 				<div className="main-slide__slide-wrapper">
 					<div className="main-slide__slide-image _img">
-						<video src={'./img/audio/showreel-1.mp4'} type="video/mp4" id="showreel-1" loop muted preload="auto" autoPlay>
-							{/* <source src={'/img/audio/showreel-1.mp4'} type="video/mp4" /> */}
-						</video>
-
+						<video
+							ref={videoRef}
+							src="/img/audio/showreel-1.mp4"
+							id="showreel-1"
+							loop
+							muted
+							preload="auto"
+							autoPlay
+						/>
+						{!isPlaying && (
+							<button className='btn-play' onClick={handlePlay}>Воспроизвести видео</button>
+						)}
 					</div>
 					<div className="main-slide__content _container">
 						<h1 className="main-slide__title el-slidetitle h1_01901">
