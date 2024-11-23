@@ -15,8 +15,7 @@ import returnToSavedPosition from '../modules/return-position.js';
 import parallaxEffect from '../animations/parallax.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
-const baseUrl = '..';
-
+const baseUrl = '.';
 
 function ServicesPage() {
 	useGSAP(

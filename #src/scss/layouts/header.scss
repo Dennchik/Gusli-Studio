@@ -86,7 +86,6 @@
 		width: 50px;
 		height: 53px;
 		opacity: 0.9;
-		background: url('../img/header/logo.png') center / contain no-repeat;
 	}
 
 	// .header__text
@@ -153,9 +152,10 @@
 		.icon-home {
 			&::before {
 				transition: all 0.4s ease 0s;
-				text-shadow: 0 0 15px #000,
-				0 0 1em #000,
-				0 0 0.2em blue;
+				text-shadow:
+					0 0 15px #000,
+					0 0 1em #000,
+					0 0 0.2em blue;
 			}
 		}
 	}
@@ -165,9 +165,10 @@
 		@extend .link_underline;
 
 		span {
-			text-shadow: 0 0 15px #000,
-			0 0 1em #000,
-			0 0 0.2em blue;
+			text-shadow:
+				0 0 15px #000,
+				0 0 1em #000,
+				0 0 0.2em blue;
 		}
 
 		&:not(:first-child) {
