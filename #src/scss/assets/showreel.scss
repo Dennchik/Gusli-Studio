@@ -9,6 +9,9 @@
 
 	// .main-video__content
 	&__content {
+		position: absolute;
+		padding-right: 6rem;
+		pointer-events: none;
 	}
 	// .main-video__box
 	&__box {

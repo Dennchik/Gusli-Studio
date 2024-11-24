@@ -1,83 +1,71 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useRef } from 'react';
-import videojs from 'video.js';
+// import videojs from 'video.js';
+
+//* ------------------------ Component's MainSlide -----------------------------
 
 export const MainSlide = ({ baseUrl }) => {
 	const videoRef = useRef(null);
-	const getPath = (fileName) => `${baseUrl}/${fileName}`;
+	const getPath = (fileName) => {
+		return `${baseUrl}/${fileName}`;
+	};
 
 	useEffect(() => {
-		// Инициализация видеоплеера
-		const player = videojs('player-id', {
-			controls: false, // отключает элементы управления
-			loop: true,
-			autoplay: true,
-			preload: 'auto',
-			muted: true,  // Обязательно для автозапуска на iOS
-			fill: true,
-		});
+		if (videoRef.current) {
+			const video = videoRef.current;
 
-		// Ожидание загрузки плеера и проверки mute
-		setTimeout(() => {
-			if (player.muted()) {
-				console.log('Звук выключен');
-			} else {
-				console.log('Звук включен');
-			}
-		}, 500);  // Задержка, чтобы убедиться, что плеер инициализировался
-
-		const videoElement = videoRef.current;
-
-		// Обработчик кликов и тачей
-		const togglePlay = () => {
-			if (player.paused()) {
-				player.play();
-			} else {
-				player.pause();
-			}
-		};
-
-		// Добавляем обработчики событий для iOS
-		const onUserInteraction = () => {
-			// Включаем звук, чтобы пользователь мог продолжить взаимодействовать с видео
-			if (player.paused()) {
-				player.play();
-			}
-		};
-
-		// Видео начинается только по касанию или клику
-		videoElement.addEventListener('click', togglePlay);
-		videoElement.addEventListener('touchstart', togglePlay);
-
-		// Обработчик прокрутки
-		const handleScroll = () => {
-			if (!videoElement) return;
-			let videoTop = videoElement.getBoundingClientRect().top;
-
-			if (videoTop < -400) {
-				if (!player.paused()) {
-					player.pause();
+			// Автоматическое воспроизведение видео при монтировании
+			const playVideo = async () => {
+				try {
+					await video.play();
+					console.log('Видео воспроизводится');
+				} catch (err) {
+					console.error('Не удалось воспроизвести видео:', err);
 				}
-			}
-			if (videoTop > -400) {
-				if (player.paused()) {
-					player.play();
+			};
+			playVideo();
+
+			// Обработчик клика для управления воспроизведением
+			const handleVideoClick = () => {
+				if (video.paused) {
+					video.play();
+				} else {
+					video.pause();
 				}
-			}
-		};
+			};
 
-		// Добавляем обработчик события scroll
-		window.addEventListener('scroll', handleScroll);
+			// Обработчик события прокрутки
+			const handleScroll = () => {
+				const videoElement = videoRef.current;
 
-		// Очистка при размонтировании компонента
-		return () => {
-			if (player) {
-				player.dispose();
-			}
-			window.removeEventListener('scroll', handleScroll);
-		};
+				// Получаем расстояние от верхней границы видео до верхней части экрана
+				const videoTop = videoElement.getBoundingClientRect().top;
 
-	}, [baseUrl]);
+				// Условие для паузы или воспроизведения
+				if (videoTop < -400) {
+					if (!video.paused) {
+						video.pause();
+					}
+				} else if (videoTop > -400) {
+					if (video.paused) {
+						video.play();
+					}
+				}
+			};
+
+			// Добавляем обработчики событий
+			video.addEventListener('click', handleVideoClick);
+			window.addEventListener('scroll', handleScroll);
+
+			// Очистка обработчиков событий при размонтировании
+			return () => {
+				video.removeEventListener('click', handleVideoClick);
+				window.removeEventListener('scroll', handleScroll);
+			};
+		}
+	}, []);
+
+
 
 	return (
 		<div className="main-video">
@@ -88,25 +76,36 @@ export const MainSlide = ({ baseUrl }) => {
 						id="player-id"
 						className="video-js"
 						preload="auto"
+						loop
 						muted
+					// onClick={() => {
+					// 	if (videoRef.current) {
+					// 		if (videoRef.current.paused) {
+					// 			videoRef.current.play();
+					// 		} else {
+					// 			videoRef.current.pause();
+					// 		}
+					// 	}
+					// }}
 					>
 						<source src={getPath('img/audio/showreel-1.mp4')} type="video/mp4" />
 					</video>
+
 				</div>
 
-				<div className="main-slide__content main-video__content _container">
+				<div className="main-video__content _container">
 					<h1 className="main-slide__title el-slidetitle h1_01901">
 						<span>Профессиональная </span>
 						<span>студия звукозаписи </span>
-						<span>ГУСЛИ Media-Group</span> в Обнинске
+						<span>ГУСЛИ Media-Group</span> в&nbsp;Обнинске
 					</h1>
-					<h2 className="main-slide__text t_01901">
+					<div className="main-slide__text t_01901">
 						Мы — современная студия звукозаписи, в которой работают
 						лучшие специалисты в области записи и продюсирования
 						музыки, предоставляем самый лучший сервис и удобства
 						для современных артистов, как подписанных, так и
 						независимых.
-					</h2>
+					</div>
 				</div>
 			</div>
 		</div>

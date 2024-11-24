@@ -114,8 +114,11 @@ export const app = {
 				import: ['gsap', 'gsap/ScrollSmoother', 'gsap/ScrollTrigger']
 			},
 
-			'swiper-bundle': { import: ['swiper/bundle'] }
+			'swiper-bundle': { import: ['swiper/bundle'] },
 
+			// 'video-vendors': {
+			// 	import: ['video.js'], // Название для отдельного чанка 
+			// },
 		},
 		output: {
 			filename: 'app/[name].min.js',

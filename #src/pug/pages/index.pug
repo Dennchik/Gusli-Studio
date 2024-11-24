@@ -4,6 +4,7 @@ prepend script
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/anime-vendors.min.js")
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/swiper-bundle.min.js")
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/app/react-vendors.min.js")
+	//- script(defer="defer" type="text/javascript" src="@@webRoot/js/app/video-vendors.min.js")
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/index.min.js")
 append link
 	link(rel="stylesheet" type="text/css" href="@@webRoot/css/index.min.css")
@@ -14,4 +15,4 @@ block page-content
 	.page
 		block button
 			._aside#scrollButton
-				+iconfont('angle-down', '_button')
+				+iconfont('angle-down', '_button') 
