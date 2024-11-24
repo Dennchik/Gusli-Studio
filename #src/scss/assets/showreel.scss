@@ -1,4 +1,15 @@
 .main-video {
+	// .main-video__body
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	// .main-video__content
+	&__content {
+	}
 	// .main-video__box
 	&__box {
 		height: 100vh;
@@ -13,19 +24,15 @@
 		}
 	}
 }
-.vjs-control-bar {
+.vjs-control-bar,
+.vjs-modal-dialog,
+.vjs-loading-spinner,
+.vjs-text-track-display,
+.video-js .vjs-control-bar,
+.video-js .vjs-big-play-button {
 	display: none;
-}
-.vjs-modal-dialog {
-	display: none;
-}
-.video-js .vjs-control-bar {
-	display: none !important;
 }
 
-.video-js .vjs-big-play-button {
-	display: none !important;
-}
-.vjs-loading-spinner {
-	display: none;
+.player-id-dimensions {
+	width: 100% !important;
 }

@@ -104,8 +104,6 @@
 
 	// page__form-modal
 	&__form-modal {
-		// transition: all 0.4s ease-in-out;
-		// transform: translateY(100%);
 		position: fixed;
 		z-index: 9;
 		top: 0;
@@ -150,7 +148,6 @@
 	&__slide {
 		position: relative;
 		z-index: 7;
-		// @extend .gradient;
 
 		&::before {
 			left: 0;
