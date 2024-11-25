@@ -30,18 +30,23 @@ export const Services = ({ baseUrl }) => {
 	useEffect(() => {
 		const handleMouseOver = (event) => {
 			const target = event.currentTarget;
-			// Запускаем анимацию при наведении
-			animationSvgLine(target, false);
-			animationSvgText(target, false);
+			if (!isMobile) {
+				// Запускаем анимацию при наведении
+				animationSvgLine(target, false);
+				animationSvgText(target, false);
+			}
+
 		};
 		const handleMouseLeave = (event) => {
 			const target = event.currentTarget;
-			setTimeout(() => {
-				/*  Запускаем анимацию в обратном направлении с задержкой при уходе
-				 мыши */
-				animationSvgLine(target, true);
-				animationSvgText(target, true);
-			}, 500);
+			if (!isMobile) {
+				setTimeout(() => {
+					/*  Запускаем анимацию в обратном направлении с задержкой при уходе
+					 мыши */
+					animationSvgLine(target, true);
+					animationSvgText(target, true);
+				}, 500);
+			}
 		};
 		const boxImages = Array.from(
 			document.querySelectorAll('.services-slide__image'),
