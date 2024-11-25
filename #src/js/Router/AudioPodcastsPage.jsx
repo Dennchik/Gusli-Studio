@@ -35,7 +35,7 @@ function AudioPodcastsPage() {
 	);
 
 	useEffect(() => {
-		// parallaxEffect();
+		parallaxEffect();
 		returnToSavedPosition();
 	}, []);
 

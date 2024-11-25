@@ -35,7 +35,7 @@ function BitsPage() {
 	);
 
 	useEffect(() => {
-		// parallaxEffect();
+		parallaxEffect();
 		returnToSavedPosition();
 	}, []);
 

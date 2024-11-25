@@ -37,7 +37,7 @@ function DubbingPage() {
 
 
 	useEffect(() => {
-		// parallaxEffect();
+		parallaxEffect();
 		returnToSavedPosition();
 	}, []);
 
