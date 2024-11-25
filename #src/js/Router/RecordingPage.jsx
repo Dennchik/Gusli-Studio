@@ -36,7 +36,7 @@ function RecordingPage() {
 	);
 
 	useEffect(() => {
-		parallaxEffect();
+		// parallaxEffect();
 		returnToSavedPosition();
 	}, []);
 

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
-import parallaxEffect from '../animations/parallax.jsx';
+// import parallaxEffect from '../animations/parallax.jsx';
 
 import { Header } from '../layouts/Header.jsx';
 import { MainSlide } from '../components/MainSlide.jsx';
@@ -18,23 +18,29 @@ const baseUrl = '.';
 
 
 function HomePage() {
+	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	useGSAP(
+
 		() => {
 			// create the smooth scroller FIRST!
-			const smoother = ScrollSmoother.create({
-				wrapper: '#wrapper',
-				content: '#content',
-				smooth: 1,
-				effects: true,
-				smoothTouch: 0.1,
-			});
-			return () => {
-				smoother.kill(); // Удаляем Smooth при размонтировании
-			};
+			if (!isMobile) {
+				const smoother = ScrollSmoother.create({
+					wrapper: '#wrapper',
+					content: '#content',
+					smooth: 1,
+					effects: true,
+					smoothTouch: 0.1,
+				});
+				return () => {
+					smoother.kill(); // Удаляем Smooth при размонтировании
+				};
+			}
 		},
 	);
 	useEffect(() => {
-		parallaxEffect();
+		if (!isMobile) {
+			// parallaxEffect();
+		}
 		returnToSavedPosition();
 	}, []);
 

@@ -34,7 +34,7 @@ function ServicesPage() {
 		},
 	);
 	useEffect(() => {
-		parallaxEffect();
+		// parallaxEffect();
 		returnToSavedPosition();
 	}, []);
 

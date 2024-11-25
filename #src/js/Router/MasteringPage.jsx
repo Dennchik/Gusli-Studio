@@ -37,7 +37,7 @@ function MasteringPage() {
 
 
 	useEffect(() => {
-		parallaxEffect();
+		// parallaxEffect();
 		returnToSavedPosition();
 	}, []);
 

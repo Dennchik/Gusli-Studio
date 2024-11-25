@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 
 export const Members = () => {
-	// const getPath = (fileName) => {
-	// 	return `${baseUrl}/${fileName}`;
-	// };
-
 	return (
 		<div className="about-company">
 			<div className="about-company__column el-1">
@@ -28,7 +24,7 @@ export const Members = () => {
 				</div>
 				<div className='about-company__footer'>
 					<a className='about-company__button'
-						 href={'services/about.html'}>читать всё</a>
+						href={'services/about.html'}>читать всё</a>
 				</div>
 			</div>
 			<div className="about-company__column el-2">
@@ -54,8 +50,8 @@ export const Members = () => {
 				</div>
 				<div className='about-company__footer'>
 					<a className='about-company__button'
-						 href="#"
-						 type='button'>читать всё</a>
+						href="#"
+						type='button'>читать всё</a>
 				</div>
 			</div>
 			<div className="about-company__column el-3">

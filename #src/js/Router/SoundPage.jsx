@@ -37,7 +37,7 @@ function SoundPage() {
 
 
 	useEffect(() => {
-		parallaxEffect();
+		// parallaxEffect();
 		returnToSavedPosition();
 	}, []);
 

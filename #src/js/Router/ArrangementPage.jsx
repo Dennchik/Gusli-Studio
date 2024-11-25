@@ -36,7 +36,7 @@ function ArrangementPage() {
 	);
 
 	useEffect(() => {
-		parallaxEffect();
+		// parallaxEffect();
 		returnToSavedPosition();
 	}, []);
 

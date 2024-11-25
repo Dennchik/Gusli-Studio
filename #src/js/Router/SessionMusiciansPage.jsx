@@ -35,7 +35,7 @@ function SessionMusiciansPage() {
 	);
 
 	useEffect(() => {
-		parallaxEffect();
+		// parallaxEffect();
 		returnToSavedPosition();
 	}, []);
 

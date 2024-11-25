@@ -24,7 +24,7 @@ export const Partners = () => {
 		);
 		refreshScrollTrigger();
 	}, []);
-	
+
 	return (
 		<div className="partners _container">
 			<div className="partners__body">
@@ -37,9 +37,9 @@ export const Partners = () => {
 									<div className="partners-slide__image">
 										<picture> {isWebpSupported()
 											? <img src={'img/main/partners/partn-1.webp'}
-														 alt="Игорь Угольников" />
+												alt="Игорь Угольников" />
 											: <img src={'img/main/partners/partn-1.png'}
-														 alt="Игорь Угольников" />}
+												alt="Игорь Угольников" />}
 										</picture>
 									</div>
 									<div className="box partners-slide__title el"> Игорь
@@ -56,9 +56,9 @@ export const Partners = () => {
 									<div className="partners-slide__image">
 										<picture> {isWebpSupported()
 											? <img src={'img/main/partners/partn_2.webp'}
-														 alt="Маргарита Калан" />
+												alt="Маргарита Калан" />
 											: <img src={'img/main/partners/partn_2.jpg'}
-														 alt="Маргарита Калан" />}
+												alt="Маргарита Калан" />}
 										</picture>
 									</div>
 									<div className="partners-slide__title">Маргарита Калан</div>
@@ -73,9 +73,9 @@ export const Partners = () => {
 									<div className="partners-slide__image">
 										<picture> {isWebpSupported()
 											? <img src={'img/main/partners/partn_3.webp'}
-														 alt="Иеромонах Фотий" />
+												alt="Иеромонах Фотий" />
 											: <img src={'img/main/partners/partn_3.jpg'}
-														 alt="Иеромонах Фотий" />}
+												alt="Иеромонах Фотий" />}
 										</picture>
 									</div>
 									<div className="partners-slide__title">Епископ Иосиф</div>
@@ -90,9 +90,9 @@ export const Partners = () => {
 									<div className="partners-slide__image">
 										<picture> {isWebpSupported()
 											? <img src={'@@webRoot/img/main/partners/partn_4.webp'}
-														 alt="Алексей Егоров" />
+												alt="Алексей Егоров" />
 											: <img src={'img/main/partners/partn_4.jpg'}
-														 alt="Алексей Егоров" />}
+												alt="Алексей Егоров" />}
 										</picture>
 									</div>
 									<div className="partners-slide__title">Алексей Егоров</div>
@@ -108,9 +108,9 @@ export const Partners = () => {
 										<picture>
 											{isWebpSupported()
 												? <img src={'img/main/partners/partn_6.webp'}
-															 alt="Епископ Иосиф<" />
+													alt="Епископ Иосиф<" />
 												: <img src={'img/main/partners/partn_6.jpg'}
-															 alt="Епископ Иосиф " />}
+													alt="Епископ Иосиф " />}
 										</picture>
 									</div>
 									<div className="partners-slide__title">Иеромонах Фотий</div>
@@ -124,9 +124,9 @@ export const Partners = () => {
 									<div className="partners-slide__image">
 										<picture> {isWebpSupported()
 											? <img src={'@@webRoot/img/main/partners/partn_5.webp'}
-														 alt="Александр Яковлев" />
+												alt="Александр Яковлев" />
 											: <img src={'@@webRoot/img/main/partners/partn_5.jpg'}
-														 alt="Александр Яковлев" />}
+												alt="Александр Яковлев" />}
 										</picture>
 									</div>
 									<div className="partners-slide__title">Александр Яковлев</div>

@@ -36,7 +36,7 @@ function MusicianPage() {
 	);
 
 	useEffect(() => {
-		parallaxEffect();
+		// parallaxEffect();
 		returnToSavedPosition();
 	}, []);
 

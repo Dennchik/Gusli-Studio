@@ -37,7 +37,7 @@ function VoiceActingPage() {
 
 
 	useEffect(() => {
-		parallaxEffect();
+		// parallaxEffect();
 		returnToSavedPosition();
 	}, []);
 

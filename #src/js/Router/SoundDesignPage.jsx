@@ -35,7 +35,7 @@ function SoundDesignPage() {
 	);
 
 	useEffect(() => {
-		parallaxEffect();
+		// parallaxEffect();
 		returnToSavedPosition();
 	}, []);
 

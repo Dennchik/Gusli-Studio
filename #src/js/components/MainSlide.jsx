@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useRef } from 'react';
-// import videojs from 'video.js';
 
 //* ------------------------ Component's MainSlide -----------------------------
 
