@@ -13,14 +13,22 @@ export const MainSlide = ({ baseUrl }) => {
 	useEffect(() => {
 		if (videoRef.current) {
 			const video = videoRef.current;
-
-			// Автоматическое воспроизведение видео при монтировании
+			// Проверка видимости видео
+			const isVideoInView = () => {
+				const videoTop = video.getBoundingClientRect().top;
+				return videoTop > -400;
+			};
+			// Автоматическое воспроизведение видео при монтировании, если оно в зоне видимости
 			const playVideo = async () => {
-				try {
-					await video.play();
-					console.log('Видео воспроизводится');
-				} catch (err) {
-					console.error('Не удалось воспроизвести видео:', err);
+				if (isVideoInView()) {
+					try {
+						await video.play();
+						console.log('Видео воспроизводится');
+					} catch (err) {
+						console.warn('Не удалось воспроизвести видео:', err);
+					}
+				} else {
+					console.log('Видео вне видимости, воспроизведение пропущено');
 				}
 			};
 			playVideo();
@@ -74,19 +82,11 @@ export const MainSlide = ({ baseUrl }) => {
 					<video
 						ref={videoRef}
 						id="player-id"
+						playsInline
 						className="video-js"
 						preload="auto"
 						loop
 						muted
-					// onClick={() => {
-					// 	if (videoRef.current) {
-					// 		if (videoRef.current.paused) {
-					// 			videoRef.current.play();
-					// 		} else {
-					// 			videoRef.current.pause();
-					// 		}
-					// 	}
-					// }}
 					>
 						<source src={getPath('img/audio/showreel-1.mp4')} type="video/mp4" />
 					</video>

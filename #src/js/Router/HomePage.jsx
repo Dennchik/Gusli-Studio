@@ -65,9 +65,10 @@ function HomePage() {
 				<i className="icon-angle-down _button"></i>
 			</div>
 			<section className="page__form-modal"
-				role="dialog"
-				aria-labelledby="modalTitle"
-				aria-modal="true">
+			// role="dialog"
+			// aria-labelledby="modalTitle"
+			// aria-modal="true"
+			>
 				<FormModal />
 			</section>
 		</>
