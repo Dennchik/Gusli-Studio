@@ -27,12 +27,11 @@ body {
 		0 0 0.2em #00f;
 	// overscroll-behavior: none;
 	font: 1.6rem/1.6 $font-default;
-
+	background: #050311;
 	&.no-scroll {
 		overflow: hidden;
 	}
 
-	@extend .gradient-services;
 	@include screen-490 {
 		font: 1.5rem/1.5 $font-default;
 	}
