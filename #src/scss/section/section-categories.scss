@@ -6,10 +6,6 @@
 	.services {
 		padding-top: 4rem;
 
-		// .categories__content
-		&__content {
-		}
-
 		// .categories__body
 		&__body {
 			justify-content: flex-end;
@@ -44,17 +40,33 @@
 				}
 			}
 
+			&:nth-child(odd) {
+				text-align: left;
+
+				@include screen-490 {
+					.services-slide__info {
+						margin-left: -10rem;
+					}
+				}
+			}
+
 			&:nth-child(even) {
 				justify-content: flex-start;
 				flex-direction: row-reverse;
 				text-align: right;
 
 				@include screen-490 {
+					.services-slide__info {
+						margin-right: -10rem;
+					}
+				}
+				@include screen-375 {
 					flex-direction: column;
+					text-align: left;
 				}
 			}
 
-			@include screen-490 {
+			@include screen-375 {
 				flex-direction: column;
 			}
 		}
@@ -66,7 +78,7 @@
 			font-weight: 400;
 			flex: 0 1 60%;
 			height: 100%;
-			max-width: 690px;
+			max-width: 590px;
 			color: #ffffff;
 			opacity: 0.8;
 			border-radius: 10px;
@@ -76,16 +88,16 @@
 			background: rgba(28, 21, 63, 0.27);
 
 			@include minmax-320-1920 {
-				font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
+				font-size: calc(11px + (20 - 11) * ((100vw - 320px) / (1920 - 320)));
 			}
-			@include screen-690 {
-				text-align: center;
-			}
+
 			@include screen-490 {
 				max-width: 300px;
 			}
-			@include screen-320 {
-				font-size: 14px;
+			@include screen-375 {
+				width: 100%;
+				font-size: 12px;
+				margin: 0 !important;
 			}
 		}
 	}

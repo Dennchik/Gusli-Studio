@@ -42,19 +42,4 @@ export default function returnToSavedPosition() {
 			scrollButton.classList.remove('_rotate');
 		}
 	});
-
-	const userAgent = navigator.userAgent;
-
-	// Шаблон для вашего конкретного случая
-	const isSpecificBrowser = /Linux; Android 6.0; Nexus 5 Build\/MRA58N/.test(userAgent);
-
-	const button = document.querySelector('.page__aside');
-	if (!button) {
-		return;
-	}
-
-	// Скрыть кнопку, если это конкретный браузер
-	if (isSpecificBrowser) {
-		button.style.display = 'none';
-	}
 }

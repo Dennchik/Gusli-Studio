@@ -28,42 +28,41 @@ export const Services = ({ baseUrl }) => {
 
 	const boxImagesRef = useRef([]);
 	useEffect(() => {
-		const handleMouseOver = (event) => {
-			const target = event.currentTarget;
-			if (!isMobile) {
+		if (!isMobile) {
+			const handleMouseOver = (event) => {
+				const target = event.currentTarget;
 				// Запускаем анимацию при наведении
 				animationSvgLine(target, false);
 				animationSvgText(target, false);
-			}
-
-		};
-		const handleMouseLeave = (event) => {
-			const target = event.currentTarget;
-			if (!isMobile) {
-				setTimeout(() => {
-					/*  Запускаем анимацию в обратном направлении с задержкой при уходе
-					 мыши */
-					animationSvgLine(target, true);
-					animationSvgText(target, true);
-				}, 500);
-			}
-		};
-		const boxImages = Array.from(
-			document.querySelectorAll('.services-slide__image'),
-		);
-		// Сохраняем ссылку на элементы в useRef
-		boxImagesRef.current = boxImages;
-		boxImages.forEach((boxImage) => {
-			boxImage.addEventListener('mouseover', handleMouseOver);
-			boxImage.addEventListener('mouseleave', handleMouseLeave);
-		});
-
-		return () => {
+			};
+			const handleMouseLeave = (event) => {
+				const target = event.currentTarget;
+				if (!isMobile) {
+					setTimeout(() => {
+						/*  Запускаем анимацию в обратном направлении с задержкой при уходе
+						 мыши */
+						animationSvgLine(target, true);
+						animationSvgText(target, true);
+					}, 500);
+				}
+			};
+			const boxImages = Array.from(
+				document.querySelectorAll('.services-slide__image'),
+			);
+			// Сохраняем ссылку на элементы в useRef
+			boxImagesRef.current = boxImages;
 			boxImages.forEach((boxImage) => {
-				boxImage.removeEventListener('mouseover', handleMouseOver);
-				boxImage.removeEventListener('mouseleave', handleMouseLeave);
+				boxImage.addEventListener('mouseover', handleMouseOver);
+				boxImage.addEventListener('mouseleave', handleMouseLeave);
 			});
-		};
+
+			return () => {
+				boxImages.forEach((boxImage) => {
+					boxImage.removeEventListener('mouseover', handleMouseOver);
+					boxImage.removeEventListener('mouseleave', handleMouseLeave);
+				});
+			};
+		}
 	}, []);
 
 	useEffect(() => {
@@ -112,11 +111,11 @@ export const Services = ({ baseUrl }) => {
 					</picture>
 				</div>
 			</div>
-			<div className="services__body _container">
+			<div className="services__body">
 				<div className="services__title">Наши услуги</div>
 				<div className="services__content">
 					<div className="services-slide">
-						<div className="services-slide__body">
+						<div className="services-slide__body _container">
 							<div className="services-slide__column line">
 								<div className="services-slide__content">
 									<div className="services-slide__image el">
@@ -650,7 +649,6 @@ export const Services = ({ baseUrl }) => {
 								</div>
 							</div>
 						</div>
-						<div className="services-slide__pagination"></div>
 					</div>
 				</div>
 				{<Offer baseUrl={baseUrl} />}

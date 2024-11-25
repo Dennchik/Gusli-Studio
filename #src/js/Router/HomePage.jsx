@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
-// import parallaxEffect from '../animations/parallax.jsx';
+import parallaxEffect from '../animations/parallax.jsx';
 
 import { Header } from '../layouts/Header.jsx';
 import { MainSlide } from '../components/MainSlide.jsx';
@@ -39,7 +39,7 @@ function HomePage() {
 	);
 	useEffect(() => {
 		if (!isMobile) {
-			// parallaxEffect();
+			parallaxEffect();
 		}
 		returnToSavedPosition();
 	}, []);
