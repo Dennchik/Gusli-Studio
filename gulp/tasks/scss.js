@@ -23,7 +23,18 @@ export function scss() {
 		.pipe($.gulpIf($.app.isDev, $.debug({
 			title: '(INIT Source-maps)'
 		})))
-		.pipe(sass.sync($.app.scss).on('error', sass.logError))
+		// .pipe(sass.sync($.app.scss).on('error', sass.logError))
+
+		.pipe(
+			sass.sync({
+				outputStyle: $.app.scss.outputStyle,
+				quietDeps: $.app.scss.options.sassOptions.quietDeps,
+				silenceDeprecations: $.app.scss.silenceDeprecations
+			}).on('error', function (err) {
+				console.error('Sass error:', err.messageFormatted); // Выводим подробности ошибки
+				this.emit('end');
+			})
+		)
 		.pipe(postcss([combineMediaQuery]))
 		.pipe($.gulpIf($.app.isProd, autoprefixer($.app.autoprefixer)))
 		.pipe($.gulpIf($.app.isProd, $.debug({

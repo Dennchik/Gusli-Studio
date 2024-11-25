@@ -1,5 +1,6 @@
 //todo ---------------------------- Core ---------------------------------------
-@use 'core/all.scss' as *;
+@use 'core/mixins.scss';
+@use 'core/variables.scss' as *;
 // todo ---------------------------- Pages -------------------------------------
 @use 'pages/page-main';
 // todo --------------------------- Modules ------------------------------------
@@ -39,18 +40,16 @@
 }
 
 [class*='_container'] {
-	// width: 100%;
 	max-width: $maxWidthContainer;
 	box-sizing: content-box;
 	margin: 0 auto;
 	padding: 0 30px;
 
-	@include screen-690 {
-		padding: 0 15px;
-	}
-
-	@include screen-375 {
+	@include mixins.screen-375 {
 		padding: 0 10px;
+	}
+	@include mixins.screen-690 {
+		padding: 0 15px;
 	}
 }
 

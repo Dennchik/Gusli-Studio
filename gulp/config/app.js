@@ -132,21 +132,30 @@ export const app = {
 					use: ['babel-loader'],
 				},
 				{
-					test: /\.css$/,
-					use: [
-						'style-loader',
-						'css-loader'
-					],
-				},
-				{
-					test: /\.scss$/,
-					exclude: /node_modules/,
+					test: /\.s[ac]ss$/i,
 					use: [
 						'style-loader',
 						'css-loader',
-						'sass-loader'   // компилирует Sass в CSS
-					]
+						{
+							loader: 'sass-loader',
+							options: {
+								api: 'modern-compiler',
+								sassOptions: {
+									// Your sass options
+								},
+							},
+						}
+					],
 				},
+				// {
+				// 	test: /\.scss$/,
+				// 	exclude: /node_modules/,
+				// 	use: [
+				// 		'style-loader',
+				// 		'css-loader',
+				// 		'sass-loader'   // компилирует Sass в CSS
+				// 	]
+				// },
 			],
 		},
 		resolve: {
@@ -156,7 +165,14 @@ export const app = {
 	},
 
 	scss: {
-		outputStyle: 'expanded'
+		outputStyle: 'expanded',
+		silenceDeprecations: ['legacy-js-api'],
+		api: 'modern-compiler',
+		options: {
+			sassOptions: {
+				quietDeps: false,
+			},
+		},
 	},
 	pug: {
 		pretty: true,

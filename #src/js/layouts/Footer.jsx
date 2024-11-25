@@ -8,16 +8,16 @@ import {
 } from '../animations/animations.jsx';
 import { AboutCompany } from '../components/AboutCompany.jsx';
 //* ----------------------------------------------------------------------------
-export const Footer = ({baseUrl, isHomePage}) => {
+export const Footer = ({ baseUrl, isHomePage }) => {
 	useEffect(() => {
 		const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 		if (!isMobile) {
 			if (isHomePage) {
 				tlFooterParallel();
+				tlFooterHorizontal();
+				initSectionTriggerMove('#footer', '.link-key--contacts');
 			}
 		}
-		tlFooterHorizontal();
-		initSectionTriggerMove('#footer', '.link-key--contacts');
 	}, []);
 
 	return (
