@@ -4,19 +4,18 @@ import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import parallaxEffect from '../animations/parallax.jsx';
 
+import returnToSavedPosition from '../modules/return-position.js';
+
 import { Header } from '../layouts/Header.jsx';
 import { MainSlide } from '../components/MainSlide.jsx';
 import { Services } from '../components/Services.jsx';
 import { Footer } from '../layouts/Footer.jsx';
 import { MenuFloat } from '../layouts/Menu-float.jsx';
 
-import returnToSavedPosition from '../modules/return-position.js';
-import { FormModal } from '../сontext/FormModal .jsx';
+import { FormModal } from '../components/chunks/FormModal.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '.';
-
-
 function HomePage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	useGSAP(

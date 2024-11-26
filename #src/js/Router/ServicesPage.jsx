@@ -3,16 +3,17 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
+import returnToSavedPosition from '../modules/return-position.js';
+import parallaxEffect from '../animations/parallax.jsx';
+
 import { Header } from '../layouts/Header.jsx';
 import { Categories } from '../components/Categories.jsx';
-import { Offer } from '../components/Offer.jsx';
+import { Offer } from '../components/chunks/Offer.jsx';
 import { Footer } from '../layouts/Footer.jsx';
 import { MenuFloat } from '../layouts/Menu-float.jsx';
 import { Answers } from '../components/Answers.jsx';
-import { FormModal } from '../сontext/FormModal .jsx';
+import { FormModal } from '../components/chunks/FormModal.jsx';
 
-import returnToSavedPosition from '../modules/return-position.js';
-import parallaxEffect from '../animations/parallax.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '.';

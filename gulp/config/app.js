@@ -31,97 +31,108 @@ export const app = {
 		},
 
 		entry: {
-			main: {
-				import: ['./#src/js/main.js'],
-				filename: '[name].min.js'
-			},
+			main: { import: ['./#src/js/main.js'] },
 			index: {
-				import: ['./#src/js/index.jsx'],
+				import: ['./#src/js/pages/index.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
 			about: {
-				import: ['./#src/js/about.jsx'],
+				import: ['./#src/js/pages/about.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
 			services: {
-				import: ['./#src/js/services.jsx'],
+				import: ['./#src/js/pages/services.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
 			sound: {
-				import: ['./#src/js/sound.jsx'],
+				import: ['./#src/js/pages/sound.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
 			musician: {
-				import: ['./#src/js/musician.jsx'],
+				import: ['./#src/js/pages/services/sound/musician.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
 			'sound-recording': {
-				import: ['./#src/js/sound-recording.jsx'],
+				import: ['./#src/js/pages/services/sound/sound-recording.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
 			arrangement: {
-				import: ['./#src/js/arrangement.jsx'],
+				import: ['./#src/js/pages/services/sound/arrangement.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
 			bits: {
-				import: ['./#src/js/bits.jsx'],
+				import: ['./#src/js/pages/services/sound/bits.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
 			'session-musicians': {
-				import: ['./#src/js/session-musicians.jsx'],
+				import: ['./#src/js/pages/services/sound/session-musicians.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
 			'sound-design': {
-				import: ['./#src/js/sound-design.jsx'],
+				import: ['./#src/js/pages/services/sound/sound-design.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
 			'audio-podcasts': {
-				import: ['./#src/js/audio-podcasts.jsx'],
+				import: ['./#src/js/pages/services/sound/audio-podcasts.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
 			'voice-acting': {
-				import: ['./#src/js/voice-acting.jsx'],
+				import: ['./#src/js/pages/services/sound/voice-acting.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
 			dubbing: {
-				import: ['./#src/js/dubbing.jsx'],
+				import: ['./#src/js/pages/services/sound/dubbing.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
 			mastering: {
-				import: ['./#src/js/mastering.jsx'],
+				import: ['./#src/js/pages/services/sound/mastering.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
 			//! depend On - vendors
 			'react-vendors': {
-				import: ['react', 'react-dom', 'react-router-dom', 'prop-types']
+				import: ['react', 'react-dom', 'react-router-dom', 'prop-types'],
+				filename: 'vendors/[name].min.js',
 			},
 
 			'anime-vendors': {
-				import: ['gsap', 'gsap/ScrollSmoother', 'gsap/ScrollTrigger']
+				import: ['gsap', 'gsap/ScrollSmoother', 'gsap/ScrollTrigger'],
+				filename: 'vendors/[name].min.js',
 			},
 
-			'swiper-bundle': { import: ['swiper/bundle'] },
+			'swiper-bundle': {
+				import: ['swiper/bundle'],
+				filename: 'vendors/[name].min.js',
+			},
 
 			// 'video-vendors': {
 			// 	import: ['video.js'], // Название для отдельного чанка 
 			// },
 		},
+		// output: {
+		// 	filename: '[name].min.js',
+		// },
 		output: {
-			filename: 'app/[name].min.js',
+			filename: (pathData) => {
+				// Проверяем имя чанка
+				if (pathData.chunk.name === 'runtime') {
+					return 'vendors/[name].min.js'; // runtime попадает в vendors/
+				}
+				return '[name].min.js'; // Остальные файлы остаются в текущем формате
+			},
 		},
 		devtool: 'source-map',
 		module: {

@@ -10,7 +10,7 @@ import {
 import { animationSvgLine, animationSvgText } from '../animations/anime-js.jsx';
 import { buildSwiper } from '../layouts/build-swiper.js';
 import { servicesSlide } from '../layouts/services-slide.js';
-import { Offer } from './Offer.jsx';
+import { Offer } from './chunks/Offer.jsx';
 
 //* ----------------------------------------------------------------------------
 export const Services = ({ baseUrl }) => {

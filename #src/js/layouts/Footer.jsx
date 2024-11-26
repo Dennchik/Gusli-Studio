@@ -6,7 +6,7 @@ import {
 	tlFooterHorizontal,
 	tlFooterParallel,
 } from '../animations/animations.jsx';
-import { AboutCompany } from '../components/AboutCompany.jsx';
+import { AboutCompany } from '../components/chunks/AboutCompany.jsx';
 //* ----------------------------------------------------------------------------
 export const Footer = ({ baseUrl, isHomePage }) => {
 	useEffect(() => {

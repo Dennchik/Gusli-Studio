@@ -53,6 +53,7 @@ export const About = () => {
 		return () => window.removeEventListener('resize', handleResize);
 	}, [handleResize]);
 
+
 	return (
 		<div className="about">
 			<div className="material-parallax parallax">
@@ -60,9 +61,9 @@ export const About = () => {
 					<picture>
 						{isWebpSupported()
 							? <img className='parallax__image bg'
-										 src={'img/about/ab-img-01.webp'} alt="image" />
+								src={'img/about/ab-img-01.webp'} alt="image" />
 							: <img className='parallax__image bg'
-										 src={'img/about/ab-img-01.png'} alt="image" />}
+								src={'img/about/ab-img-01.png'} alt="image" />}
 					</picture>
 				</div>
 			</div>
@@ -76,7 +77,7 @@ export const About = () => {
 								того&nbsp;специалиста, который идеально подходит
 								для&nbsp;воплощения вашей музыкальной идеи!
 								<span ref={toggleButtonRef} className="content-body__icon">
-										<i className="content-body__ellipsis"></i>
+									<i className="content-body__ellipsis"></i>
 								</span>
 							</p>
 							<div ref={hideBoxRef} className="content-body__hide-box">
