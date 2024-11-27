@@ -3,20 +3,18 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
-import { Header } from '../layouts/Header.jsx';
-import { About } from '../components/About.jsx';
+import { Header } from '../components/layouts/Header.jsx';
+import { About } from '../components/sections/About.jsx';
 import { Partners } from '../components/Partners.jsx';
-import { Achievements } from '../components/Achievements.jsx';
-import { Footer } from '../layouts/Footer.jsx';
-import { MenuFloat } from '../layouts/Menu-float.jsx';
+import { Achievements } from '../components/sections/Achievements.jsx';
+import { Footer } from '../components/layouts/Footer.jsx';
+import { MenuFloat } from '../components/layouts/Menu-float.jsx';
 
 import returnToSavedPosition from '../modules/return-position.js';
 import parallaxEffect from '../animations/parallax.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '.';
-
-
 function AboutPage() {
 	useGSAP(
 		() => {
@@ -53,7 +51,7 @@ function AboutPage() {
 							<Partners baseUrl={baseUrl} />
 						</section>
 						<section className="main-content__achievements">
-							<Achievements baseUrl={baseUrl} />
+							<Achievements />
 						</section>
 						<footer className="main-content__footer" id="footer">
 							<Footer baseUrl={baseUrl} isHomePage={true} />

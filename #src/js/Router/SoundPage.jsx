@@ -6,13 +6,13 @@ import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import returnToSavedPosition from '../modules/return-position.js';
 import parallaxEffect from '../animations/parallax.jsx';
 
-import { Header } from '../layouts/Header.jsx';
+import { Header } from '../components/layouts/Header.jsx';
 import { ServiceSound } from '../components/categories/ServiceSound.jsx';
 import { Offer } from '../components/chunks/Offer.jsx';
 import { Answers } from '../components/Answers.jsx';
-import { Footer } from '../layouts/Footer.jsx';
-import { MenuFloat } from '../layouts/Menu-float.jsx';
-import { FormModal } from '../components/chunks/FormModal.jsx';
+import { Footer } from '../components/layouts/Footer.jsx';
+import { MenuFloat } from '../components/layouts/Menu-float.jsx';
+import { FormModal } from '../components/layouts/FormModal.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '..';

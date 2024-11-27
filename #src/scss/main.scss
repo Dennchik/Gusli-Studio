@@ -1,6 +1,5 @@
 //todo ---------------------------- Core ---------------------------------------
-@use 'core/mixins.scss';
-@use 'core/variables.scss' as *;
+@use 'core/all.scss' as *;
 // todo ---------------------------- Pages -------------------------------------
 @use 'pages/page-main';
 // todo --------------------------- Modules ------------------------------------
@@ -30,7 +29,8 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,regular,500,600,700&display=swap&subset=cyrillic-ext');
 @import url('https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700&display=swap&subset=cyrillic-ext');
 // todo ---------------------------- Style -------------------------------------
-
+@import url('https://fonts.googleapis.com/css?family=Lato:400,300,700|Great+Vibes');
+@import url('http://weloveiconfonts.com/api/?family=entypo');
 // #region
 .wrapper {
 	margin: 0 auto;
@@ -45,10 +45,10 @@
 	margin: 0 auto;
 	padding: 0 30px;
 
-	@include mixins.screen-375 {
+	@include screen-375 {
 		padding: 0 10px;
 	}
-	@include mixins.screen-690 {
+	@include screen-690 {
 		padding: 0 15px;
 	}
 }
