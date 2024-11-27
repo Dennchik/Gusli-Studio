@@ -137,7 +137,8 @@
 		z-index: 1;
 		overflow: hidden;
 		width: 100%;
-		height: 100vh;
+		min-height: 100vh;
+		height: 100%;
 	}
 
 	// .main-content__content

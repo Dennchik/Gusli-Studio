@@ -140,6 +140,9 @@
 			28px + (50 - 28) * ((100vw - 490px) / (1920 - 490))
 		) !important;
 	}
+	@include screen-490 {
+		font-size: 28px !important;
+	}
 }
 
 .h2_01901 {
@@ -148,13 +151,19 @@
 			28px + (50 - 28) * ((100vw - 490px) / (1920 - 490))
 		) !important;
 	}
+	@include screen-490 {
+		font-size: 28px !important;
+	}
 }
 
 .t_01901 {
 	@include minmax-490-1920 {
 		font-size: calc(
-			14px + (18 - 14) * ((100vw - 490px) / (1920 - 490))
+			14px + (18 - 12) * ((100vw - 490px) / (1920 - 490))
 		) !important;
+	}
+	@include screen-490 {
+		font-size: 12px !important;
 	}
 }
 

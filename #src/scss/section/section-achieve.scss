@@ -219,6 +219,7 @@
 	&__image {
 		z-index: -1;
 		filter: sepia(100%) invert(100%);
+
 		img {
 			position: relative;
 			z-index: 1;
@@ -255,15 +256,19 @@
 .otra + .otra,
 #in-1:checked ~ .sv-3 .afin,
 #in-2:checked ~ .sv-4 .afin,
-#in-3:checked ~ .sv-1 .afin,
-#in-4:checked ~ .sv-2 .afin {
+#in-3:checked ~ .sv-5 .afin,
+#in-4:checked ~ .sv-6 .afin,
+#in-5:checked ~ .sv-1 .afin,
+#in-6:checked ~ .sv-2 .afin {
 	right: 0;
 	text-align: left;
 }
 #in-1:checked ~ .sv-1 .otra,
 #in-2:checked ~ .sv-2 .otra,
 #in-3:checked ~ .sv-3 .otra,
-#in-4:checked ~ .sv-4 .otra {
+#in-4:checked ~ .sv-4 .otra,
+#in-5:checked ~ .sv-5 .otra,
+#in-6:checked ~ .sv-6 .otra {
 	background: $neon-blue-dark;
 	display: block;
 }
@@ -271,26 +276,46 @@
 #in-2:checked ~ .sv-2 .afin,
 #in-3:checked ~ .sv-3 .afin,
 #in-4:checked ~ .sv-4 .afin,
+#in-5:checked ~ .sv-5 .afin,
+#in-6:checked ~ .sv-6 .afin,
 :not(:checked) ~ .otra {
 	display: none;
 }
 //* ----------------------------------------------------------------------------
-/* Слеыва (Левый слайд) */
-#in-1:checked ~ .sv-2,
-#in-2:checked ~ .sv-3,
-#in-3:checked ~ .sv-4,
-#in-4:checked ~ .sv-1 {
-	animation: 1s fuera-izq;
+
+/* Центральный (задний нижний план) */
+#in-1:checked ~ .sv-6,
+#in-2:checked ~ .sv-1,
+#in-3:checked ~ .sv-2,
+#in-4:checked ~ .sv-3,
+#in-5:checked ~ .sv-4,
+#in-6:checked ~ .sv-5 {
+	animation: 1.5s backBottom;
 	animation-fill-mode: forwards;
-	transform-origin: center left;
-	z-index: 2;
+	transform-origin: center bottom;
+	z-index: 1;
+}
+
+/* Центральный (задний верхний план) */
+#in-1:checked ~ .sv-5,
+#in-2:checked ~ .sv-6,
+#in-3:checked ~ .sv-1,
+#in-4:checked ~ .sv-2,
+#in-5:checked ~ .sv-3,
+#in-6:checked ~ .sv-4 {
+	animation: 1.5s backTop;
+	animation-fill-mode: forwards;
+	transform-origin: center top;
+	z-index: 1;
 }
 
 /* Центральный (задний план) */
 #in-1:checked ~ .sv-4,
-#in-2:checked ~ .sv-1,
-#in-3:checked ~ .sv-2,
-#in-4:checked ~ .sv-3 {
+#in-2:checked ~ .sv-5,
+#in-3:checked ~ .sv-6,
+#in-4:checked ~ .sv-1,
+#in-5:checked ~ .sv-2,
+#in-6:checked ~ .sv-3 {
 	animation: 1.5s back;
 	animation-fill-mode: forwards;
 	transform-origin: center center;
@@ -300,11 +325,26 @@
 /* Справа (правый слайд) */
 #in-1:checked ~ .sv-3,
 #in-2:checked ~ .sv-4,
-#in-3:checked ~ .sv-1,
-#in-4:checked ~ .sv-2 {
+#in-3:checked ~ .sv-5,
+#in-4:checked ~ .sv-6,
+#in-5:checked ~ .sv-1,
+#in-6:checked ~ .sv-2 {
 	animation: 1.5s fuera-dch;
 	animation-fill-mode: forwards;
 	transform-origin: center right;
+	z-index: 2;
+}
+
+/* Слеева (Левый слайд) */
+#in-1:checked ~ .sv-2,
+#in-2:checked ~ .sv-3,
+#in-3:checked ~ .sv-4,
+#in-4:checked ~ .sv-5,
+#in-5:checked ~ .sv-6,
+#in-6:checked ~ .sv-1 {
+	animation: 1s fuera-izq;
+	animation-fill-mode: forwards;
+	transform-origin: center left;
 	z-index: 2;
 }
 
@@ -312,7 +352,9 @@
 #in-1:checked ~ .sv-1,
 #in-2:checked ~ .sv-2,
 #in-3:checked ~ .sv-3,
-#in-4:checked ~ .sv-4 {
+#in-4:checked ~ .sv-4,
+#in-5:checked ~ .sv-5,
+#in-6:checked ~ .sv-6 {
 	animation: 2s central;
 	animation-fill-mode: forwards;
 	transform-origin: center center;
@@ -326,60 +368,36 @@
 	margin-right: 0.5rem;
 }
 
-// .sv-1 {
-// 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAAEFsT2yAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFElEQVR4nGNhYGBwYIET////ZwAAETIDym2lzEcAAAAASUVORK5CYII=);
-// }
-// .sv-2 {
-// 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAAEFsT2yAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFElEQVR4nGNhYGBwYIET////ZwAAETIDym2lzEcAAAAASUVORK5CYII=);
-// }
-// .sv-3 {
-// 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAAEFsT2yAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFElEQVR4nGNhYGBwYIET////ZwAAETIDym2lzEcAAAAASUVORK5CYII=);
-// }
-// .sv-4 {
-// 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAAEFsT2yAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFElEQVR4nGNhYGBwYIET////ZwAAETIDym2lzEcAAAAASUVORK5CYII=);
-// }
 .gallery__content {
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAAEFsT2yAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFElEQVR4nGNhYGBwYIET////ZwAAETIDym2lzEcAAAAASUVORK5CYII=);
 }
-// .sv-5 {
-// 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAAEFsT2yAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFElEQVR4nGNhYGBwYIET////ZwAAETIDym2lzEcAAAAASUVORK5CYII=),
-// 		url(http://2.bp.blogspot.com/-Kd55Z83gyvM/UpD8A6qj6CI/AAAAAAAAH20/eV8YvYCDAvE/s1600/mult-lab1.jpg);
-// }
-// .sv-6 {
-// 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAAEFsT2yAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFElEQVR4nGNhYGBwYIET////ZwAAETIDym2lzEcAAAAASUVORK5CYII=),
-// 		url(http://2.bp.blogspot.com/-Kd55Z83gyvM/UpD8A6qj6CI/AAAAAAAAH20/eV8YvYCDAvE/s1600/mult-lab1.jpg);
-// }
-// .sv-7 {
-// 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAAEFsT2yAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFElEQVR4nGNhYGBwYIET////ZwAAETIDym2lzEcAAAAASUVORK5CYII=),
-// 		url(http://2.bp.blogspot.com/-Kd55Z83gyvM/UpD8A6qj6CI/AAAAAAAAH20/eV8YvYCDAvE/s1600/mult-lab1.jpg);
-// }
 
 //* ----------------------------------------------------------------------------
 @keyframes fuera-izq {
 	0% {
-		transform: scale(1) translatex(0%);
+		transform: scale(1) translateX(0%);
 	}
 
 	50% {
-		transform: scale(0.9) translatex(-100%);
+		transform: scale(0.9) translateX(-100%);
 	}
 
 	100% {
-		transform: scale(0.9) translatex(-7%);
+		transform: scale(0.9) translateX(-7%);
 	}
 }
 
 @keyframes fuera-dch {
 	0% {
-		transform: scale(1) translatex(0%);
+		transform: scale(1) translateX(0%);
 	}
 
 	50% {
-		transform: scale(0.9) translatex(100%);
+		transform: scale(0.9) translateX(100%);
 	}
 
 	100% {
-		transform: scale(0.9) translatex(7%);
+		transform: scale(0.9) translateX(7%);
 	}
 }
 
@@ -399,22 +417,58 @@
 		z-index: 3;
 	}
 }
+
 @keyframes back {
 	0% {
-		transform: scale(0.8) translatex(0%);
+		transform: scale(0.8) translateX(0%);
 		z-index: 0;
 	}
 
 	50% {
-		transform: scale(1) translatex(0);
+		transform: scale(1) translateX(0);
 		z-index: 0;
 	}
 
 	100% {
-		transform: scale(0.5) translatex(0);
+		transform: scale(0.5) translateX(0);
 		z-index: 0;
 	}
 }
+
+@keyframes backTop {
+	0% {
+		transform: scale(0.8) translate(0, 0);
+		z-index: 0;
+	}
+
+	50% {
+		transform: scale(0.5) translate(0, -17%);
+		z-index: 0;
+	}
+
+	100% {
+		transform: scale(0.8) translate(0, -10%);
+		z-index: 0;
+	}
+}
+
+@keyframes backBottom {
+	0% {
+		transform: scale(0.8) translate(0, 0);
+		z-index: 0;
+	}
+
+	50% {
+		transform: scale(0.5) translate(0, 17%);
+		z-index: 0;
+	}
+
+	100% {
+		transform: scale(0.8) translate(0, 10%);
+		z-index: 0;
+	}
+}
+
 @keyframes pulso {
 	50% {
 		opacity: 0.7;

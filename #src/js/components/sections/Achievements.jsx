@@ -77,9 +77,14 @@ export function Achievements() {
 								checked={selectedRadio === '4'}
 								onChange={handleRadioChange}
 							/>
-							{/* <input type="radio" id="in-5" value="5" name="tractor" />
-							<input type="radio" id="in-6" value="6" name="tractor" />
-							<input type="radio" id="in-7" value="7" name="tractor" /> */}
+							<input type="radio" id="in-5" value="5" name="tractor"
+								checked={selectedRadio === '5'}
+								onChange={handleRadioChange}
+							/>
+							<input type="radio" id="in-6" value="6" name="tractor"
+								checked={selectedRadio === '6'}
+								onChange={handleRadioChange}
+							/>
 							<article className="gallery__card sv-1">
 
 								<div className="gallery__image _ibg" data-depth="1.00">
@@ -103,13 +108,9 @@ export function Achievements() {
 										<li className="entypo-plus-circled"></li>
 										<li className="entypo-minus-circled"></li>
 									</ul>
-									<label htmlFor="in-4" className="entypo-left-bold otra"></label>
+									<label htmlFor="in-6" className="entypo-left-bold otra"></label>
 									<label htmlFor="in-2" className="entypo-right-bold otra"></label>
-									<label htmlFor="in-3" className="entypo-arrows-ccw afin"></label>
 									<label htmlFor="in-1" className="entypo-arrows-ccw afin"></label>
-									{/* <label htmlFor="in-7" className="entypo-right-bold otra"></label>
-									<label htmlFor="in-6" className="entypo-arrows-ccw afin"></label>
-									<label htmlFor="in-5" className="entypo-arrows-ccw afin"></label> */}
 								</div>
 							</article>
 
@@ -138,11 +139,7 @@ export function Achievements() {
 									</ul>
 									<label htmlFor="in-1" className="entypo-left-bold otra"></label>
 									<label htmlFor="in-3" className="entypo-right-bold otra"></label>
-									<label htmlFor="in-4" className="entypo-arrows-ccw afin"></label>
 									<label htmlFor="in-2" className="entypo-arrows-ccw afin"></label>
-									{/* <label htmlFor="in-5" className="entypo-right-bold otra"></label>
-									<label htmlFor="in-6" className="entypo-arrows-ccw afin"></label>
-									<label htmlFor="in-7" className="entypo-arrows-ccw afin"></label> */}
 								</div>
 							</article>
 
@@ -171,11 +168,7 @@ export function Achievements() {
 									</ul>
 									<label htmlFor="in-2" className="entypo-left-bold otra"></label>
 									<label htmlFor="in-4" className="entypo-right-bold otra"></label>
-									<label htmlFor="in-1" className="entypo-arrows-ccw afin"></label>
 									<label htmlFor="in-3" className="entypo-arrows-ccw afin"></label>
-									{/* <label htmlFor="in-5" className="entypo-right-bold otra"></label>
-									<label htmlFor="in-6" className="entypo-arrows-ccw afin"></label>
-									<label htmlFor="in-7" className="entypo-arrows-ccw afin"></label> */}
 								</div>
 							</article>
 
@@ -203,12 +196,66 @@ export function Achievements() {
 										<li className="entypo-cw"></li>
 									</ul>
 									<label htmlFor="in-3" className="entypo-left-bold otra"></label>
-									<label htmlFor="in-1" className="entypo-right-bold otra"></label>
-									<label htmlFor="in-2" className="entypo-arrows-ccw afin"></label>
+									<label htmlFor="in-5" className="entypo-right-bold otra"></label>
 									<label htmlFor="in-4" className="entypo-arrows-ccw afin"></label>
-									{/* <label htmlFor="in-5" className="entypo-arrows-ccw afin"></label>
+								</div>
+							</article>
+
+							<article className="gallery__card sv-5">
+
+								<div className="gallery__image _ibg" data-depth="1.00">
+									<picture>
+										{isWebpSupported()
+											? <img src={'img/about/slide/srt-5.webp'} alt="image" />
+											: <img src={'/img/about/slide/srt-5.png'} alt="image" />}
+									</picture>
+								</div>
+
+								<div className="gallery__content">
+									<h2 className='entypo-tag'>Three Labels - 5</h2>
+									<div className="gallery__text">
+										<p>Three Labels for each Input.<br />
+											One for go back,<br />
+											Another for go ahead,<br />
+											The Last for recover it.</p>
+									</div>
+									<ul className="gallery__footer">
+										<li className="entypo-ccw"></li>
+										<li className="entypo-arrows-ccw"></li>
+										<li className="entypo-cw"></li>
+									</ul>
+									<label htmlFor="in-4" className="entypo-left-bold otra"></label>
 									<label htmlFor="in-6" className="entypo-right-bold otra"></label>
-									<label htmlFor="in-7" className="entypo-arrows-ccw afin"></label> */}
+									<label htmlFor="in-5" className="entypo-arrows-ccw afin"></label>
+								</div>
+							</article>
+
+							<article className="gallery__card sv-6">
+
+								<div className="gallery__image _ibg" data-depth="1.00">
+									<picture>
+										{isWebpSupported()
+											? <img src={'img/about/slide/srt-6.webp'} alt="image" />
+											: <img src={'/img/about/slide/srt-6.png'} alt="image" />}
+									</picture>
+								</div>
+
+								<div className="gallery__content">
+									<h2 className='entypo-tag'>Three Labels - 6</h2>
+									<div className="gallery__text">
+										<p>Three Labels for each Input.<br />
+											One for go back,<br />
+											Another for go ahead,<br />
+											The Last for recover it.</p>
+									</div>
+									<ul className="gallery__footer">
+										<li className="entypo-ccw"></li>
+										<li className="entypo-arrows-ccw"></li>
+										<li className="entypo-cw"></li>
+									</ul>
+									<label htmlFor="in-5" className="entypo-left-bold otra"></label>
+									<label htmlFor="in-1" className="entypo-right-bold otra"></label>
+									<label htmlFor="in-6" className="entypo-arrows-ccw afin"></label>
 								</div>
 							</article>
 

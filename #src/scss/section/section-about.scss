@@ -23,6 +23,7 @@
 		align-items: center;
 		justify-content: flex-end;
 		height: 100%;
+		min-height: 100vh;
 	}
 }
 
@@ -33,6 +34,8 @@
 		flex: 0 0 100%;
 		max-width: 670px;
 		flex-direction: column;
+
+		margin: 16rem 0;
 	}
 
 	// .content-body__text
