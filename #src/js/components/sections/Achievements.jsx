@@ -115,7 +115,12 @@ export function Achievements() {
 								</div>
 
 								<div className="gallery__content">
-									<h2 className='entypo-tag'>Сертификат об&nbsp;обучении</h2>
+									<div className="gallery__title">
+										<i className="icon-feather _icon"></i>
+										<h2 className='gallery__tag'>
+											Сертификат об&nbsp;обучении</h2>
+									</div>
+
 									<div className="gallery__text">
 										<p>Three Labels for each Input.<br />
 											One for go back,<br />
@@ -123,13 +128,13 @@ export function Achievements() {
 											The Last for recover it.</p>
 									</div>
 									<ul className="gallery__footer">
-										<li className="entypo-cancel-circled"></li>
-										<li className="entypo-plus-circled"></li>
-										<li className="entypo-minus-circled"></li>
+										<li className="icon-arrow-left"></li>
+										<li className="icon-magnifying-glass"></li>
+										<li className="icon-arrow-right"></li>
 									</ul>
-									<label htmlFor="in-6" className="entypo-left-bold otra"></label>
-									<label htmlFor="in-2" className="entypo-right-bold otra"></label>
-									<label htmlFor="in-1" className="entypo-arrows-ccw afin"></label>
+									<label htmlFor="in-6" className="icon-arrow-bold-left otra"></label>
+									<label htmlFor="in-2" className="icon-arrow-bold-right otra"></label>
+									<label htmlFor="in-1" className="icon-cycle afin"></label>
 								</div>
 							</article>
 
@@ -147,7 +152,12 @@ export function Achievements() {
 								</div>
 
 								<div className="gallery__content">
-									<h2 className='entypo-tag'>Благодарность от&nbsp;Мед-центра</h2>
+									<div className="gallery__title">
+										<i className="icon-feather _icon"></i>
+										<h2 className='gallery__tag'>
+											Сертификат об&nbsp;обучении</h2>
+									</div>
+
 									<div className="gallery__text">
 										<p>Three Labels for each Input.<br />
 											One for go back,<br />
@@ -155,13 +165,13 @@ export function Achievements() {
 											The Last for recover it.</p>
 									</div>
 									<ul className="gallery__footer">
-										<li className="entypo-network"></li>
-										<li className="entypo-qq"></li>
-										<li className="entypo-picasa"></li>
+										<li className="icon-arrow-left"></li>
+										<li className="icon-magnifying-glass"></li>
+										<li className="icon-arrow-right"></li>
 									</ul>
-									<label htmlFor="in-1" className="entypo-left-bold otra"></label>
-									<label htmlFor="in-3" className="entypo-right-bold otra"></label>
-									<label htmlFor="in-2" className="entypo-arrows-ccw afin"></label>
+									<label htmlFor="in-1" className="icon-arrow-bold-left otra"></label>
+									<label htmlFor="in-3" className="icon-arrow-bold-right otra"></label>
+									<label htmlFor="in-2" className="icon-cycle afin"></label>
 								</div>
 							</article>
 
@@ -179,7 +189,11 @@ export function Achievements() {
 								</div>
 
 								<div className="gallery__content">
-									<h2 className='entypo-tag'>Благодарственное письмо</h2>
+									<div className="gallery__title">
+										<i className="icon-feather _icon"></i>
+										<h2 className='gallery__tag'>
+											Сертификат об&nbsp;обучении</h2>
+									</div>
 									<div className="gallery__text">
 										<p>Three Labels for each Input.<br />
 											One for go back,<br />
@@ -187,13 +201,13 @@ export function Achievements() {
 											The Last for recover it.</p>
 									</div>
 									<ul className="gallery__footer">
-										<li className="entypo-ccw"></li>
-										<li className="entypo-arrows-ccw"></li>
-										<li className="entypo-cw"></li>
+										<li className="icon-arrow-left"></li>
+										<li className="icon-magnifying-glass"></li>
+										<li className="icon-arrow-right"></li>
 									</ul>
-									<label htmlFor="in-2" className="entypo-left-bold otra"></label>
-									<label htmlFor="in-4" className="entypo-right-bold otra"></label>
-									<label htmlFor="in-3" className="entypo-arrows-ccw afin"></label>
+									<label htmlFor="in-2" className="icon-arrow-bold-left otra"></label>
+									<label htmlFor="in-4" className="icon-arrow-bold-right otra"></label>
+									<label htmlFor="in-3" className="icon-cycle afin"></label>
 								</div>
 							</article>
 
@@ -211,7 +225,11 @@ export function Achievements() {
 								</div>
 
 								<div className="gallery__content">
-									<h2 className='entypo-tag'>Номинация &quot;Медиапроект&quot;</h2>
+									<div className="gallery__title">
+										<i className="icon-feather _icon"></i>
+										<h2 className='gallery__tag'>
+											Сертификат об&nbsp;обучении</h2>
+									</div>
 									<div className="gallery__text">
 										<p>Three Labels for each Input.<br />
 											One for go back,<br />
@@ -219,13 +237,13 @@ export function Achievements() {
 											The Last for recover it.</p>
 									</div>
 									<ul className="gallery__footer">
-										<li className="entypo-ccw"></li>
-										<li className="entypo-arrows-ccw"></li>
-										<li className="entypo-cw"></li>
+										<li className="icon-arrow-left"></li>
+										<li className="icon-magnifying-glass"></li>
+										<li className="icon-arrow-right"></li>
 									</ul>
-									<label htmlFor="in-3" className="entypo-left-bold otra"></label>
-									<label htmlFor="in-5" className="entypo-right-bold otra"></label>
-									<label htmlFor="in-4" className="entypo-arrows-ccw afin"></label>
+									<label htmlFor="in-3" className="icon-arrow-bold-left otra"></label>
+									<label htmlFor="in-5" className="icon-arrow-bold-right otra"></label>
+									<label htmlFor="in-4" className="icon-cycle afin"></label>
 								</div>
 							</article>
 
@@ -243,7 +261,12 @@ export function Achievements() {
 								</div>
 
 								<div className="gallery__content">
-									<h2 className='entypo-tag'>Благодарственное письмо</h2>
+									<div className="gallery__title">
+										<i className="icon-feather _icon"></i>
+										<h2 className='gallery__tag'>
+											Сертификат об&nbsp;обучении</h2>
+									</div>
+
 									<div className="gallery__text">
 										<p>Three Labels for each Input.<br />
 											One for go back,<br />
@@ -251,13 +274,13 @@ export function Achievements() {
 											The Last for recover it.</p>
 									</div>
 									<ul className="gallery__footer">
-										<li className="entypo-ccw"></li>
-										<li className="entypo-arrows-ccw"></li>
-										<li className="entypo-cw"></li>
+										<li className="icon-arrow-left"></li>
+										<li className="icon-magnifying-glass"></li>
+										<li className="icon-arrow-right"></li>
 									</ul>
-									<label htmlFor="in-4" className="entypo-left-bold otra"></label>
-									<label htmlFor="in-6" className="entypo-right-bold otra"></label>
-									<label htmlFor="in-5" className="entypo-arrows-ccw afin"></label>
+									<label htmlFor="in-4" className="icon-arrow-bold-left otra"></label>
+									<label htmlFor="in-6" className="icon-arrow-bold-rightotra"></label>
+									<label htmlFor="in-5" className="icon-cycle afin"></label>
 								</div>
 							</article>
 
@@ -276,7 +299,11 @@ export function Achievements() {
 								</div>
 
 								<div className="gallery__content">
-									<h2 className='entypo-tag'>Благодарственное письмо</h2>
+									<div className="gallery__title">
+										<i className="icon-feather _icon"></i>
+										<h2 className='gallery__tag'>
+											Сертификат об&nbsp;обучении</h2>
+									</div>
 									<div className="gallery__text">
 										<p>Three Labels for each Input.<br />
 											One for go back,<br />
@@ -284,13 +311,13 @@ export function Achievements() {
 											The Last for recover it.</p>
 									</div>
 									<ul className="gallery__footer">
-										<li className="entypo-ccw"></li>
-										<li className="entypo-arrows-ccw"></li>
-										<li className="entypo-cw"></li>
+										<li className="icon-arrow-left"></li>
+										<li className="icon-magnifying-glass"></li>
+										<li className="icon-arrow-right"></li>
 									</ul>
-									<label htmlFor="in-5" className="entypo-left-bold otra"></label>
-									<label htmlFor="in-1" className="entypo-right-bold otra"></label>
-									<label htmlFor="in-6" className="entypo-arrows-ccw afin"></label>
+									<label htmlFor="in-5" className="icon-arrow-bold-left otra"></label>
+									<label htmlFor="in-1" className="icon-arrow-bold-right otra"></label>
+									<label htmlFor="in-6" className="icon-cycle afin"></label>
 								</div>
 							</article>
 

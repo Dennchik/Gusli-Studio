@@ -24,6 +24,46 @@
   font-variant-ligatures: discretionary-ligatures;
 }
 
+.icon-feather {
+  &:before {
+    content: $icon-feather;
+  }
+}
+.icon-magnifying-glass {
+  &:before {
+    content: $icon-magnifying-glass;
+  }
+}
+.icon-price-tag {
+  &:before {
+    content: $icon-price-tag;
+  }
+}
+.icon-arrow-bold-left {
+  &:before {
+    content: $icon-arrow-bold-left;
+  }
+}
+.icon-arrow-bold-right {
+  &:before {
+    content: $icon-arrow-bold-right;
+  }
+}
+.icon-cycle {
+  &:before {
+    content: $icon-cycle;
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content: $icon-arrow-left;
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: $icon-arrow-right;
+  }
+}
 .icon-check {
   &:before {
     content: $icon-check;
