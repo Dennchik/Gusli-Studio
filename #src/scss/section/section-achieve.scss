@@ -109,8 +109,41 @@
 		justify-content: space-between;
 		position: relative;
 		height: 100%;
-
 		font-family: 'Great Vibes', cursive;
+
+		.icon-cycle {
+			padding: 0 1rem;
+			margin: auto -2.3rem;
+			position: absolute;
+			scale: 1;
+			top: 0;
+			bottom: 0;
+			height: 10vh;
+			line-height: 10vh;
+			font-size: 3rem;
+			text-align: right;
+			color: $neon-electric;
+			border-radius: 5px;
+			opacity: 0.5;
+
+			box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+			background: $black-color;
+			cursor: pointer;
+			transition: 0.5s;
+
+			&::before {
+				pointer-events: none;
+			}
+
+			@include min-960 {
+				opacity: 0.2;
+				&:hover {
+					animation: none;
+					opacity: 0.8;
+					scale: 1.2;
+				}
+			}
+		}
 	}
 
 	// .gallery__title
@@ -177,37 +210,37 @@
 		}
 
 		label {
-			padding: 0 1rem;
-			margin: auto -2.3rem;
-			position: absolute;
-			scale: 1;
-			top: 0;
-			bottom: 0;
-			height: 10vh;
-			line-height: 10vh;
-			font-size: 3rem;
-			text-align: right;
-			color: $neon-electric;
-			border-radius: 5px;
-			opacity: 0.5;
+			// padding: 0 1rem;
+			// margin: auto -2.3rem;
+			// position: absolute;
+			// scale: 1;
+			// top: 0;
+			// bottom: 0;
+			// height: 10vh;
+			// line-height: 10vh;
+			// font-size: 3rem;
+			// text-align: right;
+			// color: $neon-electric;
+			// border-radius: 5px;
+			// opacity: 0.5;
 
-			box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.5) inset;
-			background: $black-color;
-			cursor: pointer;
-			transition: 0.5s;
+			// box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+			// background: $black-color;
+			// cursor: pointer;
+			// transition: 0.5s;
 
-			&::before {
-				pointer-events: none;
-			}
+			// &::before {
+			// 	pointer-events: none;
+			// }
 
-			@include min-960 {
-				opacity: 0.2;
-				&:hover {
-					animation: none;
-					opacity: 0.8;
-					scale: 1.2;
-				}
-			}
+			// @include min-960 {
+			// 	opacity: 0.2;
+			// 	&:hover {
+			// 		animation: none;
+			// 		opacity: 0.8;
+			// 		scale: 1.2;
+			// 	}
+			// }
 		}
 	}
 
@@ -226,8 +259,8 @@
 			color: #fff;
 			font-size: 40px;
 			color: $neon-blue-dark;
-			color: $color;
 			line-height: 1.3;
+			max-width: 490px;
 			text-shadow:
 				-1px -1px 0 #b2d3ff,
 				1px 1px 0 #000;
@@ -276,10 +309,12 @@
 		list-style-type: none;
 		border-top: 3px solid rgba(255, 255, 255, 0.3);
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 
-		li {
-			display: inline;
+		[class*='icon-'] {
+			position: relative !important;
+			display: inline-flex;
+			justify-content: center;
 			width: 33.333%;
 			text-align: center;
 			color: $neon-electric;
@@ -303,24 +338,26 @@
 	right: 0;
 	text-align: left;
 }
+
 #in-1:checked ~ .sv-1 .otra,
 #in-2:checked ~ .sv-2 .otra,
 #in-3:checked ~ .sv-3 .otra,
 #in-4:checked ~ .sv-4 .otra,
 #in-5:checked ~ .sv-5 .otra,
 #in-6:checked ~ .sv-6 .otra {
-	background: $black-color;
 	display: block;
 }
+
 #in-1:checked ~ .sv-1 .afin,
 #in-2:checked ~ .sv-2 .afin,
 #in-3:checked ~ .sv-3 .afin,
 #in-4:checked ~ .sv-4 .afin,
 #in-5:checked ~ .sv-5 .afin,
 #in-6:checked ~ .sv-6 .afin,
-:not(:checked) ~ .otra {
+:not(:checked) ~ * .otra {
 	display: none;
 }
+
 //* ----------------------------------------------------------------------------
 
 /* Центральный (задний нижний план) */

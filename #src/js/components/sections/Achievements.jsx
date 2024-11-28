@@ -100,7 +100,7 @@ export function Achievements() {
 								checked={selectedRadio === '6'}
 								onChange={handleRadioChange}
 							/>
-
+							{/* --------------- gallery__card sv-1 --------------- */}
 							<article className="gallery__card sv-1">
 								<div className="gallery__image _ibg">
 									<picture>
@@ -122,22 +122,17 @@ export function Achievements() {
 									</div>
 
 									<div className="gallery__text">
-										<p>Three Labels for each Input.<br />
-											One for go back,<br />
-											Another for go ahead,<br />
-											The Last for recover it.</p>
+										<p>Сертификат об&nbsp;обучении  <br /> по&nbsp;программе Акселератор Социальное предпринимательство&quot;</p>
 									</div>
-									<ul className="gallery__footer">
-										<li className="icon-arrow-left"></li>
-										<li className="icon-magnifying-glass"></li>
-										<li className="icon-arrow-right"></li>
-									</ul>
-									<label htmlFor="in-6" className="icon-arrow-bold-left otra"></label>
-									<label htmlFor="in-2" className="icon-arrow-bold-right otra"></label>
+									<div className="gallery__footer">
+										<label htmlFor="in-6" className="icon-arrow-left otra"></label>
+										<i className="icon-magnifying-glass"></i>
+										<label htmlFor="in-2" className="icon-arrow-right otra"></label>
+									</div>
 									<label htmlFor="in-1" className="icon-cycle afin"></label>
 								</div>
 							</article>
-
+							{/* --------------- gallery__card sv-2 --------------- */}
 							<article className="gallery__card sv-2">
 								<div className="gallery__image _ibg">
 									<picture>
@@ -164,17 +159,17 @@ export function Achievements() {
 											Another for go ahead,<br />
 											The Last for recover it.</p>
 									</div>
-									<ul className="gallery__footer">
-										<li className="icon-arrow-left"></li>
-										<li className="icon-magnifying-glass"></li>
-										<li className="icon-arrow-right"></li>
-									</ul>
-									<label htmlFor="in-1" className="icon-arrow-bold-left otra"></label>
-									<label htmlFor="in-3" className="icon-arrow-bold-right otra"></label>
+									<dif className="gallery__footer">
+										<label htmlFor="in-1" className="icon-arrow-left otra"></label>
+										<i className="icon-magnifying-glass"></i>
+										<label htmlFor="in-3" className="icon-arrow-right otra"></label>
+									</dif>
+
 									<label htmlFor="in-2" className="icon-cycle afin"></label>
 								</div>
 							</article>
 
+							{/* --------------- gallery__card sv-3 --------------- */}
 							<article className="gallery__card sv-3">
 								<div className="gallery__image _ibg" data-depth="1.00">
 									<picture>
@@ -200,17 +195,16 @@ export function Achievements() {
 											Another for go ahead,<br />
 											The Last for recover it.</p>
 									</div>
-									<ul className="gallery__footer">
-										<li className="icon-arrow-left"></li>
-										<li className="icon-magnifying-glass"></li>
-										<li className="icon-arrow-right"></li>
-									</ul>
-									<label htmlFor="in-2" className="icon-arrow-bold-left otra"></label>
-									<label htmlFor="in-4" className="icon-arrow-bold-right otra"></label>
+									<div className="gallery__footer">
+										<label htmlFor="in-2" className="icon-arrow-left otra"></label>
+										<i className="icon-magnifying-glass"></i>
+										<label htmlFor="in-4" className="icon-arrow-right otra"></label>
+									</div>
 									<label htmlFor="in-3" className="icon-cycle afin"></label>
 								</div>
 							</article>
 
+							{/* --------------- gallery__card sv-4 --------------- */}
 							<article className="gallery__card sv-4">
 								<div className="gallery__image _ibg" data-depth="1.00">
 									<picture>
@@ -236,17 +230,16 @@ export function Achievements() {
 											Another for go ahead,<br />
 											The Last for recover it.</p>
 									</div>
-									<ul className="gallery__footer">
-										<li className="icon-arrow-left"></li>
-										<li className="icon-magnifying-glass"></li>
-										<li className="icon-arrow-right"></li>
-									</ul>
-									<label htmlFor="in-3" className="icon-arrow-bold-left otra"></label>
-									<label htmlFor="in-5" className="icon-arrow-bold-right otra"></label>
+									<div className="gallery__footer">
+										<label htmlFor="in-3" className="icon-arrow-left otra"></label>
+										<i className="icon-magnifying-glass"></i>
+										<label htmlFor="in-5" className="icon-arrow-right otra"></label>
+									</div>
 									<label htmlFor="in-4" className="icon-cycle afin"></label>
 								</div>
 							</article>
 
+							{/* --------------- gallery__card sv-5 --------------- */}
 							<article className="gallery__card sv-5">
 								<div className="gallery__image _ibg">
 									<picture>
@@ -273,19 +266,18 @@ export function Achievements() {
 											Another for go ahead,<br />
 											The Last for recover it.</p>
 									</div>
-									<ul className="gallery__footer">
-										<li className="icon-arrow-left"></li>
-										<li className="icon-magnifying-glass"></li>
-										<li className="icon-arrow-right"></li>
-									</ul>
-									<label htmlFor="in-4" className="icon-arrow-bold-left otra"></label>
-									<label htmlFor="in-6" className="icon-arrow-bold-right otra"></label>
+									<div className="gallery__footer">
+										<label htmlFor="in-4" className="icon-arrow-left otra"></label>
+										<i className="icon-magnifying-glass"></i>
+										<label htmlFor="in-6" className="icon-arrow-right otra"></label>
+									</div>
 									<label htmlFor="in-5" className="icon-cycle afin"></label>
 								</div>
 							</article>
 
-							<article className="gallery__card sv-6">
 
+							{/* --------------- gallery__card sv-5 --------------- */}
+							<article className="gallery__card sv-6">
 								<div className="gallery__image _ibg">
 									<picture>
 										{isWebpSupported()
@@ -310,17 +302,14 @@ export function Achievements() {
 											Another for go ahead,<br />
 											The Last for recover it.</p>
 									</div>
-									<ul className="gallery__footer">
-										<li className="icon-arrow-left"></li>
-										<li className="icon-magnifying-glass"></li>
-										<li className="icon-arrow-right"></li>
-									</ul>
-									<label htmlFor="in-5" className="icon-arrow-bold-left otra"></label>
-									<label htmlFor="in-1" className="icon-arrow-bold-right otra"></label>
+									<div className="gallery__footer">
+										<label htmlFor="in-5" className="icon-arrow-left otra"></label>
+										<i className="icon-magnifying-glass"></i>
+										<label htmlFor="in-1" className="icon-arrow-right otra"></label>
+									</div>
 									<label htmlFor="in-6" className="icon-cycle afin"></label>
 								</div>
 							</article>
-
 						</div>
 					</section>
 				</div>
