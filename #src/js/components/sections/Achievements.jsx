@@ -279,7 +279,7 @@ export function Achievements() {
 										<li className="icon-arrow-right"></li>
 									</ul>
 									<label htmlFor="in-4" className="icon-arrow-bold-left otra"></label>
-									<label htmlFor="in-6" className="icon-arrow-bold-rightotra"></label>
+									<label htmlFor="in-6" className="icon-arrow-bold-right otra"></label>
 									<label htmlFor="in-5" className="icon-cycle afin"></label>
 								</div>
 							</article>
