@@ -26,6 +26,22 @@ export function Achievements() {
 			refreshScrollTrigger();
 		}
 	}, []);
+
+	// const [scale, setScale] = useState(1);
+	// useEffect(() => {
+	// 	const handleResize = () => {
+	// 		const newScale = 2.4 + (1 - 2.4) * ((window.innerWidth - 320) / (1920 - 320));
+	// 		setScale(newScale);
+	// 	};
+
+	// 	handleResize(); // Установим начальный масштаб
+	// 	window.addEventListener('resize', handleResize);
+
+	// 	return () => {
+	// 		window.removeEventListener('resize', handleResize);
+	// 	};
+	// }, []);
+
 	const [selectedRadio, setSelectedRadio] = useState('1'); // Состояние для выбранной радио-кнопки
 
 	const handleRadioChange = (e) => {
@@ -60,7 +76,6 @@ export function Achievements() {
 				<div className="achieve-items__wrapper _container">
 					<section className="gallery">
 						<div className="gallery__items">
-
 							<input type="radio" id="in-1" value="1" name="tractor"
 								checked={selectedRadio === '1'}
 								onChange={handleRadioChange}
@@ -85,9 +100,9 @@ export function Achievements() {
 								checked={selectedRadio === '6'}
 								onChange={handleRadioChange}
 							/>
-							<article className="gallery__card sv-1">
 
-								<div className="gallery__image _ibg" data-depth="1.00">
+							<article className="gallery__card sv-1">
+								<div className="gallery__image _ibg">
 									<picture>
 										{isWebpSupported()
 											? <img src={'img/about/slide/srt-1.webp'} alt="image" />
@@ -95,8 +110,12 @@ export function Achievements() {
 									</picture>
 								</div>
 
+								<div className='gallery__mesh-gradient _ibg'>
+									<img src={'img/about/bg_svg.svg'} alt="image" />
+								</div>
+
 								<div className="gallery__content">
-									<h2 className='entypo-tag'>Three Labels - 1</h2>
+									<h2 className='entypo-tag'>Сертификат об&nbsp;обучении</h2>
 									<div className="gallery__text">
 										<p>Three Labels for each Input.<br />
 											One for go back,<br />
@@ -115,8 +134,7 @@ export function Achievements() {
 							</article>
 
 							<article className="gallery__card sv-2">
-
-								<div className="gallery__image _ibg" data-depth="1.00">
+								<div className="gallery__image _ibg">
 									<picture>
 										{isWebpSupported()
 											? <img src={'img/about/slide/srt-2.webp'} alt="image" />
@@ -124,8 +142,12 @@ export function Achievements() {
 									</picture>
 								</div>
 
+								<div className='gallery__mesh-gradient _ibg'>
+									<img src={'img/about/bg_svg.svg'} alt="image" />
+								</div>
+
 								<div className="gallery__content">
-									<h2 className='entypo-tag'>Three Labels - 2</h2>
+									<h2 className='entypo-tag'>Благодарность от&nbsp;Мед-центра</h2>
 									<div className="gallery__text">
 										<p>Three Labels for each Input.<br />
 											One for go back,<br />
@@ -144,17 +166,20 @@ export function Achievements() {
 							</article>
 
 							<article className="gallery__card sv-3">
-
 								<div className="gallery__image _ibg" data-depth="1.00">
 									<picture>
 										{isWebpSupported()
-											? <img src={'img/about/slide/srt-3.webp'} alt="image" />
-											: <img src={'/img/about/slide/srt-3.png'} alt="image" />}
+											? <img src={'img/about/slide/srt-7.webp'} alt="image" />
+											: <img src={'/img/about/slide/srt-7.png'} alt="image" />}
 									</picture>
 								</div>
 
+								<div className='gallery__mesh-gradient _ibg'>
+									<img src={'img/about/bg_svg.svg'} alt="image" />
+								</div>
+
 								<div className="gallery__content">
-									<h2 className='entypo-tag'>Three Labels - 3</h2>
+									<h2 className='entypo-tag'>Благодарственное письмо</h2>
 									<div className="gallery__text">
 										<p>Three Labels for each Input.<br />
 											One for go back,<br />
@@ -173,7 +198,6 @@ export function Achievements() {
 							</article>
 
 							<article className="gallery__card sv-4">
-
 								<div className="gallery__image _ibg" data-depth="1.00">
 									<picture>
 										{isWebpSupported()
@@ -182,8 +206,12 @@ export function Achievements() {
 									</picture>
 								</div>
 
+								<div className='gallery__mesh-gradient _ibg'>
+									<img src={'img/about/bg_svg.svg'} alt="image" />
+								</div>
+
 								<div className="gallery__content">
-									<h2 className='entypo-tag'>Three Labels - 4</h2>
+									<h2 className='entypo-tag'>Номинация &quot;Медиапроект&quot;</h2>
 									<div className="gallery__text">
 										<p>Three Labels for each Input.<br />
 											One for go back,<br />
@@ -202,8 +230,7 @@ export function Achievements() {
 							</article>
 
 							<article className="gallery__card sv-5">
-
-								<div className="gallery__image _ibg" data-depth="1.00">
+								<div className="gallery__image _ibg">
 									<picture>
 										{isWebpSupported()
 											? <img src={'img/about/slide/srt-5.webp'} alt="image" />
@@ -211,8 +238,12 @@ export function Achievements() {
 									</picture>
 								</div>
 
+								<div className='gallery__mesh-gradient _ibg'>
+									<img src={'img/about/bg_svg.svg'} alt="image" />
+								</div>
+
 								<div className="gallery__content">
-									<h2 className='entypo-tag'>Three Labels - 5</h2>
+									<h2 className='entypo-tag'>Благодарственное письмо</h2>
 									<div className="gallery__text">
 										<p>Three Labels for each Input.<br />
 											One for go back,<br />
@@ -232,7 +263,7 @@ export function Achievements() {
 
 							<article className="gallery__card sv-6">
 
-								<div className="gallery__image _ibg" data-depth="1.00">
+								<div className="gallery__image _ibg">
 									<picture>
 										{isWebpSupported()
 											? <img src={'img/about/slide/srt-6.webp'} alt="image" />
@@ -240,8 +271,12 @@ export function Achievements() {
 									</picture>
 								</div>
 
+								<div className='gallery__mesh-gradient _ibg'>
+									<img src={'img/about/bg_svg.svg'} alt="image" />
+								</div>
+
 								<div className="gallery__content">
-									<h2 className='entypo-tag'>Three Labels - 6</h2>
+									<h2 className='entypo-tag'>Благодарственное письмо</h2>
 									<div className="gallery__text">
 										<p>Three Labels for each Input.<br />
 											One for go back,<br />

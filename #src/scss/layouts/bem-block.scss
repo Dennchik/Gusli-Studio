@@ -98,11 +98,11 @@
 	}
 }
 
-.gallery__card:hover label:hover {
-	animation: none;
-	opacity: 0.8;
-	scale: 1.2;
-}
+// .gallery__card:hover label:hover {
+// 	animation: none;
+// 	opacity: 0.8;
+// 	scale: 1.2;
+// }
 //* ------------------------- [Class _ibg] -------------------------------------
 ._ibg {
 	position: absolute;
@@ -118,21 +118,16 @@
 		height: 100%;
 		object-fit: cover;
 	}
+	svg {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }
-// ._ibg {
-// 	position: relative;
-// 	width: 100%;
-// 	height: 100%;
-
-// 	img {
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 		width: 100%;
-// 		height: 100%;
-// 		object-fit: fill;
-// 	}
-// }
 
 .h1_01901 {
 	@include minmax-490-1920 {
