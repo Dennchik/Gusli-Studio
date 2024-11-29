@@ -87,7 +87,8 @@ export const MainSlide = ({ baseUrl }) => {
 						loop
 						muted
 					>
-						<source src={getPath('img/audio/showreel-1.mp4')} type="video/mp4" />
+						<source src={getPath('img/audio/showreel-1.mp4')}
+							type="video/mp4" />
 					</video>
 
 				</div>

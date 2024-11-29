@@ -36,8 +36,10 @@ export function SplitTextFunction() {
 
 	});
 }
+
 export function LagTextFunction() {
 	const smoother = ScrollSmoother.get();
+
 	if (window.innerWidth > 490) {
 		smoother.effects('.lag-1', { lag: 2, speed: 1 });
 		smoother.effects('.lag-2', { lag: 2, speed: 1.2 });
@@ -46,6 +48,12 @@ export function LagTextFunction() {
 	}
 }
 
+export function applyParallax(element) {
+	const smoother = ScrollSmoother.get();
+	smoother.effects(element, {
+		speed: () => 0.5
+	});
+}
 //* -------------------- Уничтожение ScrollSmoother ----------------------------
 // export function destroySmoother(initSmoother) {
 // 	if (initSmoother) {

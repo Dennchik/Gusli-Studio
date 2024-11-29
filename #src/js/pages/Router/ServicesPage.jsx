@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
 import returnToSavedPosition from '../../modules/return-position.js';
-import parallaxEffect from '../../animations/parallax.jsx';
+import { applyParallax } from '../../animations/animations.jsx';
 
 import { Header } from '../../components/layouts/Header.jsx';
 import { Categories } from '../../components/Categories.jsx';
@@ -32,16 +32,18 @@ function ServicesPage() {
 					effects: true,
 					smoothTouch: 0.1,
 				});
+
 				return () => {
 					smoother.kill(); // Удаляем Smooth при размонтировании
 				};
 			}
 		},
+
 	);
 
 	useEffect(() => {
 		if (!isMobile) {
-			parallaxEffect();
+			applyParallax('.material-parallax');
 		}
 		returnToSavedPosition();
 	}, []);

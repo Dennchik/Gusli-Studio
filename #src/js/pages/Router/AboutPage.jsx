@@ -2,7 +2,10 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
+
 import modalOpen from '../../modules/modalOpen.js';
+import returnToSavedPosition from '../../modules/return-position.js';
+import { applyParallax } from '../../animations/animations.jsx';
 
 import { Header } from '../../components/layouts/Header.jsx';
 import { About } from '../../components/sections/About.jsx';
@@ -11,8 +14,6 @@ import { Achievements } from '../../components/sections/Achievements.jsx';
 import { Footer } from '../../components/layouts/Footer.jsx';
 import { MenuFloat } from '../../components/layouts/Menu-float.jsx';
 
-import returnToSavedPosition from '../../modules/return-position.js';
-import parallaxEffect from '../../animations/parallax.jsx';
 
 
 
@@ -24,24 +25,24 @@ function AboutPage() {
 	useGSAP(
 		() => {
 			// create the smooth scroller FIRST!
-			if (!isMobile) {
-				const smoother = ScrollSmoother.create({
-					wrapper: '#wrapper',
-					content: '#content',
-					smooth: 1,
-					effects: true,
-					smoothTouch: 0.1,
-				});
-				return () => {
-					smoother.kill(); // Удаляем Smooth при размонтировании
-				};
-			}
+			// if (!isMobile) {
+			const smoother = ScrollSmoother.create({
+				wrapper: '#wrapper',
+				content: '#content',
+				smooth: 1.5,
+				effects: true,
+				smoothTouch: 2,
+			});
+			return () => {
+				smoother.kill(); // Удаляем Smooth при размонтировании
+			};
+			// }
 		},
 	);
 
 	useEffect(() => {
 		if (!isMobile) {
-			parallaxEffect();
+			applyParallax('.material-parallax');
 		}
 		modalOpen();
 		returnToSavedPosition();

@@ -104,6 +104,10 @@
 		display: flex;
 		align-items: flex-end;
 		transform: translateY(7px);
+		transition: color 0.4s ease-in-out;
+		&:hover {
+			color: $neon-blue;
+		}
 
 		span {
 			opacity: 0.7;

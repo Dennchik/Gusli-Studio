@@ -10,19 +10,20 @@ import { partnersSlide } from '../layouts/partners-slide.js';
 
 
 export const Partners = () => {
+	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	useEffect(() => {
 		buildSwiper();
 		partnersSlide();
-	}, []);
-	useEffect(() => {
-		animateTitles(
-			'.partners__title',
-			'.partners__title',
-			'.partners__title',
-			'=150',
-			'=150',
-		);
-		refreshScrollTrigger();
+		if (!isMobile) {
+			animateTitles(
+				'.partners__title',
+				'.partners__title',
+				'.partners__title',
+				'=150',
+				'=150',
+			);
+			refreshScrollTrigger();
+		}
 	}, []);
 
 	return (

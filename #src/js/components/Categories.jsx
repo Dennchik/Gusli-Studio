@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
 import React, { useEffect, useRef } from 'react';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 import { LagTextFunction } from '../animations/animations.jsx';
 
 import { animationSvgLine, animationSvgText } from '../animations/anime-js.jsx';
 
-export const Categories = () => {
+export const Categories = ({ baseUrl }) => {
 	// const isHomepage = location.pathname === '/';
 	const boxImagesRef = useRef([]);
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
@@ -46,22 +47,16 @@ export const Categories = () => {
 		}
 	}, []);
 
+	const getPath = (fileName) => {
+		return `${baseUrl}/${fileName}`;
+	};
 	return (
 		<div className="categories">
 			<div className="material-parallax parallax">
 				<div className="parallax__image">
-					<picture>
-						{isWebpSupported() ? (
-							<img className="parallax__services-company bg"
-								src={'@@webRoot/img/patterns/space.webp'}
-								alt="image" />
-						)
-							: (
-								<img className="parallax__services-company bg"
-									src={'@@webRoot/img/patterns/space.jpg'}
-									alt="image" />
-							)}
-					</picture>
+					<img className="parallax__image-services bg"
+						src={getPath('img/about/bg_svg.svg')}
+						alt="image" />
 				</div>
 			</div>
 			<div className="services">
@@ -636,4 +631,7 @@ export const Categories = () => {
 			</div>
 		</div>
 	);
+};
+Categories.propTypes = {
+	baseUrl: PropTypes.string.isRequired,
 };
