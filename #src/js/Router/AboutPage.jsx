@@ -36,11 +36,12 @@ function AboutPage() {
 		);
 	}
 	useEffect(() => {
-		modalOpen();
-		returnToSavedPosition();
 		if (!isMobile) {
 			parallaxEffect();
 		}
+		modalOpen();
+		returnToSavedPosition();
+
 	}, []);
 
 	return (

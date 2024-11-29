@@ -14,14 +14,16 @@ export const SectionArrangement = ({ baseUrl }) => {
 	}, []);
 
 	useEffect(() => {
-		animateTitles(
-			'.service-description__title',
-			'.service-description__title',
-			'.service-description__title',
-			'=150',
-			'=150',
-		);
-		refreshScrollTrigger();
+		if (!isMobile) {
+			animateTitles(
+				'.services__title',
+				'.services__title',
+				'.services__title',
+				'=150',
+				'=150',
+			);
+			refreshScrollTrigger();
+		}
 	}, [location.pathname, isHomepage]);
 
 	const getPath = (fileName) => {
@@ -80,6 +82,7 @@ export const SectionArrangement = ({ baseUrl }) => {
 		</div>
 	);
 };
+
 SectionArrangement.propTypes = {
 	baseUrl: PropTypes.string.isRequired,
 };

@@ -25,8 +25,8 @@ export default function modal() {
 			setTimeout(
 				() => {
 					modal.classList.add('_complete'); // Убираем границу через 1.75 секунды
-				}, 1000
-			); // Длительность вашей анимации
+				}, 1000// Длительность анимации
+			);
 
 			closeButton.addEventListener('click', () => {
 				console.log(closeButton);
