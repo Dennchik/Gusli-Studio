@@ -72,7 +72,7 @@ function AboutPage() {
 			<div className="page__aside" id="scrollButton">
 				<i className="icon-angle-down _button"></i>
 			</div>
-			<section className="page__modal-image flash  _show">
+			<section className="page__modal-image">
 				<div className="modal _container">
 					<div className="modal__body">
 						<div className="modal__image">

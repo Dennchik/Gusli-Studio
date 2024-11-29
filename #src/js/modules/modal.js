@@ -3,12 +3,12 @@ export default function modal() {
 	let modal = document.querySelector('.page__modal-image');
 
 	galleryCards.forEach(galleryCard => {
-		let trigger = galleryCard.querySelector('._open-button');
-		trigger.addEventListener('click', (e) => {
-			let target = e.target;
+		let openButton = galleryCard.querySelector('._open-button');
+		openButton.addEventListener('click', (e) => {
+			let openButton = e.target;
 
 			// Находим URL изображения в карточке
-			let ahref = target.closest('.gallery__card').querySelector('img').src;
+			let ahref = openButton.closest('.gallery__card').querySelector('img').src;
 			console.log(ahref);
 
 			// Находим элементы модального окна
@@ -18,26 +18,27 @@ export default function modal() {
 			// Устанавливаем URL в модальное изображение и показываем модальное окно
 			modalImg.src = ahref;
 
-			modal.classList.remove('_show');
+			modal.classList.add('_show');
+			modal.classList.remove('_hide');
+			modal.style.zIndex = '13';
+
 			setTimeout(
-				function removethis() {
-					modal.classList.remove('flash');
-					// modal.classList.add('swing');
-					modal.style.zIndex = '13';
-				}, 500
-			);
+				() => {
+					modal.classList.add('_complete'); // Убираем границу через 1.75 секунды
+				}, 1000
+			); // Длительность вашей анимации
 
 			closeButton.addEventListener('click', () => {
 				console.log(closeButton);
-				modal.classList.add('flash');
+				modal.classList.remove('_show', '_complete');
+				modal.classList.add('_hide');
 				setTimeout(
 					function removethis() {
-						modal.classList.add('_show');
 						// modal.classList.remove('_show');
-						modal.style.display = 'none';
+						// modal.style.display = 'none';
 						modal.style.zIndex = '1';
-						modal.style.display = null;
-					}, 700
+						// modal.style.display = null;
+					}, 2000
 				);
 			});
 		});

@@ -125,56 +125,83 @@
 
 	// .page__modal-image
 	&__modal-image {
-		border: 3px solid #fff;
+		border-top: 1px solid $neon-electric;
+		border-bottom: 1px solid $neon-electric;
 		position: fixed;
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
+		overflow: hidden;
+		will-change: transform, opacity; /* Оптимизация для трансформаций */
+		display: flex;
 		align-items: center;
-		overflow-y: scroll;
-		z-index: 99;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100vh;
-		z-index: 1;
-		transition: all 0.5s linear;
+		justify-content: center;
+		width: 0; /* Изначальная ширина */
+		height: 0; /* Изначальная высота */
+		top: 50%; /* Центрирование по вертикали */
+		left: 50%; /* Центрирование по горизонтали */
+		transform: translate(-50%, -50%) scaleX(0); /* Сжатие по ширине */
+		transform-origin: center; /* Точка трансформации - центр */
+		opacity: 0; /* Изначально невидимая */
+		animation: none; /* Без анимации по умолчанию */
+
+		transform-origin: center center; /* Точка трансформации - центр */
+		transition:
+			transform 1.75s ease,
+			opacity 1.75s ease; /* Плавные переходы */
+
 		background: linear-gradient(
 			-45deg,
 			rgba(32, 25, 60, 70%),
 			rgba(2, 1, 1, 0.7) 70%
 		);
-		backdrop-filter: blur(10px);
-
-		&.pulse {
-			scale: 1;
-			animation-duration: 0.75s;
-			transform: translateY(0);
-			opacity: 1;
-			// animation-name: bounceIn;
-		}
-
-		&.flash {
-			transform: scaleY(0);
-			animation-duration: 1.75s;
-			// animation-name: bounceOutDown;
-		}
+		// backdrop-filter: blur(10px);
 		&._show {
-			opacity: 0;
-			transform: scaleX(0);
-			animation-name: swingwidth;
-			animation-duration: 1.75s;
-			transform-origin: left center;
-		}
-
-		@keyframes swingwidth {
-			0%,
-			50%,
-			to {
+			animation: expand-height 2s ease forwards; /* Запуск анимации */
+			opacity: 1; /* Сделать видимой */
+			border-width: 1px;
+			.modal__image {
 				opacity: 1;
 			}
-			25%,
-			75% {
-				opacity: 0;
+		}
+		&._hide {
+			animation: collapse-width 2s ease forwards; /* Обратная анимация */
+			opacity: 0; /* Исчезновение */
+		}
+		&._complete {
+			border: none; /* Полностью убираем границу */
+		}
+		/* Анимация открытия */
+		@keyframes expand-height {
+			0% {
+				width: 0;
+				height: 2px; /* Тонкая полоска */
+				transform: translate(-50%, -50%) scaleX(0); /* Сжатие по ширине */
+			}
+			50% {
+				width: 100%; /* Полоса расширяется по ширине */
+				height: 2px; /* Пока остаётся тонкой */
+				transform: translate(-50%, -50%) scaleX(1); /* Расширение по ширине */
+			}
+			100% {
+				width: 100%; /* Полная ширина */
+				height: 100%; /* Полная высота */
+				transform: translate(-50%, -50%) scaleX(1); /* Завершение */
+			}
+		}
+		/* Анимация закрытия */
+		@keyframes collapse-width {
+			0% {
+				width: 100%; /* Полная ширина */
+				height: 100%; /* Полная высота */
+				transform: translate(-50%, -50%) scaleX(1); /* Полное состояние */
+			}
+			50% {
+				width: 100%; /* Полоса остаётся широкой */
+				height: 2px; /* Высота уменьшается до тонкой линии */
+				transform: translate(-50%, -50%) scaleX(1); /* Ширина сохраняется */
+			}
+			100% {
+				width: 0; /* Полоса исчезает по ширине */
+				height: 2px; /* Тонкая полоска */
+				transform: translate(-50%, -50%) scaleX(0); /* Сжатие по ширине */
 			}
 		}
 	}
