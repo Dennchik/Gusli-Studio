@@ -91,6 +91,7 @@
 		position: relative;
 		height: 100%;
 		font-family: 'Great Vibes', cursive;
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAAEFsT2yAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFElEQVR4nGNhYGBwYIET////ZwAAETIDym2lzEcAAAAASUVORK5CYII=);
 
 		.icon-cycle {
 			padding: 0 1rem;
@@ -306,9 +307,7 @@
 	display: none;
 	pointer-events: none;
 }
-
 //* ----------------------------------------------------------------------------
-
 /* Центральный (задний нижний план) */
 #in-1:checked ~ .sv-6,
 #in-2:checked ~ .sv-1,
@@ -388,12 +387,6 @@
 }
 
 //* ----------------------------------------------------------------------------
-
-.gallery__content {
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAAEFsT2yAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFElEQVR4nGNhYGBwYIET////ZwAAETIDym2lzEcAAAAASUVORK5CYII=);
-}
-
-//* ----------------------------------------------------------------------------
 @keyframes fuera-izq {
 	0% {
 		transform: scale(1) translateX(0%);
@@ -439,23 +432,6 @@
 	}
 }
 
-@keyframes back {
-	0% {
-		transform: scale(0.8) translateX(0%);
-		z-index: 0;
-	}
-
-	50% {
-		transform: scale(1) translateX(0);
-		z-index: 0;
-	}
-
-	100% {
-		transform: scale(0.5) translateX(0);
-		z-index: 0;
-	}
-}
-
 @keyframes backTop {
 	0% {
 		transform: scale(0.8) translate(0, 0);
@@ -492,6 +468,6 @@
 
 @keyframes pulso {
 	50% {
-		opacity: 0.7;
+		opacity: 0.1;
 	}
 }

@@ -168,42 +168,6 @@
 		&._complete {
 			border: none; /* Полностью убираем границу */
 		}
-		/* Анимация открытия */
-		@keyframes expand-height {
-			0% {
-				width: 0;
-				height: 2px; /* Тонкая полоска */
-				transform: translate(-50%, -50%) scaleX(0); /* Сжатие по ширине */
-			}
-			50% {
-				width: 100%; /* Полоса расширяется по ширине */
-				height: 2px; /* Пока остаётся тонкой */
-				transform: translate(-50%, -50%) scaleX(1); /* Расширение по ширине */
-			}
-			100% {
-				width: 100%; /* Полная ширина */
-				height: 100%; /* Полная высота */
-				transform: translate(-50%, -50%) scaleX(1); /* Завершение */
-			}
-		}
-		/* Анимация закрытия */
-		@keyframes collapse-width {
-			0% {
-				width: 100%; /* Полная ширина */
-				height: 100%; /* Полная высота */
-				transform: translate(-50%, -50%) scaleX(1); /* Полное состояние */
-			}
-			50% {
-				width: 100%; /* Полоса остаётся широкой */
-				height: 2px; /* Высота уменьшается до тонкой линии */
-				transform: translate(-50%, -50%) scaleX(1); /* Ширина сохраняется */
-			}
-			100% {
-				width: 0; /* Полоса исчезает по ширине */
-				height: 2px; /* Тонкая полоска */
-				transform: translate(-50%, -50%) scaleX(0); /* Сжатие по ширине */
-			}
-		}
 	}
 }
 
@@ -373,6 +337,42 @@
 	}
 	100% {
 		background: $black-color;
+	}
+}
+/* Анимация открытия */
+@keyframes expand-height {
+	0% {
+		width: 0;
+		height: 2px; /* Тонкая полоска */
+		transform: translate(-50%, -50%) scaleX(0); /* Сжатие по ширине */
+	}
+	50% {
+		width: 100%; /* Полоса расширяется по ширине */
+		height: 2px; /* Пока остаётся тонкой */
+		transform: translate(-50%, -50%) scaleX(1); /* Расширение по ширине */
+	}
+	100% {
+		width: 100%; /* Полная ширина */
+		height: 100%; /* Полная высота */
+		transform: translate(-50%, -50%) scaleX(1); /* Завершение */
+	}
+}
+/* Анимация закрытия */
+@keyframes collapse-width {
+	0% {
+		width: 100%; /* Полная ширина */
+		height: 100%; /* Полная высота */
+		transform: translate(-50%, -50%) scaleX(1); /* Полное состояние */
+	}
+	50% {
+		width: 100%; /* Полоса остаётся широкой */
+		height: 2px; /* Высота уменьшается до тонкой линии */
+		transform: translate(-50%, -50%) scaleX(1); /* Ширина сохраняется */
+	}
+	100% {
+		width: 0; /* Полоса исчезает по ширине */
+		height: 2px; /* Тонкая полоска */
+		transform: translate(-50%, -50%) scaleX(0); /* Сжатие по ширине */
 	}
 }
 .hr-shelf {
