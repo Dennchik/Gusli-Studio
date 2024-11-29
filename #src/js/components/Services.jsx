@@ -649,6 +649,7 @@ export const Services = ({ baseUrl }) => {
 								</div>
 							</div>
 						</div>
+						<div className="services-slide__pagination"></div>
 					</div>
 				</div>
 				{<Offer baseUrl={baseUrl} />}

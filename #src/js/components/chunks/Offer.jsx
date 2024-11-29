@@ -86,7 +86,7 @@ export const Offer = () => {
 						<div className="offer-container__wrapper">
 							<a className="offer-container__link" href="#">
 								<div className="offer-container__title-box">
-									<span>Съемка клипа в студии</span>
+									<span>Съемка в студии</span>
 									<span>
 										от 5 000<i className="icon-rub"></i>
 									</span>

@@ -9,13 +9,12 @@
 	margin-top: 6rem;
 
 	.swiper-pagination-bullet {
-		// position: absolute;
 		width: 15px;
 		height: 15px;
 		content: '';
-		transition: background 0.5s ease-in-out;
 		border-radius: 50%;
 		background: #2a3514;
+		transition: background 0.5s ease-in-out;
 
 		&:not(:last-child) {
 			margin-right: 2rem;
@@ -23,13 +22,13 @@
 	}
 
 	.swiper-pagination-bullet-active {
-		width: 12px;
-		height: 12px;
+		width: 15px;
+		height: 15px;
 		content: '';
-		transition: scale 0.5s ease-in-out;
 		border-radius: 50%;
 		background: #9acd32;
 		scale: 1.2;
+		transition: scale 0.5s ease-in-out;
 	}
 }
 
