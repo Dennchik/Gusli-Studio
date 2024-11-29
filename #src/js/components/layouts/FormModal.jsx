@@ -4,8 +4,8 @@ import modalOpen from '../../modules/modalOpen.js';
 
 export const FormModal = () => {
 	useEffect(() => {
-		modalOpen();
 		buttonShow();
+		modalOpen();
 	}, []);
 
 	const [isChecked, setIsChecked] = useState(true);

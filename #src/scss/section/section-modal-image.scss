@@ -1,0 +1,50 @@
+@use '../core/all.scss' as *;
+@use '../modules/animat' as *;
+
+.modal {
+	// .modal__body
+	&__body {
+		// position: relative;
+		height: 100%;
+	}
+
+	// .modal__close-button
+	&__close-button {
+		cursor: pointer;
+		position: absolute;
+		top: 4rem;
+		right: 5%;
+		display: flex;
+		justify-content: center;
+		width: 4rem;
+		height: 4rem;
+
+		border-radius: 50%;
+		box-shadow: 0 0 3px 1px $neon-blue-dark;
+		@extend .gradient-black;
+		transition: scale 0.4s ease-in-out;
+
+		&:hover {
+			scale: 1.3;
+		}
+
+		.icon-angles-down-solid {
+			color: $neon-blue-dark;
+		}
+	}
+
+	// .modal__image
+	&__image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 6rem 0;
+		height: 100vh;
+
+		img {
+			pointer-events: none;
+			object-fit: contain;
+			height: 80%;
+		}
+	}
+}

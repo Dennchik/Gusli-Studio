@@ -5,7 +5,7 @@
 // todo --------------------------- Assets -------------------------------------
 // @import 'assets/burger-button';
 // @import 'assets/button';
-// // @import 'assets/audio-player';
+// @import 'assets/audio-player';
 // todo --------------------------- layout -------------------------------------
 // @import 'layouts/bem-block';
 // @import 'layouts/header';
@@ -16,3 +16,4 @@
 @use 'section/section-about';
 @use 'section/section-achieve';
 @use 'section/section-partners';
+@use 'section/section-modal-image';

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import modalOpen from '../modules/modalOpen.js';
 
 import { Header } from '../components/layouts/Header.jsx';
 import { About } from '../components/sections/About.jsx';
@@ -16,24 +17,30 @@ import parallaxEffect from '../animations/parallax.jsx';
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '.';
 function AboutPage() {
-	useGSAP(
-		() => {
-			// create the smooth scroller FIRST!
-			const smoother = ScrollSmoother.create({
-				wrapper: '#wrapper',
-				content: '#content',
-				smooth: 1,
-				effects: true,
-				smoothTouch: 0.1,
-			});
-			return () => {
-				smoother.kill(); // Удаляем Smooth при размонтировании
-			};
-		},
-	);
+	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+	if (!isMobile) {
+		useGSAP(
+			() => {
+				// create the smooth scroller FIRST!
+				const smoother = ScrollSmoother.create({
+					wrapper: '#wrapper',
+					content: '#content',
+					smooth: 1,
+					effects: true,
+					smoothTouch: 0.1,
+				});
+				return () => {
+					smoother.kill(); // Удаляем Smooth при размонтировании
+				};
+			},
+		);
+	}
 	useEffect(() => {
-		parallaxEffect();
+		modalOpen();
 		returnToSavedPosition();
+		if (!isMobile) {
+			parallaxEffect();
+		}
 	}, []);
 
 	return (
@@ -65,6 +72,19 @@ function AboutPage() {
 			<div className="page__aside" id="scrollButton">
 				<i className="icon-angle-down _button"></i>
 			</div>
+			<section className="page__modal-image flash  _show">
+				<div className="modal _container">
+					<div className="modal__body">
+						<div className="modal__image">
+							<div className="modal__close-button _close-modal">
+								<i className="icon-angles-down-solid"></i>
+							</div>
+							<img src={'#'} alt="image" />
+						</div>
+					</div>
+				</div>
+				{/* <FormModal /> */}
+			</section>
 		</>
 	);
 }

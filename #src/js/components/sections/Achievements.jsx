@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-
+import modal from '../../modules/modal.js';
 import {
 	animateTitles,
 	refreshScrollTrigger,
@@ -13,6 +13,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function Achievements() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+	const [selectedRadio, setSelectedRadio] = useState('1'); // Состояние для выбранной радио-кнопки
+	const handleRadioChange = (e) => {
+		setSelectedRadio(e.target.value); // Устанавливаем выбранное значение
+	};
 
 	useEffect(() => {
 		if (!isMobile) {
@@ -42,11 +46,11 @@ export function Achievements() {
 	// 	};
 	// }, []);
 
-	const [selectedRadio, setSelectedRadio] = useState('1'); // Состояние для выбранной радио-кнопки
 
-	const handleRadioChange = (e) => {
-		setSelectedRadio(e.target.value); // Устанавливаем выбранное значение
-	};
+	useEffect(() => {
+		modal();
+	}, []);
+
 	return (
 		<div className="achieve-items">
 			<div className="material-parallax parallax _image-achieve">
@@ -122,11 +126,11 @@ export function Achievements() {
 									</div>
 
 									<div className="gallery__text">
-										<p>Сертификат об&nbsp;обучении  <br /> по&nbsp;программе Акселератор Социальное предпринимательство&quot;</p>
+										<p>Сертификат об&nbsp;обучении<br />по&nbsp;программе &quot;Акселератор Социальное&nbsp;предпринимательство&quot;</p>
 									</div>
 									<div className="gallery__footer">
 										<label htmlFor="in-6" className="icon-arrow-left otra"></label>
-										<i className="icon-magnifying-glass"></i>
+										<i className="icon-magnifying-glass otra _open-button"></i>
 										<label htmlFor="in-2" className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-1" className="icon-cycle afin"></label>
@@ -154,17 +158,15 @@ export function Achievements() {
 									</div>
 
 									<div className="gallery__text">
-										<p>Three Labels for each Input.<br />
-											One for go back,<br />
-											Another for go ahead,<br />
-											The Last for recover it.</p>
+										<p>Благодарность<br />
+											Медицинский техникум<br />
+											&quot;Здравый&nbsp;путь&quot;</p>
 									</div>
-									<dif className="gallery__footer">
+									<div className="gallery__footer">
 										<label htmlFor="in-1" className="icon-arrow-left otra"></label>
-										<i className="icon-magnifying-glass"></i>
+										<i className="icon-magnifying-glass otra _open-button"></i>
 										<label htmlFor="in-3" className="icon-arrow-right otra"></label>
-									</dif>
-
+									</div>
 									<label htmlFor="in-2" className="icon-cycle afin"></label>
 								</div>
 							</article>
@@ -187,17 +189,18 @@ export function Achievements() {
 									<div className="gallery__title">
 										<i className="icon-feather _icon"></i>
 										<h2 className='gallery__tag'>
-											Сертификат об&nbsp;обучении</h2>
+											Благодарственное&nbsp;письмо</h2>
 									</div>
 									<div className="gallery__text">
-										<p>Three Labels for each Input.<br />
-											One for go back,<br />
-											Another for go ahead,<br />
-											The Last for recover it.</p>
+										<p>Пасхальная кинолектория<br />
+											Калужской епархии<br />
+											за показ фильма &quot;Капитан&quot;<br />
+											для школьников.
+										</p>
 									</div>
 									<div className="gallery__footer">
 										<label htmlFor="in-2" className="icon-arrow-left otra"></label>
-										<i className="icon-magnifying-glass"></i>
+										<i className="icon-magnifying-glass otra _open-button"></i>
 										<label htmlFor="in-4" className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-3" className="icon-cycle afin"></label>
@@ -206,7 +209,7 @@ export function Achievements() {
 
 							{/* --------------- gallery__card sv-4 --------------- */}
 							<article className="gallery__card sv-4">
-								<div className="gallery__image _ibg" data-depth="1.00">
+								<div className="gallery__image _ibg">
 									<picture>
 										{isWebpSupported()
 											? <img src={'img/about/slide/srt-4.webp'} alt="image" />
@@ -222,17 +225,19 @@ export function Achievements() {
 									<div className="gallery__title">
 										<i className="icon-feather _icon"></i>
 										<h2 className='gallery__tag'>
-											Сертификат об&nbsp;обучении</h2>
+											Диплом&nbsp;победителя</h2>
 									</div>
 									<div className="gallery__text">
-										<p>Three Labels for each Input.<br />
-											One for go back,<br />
-											Another for go ahead,<br />
-											The Last for recover it.</p>
+										<p>Региональный этап<br />
+											Международной премии МыВместе<br />
+											Диплом победителя<br />
+											Номинация <br />
+											&quot;Медиапроект&quot; Трек: НКО
+										</p>
 									</div>
 									<div className="gallery__footer">
 										<label htmlFor="in-3" className="icon-arrow-left otra"></label>
-										<i className="icon-magnifying-glass"></i>
+										<i className="icon-magnifying-glass otra _open-button"></i>
 										<label htmlFor="in-5" className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-4" className="icon-cycle afin"></label>
@@ -257,26 +262,25 @@ export function Achievements() {
 									<div className="gallery__title">
 										<i className="icon-feather _icon"></i>
 										<h2 className='gallery__tag'>
-											Сертификат об&nbsp;обучении</h2>
+											Благодарственное письмо</h2>
 									</div>
 
 									<div className="gallery__text">
-										<p>Three Labels for each Input.<br />
-											One for go back,<br />
-											Another for go ahead,<br />
-											The Last for recover it.</p>
+										<p>За организацию и проведение<br />
+											концертной программы<br />
+											&quot;Для молодежи&quot;<br />
+											г. Обнинск.</p>
 									</div>
 									<div className="gallery__footer">
 										<label htmlFor="in-4" className="icon-arrow-left otra"></label>
-										<i className="icon-magnifying-glass"></i>
+										<i className="icon-magnifying-glass otra _open-button"></i>
 										<label htmlFor="in-6" className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-5" className="icon-cycle afin"></label>
 								</div>
 							</article>
 
-
-							{/* --------------- gallery__card sv-5 --------------- */}
+							{/* --------------- gallery__card sv-6 --------------- */}
 							<article className="gallery__card sv-6">
 								<div className="gallery__image _ibg">
 									<picture>
@@ -294,17 +298,20 @@ export function Achievements() {
 									<div className="gallery__title">
 										<i className="icon-feather _icon"></i>
 										<h2 className='gallery__tag'>
-											Сертификат об&nbsp;обучении</h2>
+											Благодарственное письмо</h2>
 									</div>
 									<div className="gallery__text">
-										<p>Three Labels for each Input.<br />
-											One for go back,<br />
-											Another for go ahead,<br />
-											The Last for recover it.</p>
+										<p>За победу в конкурсе<br />
+											на предоставление грантов<br />
+											Президента Российской Федерации<br />
+											проект &quot;Капитан&quot; <br />
+											фильм о&nbsp;начале <br />
+											&quot;Великой Отечественной войны&quot;
+										</p>
 									</div>
 									<div className="gallery__footer">
 										<label htmlFor="in-5" className="icon-arrow-left otra"></label>
-										<i className="icon-magnifying-glass"></i>
+										<i className="icon-magnifying-glass otra _open-button"></i>
 										<label htmlFor="in-1" className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-6" className="icon-cycle afin"></label>

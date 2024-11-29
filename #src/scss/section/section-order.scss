@@ -25,12 +25,15 @@
 
 	// .order-place__close-button
 	&__close-button {
+		display: flex;
+		justify-content: center;
 		width: 4rem;
 		height: 4rem;
 		border-radius: 50%;
 		box-shadow: 0 0 3px 1px $neon-blue-dark;
 		@extend .gradient-black;
 		transition: scale 0.4s ease-in-out;
+
 		&:hover {
 			scale: 1.3;
 		}
