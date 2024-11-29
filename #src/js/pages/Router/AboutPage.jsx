@@ -31,7 +31,7 @@ function AboutPage() {
 				content: '#content',
 				smooth: 1.5,
 				effects: true,
-				smoothTouch: 2,
+				smoothTouch: 0.5,
 			});
 			return () => {
 				smoother.kill(); // Удаляем Smooth при размонтировании
