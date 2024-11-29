@@ -5,17 +5,17 @@ loaded('.preloader');
 // dynamicAdaptive();
 
 //* ----------------------------------------------------------------------------
-// import Waves from './animations/waves.jsx';
-// const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-// if (!isMobile) {
-// 	document.addEventListener('DOMContentLoaded', () => {
-// 		const waves = new Waves('#holder', {
-// 			waves: 3,
-// 			width: 300,
-// 		});
-// 		waves.animate();
-// 	});
-// }
+import Waves from './animations/waves.jsx';
+const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+if (!isMobile) {
+	document.addEventListener('DOMContentLoaded', () => {
+		const waves = new Waves('#holder', {
+			waves: 3,
+			width: 300,
+		});
+		waves.animate();
+	});
+}
 
 //* ----------------------------------------------------------------------------
 console.log('%c РОССИЯ ',

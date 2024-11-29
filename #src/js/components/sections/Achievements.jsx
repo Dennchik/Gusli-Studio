@@ -29,6 +29,7 @@ export function Achievements() {
 			);
 			refreshScrollTrigger();
 		}
+		modal();
 	}, []);
 
 	// const [scale, setScale] = useState(1);
@@ -46,10 +47,6 @@ export function Achievements() {
 	// 	};
 	// }, []);
 
-
-	useEffect(() => {
-		modal();
-	}, []);
 
 	return (
 		<div className="achieve-items">
