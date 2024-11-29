@@ -25,18 +25,18 @@ function AboutPage() {
 	useGSAP(
 		() => {
 			// create the smooth scroller FIRST!
-			// if (!isMobile) {
-			const smoother = ScrollSmoother.create({
-				wrapper: '#wrapper',
-				content: '#content',
-				smooth: 1.5,
-				effects: true,
-				smoothTouch: 0.5,
-			});
-			return () => {
-				smoother.kill(); // Удаляем Smooth при размонтировании
-			};
-			// }
+			if (!isMobile) {
+				const smoother = ScrollSmoother.create({
+					wrapper: '#wrapper',
+					content: '#content',
+					smooth: 1.5,
+					effects: true,
+					smoothTouch: 0.5,
+				});
+				return () => {
+					smoother.kill(); // Удаляем Smooth при размонтировании
+				};
+			}
 		},
 	);
 
