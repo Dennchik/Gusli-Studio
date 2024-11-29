@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
 import returnToSavedPosition from '../../../modules/return-position.js';
-import parallaxEffect from '../../../animations/parallax.jsx';
+import { applyParallax } from '../../../animations/animations.jsx';
 
 import { Header } from '../../../components/layouts/Header.jsx';
 import { Footer } from '../../../components/layouts/Footer.jsx';
@@ -17,13 +17,14 @@ import { SectionSoundDesign } from '../../../components/categories/sound/Section
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';
 function SoundDesignPage() {
+	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	useGSAP(
 		() => {
 			// create the smooth scroller FIRST!
 			const smoother = ScrollSmoother.create({
 				wrapper: '#wrapper',
 				content: '#content',
-				smooth: 1,
+				smooth: 1.5,
 				effects: true,
 				smoothTouch: 0.1,
 			});
@@ -34,7 +35,9 @@ function SoundDesignPage() {
 	);
 
 	useEffect(() => {
-		parallaxEffect();
+		if (!isMobile) {
+			applyParallax('.material-parallax');
+		}
 		returnToSavedPosition();
 	}, []);
 

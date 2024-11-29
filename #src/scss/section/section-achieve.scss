@@ -272,6 +272,19 @@
 				pointer-events: none;
 			}
 		}
+
+		.otra {
+			transition:
+				scale 0.4s,
+				color 0.4s ease-in-out;
+			@include min-960 {
+				&:hover {
+					scale: 1.2;
+					color: $neon-blue-dark;
+					animation: none;
+				}
+			}
+		}
 	}
 }
 //* ----------------------------------------------------------------------------
