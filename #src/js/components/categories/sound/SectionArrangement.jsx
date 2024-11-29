@@ -9,16 +9,14 @@ import {
 //* ----------------------------------------------------------------------------
 export const SectionArrangement = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
-	useEffect(() => {
-
-	}, []);
+	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
 	useEffect(() => {
 		if (!isMobile) {
 			animateTitles(
-				'.services__title',
-				'.services__title',
-				'.services__title',
+				'.service-description__title',
+				'.service-description__title',
+				'.service-description__title',
 				'=150',
 				'=150',
 			);

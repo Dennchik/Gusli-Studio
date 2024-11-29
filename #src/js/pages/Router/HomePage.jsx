@@ -2,41 +2,44 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
-
-import returnToSavedPosition from '../../modules/return-position.js';
 import parallaxEffect from '../../animations/parallax.jsx';
 
+import returnToSavedPosition from '../../modules/return-position.js';
+
 import { Header } from '../../components/layouts/Header.jsx';
+import { MainSlide } from '../../components/MainSlide.jsx';
+import { Services } from '../../components/Services.jsx';
 import { Footer } from '../../components/layouts/Footer.jsx';
-import { Offer } from '../../components/chunks/Offer.jsx';
-import { Answers } from '../../components/Answers.jsx';
 import { MenuFloat } from '../../components/layouts/Menu-float.jsx';
 import { FormModal } from '../../components/layouts/FormModal.jsx';
 
-import { SectionVoiceActing } from '../../components/categories/sound/SectionVoiceActing.jsx';
-
 gsap.registerPlugin(useGSAP, ScrollSmoother);
-const baseUrl = '../..';
-function VoiceActingPage() {
+const baseUrl = '.';
+function HomePage() {
+	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
 	useGSAP(
 		() => {
 			// create the smooth scroller FIRST!
-			const smoother = ScrollSmoother.create({
-				wrapper: '#wrapper',
-				content: '#content',
-				smooth: 1,
-				effects: true,
-				smoothTouch: 0.1,
-			});
-			return () => {
-				smoother.kill(); // Удаляем Smooth при размонтировании
-			};
+			if (!isMobile) {
+				const smoother = ScrollSmoother.create({
+					wrapper: '#wrapper',
+					content: '#content',
+					smooth: 1,
+					effects: true,
+					smoothTouch: 0.1,
+				});
+				return () => {
+					smoother.kill(); // Удаляем Smooth при размонтировании
+				};
+			}
 		},
 	);
 
-
 	useEffect(() => {
-		parallaxEffect();
+		if (!isMobile) {
+			parallaxEffect();
+		}
 		returnToSavedPosition();
 	}, []);
 
@@ -48,14 +51,11 @@ function VoiceActingPage() {
 			<main className="page__main-content">
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
-						<section className="main-content__categories-sound">
-							<SectionVoiceActing baseUrl={baseUrl} isHomePage={true} />
+						<section className="main-content__slide">
+							<MainSlide baseUrl={baseUrl} />
 						</section>
-						<section className="main-content__offer">
-							<Offer baseUrl={baseUrl} />
-						</section>
-						<section className="main-content__questions">
-							<Answers baseUrl={baseUrl} />
+						<section className="main-content__services">
+							<Services baseUrl={baseUrl} />
 						</section>
 						<footer className="main-content__footer" id="footer">
 							<Footer baseUrl={baseUrl} isHomePage={true} />
@@ -70,13 +70,13 @@ function VoiceActingPage() {
 				<i className="icon-angle-down _button"></i>
 			</div>
 			<section className="page__form-modal"
-				role="dialog"
-				aria-labelledby="modalTitle"
-				aria-modal="true">
+			// role="dialog"
+			// aria-labelledby="modalTitle"
+			// aria-modal="true"
+			>
 				<FormModal />
 			</section>
 		</>
 	);
 }
-
-export default VoiceActingPage;
+export default HomePage;

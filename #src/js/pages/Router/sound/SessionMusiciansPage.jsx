@@ -3,20 +3,20 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
-import returnToSavedPosition from '../modules/return-position.js';
-import parallaxEffect from '../animations/parallax.jsx';
+import returnToSavedPosition from '../../../modules/return-position.js';
+import parallaxEffect from '../../../animations/parallax.jsx';
 
-import { Header } from '../components/layouts/Header.jsx';
-import { ServiceSound } from '../components/categories/ServiceSound.jsx';
-import { Offer } from '../components/chunks/Offer.jsx';
-import { Answers } from '../components/Answers.jsx';
-import { Footer } from '../components/layouts/Footer.jsx';
-import { MenuFloat } from '../components/layouts/Menu-float.jsx';
-import { FormModal } from '../components/layouts/FormModal.jsx';
+import { Header } from '../../../components/layouts/Header.jsx';
+import { Footer } from '../../../components/layouts/Footer.jsx';
+import { Offer } from '../../../components/chunks/Offer.jsx';
+import { Answers } from '../../../components/Answers.jsx';
+import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
+import { FormModal } from '../../../components/layouts/FormModal.jsx';
+import { SectionSessionMusicians } from '../../../components/categories/sound/SectionSessionMusicians.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
-const baseUrl = '..';
-function SoundPage() {
+const baseUrl = '../..';
+function SessionMusiciansPage() {
 	useGSAP(
 		() => {
 			// create the smooth scroller FIRST!
@@ -33,7 +33,6 @@ function SoundPage() {
 		},
 	);
 
-
 	useEffect(() => {
 		parallaxEffect();
 		returnToSavedPosition();
@@ -47,8 +46,8 @@ function SoundPage() {
 			<main className="page__main-content">
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
-						<section className="main-content__categories-sound">
-							<ServiceSound baseUrl={baseUrl} isHomePage={true} />
+						<section className="main-content__musician">
+							<SectionSessionMusicians baseUrl={baseUrl} isHomePage={true} />
 						</section>
 						<section className="main-content__offer">
 							<Offer baseUrl={baseUrl} />
@@ -79,5 +78,4 @@ function SoundPage() {
 		</>
 	);
 }
-
-export default SoundPage;
+export default SessionMusiciansPage;

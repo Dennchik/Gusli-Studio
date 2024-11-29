@@ -3,21 +3,21 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
-import returnToSavedPosition from '../../modules/return-position.js';
-import parallaxEffect from '../../animations/parallax.jsx';
+import returnToSavedPosition from '../../../modules/return-position.js';
+import parallaxEffect from '../../../animations/parallax.jsx';
 
-import { Header } from '../../components/layouts/Header.jsx';
-import { Footer } from '../../components/layouts/Footer.jsx';
-import { Offer } from '../../components/chunks/Offer.jsx';
-import { Answers } from '../../components/Answers.jsx';
-import { MenuFloat } from '../../components/layouts/Menu-float.jsx';
-import { FormModal } from '../../components/layouts/FormModal.jsx';
+import { Header } from '../../../components/layouts/Header.jsx';
+import { Footer } from '../../../components/layouts/Footer.jsx';
+import { Offer } from '../../../components/chunks/Offer.jsx';
+import { Answers } from '../../../components/Answers.jsx';
+import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
+import { FormModal } from '../../../components/layouts/FormModal.jsx';
 
-import { SectionRecording } from '../../components/categories/sound/SectionRecording.jsx';
+import { SectionMastering } from '../../../components/categories/sound/SectionMastering.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';
-function RecordingPage() {
+function MasteringPage() {
 	useGSAP(
 		() => {
 			// create the smooth scroller FIRST!
@@ -34,6 +34,7 @@ function RecordingPage() {
 		},
 	);
 
+
 	useEffect(() => {
 		parallaxEffect();
 		returnToSavedPosition();
@@ -47,8 +48,8 @@ function RecordingPage() {
 			<main className="page__main-content">
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
-						<section className="main-content__musician">
-							<SectionRecording baseUrl={baseUrl} isHomePage={true} />
+						<section className="main-content__categories-sound">
+							<SectionMastering baseUrl={baseUrl} isHomePage={true} />
 						</section>
 						<section className="main-content__offer">
 							<Offer baseUrl={baseUrl} />
@@ -80,4 +81,4 @@ function RecordingPage() {
 	);
 }
 
-export default RecordingPage;
+export default MasteringPage;

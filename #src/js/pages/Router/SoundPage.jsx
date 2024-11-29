@@ -7,35 +7,40 @@ import returnToSavedPosition from '../../modules/return-position.js';
 import parallaxEffect from '../../animations/parallax.jsx';
 
 import { Header } from '../../components/layouts/Header.jsx';
-import { Footer } from '../../components/layouts/Footer.jsx';
+import { ServiceSound } from '../../components/categories/ServiceSound.jsx';
 import { Offer } from '../../components/chunks/Offer.jsx';
 import { Answers } from '../../components/Answers.jsx';
+import { Footer } from '../../components/layouts/Footer.jsx';
 import { MenuFloat } from '../../components/layouts/Menu-float.jsx';
 import { FormModal } from '../../components/layouts/FormModal.jsx';
 
-import { SectionSoundDesign } from '../../components/categories/sound/SectionSoundDesign.jsx';
-
 gsap.registerPlugin(useGSAP, ScrollSmoother);
-const baseUrl = '../..';
-function SoundDesignPage() {
+const baseUrl = '..';
+function SoundPage() {
+	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
 	useGSAP(
 		() => {
 			// create the smooth scroller FIRST!
-			const smoother = ScrollSmoother.create({
-				wrapper: '#wrapper',
-				content: '#content',
-				smooth: 1,
-				effects: true,
-				smoothTouch: 0.1,
-			});
-			return () => {
-				smoother.kill(); // Удаляем Smooth при размонтировании
-			};
+			if (!isMobile) {
+				const smoother = ScrollSmoother.create({
+					wrapper: '#wrapper',
+					content: '#content',
+					smooth: 1,
+					effects: true,
+					smoothTouch: 0.1,
+				});
+				return () => {
+					smoother.kill(); // Удаляем Smooth при размонтировании
+				};
+			}
 		},
 	);
 
 	useEffect(() => {
-		parallaxEffect();
+		if (!isMobile) {
+			parallaxEffect();
+		}
 		returnToSavedPosition();
 	}, []);
 
@@ -47,8 +52,8 @@ function SoundDesignPage() {
 			<main className="page__main-content">
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
-						<section className="main-content__musician">
-							<SectionSoundDesign baseUrl={baseUrl} isHomePage={true} />
+						<section className="main-content__categories-sound">
+							<ServiceSound baseUrl={baseUrl} isHomePage={true} />
 						</section>
 						<section className="main-content__offer">
 							<Offer baseUrl={baseUrl} />
@@ -70,13 +75,11 @@ function SoundDesignPage() {
 			<div className="page__aside" id="scrollButton">
 				<i className="icon-angle-down _button"></i>
 			</div>
-			<section className="page__form-modal"
-				role="dialog"
-				aria-labelledby="modalTitle"
-				aria-modal="true">
+			<section className="page__form-modal" aria-modal="true">
 				<FormModal />
 			</section>
 		</>
 	);
 }
-export default SoundDesignPage;
+
+export default SoundPage;

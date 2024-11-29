@@ -3,22 +3,20 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
-import returnToSavedPosition from '../../modules/return-position.js';
-import parallaxEffect from '../../animations/parallax.jsx';
+import returnToSavedPosition from '../../../modules/return-position.js';
+import parallaxEffect from '../../../animations/parallax.jsx';
 
-import { Header } from '../../components/layouts/Header.jsx';
-import { Footer } from '../../components/layouts/Footer.jsx';
-import { Offer } from '../../components/chunks/Offer.jsx';
-import { Answers } from '../../components/Answers.jsx';
-import { MenuFloat } from '../../components/layouts/Menu-float.jsx';
-import { FormModal } from '../../components/layouts/FormModal.jsx';
-
-import { SectionBits } from '../../components/categories/sound/SectionBits.jsx';
-
+import { Header } from '../../../components/layouts/Header.jsx';
+import { Footer } from '../../../components/layouts/Footer.jsx';
+import { Offer } from '../../../components/chunks/Offer.jsx';
+import { Answers } from '../../../components/Answers.jsx';
+import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
+import { FormModal } from '../../../components/layouts/FormModal.jsx';
+import { SectionRecording } from '../../../components/categories/sound/SectionRecording.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';
-function BitsPage() {
+function RecordingPage() {
 	useGSAP(
 		() => {
 			// create the smooth scroller FIRST!
@@ -49,7 +47,7 @@ function BitsPage() {
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
 						<section className="main-content__musician">
-							<SectionBits baseUrl={baseUrl} isHomePage={true} />
+							<SectionRecording baseUrl={baseUrl} isHomePage={true} />
 						</section>
 						<section className="main-content__offer">
 							<Offer baseUrl={baseUrl} />
@@ -80,4 +78,5 @@ function BitsPage() {
 		</>
 	);
 }
-export default BitsPage;
+
+export default RecordingPage;

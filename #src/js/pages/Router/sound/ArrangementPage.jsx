@@ -3,22 +3,20 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
-import returnToSavedPosition from '../modules/return-position.js';
-import parallaxEffect from '../animations/parallax.jsx';
+import returnToSavedPosition from '../../../modules/return-position.js';
+import parallaxEffect from '../../../animations/parallax.jsx';
 
-import { Header } from '../components/layouts/Header.jsx';
-import { Categories } from '../components/Categories.jsx';
-import { Offer } from '../components/chunks/Offer.jsx';
-import { Footer } from '../components/layouts/Footer.jsx';
-import { MenuFloat } from '../components/layouts/Menu-float.jsx';
-import { Answers } from '../components/Answers.jsx';
-import { FormModal } from '../components/layouts/FormModal.jsx';
-
+import { Header } from '../../../components/layouts/Header.jsx';
+import { Footer } from '../../../components/layouts/Footer.jsx';
+import { Offer } from '../../../components/chunks/Offer.jsx';
+import { Answers } from '../../../components/Answers.jsx';
+import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
+import { FormModal } from '../../../components/layouts/FormModal.jsx';
+import { SectionArrangement } from '../../../components/categories/sound/SectionArrangement.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
-const baseUrl = '.';
-
-function ServicesPage() {
+const baseUrl = '../..';
+function ArrangementPage() {
 	useGSAP(
 		() => {
 			// create the smooth scroller FIRST!
@@ -34,6 +32,7 @@ function ServicesPage() {
 			};
 		},
 	);
+
 	useEffect(() => {
 		parallaxEffect();
 		returnToSavedPosition();
@@ -47,8 +46,8 @@ function ServicesPage() {
 			<main className="page__main-content">
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
-						<section className="main-content__categories">
-							<Categories baseUrl={baseUrl} />
+						<section className="main-content__musician">
+							<SectionArrangement baseUrl={baseUrl} isHomePage={true} />
 						</section>
 						<section className="main-content__offer">
 							<Offer baseUrl={baseUrl} />
@@ -62,20 +61,19 @@ function ServicesPage() {
 					</div>
 				</div>
 			</main>
+
+
 			<div className="page__menu-float">
 				<MenuFloat baseUrl={baseUrl} />
 			</div>
 			<div className="page__aside" id="scrollButton">
 				<i className="icon-angle-down _button"></i>
 			</div>
-			<section className="page__form-modal"
-				role="dialog"
-				aria-labelledby="modalTitle"
-				aria-modal="true">
+			<section className="page__form-modal">
 				<FormModal />
 			</section>
 		</>
 	);
 }
 
-export default ServicesPage;
+export default ArrangementPage;

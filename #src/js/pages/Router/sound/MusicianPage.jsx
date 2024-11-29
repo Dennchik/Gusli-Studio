@@ -3,22 +3,20 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
-import returnToSavedPosition from '../../modules/return-position.js';
-import parallaxEffect from '../../animations/parallax.jsx';
+import returnToSavedPosition from '../../../modules/return-position.js';
+import parallaxEffect from '../../../animations/parallax.jsx';
 
-import { Header } from '../../components/layouts/Header.jsx';
-import { Footer } from '../../components/layouts/Footer.jsx';
-import { Offer } from '../../components/chunks/Offer.jsx';
-import { Answers } from '../../components/Answers.jsx';
-import { MenuFloat } from '../../components/layouts/Menu-float.jsx';
-import { FormModal } from '../../components/layouts/FormModal.jsx';
-
-import { SectionAudioPodcasts } from '../../components/categories/sound/SectionAudioPodcasts.jsx';
-
+import { Header } from '../../../components/layouts/Header.jsx';
+import { Footer } from '../../../components/layouts/Footer.jsx';
+import { Offer } from '../../../components/chunks/Offer.jsx';
+import { Answers } from '../../../components/Answers.jsx';
+import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
+import { FormModal } from '../../../components/layouts/FormModal.jsx';
+import { SectionMusician } from '../../../components/categories/sound/SectionMusician.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';
-function AudioPodcastsPage() {
+function MusicianPage() {
 	useGSAP(
 		() => {
 			// create the smooth scroller FIRST!
@@ -49,7 +47,7 @@ function AudioPodcastsPage() {
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
 						<section className="main-content__musician">
-							<SectionAudioPodcasts baseUrl={baseUrl} isHomePage={true} />
+							<SectionMusician baseUrl={baseUrl} isHomePage={true} />
 						</section>
 						<section className="main-content__offer">
 							<Offer baseUrl={baseUrl} />
@@ -80,4 +78,5 @@ function AudioPodcastsPage() {
 		</>
 	);
 }
-export default AudioPodcastsPage;
+
+export default MusicianPage;

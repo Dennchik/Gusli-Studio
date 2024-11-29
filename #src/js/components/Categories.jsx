@@ -6,13 +6,12 @@ import { animationSvgLine, animationSvgText } from '../animations/anime-js.jsx';
 
 export const Categories = () => {
 	// const isHomepage = location.pathname === '/';
-	// const boxImagesRef = useRef([]);
-	//
-	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	const boxImagesRef = useRef([]);
+	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
 	useEffect(() => {
-		LagTextFunction();
 		if (!isMobile) {
+			LagTextFunction();
 			const handleMouseOver = (event) => {
 				const target = event.currentTarget;
 				// Запускаем анимацию при наведении

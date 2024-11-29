@@ -2,26 +2,29 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
-import modalOpen from '../modules/modalOpen.js';
 
-import { Header } from '../components/layouts/Header.jsx';
-import { About } from '../components/sections/About.jsx';
-import { Partners } from '../components/Partners.jsx';
-import { Achievements } from '../components/sections/Achievements.jsx';
-import { Footer } from '../components/layouts/Footer.jsx';
-import { MenuFloat } from '../components/layouts/Menu-float.jsx';
+import returnToSavedPosition from '../../modules/return-position.js';
+import parallaxEffect from '../../animations/parallax.jsx';
 
-import returnToSavedPosition from '../modules/return-position.js';
-import parallaxEffect from '../animations/parallax.jsx';
+import { Header } from '../../components/layouts/Header.jsx';
+import { Categories } from '../../components/Categories.jsx';
+import { Offer } from '../../components/chunks/Offer.jsx';
+import { Footer } from '../../components/layouts/Footer.jsx';
+import { MenuFloat } from '../../components/layouts/Menu-float.jsx';
+import { Answers } from '../../components/Answers.jsx';
+import { FormModal } from '../../components/layouts/FormModal.jsx';
+
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '.';
-function AboutPage() {
+
+function ServicesPage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-	if (!isMobile) {
-		useGSAP(
-			() => {
-				// create the smooth scroller FIRST!
+
+	useGSAP(
+		() => {
+			// create the smooth scroller FIRST!
+			if (!isMobile) {
 				const smoother = ScrollSmoother.create({
 					wrapper: '#wrapper',
 					content: '#content',
@@ -32,16 +35,15 @@ function AboutPage() {
 				return () => {
 					smoother.kill(); // Удаляем Smooth при размонтировании
 				};
-			},
-		);
-	}
+			}
+		},
+	);
+
 	useEffect(() => {
 		if (!isMobile) {
 			parallaxEffect();
 		}
-		modalOpen();
 		returnToSavedPosition();
-
 	}, []);
 
 	return (
@@ -52,14 +54,14 @@ function AboutPage() {
 			<main className="page__main-content">
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
-						<section className="main-content__about">
-							<About baseUrl={baseUrl} />
+						<section className="main-content__categories">
+							<Categories baseUrl={baseUrl} />
 						</section>
-						<section className="main-content__partners">
-							<Partners baseUrl={baseUrl} />
+						<section className="main-content__offer">
+							<Offer baseUrl={baseUrl} />
 						</section>
-						<section className="main-content__achievements">
-							<Achievements />
+						<section className="main-content__questions">
+							<Answers baseUrl={baseUrl} />
 						</section>
 						<footer className="main-content__footer" id="footer">
 							<Footer baseUrl={baseUrl} isHomePage={true} />
@@ -73,21 +75,11 @@ function AboutPage() {
 			<div className="page__aside" id="scrollButton">
 				<i className="icon-angle-down _button"></i>
 			</div>
-			<section className="page__modal-image">
-				<div className="modal _container">
-					<div className="modal__body">
-						<div className="modal__image">
-							<div className="modal__close-button _close-modal">
-								<i className="icon-angles-down-solid"></i>
-							</div>
-							<img src={'#'} alt="image" />
-						</div>
-					</div>
-				</div>
-				{/* <FormModal /> */}
+			<section className="page__form-modal" aria-modal="true">
+				<FormModal />
 			</section>
 		</>
 	);
 }
 
-export default AboutPage;
+export default ServicesPage;

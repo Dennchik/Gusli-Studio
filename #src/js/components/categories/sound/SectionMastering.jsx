@@ -9,16 +9,19 @@ import {
 //* ----------------------------------------------------------------------------
 export const SectionMastering = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
+	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
 	useEffect(() => {
-		animateTitles(
-			'.service-description__title',
-			'.service-description__title',
-			'.service-description__title',
-			'=150',
-			'=150',
-		);
-		refreshScrollTrigger();
+		if (!isMobile) {
+			animateTitles(
+				'.service-description__title',
+				'.service-description__title',
+				'.service-description__title',
+				'=150',
+				'=150',
+			);
+			refreshScrollTrigger();
+		}
 	}, [location.pathname, isHomepage]);
 
 	const getPath = (fileName) => {

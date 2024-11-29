@@ -54,7 +54,6 @@
 	&__content {
 		display: flex;
 		height: 100%;
-		width: 100%;
 		min-height: 100vh;
 		justify-content: center;
 		flex-direction: column;
@@ -224,15 +223,22 @@
 
 		h2 {
 			margin-bottom: 2rem;
+			font-size: 24px;
 			font-weight: 450;
 			color: $neon-blue;
 			opacity: 0.5;
 			line-height: 110%;
+
+			@include minmax-320-1920 {
+				font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
+			}
+
 			&:not(:first-child) {
 				margin-top: 4rem;
 			}
-			@include screen-690 {
-				text-align: center;
+
+			@include screen-320 {
+				font-size: 16px;
 			}
 		}
 

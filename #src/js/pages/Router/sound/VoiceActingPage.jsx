@@ -3,21 +3,20 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
-import returnToSavedPosition from '../../modules/return-position.js';
-import parallaxEffect from '../../animations/parallax.jsx';
+import returnToSavedPosition from '../../../modules/return-position.js';
+import parallaxEffect from '../../../animations/parallax.jsx';
 
-import { Header } from '../../components/layouts/Header.jsx';
-import { Footer } from '../../components/layouts/Footer.jsx';
-import { Offer } from '../../components/chunks/Offer.jsx';
-import { Answers } from '../../components/Answers.jsx';
-import { MenuFloat } from '../../components/layouts/Menu-float.jsx';
-import { FormModal } from '../../components/layouts/FormModal.jsx';
-
-import { SectionMastering } from '../../components/categories/sound/SectionMastering.jsx';
+import { Header } from '../../../components/layouts/Header.jsx';
+import { Footer } from '../../../components/layouts/Footer.jsx';
+import { Offer } from '../../../components/chunks/Offer.jsx';
+import { Answers } from '../../../components/Answers.jsx';
+import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
+import { FormModal } from '../../../components/layouts/FormModal.jsx';
+import { SectionVoiceActing } from '../../../components/categories/sound/SectionVoiceActing.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';
-function MasteringPage() {
+function VoiceActingPage() {
 	useGSAP(
 		() => {
 			// create the smooth scroller FIRST!
@@ -49,7 +48,7 @@ function MasteringPage() {
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
 						<section className="main-content__categories-sound">
-							<SectionMastering baseUrl={baseUrl} isHomePage={true} />
+							<SectionVoiceActing baseUrl={baseUrl} isHomePage={true} />
 						</section>
 						<section className="main-content__offer">
 							<Offer baseUrl={baseUrl} />
@@ -63,8 +62,6 @@ function MasteringPage() {
 					</div>
 				</div>
 			</main>
-
-
 			<div className="page__menu-float">
 				<MenuFloat baseUrl={baseUrl} />
 			</div>
@@ -81,4 +78,4 @@ function MasteringPage() {
 	);
 }
 
-export default MasteringPage;
+export default VoiceActingPage;

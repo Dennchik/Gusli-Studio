@@ -15,9 +15,10 @@ import { Offer } from './chunks/Offer.jsx';
 //* ----------------------------------------------------------------------------
 export const Services = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
+	const boxImagesRef = useRef([]);
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
 	useEffect(() => {
-		const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 		const initSwiper = document.querySelector('.services-slide__body');
 		if (isMobile) {
 			initSwiper.classList.add('_swiper');
@@ -26,7 +27,6 @@ export const Services = ({ baseUrl }) => {
 		}
 	}, []);
 
-	const boxImagesRef = useRef([]);
 	useEffect(() => {
 		if (!isMobile) {
 			const handleMouseOver = (event) => {
@@ -37,14 +37,12 @@ export const Services = ({ baseUrl }) => {
 			};
 			const handleMouseLeave = (event) => {
 				const target = event.currentTarget;
-				if (!isMobile) {
-					setTimeout(() => {
-						/*  Запускаем анимацию в обратном направлении с задержкой при уходе
-						 мыши */
-						animationSvgLine(target, true);
-						animationSvgText(target, true);
-					}, 500);
-				}
+				setTimeout(() => {
+					/*  Запускаем анимацию в обратном направлении с задержкой при уходе
+					 мыши */
+					animationSvgLine(target, true);
+					animationSvgText(target, true);
+				}, 500);
 			};
 			const boxImages = Array.from(
 				document.querySelectorAll('.services-slide__image'),
@@ -66,31 +64,34 @@ export const Services = ({ baseUrl }) => {
 	}, []);
 
 	useEffect(() => {
-		const smoother = ScrollSmoother.get();
-		if (smoother) {
-			if (!isMobile || innerWidth > 1024) {
-				smoother.effects('.services-slide__column', {
-					speed: (i) => {
-						return window.matchMedia('(min-width:730px)').matches
-							? i % 2 === 1
-								? 1.15
-								: 1
-							: i % 2 === 0
-								? 0.9
-								: 1.15;
-					},
-				});
+		if (!isMobile) {
+			const smoother = ScrollSmoother.get();
+			if (smoother) {
+				if (!isMobile || innerWidth > 1024) {
+					smoother.effects('.services-slide__column', {
+						speed: (i) => {
+							return window.matchMedia('(min-width:730px)').matches
+								? i % 2 === 1
+									? 1.15
+									: 1
+								: i % 2 === 0
+									? 0.9
+									: 1.15;
+						},
+					});
 
-				animateTitles(
-					'.services__title',
-					'.services__title',
-					'.services__title',
-					'=150',
-					'=150',
-				);
-				refreshScrollTrigger();
+					animateTitles(
+						'.services__title',
+						'.services__title',
+						'.services__title',
+						'=150',
+						'=150',
+					);
+					refreshScrollTrigger();
+				}
 			}
 		}
+
 	}, [location.pathname, isHomepage]);
 
 	return (
@@ -114,8 +115,8 @@ export const Services = ({ baseUrl }) => {
 			<div className="services__body">
 				<div className="services__title">Наши услуги</div>
 				<div className="services__content">
-					<div className="services-slide">
-						<div className="services-slide__body _container">
+					<div className="services-slide _container">
+						<div className="services-slide__body">
 							<div className="services-slide__column line">
 								<div className="services-slide__content">
 									<div className="services-slide__image el">
@@ -650,6 +651,7 @@ export const Services = ({ baseUrl }) => {
 							</div>
 						</div>
 						<div className="services-slide__pagination"></div>
+						<div className="hr-shelf"></div>
 					</div>
 				</div>
 				{<Offer baseUrl={baseUrl} />}
@@ -657,6 +659,7 @@ export const Services = ({ baseUrl }) => {
 		</div>
 	);
 };
+
 Services.propTypes = {
 	baseUrl: PropTypes.string.isRequired,
 };
