@@ -1,24 +1,12 @@
 @use '../core/all' as *;
 
 .categories-sound {
-	// categories-sound__body
-	&__body {
-		padding: 2rem 0 5rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		height: 100%;
-		width: 100%;
-		min-height: 100vh;
-	}
-
 	.services {
-		// .services__body
+		// services__body
 		&__body {
-			width: 100%;
+			padding-top: 10rem;
+			min-height: 100vh;
 		}
-
 		// .services__title
 		&__title {
 			&:nth-child(1) {
@@ -36,24 +24,22 @@
 
 			img {
 				max-height: 290px;
-				width: auto;
+				width: 100%;
 				max-width: 100%;
 				height: 100%;
 				object-fit: cover;
 			}
 		}
-
 		// .services-slide__text
 		&__text {
 			flex-direction: column;
 		}
 
 		// .services-slide__body
-		&__body {
-			display: grid;
-			grid-template-columns: repeat(5, minmax(150px, 220px));
-			column-gap: 2rem;
-			row-gap: 5rem;
+		&__column {
+			display: flex;
+			flex-direction: column;
+			gap: 5rem;
 		}
 	}
 }

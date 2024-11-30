@@ -24,6 +24,11 @@
   font-variant-ligatures: discretionary-ligatures;
 }
 
+.icon-musical-notes {
+  &:before {
+    content: $icon-musical-notes;
+  }
+}
 .icon-feather {
   &:before {
     content: $icon-feather;
@@ -32,11 +37,6 @@
 .icon-magnifying-glass {
   &:before {
     content: $icon-magnifying-glass;
-  }
-}
-.icon-price-tag {
-  &:before {
-    content: $icon-price-tag;
   }
 }
 .icon-arrow-bold-left {
@@ -62,16 +62,6 @@
 .icon-arrow-right {
   &:before {
     content: $icon-arrow-right;
-  }
-}
-.icon-check {
-  &:before {
-    content: $icon-check;
-  }
-}
-.icon-file-download {
-  &:before {
-    content: $icon-file-download;
   }
 }
 .icon-group {
@@ -242,6 +232,16 @@
 .icon-telegram-fly {
   &:before {
     content: $icon-telegram-fly;
+  }
+}
+.icon-check {
+  &:before {
+    content: $icon-check;
+  }
+}
+.icon-file-download {
+  &:before {
+    content: $icon-file-download;
   }
 }
 .icon-volume-high {

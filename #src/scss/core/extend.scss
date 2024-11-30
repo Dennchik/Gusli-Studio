@@ -98,7 +98,8 @@
 }
 
 .liner-gradient-box {
-	background: linear-gradient(45deg, #10133a 55%, #47208a73 10%, #10133a);
+	background: linear-gradient(45deg, #10133a 55%, #47208a73 10%, #10133a) /
+		cover no-repeat;
 }
 
 .text-gradient {

@@ -47,7 +47,7 @@
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
-		padding: 8rem 0;
+		padding: 6rem 0;
 	}
 
 	// .service-description__content
@@ -72,7 +72,7 @@
 		position: relative;
 		z-index: 9;
 		display: inline;
-		margin: 6rem 0 6rem;
+		margin-bottom: 6rem;
 		text-align: center;
 		letter-spacing: 0;
 		color: $neon-blue;
@@ -182,6 +182,16 @@
 				content: 'cведение и мастеринг';
 			}
 		}
+		&.collections-title {
+			&::after {
+				content: 'создание сборников';
+			}
+		}
+		&.anthem-title {
+			&::after {
+				content: 'корпоративный гимн';
+			}
+		}
 	}
 
 	//.service-description__description
@@ -202,7 +212,8 @@
 			color: $electric-lime;
 		}
 		.icon-guitar-line,
-		.icon-volume-high {
+		.icon-volume-high,
+		.icon-musical-notes {
 			color: $neon-blue-dark;
 		}
 
@@ -294,6 +305,23 @@
 		width: 100%;
 		&:not(:last-child) {
 			margin-bottom: 4rem;
+		}
+		h3 {
+			margin-top: 1.6rem;
+			color: $electric-lime;
+		}
+		ul {
+			padding: 2rem 0;
+		}
+		li {
+			div {
+				display: inline;
+				&:not(:last-child) {
+					margin-right: 2rem;
+					font-weight: 600;
+					color: $neon-blue-dark;
+				}
+			}
 		}
 	}
 	//.service-description__ps

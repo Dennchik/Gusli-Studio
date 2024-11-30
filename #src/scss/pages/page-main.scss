@@ -12,7 +12,7 @@
 
 		left: 0;
 		width: 100%;
-		height: 10rem;
+		height: 8rem;
 	}
 
 	// .page__main-content
@@ -230,12 +230,16 @@
 	// .main-content__questions
 	&__questions {
 		position: relative;
+		// background: linear-gradient(45deg, #332764, #020101 70%);
 	}
 
 	// .main-content__services
 	&__services {
 		position: relative;
 		z-index: 6;
+		.offer-container__body {
+			padding-bottom: 0;
+		}
 	}
 
 	// .main-content__offer
@@ -378,7 +382,7 @@
 .hr-shelf {
 	margin: 0 auto !important;
 	padding: 0;
-	height: 50px;
+	height: 6rem;
 	border: none;
 	border-bottom: 1px solid hsla(240, 100%, 67%, 0.295);
 	box-shadow: 0 20px 20px -20px #000000;

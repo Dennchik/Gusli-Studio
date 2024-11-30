@@ -26,12 +26,12 @@ export function servicesSlide(
 			},
 			breakpoints: {
 				320: {
-					slidesPerView: 1,
-				},
-				330: {
 					slidesPerView: 2,
-					spaceBetween: 20,
 				},
+				// 330: {
+				// 	slidesPerView: 2,
+				// 	spaceBetween: 20,
+				// },
 				491: {
 					slidesPerView: 3,
 				},

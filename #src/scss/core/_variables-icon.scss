@@ -2,16 +2,14 @@
 $icon-font-family: 'icon-set' !default;
 $icon-font-path: '../fonts' !default;
 
+$icon-musical-notes: string.unquote('"\\e912"');
 $icon-feather: string.unquote('"\\e91a"');
 $icon-magnifying-glass: string.unquote('"\\e911"');
-$icon-price-tag: string.unquote('"\\e912"');
 $icon-arrow-bold-left: string.unquote('"\\e915"');
 $icon-arrow-bold-right: string.unquote('"\\e916"');
 $icon-cycle: string.unquote('"\\e917"');
 $icon-arrow-left: string.unquote('"\\e918"');
 $icon-arrow-right: string.unquote('"\\e919"');
-$icon-check: string.unquote('"\\e90f"');
-$icon-file-download: string.unquote('"\\e910"');
 $icon-group: string.unquote('"\\e90e"');
 $icon-guitar-line: string.unquote('"\\e90c"');
 $icon-guitar: string.unquote('"\\e90d"');
@@ -46,6 +44,8 @@ $icon-youtube-logo: string.unquote('"\\f167"');
 $icon-whatsapp: string.unquote('"\\f232"');
 $icon-vk-brand: string.unquote('"\\f189"');
 $icon-telegram-fly: string.unquote('"\\e91b"');
+$icon-check: string.unquote('"\\e90f"');
+$icon-file-download: string.unquote('"\\e910"');
 $icon-volume-high: string.unquote('"\\ea26"');
 $icon-home: string.unquote('"\\e909"');
 $icon-phone-ringing: string.unquote('"\\e904"');
