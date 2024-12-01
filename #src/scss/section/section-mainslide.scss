@@ -140,15 +140,17 @@
 
 	// .main-slide__text
 	&__text {
-		font-size: 24px;
+		font-size: 28px;
 		font-weight: 400;
 		max-width: 1100px;
 		text-align: left;
 		letter-spacing: 1.5px;
-		text-shadow: rgb(0, 0, 0) 1px 0 10px;
 
 		@include screen-490 {
 			font-size: 14px;
+		}
+		._icon {
+			font-size: 18px;
 		}
 	}
 

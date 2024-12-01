@@ -98,11 +98,6 @@
 	}
 }
 
-// .gallery__card:hover label:hover {
-// 	animation: none;
-// 	opacity: 0.8;
-// 	scale: 1.2;
-// }
 //* ------------------------- [Class _ibg] -------------------------------------
 ._ibg {
 	position: absolute;
@@ -154,7 +149,7 @@
 .t_01901 {
 	@include minmax-490-1920 {
 		font-size: calc(
-			14px + (18 - 12) * ((100vw - 490px) / (1920 - 490))
+			16px + (28 - 16) * ((100vw - 490px) / (1920 - 490))
 		) !important;
 	}
 	@include screen-490 {

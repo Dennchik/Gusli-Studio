@@ -78,8 +78,11 @@
 
 	// .services__content
 	&__content {
+		padding-top: 30px;
+		padding-bottom: 30px;
 		width: 100%;
 		padding-top: 6rem;
+		overflow: hidden;
 	}
 }
 
@@ -98,9 +101,9 @@
 
 		border-radius: 10px;
 
-		@include min-1024 {
+		@include screen-1024 {
 			max-width: 245px;
-			flex: 0 1 20%;
+			// flex: 0 1 20%;
 		}
 	}
 

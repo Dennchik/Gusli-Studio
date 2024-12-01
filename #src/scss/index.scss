@@ -4,19 +4,8 @@
 
 // todo --------------------------- Assets -------------------------------------
 @use 'assets/showreel';
-@use 'assets/audio-player';
+// @use 'assets/audio-player';
 // todo -------------------------- Sections ------------------------------------
 @use 'section/section-mainslide';
 @use 'section/setion-services';
 @use 'section/section-about';
-.btn-play {
-	position: absolute;
-	cursor: pointer;
-	top: 45%;
-	left: 65%;
-	z-index: 999;
-	width: 160px;
-	padding: 20px;
-	color: red;
-	background: #1f3777d7;
-}

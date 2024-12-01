@@ -74,7 +74,6 @@ export const ServiceSound = ({ baseUrl }) => {
 	};
 
 	return (
-
 		<div className="categories-sound">
 			<div className="services">
 				<div className="material-parallax parallax">

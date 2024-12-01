@@ -52,6 +52,11 @@ export const app = {
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
+			video: {
+				import: ['./#src/js/pages/video.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				filename: '[name].min.js'
+			},
 			musician: {
 				import: ['./#src/js/pages/services/sound/musician.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],

@@ -8,8 +8,8 @@ import {
 	refreshScrollTrigger
 } from '../animations/animations.jsx';
 import { animationSvgLine, animationSvgText } from '../animations/anime-js.jsx';
-import { buildSwiper } from '../layouts/build-swiper.js';
-import { servicesSlide } from '../layouts/services-slide.js';
+// import { buildSwiper } from '../layouts/build-swiper.js';
+// import { servicesSlide } from '../layouts/services-slide.js';
 import { Offer } from './chunks/Offer.jsx';
 
 //* ----------------------------------------------------------------------------
@@ -22,8 +22,8 @@ export const Services = ({ baseUrl }) => {
 		const initSwiper = document.querySelector('.services-slide__body');
 		if (isMobile) {
 			initSwiper.classList.add('_swiper');
-			buildSwiper();
-			servicesSlide();
+			// buildSwiper();
+			// servicesSlide();
 		}
 	}, []);
 

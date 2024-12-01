@@ -71,7 +71,7 @@ export const About = () => {
 				<div className="content-body about__content">
 					<div className="content-body__column">
 						<h1 className="content-body__title h1_01901">В нашей студии:</h1>
-						<div ref={textBlockRef} className="content-body__text t_01901">
+						<div ref={textBlockRef} className="content-body__text">
 							<p>- описав свой проект, Вы&nbsp;получаете уникальные
 								предложения от&nbsp;ведущих профессионалов. Наймите именно
 								того&nbsp;специалиста, который идеально подходит
@@ -86,12 +86,6 @@ export const About = () => {
 										оборудования может оставаться скрытым. Именно поэтому
 										мы&nbsp;предлагаем все&nbsp; необходимое для&nbsp;раскрытия
 										вашего потенциала.</span>
-									<span>- но&nbsp;наша студия - это не&nbsp;просто место
-										для&nbsp;работы. Здесь создается особое настроение,
-										которое способствует вашему вдохновению. Дружеская
-										атмосфера позволяет вам&nbsp;чувствовать себя комфортно
-										и&nbsp;свободно, чтобы в&nbsp;полной мере насладиться
-										процессом создания музыки.</span>
 								</div>
 							</div>
 						</div>

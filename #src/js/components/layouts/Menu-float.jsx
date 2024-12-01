@@ -67,17 +67,17 @@ export const MenuFloat = ({ baseUrl }) => {
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
 														href={getPath(
-															'service/services/video/service-video.html')}>Видео</a>
+															'services/service-video.html')}>Видео</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
 														href={getPath(
-															'service/service-text.html')}>Текс</a>
+															'services/service-text.html')}>Текс</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
 														href={getPath(
-															'service/service-event.html')}>Ивенты</a>
+															'services/service-event.html')}>Ивенты</a>
 												</li>
 											</ul>
 										</div>

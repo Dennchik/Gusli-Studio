@@ -69,7 +69,7 @@ export const Header = ({ baseUrl }) => {
 							</div>
 							<div className="header__item">
 								<a className="header__link-key"
-									href={getPath('services/videos.html')}>
+									href={getPath('services/service-video.html')}>
 									<span>Видео</span>
 								</a>
 							</div>
