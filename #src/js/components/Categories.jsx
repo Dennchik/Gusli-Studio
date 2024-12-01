@@ -624,7 +624,6 @@ export const Categories = ({ baseUrl }) => {
 									</div>
 								</div>
 							</div>
-							<div className="services-slide__pagination"></div>
 						</div>
 					</div>
 				</div>

@@ -93,7 +93,7 @@
 			}
 		}
 
-		@include screen-375 {
+		@include max-375 {
 			width: 100%;
 		}
 
@@ -118,7 +118,8 @@
 			text-transform: uppercase;
 			justify-content: center;
 			overflow: hidden;
-			@include screen-375 {
+
+			@include max-375 {
 				width: 100%;
 			}
 

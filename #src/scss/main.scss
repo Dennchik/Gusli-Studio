@@ -37,7 +37,6 @@
 	flex-direction: column;
 	min-height: 100vh;
 	height: 100%;
-	background: linear-gradient(45deg, rgb(51, 39, 100), rgb(11, 8, 19) 70%);
 }
 
 [class*='_container'] {
@@ -46,11 +45,12 @@
 	margin: 0 auto;
 	padding: 0 30px;
 
-	@include screen-375 {
-		padding: 0 10px;
-	}
-	@include screen-690 {
+	@include max-690 {
 		padding: 0 15px;
+	}
+
+	@include max-490 {
+		padding: 0 10px;
 	}
 }
 

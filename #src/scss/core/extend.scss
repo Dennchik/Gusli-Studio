@@ -30,6 +30,10 @@
 		scale: 1.2;
 		transition: scale 0.5s ease-in-out;
 	}
+
+	@include min-1024 {
+		display: none;
+	}
 }
 
 // @import '_variables.scss';
@@ -66,7 +70,9 @@
 .gradient-default {
 	background: linear-gradient(to right, #0b0813 10%, #2b2644 50%, #0b0813 90%);
 }
-
+.gradient-neon-color {
+	background: linear-gradient(45deg, rgb(51, 39, 100), rgb(11, 8, 19) 70%);
+}
 .gradient-spec {
 	background-image: linear-gradient(
 		-45deg,

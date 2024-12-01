@@ -4,8 +4,6 @@
 	height: 100%;
 
 	.services {
-		padding-top: 4rem;
-
 		// .categories__body
 		&__body {
 			justify-content: flex-end;
@@ -19,9 +17,6 @@
 			flex-direction: column;
 			gap: 0;
 
-			@include min-490 {
-				margin-bottom: 13rem;
-			}
 			@include screen-490 {
 				gap: 5rem;
 			}
@@ -60,13 +55,13 @@
 						margin-right: -10rem;
 					}
 				}
-				@include screen-375 {
+				@include max-375 {
 					flex-direction: column;
 					text-align: left;
 				}
 			}
 
-			@include screen-375 {
+			@include max-375 {
 				flex-direction: column;
 			}
 		}
@@ -94,7 +89,7 @@
 			@include screen-490 {
 				max-width: 300px;
 			}
-			@include screen-375 {
+			@include max-375 {
 				width: 100%;
 				font-size: 12px;
 				margin: 0 !important;

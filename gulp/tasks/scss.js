@@ -3,11 +3,11 @@ import autoprefixer from 'gulp-autoprefixer';
 import csso from 'gulp-csso';
 import postcss from 'gulp-postcss';
 import rename from 'gulp-rename';
-// import gulpSass from 'gulp-sass';
-import combineMediaQuery from 'postcss-combine-media-query';
+import sortMediaQueries from 'postcss-sort-media-queries';
+import sass from 'gulp-dart-sass';
+// import gulpSass from 'gulp-sass'; 
 // import * as dartSass from 'sass';
 // const sass = gulpSass(dartSass);
-import sass from 'gulp-dart-sass';
 //* Task for compiling SCSS files to CSS files
 export function scss() {
 	return $.gulp.src($.path.scss.src)
@@ -35,7 +35,8 @@ export function scss() {
 				this.emit('end');
 			})
 		)
-		.pipe(postcss([combineMediaQuery]))
+		// .pipe(postcss([combineMediaQuery]))
+		.pipe(postcss([sortMediaQueries()]))
 		.pipe($.gulpIf($.app.isProd, autoprefixer($.app.autoprefixer)))
 		.pipe($.gulpIf($.app.isProd, $.debug({
 			title: '(Autoprefixer)'

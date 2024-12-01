@@ -108,7 +108,7 @@ export const SectionMusician = ({ baseUrl }) => {
 										<div>Вносятся обоснованные правки текста</div>
 									</li>
 									<li>
-										<div>Всего:</div>
+										<div><span>ВСЕГО:</span></div>
 										<div>₽ 10 000</div>
 									</li>
 								</ul>
@@ -148,7 +148,7 @@ export const SectionMusician = ({ baseUrl }) => {
 										<div>Вносятся обоснованные правки текста, других правок нет</div>
 									</li>
 									<li>
-										<div>Всего:</div>
+										<div><span>ВСЕГО:</span></div>
 										<div>₽ 25&nbsp;000</div>
 									</li>
 								</ul>
@@ -188,7 +188,7 @@ export const SectionMusician = ({ baseUrl }) => {
 										<div>Обоснованные правки текста, 1 небольшая правка по мелодии или вокалу</div>
 									</li>
 									<li>
-										<div>Всего:</div>
+										<div><span>ВСЕГО:</span></div>
 										<div>₽ 80&nbsp;000</div>
 									</li>
 								</ul>
@@ -228,7 +228,7 @@ export const SectionMusician = ({ baseUrl }) => {
 										<div> Правки текста до&nbsp;полной сдачи, 2&nbsp;небольших правки по&nbsp;мелодии или вокалу</div>
 									</li>
 									<li>
-										<div>Всего:</div>
+										<div><span>ВСЕГО:</span></div>
 										<div>₽ 120&nbsp;000</div>
 									</li>
 								</ul>
@@ -265,10 +265,10 @@ export const SectionMusician = ({ baseUrl }) => {
 									</li>
 									<li>
 										<div>Правки:</div>
-										<div> Правки до&nbspполной сдачи</div>
+										<div> Правки до&nbsp;полной сдачи</div>
 									</li>
 									<li>
-										<div>Всего:</div>
+										<div><span>ВСЕГО:</span></div>
 										<div>₽ 175&nbsp;000</div>
 									</li>
 								</ul>
@@ -305,9 +305,10 @@ export const SectionMusician = ({ baseUrl }) => {
 									</li>
 									<li>
 										<div>Правки:</div>
-										<div> Правки до&nbspполной сдачи</div>
+										<div> Правки до&nbsp;полной сдачи</div>
 									</li>
 									<li>
+										<div><span>ВСЕГО:</span></div>
 										<div>По договоренности</div>
 									</li>
 								</ul>

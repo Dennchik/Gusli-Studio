@@ -11,7 +11,7 @@
 		grid-template-columns: 1fr 1fr;
 	}
 
-	@include screen-690 {
+	@include max-690 {
 		grid-template-columns: auto;
 	}
 
@@ -66,7 +66,7 @@
 	&__footer {
 		padding-top: 4rem;
 
-		@include screen-690 {
+		@include max-690 {
 			display: flex;
 			justify-content: center;
 		}
@@ -123,7 +123,7 @@
 			background: #392b7c;
 		}
 
-		@include screen-375 {
+		@include max-375 {
 			width: 100%;
 			text-align: center;
 		}

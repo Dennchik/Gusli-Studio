@@ -17,7 +17,7 @@
 		width: 6rem;
 		height: 100%;
 
-		@include screen-690 {
+		@include max-690 {
 			width: 3rem;
 		}
 
@@ -91,7 +91,7 @@
 		position: absolute;
 		padding-right: 6rem;
 
-		@include screen-690 {
+		@include max-690 {
 			padding-right: 3.4rem;
 		}
 	}
@@ -146,7 +146,7 @@
 		text-align: left;
 		letter-spacing: 1.5px;
 		text-shadow: rgb(0, 0, 0) 1px 0 10px;
- 
+
 		@include screen-490 {
 			font-size: 14px;
 		}
