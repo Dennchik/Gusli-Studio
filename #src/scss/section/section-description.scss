@@ -10,6 +10,7 @@
 		height: 100%;
 		min-height: 100vh;
 		overflow: hidden;
+		@extend .gradient-neon-color;
 
 		&:not(:first-child) {
 			&::before {

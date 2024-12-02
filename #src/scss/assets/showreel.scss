@@ -11,8 +11,8 @@
 	&__content {
 		position: absolute;
 		padding-right: 6rem;
-		pointer-events: none;
 	}
+
 	// .main-video__box
 	&__box {
 		height: 100vh;
@@ -27,15 +27,15 @@
 		}
 	}
 }
-.vjs-control-bar,
-.vjs-modal-dialog,
-.vjs-loading-spinner,
-.vjs-text-track-display,
-.video-js .vjs-control-bar,
-.video-js .vjs-big-play-button {
-	display: none;
-}
+// .vjs-control-bar,
+// .vjs-modal-dialog,
+// .vjs-loading-spinner,
+// .vjs-text-track-display,
+// .video-js .vjs-control-bar,
+// .video-js .vjs-big-play-button {
+// 	display: none;
+// }
 
-.player-id-dimensions {
-	width: 100% !important;
-}
+// .player-id-dimensions {
+// 	width: 100% !important;
+// }

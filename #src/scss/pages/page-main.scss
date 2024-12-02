@@ -230,7 +230,7 @@
 	// .main-content__questions
 	&__questions {
 		position: relative;
-		background: rgb(25, 19, 47);
+		@extend .gradient-neon-color;
 	}
 
 	// .main-content__services

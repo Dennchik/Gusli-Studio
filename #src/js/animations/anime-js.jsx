@@ -4,10 +4,13 @@ import anime from 'animejs';
 
 export function buttonShow() {
 	let drawer_open = false;
-	document.querySelector('._open-button').addEventListener(
-		'mouseup', function () {
-			cta_button_hide.play();
-		});
+	const openButtons = document.querySelectorAll('._open-button');
+	openButtons.forEach(openButton => {
+		openButton.addEventListener(
+			'mouseup', function () {
+				cta_button_hide.play();
+			});
+	});
 
 	document.querySelector('._close-button').addEventListener(
 		'mouseup', function () {
@@ -80,7 +83,7 @@ export function timeLineHeaderItem() {
 		targets: '.header__item',
 		opacity: [0, 1],
 		translateY: [-100, 0],
-		delay: anime.stagger(100, {start: 100}),
+		delay: anime.stagger(100, { start: 100 }),
 		easing: 'easeInOutSine',
 		begin: function (anim) {
 			anim.animatables.forEach(function (animatable) {
@@ -89,7 +92,7 @@ export function timeLineHeaderItem() {
 		}
 	}).add({
 		targets: '.header__item',
-		delay: anime.stagger(100, {start: 500}),
+		delay: anime.stagger(100, { start: 500 }),
 		easing: 'easeInOutSine',
 	}, '-=250').add({
 		targets: '.el-logo',
@@ -130,7 +133,7 @@ export function fadeInSlide() {
 		targets: '.swiper-slide-active .main-slide__title',
 		opacity: [0, 1],
 		translateY: [80, 0],
-		delay: anime.stagger(100, {start: 500}),
+		delay: anime.stagger(100, { start: 500 }),
 		easing: 'easeInOutSine',
 		duration: 1000,
 		begin: function (anim) {
@@ -142,7 +145,7 @@ export function fadeInSlide() {
 		targets: '.swiper-slide-active .main-slide__text',
 		opacity: [0, 1],
 		translateY: [100, 0],
-		delay: anime.stagger(100, {start: 500}),
+		delay: anime.stagger(100, { start: 500 }),
 		duration: 1000,
 		easing: 'easeInOutSine',
 		begin: function (anim) {

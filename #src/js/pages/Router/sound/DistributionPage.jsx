@@ -12,12 +12,13 @@ import { Offer } from '../../../components/chunks/Offer.jsx';
 import { Answers } from '../../../components/Answers.jsx';
 import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
 import { FormModal } from '../../../components/layouts/FormModal.jsx';
-import { SectionBits } from '../../../components/categories/sound/SectionBits.jsx';
+import { SectionDistribution } from '../../../components/categories/sound/SectionDistribution.jsx';
 
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';
-function BitsPage() {
+
+function DistributionPage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	useGSAP(
 		() => {
@@ -51,7 +52,7 @@ function BitsPage() {
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
 						<section className="main-content__musician">
-							<SectionBits baseUrl={baseUrl} isHomePage={true} />
+							<SectionDistribution baseUrl={baseUrl} isHomePage={true} />
 						</section>
 						<section className="main-content__offer">
 							<Offer baseUrl={baseUrl} />
@@ -82,4 +83,4 @@ function BitsPage() {
 		</>
 	);
 }
-export default BitsPage;
+export default DistributionPage;

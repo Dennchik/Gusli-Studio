@@ -447,7 +447,7 @@ export const ServiceSound = ({ baseUrl }) => {
 									</a>
 								</div>
 								<div className="services-slide__column line">
-									<a href={getPath('services/sound/bits.html')} className="services-slide__content">
+									<a href={getPath('services/sound/distribution.html')} className="services-slide__content">
 										<div className="services-slide__image el">
 											<div className="services-slide__svg">
 												<svg viewBox="0 0 700 430">
@@ -497,7 +497,7 @@ export const ServiceSound = ({ baseUrl }) => {
 												)}
 											</picture>
 											<div className="services-slide__text">
-												<p>Биты</p>
+												<p>Дистрибуция</p>
 												<p>от 5 000₽</p>
 											</div>
 										</div>

@@ -19,12 +19,8 @@ export const ServiceVideo = ({ baseUrl }) => {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
 	useEffect(() => {
-		// const initSwiper = document.querySelector('.services-slide__body');
-		// if (isMobile) {
-		// initSwiper.classList.add('_swiper');
 		buildSwiper();
 		Slide();
-		// }
 	}, []);
 
 	useEffect(() => {

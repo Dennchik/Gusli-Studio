@@ -90,9 +90,7 @@ export const VudeoSlide = ({ baseUrl }) => {
 						<source src={getPath('img/audio/showreel-2.mp4')}
 							type="video/mp4" />
 					</video>
-
 				</div>
-
 				<div className="main-video__content _container">
 					<h1 className="main-slide__title el-slidetitle h1_01901">
 						<span>Видеопродакшн. Создаем</span>
@@ -102,7 +100,14 @@ export const VudeoSlide = ({ baseUrl }) => {
 						<i className="icon-angles-left-solid _icon"></i>Подготовим КП, а именно напишем идеи и сделаем смету
 						<i className="icon-angles-right-solid _icon"></i>
 					</div>
+					<div className="offer-container__button _open-button">
+						<button className="order-button btn-grad"
+							type={'button'}>
+							<span>оставить заявку</span>
+						</button>
+					</div>
 				</div>
+
 			</div>
 		</div>
 	);

@@ -72,8 +72,8 @@ export const app = {
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
-			bits: {
-				import: ['./#src/js/pages/services/sound/bits.jsx'],
+			distribution: {
+				import: ['./#src/js/pages/services/sound/distribution.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},

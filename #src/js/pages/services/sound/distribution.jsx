@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import BitsPage from '../../Router/sound/BitsPage.jsx';
+import DistributionPage from '../../Router/sound/DistributionPage.jsx';
 
 createRoot(document.querySelector('.page')).render(
-	<BitsPage />,
+	<DistributionPage />,
 );
