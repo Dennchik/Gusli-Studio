@@ -38,16 +38,16 @@ export const Partners = () => {
 									<div className="partners-slide__image">
 										<picture> {isWebpSupported()
 											? <img src={'img/main/partners/partn-1.webp'}
-												alt="Игорь Угольников" />
+														 alt="Игорь Угольников" />
 											: <img src={'img/main/partners/partn-1.png'}
-												alt="Игорь Угольников" />}
+														 alt="Игорь Угольников" />}
 										</picture>
 									</div>
 									<div className="box partners-slide__title el"> Игорь
 										Угольников
 									</div>
-									<div className="partners-slide__text">Советский и
-										российский актёр, кинорежиссёр, сценарист, продюсер,
+									<div className="partners-slide__text">Советский
+										и&nbsp;российский актёр, кинорежиссёр, сценарист, продюсер,
 										телеведущий.
 									</div>
 								</div>
@@ -57,15 +57,16 @@ export const Partners = () => {
 									<div className="partners-slide__image">
 										<picture> {isWebpSupported()
 											? <img src={'img/main/partners/partn_2.webp'}
-												alt="Маргарита Калан" />
+														 alt="Маргарита Калан" />
 											: <img src={'img/main/partners/partn_2.jpg'}
-												alt="Маргарита Калан" />}
+														 alt="Маргарита Калан" />}
 										</picture>
 									</div>
 									<div className="partners-slide__title">Маргарита Калан</div>
 									<div className="partners-slide__text">
-										Певица, композитор, поэтесса. Родилась в г. Обнинск.
-										Закончив гимназию и муз.школу поступила в МСИ.
+										Певица, композитор, поэтесса. Родилась
+										в&nbsp;г.&nbsp;Обнинск.
+										Закончив гимназию и&nbsp;муз.школу поступила в&nbsp;МСИ.
 									</div>
 								</div>
 							</div>
@@ -74,14 +75,15 @@ export const Partners = () => {
 									<div className="partners-slide__image">
 										<picture> {isWebpSupported()
 											? <img src={'img/main/partners/partn_3.webp'}
-												alt="Иеромонах Фотий" />
+														 alt="Иеромонах Фотий" />
 											: <img src={'img/main/partners/partn_3.jpg'}
-												alt="Иеромонах Фотий" />}
+														 alt="Иеромонах Фотий" />}
 										</picture>
 									</div>
 									<div className="partners-slide__title">Епископ Иосиф</div>
 									<div className="partners-slide__text">Викарий патриарха
-										Московского и всея Руси. Наместник Оптиной пустыни.
+										Московского и&nbsp;всея&nbsp;Руси. Наместник Оптиной
+										пустыни.
 										Церковный историк.
 									</div>
 								</div>
@@ -91,14 +93,14 @@ export const Partners = () => {
 									<div className="partners-slide__image">
 										<picture> {isWebpSupported()
 											? <img src={'@@webRoot/img/main/partners/partn_4.webp'}
-												alt="Алексей Егоров" />
+														 alt="Алексей Егоров" />
 											: <img src={'img/main/partners/partn_4.jpg'}
-												alt="Алексей Егоров" />}
+														 alt="Алексей Егоров" />}
 										</picture>
 									</div>
 									<div className="partners-slide__title">Алексей Егоров</div>
 									<div className="partners-slide__text">Российский
-										боксер-профессионал, выступающий в первой тяжёлой
+										боксер-профессионал, выступающий в&nbsp;первой тяжёлой
 										весовой категории. Мастер спорта.
 									</div>
 								</div>
@@ -109,9 +111,9 @@ export const Partners = () => {
 										<picture>
 											{isWebpSupported()
 												? <img src={'img/main/partners/partn_6.webp'}
-													alt="Епископ Иосиф<" />
+															 alt="Епископ Иосиф<" />
 												: <img src={'img/main/partners/partn_6.jpg'}
-													alt="Епископ Иосиф " />}
+															 alt="Епископ Иосиф " />}
 										</picture>
 									</div>
 									<div className="partners-slide__title">Иеромонах Фотий</div>
@@ -125,14 +127,14 @@ export const Partners = () => {
 									<div className="partners-slide__image">
 										<picture> {isWebpSupported()
 											? <img src={'@@webRoot/img/main/partners/partn_5.webp'}
-												alt="Александр Яковлев" />
+														 alt="Александр Яковлев" />
 											: <img src={'@@webRoot/img/main/partners/partn_5.jpg'}
-												alt="Александр Яковлев" />}
+														 alt="Александр Яковлев" />}
 										</picture>
 									</div>
 									<div className="partners-slide__title">Александр Яковлев</div>
 									<div className="partners-slide__text">Российский
-										боксер-профессионал, выступающий в первой тяжёлой
+										боксер-профессионал, выступающий в&nbsp;первой тяжёлой
 										весовой
 										категории. Мастер спорта.
 									</div>

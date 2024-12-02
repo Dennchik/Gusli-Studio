@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 
 //* ------------------------ Component's MainSlide -----------------------------
 
-export const MainSlide = ({ baseUrl }) => {
+export const MainSlide = ({baseUrl}) => {
 	const videoRef = useRef(null);
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
@@ -15,27 +15,36 @@ export const MainSlide = ({ baseUrl }) => {
 			// Проверка видимости видео
 			const isVideoInView = () => {
 				const videoTop = video.getBoundingClientRect().top;
-				return videoTop > -400;
+				return videoTop > -300;
 			};
-			// Автоматическое воспроизведение видео при монтировании, если оно в зоне видимости
+			// Автоматическое воспроизведение видео при монтировании, если оно в зоне
+			// видимости
 			const playVideo = async () => {
-				if (isVideoInView()) {
+				if (isVideoInView() && video.paused) {
 					try {
 						await video.play();
 						console.log('Видео воспроизводится');
 					} catch (err) {
-						console.warn('Не удалось воспроизвести видео:', err);
+						// Игнорируем AbortError, другие ошибки логируем
+						if (err.name !== 'AbortError') {
+							console.warn('Не удалось воспроизвести видео:', err);
+						}
 					}
 				} else {
 					console.log('Видео вне видимости, воспроизведение пропущено');
 				}
 			};
-			playVideo();
+			// Выполняем проверку при монтировании
+			void playVideo();
 
 			// Обработчик клика для управления воспроизведением
 			const handleVideoClick = () => {
 				if (video.paused) {
-					video.play();
+					video.play().catch(err => {
+						if (err.name !== 'AbortError') {
+							console.warn('Не удалось воспроизвести видео:', err);
+						}
+					});
 				} else {
 					video.pause();
 				}
@@ -43,20 +52,20 @@ export const MainSlide = ({ baseUrl }) => {
 
 			// Обработчик события прокрутки
 			const handleScroll = () => {
-				const videoElement = videoRef.current;
+				if (!video) return;
 
 				// Получаем расстояние от верхней границы видео до верхней части экрана
-				const videoTop = videoElement.getBoundingClientRect().top;
+				const videoTop = video.getBoundingClientRect().top;
 
 				// Условие для паузы или воспроизведения
-				if (videoTop < -400) {
-					if (!video.paused) {
-						video.pause();
-					}
-				} else if (videoTop > -400) {
-					if (video.paused) {
-						video.play();
-					}
+				if (videoTop < -300 && !video.paused) {
+					video.pause();
+				} else if (videoTop > -300 && video.paused) {
+					video.play().catch(err => {
+						if (err.name !== 'AbortError') {
+							console.warn('Не удалось воспроизвести видео:', err);
+						}
+					});
 				}
 			};
 
@@ -73,7 +82,6 @@ export const MainSlide = ({ baseUrl }) => {
 	}, []);
 
 
-
 	return (
 		<div className="main-video">
 			<div className="main-video__body">
@@ -85,14 +93,11 @@ export const MainSlide = ({ baseUrl }) => {
 						className="video-js"
 						preload="auto"
 						loop
-						muted
-					>
+						muted>
 						<source src={getPath('img/audio/showreel-1.mp4')}
-							type="video/mp4" />
+										type="video/mp4" />
 					</video>
-
 				</div>
-
 				<div className="main-video__content _container">
 					<h1 className="main-slide__title el-slidetitle h1_01901">
 						<span>Профессиональная </span>

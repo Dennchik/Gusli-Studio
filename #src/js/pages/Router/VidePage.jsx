@@ -7,7 +7,7 @@ import returnToSavedPosition from '../../modules/return-position.js';
 import { applyParallax } from '../../animations/animations.jsx';
 
 import { Header } from '../../components/layouts/Header.jsx';
-import { VudeoSlide } from '../../components/sections/VudeoSlide.jsx';
+import { VideoSlide } from '../../components/sections/VideoSlide.jsx';
 import { ServiceVideo } from '../../components/categories/ServiceVideo.jsx';
 import { Footer } from '../../components/layouts/Footer.jsx';
 import { MenuFloat } from '../../components/layouts/Menu-float.jsx';
@@ -15,6 +15,7 @@ import { FormModal } from '../../components/layouts/FormModal.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '..';
+
 function VidePage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -52,7 +53,7 @@ function VidePage() {
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
 						<section className="main-content__slide">
-							<VudeoSlide baseUrl={baseUrl} />
+							<VideoSlide baseUrl={baseUrl} />
 						</section>
 						<section className="main-content__services">
 							<ServiceVideo baseUrl={baseUrl} />
@@ -75,4 +76,5 @@ function VidePage() {
 		</>
 	);
 }
+
 export default VidePage;

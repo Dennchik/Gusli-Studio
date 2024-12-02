@@ -4,29 +4,16 @@
 	@font-face {
 		font-family: $font_name;
 		font-display: swap;
-		src:
-			url('#{$font-path}/#{$file_name}.eot') format('eot'),
-			url('#{$font-path}/#{$file_name}.woff') format('woff'),
-			url('#{$font-path}/#{$file_name}.woff2') format('woff2'),
-			url('#{$font-path}/#{$file_name}.ttf') format('truetype');
+		src: url('#{$font-path}/#{$file_name}.eot') format('eot'),
+		url('#{$font-path}/#{$file_name}.woff') format('woff'),
+		url('#{$font-path}/#{$file_name}.woff2') format('woff2'),
+		url('#{$font-path}/#{$file_name}.ttf') format('truetype');
 		font-weight: #{$weight};
 		font-style: #{$style};
 	}
 }
 
 //* ----------------------------------------------------------------------------
-
-@mixin max-690 {
-	@media (max-width: 690px) {
-		@content;
-	}
-}
-@mixin max-490 {
-	@media (max-width: 490px) {
-		@content;
-	}
-}
-
 @mixin screen-1920 {
 	@media screen and (max-width: 1920px) {
 		@content;
@@ -69,6 +56,12 @@
 	}
 }
 
+@mixin max-690 {
+	@media (max-width: 690px) {
+		@content;
+	}
+}
+
 @mixin screen-580 {
 	@media (max-width: 580px) {
 		@content;
@@ -81,20 +74,20 @@
 	}
 }
 
+@mixin max-490 {
+	@media (max-width: 490px) {
+		@content;
+	}
+}
+
 @mixin screen-425 {
 	@media screen and (max-width: 425px) {
 		@content;
 	}
 }
 
-// @mixin screen-375 {
-// 	@media screen and (max-width: 375px) {
-// 		@content;
-// 	}
-// }
-
 @mixin max-375 {
-	@media (max-width: 375px) {
+	@media screen and (max-width: 375px) {
 		@content;
 	}
 }
@@ -289,6 +282,12 @@
 
 @mixin minmax-320-690 {
 	@media (min-width: 330.98px) and (max-width: 690px) {
+		@content;
+	}
+}
+
+@mixin minmax-320-490 {
+	@media (min-width: 320px) and (max-width: 490px) {
 		@content;
 	}
 }

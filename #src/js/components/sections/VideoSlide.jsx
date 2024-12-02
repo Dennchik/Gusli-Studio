@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 
 //* ------------------------ Component's MainSlide -----------------------------
 
-export const VudeoSlide = ({ baseUrl }) => {
+export const VideoSlide = ({baseUrl}) => {
 	const videoRef = useRef(null);
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
@@ -15,27 +15,36 @@ export const VudeoSlide = ({ baseUrl }) => {
 			// Проверка видимости видео
 			const isVideoInView = () => {
 				const videoTop = video.getBoundingClientRect().top;
-				return videoTop > -400;
+				return videoTop > -300;
 			};
-			// Автоматическое воспроизведение видео при монтировании, если оно в зоне видимости
+			// Автоматическое воспроизведение видео при монтировании, если оно в зоне
+			// видимости
 			const playVideo = async () => {
-				if (isVideoInView()) {
+				if (isVideoInView() && video.paused) {
 					try {
 						await video.play();
 						console.log('Видео воспроизводится');
 					} catch (err) {
-						console.warn('Не удалось воспроизвести видео:', err);
+						// Игнорируем AbortError, другие ошибки логируем
+						if (err.name !== 'AbortError') {
+							console.warn('Не удалось воспроизвести видео:', err);
+						}
 					}
 				} else {
 					console.log('Видео вне видимости, воспроизведение пропущено');
 				}
 			};
-			playVideo();
+			// Выполняем проверку при монтировании
+			void playVideo();
 
 			// Обработчик клика для управления воспроизведением
 			const handleVideoClick = () => {
 				if (video.paused) {
-					video.play();
+					video.play().catch(err => {
+						if (err.name !== 'AbortError') {
+							console.warn('Не удалось воспроизвести видео:', err);
+						}
+					});
 				} else {
 					video.pause();
 				}
@@ -43,20 +52,20 @@ export const VudeoSlide = ({ baseUrl }) => {
 
 			// Обработчик события прокрутки
 			const handleScroll = () => {
-				const videoElement = videoRef.current;
+				if (!video) return;
 
 				// Получаем расстояние от верхней границы видео до верхней части экрана
-				const videoTop = videoElement.getBoundingClientRect().top;
+				const videoTop = video.getBoundingClientRect().top;
 
 				// Условие для паузы или воспроизведения
-				if (videoTop < -400) {
-					if (!video.paused) {
-						video.pause();
-					}
-				} else if (videoTop > -400) {
-					if (video.paused) {
-						video.play();
-					}
+				if (videoTop < -300 && !video.paused) {
+					video.pause();
+				} else if (videoTop > -300 && video.paused) {
+					video.play().catch(err => {
+						if (err.name !== 'AbortError') {
+							console.warn('Не удалось воспроизвести видео:', err);
+						}
+					});
 				}
 			};
 
@@ -72,8 +81,6 @@ export const VudeoSlide = ({ baseUrl }) => {
 		}
 	}, []);
 
-
-
 	return (
 		<div className="main-video">
 			<div className="main-video__body">
@@ -88,7 +95,7 @@ export const VudeoSlide = ({ baseUrl }) => {
 						muted
 					>
 						<source src={getPath('img/audio/showreel-2.mp4')}
-							type="video/mp4" />
+										type="video/mp4" />
 					</video>
 				</div>
 				<div className="main-video__content _container">
@@ -97,12 +104,12 @@ export const VudeoSlide = ({ baseUrl }) => {
 						<span>видеоролики под ключ</span>
 					</h1>
 					<div className="main-slide__text t_01901">
-						<i className="icon-angles-left-solid _icon"></i>Подготовим КП, а именно напишем идеи и сделаем смету
-						<i className="icon-angles-right-solid _icon"></i>
+						<i className="icon-angles-left-solid _icon"></i>&nbsp;Подготовим КП,
+						а&nbsp;именно напишем идеи и сделаем смету&nbsp;«
 					</div>
 					<div className="offer-container__button _open-button">
 						<button className="order-button btn-grad"
-							type={'button'}>
+										type={'button'}>
 							<span>оставить заявку</span>
 						</button>
 					</div>
@@ -113,6 +120,6 @@ export const VudeoSlide = ({ baseUrl }) => {
 	);
 };
 
-VudeoSlide.propTypes = {
+VideoSlide.propTypes = {
 	baseUrl: PropTypes.string.isRequired,
 };

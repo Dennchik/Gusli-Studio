@@ -36,54 +36,68 @@
 	}
 }
 
-// @import '_variables.scss';
 .grad_underline {
 	/* Определяем фоновые изображения */
 	transition: background-size 400ms;
 
 	/* Размер фона для каждого слоя */
 	background-image: linear-gradient(to left, transparent, transparent),
-		linear-gradient(
-			to left,
-			var(--background-selected),
-			var(--font-color-active)
-		);
+	linear-gradient(
+									to left,
+									var(--background-selected),
+									var(--font-color-active)
+	);
 
 	/* Позиционирование фона */
 	background-repeat: no-repeat;
 
 	/* Повторение фона */
-	background-position:
-		100% 100%,
-		/* Первое изображение */ 0 100%; /* Второе изображение */
+	background-position: 100% 100%,
+		/* Первое изображение */
+	0 100%; /* Второе изображение */
 
 	/* Переход для изменения размера фона */
-	background-size:
-		100% 1px,
-		/* Первое изображение */ 0 1px; /* Второе изображение */
+	background-size: 100% 1px,
+		/* Первое изображение */
+	0 1px; /* Второе изображение */
 }
 
 .gradient-black {
-	background: linear-gradient(-45deg, #20193c, #020101 70%);
+	background-image: linear-gradient(-45deg, #1b0d39, #020101 70%);
 }
 
 .gradient-default {
 	background: linear-gradient(
-		to left,
-		rgb(11, 8, 19) 0%,
-		rgb(43, 38, 68) 0%,
-		rgb(11, 8, 19) 100%
+									to left,
+									rgb(11, 8, 19) 0%,
+									rgb(43, 38, 68) 0%,
+									rgb(11, 8, 19) 100%
 	);
 }
+
 .gradient-neon-color {
-	background: linear-gradient(-45deg, rgb(51, 39, 100), rgb(11, 8, 19) 70%);
+	// background-image: linear-gradient(to left, #1b0d39, #0d081c 70%);
+	background: radial-gradient(
+									at 2.2240887065805293% 71.24496017695185%,
+									$custom-100, $custom-200, $custom-300),
+	radial-gradient(at -58.35886343001991% 70.7398580943191%,
+									$custom-400, $custom-700, $custom-700),
+	radial-gradient(at 134.35886343001991% 12.7398580943191%,
+									$custom-400, $custom-500, $custom-600),
+	radial-gradient(at 54.35886343001991% 94.7398580943191%,
+									$custom-400, $custom-500, $custom-600)
 }
+
+//* ----------------------------------------------------------------------------
+
+//* ----------------------------------------------------------------------------
+
 .gradient-spec {
 	background-image: linear-gradient(
-		-45deg,
-		#170e31 0%,
-		rgba(254, 89, 194, 0.3),
-		#170e31 83%
+									-45deg,
+									rgb(23, 14, 49) 0%,
+									rgba(254, 89, 194, 0.3),
+									rgb(23, 14, 49) 83%
 	);
 	background-size: 200% auto;
 	transition: background-position 0.4s ease-in-out;
@@ -95,10 +109,10 @@
 
 .gradient-spec-comfort {
 	background-image: linear-gradient(
-		-45deg,
-		#170e31 0%,
-		rgba(200, 255, 0, 0.3),
-		#170e31 83%
+									-45deg,
+									#170e31 0%,
+									rgba(200, 255, 0, 0.3),
+									#170e31 83%
 	);
 	background-size: 200% auto;
 	transition: background-position 0.4s ease-in-out;
@@ -109,7 +123,7 @@
 }
 
 .liner-gradient-box {
-	background: linear-gradient(45deg, #10133a 55%, #47208a73 10%, #10133a) /
+	background-image: linear-gradient(45deg, #10133a 55%, #47208a73 10%, #10133a) /
 		cover no-repeat;
 }
 
@@ -120,44 +134,44 @@
 }
 
 .gradient-header {
-	background: linear-gradient(
-		-45deg,
-		#1a1530,
-		#332764 60%,
-		rgb(42, 53, 20) 10%,
-		#000 70%
+	background-image: linear-gradient(
+									-45deg,
+									#1a1530,
+									#332764 60%,
+									rgb(42, 53, 20) 10%,
+									#000 70%
 	);
 }
 
 .gradient-services {
-	background: linear-gradient(
-		to right,
-		#050202ff 20%,
-		#1c153f 50%,
-		#050202ff 80%
+	background-image: linear-gradient(
+									to right,
+									#050202ff 20%,
+									#1c153f 50%,
+									#050202ff 80%
 	);
 }
 
 .gradient-title {
-	background: linear-gradient(to top, #170e31 10%, #402e6b 50%, #1a1530 100%);
+	background-image: linear-gradient(to top, #170e31 10%, #402e6b 50%, #1a1530 100%);
 }
 
 .gradient-spec-active {
-	background: linear-gradient(-45deg, #04d9ff, #170e31 83%);
+	background-image: linear-gradient(-45deg, #04d9ff, #170e31 83%);
 	background-size: 200% 200%;
 }
 
 .gradient-border-right {
-	background: linear-gradient(
-		to right,
-		rgba(42, 53, 20, 0.685) 20%,
-		#332764 50%,
-		#2a3514 80%
+	background-image: linear-gradient(
+									to right,
+									rgba(42, 53, 20, 0.685) 20%,
+									#332764 50%,
+									#2a3514 80%
 	);
 }
 
 .gradient-border-left {
-	background: linear-gradient(to left top, #8164ff 40%, rgb(42, 53, 20) 70%);
+	background-image: linear-gradient(to left top, #8164ff 40%, rgb(42, 53, 20) 70%);
 }
 
 .icon-style {
@@ -173,10 +187,9 @@
 	z-index: -1;
 	transform: rotateX(15deg) translateZ(-10px);
 	color: rgba(23, 14, 49, 0.479);
-	text-shadow:
-		5px 0 5px $color,
-		0 0 40px rgba(125, 248, 255, 0.26),
-		0 0 20px rgba(204, 255, 0, 0.267);
+	text-shadow: 5px 0 5px $color,
+	0 0 10px rgba(125, 248, 255, 0.26),
+	0 0 10px rgba(204, 255, 0, 0.267);
 }
 
 // background: linear-gradient(to right, #04d9ff 20%, #ffff 50%, #04d9ff 80%);
@@ -196,52 +209,50 @@
 	display: block;
 	color: $neon-blue;
 	background-image: linear-gradient(
-			to right,
-			currentColor 0%,
-			$liquid-neon 8%,
-			transparent 8%,
-			transparent 92%,
-			$liquid-neon 92%,
-			currentColor 100%
-		),
-		linear-gradient(
-			to right,
-			currentColor 0%,
-			$liquid-neon 8%,
-			transparent 8%,
-			transparent 92%,
-			$liquid-neon 92%,
-			currentColor 100%
-		),
-		linear-gradient(
-			to bottom,
-			currentColor 0%,
-			$liquid-neon 11%,
-			transparent 11%,
-			transparent 89%,
-			$liquid-neon 89%,
-			currentColor 100%
-		),
-		linear-gradient(
-			to bottom,
-			currentColor 0%,
-			$liquid-neon 11%,
-			transparent 11%,
-			transparent 89%,
-			$liquid-neon 89%,
-			currentColor 100%
-		);
+									to right,
+									currentColor 0%,
+									$liquid-neon 8%,
+									transparent 8%,
+									transparent 92%,
+									$liquid-neon 92%,
+									currentColor 100%
+	),
+	linear-gradient(
+									to right,
+									currentColor 0%,
+									$liquid-neon 8%,
+									transparent 8%,
+									transparent 92%,
+									$liquid-neon 92%,
+									currentColor 100%
+	),
+	linear-gradient(
+									to bottom,
+									currentColor 0%,
+									$liquid-neon 11%,
+									transparent 11%,
+									transparent 89%,
+									$liquid-neon 89%,
+									currentColor 100%
+	),
+	linear-gradient(
+									to bottom,
+									currentColor 0%,
+									$liquid-neon 11%,
+									transparent 11%,
+									transparent 89%,
+									$liquid-neon 89%,
+									currentColor 100%
+	);
 	background-repeat: no-repeat;
-	background-position:
-		0 0,
-		0 100%,
-		0 0,
-		100% 0;
-	background-size:
-		100% 1px,
-		100% 1px,
-		1px 100%,
-		1px 100%;
+	background-position: 0 0,
+	0 100%,
+	0 0,
+	100% 0;
+	background-size: 100% 1px,
+	100% 1px,
+	1px 100%,
+	1px 100%;
 	inset: 0.7rem;
 }
 
@@ -310,5 +321,5 @@
 }
 
 .gradient-border-bottom {
-	background: linear-gradient(to left top, #8164ff 40%, rgb(42, 53, 20) 70%);
+	background-image: linear-gradient(to left top, #8164ff 40%, rgb(42, 53, 20) 70%);
 }

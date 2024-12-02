@@ -15,6 +15,7 @@ import { FormModal } from '../../components/layouts/FormModal.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '.';
+
 function HomePage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -54,7 +55,7 @@ function HomePage() {
 						<section className="main-content__slide">
 							<MainSlide baseUrl={baseUrl} />
 						</section>
-						<section className="main-content__services">
+						<section className="main-content__categories">
 							<Services baseUrl={baseUrl} />
 						</section>
 						<footer className="main-content__footer" id="footer">
@@ -70,13 +71,14 @@ function HomePage() {
 				<i className="icon-angle-down _button"></i>
 			</div>
 			<section className="page__form-modal"
-			// role="dialog"
-			// aria-labelledby="modalTitle"
-			// aria-modal="true"
+				// role="dialog"
+				// aria-labelledby="modalTitle"
+				// aria-modal="true"
 			>
 				<FormModal />
 			</section>
 		</>
 	);
 }
+
 export default HomePage;

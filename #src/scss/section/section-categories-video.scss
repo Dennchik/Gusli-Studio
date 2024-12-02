@@ -1,32 +1,22 @@
 @use '../core/all' as *;
 
 .categories-video {
+	// .categories-video_-body
+	&__body {
+		padding: 12rem 0;
+	}
+
 	.services {
 		// services__body
 		&__body {
-			padding-top: 10rem;
 			height: 100%;
-			min-height: 100vh;
 		}
 
-		&__content {
-			overflow: hidden;
-		}
-
-		// .services__title
-		&__title {
-			&:nth-child(1) {
-				&::after {
-					content: 'видео';
-				}
-			}
-		}
 	}
 
 	.services-slide {
-		padding-top: 30px;
-		padding-bottom: 30px;
 		overflow: hidden;
+
 		//  .services-slide__image
 		&__image {
 			width: 100%;
@@ -39,6 +29,7 @@
 				object-fit: cover;
 			}
 		}
+
 		// .services-slide__text
 		&__text {
 			flex-direction: column;

@@ -210,9 +210,8 @@
 			color: white;
 			font-size: 1.6rem;
 			font-weight: 500;
-			box-shadow:
-				0 10px 20px rgba(0, 0, 0, 0.1),
-				0 6px 6px rgba(0, 0, 0, 0.05);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1),
+			0 6px 6px rgba(0, 0, 0, 0.05);
 			transition: all 0.5s ease-in-out;
 			animation: shadow-pulse 1.5s infinite;
 		}

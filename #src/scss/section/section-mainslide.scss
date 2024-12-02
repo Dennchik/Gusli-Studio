@@ -145,12 +145,14 @@
 		max-width: 1100px;
 		text-align: left;
 		letter-spacing: 1.5px;
+		text-transform: uppercase;
 
 		@include screen-490 {
 			font-size: 14px;
 		}
+
 		._icon {
-			font-size: 18px;
+			font-size: 14px;
 		}
 	}
 

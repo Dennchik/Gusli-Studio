@@ -1,3 +1,5 @@
+@use '../core/all' as *;
+
 .parallax {
 	position: absolute;
 	z-index: 0;
@@ -26,7 +28,6 @@
 		bottom: 0;
 		width: 100%;
 		height: 100%;
-		opacity: 0.5;
 
 		img {
 			position: absolute;
@@ -34,9 +35,9 @@
 			width: 100%;
 			height: 100%;
 			pointer-events: none;
-			opacity: 0.4;
+			opacity: 0.1;
 			object-fit: cover;
-			object-position: top left;
+			object-position: top center;
 			will-change: transform;
 
 			&:nth-child(1) {
@@ -48,7 +49,15 @@
 				opacity: 0.2;
 				backdrop-filter: blur(50px);
 			}
+
+			@include minmax-320-490 {
+				object-position: calc(-100px + (0 - (-100)) * ((100vw - 320px) / (490 - 320)));
+			}
+			@include screen-320 {
+				object-position: -100px 0;
+			}
 		}
+
 	}
 
 	&__image-achieve {
@@ -57,7 +66,7 @@
 
 	// .parallax__image-services
 	&__image-services {
-		object-position: bottom center !important;
+		object-position: bottom center;
 	}
 
 	&__services-company {

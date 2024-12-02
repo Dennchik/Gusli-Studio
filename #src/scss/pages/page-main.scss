@@ -80,9 +80,8 @@
 			right: 0;
 			visibility: hidden;
 			padding: 1.5rem 3rem;
-			transition:
-				transform 0.5s,
-				opacity 0.5s ease-in-out;
+			transition: transform 0.5s,
+			opacity 0.5s ease-in-out;
 			transform: translate3d(300px, 0, 0);
 			opacity: 0;
 			border: 1px $neon-blue-dark;
@@ -116,9 +115,9 @@
 		width: 100%;
 		height: 100%;
 		background: linear-gradient(
-			-45deg,
-			rgba(32, 25, 60, 70%),
-			rgba(2, 1, 1, 0.7) 70%
+										-45deg,
+										rgba(32, 25, 60, 70%),
+										rgba(2, 1, 1, 0.7) 70%
 		);
 		backdrop-filter: blur(10px);
 	}
@@ -138,33 +137,33 @@
 		top: 50%; /* Центрирование по вертикали */
 		left: 50%; /* Центрирование по горизонтали */
 		transform: translate(-50%, -50%) scaleX(0); /* Сжатие по ширине */
-		transform-origin: center; /* Точка трансформации - центр */
 		opacity: 0; /* Изначально невидимая */
 		animation: none; /* Без анимации по умолчанию */
-
 		transform-origin: center center; /* Точка трансформации - центр */
-		transition:
-			transform 1.75s ease,
-			opacity 1.75s ease; /* Плавные переходы */
-
+		transition: transform 1.75s ease,
+		opacity 1.75s ease; /* Плавные переходы */
 		background: linear-gradient(
-			-45deg,
-			rgba(32, 25, 60, 70%),
-			rgba(2, 1, 1, 0.7) 70%
+										-45deg,
+										rgba(32, 25, 60, 70%),
+										rgba(2, 1, 1, 0.7) 70%
 		);
+
 		// backdrop-filter: blur(10px);
 		&._show {
 			animation: expand-height 2s ease forwards; /* Запуск анимации */
 			opacity: 1; /* Сделать видимой */
 			border-width: 1px;
+
 			.modal__image {
 				opacity: 1;
 			}
 		}
+
 		&._hide {
 			animation: collapse-width 2s ease forwards; /* Обратная анимация */
 			opacity: 0; /* Исчезновение */
 		}
+
 		&._complete {
 			border: none; /* Полностью убираем границу */
 		}
@@ -231,12 +230,14 @@
 	&__questions {
 		position: relative;
 		@extend .gradient-neon-color;
+		
 	}
 
 	// .main-content__services
 	&__services {
 		position: relative;
 		z-index: 6;
+
 		.offer-container__body {
 			padding-bottom: 0;
 		}
@@ -245,7 +246,7 @@
 	// .main-content__offer
 	&__offer {
 		position: relative;
-		@extend .gradient-black;
+		background-color: $black-color;
 
 		&::before {
 			position: absolute;
@@ -253,9 +254,9 @@
 			height: 1px;
 			content: '';
 			background: linear-gradient(
-				to left top,
-				#8164ff 40%,
-				rgb(42, 53, 20) 70%
+											to left top,
+											#8164ff 40%,
+											rgb(42, 53, 20) 70%
 			);
 		}
 
@@ -266,9 +267,9 @@
 			height: 1px;
 			content: '';
 			background: linear-gradient(
-				to left top,
-				#8164ff 40%,
-				rgb(42, 53, 20) 70%
+											to left top,
+											#8164ff 40%,
+											rgb(42, 53, 20) 70%
 			);
 		}
 	}
@@ -277,8 +278,7 @@
 	&__footer {
 		position: relative;
 		z-index: 9;
-
-		@extend .gradient-black;
+		background-color: #020101;
 	}
 
 	// .main-content__categories-sound
@@ -308,9 +308,9 @@
 			height: 1px;
 			content: '';
 			background: linear-gradient(
-				to left top,
-				#8164ff 40%,
-				rgb(42, 53, 20) 70%
+											to left top,
+											#8164ff 40%,
+											rgb(42, 53, 20) 70%
 			);
 		}
 
@@ -320,9 +320,9 @@
 			height: 1px;
 			content: '';
 			background: linear-gradient(
-				to left top,
-				#8164ff 40%,
-				rgb(42, 53, 20) 70%
+											to left top,
+											#8164ff 40%,
+											rgb(42, 53, 20) 70%
 			);
 		}
 	}
@@ -343,6 +343,7 @@
 		background: $black-color;
 	}
 }
+
 /* Анимация открытия */
 @keyframes expand-height {
 	0% {
@@ -361,6 +362,7 @@
 		transform: translate(-50%, -50%) scaleX(1); /* Завершение */
 	}
 }
+
 /* Анимация закрытия */
 @keyframes collapse-width {
 	0% {
@@ -379,12 +381,13 @@
 		transform: translate(-50%, -50%) scaleX(0); /* Сжатие по ширине */
 	}
 }
+
 .hr-shelf {
 	margin: 0 auto !important;
 	padding: 0;
 	height: 6rem;
 	border: none;
 	border-bottom: 1px solid hsla(240, 100%, 67%, 0.295);
-	box-shadow: 0 20px 20px -20px #000000;
+	box-shadow: 0 20px 20px -20px #000;
 	width: 90%;
 }

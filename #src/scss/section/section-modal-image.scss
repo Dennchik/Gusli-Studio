@@ -4,7 +4,6 @@
 .modal {
 	// .modal__body
 	&__body {
-		// position: relative;
 		height: 100%;
 	}
 
@@ -12,7 +11,7 @@
 	&__close-button {
 		cursor: pointer;
 		position: absolute;
-		top: 4rem;
+		top: 12rem;
 		right: 5%;
 		display: flex;
 		justify-content: center;

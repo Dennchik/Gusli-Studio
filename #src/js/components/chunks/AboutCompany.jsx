@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 //* ----------------------------------------------------------------------------
-export const AboutCompany = ({ baseUrl }) => {
+export const AboutCompany = ({baseUrl}) => {
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
 	};
@@ -13,21 +13,25 @@ export const AboutCompany = ({ baseUrl }) => {
 					<div className="about-company__title">КОМПАНИЯ</div>
 					<div className="about-company__text">
 						<p>Наша медиа-группа представляет собой превосходную студию
-							звукозаписи и продюсерскую компанию. Мы специализируемся на
-							создании текстов, продюсировании, звукозаписи и развитии талантов.
-							Готовы к сотрудничеству с вами в любое время.</p>
+							звукозаписи и продюсерскую компанию. Мы&nbsp;специализируемся на
+							создании текстов, продюсировании, звукозаписи и&nbsp;развитии
+							талантов.
+							Готовы к&nbsp;сотрудничеству с&nbsp;вами в&nbsp;любое время.</p>
 						<p>Мы признаём и ценим значимость каждого проекта. Наше
 							обязательство - обеспечить высочайшее качество звукозаписи,
-							гибкость и терпение, необходимые для достижения вами высокого
-							уровня в конкурентной среде современного рынка.</p>
-						<p>В нашей студии вас ждёт дружелюбная и уютная атмосфера, создающая
-							идеальное окружение для раскрытия вашего таланта и создания ваших
+							гибкость и&nbsp;терпение, необходимые для&nbsp;достижения вами
+							высокого
+							уровня в&nbsp;конкурентной среде современного рынка.</p>
+						<p>В нашей студии вас ждёт дружелюбная и&nbsp;уютная атмосфера,
+							создающая
+							идеальное окружение для&nbsp;раскрытия вашего таланта
+							и&nbsp;создания ваших
 							лучших произведений.</p>
 					</div>
 				</div>
 				<div className="about-company__footer">
 					<a className="about-company__button"
-						href={getPath('about.html')}>читать всё</a>
+						 href={getPath('about.html')}>читать всё</a>
 				</div>
 			</div>
 			<div className="about-company__column el-2">
@@ -35,26 +39,26 @@ export const AboutCompany = ({ baseUrl }) => {
 					<div className="about-company__title">СЕРВИС</div>
 					<div className="about-company__item-services">
 						<i className="icon-microphone"></i>
-						<span>Мы предлагаем услуги аналоговой и цифровой записи, а также
-							микширования в широком спектре жанров.</span>
+						<span>Мы предлагаем услуги аналоговой и цифровой записи, а&nbsp;также
+							микширования в&nbsp;широком спектре жанров.</span>
 					</div>
 					<div className="about-company__item-services">
 						<i className="icon-fast-forward"></i>
-						<span>Наша студия привлекает великолепным интерьером и оборудованными
-							комфортабельными помещениями, идеально подходящими для создания
+						<span>Наша студия привлекает великолепным интерьером и&nbsp;оборудованными
+							комфортабельными помещениями, идеально подходящими для&nbsp;создания
 							лучших произведений.</span>
 					</div>
 					<div className="about-company__item-services">
 						<i className="icon-music"></i>
-						<span>В нашей студии мы внедряем передовое оборудование и программное
-							обеспечение для микширования, обеспечивая высочайшее качество
-							звучания ваших треков. Ваше творчество - наш приоритет.</span>
+						<span>В нашей студии мы внедряем передовое оборудование и&nbsp;программное
+							обеспечение для&nbsp;микширования, обеспечивая высочайшее качество
+							звучания ваших треков. Ваше творчество&nbsp;- наш приоритет.</span>
 					</div>
 				</div>
 				<div className="about-company__footer">
 					<a className="about-company__button"
-						href={getPath('services.html')}
-						type="button">читать всё</a>
+						 href={getPath('services.html')}
+						 type="button">читать всё</a>
 				</div>
 			</div>
 			<div className="about-company__column el-3">
@@ -77,7 +81,7 @@ export const AboutCompany = ({ baseUrl }) => {
 									<a href="#">Георгий Дудунов</a>
 								</div>
 								<div className="team-mates__text">
-									<p>Георгий - основатель студии и ведущий звукорежиссер.
+									<p>Георгий - основатель студии и&nbsp;ведущий звукорежиссер.
 										Engineer.</p>
 								</div>
 							</li>
@@ -99,7 +103,8 @@ export const AboutCompany = ({ baseUrl }) => {
 									<a href="#">Ryan Gosling</a>
 								</div>
 								<div className="team-mates__text">
-									<p>Райан - ассистент звукорежиссера в студии звукозаписи.</p>
+									<p>Райан - ассистент звукорежиссера в&nbsp;студии
+										звукозаписи.</p>
 								</div>
 							</li>
 						</ul>
@@ -120,7 +125,8 @@ export const AboutCompany = ({ baseUrl }) => {
 									<a href="#">Ryan Gosling</a>
 								</div>
 								<div className="team-mates__text">
-									<p>Райан - ассистент звукорежиссера в студии звукозаписи.</p>
+									<p>Райан - ассистент звукорежиссера в&nbsp;студии
+										звукозаписи.</p>
 								</div>
 							</li>
 						</ul>

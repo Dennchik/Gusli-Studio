@@ -13,7 +13,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function Achievements() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-	const [selectedRadio, setSelectedRadio] = useState('1'); // Состояние для выбранной радио-кнопки
+	const [selectedRadio, setSelectedRadio] = useState('1'); // Состояние для
+																													 // выбранной
+																													 // радио-кнопки
 	const handleRadioChange = (e) => {
 		setSelectedRadio(e.target.value); // Устанавливаем выбранное значение
 	};
@@ -35,9 +37,8 @@ export function Achievements() {
 	// const [scale, setScale] = useState(1);
 	// useEffect(() => {
 	// 	const handleResize = () => {
-	// 		const newScale = 2.4 + (1 - 2.4) * ((window.innerWidth - 320) / (1920 - 320));
-	// 		setScale(newScale);
-	// 	};
+	// 		const newScale = 2.4 + (1 - 2.4) * ((window.innerWidth - 320) / (1920
+	// - 320)); setScale(newScale); };
 
 	// 	handleResize(); // Установим начальный масштаб
 	// 	window.addEventListener('resize', handleResize);
@@ -55,9 +56,9 @@ export function Achievements() {
 					<picture>
 						{isWebpSupported()
 							? <img className='parallax__image-achieve bg'
-								src={'img/about/pattern.webp'} alt="image" />
+										 src={'img/about/pattern.webp'} alt="image" />
 							: <img className='parallax__image-achieve bg'
-								src={'img/about/pattern.png'} alt="image" />}
+										 src={'img/about/pattern.png'} alt="image" />}
 					</picture>
 					<div className="parallax__image-blur">
 						<picture>
@@ -78,28 +79,28 @@ export function Achievements() {
 					<section className="gallery">
 						<div className="gallery__items">
 							<input type="radio" id="in-1" value="1" name="tractor"
-								checked={selectedRadio === '1'}
-								onChange={handleRadioChange}
+										 checked={selectedRadio === '1'}
+										 onChange={handleRadioChange}
 							/>
 							<input type="radio" id="in-2" value="2" name="tractor"
-								checked={selectedRadio === '2'}
-								onChange={handleRadioChange}
+										 checked={selectedRadio === '2'}
+										 onChange={handleRadioChange}
 							/>
 							<input type="radio" id="in-3" value="3" name="tractor"
-								checked={selectedRadio === '3'}
-								onChange={handleRadioChange}
+										 checked={selectedRadio === '3'}
+										 onChange={handleRadioChange}
 							/>
 							<input type="radio" id="in-4" value="4" name="tractor"
-								checked={selectedRadio === '4'}
-								onChange={handleRadioChange}
+										 checked={selectedRadio === '4'}
+										 onChange={handleRadioChange}
 							/>
 							<input type="radio" id="in-5" value="5" name="tractor"
-								checked={selectedRadio === '5'}
-								onChange={handleRadioChange}
+										 checked={selectedRadio === '5'}
+										 onChange={handleRadioChange}
 							/>
 							<input type="radio" id="in-6" value="6" name="tractor"
-								checked={selectedRadio === '6'}
-								onChange={handleRadioChange}
+										 checked={selectedRadio === '6'}
+										 onChange={handleRadioChange}
 							/>
 							{/* --------------- gallery__card sv-1 --------------- */}
 							<article className="gallery__card sv-1">
@@ -123,12 +124,16 @@ export function Achievements() {
 									</div>
 
 									<div className="gallery__text">
-										<p>Сертификат об&nbsp;обучении<br />по&nbsp;программе &quot;Акселератор Социальное&nbsp;предпринимательство&quot;</p>
+										<p>Сертификат
+											об&nbsp;обучении<br />по&nbsp;программе &quot;Акселератор
+											Социальное&nbsp;предпринимательство&quot;</p>
 									</div>
 									<div className="gallery__footer">
-										<label htmlFor="in-6" className="icon-arrow-left otra"></label>
+										<label htmlFor="in-6"
+													 className="icon-arrow-left otra"></label>
 										<i className="icon-magnifying-glass otra _open-button"></i>
-										<label htmlFor="in-2" className="icon-arrow-right otra"></label>
+										<label htmlFor="in-2"
+													 className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-1" className="icon-cycle afin"></label>
 								</div>
@@ -160,9 +165,11 @@ export function Achievements() {
 											&quot;Здравый&nbsp;путь&quot;</p>
 									</div>
 									<div className="gallery__footer">
-										<label htmlFor="in-1" className="icon-arrow-left otra"></label>
+										<label htmlFor="in-1"
+													 className="icon-arrow-left otra"></label>
 										<i className="icon-magnifying-glass otra _open-button"></i>
-										<label htmlFor="in-3" className="icon-arrow-right otra"></label>
+										<label htmlFor="in-3"
+													 className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-2" className="icon-cycle afin"></label>
 								</div>
@@ -196,9 +203,11 @@ export function Achievements() {
 										</p>
 									</div>
 									<div className="gallery__footer">
-										<label htmlFor="in-2" className="icon-arrow-left otra"></label>
+										<label htmlFor="in-2"
+													 className="icon-arrow-left otra"></label>
 										<i className="icon-magnifying-glass otra _open-button"></i>
-										<label htmlFor="in-4" className="icon-arrow-right otra"></label>
+										<label htmlFor="in-4"
+													 className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-3" className="icon-cycle afin"></label>
 								</div>
@@ -233,9 +242,11 @@ export function Achievements() {
 										</p>
 									</div>
 									<div className="gallery__footer">
-										<label htmlFor="in-3" className="icon-arrow-left otra"></label>
+										<label htmlFor="in-3"
+													 className="icon-arrow-left otra"></label>
 										<i className="icon-magnifying-glass otra _open-button"></i>
-										<label htmlFor="in-5" className="icon-arrow-right otra"></label>
+										<label htmlFor="in-5"
+													 className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-4" className="icon-cycle afin"></label>
 								</div>
@@ -263,15 +274,17 @@ export function Achievements() {
 									</div>
 
 									<div className="gallery__text">
-										<p>За организацию и проведение<br />
+										<p>За&nbsp;организацию и&nbsp;проведение<br />
 											концертной программы<br />
-											&quot;Для молодежи&quot;<br />
+											&quot;Для&nbsp;молодежи&quot;<br />
 											г. Обнинск.</p>
 									</div>
 									<div className="gallery__footer">
-										<label htmlFor="in-4" className="icon-arrow-left otra"></label>
+										<label htmlFor="in-4"
+													 className="icon-arrow-left otra"></label>
 										<i className="icon-magnifying-glass otra _open-button"></i>
-										<label htmlFor="in-6" className="icon-arrow-right otra"></label>
+										<label htmlFor="in-6"
+													 className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-5" className="icon-cycle afin"></label>
 								</div>
@@ -298,8 +311,8 @@ export function Achievements() {
 											Благодарственное письмо</h2>
 									</div>
 									<div className="gallery__text">
-										<p>За победу в конкурсе<br />
-											на предоставление грантов<br />
+										<p>За победу в&nbsp;конкурсе<br />
+											на&nbsp;предоставление грантов<br />
 											Президента Российской Федерации<br />
 											проект &quot;Капитан&quot; <br />
 											фильм о&nbsp;начале <br />
@@ -307,9 +320,11 @@ export function Achievements() {
 										</p>
 									</div>
 									<div className="gallery__footer">
-										<label htmlFor="in-5" className="icon-arrow-left otra"></label>
+										<label htmlFor="in-5"
+													 className="icon-arrow-left otra"></label>
 										<i className="icon-magnifying-glass otra _open-button"></i>
-										<label htmlFor="in-1" className="icon-arrow-right otra"></label>
+										<label htmlFor="in-1"
+													 className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-6" className="icon-cycle afin"></label>
 								</div>

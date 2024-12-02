@@ -1,7 +1,11 @@
 @use '../core/all' as *;
 
 .categories {
-	height: 100%;
+	// .categories__body
+	&__body {
+		height: 100%;
+		padding: 10rem 0;
+	}
 
 	.services {
 		// .categories__body
@@ -74,7 +78,7 @@
 			flex: 0 1 60%;
 			height: 100%;
 			max-width: 590px;
-			color: #ffffff;
+			color: #fff;
 			opacity: 0.8;
 			border-radius: 10px;
 			backdrop-filter: blur(20px);

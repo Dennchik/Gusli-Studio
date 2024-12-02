@@ -23,7 +23,7 @@ export const Offer = () => {
 			tlServices1();
 			tlServices2();
 			refreshScrollTrigger();
-		};
+		}
 	}, [location.pathname, isHomepage]);
 
 	return (
@@ -42,7 +42,7 @@ export const Offer = () => {
 								</div>
 							</a>
 							<div className="offer-container__text">
-								Включает час звукозаписи сведение и мастеринг.
+								Включает час звукозаписи сведение и&nbsp;мастеринг.
 							</div>
 						</div>
 						<div className="offer-container__thumbnail"></div>
@@ -59,7 +59,7 @@ export const Offer = () => {
 							</a>
 							<div className="offer-container__text">
 								Час звукозаписи, Продюсирование, отбор лучших дублей, нотная
-								коррекция, сведение и мастеринг.
+								коррекция, сведение и&nbsp;мастеринг.
 							</div>
 						</div>
 						<div className="offer-container__thumbnail"></div>
@@ -75,9 +75,10 @@ export const Offer = () => {
 								</div>
 							</a>
 							<div className="offer-container__text">
-								Час звукозаписи, Педагог по вокалу поможет раскрыть ваш голос
-								присутствуя на звукозаписи, Продюсирование, отбор лучших
-								дублей, нотная коррекция, сведение и мастеринг.
+								Час звукозаписи, Педагог по&nbsp;вокалу поможет раскрыть ваш
+								голос
+								присутствуя на&nbsp;звукозаписи, Продюсирование, отбор лучших
+								дублей, нотная коррекция, сведение и&nbsp;мастеринг.
 							</div>
 						</div>
 						<div className="offer-container__thumbnail"></div>
@@ -93,10 +94,11 @@ export const Offer = () => {
 								</div>
 							</a>
 							<div className="offer-container__text">
-								При заказе клипа в нашей студии вы получаете не только
-								профессиональное видео высокого качества, но и дополнительные
-								преимущества! Мы рады предоставить вам скидку в размере 10% на
-								ваш заказ.
+								При заказе клипа в&nbsp;нашей студии вы получаете не&nbsp;только
+								профессиональное видео высокого качества,
+								но&nbsp;и&nbsp;дополнительные
+								преимущества! Мы рады предоставить вам скидку в&nbsp;размере 10%
+								на &nbsp;ваш заказ.
 							</div>
 						</div>
 						<div className="offer-container__thumbnail"></div>
@@ -104,7 +106,7 @@ export const Offer = () => {
 				</div>
 				<div className="offer-container__button _open-button">
 					<button className="order-button btn-grad"
-						type={'button'}>
+									type={'button'}>
 						<span>оставить заявку</span>
 					</button>
 				</div>
