@@ -7,44 +7,21 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 //* --------------------- Конфигурация - ScrollTrigger -------------------------
 ScrollTrigger.normalizeScroll(false);
-ScrollTrigger.config({ ignoreMobileResize: true });
+ScrollTrigger.config({ignoreMobileResize: true});
 
 //* ----------------------- Создание ScrollTrigger -----------------------------
 export function refreshScrollTrigger() {
 	return ScrollTrigger.refresh();
-}
-export function SplitTextFunction() {
-	const smoother = ScrollSmoother.get();
-	// Находим все элементы с классом `.split-stagger`
-	const elements = document.querySelectorAll('.split-stagger');
-
-	elements.forEach((element, index) => {
-		// Разбиваем текст на слова и символы для каждого элемента
-		let mySplitText = new SplitText(element, { type: 'words,chars' });
-		let chars = mySplitText.chars;
-		if (index % 2 === 0) {
-			// Нечётный элемент: анимация слева направо
-			chars.forEach((char, i) => {
-				smoother.effects(char, { speed: 1, lag: (i + 1) * 0.01 });
-			});
-		} else {
-
-			chars.forEach((char, i) => {
-				smoother.effects(char, { speed: 1, lag: (chars.length - i) * 0.01 });
-			});
-		}
-
-	});
 }
 
 export function LagTextFunction() {
 	const smoother = ScrollSmoother.get();
 
 	if (window.innerWidth > 490) {
-		smoother.effects('.lag-1', { lag: 2, speed: 1 });
-		smoother.effects('.lag-2', { lag: 2, speed: 1.2 });
-		smoother.effects('.col-1', { lag: 1.5, speed: 0.8 });
-		smoother.effects('.col-2', { lag: 1.5, speed: 1 });
+		smoother.effects('.lag-1', {lag: 2, speed: 1});
+		smoother.effects('.lag-2', {lag: 2, speed: 1.2});
+		smoother.effects('.col-1', {lag: 1.5, speed: 0.8});
+		smoother.effects('.col-2', {lag: 1.5, speed: 1});
 	}
 }
 
@@ -54,13 +31,6 @@ export function applyParallax(element) {
 		speed: () => 0.5
 	});
 }
-//* -------------------- Уничтожение ScrollSmoother ----------------------------
-// export function destroySmoother(initSmoother) {
-// 	if (initSmoother) {
-// 		/* Уничтожаем экземпляр ScrollSmoother при размонтировании */
-// 		initSmoother.kill();
-// 	}
-// }
 
 //* ----------------------------------------------------------------------------
 export function initSectionTriggerMove(trigger, targets) {
@@ -136,9 +106,10 @@ export function tlFooterParallel() {
 			trigger: '.footer',
 			start: 'top bottom',
 			endTrigger: '.footer',
-			end: 'bottom bottom+=300',
+			end: 'bottom bottom+=600',
 			scrub: 2,
-			toggleActions: 'play none none reverse', // markers: true,
+			toggleActions: 'play none none reverse',
+			// markers: true,
 		},
 	});
 	tlParallel.from('.footer .el-1', {
@@ -151,7 +122,7 @@ export function tlFooterParallel() {
 	tlParallel.from(
 		'.el-2',
 		{
-			x: window.innerWidth <= 680 ? 350 : 0,
+			// x: window.innerWidth <= 680 ? 350 : 0,
 			y: window.innerWidth > 680 ? 150 : 0,
 			duration: 1,
 			opacity: 0,
@@ -235,6 +206,7 @@ export function tlServices2() {
 		'-=1',
 	);
 }
+
 //* ------------ Плавное появление заголовков (Анимация Titles) ----------------
 export function animateTitles(element, trigger, endTrigger, start, end) {
 	const timeline = gsap.timeline({
@@ -267,6 +239,36 @@ export function animateTitles(element, trigger, endTrigger, start, end) {
 }
 
 //* ----------------------- Создание ScrollSmoother ----------------------------
+// export function SplitTextFunction() {
+// 	const smoother = ScrollSmoother.get();
+// 	// Находим все элементы с классом `.split-stagger`
+// 	const elements = document.querySelectorAll('.split-stagger');
+//
+// 	elements.forEach((element, index) => {
+// 		// Разбиваем текст на слова и символы для каждого элемента
+// 		let mySplitText = new SplitText(element, { type: 'words,chars' });
+// 		let chars = mySplitText.chars;
+// 		if (index % 2 === 0) {
+// 			// Нечётный элемент: анимация слева направо
+// 			chars.forEach((char, i) => {
+// 				smoother.effects(char, { speed: 1, lag: (i + 1) * 0.01 });
+// 			});
+// 		} else {
+//
+// 			chars.forEach((char, i) => {
+// 				smoother.effects(char, { speed: 1, lag: (chars.length - i) * 0.01 });
+// 			});
+// 		}
+//
+// 	});
+// }
+//* -------------------- Уничтожение ScrollSmoother ----------------------------
+// export function destroySmoother(initSmoother) {
+// 	if (initSmoother) {
+// 		/* Уничтожаем экземпляр ScrollSmoother при размонтировании */
+// 		initSmoother.kill();
+// 	}
+// }
 
 
 

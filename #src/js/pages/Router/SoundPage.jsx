@@ -9,13 +9,14 @@ import { applyParallax } from '../../animations/animations.jsx';
 import { Header } from '../../components/layouts/Header.jsx';
 import { ServiceSound } from '../../components/categories/ServiceSound.jsx';
 import { Offer } from '../../components/chunks/Offer.jsx';
-import { Answers } from '../../components/Answers.jsx';
+import { Answers } from '../../components/sections/Answers.jsx';
 import { Footer } from '../../components/layouts/Footer.jsx';
 import { MenuFloat } from '../../components/layouts/Menu-float.jsx';
 import { FormModal } from '../../components/layouts/FormModal.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '..';
+
 function SoundPage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -67,8 +68,6 @@ function SoundPage() {
 					</div>
 				</div>
 			</main>
-
-
 			<div className="page__menu-float">
 				<MenuFloat baseUrl={baseUrl} />
 			</div>

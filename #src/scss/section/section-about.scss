@@ -25,6 +25,17 @@
 		height: 100%;
 		min-height: 100vh;
 	}
+
+	.parallax__image {
+		img {
+			@include minmax-320-490 {
+				object-position: calc(-100px + (0 - (-100)) * ((100vw - 320px) / (490 - 320)));
+			}
+			@include screen-320 {
+				object-position: -100px 0;
+			}
+		}
+	}
 }
 
 .content-body {
@@ -70,6 +81,7 @@
 			&:not(:last-child) {
 				margin-bottom: 1rem;
 			}
+
 			@include minmax-320-1920 {
 				font-size: calc(12px + (18 - 12) * ((100vw - 490px) / (1920 - 490)));
 			}
@@ -85,10 +97,9 @@
 			}
 		}
 	}
+
 	// .content-body__icon
 	&__icon {
-		height: 30px;
-		width: 35px;
 		cursor: pointer;
 		display: inline-flex !important;
 		align-items: center;
@@ -102,9 +113,8 @@
 	&__hide-box {
 		display: grid;
 		overflow: hidden;
-		transition:
-			grid-template-rows 0.5s,
-			opacity 0.9s ease-in-out;
+		transition: grid-template-rows 0.5s,
+		opacity 0.9s ease-in-out;
 		opacity: 0;
 		grid-template-rows: 0fr;
 		@include min-920 {

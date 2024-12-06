@@ -30,26 +30,26 @@ export const SectionRecording = ({baseUrl}) => {
 
 	return (
 		<div className="service-description">
-			<div className="service-description__column">
+			<div className="service-description__column-parallax">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_02.webp')}
+											 src={getPath('img/parallax/sound/fotoram_bg_02.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_02.png')}
+											 src={getPath('img/parallax/sound/fotoram_bg_02.png')}
 											 alt="image" />
 								)}
 						</picture>
 					</div>
 				</div>
-				<div className="service-description__body">
+				<div className="service-description__body top-box">
 					<div className='service-description__content _container'>
-						<div className='service-description__title recording-title'>Звукозапись</div>
+						<div className="service-description__title recording-title">Звукозапись</div>
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<ul>
@@ -75,10 +75,6 @@ export const SectionRecording = ({baseUrl}) => {
 										- это ничто по&nbsp;сравнению с&nbsp;тем, если бы вы
 										занимались этим самостоятельно.
 									</li>
-								</ul>
-							</div>
-							<div className="service-description__row">
-								<ul>
 									<li><i className="icon-volume-high _icon"></i>Атмосфера
 										в&nbsp;студии всегда располагает к&nbsp;творчеству.
 										В&nbsp;окружении всевозможных инструментов

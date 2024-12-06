@@ -11,9 +11,8 @@
 	&__body {
 		display: inline-flex;
 		flex-direction: column;
-		padding: 10rem 0;
 		justify-content: center;
-		// color: #3636363f;
+		@extend .padding-top-bottom;
 	}
 
 	// .offer-container__title
@@ -23,12 +22,11 @@
 			size: 5rem;
 			weight: normal;
 		}
-		line-height: 100%;
+
+		line-height: 125%;
 		position: relative;
 		z-index: 9;
 		display: inline;
-		margin-bottom: 4rem;
-		padding-bottom: 2rem;
 		text-align: center;
 		letter-spacing: 0;
 		color: $neon-blue;
@@ -37,14 +35,10 @@
 		perspective: 100px;
 		filter: $filter;
 
-		@include minmax-320-1920 {
-			font-size: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
-		}
+		@extend .font-size-calc-h2;
 
 		@include screen-490 {
-			font-size: 20px;
-			line-height: 120%;
-			margin-bottom: 2rem;
+			font-size: 24px;
 		}
 
 		&::before {
@@ -75,6 +69,7 @@
 	// .offer-container__content
 	&__content {
 		display: grid;
+		padding: 4rem 0;
 		height: 100%;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto auto;
@@ -155,6 +150,7 @@
 
 		span {
 			font-size: 2.4rem;
+			font-weight: 500;
 
 			&:nth-child(1) {
 				margin-right: 2rem;
@@ -184,7 +180,6 @@
 	// .offer-container__button
 	&__button {
 		border-radius: 7px;
-		margin-top: 5rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;

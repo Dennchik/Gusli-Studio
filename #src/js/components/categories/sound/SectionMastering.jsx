@@ -36,20 +36,20 @@ export const SectionMastering = ({baseUrl}) => {
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_15.webp')}
+											 src={getPath('img/parallax/sound/fotoram_bg_15.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_15.png')}
+											 src={getPath('img/parallax/sound/fotoram_bg_15.png')}
 											 alt="image" />
 								)}
 						</picture>
 					</div>
 				</div>
-				<div className="service-description__body">
-					<div className='service-description__content _container'>
-						<div className='service-description__title mastering-title'>Сведение
+				<div className="service-description__body top-box">
+					<div className="service-description__content _container">
+						<div className="service-description__title mastering-title">Сведение
 							и&nbsp;мастеринг
 						</div>
 						<div className="service-description__description">
@@ -198,18 +198,18 @@ export const SectionMastering = ({baseUrl}) => {
 					</div>
 				</div>
 			</div>
-			<div className="service-description__column">
+			<div className="service-description__column-parallax">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_16.webp')}
+											 src={getPath('img/parallax/sound/fotoram_bg_16.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_16.png')}
+											 src={getPath('img/parallax/sound/fotoram_bg_16.png')}
 											 alt="image" />
 								)}
 						</picture>

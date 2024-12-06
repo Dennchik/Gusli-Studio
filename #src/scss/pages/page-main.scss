@@ -230,22 +230,18 @@
 	&__questions {
 		position: relative;
 		@extend .gradient-neon-color;
-		
 	}
 
 	// .main-content__services
 	&__services {
 		position: relative;
 		z-index: 6;
-
-		.offer-container__body {
-			padding-bottom: 0;
-		}
 	}
 
 	// .main-content__offer
 	&__offer {
 		position: relative;
+		z-index: 1;
 		background-color: $black-color;
 
 		&::before {
@@ -253,11 +249,7 @@
 			width: 100%;
 			height: 1px;
 			content: '';
-			background: linear-gradient(
-											to left top,
-											#8164ff 40%,
-											rgb(42, 53, 20) 70%
-			);
+			@extend .gradient-border-bottom;
 		}
 
 		&::after {
@@ -266,18 +258,12 @@
 			width: 100%;
 			height: 1px;
 			content: '';
-			background: linear-gradient(
-											to left top,
-											#8164ff 40%,
-											rgb(42, 53, 20) 70%
-			);
+			@extend .gradient-border-bottom;
 		}
 	}
 
 	// .main-content__footer
 	&__footer {
-		position: relative;
-		z-index: 9;
 		background-color: #020101;
 	}
 
@@ -303,27 +289,19 @@
 		@extend .gradient-black;
 
 		&::before {
+			content: '';
 			position: absolute;
 			width: 100%;
 			height: 1px;
-			content: '';
-			background: linear-gradient(
-											to left top,
-											#8164ff 40%,
-											rgb(42, 53, 20) 70%
-			);
+			@extend .gradient-border-bottom;
 		}
 
 		&::after {
+			content: '';
 			position: absolute;
 			width: 100%;
 			height: 1px;
-			content: '';
-			background: linear-gradient(
-											to left top,
-											#8164ff 40%,
-											rgb(42, 53, 20) 70%
-			);
+			@extend .gradient-border-bottom;
 		}
 	}
 
@@ -380,14 +358,4 @@
 		height: 2px; /* Тонкая полоска */
 		transform: translate(-50%, -50%) scaleX(0); /* Сжатие по ширине */
 	}
-}
-
-.hr-shelf {
-	margin: 0 auto !important;
-	padding: 0;
-	height: 6rem;
-	border: none;
-	border-bottom: 1px solid hsla(240, 100%, 67%, 0.295);
-	box-shadow: 0 20px 20px -20px #000;
-	width: 90%;
 }

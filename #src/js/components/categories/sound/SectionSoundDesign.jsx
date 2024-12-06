@@ -30,26 +30,26 @@ export const SectionSoundDesign = ({baseUrl}) => {
 
 	return (
 		<div className="service-description">
-			<div className="service-description__column">
+			<div className="service-description__column-parallax">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_08.webp')}
+											 src={getPath('img/parallax/sound/fotoram_bg_09.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_08.png')}
+											 src={getPath('img/parallax/sound/fotoram_bg_09.png')}
 											 alt="image" />
 								)}
 						</picture>
 					</div>
 				</div>
-				<div className="service-description__body">
+				<div className="service-description__body top-box">
 					<div className="service-description__content _container">
-						<div className='service-description__title sound-design-title'>
+						<div className="service-description__title sound-design-title">
 							Звуковой дизайн
 						</div>
 						<div className="service-description__description">
@@ -109,25 +109,8 @@ export const SectionSoundDesign = ({baseUrl}) => {
 					</div>
 				</div>
 			</div>
-			<div className="service-description__column-separator"></div>
 			<div className="service-description__column">
-				<div className="material-parallax parallax">
-					<div className="parallax__image">
-						<picture>
-							{isWebpSupported() ? (
-									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_09.webp')}
-											 alt="image" />
-								)
-								: (
-									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_09.png')}
-											 alt="image" />
-								)}
-						</picture>
-					</div>
-				</div>
-				<div className="service-description__body">
+				<div className="service-description__body top-box">
 					<div className="service-description__content _container">
 						<div className="service-description__description">
 							<h2>Как звук взаимодействует с&nbsp;картинкой?</h2>

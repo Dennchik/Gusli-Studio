@@ -25,6 +25,7 @@
 @use 'section/section-offer';
 @use 'section/about-footer';
 //todo ------------------------ Default fonts ----------------------------------
+
 // &display=swap&subset=cyrillic-ext
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,regular,500,600,700&display=swap&subset=cyrillic-ext');
 @import url('https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700&display=swap&subset=cyrillic-ext');
@@ -43,15 +44,7 @@
 	max-width: $maxWidthContainer;
 	box-sizing: content-box;
 	margin: 0 auto;
-	padding: 0 30px;
-
-	@include max-690 {
-		padding: 0 15px;
-	}
-
-	@include max-490 {
-		padding: 0 10px;
-	}
+	padding: 0 2rem;
 }
 
 [class*='icon-'] {

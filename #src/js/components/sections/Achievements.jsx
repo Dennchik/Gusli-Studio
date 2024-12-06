@@ -13,9 +13,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function Achievements() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-	const [selectedRadio, setSelectedRadio] = useState('1'); // Состояние для
-																													 // выбранной
-																													 // радио-кнопки
+	// Состояние для выбранной радио-кнопки
+	const [selectedRadio, setSelectedRadio] = useState('1');
 	const handleRadioChange = (e) => {
 		setSelectedRadio(e.target.value); // Устанавливаем выбранное значение
 	};
@@ -34,21 +33,6 @@ export function Achievements() {
 		modal();
 	}, []);
 
-	// const [scale, setScale] = useState(1);
-	// useEffect(() => {
-	// 	const handleResize = () => {
-	// 		const newScale = 2.4 + (1 - 2.4) * ((window.innerWidth - 320) / (1920
-	// - 320)); setScale(newScale); };
-
-	// 	handleResize(); // Установим начальный масштаб
-	// 	window.addEventListener('resize', handleResize);
-
-	// 	return () => {
-	// 		window.removeEventListener('resize', handleResize);
-	// 	};
-	// }, []);
-
-
 	return (
 		<div className="achieve-items">
 			<div className="material-parallax parallax _image-achieve">
@@ -60,17 +44,6 @@ export function Achievements() {
 							: <img className='parallax__image-achieve bg'
 										 src={'img/about/pattern.png'} alt="image" />}
 					</picture>
-					<div className="parallax__image-blur">
-						<picture>
-							{isWebpSupported()
-								?
-								<img src={'img/patterns/pattern-2.webp'} alt="image" />
-								:
-								<img src={'/img/patterns/pattern-2.png'} alt="image" />}
-						</picture>
-					</div>
-					{/* <img className='parallax__image-achieve bg' */}
-					{/* 		 src={'img/patterns/pattern-8.webp'} alt="image" /> */}
 				</div>
 			</div>
 			<div className="achieve-items__body _container">
@@ -113,7 +86,7 @@ export function Achievements() {
 								</div>
 
 								<div className='gallery__mesh-gradient _ibg'>
-									<img src={'img/about/bg_svg.svg'} alt="image" />
+									<img src={'img/parallax/bg_svg.svg'} alt="image" />
 								</div>
 
 								<div className="gallery__content">
@@ -149,7 +122,7 @@ export function Achievements() {
 								</div>
 
 								<div className='gallery__mesh-gradient _ibg'>
-									<img src={'img/about/bg_svg.svg'} alt="image" />
+									<img src={'img/parallax/bg_svg.svg'} alt="image" />
 								</div>
 
 								<div className="gallery__content">
@@ -186,7 +159,7 @@ export function Achievements() {
 								</div>
 
 								<div className='gallery__mesh-gradient _ibg'>
-									<img src={'img/about/bg_svg.svg'} alt="image" />
+									<img src={'img/parallax/bg_svg.svg'} alt="image" />
 								</div>
 
 								<div className="gallery__content">
@@ -224,7 +197,7 @@ export function Achievements() {
 								</div>
 
 								<div className='gallery__mesh-gradient _ibg'>
-									<img src={'img/about/bg_svg.svg'} alt="image" />
+									<img src={'img/parallax/bg_svg.svg'} alt="image" />
 								</div>
 
 								<div className="gallery__content">
@@ -263,7 +236,7 @@ export function Achievements() {
 								</div>
 
 								<div className='gallery__mesh-gradient _ibg'>
-									<img src={'img/about/bg_svg.svg'} alt="image" />
+									<img src={'img/parallax/bg_svg.svg'} alt="image" />
 								</div>
 
 								<div className="gallery__content">
@@ -301,7 +274,7 @@ export function Achievements() {
 								</div>
 
 								<div className='gallery__mesh-gradient _ibg'>
-									<img src={'img/about/bg_svg.svg'} alt="image" />
+									<img src={'img/parallax/bg_svg.svg'} alt="image" />
 								</div>
 
 								<div className="gallery__content">

@@ -30,26 +30,26 @@ export const SectionArrangement = ({baseUrl}) => {
 
 	return (
 		<div className="service-description">
-			<div className="service-description__column">
+			<div className="service-description__column-parallax">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_04.webp')}
+											 src={getPath('img/parallax/sound/fotoram_bg_04.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_04.png')}
+											 src={getPath('img/parallax/sound/fotoram_bg_04.png')}
 											 alt="image" />
 								)}
 						</picture>
 					</div>
 				</div>
-				<div className="service-description__body">
-					<div className='service-description__content _container'>
-						<div className='service-description__title arrangement-title'>Аранжировка</div>
+				<div className="service-description__body top-box">
+					<div className="service-description__content _container">
+						<div className="service-description__title arrangement-title">Аранжировка</div>
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<ul>

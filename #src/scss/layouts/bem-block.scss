@@ -105,6 +105,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
+
 	img {
 		position: absolute;
 		top: 0;
@@ -113,6 +114,7 @@
 		height: 100%;
 		object-fit: cover;
 	}
+
 	svg {
 		position: absolute;
 		top: 0;
@@ -127,7 +129,7 @@
 .h1_01901 {
 	@include minmax-490-1920 {
 		font-size: calc(
-			28px + (50 - 28) * ((100vw - 490px) / (1920 - 490))
+						28px + (50 - 28) * ((100vw - 490px) / (1920 - 490))
 		) !important;
 	}
 	@include screen-490 {
@@ -138,7 +140,7 @@
 .h2_01901 {
 	@include minmax-490-1920 {
 		font-size: calc(
-			28px + (50 - 28) * ((100vw - 490px) / (1920 - 490))
+						28px + (50 - 28) * ((100vw - 490px) / (1920 - 490))
 		) !important;
 	}
 	@include screen-490 {
@@ -149,7 +151,7 @@
 .t_01901 {
 	@include minmax-490-1920 {
 		font-size: calc(
-			16px + (28 - 16) * ((100vw - 490px) / (1920 - 490))
+						16px + (28 - 16) * ((100vw - 490px) / (1920 - 490))
 		) !important;
 	}
 	@include screen-490 {
@@ -159,10 +161,10 @@
 
 .btn-grad {
 	background-image: linear-gradient(
-		-45deg,
-		#0b0813ff 10%,
-		rgba(87, 87, 255, 0.63) 51%,
-		#0b0813ff 90%
+									-45deg,
+									#0b0813ff 10%,
+									rgba(87, 87, 255, 0.63) 51%,
+									#0b0813ff 90%
 	);
 	// background-position: 100% center;
 	background-size: 200% auto;
@@ -172,6 +174,24 @@
 		/* change the direction of the change here */
 	}
 }
+
+.top-box {
+	padding-top: calc(6rem + 64px) !important;
+}
+
+.hr-shelf {
+	&__content {
+		margin: 0 auto !important;
+		padding: 0;
+		height: 0;
+		border: 0;
+		width: 80%;
+		border-top: 1px solid hsla(240, 100%, 67%, 0.19);;
+		box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.91);
+	}
+
+}
+
 //* ----------------------------------------------------------------------------
 canvas {
 	position: fixed;

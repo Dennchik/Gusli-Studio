@@ -1,11 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
-
-
 //* ----------------------------------------------------------------------------
 export const SectionDistribution = ({baseUrl}) => {
-
 
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
@@ -13,26 +10,28 @@ export const SectionDistribution = ({baseUrl}) => {
 
 	return (
 		<div className="service-description">
-			<div className="service-description__column">
+			<div className="service-description__column-parallax">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_19.webp')}
+											 src={getPath('img/parallax/sound/fotoram_bg_19.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_19.png')}
+											 src={getPath('img/parallax/sound/fotoram_bg_19.png')}
 											 alt="image" />
 								)}
 						</picture>
 					</div>
 				</div>
-				<div className="service-description__body">
-					<div className='service-description__content _container'>
-						<div className='service-description__title distribution-title'>Дистрибуция</div>
+				<div className="service-description__body top-box">
+					<div className="service-description__content _container">
+						<div className="service-description__title distribution-title">
+							Дистрибуция
+						</div>
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<h2>Что от Вас нужно:</h2>
@@ -80,7 +79,7 @@ export const SectionDistribution = ({baseUrl}) => {
 				</div>
 			</div>
 			<div className="service-description__column">
-				<div className="service-description__body">
+				<div className="service-description__body top-box">
 					<div className='service-description__content _container'>
 						<div className="service-description__description">
 							<div className="service-description__row">
@@ -131,18 +130,18 @@ export const SectionDistribution = ({baseUrl}) => {
 					</div>
 				</div>
 			</div>
-			<div className="service-description__column">
+			<div className="service-description__column-parallax">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_07.webp')}
+											 src={getPath('img/parallax/sound/fotoram_bg_07.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_07.png')}
+											 src={getPath('img/parallax/sound/fotoram_bg_07.png')}
 											 alt="image" />
 								)}
 						</picture>

@@ -3,9 +3,10 @@
 .about-company {
 	display: grid;
 	width: 100%;
-	padding-top: 6rem;
 	grid-template-columns: 1fr 1fr 1fr;
-	gap: 4rem;
+	column-gap: 3rem;
+	row-gap: 6rem;
+	@extend .padding-top-bottom;
 
 	@include minmax-690-920 {
 		grid-template-columns: 1fr 1fr;
@@ -38,12 +39,12 @@
 		display: flex;
 		flex: 1 1 auto;
 		flex-direction: column;
-		border-bottom: 1px solid #9999992c;
+		border-bottom: 1px solid rgba(153, 153, 153, 0.1);
 	}
 
 	// .about-company__text
 	&__text {
-		padding: 2rem 0;
+		padding-bottom: 2rem;
 
 		p {
 			color: $gray;
@@ -88,7 +89,7 @@
 		gap: 2rem;
 
 		&:not(:last-child) {
-			border-bottom: 1px solid #9999992c;
+			border-bottom: 1px solid rgba(153, 153, 153, 0.1);
 		}
 
 		[class*='icon-'] {
@@ -110,9 +111,8 @@
 		display: block;
 		width: fit-content;
 		padding: 1rem 2rem;
-		transition:
-			color 0.4s,
-			background 0.4s ease-in-out;
+		transition: color 0.4s,
+		background 0.4s ease-in-out;
 		text-transform: uppercase;
 		border-radius: 4px;
 		background-color: #3d3d3d;

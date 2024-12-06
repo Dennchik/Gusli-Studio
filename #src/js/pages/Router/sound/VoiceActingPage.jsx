@@ -9,13 +9,16 @@ import { applyParallax } from '../../../animations/animations.jsx';
 import { Header } from '../../../components/layouts/Header.jsx';
 import { Footer } from '../../../components/layouts/Footer.jsx';
 import { Offer } from '../../../components/chunks/Offer.jsx';
-import { Answers } from '../../../components/Answers.jsx';
+import { Answers } from '../../../components/sections/Answers.jsx';
 import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
 import { FormModal } from '../../../components/layouts/FormModal.jsx';
-import { SectionVoiceActing } from '../../../components/categories/sound/SectionVoiceActing.jsx';
+import {
+	SectionVoiceActing
+} from '../../../components/categories/sound/SectionVoiceActing.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';
+
 function VoiceActingPage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	useGSAP(
@@ -71,9 +74,9 @@ function VoiceActingPage() {
 				<i className="icon-angle-down _button"></i>
 			</div>
 			<section className="page__form-modal"
-				role="dialog"
-				aria-labelledby="modalTitle"
-				aria-modal="true">
+							 role="dialog"
+							 aria-labelledby="modalTitle"
+							 aria-modal="true">
 				<FormModal />
 			</section>
 		</>

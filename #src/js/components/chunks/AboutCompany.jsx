@@ -61,6 +61,7 @@ export const AboutCompany = ({baseUrl}) => {
 						 type="button">читать всё</a>
 				</div>
 			</div>
+
 			<div className="about-company__column el-3">
 				<div className="about-company__body">
 					<div className="about-company__title">НАША КОМАНДА</div>
@@ -70,9 +71,9 @@ export const AboutCompany = ({baseUrl}) => {
 								<div className="team-mates__image">
 									<picture> {isWebpSupported()
 										? <img src={getPath(
-											'img/footer/team-1.webp')} alt="image" />
+											'img/teammates/team-1.webp')} alt="image" />
 										: <img src={getPath(
-											'img/footer/team-1.png')} alt="image" />}
+											'img/teammates/team-1.png')} alt="image" />}
 									</picture>
 								</div>
 							</li>
@@ -92,9 +93,9 @@ export const AboutCompany = ({baseUrl}) => {
 									<picture>
 										{isWebpSupported()
 											? <img src={getPath(
-												'img/footer/team-2.webp')} alt="image" />
+												'img/teammates/team-2.webp')} alt="image" />
 											: <img src={getPath(
-												'img/footer/team-2.png')} alt="image" />}
+												'img/teammates/team-2.png')} alt="image" />}
 									</picture>
 								</div>
 							</li>
@@ -114,9 +115,9 @@ export const AboutCompany = ({baseUrl}) => {
 									<picture>
 										{isWebpSupported()
 											? <img src={getPath(
-												'img/footer/team-3.webp')} alt="image" />
+												'img/teammates/team-3.webp')} alt="image" />
 											: <img src={getPath(
-												'img/footer/team-3.png')} alt="image" />}
+												'img/teammates/team-3.png')} alt="image" />}
 									</picture>
 								</div>
 							</li>
@@ -136,9 +137,9 @@ export const AboutCompany = ({baseUrl}) => {
 									<picture>
 										{isWebpSupported()
 											? <img src={getPath(
-												'img/footer/team-4.webp')} alt="image" />
+												'img/teammates/team-4.webp')} alt="image" />
 											: <img src={getPath(
-												'img/footer/team-4.png')} alt="image" />}
+												'img/teammates/team-4.png')} alt="image" />}
 									</picture>
 								</div>
 							</li>

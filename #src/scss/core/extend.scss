@@ -1,6 +1,30 @@
 @use 'variables' as *;
 @use 'mixins.scss' as *;
 
+.box-shadow {
+	box-shadow: 0 1px 10px #020101;
+}
+
+.font-size-calc-h2 {
+	@include minmax-490-1920 {
+		font-size: calc(28px + (50 - 28) * ((100vw - 490px) / (1920 - 490)));
+	}
+}
+
+.min-height-vh {
+	@include min-1140 {
+		min-height: 100vh;
+	}
+}
+
+.padding-top-bottom {
+	padding: 6rem 0;
+
+	@include min-1140 {
+		padding: 10rem 0;
+	}
+}
+
 .pagination {
 	display: flex;
 	align-items: center;
@@ -79,18 +103,15 @@
 	// background-image: linear-gradient(to left, #1b0d39, #0d081c 70%);
 	background: radial-gradient(
 									at 2.2240887065805293% 71.24496017695185%,
-									$custom-100, $custom-200, $custom-300),
-	radial-gradient(at -58.35886343001991% 70.7398580943191%,
-									$custom-400, $custom-700, $custom-700),
-	radial-gradient(at 134.35886343001991% 12.7398580943191%,
-									$custom-400, $custom-500, $custom-600),
-	radial-gradient(at 54.35886343001991% 94.7398580943191%,
-									$custom-400, $custom-500, $custom-600)
+									$custom-100 30%, $custom-200 50%, $custom-300 100%),
+	// radial-gradient(at -58.35886343001991% 70.7398580943191%,
+	// 								$custom-400, $custom-700, $custom-700),
+	// radial-gradient(at 134.35886343001991% 12.7398580943191%,
+	// 								$custom-400, $custom-500, $custom-600),
+	// radial-gradient(at 54.35886343001991% 94.7398580943191%,
+	// 								$custom-400, $custom-500, $custom-600)
+	// linear-gradient(to left, rgb(27, 13, 57), rgb(6, 4, 9)),
 }
-
-//* ----------------------------------------------------------------------------
-
-//* ----------------------------------------------------------------------------
 
 .gradient-spec {
 	background-image: linear-gradient(
@@ -137,9 +158,9 @@
 	background-image: linear-gradient(
 									-45deg,
 									#1a1530,
-									#332764 60%,
-									rgb(42, 53, 20) 10%,
-									#000 70%
+									#332764 65%,
+						// rgb(42, 53, 20) 10%,
+									#020101 75%
 	);
 }
 
@@ -164,7 +185,7 @@
 .gradient-border-right {
 	background-image: linear-gradient(
 									to right,
-									rgba(42, 53, 20, 0.685) 20%,
+									rgba(2, 1, 1) 20%,
 									#332764 50%,
 									#2a3514 80%
 	);
@@ -321,5 +342,7 @@
 }
 
 .gradient-border-bottom {
-	background-image: linear-gradient(to left top, #8164ff 40%, rgb(42, 53, 20) 70%);
+	background-image: linear-gradient(to left top,
+					rgba(129, 100, 255, 0.61) 45%,
+					rgb(2, 1, 1) 71%);
 }

@@ -30,26 +30,26 @@ export const SectionSessionMusicians = ({baseUrl}) => {
 
 	return (
 		<div className="service-description">
-			<div className="service-description__column">
+			<div className="service-description__column-parallax">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_06.webp')}
+											 src={getPath('img/parallax/sound/fotoram_bg_06.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_06.png')}
+											 src={getPath('img/parallax/sound/fotoram_bg_06.png')}
 											 alt="image" />
 								)}
 						</picture>
 					</div>
 				</div>
-				<div className="service-description__body">
+				<div className="service-description__body top-box">
 					<div className="service-description__content _container">
-						<div className='service-description__title session-musicians-title'>
+						<div className="service-description__title session-musicians-title">
 							Сессионные музыканты
 						</div>
 						<div className="service-description__description">
@@ -99,24 +99,7 @@ export const SectionSessionMusicians = ({baseUrl}) => {
 					</div>
 				</div>
 			</div>
-			<div className="service-description__column-separator"></div>
 			<div className="service-description__column">
-				<div className="material-parallax parallax">
-					<div className="parallax__image">
-						<picture>
-							{isWebpSupported() ? (
-									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_07.webp')}
-											 alt="image" />
-								)
-								: (
-									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_07.png')}
-											 alt="image" />
-								)}
-						</picture>
-					</div>
-				</div>
 				<div className="service-description__body">
 					<div className="service-description__content _container">
 						<div className="service-description__description">

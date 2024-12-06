@@ -8,8 +8,8 @@
 	&__body {
 		display: inline-flex;
 		flex-direction: column;
-		padding: 10rem 0;
 		justify-content: center;
+		@extend .padding-top-bottom;
 	}
 
 	// .questions__title
@@ -24,7 +24,6 @@
 		z-index: 9;
 		display: inline;
 		margin-bottom: 4rem;
-		padding-bottom: 2rem;
 		text-align: center;
 		letter-spacing: 0;
 		color: $neon-blue;
@@ -71,7 +70,7 @@
 	// .questions__list
 	&__list {
 		max-width: 1240px;
-		padding: 1rem 1rem 0 1rem;
+		padding: 2rem;
 		border-radius: 1rem;
 		backdrop-filter: blur(20px);
 		border: 1px solid rgba(128, 128, 128, 0.09);
@@ -81,8 +80,9 @@
 
 	// .questions__item
 	&__item {
-		margin-bottom: 2rem;
+
 		&:not(:last-child) {
+			margin-bottom: 2rem;
 			border-bottom: 1px solid #4e4e4e;
 		}
 
@@ -107,12 +107,11 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding-bottom: 2rem;
+		padding-bottom: 20px;
 
 		.icon-angles-down-solid {
-			transition:
-				scale 0.4s,
-				color 0.4s ease-in-out;
+			transition: scale 0.4s,
+			color 0.4s ease-in-out;
 			pointer-events: none;
 			padding: 0 2rem;
 			text-shadow: 0 0 1px $liquid-neon;
@@ -162,7 +161,11 @@
 		p {
 			opacity: 0.7;
 			line-height: 155%;
-			margin-bottom: 2rem;
+			margin-bottom: 1rem;
+
+			&:last-child {
+				margin-bottom: 30px;
+			}
 
 			a {
 				display: inline-block;

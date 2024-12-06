@@ -12,6 +12,7 @@
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
+		@extend .padding-top-bottom;
 	}
 
 	// .services__title
@@ -92,19 +93,6 @@
 	}
 }
 
-.categories {
-	// .categories__body
-	&__body {
-		height: 100%;
-		padding: 10rem 0;
-
-		.offer-container__body {
-			padding-bottom: 0;
-		}
-	}
-
-}
-
 .services-slide {
 	// .services-slide__body
 	&__body {
@@ -156,26 +144,28 @@
 		}
 
 		&:hover {
-			&::before {
-				top: -3px;
-				right: -3px;
-				bottom: -3px;
-				left: -3px;
-				opacity: 0.8;
-			}
+			@include min-1024 {
+				&::before {
+					top: -3px;
+					right: -3px;
+					bottom: -3px;
+					left: -3px;
+					opacity: 0.8;
+				}
 
-			.services-slide__img {
-				position: relative;
-				scale: 1.1;
-			}
+				.services-slide__img {
+					position: relative;
+					scale: 1.1;
+				}
 
-			.services-slide__bg-img {
-				transform: translateY(0);
-				opacity: 1;
-			}
+				.services-slide__bg-img {
+					transform: translateY(0);
+					opacity: 1;
+				}
 
-			.services-slide__text {
-				transform: translateY(-50px);
+				.services-slide__text {
+					transform: translateY(-50px);
+				}
 			}
 		}
 	}
@@ -245,16 +235,17 @@
 	&__text {
 		position: absolute;
 		pointer-events: none;
+		height: 52px;
 		left: 0;
 		right: 0;
 		bottom: 1rem;
 		display: flex;
+		color: $neon-blue;
+		align-items: center;
 		justify-content: center;
 		transition: transform 0.4s ease-in-out;
 		text-align: center;
-		color: $neon-blue;
-		background-color: #0b0813bb;
-		text-shadow: 0 0 7px #000;
+		background-color: rgba(11, 8, 19, 0.9);
 
 		p {
 			font-size: 12px;
@@ -270,15 +261,15 @@
 			}
 
 			&:nth-child(2) {
-				color: $electric-lime;
+				color: $liquid-neon;
 			}
-		}
 
-		@include minmax-320-1920 {
-			font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
-		}
-		@include screen-320 {
-			font-size: 14px;
+			@include minmax-320-1920 {
+				font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320)));
+			}
+			@include screen-320 {
+				font-size: 10px;
+			}
 		}
 
 		svg {
@@ -295,5 +286,8 @@
 	// .services-slide__pagination
 	&__pagination {
 		@extend .pagination;
+		@include min-1024 {
+			display: none;
+		}
 	}
 }

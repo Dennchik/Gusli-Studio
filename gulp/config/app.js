@@ -31,7 +31,7 @@ export const app = {
 		},
 
 		entry: {
-			main: { import: ['./#src/js/main.js'] },
+			main: {import: ['./#src/js/main.js']},
 			index: {
 				import: ['./#src/js/pages/index.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
@@ -57,8 +57,8 @@ export const app = {
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
-			musician: {
-				import: ['./#src/js/pages/services/sound/musician.jsx'],
+			songwriting: {
+				import: ['./#src/js/pages/services/sound/songwriting.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
@@ -124,7 +124,7 @@ export const app = {
 			},
 
 			// 'video-vendors': {
-			// 	import: ['video.js'], // Название для отдельного чанка 
+			// 	import: ['video.js'], // Название для отдельного chunks
 			// },
 		},
 		// output: {
@@ -132,7 +132,7 @@ export const app = {
 		// },
 		output: {
 			filename: (pathData) => {
-				// Проверяем имя чанка
+				// Проверяем имя chunk
 				if (pathData.chunk.name === 'runtime') {
 					return 'vendors/[name].min.js'; // runtime попадает в vendors/
 				}
@@ -233,7 +233,7 @@ export const app = {
 			$('[stroke]').removeAttr('stroke');
 			$('[style]').removeAttr('style');
 		},
-		parserOptions: { xmlMode: true }
+		parserOptions: {xmlMode: true}
 	},
 	svgSprite: {
 		shape: {
@@ -270,17 +270,17 @@ export const app = {
 		[
 			svgo({
 				plugins: [
-					{ optimizationLevel: 5 },
-					{ progessive: true },
-					{ interlaced: true },
-					{ removeViewBox: false },
-					{ removeUselessStrokeAndFill: false },
-					{ cleanupIDs: false }
+					{optimizationLevel: 5},
+					{progessive: true},
+					{interlaced: true},
+					{removeViewBox: false},
+					{removeUselessStrokeAndFill: false},
+					{cleanupIDs: false}
 				],
 			}),
-			gifsicle({ interlaced: true }),
-			optipng({ optimizationLevel: 3 }),
-			mozjpeg({ quality: 75, progressive: true }),
+			gifsicle({interlaced: true}),
+			optipng({optimizationLevel: 3}),
+			mozjpeg({quality: 75, progressive: true}),
 		]),
 	include: {
 		prefix: '@@',

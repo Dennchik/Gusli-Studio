@@ -3,21 +3,33 @@
 .categories-video {
 	// .categories-video_-body
 	&__body {
-		padding: 12rem 0;
+
+	}
+
+	.services-slide__pagination {
+		display: flex;
 	}
 
 	.services {
 		// services__body
 		&__body {
 			height: 100%;
-		}
 
+			@include min-1140 {
+				overflow: hidden;
+			}
+		}
 	}
 
 	.services-slide {
-		overflow: hidden;
+		//  .services-slide__body
+		&__body {
+			@include min-1140 {
+				margin: 0 10px;
+			}
+		}
 
-		//  .services-slide__image
+		// .services-slide__image
 		&__image {
 			width: 100%;
 

@@ -30,26 +30,26 @@ export const SectionAudioPodcasts = ({baseUrl}) => {
 
 	return (
 		<div className="service-description">
-			<div className="service-description__column">
+			<div className="service-description__column-parallax">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_10.webp')}
+											 src={getPath('img/parallax/sound/fotoram_bg_10.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_10.png')}
+											 src={getPath('img/parallax/sound/fotoram_bg_10.png')}
 											 alt="image" />
 								)}
 						</picture>
 					</div>
 				</div>
-				<div className="service-description__body">
+				<div className="service-description__body top-box">
 					<div className="service-description__content _container">
-						<div className='service-description__title audio-podcasts-title'>
+						<div className="service-description__title audio-podcasts-title">
 							Аудио подкасты
 						</div>
 						<div className="service-description__description">
@@ -76,7 +76,7 @@ export const SectionAudioPodcasts = ({baseUrl}) => {
 					</div>
 				</div>
 			</div>
-			<div className="service-description__column-separator">
+			<div className="service-description__column">
 				<div className="service-description__body">
 					<div className="service-description__content _container">
 						<div className="service-description__description">
@@ -156,18 +156,18 @@ export const SectionAudioPodcasts = ({baseUrl}) => {
 					</div>
 				</div>
 			</div>
-			<div className="service-description__column">
+			<div className="service-description__column-parallax">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_11.webp')}
+											 src={getPath('img/parallax/sound/fotoram_bg_11.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_11.png')}
+											 src={getPath('img/parallax/sound/fotoram_bg_11.png')}
 											 alt="image" />
 								)}
 						</picture>

@@ -9,13 +9,16 @@ import { applyParallax } from '../../../animations/animations.jsx';
 import { Header } from '../../../components/layouts/Header.jsx';
 import { Footer } from '../../../components/layouts/Footer.jsx';
 import { Offer } from '../../../components/chunks/Offer.jsx';
-import { Answers } from '../../../components/Answers.jsx';
+import { Answers } from '../../../components/sections/Answers.jsx';
 import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
 import { FormModal } from '../../../components/layouts/FormModal.jsx';
-import { SectionArrangement } from '../../../components/categories/sound/SectionArrangement.jsx';
+import {
+	SectionArrangement
+} from '../../../components/categories/sound/SectionArrangement.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';
+
 function ArrangementPage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	useGSAP(

@@ -30,26 +30,26 @@ export const SectionVoiceActing = ({baseUrl}) => {
 
 	return (
 		<div className="service-description">
-			<div className="service-description__column">
+			<div className="service-description__column-parallax">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_12.webp')}
+											 src={getPath('img/parallax/sound/fotoram_bg_12.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/main/service/fotoram_bg_12.png')}
+											 src={getPath('img/parallax/sound/fotoram_bg_12.png')}
 											 alt="image" />
 								)}
 						</picture>
 					</div>
 				</div>
-				<div className="service-description__body">
-					<div className='service-description__content _container'>
-						<div className='service-description__title voice-acting-title'>Дикторская
+				<div className="service-description__body top-box">
+					<div className="service-description__content _container">
+						<div className="service-description__title voice-acting-title">Дикторская
 							озвучка
 						</div>
 						<div className="service-description__description">
@@ -128,7 +128,6 @@ export const SectionVoiceActing = ({baseUrl}) => {
 				</div>
 			</div>
 			<div className="service-description__column">
-
 				<div className="service-description__body">
 					<div className='service-description__content _container'>
 						<div className='service-description__title 
