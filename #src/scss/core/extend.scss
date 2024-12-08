@@ -99,18 +99,33 @@
 	);
 }
 
+$custom-100: rgba(87, 87, 255, 0);
+$custom-200: rgba(87, 87, 255, 0.22);
+$custom-300: rgba(6, 4, 9, 0);
+$custom-400: rgba(254, 89, 194, 0.99);
+$custom-400b: rgba(254, 89, 194, 0.03);
+$custom-400c: rgba(254, 89, 194, 0.19);
+// $custom-500: rgb(13, 8, 28);
+$custom-500: rgb(13, 8, 28);
+$custom-500b: rgba(14, 12, 34, 0.25);
+$custom-600: rgb(4, 217, 255);
+$custom-600b: rgba(2, 1, 1, 0);
+$custom-700: rgba(254, 89, 194, 0.01);
+
 .gradient-neon-color {
-	// background-image: linear-gradient(to left, #1b0d39, #0d081c 70%);
-	background: radial-gradient(
-									at 2.2240887065805293% 71.24496017695185%,
-									$custom-100 30%, $custom-200 50%, $custom-300 100%),
-	// radial-gradient(at -58.35886343001991% 70.7398580943191%,
-	// 								$custom-400, $custom-700, $custom-700),
-	// radial-gradient(at 134.35886343001991% 12.7398580943191%,
-	// 								$custom-400, $custom-500, $custom-600),
-	// radial-gradient(at 54.35886343001991% 94.7398580943191%,
-	// 								$custom-400, $custom-500, $custom-600)
-	// linear-gradient(to left, rgb(27, 13, 57), rgb(6, 4, 9)),
+	background: // -----------------------------
+					radial-gradient(at 104.35886343001991% 40.7398580943191%,
+									$custom-100, $custom-700),
+					radial-gradient(at -52.93% 12.91%,
+									$custom-400b, $custom-500b, $custom-500),
+					radial-gradient(at 134.91% -15.91%,
+									$custom-400b, $custom-500, $custom-500),
+					radial-gradient(at 113.9% 80.7398580943191%,
+									$custom-700 65%, $custom-400c 65%, $custom-700 80%),
+					radial-gradient(at -13.9% 70.7398580943191%,
+									$custom-700 65%, $custom-400 65%, $custom-700 80%),
+					linear-gradient(to left, rgb(27, 13, 57), rgb(13, 8, 28) 70%)
+
 }
 
 .gradient-spec {

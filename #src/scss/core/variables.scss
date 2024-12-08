@@ -8,13 +8,7 @@ $sidebarWidth: 4rem;
 $titleHeight: 3rem;
 $min-height: calc(100% - ($headerHeight + $footerHeight));
 //* ----------------------------------------------------------------------------
-$custom-100: rgb(11, 8, 19);
-$custom-200: rgba(87, 87, 255, 0.57);
-$custom-300: rgb(6, 4, 9);
-$custom-400: rgb(188, 19, 254);
-$custom-500: rgba(14, 12, 34, 0);
-$custom-600: rgba(0, 0, 0, 0.73);
-$custom-700: rgba(0, 0, 0, 0);
+
 // $custom-100: rgba(2, 2, 3, 0.84);
 // $custom-200: rgba(28, 10, 49, 0.39);
 // $custom-300: rgba(6, 4, 9, 0.85);
@@ -54,7 +48,7 @@ $electric-lime: rgb(204, 255, 0);
 $color: rgb(11, 8, 19);
 $color-secondary: rgb(51, 39, 100);
 
-$black-color: #020101;
+$black-color: rgb(2, 1, 1);
 $gray: rgb(223, 223, 223);
 $orange: rgb(246, 116, 56);
 $darkcyan: rgb(0, 139, 139);

@@ -134,12 +134,12 @@ export const SectionVoiceActing = ({baseUrl}) => {
 						dubbing-title'>Дубляж
 						</div>
 						<div className="service-description__description">
-							<ul className="service-description__row">
-								<li><i className="icon-hand-pointer _icon"></i>Обратившись
+							<div className="service-description__row">
+								<p><i className="icon-hand-pointer _icon"></i>Обратившись
 									к&nbsp;нам, чтобы&nbsp;озвучить рекламу, вы&nbsp;непременно
 									останетесь довольны! Мы&nbsp;работаем до&nbsp;достижения
 									наивысшего результата. Мы поможем Вам&nbsp;подобрать:
-								</li>
+								</p>
 								<ul className="service-description__sub-items">
 									<li><i className="icon-check _icon"></i>Женские голоса</li>
 									<li><i className="icon-check _icon"></i>Мужские голоса</li>
@@ -157,7 +157,7 @@ export const SectionVoiceActing = ({baseUrl}) => {
 									мы&nbsp;достигаем идеального качества аудиодорожки,
 									где&nbsp;исключены звуковые артефакты (призвуки, помехи,
 									и&nbsp;тому подобные дефекты).</p>
-							</ul>
+							</div>
 							<ul className="service-description__row">
 								<li><i className="icon-hand-pointer _icon"></i>Озвучивание
 									отличается для каждого конкретного проекта:

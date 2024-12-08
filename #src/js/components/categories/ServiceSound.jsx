@@ -515,7 +515,7 @@ export const ServiceSound = ({baseUrl}) => {
 											</div>
 										</a>
 										<a href={getPath(
-											'@@webRoot/services/sound/audio-podcasts.html')}
+											'services/sound/promotion.html')}
 											 className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">

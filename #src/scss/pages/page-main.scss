@@ -264,7 +264,9 @@
 
 	// .main-content__footer
 	&__footer {
+		position: relative;
 		background-color: #020101;
+		z-index: 9;
 	}
 
 	// .main-content__categories-sound

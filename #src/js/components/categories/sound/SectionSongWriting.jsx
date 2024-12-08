@@ -51,11 +51,13 @@ export const SectionSongWriting = ({baseUrl}) => {
 				</div>
 				<div className="service-description__body top-box">
 					<div className="service-description__content _container">
-						<div className="service-description__title musician-title">Сонграйтинг</div>
+						<div className="service-description__title musician-title">
+							Сонграйтинг
+						</div>
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<ul>
-									<li><i className="icon-piano  _icon"></i>В&nbsp;студии
+									<li><i className="icon-piano _icon"></i>В&nbsp;студии
 										звукозаписи вы&nbsp;можете приобрести готовую песню,
 										заказать создание музыки у&nbsp;профессиональных
 										композиторов и&nbsp;аранжировщиков. Наши музыканты работают
@@ -85,9 +87,6 @@ export const SectionSongWriting = ({baseUrl}) => {
 			<div className="service-description__column">
 				<div className="service-description__body">
 					<div className='service-description__content _container'>
-						<div className='service-description__title anthem-title'>
-							Корпоративный гимн
-						</div>
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<h2>Цены на&nbsp;создание песни (песни на&nbsp;заказ, авторские

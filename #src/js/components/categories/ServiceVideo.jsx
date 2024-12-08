@@ -122,7 +122,7 @@ export const ServiceVideo = ({baseUrl}) => {
 							<div className="services-slide">
 								<div className="services-slide__body slide-services _swiper">
 									<div className="services-slide__column line">
-										<a href={getPath('services/service-sound.html')}
+										<a href={getPath('services/video/video-recording.html')}
 											 className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -183,7 +183,7 @@ export const ServiceVideo = ({baseUrl}) => {
 										</a>
 									</div>
 									<div className="services-slide__column line">
-										<a href={getPath('service-video.html')}
+										<a href={getPath('services/video/video-reportage.html')}
 											 className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -240,7 +240,7 @@ export const ServiceVideo = ({baseUrl}) => {
 										</a>
 									</div>
 									<div className="services-slide__column line">
-										<a href={getPath('service-text.html')}
+										<a href={getPath('services/video/video-podcasts.html')}
 											 className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -297,7 +297,7 @@ export const ServiceVideo = ({baseUrl}) => {
 										</a>
 									</div>
 									<div className="services-slide__column line">
-										<a href={getPath('service-events.html')}
+										<a href={getPath('services/video/video-clips.html')}
 											 className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -354,7 +354,7 @@ export const ServiceVideo = ({baseUrl}) => {
 										</a>
 									</div>
 									<div className="services-slide__column line">
-										<a href={getPath('other-services.html')}
+										<a href={getPath('services/video/video-design.html')}
 											 className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -411,7 +411,7 @@ export const ServiceVideo = ({baseUrl}) => {
 										</a>
 									</div>
 									<div className="services-slide__column line">
-										<a href={getPath('other-services.html')}
+										<a href={getPath('services/video/video-presentation.html')}
 											 className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -472,7 +472,7 @@ export const ServiceVideo = ({baseUrl}) => {
 										</a>
 									</div>
 									<div className="services-slide__column line">
-										<a href={getPath('service-video.html')}
+										<a href={getPath('services/video/video-production.html')}
 											 className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -529,7 +529,7 @@ export const ServiceVideo = ({baseUrl}) => {
 										</a>
 									</div>
 									<div className="services-slide__column line">
-										<a href={getPath('service-video.html')}
+										<a href={getPath('services/video/video-redaction.html')}
 											 className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">

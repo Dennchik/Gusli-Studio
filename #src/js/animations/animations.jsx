@@ -2,13 +2,16 @@ import { gsap } from 'gsap';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
+import { Observer } from 'gsap/Observer';
 //* ------------- Регистрация - ScrollTrigger, ScrollSmoother ------------------
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText, Observer);
 
 //* --------------------- Конфигурация - ScrollTrigger -------------------------
 ScrollTrigger.normalizeScroll(false);
 ScrollTrigger.config({ignoreMobileResize: true});
 
+//* ----------------------------------------------------------------------------
+ 
 //* ----------------------- Создание ScrollTrigger -----------------------------
 export function refreshScrollTrigger() {
 	return ScrollTrigger.refresh();

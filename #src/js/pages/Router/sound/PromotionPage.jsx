@@ -13,13 +13,13 @@ import { Answers } from '../../../components/sections/Answers.jsx';
 import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
 import { FormModal } from '../../../components/layouts/FormModal.jsx';
 import {
-	SectionDubbing
-} from '../../../components/categories/sound/SectionDubbing.jsx';
+	SectionPromotion
+} from '../../../components/categories/sound/SectionPromotion.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';
 
-function DubbingPage() {
+function PromotionPage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	useGSAP(
 		() => {
@@ -54,7 +54,7 @@ function DubbingPage() {
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
 						<section className="main-content__categories-sound">
-							<SectionDubbing baseUrl={baseUrl} isHomePage={true} />
+							<SectionPromotion baseUrl={baseUrl} isHomePage={true} />
 						</section>
 						<section className="main-content__offer">
 							<Offer baseUrl={baseUrl} />
@@ -86,4 +86,4 @@ function DubbingPage() {
 	);
 }
 
-export default DubbingPage;
+export default PromotionPage;

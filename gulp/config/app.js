@@ -44,7 +44,7 @@ export const app = {
 			},
 			services: {
 				import: ['./#src/js/pages/services.jsx'],
-				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},
 			sound: {
@@ -59,52 +59,92 @@ export const app = {
 			},
 			songwriting: {
 				import: ['./#src/js/pages/services/sound/songwriting.jsx'],
-				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},
 			'sound-recording': {
 				import: ['./#src/js/pages/services/sound/sound-recording.jsx'],
-				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},
 			arrangement: {
 				import: ['./#src/js/pages/services/sound/arrangement.jsx'],
-				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},
 			distribution: {
 				import: ['./#src/js/pages/services/sound/distribution.jsx'],
-				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},
 			'session-musicians': {
 				import: ['./#src/js/pages/services/sound/session-musicians.jsx'],
-				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},
 			'sound-design': {
 				import: ['./#src/js/pages/services/sound/sound-design.jsx'],
-				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},
 			'audio-podcasts': {
 				import: ['./#src/js/pages/services/sound/audio-podcasts.jsx'],
-				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},
 			'voice-acting': {
 				import: ['./#src/js/pages/services/sound/voice-acting.jsx'],
-				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},
-			dubbing: {
-				import: ['./#src/js/pages/services/sound/dubbing.jsx'],
-				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+			promotion: {
+				import: ['./#src/js/pages/services/sound/promotion.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},
 			mastering: {
 				import: ['./#src/js/pages/services/sound/mastering.jsx'],
-				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
+			'video-recording': {
+				import: ['./#src/js/pages/services/video/video-recording.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
+			'video-podcasts': {
+				import: ['./#src/js/pages/services/video/video-podcasts.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
+			'video-clips': {
+				import: ['./#src/js/pages/services/video/video-clips.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
+			'video-design': {
+				import: ['./#src/js/pages/services/video/video-design.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
+			'video-presentation': {
+				import: ['./#src/js/pages/services/video/video-presentation.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
+			'video-production': {
+				import: ['./#src/js/pages/services/video/video-production.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
+			'video-redaction': {
+				import: ['./#src/js/pages/services/video/video-redaction.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
+			'video-reportage': {
+				import: ['./#src/js/pages/services/video/video-reportage.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},
 			//! depend On - vendors

@@ -2,10 +2,6 @@
 
 .service-description {
 
-	.parallax__image {
-
-	}
-
 	// .service-description__column
 	&__column {
 		display: flex;
@@ -42,6 +38,7 @@
 		display: flex;
 		flex-direction: column;
 		flex: 1 1 auto;
+		@extend .min-height-vh;
 		@extend .padding-top-bottom;
 	}
 
@@ -92,6 +89,20 @@
 			width: 100%;
 			height: 70%;
 			content: '';
+			transform: translate(0, 58%);
+		}
+
+		&::after {
+			font: {
+				weight: 900;
+			}
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 70%;
+			transform: rotateX(15deg) translateZ(-11px);
+			@extend .shadow-after;
 		}
 
 		&:nth-child(1) {
@@ -99,22 +110,6 @@
 			transform-style: preserve-3d;
 			perspective: 100px;
 
-			&::before {
-				transform: translate(0, 58%);
-			}
-
-			&::after {
-				font: {
-					weight: 900;
-				}
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 70%;
-				transform: rotateX(15deg) translateZ(-11px);
-				@extend .shadow-after;
-			}
 		}
 
 		&.musician-title {
@@ -165,9 +160,9 @@
 			}
 		}
 
-		&.dubbing-title {
+		&.promotion-title {
 			&::after {
-				content: 'дубляж';
+				content: 'продвижение артистов';
 			}
 		}
 
@@ -194,6 +189,48 @@
 				content: 'дистрибуция';
 			}
 		}
+
+		&.video-recording-title {
+			&::after {
+				content: 'дистрибуция';
+			}
+		}
+
+		&.podcasts-title {
+			&::after {
+				content: 'видеоподкасты';
+			}
+		}
+
+		&.video-clips-title {
+			&::after {
+				content: 'видеоклипы';
+			}
+		}
+
+		&.video-design-title {
+			&::after {
+				content: 'моушн-дизайн в 2D и 3D';
+			}
+		}
+
+		&.video-presentations-title {
+			&::after {
+				content: 'моушн-дизайн в 2D и 3D';
+			}
+		}
+
+		&.video-production-title {
+			&::after {
+				content: 'моушн-дизайн в 2D и 3D';
+			}
+		}
+
+		&.video-reportage-title {
+			&::after {
+				content: 'Репортаж с выездом';
+			}
+		}
 	}
 
 	//.service-description__description
@@ -211,17 +248,16 @@
 		[class*='icon-'] {
 			display: inline-flex;
 			font-size: 1.8rem;
-			color: $electric-lime;
 		}
 
-		.icon-guitar-line,
-		.icon-volume-high,
-		.icon-musical-notes {
+		.icon-guitar-line, .icon-volume-high, .icon-musical-notes,
+		.icon-camera-film, .icon-clapper, .icon-head-phones {
 			color: $neon-blue-dark;
 		}
 
-		.icon-group {
-			font-size: 1.2rem;
+		.icon-check, .icon-hand-pointer, .icon-piano {
+			opacity: 0.6;
+			color: $electric-lime;
 
 			&::before {
 				font-weight: 300;
@@ -257,7 +293,14 @@
 			}
 		}
 
+		h3 {
+			font-size: 1.8rem;
+			margin: 30px 0 10px;
+		}
+
 		p {
+			opacity: 0.7;
+
 			&:not(:last-child) {
 				margin-bottom: 1.5rem;
 			}
@@ -270,7 +313,10 @@
 		}
 
 		li {
+			opacity: 0.7;
+
 			span {
+				display: inline-block;
 				color: $electric-lime;
 			}
 
@@ -289,19 +335,19 @@
 	}
 
 	// .service-description__link
-	&__linck {
-		color: $neon-blue;
-		opacity: 0.6;
-		font-size: 14px;
-
-		@include minmax-320-1920 {
-			font-size: calc(10px + (14 - 10) * ((100vw - 320px) / (1920 - 120)));
-		}
-
-		@include screen-320 {
-			font-size: 10px;
-		}
-	}
+	// &__link {
+	// 	color: $neon-blue;
+	// 	opacity: 0.6;
+	// 	font-size: 14px;
+	//
+	// 	@include minmax-320-1920 {
+	// 		font-size: calc(10px + (14 - 10) * ((100vw - 320px) / (1920 - 120)));
+	// 	}
+	//
+	// 	@include screen-320 {
+	// 		font-size: 10px;
+	// 	}
+	// }
 
 	// .service-description__sub-items
 	&__sub-items {
@@ -313,7 +359,7 @@
 		width: 100%;
 
 		._icon {
-			margin-top: .5rem;
+			margin: 0.7rem 1.5rem 0 0;
 			align-items: flex-start;
 		}
 
@@ -321,29 +367,8 @@
 			margin-bottom: 4rem;
 		}
 
-		h3 {
-			margin: 30px 0 10px;
-			color: $electric-lime;
-		}
-
 		li {
-			display: flex;
-
-			div {
-				display: inline;
-
-				&:not(:last-child) {
-					flex: 0 0 20rem;
-					width: 20rem;
-					margin-right: 1rem;
-					font-weight: 600;
-					color: $neon-blue-dark;
-					@include max-490 {
-						flex: 0 0 13rem;
-						width: 13rem;
-					}
-				}
-			}
+			// display: flex;
 		}
 	}
 
