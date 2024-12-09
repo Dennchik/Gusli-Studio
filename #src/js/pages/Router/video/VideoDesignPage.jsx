@@ -53,7 +53,7 @@ function VideoDesignPage() {
 			<main className="page__main-content">
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
-						<section className="main-content__musician">
+						<section className="main-content__body">
 							<SectionVideoDesign baseUrl={baseUrl} isHomePage={true} />
 						</section>
 						<section className="main-content__offer">

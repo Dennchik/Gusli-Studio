@@ -53,7 +53,7 @@ function MasteringPage() {
 			<main className="page__main-content">
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
-						<section className="main-content__categories-sound">
+						<section className="main-content__body">
 							<SectionMastering baseUrl={baseUrl} isHomePage={true} />
 						</section>
 						<section className="main-content__offer">

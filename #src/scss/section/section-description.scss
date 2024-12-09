@@ -1,7 +1,6 @@
 @use '../core/all' as *;
 
 .service-description {
-
 	// .service-description__column
 	&__column {
 		display: flex;
@@ -12,16 +11,6 @@
 
 		@extend .min-height-vh;
 		@extend .gradient-neon-color;
-
-		&:not(:first-child) {
-			&::before {
-				position: absolute;
-				width: 100%;
-				height: 1px;
-				content: '';
-				@extend .gradient-border-bottom;
-			}
-		}
 	}
 
 	&__column-parallax {
@@ -109,7 +98,6 @@
 			perspective-origin: 45% 320%;
 			transform-style: preserve-3d;
 			perspective: 100px;
-
 		}
 
 		&.musician-title {
@@ -231,6 +219,18 @@
 				content: 'Репортаж с выездом';
 			}
 		}
+
+		&.text-song-title {
+			&::after {
+				content: 'написание текста песни';
+			}
+		}
+
+		&.text-scenarios-title {
+			&::after {
+				content: 'написание сценариев';
+			}
+		}
 	}
 
 	//.service-description__description
@@ -250,12 +250,18 @@
 			font-size: 1.8rem;
 		}
 
-		.icon-guitar-line, .icon-volume-high, .icon-musical-notes,
-		.icon-camera-film, .icon-clapper, .icon-head-phones {
+		.icon-guitar-line,
+		.icon-volume-high,
+		.icon-musical-notes,
+		.icon-camera-film,
+		.icon-clapper,
+		.icon-head-phones {
 			color: $neon-blue-dark;
 		}
 
-		.icon-check, .icon-hand-pointer, .icon-piano {
+		.icon-check,
+		.icon-hand-pointer,
+		.icon-piano {
 			opacity: 0.6;
 			color: $electric-lime;
 
@@ -270,6 +276,7 @@
 
 		.icon-hand-pointer {
 			transform: rotate(90deg);
+			// background: linear-gradient();
 		}
 
 		h2 {
@@ -295,6 +302,7 @@
 
 		h3 {
 			font-size: 1.8rem;
+			font-weight: 500;
 			margin: 30px 0 10px;
 		}
 
@@ -304,7 +312,6 @@
 			&:not(:last-child) {
 				margin-bottom: 1.5rem;
 			}
-
 		}
 
 		span {

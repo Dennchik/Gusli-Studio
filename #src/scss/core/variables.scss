@@ -9,13 +9,11 @@ $titleHeight: 3rem;
 $min-height: calc(100% - ($headerHeight + $footerHeight));
 //* ----------------------------------------------------------------------------
 
-// $custom-100: rgba(2, 2, 3, 0.84);
-// $custom-200: rgba(28, 10, 49, 0.39);
-// $custom-300: rgba(6, 4, 9, 0.85);
-// $custom-400: rgb(97, 50, 73);
-// $custom-500: rgba(14, 12, 34, 0.84);
-// $custom-600: rgba(0, 0, 0, 0.73);
-// $custom-700: rgba(0, 0, 0, 0.07);
+$custom-100: #4d244a;
+$custom-200: #422147;
+$custom-300: #381f47;
+$custom-400: #2e1c45;
+$custom-500: #211a40;
 //* ---------------------------- [Font Variables] ------------------------------
 $font-path: '../fonts';
 $font-default: 'Manrope', sans-serif;
@@ -56,7 +54,6 @@ $border-color: rgb(42, 53, 20);
 
 //* ---------------------------- [Other colors] --------------------------------
 $boxShadow: 0px 0px 2px 3px rgba(4, 217, 255, 0.699);
-$boxShadowSecond: rgb(0, 0, 0);
 $BlackShadow: rgb(9, 17, 22);
 $filter: drop-shadow(1px 0px 3px rgb(32, 25, 71)) invert(5%);
 //* ----------------------------------------------------------------------------

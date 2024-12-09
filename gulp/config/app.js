@@ -57,6 +57,11 @@ export const app = {
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
+			text: {
+				import: ['./#src/js/pages/text.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
 			songwriting: {
 				import: ['./#src/js/pages/services/sound/songwriting.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors'],
@@ -144,6 +149,16 @@ export const app = {
 			},
 			'video-reportage': {
 				import: ['./#src/js/pages/services/video/video-reportage.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
+			'text-song': {
+				import: ['./#src/js/pages/services/text/text-song.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
+			'text-scenarios': {
+				import: ['./#src/js/pages/services/text/text-scenarios.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},

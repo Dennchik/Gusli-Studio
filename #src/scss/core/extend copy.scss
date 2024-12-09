@@ -1,0 +1,360 @@
+@use 'variables' as *;
+@use 'mixins.scss' as *;
+
+.box-shadow {
+	box-shadow: 0 1px 10px #020101;
+}
+
+.font-size-calc-h2 {
+	@include minmax-490-1920 {
+		font-size: calc(28px + (50 - 28) * ((100vw - 490px) / (1920 - 490)));
+	}
+}
+
+.min-height-vh {
+	@include min-1140 {
+		min-height: 100vh;
+	}
+}
+
+.padding-top-bottom {
+	padding: 6rem 0;
+
+	@include min-1140 {
+		padding: 10rem 0;
+	}
+}
+
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 6rem;
+
+	.swiper-pagination-bullet {
+		width: 15px;
+		height: 15px;
+		content: '';
+		border-radius: 50%;
+		background: #2a3514;
+		transition: background 0.5s ease-in-out;
+
+		&:not(:last-child) {
+			margin-right: 2rem;
+		}
+	}
+
+	.swiper-pagination-bullet-active {
+		width: 15px;
+		height: 15px;
+		content: '';
+		border-radius: 50%;
+		background: #9acd32;
+		scale: 1.2;
+		transition: scale 0.5s ease-in-out;
+	}
+
+	@include min-1024 {
+		// display: none;
+	}
+}
+
+.grad_underline {
+	/* Определяем фоновые изображения */
+	transition: background-size 400ms;
+
+	/* Размер фона для каждого слоя */
+	background-image: linear-gradient(to left, transparent, transparent),
+		linear-gradient(
+			to left,
+			var(--background-selected),
+			var(--font-color-active)
+		);
+
+	/* Позиционирование фона */
+	background-repeat: no-repeat;
+
+	/* Повторение фона */
+	background-position:
+		100% 100%,
+		/* Первое изображение */ 0 100%; /* Второе изображение */
+
+	/* Переход для изменения размера фона */
+	background-size:
+		100% 1px,
+		/* Первое изображение */ 0 1px; /* Второе изображение */
+}
+
+.gradient-black {
+	background-image: linear-gradient(-45deg, #1b0d39, #020101 70%);
+}
+// .gradient-neon-color {
+// 	background: linear-gradient(
+// 		45deg,
+// 		oklab(33.2% 0.072 -0.042),
+// 		oklab(30.9% 0.061 -0.048),
+// 		oklab(29.2% 0.05 -0.057),
+// 		oklab(27.2% 0.04 -0.064),
+// 		oklab(24.9% 0.022 -0.066)
+// 	);
+// }
+
+.gradient-neon-color {
+	background-color: rgba(2, 1, 1, 0.34);
+	background-image: radial-gradient(
+			at -33% 93.28%,
+			#2e1c45 0px,
+			transparent 50%
+		),
+		radial-gradient(at 145% 1%, #2e1c45 0px, transparent 50%),
+		radial-gradient(at 80% 29%, #211a40 0px, transparent 50%);
+}
+
+.gradient-spec {
+	background-image: linear-gradient(
+		-45deg,
+		rgb(23, 14, 49) 0%,
+		rgba(254, 89, 194, 0.3),
+		rgb(23, 14, 49) 83%
+	);
+	background-size: 200% auto;
+	transition: background-position 0.4s ease-in-out;
+
+	&:hover {
+		background-position: right center;
+	}
+}
+
+.gradient-spec-comfort {
+	background-image: linear-gradient(
+		-45deg,
+		#170e31 0%,
+		rgba(200, 255, 0, 0.3),
+		#170e31 83%
+	);
+	background-size: 200% auto;
+	transition: background-position 0.4s ease-in-out;
+
+	&:hover {
+		background-position: right center;
+	}
+}
+
+.liner-gradient-box {
+	background-image: linear-gradient(45deg, #10133a 55%, #47208a73 10%, #10133a) /
+		cover no-repeat;
+}
+
+.text-gradient {
+	background: currentColor 100%;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.gradient-header {
+	background-image: linear-gradient(
+		-45deg,
+		#1a1530,
+		#332764 65%,
+		// rgb(42, 53, 20) 10%,
+		#020101 75%
+	);
+}
+
+.gradient-services {
+	background-image: linear-gradient(
+		to right,
+		#050202ff 20%,
+		#1c153f 50%,
+		#050202ff 80%
+	);
+}
+
+.gradient-title {
+	background-image: linear-gradient(
+		to top,
+		#170e31 10%,
+		#402e6b 50%,
+		#1a1530 100%
+	);
+}
+
+.gradient-spec-active {
+	background-image: linear-gradient(-45deg, #04d9ff, #170e31 83%);
+	background-size: 200% 200%;
+}
+
+.gradient-border-right {
+	background-image: linear-gradient(
+		to right,
+		rgba(2, 1, 1) 20%,
+		#332764 50%,
+		#2a3514 80%
+	);
+}
+
+.gradient-border-left {
+	background-image: linear-gradient(
+		to left top,
+		#8164ff 40%,
+		rgb(42, 53, 20) 70%
+	);
+}
+
+.icon-style {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 0 1.5rem;
+	border: 1px var(--border-color);
+	border-style: none solid;
+}
+
+.shadow-after {
+	z-index: -1;
+	transform: rotateX(15deg) translateZ(-10px);
+	color: rgba(23, 14, 49, 0.479);
+	text-shadow:
+		5px 0 5px $color,
+		0 0 10px rgba(125, 248, 255, 0.26),
+		0 0 10px rgba(204, 255, 0, 0.267);
+}
+
+// background: linear-gradient(to right, #04d9ff 20%, #ffff 50%, #04d9ff 80%);
+//! ----------------------------------------------------------------------------
+.overflow-hidden {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		height: 0;
+	}
+}
+
+.border-present {
+	position: absolute;
+	display: block;
+	color: $neon-blue;
+	background-image: linear-gradient(
+			to right,
+			currentColor 0%,
+			$liquid-neon 8%,
+			transparent 8%,
+			transparent 92%,
+			$liquid-neon 92%,
+			currentColor 100%
+		),
+		linear-gradient(
+			to right,
+			currentColor 0%,
+			$liquid-neon 8%,
+			transparent 8%,
+			transparent 92%,
+			$liquid-neon 92%,
+			currentColor 100%
+		),
+		linear-gradient(
+			to bottom,
+			currentColor 0%,
+			$liquid-neon 11%,
+			transparent 11%,
+			transparent 89%,
+			$liquid-neon 89%,
+			currentColor 100%
+		),
+		linear-gradient(
+			to bottom,
+			currentColor 0%,
+			$liquid-neon 11%,
+			transparent 11%,
+			transparent 89%,
+			$liquid-neon 89%,
+			currentColor 100%
+		);
+	background-repeat: no-repeat;
+	background-position:
+		0 0,
+		0 100%,
+		0 0,
+		100% 0;
+	background-size:
+		100% 1px,
+		100% 1px,
+		1px 100%,
+		1px 100%;
+	inset: 0.7rem;
+}
+
+.link_underline {
+	&::before,
+	&::after {
+		position: absolute;
+		width: 0;
+		height: 1px;
+		content: '';
+		transition: width 0.4s ease-in-out;
+		opacity: 0.6;
+		background-color: $neon-blue;
+	}
+
+	&::before {
+		right: 0;
+		bottom: 0;
+	}
+
+	&::after {
+		bottom: 0;
+		left: 0;
+	}
+
+	&._active {
+		// text-shadow: 2px 2px 3px #000;
+
+		&::before {
+			width: 45%;
+		}
+
+		&::after {
+			width: 45%;
+		}
+	}
+
+	&:hover {
+		transition: color 0.4s ease-in-out;
+		color: $neon-blue;
+
+		&::before {
+			width: 45%;
+		}
+
+		&::after {
+			width: 45%;
+		}
+
+		a {
+			opacity: 1;
+		}
+	}
+}
+
+.is-open {
+	display: grid;
+	width: 100%;
+	transition: grid-template-rows 0.4s ease-in-out;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0fr;
+
+	&._is-open {
+		grid-template-rows: 1fr;
+	}
+}
+
+.gradient-border-bottom {
+	background-image: linear-gradient(
+		to left top,
+		rgba(129, 100, 255, 0.61) 45%,
+		rgb(2, 1, 1) 71%
+	);
+}

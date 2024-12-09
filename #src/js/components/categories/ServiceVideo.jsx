@@ -100,18 +100,9 @@ export const ServiceVideo = ({baseUrl}) => {
 		<div className="categories-video">
 			<div className="material-parallax parallax">
 				<div className="parallax__image">
-					<picture>
-						{isWebpSupported() ? (
-								<img className="parallax__image-services bg"
-										 src={getPath('img/parallax/serv_bg_2.webp')}
-										 alt="image" />
-							)
-							: (
-								<img className="parallax__image-services bg"
-										 src={getPath('/img/parallax/serv_bg_2.png')}
-										 alt="image" />
-							)}
-					</picture>
+					<img className="parallax__image-services bg"
+							 src={getPath('/img/parallax/bg_svg.svg')}
+							 alt="image" />
 				</div>
 			</div>
 			<div className="categories__body">
