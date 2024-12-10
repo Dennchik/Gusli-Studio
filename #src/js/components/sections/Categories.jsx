@@ -71,7 +71,8 @@ export const Categories = ({baseUrl}) => {
 								<div className="services-slide__body">
 									<div className="services-slide__row">
 										<div className="services-slide__column line col-1">
-											<div className="services-slide__content">
+											<a href={'services/service-sound.html'}
+												 className="services-slide__content">
 												<div className="services-slide__image el">
 													<div className="services-slide__svg">
 														<svg viewBox="0 0 700 430">
@@ -99,31 +100,29 @@ export const Categories = ({baseUrl}) => {
 															</g>
 														</svg>
 													</div>
-													<a href={'services/service-sound.html'}>
-														<picture>
-															{isWebpSupported() ? (
-																<img
-																	src={'img/cards/services/img_1.webp'}
-																	alt="image-1"
-																/>
-															) : (
-																<img
-																	src={'img/cards/services/img_1.png'}
-																	alt="image-1"
-																/>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																src={'img/cards/services/img_1.webp'}
+																alt="image-1"
+															/>
+														) : (
+															<img
+																src={'img/cards/services/img_1.png'}
+																alt="image-1"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported()
+															? (<img className="services-slide__bg-img"
+																			src={'img/cards/bg_img.webp'}
+																			alt="bg-image" />)
+															: (<img className="services-slide__bg-img"
+																			src={'img/cards/bg_img.png'}
+																			alt="bg-image" />
 															)}
-														</picture>
-														<picture>
-															{isWebpSupported()
-																? (<img className="services-slide__bg-img"
-																				src={'img/cards/bg_img.webp'}
-																				alt="bg-image" />)
-																: (<img className="services-slide__bg-img"
-																				src={'img/cards/bg_img.png'}
-																				alt="bg-image" />
-																)}
-														</picture>
-													</a>
+													</picture>
 													<div className="services-slide__text">
 														<svg viewBox="0 0 250 40">
 															<defs>
@@ -220,7 +219,7 @@ export const Categories = ({baseUrl}) => {
 														</svg>
 													</div>
 												</div>
-											</div>
+											</a>
 										</div>
 										<div className="services-slide__info split-stagger lag-1">
 											Чистый звук, профессиональное оборудование, опытные
@@ -229,7 +228,8 @@ export const Categories = ({baseUrl}) => {
 									</div>
 									<div className="services-slide__row">
 										<div className="services-slide__column line col-2">
-											<div className="services-slide__content">
+											<a href={'services/service-video.html'}
+												 className="services-slide__content">
 												<div className="services-slide__image el">
 													<div className="services-slide__svg">
 														<svg viewBox="0 0 700 430">
@@ -250,36 +250,34 @@ export const Categories = ({baseUrl}) => {
 															</g>
 														</svg>
 													</div>
-													<a href={'services/service-video.html'}>
-														<picture>
-															{isWebpSupported() ? (
-																<img
-																	src={'img/cards/services/img_2.webp'}
-																	alt="image-2"
-																/>
-															) : (
-																<img
-																	src={'img/cards/services/img_2.png'}
-																	alt="image-2"
-																/>
-															)}
-														</picture>
-														<picture>
-															{isWebpSupported() ? (
-																<img
-																	className="services-slide__bg-img"
-																	src={'img/cards/bg_img.webp'}
-																	alt="bg-img"
-																/>
-															) : (
-																<img
-																	className="services-slide__bg-img"
-																	src={'img/cards/bg_img.png'}
-																	alt="bg-img"
-																/>
-															)}
-														</picture>
-													</a>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																src={'img/cards/services/img_2.webp'}
+																alt="image-2"
+															/>
+														) : (
+															<img
+																src={'img/cards/services/img_2.png'}
+																alt="image-2"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.webp'}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.png'}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
 													<div className="services-slide__text">
 														<svg viewBox="0 0 250 40">
 															<g
@@ -313,7 +311,7 @@ export const Categories = ({baseUrl}) => {
 														</svg>
 													</div>
 												</div>
-											</div>
+											</a>
 										</div>
 										<div className="services-slide__info split-stagger lag-2">
 											Видеозапись: сохранение важных моментов жизни
@@ -323,7 +321,8 @@ export const Categories = ({baseUrl}) => {
 									</div>
 									<div className="services-slide__row">
 										<div className="services-slide__column line col-1">
-											<div className="services-slide__content">
+											<a href={'services/service-text.html'}
+												 className="services-slide__content">
 												<div className="services-slide__image el">
 													<div className="services-slide__svg">
 														<svg viewBox="0 0 700 430">
@@ -344,36 +343,34 @@ export const Categories = ({baseUrl}) => {
 															</g>
 														</svg>
 													</div>
-													<a href={'services/service-text.html'}>
-														<picture>
-															{isWebpSupported() ? (
-																<img
-																	src={'img/cards/services/img_3.webp'}
-																	alt="image-3"
-																/>
-															) : (
-																<img
-																	src={'img/cards/services/img_3.png'}
-																	alt="image-3"
-																/>
-															)}
-														</picture>
-														<picture>
-															{isWebpSupported() ? (
-																<img
-																	className="services-slide__bg-img"
-																	src={'img/cards/bg_img.webp'}
-																	alt="bg-img"
-																/>
-															) : (
-																<img
-																	className="services-slide__bg-img"
-																	src={'img/cards/bg_img.png'}
-																	alt="bg-img"
-																/>
-															)}
-														</picture>
-													</a>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																src={'img/cards/services/img_3.webp'}
+																alt="image-3"
+															/>
+														) : (
+															<img
+																src={'img/cards/services/img_3.png'}
+																alt="image-3"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.webp'}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.png'}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
 													<div className="services-slide__text">
 														<svg viewBox="0 0 250 40">
 															<g
@@ -407,7 +404,7 @@ export const Categories = ({baseUrl}) => {
 														</svg>
 													</div>
 												</div>
-											</div>
+											</a>
 										</div>
 										<div className="services-slide__info split-stagger lag-1">
 											Видеозапись: сохранение важных моментов жизни
@@ -417,7 +414,8 @@ export const Categories = ({baseUrl}) => {
 									</div>
 									<div className="services-slide__row">
 										<div className="services-slide__column line col-2">
-											<div className="services-slide__content">
+											<a href={'services/service-events.html'}
+												 className="services-slide__content">
 												<div className="services-slide__image el">
 													<div className="services-slide__svg">
 														<svg viewBox="0 0 700 430">
@@ -438,36 +436,34 @@ export const Categories = ({baseUrl}) => {
 															</g>
 														</svg>
 													</div>
-													<a href={'services/service-events.html'}>
-														<picture>
-															{isWebpSupported() ? (
-																<img
-																	src={'img/cards/services/img_4.webp'}
-																	alt="image-4"
-																/>
-															) : (
-																<img
-																	src={'img/cards/services/img_4.png'}
-																	alt="image-4"
-																/>
-															)}
-														</picture>
-														<picture>
-															{isWebpSupported() ? (
-																<img
-																	className="services-slide__bg-img"
-																	src={'img/cards/bg_img.webp'}
-																	alt="bg-img"
-																/>
-															) : (
-																<img
-																	className="services-slide__bg-img"
-																	src={'img/cards/bg_img.png'}
-																	alt="bg-img"
-																/>
-															)}
-														</picture>
-													</a>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																src={'img/cards/services/img_4.webp'}
+																alt="image-4"
+															/>
+														) : (
+															<img
+																src={'img/cards/services/img_4.png'}
+																alt="image-4"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.webp'}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.png'}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
 													<div className="services-slide__text">
 														<svg viewBox="0 0 250 40">
 															<g
@@ -525,7 +521,7 @@ export const Categories = ({baseUrl}) => {
 														</svg>
 													</div>
 												</div>
-											</div>
+											</a>
 										</div>
 										<div className="services-slide__info split-stagger lag-2">
 											Видеозапись: сохранение важных моментов жизни
@@ -535,7 +531,8 @@ export const Categories = ({baseUrl}) => {
 									</div>
 									<div className="services-slide__row">
 										<div className="services-slide__column line col-1">
-											<div className="services-slide__content">
+											<a href={'services/other-services.html'}
+												 className="services-slide__content">
 												<div className="services-slide__image el">
 													<div className="services-slide__svg">
 														<svg viewBox="0 0 700 430">
@@ -556,36 +553,34 @@ export const Categories = ({baseUrl}) => {
 															</g>
 														</svg>
 													</div>
-													<a href={'services/other-services.html'}>
-														<picture>
-															{isWebpSupported() ? (
-																<img
-																	src={'img/cards/services/img_5.webp'}
-																	alt="image-5"
-																/>
-															) : (
-																<img
-																	src={'img/cards/services/img_5.png'}
-																	alt="image-5"
-																/>
-															)}
-														</picture>
-														<picture>
-															{isWebpSupported() ? (
-																<img
-																	className="services-slide__bg-img"
-																	src={'img/cards/bg_img.webp'}
-																	alt="bg-img"
-																/>
-															) : (
-																<img
-																	className="services-slide__bg-img"
-																	src={'img/cards/bg_img.png'}
-																	alt="bg-img"
-																/>
-															)}
-														</picture>
-													</a>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																src={'img/cards/services/img_5.webp'}
+																alt="image-5"
+															/>
+														) : (
+															<img
+																src={'img/cards/services/img_5.png'}
+																alt="image-5"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.webp'}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.png'}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
 													<div className="services-slide__text">
 														<svg viewBox="0 0 250 40">
 															<g
@@ -623,7 +618,7 @@ export const Categories = ({baseUrl}) => {
 														</svg>
 													</div>
 												</div>
-											</div>
+											</a>
 										</div>
 										<div className="services-slide__info split-stagger lag-1">
 											Видеозапись: сохранение важных моментов жизни

@@ -7,7 +7,6 @@ import returnToSavedPosition from '../../modules/return-position.js';
 import { applyParallax } from '../../animations/animations.jsx';
 
 import { Header } from '../../components/layouts/Header.jsx';
-import { VideoSlide } from '../../components/sections/VideoSlide.jsx';
 import { ServiceText } from '../../components/categories/ServiceText.jsx';
 import { Footer } from '../../components/layouts/Footer.jsx';
 import { MenuFloat } from '../../components/layouts/Menu-float.jsx';

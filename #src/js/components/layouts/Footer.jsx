@@ -8,7 +8,7 @@ import {
 } from '../../animations/animations.jsx';
 import { AboutCompany } from '../chunks/AboutCompany.jsx';
 //* ----------------------------------------------------------------------------
-export const Footer = ({ baseUrl, isHomePage }) => {
+export const Footer = ({baseUrl, isHomePage}) => {
 	useEffect(() => {
 		const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 		if (!isMobile) {
@@ -23,6 +23,7 @@ export const Footer = ({ baseUrl, isHomePage }) => {
 	return (
 		<Element className="footer">
 			<div className="footer__content">
+				<div className="footer__polygon"></div>
 				<div className="footer__info _container">
 					{isHomePage && <AboutCompany baseUrl={baseUrl} />}
 					<div className='hr-shelf'></div>
@@ -122,6 +123,7 @@ export const Footer = ({ baseUrl, isHomePage }) => {
 					</div>
 				</div>
 			</div>
+
 		</Element>
 	);
 };

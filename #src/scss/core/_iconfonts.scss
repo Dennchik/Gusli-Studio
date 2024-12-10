@@ -23,6 +23,12 @@
 	font-variant-ligatures: discretionary-ligatures;
 }
 
+.icon-snow {
+	&:before {
+		content: $icon-snow;
+	}
+}
+
 .icon-clapper {
 	&:before {
 		content: $icon-clapper;
@@ -77,21 +83,9 @@
 	}
 }
 
-.icon-group {
-	&:before {
-		content: $icon-group;
-	}
-}
-
 .icon-guitar-line {
 	&:before {
 		content: $icon-guitar-line;
-	}
-}
-
-.icon-guitar {
-	&:before {
-		content: $icon-guitar;
 	}
 }
 
@@ -412,3 +406,4 @@
 		content: $icon-enve-mail;
 	}
 }
+

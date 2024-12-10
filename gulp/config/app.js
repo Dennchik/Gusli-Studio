@@ -62,6 +62,11 @@ export const app = {
 				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},
+			events: {
+				import: ['./#src/js/pages/events.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
 			songwriting: {
 				import: ['./#src/js/pages/services/sound/songwriting.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors'],
@@ -159,6 +164,11 @@ export const app = {
 			},
 			'text-scenarios': {
 				import: ['./#src/js/pages/services/text/text-scenarios.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
+			'events-festival': {
+				import: ['./#src/js/pages/services/events/events-festival.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},

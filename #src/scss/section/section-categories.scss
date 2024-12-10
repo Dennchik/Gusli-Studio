@@ -52,7 +52,6 @@
 			&:nth-child(even) {
 				justify-content: flex-start;
 				flex-direction: row-reverse;
-				text-align: right;
 
 				@include screen-490 {
 					.services-slide__info {

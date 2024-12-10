@@ -2,6 +2,7 @@
 $icon-font-family: 'icon-set' !default;
 $icon-font-path: '../fonts' !default;
 
+$icon-snow: string.unquote('"\\e90d"');
 $icon-clapper: string.unquote('"\\e91c"');
 $icon-musical-notes: string.unquote('"\\e912"');
 $icon-feather: string.unquote('"\\e91a"');
@@ -11,9 +12,7 @@ $icon-arrow-bold-right: string.unquote('"\\e916"');
 $icon-cycle: string.unquote('"\\e917"');
 $icon-arrow-left: string.unquote('"\\e918"');
 $icon-arrow-right: string.unquote('"\\e919"');
-$icon-group: string.unquote('"\\e90e"');
 $icon-guitar-line: string.unquote('"\\e90c"');
-$icon-guitar: string.unquote('"\\e90d"');
 $icon-hand-grab: string.unquote('"\\f255"');
 $icon-hand-paper: string.unquote('"\\f256"');
 $icon-hand-scissors: string.unquote('"\\f257"');
@@ -67,3 +66,4 @@ $icon-microphone: string.unquote('"\\e905"');
 $icon-record-voice: string.unquote('"\\e906"');
 $icon-location: string.unquote('"\\e924"');
 $icon-enve-mail: string.unquote('"\\e925"');
+

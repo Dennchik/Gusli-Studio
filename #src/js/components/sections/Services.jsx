@@ -453,7 +453,7 @@ export const Services = ({baseUrl}) => {
 										</a>
 									</div>
 									<div className="services-slide__column line">
-										<a href={getPath('service/service-events.html')}
+										<a href={getPath('services/service-events.html')}
 											 className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">

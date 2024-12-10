@@ -92,7 +92,7 @@ export const ServiceText = ({baseUrl}) => {
 						<div className="services__title text-title">Текст</div>
 						<div className="services__content">
 							<div className="services-slide">
-								<div className="services-slide__body slide-services">
+								<div className="services-slide__body slide-text">
 									<div className="services-slide__column line">
 										<a href={getPath('services/text/text-song.html')}
 											 className="services-slide__content">
@@ -128,12 +128,12 @@ export const ServiceText = ({baseUrl}) => {
 												<picture>
 													{isWebpSupported() ? (
 														<img className="services-slide__img"
-																 src={getPath('img/cards/video/img_1.webp')}
+																 src={getPath('img/cards/text/img_1.webp')}
 																 alt="image-1"
 														/>
 													) : (
 														<img className="services-slide__img"
-																 src={getPath('img/cards/video/img_1.png')}
+																 src={getPath('img/cards/text/img_1.png')}
 																 alt="image-1"
 														/>
 													)}
@@ -180,12 +180,12 @@ export const ServiceText = ({baseUrl}) => {
 												<picture>
 													{isWebpSupported() ? (
 														<img className="services-slide__img"
-																 src={getPath('img/cards/video/img_3.webp')}
+																 src={getPath('img/cards/text/img_2.webp')}
 																 alt="image-3"
 														/>
 													) : (
 														<img className="services-slide__img"
-																 src={getPath('img/cards/video/img_3.png')}
+																 src={getPath('img/cards/text/img_2.png')}
 																 alt="image-3"
 														/>
 													)}

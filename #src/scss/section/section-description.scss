@@ -36,6 +36,7 @@
 		display: flex;
 		flex: 1 1 auto;
 		height: 100%;
+		width: 100%;
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
@@ -231,6 +232,12 @@
 				content: 'написание сценариев';
 			}
 		}
+
+		&.events-festival-title {
+			&::after {
+				content: 'детские праздники';
+			}
+		}
 	}
 
 	//.service-description__description
@@ -255,7 +262,8 @@
 		.icon-musical-notes,
 		.icon-camera-film,
 		.icon-clapper,
-		.icon-head-phones {
+		.icon-head-phones,
+		.icon-snow {
 			color: $neon-blue-dark;
 		}
 

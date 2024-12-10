@@ -91,6 +91,12 @@
 				content: 'наши услуги';
 			}
 		}
+
+		&.events-title {
+			&::after {
+				content: 'организация праздников';
+			}
+		}
 	}
 
 	// .services__content
@@ -100,11 +106,15 @@
 }
 
 .services-slide {
+	.slide-text {
+		justify-content: space-evenly;
+	}
+
 	// .services-slide__body
 	&__body {
 		position: relative;
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		gap: 2.5rem;
 	}
