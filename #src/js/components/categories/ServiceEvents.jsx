@@ -180,7 +180,7 @@ export const ServiceEvents = ({baseUrl}) => {
 										</a>
 									</div>
 									<div className="services-slide__column line">
-										<a href={getPath('services/text/text-scenarios.html')}
+										<a href={getPath('services/events/events-leader.html')}
 											 className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -237,7 +237,7 @@ export const ServiceEvents = ({baseUrl}) => {
 										</a>
 									</div>
 									<div className="services-slide__column line">
-										<a href={getPath('services/text/text-scenarios.html')}
+										<a href={getPath('services/events/events-dj.html')}
 											 className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -294,7 +294,7 @@ export const ServiceEvents = ({baseUrl}) => {
 										</a>
 									</div>
 									<div className="services-slide__column line">
-										<a href={getPath('services/text/text-scenarios.html')}
+										<a href={getPath('services/events/events-animators.html')}
 											 className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -351,7 +351,7 @@ export const ServiceEvents = ({baseUrl}) => {
 										</a>
 									</div>
 									<div className="services-slide__column line">
-										<a href={getPath('services/text/text-scenarios.html')}
+										<a href={getPath('services/events/events-rent.html')}
 											 className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
@@ -402,7 +402,7 @@ export const ServiceEvents = ({baseUrl}) => {
 													)}
 												</picture>
 												<div className="services-slide__text">
-													<p>Аренда звукового&nbsp;оборудования</p>
+													<p>Аренда оборудования</p>
 												</div>
 											</div>
 										</a>

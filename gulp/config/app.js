@@ -64,7 +64,7 @@ export const app = {
 			},
 			events: {
 				import: ['./#src/js/pages/events.jsx'],
-				dependOn: ['react-vendors', 'anime-vendors'],
+				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
 				filename: '[name].min.js'
 			},
 			songwriting: {

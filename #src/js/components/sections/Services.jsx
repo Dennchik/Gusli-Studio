@@ -14,7 +14,6 @@ import {
 import { buildSwiper } from '../../layouts/build-swiper.js';
 import { servicesSlide } from '../../layouts/services-slide.js';
 import { Offer } from '../chunks/Offer.jsx';
-
 //* ----------------------------------------------------------------------------
 export const Services = ({baseUrl}) => {
 	const isHomepage = location.pathname === '/';
