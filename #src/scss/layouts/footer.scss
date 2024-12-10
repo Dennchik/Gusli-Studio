@@ -148,7 +148,6 @@
 		padding-bottom: 5rem;
 		text-align: center;
 		color: $gray;
-		text-shadow: 3px 3px 10px #000;
 
 		i {
 			margin: 0 3rem;
@@ -170,10 +169,6 @@
 					color: $neon-blue-dark;
 				}
 			}
-		}
-
-		@include minmax-320-1920 {
-			// padding: calc(px + ( - 80	) * ((100vw - px) / ( - )));
 		}
 	}
 }

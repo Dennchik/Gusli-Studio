@@ -53,10 +53,6 @@
 				color: rgb(87, 87, 255);
 			}
 
-			&:nth-child(2) {
-				color: $gray;
-			}
-
 			&:not(:last-child) {
 				margin-bottom: 1.5rem;
 			}

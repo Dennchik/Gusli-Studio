@@ -135,8 +135,10 @@
 		align-items: center;
 		box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 		@extend .gradient-spec;
+
 		i {
 			font-size: 32px;
+
 			&::before {
 				color: $electric-lime;
 			}
@@ -156,9 +158,8 @@
 		font-size: 32px;
 		font-weight: 300;
 		line-height: 181.25%; /* 58/32 */
-		text-shadow:
-			-1px -1px 0 #b2d3ff,
-			1px 1px 0 #000;
+		text-shadow: -1px -1px 0 #b2d3ff,
+		1px 1px 0 #000;
 
 		@include minmax-320-1920 {
 			font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1920 - 320)));
@@ -171,9 +172,8 @@
 
 	// .gallery__card
 	&__card {
-		background-size:
-			2px 2px,
-			cover;
+		background-size: 2px 2px,
+		cover;
 		background-position: 0 0;
 		width: 100%;
 		height: 100%;
@@ -208,9 +208,8 @@
 			color: $neon-blue-dark;
 			line-height: 1.3;
 			max-width: 540px;
-			text-shadow:
-				-1px -1px 0 #b2d3ff,
-				1px 1px 0 #000;
+			text-shadow: -1px -1px 0 #b2d3ff,
+			1px 1px 0 #000;
 
 			@include minmax-320-1920 {
 				font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1920 - 320)));
@@ -244,6 +243,7 @@
 		opacity: 0.6;
 		background-size: 100% 100%;
 		object-position: center;
+
 		svg {
 			object-position: center;
 		}
@@ -274,9 +274,8 @@
 		}
 
 		.otra {
-			transition:
-				scale 0.4s,
-				color 0.4s ease-in-out;
+			transition: scale 0.4s,
+			color 0.4s ease-in-out;
 			@include min-960 {
 				&:hover {
 					scale: 1.2;
@@ -287,6 +286,7 @@
 		}
 	}
 }
+
 //* ----------------------------------------------------------------------------
 .otra + .otra,
 #in-1:checked ~ .sv-3 .afin,
@@ -320,6 +320,7 @@
 	display: none;
 	pointer-events: none;
 }
+
 //* ----------------------------------------------------------------------------
 /* Центральный (задний нижний план) */
 #in-1:checked ~ .sv-6,
@@ -367,20 +368,20 @@
 #in-4:checked ~ .sv-6,
 #in-5:checked ~ .sv-1,
 #in-6:checked ~ .sv-2 {
-	animation: 1.5s fuera-dch;
+	animation: 1.5s left-dch;
 	animation-fill-mode: forwards;
 	transform-origin: center right;
 	z-index: 2;
 }
 
-/* Слеева (Левый слайд) */
+/* Слева (Левый слайд) */
 #in-1:checked ~ .sv-2,
 #in-2:checked ~ .sv-3,
 #in-3:checked ~ .sv-4,
 #in-4:checked ~ .sv-5,
 #in-5:checked ~ .sv-6,
 #in-6:checked ~ .sv-1 {
-	animation: 1s fuera-izq;
+	animation: 1s right-izq;
 	animation-fill-mode: forwards;
 	transform-origin: center left;
 	z-index: 2;
@@ -400,7 +401,7 @@
 }
 
 //* ----------------------------------------------------------------------------
-@keyframes fuera-izq {
+@keyframes right-izq {
 	0% {
 		transform: scale(1) translateX(0%);
 	}
@@ -414,7 +415,7 @@
 	}
 }
 
-@keyframes fuera-dch {
+@keyframes left-dch {
 	0% {
 		transform: scale(1) translateX(0%);
 	}

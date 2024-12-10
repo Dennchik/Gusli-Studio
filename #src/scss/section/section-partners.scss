@@ -152,6 +152,7 @@
 		height: 100%;
 		padding: 1.5rem;
 		text-align: left;
+		color: $gray;
 
 		@include screen-768 {
 			grid-row: 2 / 3;
