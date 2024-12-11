@@ -55,9 +55,6 @@ function EventsFestivalPage() {
 						<section className="main-content__body">
 							<SectionEventsFestival baseUrl={baseUrl} isHomePage={true} />
 						</section>
-						<section className="main-content__offer gradient-neon-color">
-							<Offer baseUrl={baseUrl} />
-						</section>
 						<footer className="main-content__footer" id="footer">
 							<Footer baseUrl={baseUrl} isHomePage={true} />
 						</footer>

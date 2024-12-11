@@ -10,7 +10,7 @@
 		overflow: hidden;
 
 		@extend .min-height-vh;
-		@extend .gradient-neon-color;
+		@extend .gradient-neon-revers;
 	}
 
 	&__column-parallax {
@@ -25,18 +25,34 @@
 	// .service-description_body
 	&__body {
 		display: flex;
-		flex-direction: column;
-		flex: 1 1 auto;
-		@extend .min-height-vh;
-		@extend .padding-top-bottom;
+		padding: 6rem 0;
+
+		&::before {
+			content: '';
+			height: 1px;
+			width: 100%;
+
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+			background-image: linear-gradient(
+											to left,
+											rgb(56, 31, 71) 30%,
+											rgb(2, 1, 1) 70%
+			);
+		}
+
+		@include min-1140 {
+			padding: 10rem 0;
+		}
 	}
 
 	// .service-description__content
 	&__content {
-		display: flex;
 		flex: 1 1 auto;
-		height: 100%;
-		width: 100%;
+		display: flex;
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
@@ -238,6 +254,30 @@
 				content: 'детские праздники';
 			}
 		}
+
+		&.events-leader-title {
+			&::after {
+				content: 'ведущие';
+			}
+		}
+
+		&.events-dj-title {
+			&::after {
+				content: 'диджеи';
+			}
+		}
+
+		&.events-animators-title {
+			&::after {
+				content: 'аниматоры';
+			}
+		}
+
+		&.events-rent-title {
+			&::after {
+				content: 'аренда оборудования';
+			}
+		}
 	}
 
 	//.service-description__description
@@ -247,7 +287,6 @@
 		max-width: 1240px;
 		padding: 3rem 2rem;
 		border-radius: 1rem;
-		backdrop-filter: blur(2px);
 		border: 1px solid rgba(128, 128, 128, 0.09);
 		box-shadow: 0 0 7px 10px rgba(0, 0, 0, 0.1);
 		background: rgba(28, 21, 63, 0.144);
@@ -295,14 +334,17 @@
 			opacity: 0.5;
 			line-height: 110%;
 
-			@include minmax-320-1920 {
-				font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
-			}
-
 			&:not(:first-child) {
 				margin-top: 4rem;
 			}
 
+			@include minmax-320-1920 {
+				font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
+			}
+			@include screen-425 {
+				text-align: center;
+				font-size: 16px;
+			}
 			@include screen-320 {
 				font-size: 16px;
 			}
@@ -344,25 +386,14 @@
 			font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 120)));
 		}
 
+		@include max-375 {
+			padding: 3rem 1.3rem;
+		}
+
 		@include screen-320 {
 			font-size: 12px;
 		}
 	}
-
-	// .service-description__link
-	// &__link {
-	// 	color: $neon-blue;
-	// 	opacity: 0.6;
-	// 	font-size: 14px;
-	//
-	// 	@include minmax-320-1920 {
-	// 		font-size: calc(10px + (14 - 10) * ((100vw - 320px) / (1920 - 120)));
-	// 	}
-	//
-	// 	@include screen-320 {
-	// 		font-size: 10px;
-	// 	}
-	// }
 
 	// .service-description__sub-items
 	&__sub-items {
@@ -389,12 +420,13 @@
 
 	//.service-description__ps
 	&__ps {
-		font-size: 14px;
+		font-size: 16px;
+		font-weight: 500;
 		opacity: 0.7;
 		margin-top: 2rem;
 
 		@include minmax-320-1920 {
-			font-size: calc(10px + (14 - 10) * ((100vw - 320px) / (1920 - 120)));
+			font-size: calc(12px + (16 - 10) * ((100vw - 320px) / (1920 - 120)));
 		}
 
 		@include screen-320 {
@@ -407,5 +439,17 @@
 		width: 100%;
 		height: auto;
 		object-fit: cover;
+	}
+
+	// .service-description__button
+	&__button {
+		margin-top: 40px;
+		border-radius: 7px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+		align-self: center;
+		box-shadow: 0 0 6px #000;
 	}
 }

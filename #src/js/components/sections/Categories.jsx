@@ -7,6 +7,7 @@ import {
 	animationSvgLine,
 	animationSvgText
 } from '../../animations/anime-js.jsx';
+import { Offer } from '../chunks/Offer.jsx';
 
 export const Categories = ({baseUrl}) => {
 	// const isHomepage = location.pathname === '/';
@@ -632,6 +633,10 @@ export const Categories = ({baseUrl}) => {
 					</div>
 				</div>
 			</div>
+			<div className="hr-shelf _container">
+				<div className="hr-shelf__content"></div>
+			</div>
+			{<Offer baseUrl={baseUrl} />}
 		</div>
 	);
 };

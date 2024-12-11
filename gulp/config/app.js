@@ -2,7 +2,6 @@ import { gifsicle, mozjpeg, optipng, svgo } from 'gulp-imagemin';
 import pugbem from 'gulp-pugbem';
 import TerserPlugin from 'terser-webpack-plugin';
 
-
 const isProd = process.argv.includes('--production');
 const isDev = !isProd;
 
@@ -169,6 +168,26 @@ export const app = {
 			},
 			'events-festival': {
 				import: ['./#src/js/pages/services/events/events-festival.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
+			'events-leader': {
+				import: ['./#src/js/pages/services/events/events-leader.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
+			'events-dj': {
+				import: ['./#src/js/pages/services/events/events-dj.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
+			'events-animators': {
+				import: ['./#src/js/pages/services/events/events-animators.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
+			'events-rent': {
+				import: ['./#src/js/pages/services/events/events-rent.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},

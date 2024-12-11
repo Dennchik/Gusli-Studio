@@ -5,12 +5,13 @@ import {
 	animateTitles,
 	refreshScrollTrigger
 } from '../../../animations/animations.jsx';
+import { AppButton } from '../../../app/button.jsx';
 
 //* ----------------------------------------------------------------------------
 export const SectionEventsFestival = ({baseUrl}) => {
 	const isHomepage = location.pathname === '/';
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
- 
+
 	useEffect(() => {
 		if (!isMobile) {
 			animateTitles(
@@ -127,7 +128,7 @@ export const SectionEventsFestival = ({baseUrl}) => {
 										Весёлые игры и&nbsp;конкурсы.
 									</li>
 								</ul>
-								<h3>Два аниматора&nbsp;- от&nbsp;7500&nbsp;руб./час</h3>
+								<h3>Два аниматора&nbsp;- от&nbsp;9000&nbsp;руб./час</h3>
 								<ul>
 									<li><i className="icon-check _icon"></i>
 										Лучший вариант для&nbsp;любого праздника;
@@ -149,6 +150,9 @@ export const SectionEventsFestival = ({baseUrl}) => {
 									аниматоров на&nbsp;1,5&nbsp;часа и&nbsp;дольше дополнительная
 									услуга в &nbsp;ПОДАРОК!</p>
 							</div>
+						</div>
+						<div className="service-description__button _open-button">
+							<AppButton />
 						</div>
 					</div>
 				</div>

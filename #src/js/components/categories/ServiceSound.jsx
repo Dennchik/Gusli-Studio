@@ -9,6 +9,7 @@ import {
 import { animationSvgLine } from '../../animations/anime-js.jsx';
 import { buildSwiper } from '../../layouts/build-swiper.js';
 import { servicesSlide } from '../../layouts/services-slide.js';
+import { Offer } from '../chunks/Offer.jsx';
 //* ----------------------------------------------------------------------------
 export const ServiceSound = ({baseUrl}) => {
 	const isHomepage = location.pathname === '/';
@@ -95,7 +96,7 @@ export const ServiceSound = ({baseUrl}) => {
 			</div>
 			<div className="categories__body">
 				<div className="services _container">
-					<div className="services__body top-box">
+					<div className="services__body">
 						<div className="services__title">Звук</div>
 						<div className="services__content">
 							<div className="services-slide">
@@ -693,6 +694,10 @@ export const ServiceSound = ({baseUrl}) => {
 					</div>
 				</div>
 			</div>
+			<div className="hr-shelf _container">
+				<div className="hr-shelf__content"></div>
+			</div>
+			{<Offer baseUrl={baseUrl} />}
 		</div>
 	);
 };

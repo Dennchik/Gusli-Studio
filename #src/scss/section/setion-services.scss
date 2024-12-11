@@ -1,5 +1,17 @@
 @use '../core/all' as *;
 
+.categories {
+	// .categories__body
+	&__body {
+		// padding: 6rem 0;
+		//
+		// @include min-1140 {
+		// 	padding: 10rem 0;
+		// }
+
+	}
+}
+
 .services {
 	height: 100%;
 
@@ -12,7 +24,10 @@
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
-		@extend .padding-top-bottom;
+		padding: 6rem 0;
+		@include min-1140 {
+			padding: 10rem 0;
+		}
 	}
 
 	// .services__title
@@ -27,7 +42,6 @@
 		position: relative;
 		z-index: 9;
 		display: inline;
-		padding: 0 5rem;
 		text-align: center;
 		letter-spacing: 0;
 		color: $neon-blue;
@@ -65,7 +79,7 @@
 					weight: 900;
 				}
 				position: absolute;
-				top: 0;
+				top: -3px;
 				left: 0;
 				width: 100%;
 				height: 70%;
@@ -308,3 +322,4 @@
 		}
 	}
 }
+

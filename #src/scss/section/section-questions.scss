@@ -9,7 +9,11 @@
 		display: inline-flex;
 		flex-direction: column;
 		justify-content: center;
-		@extend .padding-top-bottom;
+		padding: 6rem 0;
+
+		@include min-1140 {
+			padding: 10rem 0;
+		}
 	}
 
 	// .questions__title

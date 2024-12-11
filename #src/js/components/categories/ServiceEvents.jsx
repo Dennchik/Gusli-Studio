@@ -111,7 +111,7 @@ export const ServiceEvents = ({baseUrl}) => {
 			</div>
 			<div className="categories__body">
 				<div className="services _container">
-					<div className="services__body top-box min-height-vh">
+					<div className="services__body top-box">
 						<div className="services__title events-title">
 							Организация праздников
 						</div>

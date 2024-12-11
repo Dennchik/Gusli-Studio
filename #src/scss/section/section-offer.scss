@@ -12,7 +12,11 @@
 		display: inline-flex;
 		flex-direction: column;
 		justify-content: center;
-		@extend .padding-top-bottom;
+		padding: 6rem 0;
+
+		@include min-1140 {
+			padding: 10rem 0;
+		}
 	}
 
 	// .offer-container__title
@@ -196,33 +200,6 @@
 
 			.order-button {
 				animation: shadow-pulse 0;
-			}
-		}
-
-		.order-button {
-			border: 0;
-			border-radius: 7px;
-			color: white;
-			font-size: 1.6rem;
-			font-weight: 500;
-			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1),
-			0 6px 6px rgba(0, 0, 0, 0.05);
-			transition: all 0.5s ease-in-out;
-			animation: shadow-pulse 1.5s infinite;
-		}
-
-		button {
-			transition: color 0.5s ease-in-out;
-			position: relative;
-			z-index: 9;
-			display: inline-flex;
-			padding: 2rem 5rem;
-			text-transform: uppercase;
-			font-weight: 400;
-			overflow: hidden;
-
-			span {
-				text-shadow: 1px 1px 1px #000;
 			}
 		}
 	}

@@ -203,7 +203,7 @@
 
 		&::after {
 			right: 0;
-			@extend .gradient-border-right;
+			@extend .gradient-border-after;
 		}
 
 		&::before,
@@ -229,7 +229,8 @@
 	// .main-content__questions
 	&__questions {
 		position: relative;
-		@extend .gradient-neon-color;
+		@extend .gradient-neon-revers;
+		@extend .gradient-border-before;
 	}
 
 	// .main-content__services
@@ -241,14 +242,18 @@
 	// .main-content__offer
 	&__offer {
 		position: relative;
-		z-index: 1;
+		z-index: 111;
+		@extend .gradient-border-before;
+		@extend .gradient-border-after;
 	}
 
 	// .main-content__footer
 	&__footer {
 		position: relative;
-		background-color: #020101;
+		background-color: $black-color;
 		z-index: 9;
+		box-shadow: 0 0 2px #561e77;
+
 	}
 
 	// .main-content__body
@@ -263,7 +268,9 @@
 		position: relative;
 		z-index: 9;
 		backdrop-filter: blur(3px);
-		@extend .gradient-neon-color;
+		@extend .gradient-neon-revers;
+		@extend .gradient-border-before ;
+		@extend .gradient-border-after;
 	}
 
 	//. main-content__achievements

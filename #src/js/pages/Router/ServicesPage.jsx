@@ -58,9 +58,9 @@ function ServicesPage() {
 						<section className="main-content__categories">
 							<Categories baseUrl={baseUrl} />
 						</section>
-						<section className="main-content__offer">
-							<Offer baseUrl={baseUrl} />
-						</section>
+						{/* <section className="main-content__offer"> */}
+						{/* 	<Offer baseUrl={baseUrl} /> */}
+						{/* </section> */}
 						<section className="main-content__questions">
 							<Answers baseUrl={baseUrl} />
 						</section>
