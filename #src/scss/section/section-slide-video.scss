@@ -1,0 +1,71 @@
+@use '../core/all.scss' as *;
+
+.showreel {
+	overflow: hidden;
+	// .video-showreel__body
+	&__body {
+		display: flex;
+		flex-direction: column;
+
+		padding: 6rem 0;
+
+		@include min-1140 {
+			padding: 10rem 0;
+		}
+	}
+
+	// .video-showreel__title
+	&__title {
+		margin-bottom: 6rem;
+		font: {
+			family: 'AA Neon', Helvetica, sans-serif;
+			size: 60px;
+			weight: normal;
+		}
+		line-height: 100%;
+		position: relative;
+		z-index: 9;
+		display: inline;
+		text-align: center;
+		letter-spacing: 0;
+		color: $neon-blue;
+		filter: $filter;
+
+		@include minmax-320-1920 {
+			font-size: calc(27px + (60 - 27) * ((100vw - 320px) / (1920 - 320)));
+		}
+
+		@include screen-320 {
+			font-size: 27px;
+		}
+	}
+}
+
+.showreel-slide {
+	// .showreel-slide__body
+	&__body {
+
+	}
+
+	// .showreel-slide__column
+	&__column {
+	}
+
+	// .showreel-slide__video
+	&__video {
+		display: flex;
+		border-radius: 5px;
+		overflow: hidden;
+
+		video {
+			height: auto;
+			max-width: 100%;
+		}
+	}
+
+	// .showreel-slide__pagination
+	&__pagination {
+		@extend .pagination;
+		display: flex;
+	}
+}

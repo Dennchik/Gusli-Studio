@@ -29,7 +29,7 @@ export const SectionDistribution = ({baseUrl}) => {
 				</div>
 				<div className="service-description__body top-box">
 					<div className="service-description__content _container">
-						<div className="service-description__title distribution-title">
+						<div className="service-description__title">
 							Дистрибуция
 						</div>
 						<div className="service-description__description">

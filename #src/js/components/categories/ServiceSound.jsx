@@ -96,7 +96,7 @@ export const ServiceSound = ({baseUrl}) => {
 			</div>
 			<div className="categories__body">
 				<div className="services _container">
-					<div className="services__body">
+					<div className="services__body top-box">
 						<div className="services__title">Звук</div>
 						<div className="services__content">
 							<div className="services-slide">

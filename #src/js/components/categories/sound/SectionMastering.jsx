@@ -49,8 +49,8 @@ export const SectionMastering = ({baseUrl}) => {
 				</div>
 				<div className="service-description__body top-box">
 					<div className="service-description__content _container">
-						<div className="service-description__title mastering-title">Сведение
-							и&nbsp;мастеринг
+						<div className="service-description__title">
+							Сведение и&nbsp;мастеринг
 						</div>
 						<div className="service-description__description">
 							<div className="service-description__row">

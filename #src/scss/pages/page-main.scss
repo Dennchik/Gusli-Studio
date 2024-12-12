@@ -279,6 +279,13 @@
 		overflow: hidden;
 		background: linear-gradient(-45deg, #20193c, #050202 90%);
 	}
+
+	// .main-content__slide-video
+	&__showreel {
+		position: relative;
+		@extend .gradient-neon-revers;
+		@extend .gradient-border-before;
+	}
 }
 
 @keyframes fadeInBackground {

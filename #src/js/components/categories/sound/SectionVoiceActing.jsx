@@ -130,8 +130,8 @@ export const SectionVoiceActing = ({baseUrl}) => {
 			<div className="service-description__column">
 				<div className="service-description__body">
 					<div className='service-description__content _container'>
-						<div className='service-description__title 
-						dubbing-title'>Дубляж
+						<div className='service-description__title'>
+							Дубляж
 						</div>
 						<div className="service-description__description">
 							<div className="service-description__row">

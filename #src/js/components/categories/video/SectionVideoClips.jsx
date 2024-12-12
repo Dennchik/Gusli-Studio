@@ -51,7 +51,7 @@ export const SectionVideoClips = ({baseUrl}) => {
 				</div>
 				<div className="service-description__body top-box">
 					<div className='service-description__content _container'>
-						<h1 className="service-description__title video-clips-title">
+						<h1 className="service-description__title">
 							видеоклипы
 						</h1>
 						<div className="service-description__description">

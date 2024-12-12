@@ -51,7 +51,7 @@ export const SectionTextSong = ({baseUrl}) => {
 				</div>
 				<div className="service-description__body top-box">
 					<div className='service-description__content _container'>
-						<h1 className="service-description__title text-song-title">
+						<h1 className="service-description__title">
 							Написание текста песни
 						</h1>
 						<div className="service-description__description">

@@ -49,7 +49,7 @@ export const SectionPromotion = ({baseUrl}) => {
 				</div>
 				<div className="service-description__body top-box">
 					<div className="service-description__content _container">
-						<div className="service-description__title promotion-title">
+						<div className="service-description__title">
 							Продвижение артистов
 						</div>
 						<div className="service-description__description">

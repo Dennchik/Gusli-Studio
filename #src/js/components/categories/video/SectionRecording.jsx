@@ -51,7 +51,7 @@ export const SectionRecording = ({baseUrl}) => {
 				</div>
 				<div className="service-description__body top-box">
 					<div className='service-description__content _container'>
-						<h1 className="service-description__title video-recording-title">
+						<h1 className="service-description__title">
 							Видеосъёмка
 						</h1>
 						<div className="service-description__description">
@@ -129,73 +129,34 @@ export const SectionRecording = ({baseUrl}) => {
 					<div className='service-description__content _container'>
 						<div className="service-description__description">
 							<div className="service-description__row">
-								<h2>Сколько стоит съемка и монтаж видео:</h2>
-								<h3>Факторы, влияющие на&nbsp;стоимость съемки и&nbsp;монтажа
-									видео:</h3>
+								<h2>Стоимость съемка и монтажа видео:</h2>
+								<h3>Примеры стоимости съемки и монтажа видео:</h3>
 								<ul>
-									<li><i className="icon-check _icon"></i>Тип видеопроекта:
-										стоимость съемки видео зависит от&nbsp;типа проекта.
-										Например, съемка короткометражного фильма
-										или&nbsp;музыкального клипа может потребовать больше
-										времени и&nbsp;ресурсов, чем&nbsp;съемка простого интервью
-										или&nbsp;рекламного ролика.
+									<li><i className="icon-clapper _icon"></i>
+										Съемка короткометражного фильма (1-2&nbsp;дня):
+										<span>от&nbsp;100&nbsp;000&nbsp;рублей</span> и&nbsp;выше;
 									</li>
-									<li><i className="icon-check _icon"></i>Продолжительность
-										съемки: количество дней, затраченных на&nbsp;съемку,
-										также влияет на&nbsp;стоимость. Съемка, которая занимает
-										несколько дней, может стоить дороже, чем&nbsp;однодневная
-										съемка.
+									<li><i className="icon-clapper _icon"></i>
+										Съемка интервью (полдня):
+										<span>от&nbsp;15&nbsp;000&nbsp;рублей</span>;
 									</li>
-									<li><i className="icon-check _icon"></i>Расположение съемки:
-										если&nbsp;съемка проходит в&nbsp;удаленных
-										или&nbsp;труднодоступных местах, это&nbsp;может увеличить
-										стоимость из-за&nbsp;дополнительных расходов
-										на&nbsp;транспорт и&nbsp;проживание съемочной группы.
+									<li><i className="icon-clapper _icon"></i>
+										Съемка рекламного ролика (1&nbsp;день):
+										<span>от&nbsp;50&nbsp;000&nbsp;рублей</span>;
 									</li>
-									<li><i className="icon-check _icon"></i>Оборудование:
-										использование профессионального оборудования,
-										такого как&nbsp;высококачественные камеры, объективы,
-										световое
-										оборудование и&nbsp;грим, может увеличить общую стоимость
-										съемки.
+									<li><i className="icon-clapper _icon"></i>
+										Монтаж короткого видеоролика (1-2&nbsp;минуты):
+										<span>от&nbsp;10&nbsp;000&nbsp;рублей</span>;
 									</li>
-									<li><i className="icon-check _icon"></i>Команда съемки: размер
-										съемочной группы также влияет на&nbsp;стоимость. Большие
-										проекты, требующие большой команды, могут быть дороже
-										в&nbsp;обслуживании по&nbsp;сравнению с&nbsp;небольшими
-										съемками, где&nbsp;задействованы только несколько
-										специалистов.
+									<li><i className="icon-clapper _icon"></i>
+										Монтаж длинного видео (более&nbsp;10&nbsp;минут):
+										<span>от&nbsp;30&nbsp;000&nbsp;рублей</span>;
 									</li>
-								</ul>
-								<h3>Факторы, влияющие на&nbsp;стоимость монтажа видео:</h3>
-								<ul>
-									<li><i className="icon-check _icon"></i>Объем &nbsp; сложность
-										материала: чем &nbsp;больше материала требуется обработать
-										и&nbsp;монтировать, тем&nbsp;выше будет стоимость монтажа.
-										Сложные спецэффекты, анимация и цветокоррекция также могут
-										увеличить стоимость.
+									<li><i className="icon-clapper _icon"></i>
+										Монтаж видео с&nbsp;сложной анимацией и&nbsp;спецэффектами:
+										цена обсуждается индивидуально и&nbsp;может быть значительно
+										выше;
 									</li>
-									<li><i className="icon-check _icon"></i>Продолжительность
-										видео: монтаж видео с&nbsp;разной продолжительностью может
-										иметь разные цены. Длинные видеоролики обычно требуют
-										больше времени для&nbsp;монтажа и&nbsp;могут быть более
-										дорогими.
-									</li>
-									<li><i className="icon-check _icon"></i>Наличие аудио:
-										если&nbsp;вам нужно отредактировать и &nbsp;обработать
-										аудио вместе с&nbsp;видео, это&nbsp;также повлияет
-										на&nbsp;стоимость монтажа.
-									</li>
-									<li><i className="icon-check _icon"></i>Уровень опыта
-										монтажера: опытные монтажеры могут взимать более высокую
-										стоимость за&nbsp;свои услуги, так&nbsp;как&nbsp;они
-										способны предоставить более высококачественные результаты.
-									</li>
-									<p className="service-description__ps">Ориентировочные цены
-										на&nbsp;съемку и&nbsp;монтаж видео
-										в&nbsp;России могут значительно варьироваться
-										в&nbsp;зависимости от&nbsp;вышеперечисленных факторов.</p>
-
 								</ul>
 							</div>
 						</div>

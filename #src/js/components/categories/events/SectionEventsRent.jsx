@@ -49,7 +49,7 @@ export const SectionEventsRent = ({baseUrl}) => {
 				</div>
 				<div className="service-description__body top-box">
 					<div className='service-description__content _container'>
-						<h1 className="service-description__title events-rent-title">
+						<h1 className="service-description__title">
 							Аренда оборудования
 						</h1>
 						<div className="service-description__description">

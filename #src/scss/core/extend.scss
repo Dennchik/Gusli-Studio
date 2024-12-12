@@ -94,10 +94,13 @@
 
 	background: radial-gradient(
 									at 95% 7%,
-									rgba(82, 37, 80, 0.35) 0px,
+									rgba(78, 36, 75, 0.25) 0px,
 									transparent 50%
 	),
-	radial-gradient(at 7% 95%, rgba(82, 37, 80, 0.35) 0px, transparent 50%);
+	radial-gradient(
+									at 7% 95%,
+									rgba(78, 36, 75, 0.25) 0px,
+									transparent 50%);
 }
 
 .gradient-neon-color {

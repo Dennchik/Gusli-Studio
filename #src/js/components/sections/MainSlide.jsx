@@ -93,9 +93,9 @@ export const MainSlide = ({baseUrl}) => {
 						className="video-js"
 						preload="auto"
 						loop
-						muted>
-						<source src={getPath('img/audio/showreel-1.mp4')}
-										type="video/mp4" />
+						muted
+						poster={getPath('img/audio/showreel-1.png')}
+						src={getPath('img/audio/showreel-1.mp4')}>
 					</video>
 				</div>
 				<div className="main-video__content _container">

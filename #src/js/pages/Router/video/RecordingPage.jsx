@@ -9,7 +9,7 @@ import { applyParallax } from '../../../animations/animations.jsx';
 import { Header } from '../../../components/layouts/Header.jsx';
 import { Footer } from '../../../components/layouts/Footer.jsx';
 import { Offer } from '../../../components/chunks/Offer.jsx';
-import { Answers } from '../../../components/sections/Answers.jsx';
+import { ShowreelSlide } from '../../../components/sections/ShowreelSlide.jsx';
 import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
 import { FormModal } from '../../../components/layouts/FormModal.jsx';
 import {
@@ -59,8 +59,8 @@ function RecordingPage() {
 						<section className="main-content__offer">
 							<Offer baseUrl={baseUrl} />
 						</section>
-						<section className="main-content__questions">
-							<Answers baseUrl={baseUrl} />
+						<section className="main-content__showreel">
+							<ShowreelSlide baseUrl={baseUrl} />
 						</section>
 						<footer className="main-content__footer" id="footer">
 							<Footer baseUrl={baseUrl} isHomePage={true} />
@@ -68,8 +68,6 @@ function RecordingPage() {
 					</div>
 				</div>
 			</main>
-
-
 			<div className="page__menu-float">
 				<MenuFloat baseUrl={baseUrl} />
 			</div>

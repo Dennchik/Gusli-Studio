@@ -63,9 +63,9 @@ export const Categories = ({baseUrl}) => {
 							 alt="image" />
 				</div>
 			</div>
-			<div className="categories__body top-box">
+			<div className="categories__body">
 				<div className="services _container">
-					<div className="services__body">
+					<div className="services__body top-box">
 						<div className="services__title">Наши услуги</div>
 						<div className="services__content">
 							<div className="services-slide">

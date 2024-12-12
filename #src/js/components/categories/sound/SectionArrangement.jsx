@@ -49,7 +49,9 @@ export const SectionArrangement = ({baseUrl}) => {
 				</div>
 				<div className="service-description__body top-box">
 					<div className="service-description__content _container">
-						<div className="service-description__title arrangement-title">Аранжировка</div>
+						<div className="service-description__title">
+							Аранжировка
+						</div>
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<p><i className="icon-hand-pointer _icon"></i>В данной статье

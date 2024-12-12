@@ -49,7 +49,7 @@ export const SectionAudioPodcasts = ({baseUrl}) => {
 				</div>
 				<div className="service-description__body top-box">
 					<div className="service-description__content _container">
-						<div className="service-description__title audio-podcasts-title">
+						<div className="service-description__title">
 							Аудио подкасты
 						</div>
 						<div className="service-description__description">

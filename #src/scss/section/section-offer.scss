@@ -34,8 +34,6 @@
 		text-align: center;
 		letter-spacing: 0;
 		color: $neon-blue;
-		perspective-origin: 45% 320%;
-		transform-style: preserve-3d;
 		perspective: 100px;
 		filter: $filter;
 
@@ -43,30 +41,6 @@
 
 		@include screen-490 {
 			font-size: 24px;
-		}
-
-		&::before {
-			position: absolute;
-			z-index: -1;
-			top: 0;
-			left: 0;
-			height: 100%;
-			content: '';
-			transform: translate(0, 10%);
-		}
-
-		&::after {
-			font: {
-				weight: 900;
-			}
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 70%;
-			content: 'специальное предложение';
-			transform: rotateX(15deg) translateZ(-5px);
-			@extend .shadow-after;
 		}
 	}
 

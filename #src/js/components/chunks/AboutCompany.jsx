@@ -30,7 +30,7 @@ export const AboutCompany = ({baseUrl}) => {
 					</div>
 				</div>
 				<div className="about-company__footer">
-					<a className="about-company__button"
+					<a className="about-company__button btn-grad"
 						 href={getPath('about.html')}>читать всё</a>
 				</div>
 			</div>
@@ -56,7 +56,7 @@ export const AboutCompany = ({baseUrl}) => {
 					</div>
 				</div>
 				<div className="about-company__footer">
-					<a className="about-company__button"
+					<a className="about-company__button btn-grad"
 						 href={getPath('services.html')}
 						 type="button">читать всё</a>
 				</div>
