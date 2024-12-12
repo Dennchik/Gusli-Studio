@@ -8,7 +8,6 @@ import { applyParallax } from '../../animations/animations.jsx';
 
 import { Header } from '../../components/layouts/Header.jsx';
 import { Categories } from '../../components/sections/Categories.jsx';
-import { Offer } from '../../components/chunks/Offer.jsx';
 import { Footer } from '../../components/layouts/Footer.jsx';
 import { MenuFloat } from '../../components/layouts/Menu-float.jsx';
 import { Answers } from '../../components/sections/Answers.jsx';
@@ -58,9 +57,6 @@ function ServicesPage() {
 						<section className="main-content__categories">
 							<Categories baseUrl={baseUrl} />
 						</section>
-						{/* <section className="main-content__offer"> */}
-						{/* 	<Offer baseUrl={baseUrl} /> */}
-						{/* </section> */}
 						<section className="main-content__questions">
 							<Answers baseUrl={baseUrl} />
 						</section>

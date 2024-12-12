@@ -1,10 +1,6 @@
 @use '../core/all' as *;
 
 .categories-video {
-	// .categories-video_-body
-	&__body {
-
-	}
 
 	.services-slide__pagination {
 		display: flex;
@@ -13,7 +9,6 @@
 	.services {
 		// services__body
 		&__body {
-			height: 100%;
 
 			@include min-1140 {
 				overflow: hidden;
@@ -26,19 +21,6 @@
 		&__body {
 			@include min-1140 {
 				margin: 0 10px;
-			}
-		}
-
-		// .services-slide__image
-		&__image {
-			width: 100%;
-
-			img {
-				max-height: 290px;
-				width: 100%;
-				max-width: 100%;
-				height: 100%;
-				object-fit: cover;
 			}
 		}
 

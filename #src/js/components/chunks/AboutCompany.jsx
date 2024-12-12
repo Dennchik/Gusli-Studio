@@ -83,7 +83,7 @@ export const AboutCompany = ({baseUrl}) => {
 								</div>
 								<div className="team-mates__text">
 									<p>Георгий - основатель студии и&nbsp;ведущий звукорежиссер.
-										Engineer.</p>
+										Инженер.</p>
 								</div>
 							</li>
 						</ul>
@@ -148,8 +148,7 @@ export const AboutCompany = ({baseUrl}) => {
 									<a href="#">Маргарита Калан</a>
 								</div>
 								<div className="team-mates__text">
-									<p>Adam is the studio’s founder and leading sound
-										engineer.</p>
+									<p>Певица, композитор, поэтесса. Web-дизайнер.</p>
 								</div>
 							</li>
 						</ul>
