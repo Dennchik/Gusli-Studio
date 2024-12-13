@@ -203,14 +203,17 @@ button {
 }
 
 .hr-shelf {
+	position: relative;
+	z-index: 9;
+
 	&__content {
 		margin: 0 auto !important;
 		padding: 0;
 		height: 0;
 		border: 0;
 		width: 80%;
-		border-top: 1px solid hsla(240, 100%, 67%, 0.19);;
-		box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.91);
+		// border-top: 1px solid hsla(240, 100%, 67%, 0.19);;
+		box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.91);
 	}
 
 }

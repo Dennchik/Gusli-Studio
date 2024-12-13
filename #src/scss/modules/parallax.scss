@@ -18,7 +18,7 @@
 		bottom: 0;
 		width: 100%;
 		height: 100%;
-		background: #130821;
+		background: $black-color;
 
 		img {
 			position: absolute;
@@ -31,7 +31,6 @@
 			object-position: top center;
 			will-change: transform;
 		}
-
 	}
 
 	&__image-achieve {
