@@ -8,8 +8,8 @@ export function Slide(
 	partnersSlide = '.showreel-slide__body ',
 	pagination = '.showreel-slide__pagination',
 	// scrollbar = '',
-	// nextEl = '',
-	// prevEl = '',
+	nextEl = '.showreel-slide__next',
+	prevEl = '.showreel-slide__prev',
 ) {
 	if (partnersSlide) {
 		new Swiper(partnersSlide, {
@@ -17,10 +17,14 @@ export function Slide(
 			spaceBetween: 30,
 			// autoHeight: true,
 			// loop: true,
-			grabCursor: true,
+			// grabCursor: true,
 			// mousewheel: true,
 			// centeredSlides: true,
 			// slidesPerView: 2,
+			navigation: {
+				nextEl: nextEl,
+				prevEl: prevEl,
+			},
 			pagination: {
 				el: pagination,
 				clickable: true,

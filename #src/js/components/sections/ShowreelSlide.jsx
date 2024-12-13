@@ -93,50 +93,58 @@ export const ShowreelSlide = ({baseUrl}) => {
 			<div className="showreel__body">
 				<div className="showreel__title">Наше портфолио</div>
 				<div className="showreel-slide">
-					<div className="showreel-slide__body _swiper">
-						<div className="showreel-slide__column">
-							<div className="showreel-slide__video">
-								<video
-									ref={videoRef}
-									id="player-id"
-									playsInline
-									controls
-									className="video-js"
-									muted
-									poster={getPath('img/audio/showreel-1.png')}
-									src={getPath('img/audio/showreel-1.mp4')}
-								>
-								</video>
+					<div className="showreel-slide__wrapper">
+						<div className="showreel-slide__body _swiper">
+							<div className="showreel-slide__column">
+								<div className="showreel-slide__video">
+									<video
+										ref={videoRef}
+										id="player-id"
+										playsInline
+										controls
+										className="video-js"
+										muted
+										poster={getPath('img/audio/showreel-1.png')}
+										src={getPath('img/audio/showreel-1.mp4')}
+									>
+									</video>
+								</div>
+							</div>
+							<div className="showreel-slide__column">
+								<div className="showreel-slide__video">
+									<video
+										ref={videoRef}
+										id="player-id"
+										playsInline
+										controls
+										className="video-js"
+										muted
+										poster={getPath('img/audio/showreel-2.png')}
+										src={getPath('img/audio/showreel-2.mp4')}>
+									</video>
+								</div>
+							</div>
+							<div className="showreel-slide__column">
+								<div className="showreel-slide__video">
+									<video
+										ref={videoRef}
+										id="player-id"
+										playsInline
+										controls
+										className="video-js"
+										muted
+										poster={getPath('img/audio/showreel-1.png')}
+										src={getPath('img/audio/showreel-1.mp4')}
+									>
+									</video>
+								</div>
 							</div>
 						</div>
-						<div className="showreel-slide__column">
-							<div className="showreel-slide__video">
-								<video
-									ref={videoRef}
-									id="player-id"
-									playsInline
-									controls
-									className="video-js"
-									muted
-									poster={getPath('img/audio/showreel-2.png')}
-									src={getPath('img/audio/showreel-2.mp4')}>
-								</video>
-							</div>
+						<div className="showreel-slide__prev">
+							<i className="icon-angle-left _icon"></i>
 						</div>
-						<div className="showreel-slide__column">
-							<div className="showreel-slide__video">
-								<video
-									ref={videoRef}
-									id="player-id"
-									playsInline
-									controls
-									className="video-js"
-									muted
-									poster={getPath('img/audio/showreel-1.png')}
-									src={getPath('img/audio/showreel-1.mp4')}
-								>
-								</video>
-							</div>
+						<div className="showreel-slide__next">
+							<i className="icon-angle-right _icon"></i>
 						</div>
 					</div>
 					<div className="showreel-slide__pagination"></div>

@@ -42,9 +42,15 @@
 }
 
 .showreel-slide {
+	position: relative;
 	// .showreel-slide__body
 	&__body {
+		position: relative;
+	}
 
+	// .showreel-slide__wrapper
+	&__wrapper {
+		position: relative;
 	}
 
 	// .showreel-slide__column
@@ -67,5 +73,42 @@
 	&__pagination {
 		@extend .pagination;
 		display: flex;
+	}
+
+	&__next, &__prev {
+		cursor: pointer;
+		position: absolute;
+		color: $neon-blue;
+		opacity: 0.3;
+		top: 50%;
+		bottom: 0;
+		height: 30%;
+		z-index: 99;
+		font-size: 42px;
+		padding: 0 2rem;
+		display: flex;
+		align-items: center;
+		border-radius: 4px;
+		transition: opacity 0.4s ease;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		i {
+			pointer-events: none;
+		}
+	}
+
+	// .showreel-slide__next
+	&__next {
+		transform: translate(18%, -50%);
+		right: 0;
+	}
+
+	// .showreel-slide__prew
+	&__prev {
+		transform: translate(-18%, -50%);
+		left: 0;
 	}
 }
