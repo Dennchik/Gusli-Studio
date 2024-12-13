@@ -30,13 +30,6 @@
 			object-fit: cover;
 			object-position: top center;
 			will-change: transform;
-
-			// @include minmax-320-490 {
-			// 	object-position: calc(-100px + (0 - (-100)) * ((100vw - 320px) / (490 - 320)));
-			// }
-			// @include screen-320 {
-			// 	object-position: -100px 0;
-			// }
 		}
 
 	}
