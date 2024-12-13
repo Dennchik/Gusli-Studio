@@ -19,6 +19,7 @@ export function Slide(
 			// loop: true,
 			// grabCursor: true,
 			// mousewheel: true,
+
 			// centeredSlides: true,
 			// slidesPerView: 2,
 			navigation: {

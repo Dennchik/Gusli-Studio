@@ -76,14 +76,14 @@
 		overflow: hidden;
 		width: 4.2rem;
 		height: 4.2rem;
-		transition: all 0.3s ease-in-out;
+		transition: all 0.2s ease-in-out;
 		color: $black-color;
 		border-radius: 50%;
 		background: $electric-lime;
 
 		i {
 			&::before {
-				transition: color 0.3s ease-in-out;
+				transition: color 0.2s ease-in-out;
 			}
 		}
 

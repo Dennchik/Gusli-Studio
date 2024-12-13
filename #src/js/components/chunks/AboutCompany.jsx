@@ -148,7 +148,7 @@ export const AboutCompany = ({baseUrl}) => {
 									<a href="#">Маргарита Калан</a>
 								</div>
 								<div className="team-mates__text">
-									<p>Певица, композитор, поэтесса. Web-дизайнер.</p>
+									<p>Певица, композитор, поэтесса.</p>
 								</div>
 							</li>
 						</ul>
