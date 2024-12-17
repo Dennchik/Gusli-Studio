@@ -77,7 +77,6 @@
 	&__title {
 		font-size: 2rem;
 		margin-bottom: 2rem;
-		text-shadow: 0 0 1px $neon-electric;
 	}
 
 	// .about-company__item-services
@@ -110,7 +109,7 @@
 		font-weight: 500;
 		display: block;
 		width: fit-content;
-		padding: 1rem 2rem;
+		padding: 2rem 5rem;
 		transition: color 0.4s,
 		background 0.4s ease-in-out;
 		text-transform: uppercase;
@@ -147,7 +146,7 @@
 		height: 104px;
 		margin-right: 2rem;
 		opacity: 0.5;
-		border-radius: 5px;
+		border-radius: 4px;
 		box-shadow: 3px 3px 10px #000;
 	}
 

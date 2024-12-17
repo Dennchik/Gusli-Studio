@@ -25,6 +25,37 @@ export const ServiceVideo = ({baseUrl}) => {
 		buildSwiper();
 		Slide();
 	}, []);
+	useEffect(() => {
+		const updatePaginationDisplay = () => {
+			const slideBody = document.querySelector('.services-slide__body._swiper');
+			const pagination = document.querySelector('.services-slide__pagination');
+
+			if (slideBody && pagination) {
+				const columns = slideBody.querySelectorAll('.services-slide__column');
+				const isSmallScreen = window.matchMedia('(max-width: 1024px)').matches;
+
+				if (columns.length > 5) {
+					pagination.classList.remove('hidden'); // Показываем элемент
+				} else if (isSmallScreen) {
+					pagination.classList.remove('hidden'); // Скрываем элемент
+				} else {
+					pagination.classList.remove('hidden'); // Показываем для больших
+																								 // экранов
+				}
+			}
+		};
+
+		// Первоначальная проверка
+		updatePaginationDisplay();
+
+		// Отслеживание изменения размеров окна
+		window.addEventListener('resize', updatePaginationDisplay);
+
+		// Убираем обработчик при размонтировании
+		return () => {
+			window.removeEventListener('resize', updatePaginationDisplay);
+		};
+	}, []);
 
 	useEffect(() => {
 		if (!isMobile) {
@@ -108,7 +139,7 @@ export const ServiceVideo = ({baseUrl}) => {
 			<div className="categories__body">
 				<div className="services _container">
 					<div className="services__body">
-						<div className="services__title video-title">Видео</div>
+						<div className="services__title">Видео</div>
 						<div className="services__content">
 							<div className="services-slide">
 								<div className="services-slide__body slide-services _swiper">

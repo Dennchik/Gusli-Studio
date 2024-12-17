@@ -80,8 +80,9 @@ export const Header = ({baseUrl}) => {
 								</a>
 							</div>
 							<div className="header__item">
-								<a className="header__link-key" href={getPath('')}>
-									<span>Новости</span>
+								<a className="header__link-key"
+									 href={getPath('services/development.html')}>
+									<span>Товары</span>
 								</a>
 							</div>
 							<div className="header__item">
@@ -90,8 +91,7 @@ export const Header = ({baseUrl}) => {
 											duration={500}
 											offset={-100}
 											isDynamic={true}
-											smooth='easeInQuad'
-								>
+											smooth='easeInQuad'>
 									<span>Контакты</span>
 								</Link>
 							</div>

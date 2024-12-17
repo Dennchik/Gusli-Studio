@@ -1,21 +1,6 @@
 @use '../core/all' as *;
 
 .categories-sound {
-	.services {
-		// services__body
-		&__body {
-			 
-		}
-
-		// .services__title
-		&__title {
-			&:nth-child(1) {
-				&::after {
-					content: 'звук';
-				}
-			}
-		}
-	}
 
 	.services-slide {
 		//  .services-slide__image

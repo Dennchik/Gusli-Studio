@@ -1,11 +1,7 @@
 //todo ---------------------------- Core ---------------------------------------
 @use 'core/all.scss' as *;
-// Используем файл для перенаправления
-
 // todo --------------------------- Assets -------------------------------------
 @use 'assets/showreel';
-// @use 'assets/audio-player';
 // todo -------------------------- Sections ------------------------------------
 @use 'section/section-mainslide';
 @use 'section/setion-services';
-@use 'section/section-about';

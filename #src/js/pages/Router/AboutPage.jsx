@@ -45,7 +45,22 @@ function AboutPage() {
 		}
 		modalOpen();
 		returnToSavedPosition();
+	}, []);
 
+	useEffect(() => {
+		const hash = window.location.hash; // Получаем якорь из URL
+		if (hash) {
+			const element = document.querySelector(hash); // Находим элемент по якорю
+			if (element) {
+				const headerHeight = document.querySelector(
+					'.header')?.offsetHeight || 0;
+				const offsetTop = element.getBoundingClientRect().top + window.scrollY - headerHeight;// Абсолютная позиция
+				window.scrollTo({
+					top: offsetTop, // Добавляем корректировку отступа
+					behavior: 'smooth', // Плавная прокрутка
+				});
+			}
+		}
 	}, []);
 
 	return (
@@ -59,7 +74,7 @@ function AboutPage() {
 						<section className="main-content__about">
 							<About baseUrl={baseUrl} />
 						</section>
-						<section className="main-content__partners">
+						<section className="main-content__partners" id="partners">
 							<Partners baseUrl={baseUrl} />
 						</section>
 						<section className="main-content__achievements">

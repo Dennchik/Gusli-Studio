@@ -14,6 +14,10 @@
 		justify-content: center;
 		padding: 6rem 0;
 
+		@include min-1440 {
+			overflow: hidden;
+		}
+
 		@include min-1140 {
 			padding: 10rem 0;
 		}
@@ -27,21 +31,25 @@
 			size: 60px;
 			weight: normal;
 		}
+
 		line-height: 100%;
 		position: relative;
 		z-index: 9;
-		display: inline;
 		text-align: center;
 		letter-spacing: 0;
 		color: $neon-blue;
 		filter: $filter;
+		@include min-1140 {
+			margin-bottom: 10rem;
+		}
+	;
 
 		@include minmax-320-1920 {
-			font-size: calc(27px + (60 - 27) * ((100vw - 320px) / (1920 - 320)));
+			font-size: calc(24px + (60 - 24) * ((100vw - 320px) / (1920 - 320)));
 		}
 
 		@include screen-320 {
-			font-size: 27px;
+			font-size: 24px;
 		}
 	}
 
@@ -49,10 +57,15 @@
 	&__content {
 		width: 100%;
 	}
+
+	&__dash {
+		font-family: $font-default;
+		// font-size: 56px;
+	}
 }
 
 .services-slide {
-	.slide-text {
+	.slide-text, .slide-development {
 		justify-content: space-evenly;
 	}
 
@@ -68,19 +81,12 @@
 	// .services-slide__column
 	&__column {
 		min-width: 130px;
-
-		border-radius: 10px;
-
-		@include screen-1024 {
-			// max-width: 245px;
-			// flex: 0 1 20%;
-		}
+		// border-radius: 10px;
 	}
 
 	// .services-slide__content
 	&__content {
 		position: relative;
-		border-radius: 10px;
 		box-shadow: 0 0 20px #000;
 
 		&::before {
@@ -94,7 +100,7 @@
 			content: '';
 			transition: all 0.3s ease-in-out;
 			opacity: 0.3;
-			border-radius: 10px;
+			border-radius: 4px;
 			box-shadow: $boxShadow;
 
 			@include screen-1024 {
@@ -145,7 +151,7 @@
 		height: 100%;
 		cursor: pointer;
 		transition: all 0.5s ease-in-out;
-		border-radius: 10px;
+		border-radius: 4px;
 
 		img {
 			max-height: 300px;
@@ -249,9 +255,9 @@
 	// .services-slide__pagination
 	&__pagination {
 		@extend .pagination;
-		@include min-1024 {
-			display: none;
+
+		&.hidden {
+			display: none !important;
 		}
 	}
 }
-

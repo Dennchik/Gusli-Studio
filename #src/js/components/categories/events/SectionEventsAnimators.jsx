@@ -31,7 +31,7 @@ export const SectionEventsAnimators = ({baseUrl}) => {
 
 	return (
 		<div className="service-description">
-			<div className="service-description__column-parallax">
+			<div className="service-description__column">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
@@ -110,7 +110,8 @@ export const SectionEventsAnimators = ({baseUrl}) => {
 					<div className='service-description__content _container'>
 						<div className="service-description__description">
 							<div className="service-description__row">
-								<h3>Один аниматор - от&nbsp;5000&nbsp;руб./час</h3>
+								<h3>Один аниматор&nbsp;- <span>от&nbsp;5000&nbsp;р/ч</span>.
+								</h3>
 								<ul>
 									<li><i className="icon-check _icon"></i>
 										Отличный вариант для&nbsp;праздника до&nbsp;10 детей;
@@ -128,7 +129,8 @@ export const SectionEventsAnimators = ({baseUrl}) => {
 										Весёлые игры и&nbsp;конкурсы.
 									</li>
 								</ul>
-								<h3>Два аниматора&nbsp;- от&nbsp;9000&nbsp;руб./час</h3>
+								<h3>Два аниматора&nbsp;- <span>от&nbsp;9000&nbsp;р/ч</span>.
+								</h3>
 								<ul>
 									<li><i className="icon-check _icon"></i>
 										Лучший вариант для&nbsp;любого праздника;

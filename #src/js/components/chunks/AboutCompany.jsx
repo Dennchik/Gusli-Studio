@@ -79,7 +79,7 @@ export const AboutCompany = ({baseUrl}) => {
 							</li>
 							<li>
 								<div className="team-mates__name">
-									<a href="#">Георгий Дудунов</a>
+									Георгий Дудунов
 								</div>
 								<div className="team-mates__text">
 									<p>Георгий - основатель студии и&nbsp;ведущий звукорежиссер.
@@ -101,7 +101,7 @@ export const AboutCompany = ({baseUrl}) => {
 							</li>
 							<li>
 								<div className="team-mates__name">
-									<a href="#">Ryan Gosling</a>
+									Ryan Gosling
 								</div>
 								<div className="team-mates__text">
 									<p>Райан - ассистент звукорежиссера в&nbsp;студии
@@ -123,7 +123,7 @@ export const AboutCompany = ({baseUrl}) => {
 							</li>
 							<li>
 								<div className="team-mates__name">
-									<a href="#">Ryan Gosling</a>
+									Ryan Gosling
 								</div>
 								<div className="team-mates__text">
 									<p>Райан - ассистент звукорежиссера в&nbsp;студии
@@ -145,7 +145,7 @@ export const AboutCompany = ({baseUrl}) => {
 							</li>
 							<li>
 								<div className="team-mates__name">
-									<a href="#">Маргарита Калан</a>
+									Маргарита Калан
 								</div>
 								<div className="team-mates__text">
 									<p>Певица, композитор, поэтесса.</p>

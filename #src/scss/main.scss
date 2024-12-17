@@ -1,7 +1,5 @@
 //todo ---------------------------- Core ---------------------------------------
 @use 'core/all.scss' as *;
-// todo ---------------------------- Pages -------------------------------------
-@use 'pages/page-main';
 // todo --------------------------- Modules ------------------------------------
 @use 'modules/preloader';
 @use 'modules/parallax';
@@ -9,23 +7,22 @@
 @use 'assets/burger-button';
 @use 'section/section-order';
 @use 'assets/menu-float';
-// todo --------------------------- layout -------------------------------------
-@use 'layouts/bem-block';
-@use 'layouts/header';
-@use 'layouts/footer';
-// todo --------------------------- Temp ---------------------------------------
-@use 'layouts/page-grid.scss';
 // todo --------------------------- Fonts --------------------------------------
 @use 'core/_fonts.scss';
 //todo  --------------------------- Icon Fonts ---------------------------------
 @use 'core/_iconfonts.scss';
 // todo --------------------------- Plugins ------------------------------------
 @use 'assets/swiper';
+// todo --------------------------- layout -------------------------------------
+@use 'layouts/bem-block';
+@use 'layouts/header';
+@use 'layouts/footer';
+// todo ---------------------------- Pages -------------------------------------
+@use 'pages/page-main';
 // todo -------------------------- Section -------------------------------------
 @use 'section/section-offer';
 @use 'section/about-footer';
-//todo ------------------------ Default fonts ----------------------------------
-
+// todo ------------------------ Default fonts ---------------------------------
 // &display=swap&subset=cyrillic-ext
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,regular,500,600,700&display=swap&subset=cyrillic-ext');
 @import url('https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700&display=swap&subset=cyrillic-ext');
@@ -54,7 +51,3 @@
 	justify-content: center;
 }
 
-[class*='_stretch'] {
-	position: relative;
-	z-index: 0;
-}

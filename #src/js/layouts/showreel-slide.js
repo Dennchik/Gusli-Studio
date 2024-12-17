@@ -37,7 +37,7 @@ export function Slide(
 				260: {
 					slidesPerView: 1,
 				},
-				491: {
+				768: {
 					slidesPerView: 2,
 				},
 			}

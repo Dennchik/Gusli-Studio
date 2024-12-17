@@ -161,7 +161,7 @@
 
 .order-button {
 	border: 0;
-	border-radius: 7px;
+	border-radius: 4px;
 	color: white;
 	font-size: 1.6rem;
 	font-weight: 500;
@@ -204,16 +204,17 @@ button {
 
 .hr-shelf {
 	position: relative;
-	z-index: 9;
+	z-index: 11;
 
+	// .hr-shelf__content
 	&__content {
-		margin: 0 auto !important;
+		margin: -50px auto 10px;
 		padding: 0;
-		height: 0;
-		border: 0;
+		height: 50px;
+		border: none;
 		width: 80%;
-		// border-top: 1px solid hsla(240, 100%, 67%, 0.19);;
-		box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.91);
+		border-bottom: 1px solid rgba(56, 31, 71, 0.47);
+		box-shadow: 0 20px 20px -20px #100e10
 	}
 
 }

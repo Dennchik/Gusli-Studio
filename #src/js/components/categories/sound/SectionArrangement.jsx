@@ -30,7 +30,7 @@ export const SectionArrangement = ({baseUrl}) => {
 
 	return (
 		<div className="service-description">
-			<div className="service-description__column-parallax">
+			<div className="service-description__column">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
@@ -125,8 +125,8 @@ export const SectionArrangement = ({baseUrl}) => {
 									профессионалам и&nbsp;создайте звук, который запомнится
 									надолго!
 								</p>
-								<p>Цены на&nbsp;написание аранжировки от&nbsp;10&nbsp;000
-									рублей. </p>
+								<p>Цены на&nbsp;написание аранжировки <span>от&nbsp;10&nbsp;000
+									рублей</span>. </p>
 							</div>
 						</div>
 					</div>
@@ -135,7 +135,7 @@ export const SectionArrangement = ({baseUrl}) => {
 			<div className="service-description__column">
 				<div className="service-description__body">
 					<div className='service-description__content _container'>
-						<div className='service-description__title bits-title'>
+						<div className='service-description__title'>
 							Биты
 						</div>
 						<div className="service-description__description">
@@ -176,10 +176,10 @@ export const SectionArrangement = ({baseUrl}) => {
 								<h2>Цены:</h2>
 								<ul>
 									<li><i className="icon-hand-pointer _icon"></i>Авторский бит -
-										от&nbsp;8000 руб.
+										<span>от&nbsp;8000 руб</span>.
 									</li>
 									<li><i className="icon-hand-pointer _icon"></i>Покупка бита из
-										каталога - от&nbsp;3000 руб.
+										каталога - <span>от&nbsp;3000 руб</span>.
 									</li>
 								</ul>
 								<ul>

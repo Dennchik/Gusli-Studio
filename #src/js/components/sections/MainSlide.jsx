@@ -111,6 +111,12 @@ export const MainSlide = ({baseUrl}) => {
 						для&nbsp;современных артистов, как&nbsp;подписанных, так
 						и &nbsp;независимых.
 					</div>
+					<div className="offer-container__button _open-button">
+						<button className="order-button btn-grad"
+										type={'button'}>
+							<span>оставить заявку</span>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>

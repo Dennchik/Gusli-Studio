@@ -11,6 +11,7 @@
 
 	// .achieve-items__title
 	&__title {
+		margin-bottom: 6rem;
 		font: {
 			family: 'AA Neon', Helvetica, sans-serif;
 			size: 5rem;
@@ -19,26 +20,20 @@
 		line-height: 100%;
 		position: relative;
 		z-index: 9;
-		display: inline-block;
 		width: 100%;
-		margin-bottom: 6rem;
-		padding: 0 5rem 2rem;
-		text-align: center;
+		display: flex;
+		justify-content: center;
 		white-space: nowrap;
 		letter-spacing: 0;
 		color: $neon-blue;
-		perspective: 100px;
 		filter: $filter;
 
-		@include minmax-490-1920 {
-			font-size: calc(17px + (50 - 17) * ((100vw - 490px) / (1920 - 490)));
+		@include minmax-320-1920 {
+			font-size: calc(24px + (60 - 24) * ((100vw - 320px) / (1920 - 320)));
 		}
 
-		@include screen-490 {
-			font-size: 17px;
-			line-height: 120%;
-			margin: 0 0 6rem;
-			padding: 0 0 2rem;
+		@include screen-320 {
+			font-size: 24px;
 		}
 	}
 }

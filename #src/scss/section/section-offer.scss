@@ -27,7 +27,7 @@
 			weight: normal;
 		}
 
-		line-height: 125%;
+		line-height: 100%;
 		position: relative;
 		z-index: 9;
 		display: inline;
@@ -47,13 +47,14 @@
 	// .offer-container__content
 	&__content {
 		display: grid;
-		padding: 4rem 0;
+		padding: 6rem 0;
 		height: 100%;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto auto;
 		gap: 2rem;
 
 		@include max-690 {
+			padding: 4rem 0;
 			grid-template-columns: 1fr;
 		}
 	}

@@ -31,7 +31,7 @@ export const SectionEventsFestival = ({baseUrl}) => {
 
 	return (
 		<div className="service-description">
-			<div className="service-description__column-parallax">
+			<div className="service-description__column">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
@@ -157,7 +157,7 @@ export const SectionEventsFestival = ({baseUrl}) => {
 					</div>
 				</div>
 			</div>
-			<div className="service-description__column-parallax">
+			<div className="service-description__column">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>

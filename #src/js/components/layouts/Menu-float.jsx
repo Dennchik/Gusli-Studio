@@ -54,11 +54,7 @@ export const MenuFloat = ({baseUrl}) => {
 										<div className="main-menu__column">
 											<ul className="main-menu__menu-nav">
 												<li className="main-menu__title">
-													<h4>Inspiration</h4>
-												</li>
-												<li className="main-menu__menu-link">
-													<a className="main-menu__menu-link"
-														 href={getPath('services.html')}>Услуги</a>
+													<h4>Сервис</h4>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
@@ -80,6 +76,12 @@ export const MenuFloat = ({baseUrl}) => {
 														 href={getPath(
 															 'services/service-events.html')}>Мероприятия</a>
 												</li>
+												<li className="main-menu__menu-link">
+													<a className="main-menu__menu-link"
+														 href={getPath(
+															 'services/development.html')}>
+														Товары</a>
+												</li>
 											</ul>
 										</div>
 										<div className="main-menu__column">
@@ -89,23 +91,23 @@ export const MenuFloat = ({baseUrl}) => {
 												</div>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
+														 href={getPath('services.html')}>Услуги</a>
+												</li>
+												<li className="main-menu__menu-link">
+													<a className="main-menu__menu-link"
+														 href={getPath('about.html')}>Компания</a>
+												</li>
+												<li className="main-menu__menu-link">
+													<a className="main-menu__menu-link"
+														 href={getPath('about.html#partners')}>
+														С кем работали</a>
+												</li>
+												<li className="main-menu__menu-link">
+													<a className="main-menu__menu-link"
 														 href={getPath(
-															 'about.html')}>Компания</a>
+															 'services/service-sound.html#answers')}>
+														Вопросы и ответы</a>
 												</li>
-												<li className="main-menu__menu-link">
-													<a className="main-menu__menu-link"
-														 href="">С кем работали</a>
-												</li>
-												<li className="main-menu__menu-link">
-													<a className="main-menu__menu-link"
-														 href="">Отзывы клиентов</a>
-												</li>
-												<li className="main-menu__menu-link">
-													<a className="main-menu__menu-link"
-														 href="">Галерея</a></li>
-												<li className="main-menu__menu-link">
-													<a className="main-menu__menu-link"
-														 href="">Контакты</a></li>
 											</ul>
 										</div>
 									</div>
@@ -142,8 +144,7 @@ export const MenuFloat = ({baseUrl}) => {
 														smooth='easeInQuad'
 														ignoreCancelEvents={false}
 														duration={500}
-														offset={offset}
-											>
+														offset={offset}>
 												<span>Услуги</span>
 											</Link>
 										</div>
@@ -154,8 +155,7 @@ export const MenuFloat = ({baseUrl}) => {
 														spy={true}
 														duration={500}
 														smooth='easeInQuad'
-														offset={offset}
-											>
+														offset={offset}>
 												<span>Контакты</span>
 											</Link>
 										</div>

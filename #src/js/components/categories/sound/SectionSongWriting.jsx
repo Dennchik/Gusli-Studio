@@ -30,7 +30,7 @@ export const SectionSongWriting = ({baseUrl}) => {
 
 	return (
 		<div className="service-description">
-			<div className="service-description__column-parallax">
+			<div className="service-description__column">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
@@ -91,78 +91,94 @@ export const SectionSongWriting = ({baseUrl}) => {
 							<div className="service-description__row">
 								<h2>Цены на&nbsp;создание песни (песни на&nbsp;заказ, авторские
 									проекты, корпоративные гимны) : </h2>
-								<h3>Пакет 1 - 100 000₽</h3>
-								<ul>
-									<li><i className="icon-check _icon"></i>Написание текста;</li>
-									<li><i className="icon-check _icon"></i>Написание мелодии;
-									</li>
-									<li><i className="icon-check _icon"></i>Авторская аранжировка
-										(до 40
-										дорожек);
-									</li>
-									<li><i className="icon-check _icon"></i>Звукозапись;</li>
-									<li><i className="icon-check _icon"></i>Мастеринг и сведение;
-									</li>
-									<li><i className="icon-check _icon"></i>Передача авторских
-										прав;
-									</li>
-									<li><i className="icon-check _icon"></i>До 3 правок.</li>
-								</ul>
-								<div className="hr-shelf"></div>
-								<h3>Пакет 2 - 125 000₽</h3>
-								<ul>
-									<li><i className="icon-check _icon"></i>Написание текста;</li>
-									<li><i className="icon-check _icon"></i>Написание мелодии;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Авторская аранжировка (до&nbsp;60&nbsp;дорожек);
-									</li>
-									<li><i className="icon-check _icon"></i>Бек вокалисты;</li>
-									<li><i className="icon-check _icon"></i>Звукозапись;</li>
-									<li><i className="icon-check _icon"></i>Сведение и мастеринг;
-									</li>
-									<li><i className="icon-check _icon"></i>Дизайн обложки;</li>
-									<li><i className="icon-check _icon"></i>
-										Дистрибуция на цифровые площадки;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Передача авторских прав;
-									</li>
-									<li><i className="icon-check _icon"></i>До 5 правок.</li>
-								</ul>
-								<div className="hr-shelf"></div>
-								<h3>Пакет 3 - от 200 000₽</h3>
-								<ul>
-									<li><i className="icon-check _icon"></i>Написание текста;</li>
-									<li><i className="icon-check _icon"></i>Написание мелодии;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Авторская аранжировка (до&nbsp;100&nbsp;дорожек) живые
-										инструменты;
-									</li>
-									<li><i className="icon-check _icon"></i>Сессионные музыканты;
-									</li>
-									<li><i className="icon-check _icon"></i>Бек вокалисты;</li>
-									<li><i className="icon-check _icon"></i>Звукозапись;</li>
-									<li><i className="icon-check _icon"></i>
-										Сведение и мастеринг;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Дизайн обложки;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Дистрибуция на цифровые площадки;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Съемка видео Reels для&nbsp;презентация релиза;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Передача авторских прав;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Правки без ограничений.
-									</li>
-								</ul>
+								<div className="service-description__items">
+									<div className="service-description__list-item">
+										<h3>Пакет 1 - 100 000₽</h3>
+										<ul>
+											<li><i className="icon-check _icon"></i>Написание текста;
+											</li>
+											<li><i className="icon-check _icon"></i>Написание мелодии;
+											</li>
+											<li><i className="icon-check _icon"></i>Авторская
+												аранжировка
+												(до 40
+												дорожек);
+											</li>
+											<li><i className="icon-check _icon"></i>Звукозапись;</li>
+											<li><i className="icon-check _icon"></i>Мастеринг и
+												сведение;
+											</li>
+											<li><i className="icon-check _icon"></i>Передача авторских
+												прав;
+											</li>
+											<li><i className="icon-check _icon"></i>До 3 правок.</li>
+										</ul>
+									</div>
+									<div className="service-description__list-item">
+										<h3>Пакет 2 - 125 000₽</h3>
+										<ul>
+											<li><i className="icon-check _icon"></i>Написание текста;
+											</li>
+											<li><i className="icon-check _icon"></i>Написание мелодии;
+											</li>
+											<li><i className="icon-check _icon"></i>
+												Авторская аранжировка (до&nbsp;60&nbsp;дорожек);
+											</li>
+											<li><i className="icon-check _icon"></i>Бек вокалисты;
+											</li>
+											<li><i className="icon-check _icon"></i>Звукозапись;</li>
+											<li><i className="icon-check _icon"></i>Сведение и
+												мастеринг;
+											</li>
+											<li><i className="icon-check _icon"></i>Дизайн обложки;
+											</li>
+											<li><i className="icon-check _icon"></i>
+												Дистрибуция на цифровые площадки;
+											</li>
+											<li><i className="icon-check _icon"></i>
+												Передача авторских прав;
+											</li>
+											<li><i className="icon-check _icon"></i>До 5 правок.</li>
+										</ul>
+									</div>
+									<div className="service-description__list-item">
+										<h3>Пакет 3 - от 200 000₽</h3>
+										<ul>
+											<li><i className="icon-check _icon"></i>Написание текста;
+											</li>
+											<li><i className="icon-check _icon"></i>Написание мелодии;
+											</li>
+											<li><i className="icon-check _icon"></i>
+												Авторская аранжировка (до&nbsp;100&nbsp;дорожек) живые
+												инструменты;
+											</li>
+											<li><i className="icon-check _icon"></i>Сессионные
+												музыканты;
+											</li>
+											<li><i className="icon-check _icon"></i>Бек вокалисты;
+											</li>
+											<li><i className="icon-check _icon"></i>Звукозапись;</li>
+											<li><i className="icon-check _icon"></i>
+												Сведение и мастеринг;
+											</li>
+											<li><i className="icon-check _icon"></i>
+												Дизайн обложки;
+											</li>
+											<li><i className="icon-check _icon"></i>
+												Дистрибуция на цифровые площадки;
+											</li>
+											<li><i className="icon-check _icon"></i>
+												Съемка видео Reels для&nbsp;презентация релиза;
+											</li>
+											<li><i className="icon-check _icon"></i>
+												Передача авторских прав;
+											</li>
+											<li><i className="icon-check _icon"></i>
+												Правки без ограничений.
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

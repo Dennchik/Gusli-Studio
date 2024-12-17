@@ -32,7 +32,7 @@ export const SectionVideoRedaction = ({baseUrl}) => {
 
 	return (
 		<div className="service-description">
-			<div className="service-description__column-parallax">
+			<div className="service-description__column">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>

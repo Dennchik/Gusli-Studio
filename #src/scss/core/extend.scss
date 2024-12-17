@@ -91,7 +91,6 @@
 }
 
 .gradient-neon-revers {
-
 	background: radial-gradient(
 									at 95% 7%,
 									rgba(78, 36, 75, 0.25) 0px,
@@ -104,7 +103,6 @@
 }
 
 .gradient-neon-color {
-
 	background: radial-gradient(
 									at 9% 9%,
 									rgba(56, 31, 71, 0.35) 0px,
@@ -132,6 +130,25 @@
 	}
 }
 
+.gradient-border-before-revers {
+	&::before {
+		content: '';
+		height: 1px;
+		width: 100%;
+
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		background-image: linear-gradient(
+										to right,
+										#381f47 30%,
+										rgb(2, 1, 1) 65%
+		);
+	}
+}
+
 .gradient-border-after {
 	&::after {
 		content: '';
@@ -143,6 +160,23 @@
 		z-index: 1;
 		background-image: linear-gradient(
 										to right,
+										#381f47 30%,
+										rgb(2, 1, 1) 65%
+		);
+	}
+}
+
+.gradient-border-after-revers {
+	&::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 1px;
+		width: 100%;
+		z-index: 1;
+		background-image: linear-gradient(
+										to left,
 										#381f47 30%,
 										rgb(2, 1, 1) 65%
 		);

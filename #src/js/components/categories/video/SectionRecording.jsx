@@ -32,7 +32,7 @@ export const SectionRecording = ({baseUrl}) => {
 
 	return (
 		<div className="service-description">
-			<div className="service-description__column-parallax">
+			<div className="service-description__column">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
@@ -133,23 +133,24 @@ export const SectionRecording = ({baseUrl}) => {
 								<h3>Примеры стоимости съемки и монтажа видео:</h3>
 								<ul>
 									<li><i className="icon-clapper _icon"></i>
-										Съемка короткометражного фильма (1-2&nbsp;дня):
+										Съемка короткометражного фильма (1-2&nbsp;дня):&emsp;
 										<span>от&nbsp;100&nbsp;000&nbsp;рублей</span> и&nbsp;выше;
 									</li>
 									<li><i className="icon-clapper _icon"></i>
-										Съемка интервью (полдня):
+										Съемка интервью (полдня):&emsp;
 										<span>от&nbsp;15&nbsp;000&nbsp;рублей</span>;
 									</li>
 									<li><i className="icon-clapper _icon"></i>
-										Съемка рекламного ролика (1&nbsp;день):
+										Съемка рекламного ролика (1&nbsp;день):&emsp;
 										<span>от&nbsp;50&nbsp;000&nbsp;рублей</span>;
 									</li>
 									<li><i className="icon-clapper _icon"></i>
-										Монтаж короткого видеоролика (1-2&nbsp;минуты):
+										Монтаж короткого видеоролика
+										(1&nbsp;-&nbsp;2&nbsp;минуты):&emsp;
 										<span>от&nbsp;10&nbsp;000&nbsp;рублей</span>;
 									</li>
 									<li><i className="icon-clapper _icon"></i>
-										Монтаж длинного видео (более&nbsp;10&nbsp;минут):
+										Монтаж длинного видео (более&nbsp;10&nbsp;минут):&emsp;
 										<span>от&nbsp;30&nbsp;000&nbsp;рублей</span>;
 									</li>
 									<li><i className="icon-clapper _icon"></i>

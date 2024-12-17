@@ -1,17 +1,5 @@
 //todo ---------------------------- Core ---------------------------------------
 @use 'core/all.scss' as *;
-// Используем файл для перенаправления
-
-// todo --------------------------- Assets -------------------------------------
-// @import 'assets/burger-button';
-// @import 'assets/button';
-// @import 'assets/audio-player';
-// todo --------------------------- layout -------------------------------------
-// @import 'layouts/bem-block';
-// @import 'layouts/header';
-// @import 'layouts/footer';
-// todo --------------------------- Pages --------------------------------------
-
 // todo --------------------------- Sections -----------------------------------
 @use 'section/section-about';
 @use 'section/section-achieve';

@@ -165,7 +165,7 @@
 		}
 
 		&._complete {
-			border: none; /* Полностью убираем границу */
+			border: none;
 		}
 	}
 }
@@ -189,7 +189,7 @@
 
 	// .main-content__content
 	&__content {
-		position: relative;
+		// position: relative;
 	}
 
 	// .main-content__slide
@@ -228,9 +228,10 @@
 
 	// .main-content__questions
 	&__questions {
-		position: relative;
+		// position: relative;
 		@extend .gradient-neon-revers;
 		@extend .gradient-border-before;
+		@extend .gradient-border-after;
 	}
 
 	// .main-content__services
@@ -243,8 +244,8 @@
 	&__offer {
 		position: relative;
 		z-index: 111;
-		@extend .gradient-border-before;
-		@extend .gradient-border-after;
+		@extend .gradient-border-before-revers;
+		// @extend .gradient-border-after-revers;
 	}
 
 	// .main-content__footer
@@ -252,7 +253,7 @@
 		position: relative;
 		background-color: $black-color;
 		z-index: 9;
-		box-shadow: 0 0 2px #561e77;
+		// box-shadow: 0 0 2px #561e77;
 
 	}
 

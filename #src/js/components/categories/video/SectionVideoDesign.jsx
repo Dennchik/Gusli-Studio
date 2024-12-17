@@ -32,7 +32,7 @@ export const SectionVideoDesign = ({baseUrl}) => {
 
 	return (
 		<div className="service-description">
-			<div className="service-description__column-parallax">
+			<div className="service-description__column">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
@@ -128,18 +128,18 @@ export const SectionVideoDesign = ({baseUrl}) => {
 										от&nbsp;2&nbsp;000&nbsp;рублей за&nbsp;секунду. В&nbsp;сумму
 										входит раскадровка, сценарий, монтаж ролика.
 									</li>
-									<li><i className="icon-check _icon"></i>«Дудл-видео»&nbsp;—
+									<li><i className="icon-check _icon"></i>Дудл-видео»&nbsp;—
 										от&nbsp;1&nbsp;000 рублей за&nbsp;секунду. В&nbsp;стоимость
 										входит создание сценария, рисунков, профессиональная озвучка
 										и монтаж.
 									</li>
 									<li><i className="icon-check _icon"></i>Видеоролик
-										с&nbsp;анимацией7nbsp;— от&nbsp;3 000&nbsp;рублей
+										с&nbsp;анимацией&nbsp;— от&nbsp;3 000&nbsp;рублей
 										за&nbsp;секунду. В&nbsp;сумму входит съёмка ролика
 										с&nbsp;нуля, отрисовка анимации, монтаж.
 									</li>
 									<li><i className="icon-check _icon"></i>Мультипликация&nbsp;—
-										от&nbsp1&nbsp;500&nbsp;рублей за&nbsp;секунду. Проработка
+										от&nbsp;500&nbsp;рублей за&nbsp;секунду. Проработка
 										и&nbsp;отрисовка мультфильма, различные техники.
 									</li>
 									<li><i className="icon-check _icon"></i>Стоп-моушн —
@@ -148,20 +148,17 @@ export const SectionVideoDesign = ({baseUrl}) => {
 									</li>
 								</ul>
 
-								<h3><i className="icon-hand-pointer _icon"></i>Где применяется
-									моушн
-									дизайн</h3>
+								<h3><i className="icon-hand-pointer _icon"></i>
+									Где применяется моушн дизайн</h3>
 								<p>Телевидение: для&nbsp;брендинга и&nbsp;создания заставок к
-									сериалам,
-									программам, эфирам, новостям.</p>
+									сериалам, программам, эфирам, новостям.</p>
 								<p>Маркетинг, реклама: создание промо-роликов, презентаций,
 									инструкций; видеорекламы; имиджевых или&nbsp;объясняющих
 									роликов.</p>
 								<p>Онлайн медиа: моушн дизайн востребован для&nbsp;создания
-									заставок,
-									титров, перебивок, видеоконтента.</p>
+									заставок, титров, перебивок, видеоконтента.</p>
 								<p>Оффлайн мероприятия, шоу. Моушн-дизайнеры оформляют большие
-									экраны, делают 3d мэгпинг на&nbsp;фасадах зданий.</p>
+									экраны, делают 3d&nbsp;мэгпинг на&nbsp;фасадах зданий.</p>
 							</div>
 						</div>
 					</div>

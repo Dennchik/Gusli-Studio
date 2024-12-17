@@ -22,12 +22,39 @@ export const ServiceEvents = ({baseUrl}) => {
 	const boxImagesRef = useRef([]);
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	useEffect(() => {
-		const initSwiper = document.querySelector('.services-slide__body');
-		if (isMobile) {
-			initSwiper.classList.add('_swiper');
-			buildSwiper();
-			servicesSlide();
-		}
+		buildSwiper();
+		servicesSlide();
+	}, []);
+	useEffect(() => {
+		const updatePaginationDisplay = () => {
+			const slideBody = document.querySelector('.services-slide__body._swiper');
+			const pagination = document.querySelector('.services-slide__pagination');
+
+			if (slideBody && pagination) {
+				const columns = slideBody.querySelectorAll('.services-slide__column');
+				const isSmallScreen = window.matchMedia('(max-width: 1024px)').matches;
+
+				if (columns.length > 5) {
+					pagination.classList.remove('hidden'); // Показываем элемент
+				} else if (isSmallScreen) {
+					pagination.classList.remove('hidden'); // Скрываем элемент
+				} else {
+					pagination.classList.remove('hidden'); // Показываем для больших
+																								 // экранов
+				}
+			}
+		};
+
+		// Первоначальная проверка
+		updatePaginationDisplay();
+
+		// Отслеживание изменения размеров окна
+		window.addEventListener('resize', updatePaginationDisplay);
+
+		// Убираем обработчик при размонтировании
+		return () => {
+			window.removeEventListener('resize', updatePaginationDisplay);
+		};
 	}, []);
 
 	useEffect(() => {
@@ -112,12 +139,12 @@ export const ServiceEvents = ({baseUrl}) => {
 			<div className="categories__body">
 				<div className="services _container">
 					<div className="services__body top-box">
-						<div className="services__title events-title">
+						<div className="services__title">
 							Организация праздников
 						</div>
 						<div className="services__content">
 							<div className="services-slide">
-								<div className="services-slide__body slide-events">
+								<div className="services-slide__body slide-events _swiper">
 									<div className="services-slide__column line">
 										<a href={getPath('services/events/events-festival.html')}
 											 className="services-slide__content">
@@ -410,6 +437,7 @@ export const ServiceEvents = ({baseUrl}) => {
 										</a>
 									</div>
 								</div>
+								<div className="services-slide__pagination"></div>
 							</div>
 						</div>
 					</div>

@@ -206,7 +206,7 @@ export const SectionMastering = ({baseUrl}) => {
 					</div>
 				</div>
 			</div>
-			<div className="service-description__column-parallax">
+			<div className="service-description__column">
 				<div className="material-parallax parallax">
 					<div className="parallax__image">
 						<picture>
