@@ -206,6 +206,11 @@ export const app = {
 				dependOn: ['react-vendors', 'anime-vendors'],
 				filename: '[name].min.js'
 			},
+			'create-collections': {
+				import: ['./#src/js/pages/services/development/create-collections.jsx'],
+				dependOn: ['react-vendors', 'anime-vendors'],
+				filename: '[name].min.js'
+			},
 			//! depend On - vendors
 			'react-vendors': {
 				import: ['react', 'react-dom', 'react-router-dom', 'prop-types'],

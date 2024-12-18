@@ -105,23 +105,26 @@ export const SectionSongWriting = ({baseUrl}) => {
 										<h3>Пакет 1&nbsp;- 100&nbsp;000₽</h3>
 										<ul>
 											<li><i className="icon-check _icon"></i>
-												Написание текста;
+												<p>Написание текста;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Написание мелодии;
+												<p>Написание мелодии;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Авторская аранжировка (до&nbsp;40&nbsp;дорожек);
-											</li>
-											<li><i className="icon-check _icon"></i>Звукозапись;</li>
-											<li><i className="icon-check _icon"></i>
-												Мастеринг и&nbsp;сведение;
+												<p>Авторская аранжировка
+													<span>(до&nbsp;40&nbsp;дорожек)</span>;
+												</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Передача авторских прав;
+												<p>Звукозапись;</p></li>
+											<li><i className="icon-check _icon"></i>
+												<p>Мастеринг и&nbsp;сведение;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												До 3&nbsp;правок.
+												<p>Передача авторских прав;</p>
+											</li>
+											<li><i className="icon-check _icon"></i>
+												<p>До 3&nbsp;правок.</p>
 											</li>
 										</ul>
 									</div>
@@ -129,31 +132,34 @@ export const SectionSongWriting = ({baseUrl}) => {
 										<h3>Пакет 2&nbsp;- 125&nbsp;000₽</h3>
 										<ul>
 											<li><i className="icon-check _icon"></i>
-												Написание текста;
+												<p>Написание текста;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Написание мелодии;
+												<p>Написание мелодии;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Авторская аранжировка (до&nbsp;60&nbsp;дорожек);
-											</li>
-											<li><i className="icon-check _icon"></i>Бек вокалисты;
-											</li>
-											<li><i className="icon-check _icon"></i>Звукозапись;</li>
-											<li><i className="icon-check _icon"></i>
-												Сведение и&nbsp;мастеринг;
+												<p>Авторская аранжировка
+													<span>(до&nbsp;60&nbsp;дорожек)</span>;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Дизайн обложки;
+												<p>Бек вокалисты;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Дистрибуция на&nbsp;цифровые площадки;
+												<p>Звукозапись;</p></li>
+											<li><i className="icon-check _icon"></i>
+												<p>Сведение и&nbsp;мастеринг;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Передача авторских прав;
+												<p>Дизайн обложки;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												До&nbsp;5&nbsp;правок.
+												<p>Дистрибуция на&nbsp;цифровые площадки;</p>
+											</li>
+											<li><i className="icon-check _icon"></i>
+												<p>Передача авторских прав;</p>
+											</li>
+											<li><i className="icon-check _icon"></i>
+												<p>До&nbsp;5&nbsp;правок.</p>
 											</li>
 										</ul>
 									</div>
@@ -161,41 +167,43 @@ export const SectionSongWriting = ({baseUrl}) => {
 										<h3>Пакет 3&nbsp;- от&nbsp;200&nbsp;000₽</h3>
 										<ul>
 											<li><i className="icon-check _icon"></i>
-												Написание текста;
+												<p>Написание текста;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Написание мелодии;
+												<p>Написание мелодии;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Авторская аранжировка (до&nbsp;100&nbsp;дорожек) живые
-												инструменты;
-											</li>
-											<li><i className="icon-check _icon"></i>Сессионные
-												музыканты;
+												<p>Авторская аранжировка
+													<span>(до&nbsp;100&nbsp;дорожек)</span>
+													живые инструменты;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Бек вокалисты;
+												<p>Сессионные
+													музыканты;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Звукозапись;
+												<p>Бек вокалисты;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Сведение и мастеринг;
+												<p>Звукозапись;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Дизайн обложки;
+												<p>Сведение и мастеринг;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Дистрибуция на цифровые площадки;
+												<p>Дизайн обложки;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Съемка видео Reels для&nbsp;презентация релиза;
+												<p>Дистрибуция на цифровые площадки;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Передача авторских прав;
+												<p>Съемка видео Reels для&nbsp;презентация релиза;</p>
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Правки без&nbsp;ограничений.
+												<p>Передача авторских прав;</p>
+											</li>
+											<li><i className="icon-check _icon"></i>
+												<p>Правки без&nbsp;ограничений.</p>
 											</li>
 										</ul>
 									</div>

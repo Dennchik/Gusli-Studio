@@ -236,6 +236,66 @@ export const ServiceDevelopment = ({baseUrl}) => {
 											</div>
 										</a>
 									</div>
+									<div className="services-slide__column line">
+										<a href={getPath(
+											'services/development/create-collections.html')}
+											 className="services-slide__content">
+											<div className="services-slide__image el">
+												<div className="services-slide__svg">
+													<svg viewBox="0 0 700 430">
+														<g
+															fill="none"
+															fillRule="evenodd"
+															stroke="currentColor"
+															strokeWidth="1"
+															className="lines"
+														>
+															<style type="text/css">
+																{`.el{fill:none;stroke:#fff;stroke-width:8;stroke-miterlimit:10;}`}
+															</style>
+															<path
+																className="el"
+																d="M7.4,413.8c7.5-80,18-147.2,27.3-198.3c0,0,28.1-154.7,81.2-198.3c2.1-1.7,8-6.6,13-4.3c8.5,3.8,8.5,25.8,8.5,33.9c0,59.8-60.8,301.8-81.6,293.5c-9.8-3.9,1.4-66.6,9.3-97.4c9.6-37.8,22.2-58.8,33.5-72.8c1.8-2.3,27.3-33.5,37.2-26.7c6.3,4.4,1.7,21.2-0.6,51.9c-0.7,10-1.9,48.8,1.9,82.2c0.7,6.5,8.6,67.6,47.1,90.2c19.8,11.6,40.8,7.4,65.1,2.9c4.9-0.9,25-4.9,51.4-18.8c17.3-9.1,52.6-27.6,80.7-68.2c23.7-34.2,40.7-81.8,32.7-89c-7.2-6.5-36.7,17.4-53.9,47.6c-17.9,31.3-29.5,80.7-18,103.9c16.1,32.4,91.5,41.4,350.7-59.9"
+															/>
+														</g>
+													</svg>
+												</div>
+												<picture>
+													{isWebpSupported() ? (
+														<img className="services-slide__img"
+																 src={getPath(
+																	 'img/cards/development/img_3.webp')}
+																 alt="image-3"
+														/>
+													) : (
+														<img className="services-slide__img"
+																 src={getPath(
+																	 'img/cards/development/img_3.png')}
+																 alt="image-3"
+														/>
+													)}
+												</picture>
+												<picture>
+													{isWebpSupported() ? (
+														<img
+															className="services-slide__bg-img"
+															src={getPath('img/cards/bg_img.webp')}
+															alt="bg-img"
+														/>
+													) : (
+														<img
+															className="services-slide__bg-img"
+															src={getPath('img/cards/bg_img.png')}
+															alt="bg-img"
+														/>
+													)}
+												</picture>
+												<div className="services-slide__text">
+													<p>Создание сборников</p>
+												</div>
+											</div>
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
