@@ -36,12 +36,12 @@ export const SectionAudioPodcasts = ({baseUrl}) => {
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/sound/fotoram_bg_10.webp')}
+											 src={getPath('img/parallax/sound/fotoram_bg_03.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/sound/fotoram_bg_10.png')}
+											 src={getPath('img/parallax/sound/fotoram_bg_03.png')}
 											 alt="image" />
 								)}
 						</picture>
@@ -49,9 +49,9 @@ export const SectionAudioPodcasts = ({baseUrl}) => {
 				</div>
 				<div className="service-description__body top-box">
 					<div className="service-description__content _container">
-						<div className="service-description__title">
+						<h1 className="service-description__title">
 							Аудио подкасты
-						</div>
+						</h1>
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<h2>
@@ -196,77 +196,6 @@ export const SectionAudioPodcasts = ({baseUrl}) => {
 										действуют скидки. Выгодно для&nbsp;регулярных записей
 										подкастов.</p>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div className="service-description__column">
-				<div className="material-parallax parallax">
-					<div className="parallax__image">
-						<picture>
-							{isWebpSupported() ? (
-									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/sound/fotoram_bg_11.webp')}
-											 alt="image" />
-								)
-								: (
-									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/sound/fotoram_bg_11.png')}
-											 alt="image" />
-								)}
-						</picture>
-					</div>
-				</div>
-				<div className="service-description__body">
-					<div className="service-description__content _container">
-						<div className="service-description__description">
-							<div className="service-description__row">
-								<h2>В Студии Гусли есть всё необходимое для комфортной и
-									профессиональной записи подкаста:</h2>
-								<ul>
-									<li><i className="icon-check _icon"></i>комната
-										с&nbsp;профессиональной звукоизоляцией
-									</li>
-									<li><i className="icon-check _icon"></i>шустрый Wi-Fi –
-										особенно
-										важно при&nbsp;видео звонках и&nbsp;прямых видео-трансляциях
-									</li>
-									<li><i className="icon-check _icon"></i>интерьер студии
-										располагает к&nbsp;приятному и&nbsp;искреннему разговору
-									</li>
-									<li><i className="icon-check _icon"></i>угощаем гостей какао,
-										лимонадом, кофе или&nbsp;чаем. С&nbsp;собой можно приносить
-										алкоголь
-									</li>
-									<li><i className="icon-check _icon"></i>быстрые сроки сдачи
-										материала (от 2-х часов без обработки)
-									</li>
-									<li><i className="icon-check _icon"></i>храним записанный
-										материал (до&nbsp;1-го&nbsp;месяца)
-									</li>
-									<li><i className="icon-check _icon"></i>удобное расположение –
-										центр Обнинска (5 мин&nbsp;от&nbsp;остановки Дом учёных)
-									</li>
-									<li><i className="icon-check _icon"></i>работаем
-										с&nbsp;юр.лицами по&nbsp;ЭДО
-									</li>
-									<li><i className="icon-check _icon"></i>отлично подходит
-										для&nbsp;фото-видеосъёмки. Дадим рекомендации
-										по&nbsp;видеосъёмке: сколько нужно света, куда его поставить
-										и&nbsp;в&nbsp;какой одежде приходить гостям для&nbsp;лучшей
-										картинки. Готовы взять на&nbsp;себя съёмку и&nbsp;монтаж
-										подкаста (за&nbsp;дополнительную плату)
-									</li>
-									<div className="service-description__ps">Нашим клиентам
-										не&nbsp;надо думать об&nbsp;организации записи
-										и&nbsp;отвлекаться на&nbsp;административную работу&nbsp;–
-										все
-										хлопоты мы&nbsp;берём на&nbsp;себя. Ведите беседу
-										с&nbsp;вашим
-										гостем и&nbsp;больше ни&nbsp;о&nbsp;чём не&nbsp;думайте.
-									</div>
-								</ul>
 							</div>
 						</div>
 					</div>

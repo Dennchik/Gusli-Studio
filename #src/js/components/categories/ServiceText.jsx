@@ -89,7 +89,7 @@ export const ServiceText = ({baseUrl}) => {
 			<div className="categories__body">
 				<div className="services _container">
 					<div className="services__body top-box min-height-vh">
-						<div className="services__title">Текст</div>
+						<h1 className="services__title">Текст</h1>
 						<div className="services__content">
 							<div className="services-slide">
 								<div className="services-slide__body slide-text">

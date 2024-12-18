@@ -38,12 +38,12 @@ export const SectionVideoReportage = ({baseUrl}) => {
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services"
-											 src={getPath('img/parallax/video/fotoram_bg_12.webp')}
+											 src={getPath('img/parallax/video/fotoram_bg_02.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/video/fotoram_bg_12.png')}
+											 src={getPath('img/parallax/video/fotoram_bg_02.png')}
 											 alt="image" />
 								)}
 						</picture>
@@ -56,24 +56,33 @@ export const SectionVideoReportage = ({baseUrl}) => {
 						</h1>
 						<div className="service-description__description">
 							<div className="service-description__row">
-
-								<p><i className="icon-clapper _icon"></i>Хотите оставить яркие
-									и &nbsp;эмоциональные воспоминания о&nbsp;важном событии?
-									Тогда&nbsp;репортажная съемка&nbsp;- идеальный способ сделать
-									это! Наши профессиональные фотографы помогут вам запечатлеть
-									каждую деталь и&nbsp;эмоцию момента, чтобы&nbsp;вы могли
-									вернуться к&nbsp;ним снова и&nbsp;снова.
-								</p>
-								<p><i className="icon-clapper _icon"></i>Репортажная съемка
-									позволяет передать атмосферу и&nbsp;настроение события
-									в&nbsp;полной мере. Мы умеем уловить момент и&nbsp;сделать
-									уникальные кадры, которые будут радовать вас и&nbsp;ваших
-									близких на&nbsp;протяжении многих лет.</p>
-								<p><i className="icon-clapper _icon"></i>Не упустите возможность
-									сохранить важные моменты своей жизни с&nbsp;помощью
-									профессиональной репортажной съемки. Обратитесь к&nbsp;нам,
-									и&nbsp;мы поможем вам создать незабываемые воспоминания,
-									которые будут цениться вами и&nbsp;вашими близкими всегда.</p>
+								<div className="service-description__items">
+									<div className="service-description__list-item-col">
+										<p><i className="icon-clapper _icon"></i>Хотите оставить
+											яркие
+											и &nbsp;эмоциональные воспоминания о&nbsp;важном событии?
+											Тогда&nbsp;репортажная съемка&nbsp;- идеальный способ
+											сделать
+											это! Наши профессиональные фотографы помогут вам
+											запечатлеть
+											каждую деталь и&nbsp;эмоцию момента, чтобы&nbsp;вы могли
+											вернуться к&nbsp;ним снова и&nbsp;снова.
+										</p>
+										<p><i className="icon-clapper _icon"></i>Репортажная съемка
+											позволяет передать атмосферу и&nbsp;настроение события
+											в&nbsp;полной мере. Мы умеем уловить момент и&nbsp;сделать
+											уникальные кадры, которые будут радовать вас и&nbsp;ваших
+											близких на&nbsp;протяжении многих лет.</p>
+										<p><i className="icon-clapper _icon"></i>Не упустите
+											возможность
+											сохранить важные моменты своей жизни с&nbsp;помощью
+											профессиональной репортажной съемки. Обратитесь
+											к&nbsp;нам,
+											и&nbsp;мы поможем вам создать незабываемые воспоминания,
+											которые будут цениться вами и&nbsp;вашими близкими всегда.
+										</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

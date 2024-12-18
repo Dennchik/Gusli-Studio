@@ -47,7 +47,7 @@ export function Achievements() {
 				</div>
 			</div>
 			<div className="achieve-items__body _container">
-				<div className="achieve-items__title">наши достижения</div>
+				<h1 className="achieve-items__title">наши достижения</h1>
 				<div className="achieve-items__wrapper _container">
 					<section className="gallery">
 						<div className="gallery__items">

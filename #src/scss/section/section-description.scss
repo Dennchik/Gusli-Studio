@@ -71,6 +71,10 @@
 		color: $neon-blue;
 		filter: $filter;
 
+		span {
+			font-family: $font-family-secondary;
+		}
+
 		@include minmax-320-1920 {
 			font-size: calc(27px + (60 - 27) * ((100vw - 320px) / (1920 - 320)));
 		}
@@ -104,6 +108,7 @@
 			top: 0;
 			left: 0;
 			filter: blur(4px);
+			z-index: -1;
 		}
 
 		[class*='icon-'] {
@@ -211,9 +216,9 @@
 		}
 	}
 
-	// .service-description__sub-items
-	&__sub-items {
-		margin: 1rem 0 1rem 3rem;
+	// .service-description__link
+	&__link {
+		color: $electric-lime;
 	}
 
 	// .service-description__row
@@ -222,29 +227,35 @@
 
 		._icon {
 			margin: 0.7rem 1.5rem 0 0;
-			align-items: flex-start;
+			align-self: flex-start;
 		}
 
 		&:not(:last-child) {
 			margin-bottom: 4rem;
 		}
 
-		li {
-			// display: flex;
-		}
 	}
 
 	// .service-description__items
 	&__items {
-		// padding: 3rem 0;
 		display: grid;
-		grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+		grid-template-columns: repeat( auto-fit, minmax(265px, 1fr) );
 		gap: 3rem;
+
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
 
 	}
 
 	// .service-description__list-item
 	&__list-item-col {
+		ul {
+			&:not(:last-child) {
+				margin-bottom: 2rem;
+			}
+		}
+
 		li {
 			display: flex;
 

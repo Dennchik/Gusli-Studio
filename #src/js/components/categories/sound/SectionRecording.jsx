@@ -49,9 +49,9 @@ export const SectionRecording = ({baseUrl}) => {
 				</div>
 				<div className="service-description__body top-box">
 					<div className='service-description__content _container'>
-						<div className="service-description__title">
+						<h1 className="service-description__title">
 							Звукозапись
-						</div>
+						</h1>
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<div className="service-description__items">

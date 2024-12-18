@@ -16,12 +16,12 @@ export const SectionDistribution = ({baseUrl}) => {
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/sound/fotoram_bg_19.webp')}
+											 src={getPath('img/parallax/sound/fotoram_bg_04.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/sound/fotoram_bg_19.png')}
+											 src={getPath('img/parallax/sound/fotoram_bg_04.png')}
 											 alt="image" />
 								)}
 						</picture>
@@ -29,9 +29,9 @@ export const SectionDistribution = ({baseUrl}) => {
 				</div>
 				<div className="service-description__body top-box">
 					<div className="service-description__content _container">
-						<div className="service-description__title">
+						<h1 className="service-description__title">
 							Дистрибуция
-						</div>
+						</h1>
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<h2>Что от Вас нужно:</h2>

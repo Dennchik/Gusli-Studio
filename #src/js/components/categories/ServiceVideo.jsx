@@ -139,7 +139,7 @@ export const ServiceVideo = ({baseUrl}) => {
 			<div className="categories__body">
 				<div className="services _container">
 					<div className="services__body">
-						<div className="services__title">Видео</div>
+						<h1 className="services__title">Видео</h1>
 						<div className="services__content">
 							<div className="services-slide">
 								<div className="services-slide__body slide-services _swiper">
