@@ -5,13 +5,10 @@ import {
 	animateTitles,
 	refreshScrollTrigger
 } from '../../../animations/animations.jsx';
-
 //* ----------------------------------------------------------------------------
 export const SectionSites = ({baseUrl}) => {
 	const isHomepage = location.pathname === '/';
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-	// Инициализируем useRef для всех групп элементов
-
 
 	useEffect(() => {
 		if (!isMobile) {
@@ -75,7 +72,7 @@ export const SectionSites = ({baseUrl}) => {
 									дизайна, интеграция с&nbsp;системами 1С и&nbsp;Битрикс,
 									внедрение различных внешних систем.
 								</p>
-								<h3>Что входит в комплексный подход:</h3>
+								<h3>Что входит в&nbsp;комплексный подход:</h3>
 								<ul>
 									<li><i className="icon-check _icon"></i>
 										Проект, который решит поставленные бизнес-задачи
@@ -122,6 +119,7 @@ export const SectionSites = ({baseUrl}) => {
 		</div>
 	);
 };
+
 SectionSites.propTypes = {
 	baseUrl: PropTypes.string.isRequired,
 };

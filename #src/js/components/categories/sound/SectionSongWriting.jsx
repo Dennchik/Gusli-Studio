@@ -56,29 +56,38 @@ export const SectionSongWriting = ({baseUrl}) => {
 						</div>
 						<div className="service-description__description">
 							<div className="service-description__row">
-								<ul>
-									<li><i className="icon-piano _icon"></i>В&nbsp;студии
-										звукозаписи вы&nbsp;можете приобрести готовую песню,
-										заказать создание музыки у&nbsp;профессиональных
-										композиторов и&nbsp;аранжировщиков. Наши музыканты работают
-										в&nbsp;различных жанрах: от&nbsp;популярной эстрады
-										до&nbsp;авангарда. Они могут написать слова и&nbsp;создать
-										музыкальную композицию в&nbsp;любом стиле,
-										от&nbsp;классического до&nbsp;народного и&nbsp;авторского.
-									</li>
-									<li><i className="icon-piano _icon"></i>Если вам нужна мелодия
-										для&nbsp;фильма или&nbsp;рекламы на&nbsp;телевидении, наши
-										специалисты создадут еев&nbsp;соответствии
-										с&nbsp;требованиями заказчика. Мы также можем написать слова
-										и&nbsp;создать музыкальную композицию в&nbsp;радиоформате.
-									</li>
-									<li><i className="icon-piano _icon"></i>Наши авторы работают
-										в&nbsp;разных направлениях: от&nbsp;классического
-										до&nbsp;народного и&nbsp;авторского. Мы&nbsp;можем создать
-										музыку для&nbsp;любого проекта, будь то&nbsp;фильм, реклама
-										или&nbsp;корпоративное мероприятие.
-									</li>
-								</ul>
+								<div className="service-description__items">
+									<div className="service-description__list-item-col">
+										<p><i className="icon-piano _icon"></i>В&nbsp;студии
+											звукозаписи вы&nbsp;можете приобрести готовую песню,
+											заказать создание музыки у&nbsp;профессиональных
+											композиторов и&nbsp;аранжировщиков. Наши музыканты
+											работают
+											в&nbsp;различных жанрах: от&nbsp;популярной эстрады
+											до&nbsp;авангарда. Они могут написать слова
+											и&nbsp;создать
+											музыкальную композицию в&nbsp;любом стиле,
+											от&nbsp;классического до&nbsp;народного
+											и&nbsp;авторского.
+										</p>
+										<p><i className="icon-piano _icon"></i>
+											Если вам нужна мелодия для&nbsp;фильма или&nbsp;рекламы
+											на&nbsp;телевидении, наши специалисты создадут
+											ее&nbsp;в&nbsp;соответствии с&nbsp;требованиями
+											заказчика. Мы также можем написать слова и&nbsp;создать
+											музыкальную композицию в&nbsp;радиоформате.
+										</p>
+									</div>
+									<div className="service-description__list-item-col">
+										<p><i className="icon-piano _icon"></i>Наши авторы
+											работают в&nbsp;разных направлениях:
+											от&nbsp;классического до&nbsp;народного
+											и&nbsp;авторского. Мы&nbsp;можем создать музыку
+											для&nbsp;любого проекта, будь то&nbsp;фильм,
+											реклама или&nbsp;корпоративное мероприятие.
+										</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -90,36 +99,40 @@ export const SectionSongWriting = ({baseUrl}) => {
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<h2>Цены на&nbsp;создание песни (песни на&nbsp;заказ, авторские
-									проекты, корпоративные гимны) : </h2>
+									проекты, корпоративные гимны):</h2>
 								<div className="service-description__items">
-									<div className="service-description__list-item">
-										<h3>Пакет 1 - 100 000₽</h3>
+									<div className="service-description__list-item-col">
+										<h3>Пакет 1&nbsp;- 100&nbsp;000₽</h3>
 										<ul>
-											<li><i className="icon-check _icon"></i>Написание текста;
+											<li><i className="icon-check _icon"></i>
+												Написание текста;
 											</li>
-											<li><i className="icon-check _icon"></i>Написание мелодии;
+											<li><i className="icon-check _icon"></i>
+												Написание мелодии;
 											</li>
-											<li><i className="icon-check _icon"></i>Авторская
-												аранжировка
-												(до 40
-												дорожек);
+											<li><i className="icon-check _icon"></i>
+												Авторская аранжировка (до&nbsp;40&nbsp;дорожек);
 											</li>
 											<li><i className="icon-check _icon"></i>Звукозапись;</li>
-											<li><i className="icon-check _icon"></i>Мастеринг и
-												сведение;
+											<li><i className="icon-check _icon"></i>
+												Мастеринг и&nbsp;сведение;
 											</li>
-											<li><i className="icon-check _icon"></i>Передача авторских
-												прав;
+											<li><i className="icon-check _icon"></i>
+												Передача авторских прав;
 											</li>
-											<li><i className="icon-check _icon"></i>До 3 правок.</li>
+											<li><i className="icon-check _icon"></i>
+												До 3&nbsp;правок.
+											</li>
 										</ul>
 									</div>
-									<div className="service-description__list-item">
-										<h3>Пакет 2 - 125 000₽</h3>
+									<div className="service-description__list-item-col">
+										<h3>Пакет 2&nbsp;- 125&nbsp;000₽</h3>
 										<ul>
-											<li><i className="icon-check _icon"></i>Написание текста;
+											<li><i className="icon-check _icon"></i>
+												Написание текста;
 											</li>
-											<li><i className="icon-check _icon"></i>Написание мелодии;
+											<li><i className="icon-check _icon"></i>
+												Написание мелодии;
 											</li>
 											<li><i className="icon-check _icon"></i>
 												Авторская аранжировка (до&nbsp;60&nbsp;дорожек);
@@ -127,26 +140,31 @@ export const SectionSongWriting = ({baseUrl}) => {
 											<li><i className="icon-check _icon"></i>Бек вокалисты;
 											</li>
 											<li><i className="icon-check _icon"></i>Звукозапись;</li>
-											<li><i className="icon-check _icon"></i>Сведение и
-												мастеринг;
-											</li>
-											<li><i className="icon-check _icon"></i>Дизайн обложки;
+											<li><i className="icon-check _icon"></i>
+												Сведение и&nbsp;мастеринг;
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Дистрибуция на цифровые площадки;
+												Дизайн обложки;
+											</li>
+											<li><i className="icon-check _icon"></i>
+												Дистрибуция на&nbsp;цифровые площадки;
 											</li>
 											<li><i className="icon-check _icon"></i>
 												Передача авторских прав;
 											</li>
-											<li><i className="icon-check _icon"></i>До 5 правок.</li>
+											<li><i className="icon-check _icon"></i>
+												До&nbsp;5&nbsp;правок.
+											</li>
 										</ul>
 									</div>
-									<div className="service-description__list-item">
-										<h3>Пакет 3 - от 200 000₽</h3>
+									<div className="service-description__list-item-col">
+										<h3>Пакет 3&nbsp;- от&nbsp;200&nbsp;000₽</h3>
 										<ul>
-											<li><i className="icon-check _icon"></i>Написание текста;
+											<li><i className="icon-check _icon"></i>
+												Написание текста;
 											</li>
-											<li><i className="icon-check _icon"></i>Написание мелодии;
+											<li><i className="icon-check _icon"></i>
+												Написание мелодии;
 											</li>
 											<li><i className="icon-check _icon"></i>
 												Авторская аранжировка (до&nbsp;100&nbsp;дорожек) живые
@@ -155,9 +173,12 @@ export const SectionSongWriting = ({baseUrl}) => {
 											<li><i className="icon-check _icon"></i>Сессионные
 												музыканты;
 											</li>
-											<li><i className="icon-check _icon"></i>Бек вокалисты;
+											<li><i className="icon-check _icon"></i>
+												Бек вокалисты;
 											</li>
-											<li><i className="icon-check _icon"></i>Звукозапись;</li>
+											<li><i className="icon-check _icon"></i>
+												Звукозапись;
+											</li>
 											<li><i className="icon-check _icon"></i>
 												Сведение и мастеринг;
 											</li>
@@ -174,7 +195,7 @@ export const SectionSongWriting = ({baseUrl}) => {
 												Передача авторских прав;
 											</li>
 											<li><i className="icon-check _icon"></i>
-												Правки без ограничений.
+												Правки без&nbsp;ограничений.
 											</li>
 										</ul>
 									</div>
