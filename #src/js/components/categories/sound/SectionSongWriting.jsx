@@ -58,6 +58,22 @@ export const SectionSongWriting = ({baseUrl}) => {
 							<div className="service-description__row">
 								<div className="service-description__items">
 									<div className="service-description__list-item-col">
+										<p><i className="icon-piano _icon"></i>
+											Если вам нужна мелодия для&nbsp;фильма или&nbsp;рекламы
+											на&nbsp;телевидении, наши специалисты создадут
+											ее&nbsp;в&nbsp;соответствии с&nbsp;требованиями
+											заказчика. Мы также можем написать слова и&nbsp;создать
+											музыкальную композицию в&nbsp;радиоформате.
+										</p>
+										<p><i className="icon-piano _icon"></i>Наши авторы
+											работают в&nbsp;разных направлениях:
+											от&nbsp;классического до&nbsp;народного
+											и&nbsp;авторского. Мы&nbsp;можем создать музыку
+											для&nbsp;любого проекта, будь то&nbsp;фильм,
+											реклама или&nbsp;корпоративное мероприятие.
+										</p>
+									</div>
+									<div className="service-description__list-item-col">
 										<p><i className="icon-piano _icon"></i>В&nbsp;студии
 											звукозаписи вы&nbsp;можете приобрести готовую песню,
 											заказать создание музыки у&nbsp;профессиональных
@@ -69,22 +85,6 @@ export const SectionSongWriting = ({baseUrl}) => {
 											музыкальную композицию в&nbsp;любом стиле,
 											от&nbsp;классического до&nbsp;народного
 											и&nbsp;авторского.
-										</p>
-										<p><i className="icon-piano _icon"></i>
-											Если вам нужна мелодия для&nbsp;фильма или&nbsp;рекламы
-											на&nbsp;телевидении, наши специалисты создадут
-											ее&nbsp;в&nbsp;соответствии с&nbsp;требованиями
-											заказчика. Мы также можем написать слова и&nbsp;создать
-											музыкальную композицию в&nbsp;радиоформате.
-										</p>
-									</div>
-									<div className="service-description__list-item-col">
-										<p><i className="icon-piano _icon"></i>Наши авторы
-											работают в&nbsp;разных направлениях:
-											от&nbsp;классического до&nbsp;народного
-											и&nbsp;авторского. Мы&nbsp;можем создать музыку
-											для&nbsp;любого проекта, будь то&nbsp;фильм,
-											реклама или&nbsp;корпоративное мероприятие.
 										</p>
 									</div>
 								</div>
