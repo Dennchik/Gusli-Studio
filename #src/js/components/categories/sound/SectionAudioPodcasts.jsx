@@ -95,17 +95,17 @@ export const SectionAudioPodcasts = ({baseUrl}) => {
 									<h2>В пост-обработку входит:</h2>
 									<ul>
 										<li><i className="icon-check _icon"></i>
-											<p>Редакция материала (удаление фальшстартов, мата,
+											<p>редакция материала (удаление фальшстартов, мата,
 												фоновых шумов, склейка отобранных дублей). Делаем 1
 												итерацию правок бесплатно;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Добавление музыкальной подложки, джинглов
+											<p>добавление музыкальной подложки, джинглов
 												и&nbsp;звуковых эффектов (FX предоставляются
 												клиентом);</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>В пост-обработку входит услуга по&nbsp;очистке речи
+											<p>в пост-обработку входит услуга по&nbsp;очистке речи
 												от&nbsp;пауз хезитации
 												(&quot;ммм&quot;, &quot;эээ&quot;, &quot;ааа&quot;)
 												или&nbsp;пустыми
@@ -118,15 +118,15 @@ export const SectionAudioPodcasts = ({baseUrl}) => {
 											<p>сведение;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Мастеринг и&nbsp;мастеринг для&nbsp;iTunes.</p>
+											<p>мастеринг и&nbsp;мастеринг для&nbsp;iTunes.</p>
 										</li>
 									</ul>
+									<p>Срок сдачи готового материала: <span> 1-4&nbsp;дня</span>.
+									</p>
 									<div className="service-description__ps">
 										<p>При&nbsp;заказе пост-обработки клиент получает готовый
-											подкаст
-											для&nbsp;публикации на&nbsp;профильных площадках (Apple
-											Подкасты, Google Подкасты и&nbsp;т.п.).
-											<span> Срок сдачи готового материала: 1-4&nbsp;дня</span>.
+											подкаст для&nbsp;публикации на&nbsp;профильных площадках
+											(Apple Подкасты, Google Подкасты и&nbsp;т.п.).
 										</p>
 									</div>
 								</div>
@@ -134,12 +134,12 @@ export const SectionAudioPodcasts = ({baseUrl}) => {
 									<h2>Цены на&nbsp;запись подкаста:</h2>
 									<ul>
 										<li><i className="icon-check _icon"></i>
-											<p>Запись в&nbsp;вокальной комнате&nbsp;–
+											<p>запись в&nbsp;вокальной комнате&nbsp;–
 												<span> 2&nbsp;000&nbsp;руб/час</span>;
 											</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Запись подкаста в&nbsp;вокальной комнате
+											<p>запись подкаста в&nbsp;вокальной комнате
 												(более&nbsp;4х&nbsp;человек)&nbsp;–
 												<span> 3&nbsp;500&nbsp;руб/час</span>;</p>
 										</li>
@@ -157,22 +157,22 @@ export const SectionAudioPodcasts = ({baseUrl}) => {
 											</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Чистка речи от&nbsp;пауз хезитации&nbsp;–
+											<p>чистка речи от&nbsp;пауз хезитации&nbsp;–
 												<span> 4&nbsp;000&nbsp;руб.</span>;
 											</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Публикация подкаста (включена в&nbsp;стоимость
+											<p>публикация подкаста (включена в&nbsp;стоимость
 												регистрация и&nbsp;оформление кабинета)&nbsp;–
 												<span> 5&nbsp;000&nbsp;руб</span>;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p> Повторная публикация подкаста&nbsp;–
-												<span> 750 руб</span>
+											<p>повторная публикация подкаста&nbsp;–
+												<span> 750&nbsp;руб</span>
 											</p>;
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Обработка подкаста (4-6&nbsp;дорожки&nbsp;–
+											<p>обработка подкаста (4-6&nbsp;дорожки&nbsp;–
 												<span> 7&nbsp;500&nbsp;руб</span>;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
@@ -181,9 +181,9 @@ export const SectionAudioPodcasts = ({baseUrl}) => {
 										</li>
 									</ul>
 									<div className="service-description__ps">
-										<p>При аренде студии <span> от&nbsp;10&nbsp;часов</span>
-											действуют скидки. Выгодно для&nbsp;регулярных записей
-											подкастов.</p>
+										<p>При аренде студии <span> от&nbsp;10&nbsp;часов </span>
+											действуют скидки.</p>
+										<p>Выгодно для&nbsp;регулярных записей подкастов.</p>
 									</div>
 								</div>
 							</div>

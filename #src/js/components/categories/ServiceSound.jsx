@@ -133,7 +133,7 @@ export const ServiceSound = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<div>
+												<div className="services-slide__picture">
 													<picture>
 														{isWebpSupported() ? (
 															<img className="services-slide__img"
@@ -186,34 +186,36 @@ export const ServiceSound = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_10.webp')}
-																 alt="image-5"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_10.png')}
-																 alt="image-5"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.webp')}
-															alt="bg-img"
-														/>
-													) : (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.png')}
-															alt="bg-img"
-														/>
-													)}
-												</picture>
+												<div className="services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_10.webp')}
+																	 alt="image-5"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_10.png')}
+																	 alt="image-5"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.webp')}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.png')}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
 													<p>Сессионные музыканты</p>
 													<p>от 2 000₽ в час</p>
@@ -244,34 +246,36 @@ export const ServiceSound = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_7.webp')}
-																 alt="image-2"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_7.png')}
-																 alt="image-2"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.webp')}
-															alt="bg-img"
-														/>
-													) : (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.png')}
-															alt="bg-img"
-														/>
-													)}
-												</picture>
+												<div className="services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_7.webp')}
+																	 alt="image-2"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_7.png')}
+																	 alt="image-2"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.webp')}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.png')}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
 													<p>Звукозапись</p>
 													<p>от 1 500₽ в час</p>
@@ -310,11 +314,12 @@ export const ServiceSound = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<div>
+												<div className="services-slide__picture">
 													<picture>
 														{isWebpSupported() ? (
 															<img className="services-slide__img"
-																	 src={getPath('img/cards/sound/img_11.webp')}
+																	 src={getPath(
+																		 'img/cards/sound/img_11.webp')}
 																	 alt="image-1"
 															/>
 														) : (
@@ -366,34 +371,36 @@ export const ServiceSound = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_12.webp')}
-																 alt="image-2"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_12.png')}
-																 alt="image-2"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.webp')}
-															alt="bg-img"
-														/>
-													) : (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.png')}
-															alt="bg-img"
-														/>
-													)}
-												</picture>
+												<div className="services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_12.webp')}
+																	 alt="image-2"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_12.png')}
+																	 alt="image-2"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.webp')}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.png')}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
 													<p>Аудио-подкасты</p>
 													<p>от 2 000₽ в час</p>
@@ -423,34 +430,36 @@ export const ServiceSound = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_13.webp')}
-																 alt="image-3"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_13.png')}
-																 alt="image-3"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.webp')}
-															alt="bg-img"
-														/>
-													) : (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.png')}
-															alt="bg-img"
-														/>
-													)}
-												</picture>
+												<div className="services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_13.webp')}
+																	 alt="image-3"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_13.png')}
+																	 alt="image-3"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.webp')}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.png')}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
 													<p>Дикторская озвучка</p>
 													<p>от 500₽ минута</p>
@@ -481,34 +490,36 @@ export const ServiceSound = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_9.webp')}
-																 alt="image-4"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_9.png')}
-																 alt="image-4"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.webp')}
-															alt="bg-img"
-														/>
-													) : (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.png')}
-															alt="bg-img"
-														/>
-													)}
-												</picture>
+												<div className="services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_9.webp')}
+																	 alt="image-4"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_9.png')}
+																	 alt="image-4"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.webp')}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.png')}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
 													<p>Дистрибуция</p>
 													<p>от 5 000₽</p>
@@ -538,34 +549,36 @@ export const ServiceSound = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_14.webp')}
-																 alt="image-4"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_14.png')}
-																 alt="image-4"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.webp')}
-															alt="bg-img"
-														/>
-													) : (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.png')}
-															alt="bg-img"
-														/>
-													)}
-												</picture>
+												<div className="services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_14.webp')}
+																	 alt="image-4"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_14.png')}
+																	 alt="image-4"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.webp')}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.png')}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
 													<p>Продвижение артистов</p>
 													<p>от 2 000₽ в час</p>
@@ -596,34 +609,36 @@ export const ServiceSound = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_8.webp')}
-																 alt="image-3"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_8.png')}
-																 alt="image-3"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.webp')}
-															alt="bg-img"
-														/>
-													) : (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.png')}
-															alt="bg-img"
-														/>
-													)}
-												</picture>
+												<div className="services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_8.webp')}
+																	 alt="image-3"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_8.png')}
+																	 alt="image-3"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.webp')}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.png')}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
 													<p>Аранжировка</p>
 													<p>от 15 000₽</p>
@@ -652,34 +667,36 @@ export const ServiceSound = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_15.webp')}
-																 alt="image-5"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={getPath('img/cards/sound/img_15.png')}
-																 alt="image-5"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.webp')}
-															alt="bg-img"
-														/>
-													) : (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.png')}
-															alt="bg-img"
-														/>
-													)}
-												</picture>
+												<div className="services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_15.webp')}
+																	 alt="image-5"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={getPath('img/cards/sound/img_15.png')}
+																	 alt="image-5"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.webp')}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.png')}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
 													<p>Сведение и мастеринг</p>
 													<p>от 3 000₽ композиция</p>

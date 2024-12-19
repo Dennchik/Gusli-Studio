@@ -70,6 +70,7 @@
 		letter-spacing: 0;
 		color: $neon-blue;
 		filter: $filter;
+		text-transform: uppercase;
 
 		span {
 			font-family: $font-family-secondary;
@@ -148,10 +149,10 @@
 
 		h2 {
 			margin-bottom: 2rem;
-			font-size: 24px;
+			font-size: 32px;
 			font-weight: 450;
 			color: $neon-blue;
-			opacity: 0.7;
+			opacity: 0.8;
 			line-height: 110%;
 
 			&:not(:first-child) {
@@ -159,26 +160,35 @@
 			}
 
 			@include minmax-320-1920 {
-				font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
+				font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1920 - 320)));
 			}
-			@include screen-425 {
-				text-align: center;
-				font-size: 16px;
+			// @include screen-490 {
+			text-align: center;
+			// }
+
+			@include screen-320 {
+				font-size: 20px;
 			}
+		}
+
+		h3 {
+			font-size: 2.2px;
+			opacity: 0.8;
+			font-weight: 500;
+			margin: 0 0 10px;
+			color: $neon-blue;
+
+			@include minmax-320-1920 {
+				font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
+			}
+
 			@include screen-320 {
 				font-size: 16px;
 			}
 		}
 
-		h3 {
-			font-size: 1.8rem;
-			font-weight: 500;
-			margin: 0 0 10px;
-			color: #fff;
-		}
-
 		p {
-			opacity: 0.9;
+			opacity: 0.8;
 
 			&:not(:last-child) {
 				margin-bottom: 1.5rem;
@@ -220,6 +230,11 @@
 	&__link {
 		color: $neon-blue;
 		@extend .link_underline;
+		transition: opacity 0.4s ease;
+
+		&:hover {
+			opacity: 0.5;
+		}
 	}
 
 	// .service-description__row
@@ -243,7 +258,7 @@
 		}
 	}
 
-	// .service-description__list-item
+	// .service-description__row-col
 	&__row-col {
 		ul {
 			&:not(:last-child) {
@@ -259,8 +274,8 @@
 	//.service-description__ps
 	&__ps {
 		font-size: 16px;
-		font-weight: 500;
-		margin-top: 2rem;
+		opacity: 1 !important;
+		color: #9983ec;
 
 		@include minmax-320-1920 {
 			font-size: calc(12px + (16 - 10) * ((100vw - 320px) / (1920 - 120)));

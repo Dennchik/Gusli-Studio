@@ -37,12 +37,12 @@ export const SectionEventsDj = ({baseUrl}) => {
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services"
-											 src={getPath('img/parallax/events/fotoram_bg_04.webp')}
+											 src={getPath('img/parallax/events/fotoram_bg_03.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/events/fotoram_bg_04.png')}
+											 src={getPath('img/parallax/events/fotoram_bg_03.png')}
 											 alt="image" />
 								)}
 						</picture>
@@ -55,25 +55,29 @@ export const SectionEventsDj = ({baseUrl}) => {
 						</h1>
 						<div className="service-description__description">
 							<div className="service-description__row">
-								<p><i className="icon-hand-pointer _icon"></i>
-									<span>Диджей</span>&nbsp;- неотъемлемая часть мероприятия,
-									который&nbsp;может задать атмосферу праздника и&nbsp;веселья
-									правильным подбором музыкального плейлиста. Подходящие
-									для&nbsp;торжества композиции добавят изысканности
-									и&nbsp;зарядят публику позитивной энергией.
-								</p>
-								<p><i className="icon-hand-pointer _icon"></i>
-									Мы предлагаем услуги диджея как&nbsp;индивидуально,
-									так&nbsp;и&nbsp;в&nbsp;паре с&nbsp;профессиональным ведущим
-									для&nbsp;создания максимально яркого вечера.
-								</p>
-								<p><i className="icon-hand-pointer _icon"></i>
-									Наши диджеи - это&nbsp;опытные музыканты, которые&nbsp;умеют
-									создавать уникальную атмосферу на&nbsp;любом празднике.
-									Они&nbsp;подберут музыку, которая подойдет именно вашему
-									событию и&nbsp;создаст незабываемую атмосферу.
-								</p>
+								<div className="service-description__row-col">
+									<p><span>Диджей</span>&nbsp;- неотъемлемая часть мероприятия,
+										который&nbsp;может задать атмосферу праздника и&nbsp;веселья
+										правильным подбором музыкального плейлиста. Подходящие
+										для&nbsp;торжества композиции добавят изысканности
+										и&nbsp;зарядят публику позитивной энергией.
+									</p>
+									<p><i className="icon-hand-pointer _icon"></i>
+										Мы предлагаем услуги диджея как&nbsp;индивидуально,
+										так&nbsp;и&nbsp;в&nbsp;паре с&nbsp;профессиональным ведущим
+										для&nbsp;создания максимально яркого вечера.
+									</p>
+									<p><i className="icon-hand-pointer _icon"></i>
+										Наши диджеи - это&nbsp;опытные музыканты, которые&nbsp;умеют
+										создавать уникальную атмосферу на&nbsp;любом празднике.
+										Они&nbsp;подберут музыку, которая подойдет именно вашему
+										событию и&nbsp;создаст незабываемую атмосферу.
+									</p>
+								</div>
 							</div>
+						</div>
+						<div className="service-description__button _open-button">
+							<AppButton />
 						</div>
 					</div>
 				</div>
@@ -83,46 +87,47 @@ export const SectionEventsDj = ({baseUrl}) => {
 					<div className='service-description__content _container'>
 						<div className="service-description__description">
 							<div className="service-description__row">
-								<h2>Цены:</h2>
-								<ul>
-									<li><i className="icon-check _icon"></i>
-										Стоимость 1&nbsp;часа: <span>от&nbsp;3000&nbsp;руб</span>;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Минимальный заказ: <span>4&nbsp;часа</span>;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Стоимость: <span>от&nbsp;12&nbsp;000&nbsp;руб</span>.
-									</li>
-								</ul>
-								<h3>Услуги диджея на любой праздник</h3>
-								<ul>
-									<li><i className="icon-check _icon"></i>
-										свадьба;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										юбилей;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										выпускной;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										корпоратив;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										день рождения;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										детский праздник;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										тематическая вечеринка.
-									</li>
-								</ul>
+								<div className="service-description__row-col">
+									<h3>Услуги диджея на любой праздник</h3>
+									<ul>
+										<li><i className="icon-check _icon"></i>
+											свадьба
+										</li>
+										<li><i className="icon-check _icon"></i>
+											юбилей
+										</li>
+										<li><i className="icon-check _icon"></i>
+											выпускной
+										</li>
+										<li><i className="icon-check _icon"></i>
+											корпоратив
+										</li>
+										<li><i className="icon-check _icon"></i>
+											день рождения
+										</li>
+										<li><i className="icon-check _icon"></i>
+											детский праздник
+										</li>
+										<li><i className="icon-check _icon"></i>
+											тематическая вечеринка
+										</li>
+									</ul>
+								</div>
+								<div className="service-description__row-col">
+									<h3>Цены:</h3>
+									<ul>
+										<li><i className="icon-check _icon"></i>
+											Стоимость 1&nbsp;часа: <span>от&nbsp;3000&nbsp;руб</span>;
+										</li>
+										<li><i className="icon-check _icon"></i>
+											Минимальный заказ: <span>4&nbsp;часа</span>;
+										</li>
+										<li><i className="icon-check _icon"></i>
+											Стоимость: <span>от&nbsp;12&nbsp;000&nbsp;руб</span>.
+										</li>
+									</ul>
+								</div>
 							</div>
-						</div>
-						<div className="service-description__button _open-button">
-							<AppButton />
 						</div>
 					</div>
 				</div>

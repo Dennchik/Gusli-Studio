@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
-import { AppButton } from '../../../app/button.jsx';
 import {
 	animateTitles,
 	refreshScrollTrigger
 } from '../../../animations/animations.jsx';
+import { AppButton } from '../../../app/button.jsx';
 
 //* ----------------------------------------------------------------------------
 export const SectionEventsAnimators = ({baseUrl}) => {
@@ -37,12 +37,12 @@ export const SectionEventsAnimators = ({baseUrl}) => {
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services"
-											 src={getPath('img/parallax/events/fotoram_bg_05.webp')}
+											 src={getPath('img/parallax/events/fotoram_bg_04.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/events/fotoram_bg_05.png')}
+											 src={getPath('img/parallax/events/fotoram_bg_04.png')}
 											 alt="image" />
 								)}
 						</picture>
@@ -55,52 +55,65 @@ export const SectionEventsAnimators = ({baseUrl}) => {
 						</h1>
 						<div className="service-description__description">
 							<div className="service-description__row">
-								<p><i className="icon-hand-pointer _icon"></i>
-									Добро пожаловать в&nbsp;мир веселья и&nbsp;радости!
-									Мы&nbsp;предлагаем&nbsp;вам уникальную программу
-									для&nbsp;аниматоров праздников, которая поможет&nbsp;вам
-									создать незабываемую атмосферу на&nbsp;любом мероприятии.
-									С&nbsp;нашими профессиональными инструментами вы&nbsp;сможете
-									легко организовать и&nbsp;провести увлекательные игры,
-									конкурсы, шоу-программы &nbsp;мастер-классы, которые сделают
-									ваш&nbsp;праздник еще&nbsp;более ярким и&nbsp;запоминающимся.
-								</p>
-								<p><i className="icon-hand-pointer _icon"></i>
-									Наша программа предлагает широкий выбор тематических
-									сценариев, персонажей и&nbsp;активностей, чтобы&nbsp;каждый
-									момент праздника был&nbsp;особенным. Вы&nbsp;сможете легко
-									настроить программу под&nbsp;конкретные потребности
-									и&nbsp;пожелания вашей аудитории, чтобы&nbsp;каждый гость
-									почувствовал себя особенным и&nbsp;уникальным.
-								</p>
-								<p><i className="icon-hand-pointer _icon"></i>
-									Доверьтесь нам и&nbsp;позвольте профессионалам сделать каждое
-									ваше мероприятие особенным и&nbsp;уникальным.
-									Мы&nbsp;гарантируем, что&nbsp;с&nbsp;нашей помощью каждый
-									момент праздника станет незабываемым и&nbsp;оставит яркие
-									воспоминания для&nbsp;вас и&nbsp;ваших гостей
-								</p>
-								<h2>Предлагаемые программы:</h2>
+								<div className="service-description__row-col">
+									<p><i className="icon-hand-pointer _icon"></i>
+										Добро пожаловать в&nbsp;мир веселья и&nbsp;радости!
+										Мы&nbsp;предлагаем&nbsp;вам уникальную программу
+										для&nbsp;аниматоров праздников, которая поможет&nbsp;вам
+										создать незабываемую атмосферу на&nbsp;любом мероприятии.
+										С&nbsp;нашими профессиональными инструментами
+										вы&nbsp;сможете
+										легко организовать и&nbsp;провести увлекательные игры,
+										конкурсы, шоу-программы &nbsp;мастер-классы, которые сделают
+										ваш&nbsp;праздник еще&nbsp;более ярким
+										и&nbsp;запоминающимся.
+									</p>
+									<p><i className="icon-hand-pointer _icon"></i>
+										Наша программа предлагает широкий выбор тематических
+										сценариев, персонажей и&nbsp;активностей, чтобы&nbsp;каждый
+										момент праздника был&nbsp;особенным. Вы&nbsp;сможете легко
+										настроить программу под&nbsp;конкретные потребности
+										и&nbsp;пожелания вашей аудитории, чтобы&nbsp;каждый гость
+										почувствовал себя особенным и&nbsp;уникальным.
+									</p>
+									<p><i className="icon-hand-pointer _icon"></i>
+										Доверьтесь нам и&nbsp;позвольте профессионалам сделать
+										каждое
+										ваше мероприятие особенным и&nbsp;уникальным.
+										Мы&nbsp;гарантируем, что&nbsp;с&nbsp;нашей помощью каждый
+										момент праздника станет незабываемым и&nbsp;оставит яркие
+										воспоминания для&nbsp;вас и&nbsp;ваших гостей
+									</p>
+								</div>
+							</div>
+							<h2>Предлагаемые программы:</h2>
+							<div className="service-description__row-col">
 								<h3>Гигантские мыльные пузыри</h3>
 								<p><i className="icon-hand-pointer _icon"></i>
 									Наши пузыри отличаются тем, что&nbsp;мы не&nbsp;только
 									показываем&nbsp;их, но&nbsp;и&nbsp;предлагаем всем желающим
 									создать самый большой мыльный пузырь самостоятельно.
-									Не&nbsp;только дети, но&nbsp;и&nbsp;взрослые получают огромное
+									Не&nbsp;только дети, но&nbsp;и&nbsp;взрослые получают
+									огромное
 									удовольствие!</p>
 								<h3>Аквагрим</h3>
 								<p><i className="icon-hand-pointer _icon"></i>
-									Все желающие смогут перевоплотиться в&nbsp;любимого персонажа
+									Все желающие смогут перевоплотиться в&nbsp;любимого
+									персонажа
 									или&nbsp;весёлую зверюшку. :)</p>
 								<h3>Твистинг. Фигурки из&nbsp;шариков.</h3>
 								<p><i className="icon-hand-pointer _icon"></i>
-									Детям очень нравятся воздушные шарики, а&nbsp;когда их много,
+									Детям очень нравятся воздушные шарики, а&nbsp;когда их
+									много,
 									то&nbsp;это ещё лучше! Маленькие и&nbsp;большие фигуры,
 									головные уборы, множество игр и&nbsp;конкурсов
 									с&nbsp;шариками&nbsp;- все&nbsp;это&nbsp;вызывает восторг
 									у&nbsp;детей.
 								</p>
 							</div>
+						</div>
+						<div className="service-description__button _open-button">
+							<AppButton />
 						</div>
 					</div>
 				</div>
@@ -110,51 +123,52 @@ export const SectionEventsAnimators = ({baseUrl}) => {
 					<div className='service-description__content _container'>
 						<div className="service-description__description">
 							<div className="service-description__row">
-								<h3>Один аниматор&nbsp;- <span>от&nbsp;5000&nbsp;р/ч</span>.
-								</h3>
-								<ul>
-									<li><i className="icon-check _icon"></i>
-										Отличный вариант для&nbsp;праздника до&nbsp;10 детей;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Любой персонаж на&nbsp;выбор;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Музыкальное сопровождение;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Интересный игровой сценарий;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Весёлые игры и&nbsp;конкурсы.
-									</li>
-								</ul>
-								<h3>Два аниматора&nbsp;- <span>от&nbsp;9000&nbsp;р/ч</span>.
-								</h3>
-								<ul>
-									<li><i className="icon-check _icon"></i>
-										Лучший вариант для&nbsp;любого праздника;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Любые персонажи на&nbsp;выбор;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Музыкальное сопровождение;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Интересный игровой сценарий;
-									</li>
-									<li><i className="icon-check _icon"></i>
-										Весёлые игры и&nbsp;конкурсы.
-									</li>
-								</ul>
-								<p className="service-description__ps">При заказе двух
-									аниматоров на&nbsp;1,5&nbsp;часа и&nbsp;дольше дополнительная
-									услуга в &nbsp;ПОДАРОК!</p>
+								<div className="service-description__row-col">
+									<h3>Один аниматор&nbsp;- <span>от&nbsp;5000&nbsp;р/ч</span>.
+									</h3>
+									<ul>
+										<li><i className="icon-check _icon"></i>
+											отличный вариант для&nbsp;праздника до&nbsp;10 детей
+										</li>
+										<li><i className="icon-check _icon"></i>
+											любой персонаж на&nbsp;выбор
+										</li>
+										<li><i className="icon-check _icon"></i>
+											музыкальное сопровождение
+										</li>
+										<li><i className="icon-check _icon"></i>
+											интересный игровой сценарий
+										</li>
+										<li><i className="icon-check _icon"></i>
+											весёлые игры и&nbsp;конкурсы
+										</li>
+									</ul>
+								</div>
+								<div className="service-description__row-col">
+									<h3>Два аниматора&nbsp;- <span>от&nbsp;9000&nbsp;р/ч</span>
+									</h3>
+									<ul>
+										<li><i className="icon-check _icon"></i>
+											лучший вариант для&nbsp;любого праздника
+										</li>
+										<li><i className="icon-check _icon"></i>
+											любые персонажи на&nbsp;выбор
+										</li>
+										<li><i className="icon-check _icon"></i>
+											музыкальное сопровождение
+										</li>
+										<li><i className="icon-check _icon"></i>
+											интересный игровой сценарий;
+										</li>
+										<li><i className="icon-check _icon"></i>
+											весёлые игры и&nbsp;конкурсы
+										</li>
+									</ul>
+								</div>
 							</div>
-						</div>
-						<div className="service-description__button _open-button">
-							<AppButton />
+							<p className="service-description__ps">
+								При заказе двух аниматоров на&nbsp;1,5&nbsp;часа и&nbsp;дольше
+								дополнительная услуга в&nbsp;ПОДАРОК!</p>
 						</div>
 					</div>
 				</div>

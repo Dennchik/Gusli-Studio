@@ -13,7 +13,6 @@ import {
 } from '../../animations/anime-js.jsx';
 import { buildSwiper } from '../../layouts/build-swiper.js';
 import { servicesSlide } from '../../layouts/services-slide.js';
-
 import { Offer } from '../chunks/Offer.jsx';
 
 //* ----------------------------------------------------------------------------
@@ -21,10 +20,12 @@ export const ServiceEvents = ({baseUrl}) => {
 	const isHomepage = location.pathname === '/';
 	const boxImagesRef = useRef([]);
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
 	useEffect(() => {
 		buildSwiper();
 		servicesSlide();
 	}, []);
+
 	useEffect(() => {
 		const updatePaginationDisplay = () => {
 			const slideBody = document.querySelector('.services-slide__body._swiper');
@@ -128,7 +129,7 @@ export const ServiceEvents = ({baseUrl}) => {
 		return `${baseUrl}/${fileName}`;
 	};
 	return (
-		<div className="categories-video">
+		<div className="categories-service">
 			<div className="material-parallax parallax">
 				<div className="parallax__image">
 					<img className="parallax__image-services bg"

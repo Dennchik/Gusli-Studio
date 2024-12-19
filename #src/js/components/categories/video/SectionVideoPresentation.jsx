@@ -54,21 +54,19 @@ export const SectionVideoPresentation = ({baseUrl}) => {
 						</h1>
 						<div className="service-description__description">
 							<div className="service-description__row">
-								<div className="service-description__items">
-									<div className="service-description__list-item-col">
-										<p><i className="icon-hand-pointer _icon"></i>Яркий ролик
-											заставит человека остановиться и&nbsp;сконцентрировать
-											внимание на &nbsp;содержании.
-										</p>
-										<p><i className="icon-hand-pointer _icon"></i>
-											В видео можно емко описать преимущества вашего торгового
-											предложения и&nbsp;подтвердить их&nbsp;визуально.</p>
-										<p><i className="icon-hand-pointer _icon"></i>
-											Презентационный ролик о&nbsp;компании снижает расходы
-											на &nbsp;проведение бизнес-встреч, ведь его&nbsp;можно
-											демонстрировать без &nbsp;привлечения доп. сотрудников.
-										</p>
-									</div>
+								<div className="service-description__row-col">
+									<p><i className="icon-hand-pointer _icon"></i>Яркий ролик
+										заставит человека остановиться и&nbsp;сконцентрировать
+										внимание на &nbsp;содержании.
+									</p>
+									<p><i className="icon-hand-pointer _icon"></i>
+										В видео можно емко описать преимущества вашего торгового
+										предложения и&nbsp;подтвердить их&nbsp;визуально.</p>
+									<p><i className="icon-hand-pointer _icon"></i>
+										Презентационный ролик о&nbsp;компании снижает расходы
+										на &nbsp;проведение бизнес-встреч, ведь его&nbsp;можно
+										демонстрировать без &nbsp;привлечения доп. сотрудников.
+									</p>
 								</div>
 							</div>
 						</div>

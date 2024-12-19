@@ -83,6 +83,8 @@ export const SectionRecording = ({baseUrl}) => {
 										- это ничто по&nbsp;сравнению с&nbsp;тем, если бы вы
 										занимались этим самостоятельно.
 									</p>
+								</div>
+								<div className="service-description__row-col">
 									<p><i className="icon-volume-high _icon"></i>Атмосфера
 										в&nbsp;студии всегда располагает к&nbsp;творчеству.
 										В&nbsp;окружении всевозможных инструментов

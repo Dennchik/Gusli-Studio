@@ -35,7 +35,7 @@ export const SectionDistribution = ({baseUrl}) => {
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<div className="service-description__row-col">
-									<h2>Что от Вас нужно:</h2>
+									<h2>Что от Вас нужно?</h2>
 									<p><i className="icon-hand-pointer _icon"></i>Прежде всего,
 										необходимо подготовить материал, который будет
 										соответствовать
@@ -59,43 +59,42 @@ export const SectionDistribution = ({baseUrl}) => {
 							</div>
 							<div className="service-description__row">
 								<div className="service-description__row-col">
-									<h2>Стоимость услуг:</h2>
-									<p>Выгрузка трека на&nbsp;площадки&nbsp;—
-										<span>1500&nbsp;рублей</span></p>
+									<h3>Стоимость услуг:</h3>
 									<ul>
-										<li><i className="icon-check _icon"></i>Высокая
-											доходность
-											от&nbsp;прослушиваний;
+										<li><i className="icon-check _icon"></i>
+											<p>выгрузка трека на&nbsp;площадки&nbsp;—
+												<span>1500&nbsp;рублей</span></p></li>
+										<li><i className="icon-check _icon"></i>
+											высокая доходность от&nbsp;прослушиваний;
 										</li>
-										<li><i className="icon-check _icon"></i>Круглосуточная
-											поддержка менеджера;
+										<li><i className="icon-check _icon"></i>
+											круглосуточная поддержка менеджера;
 										</li>
-										<li><i className="icon-check _icon"></i>Страница
-											со&nbsp;ссылками уже включена в&nbsp;стоимость;
+										<li><i className="icon-check _icon"></i>
+											страница со&nbsp;ссылками уже включена в&nbsp;стоимость;
 										</li>
-										<li><i className="icon-check _icon"></i>Оперативное
-											размещение
-											релиза.
+										<li><i className="icon-check _icon"></i>
+											оперативное размещение релиза.
 										</li>
 									</ul>
 								</div>
 								<div className="service-description__row-col">
-									<h2>Дополнительные услуги:</h2>
+									<h3>Дополнительные услуги:</h3>
 									<ul>
 										<li><i className="icon-check _icon"></i>
-											<p>Обложка от&nbsp;<span>1000&nbsp;рублей</span>;</p>
+											<p>обложка от&nbsp;<span>1000&nbsp;рублей</span>;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
 											<p>Анимация обложки от&nbsp;
 												<span>5000&nbsp;рублей</span>;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Составление пресс релиза
+											<p>составление пресс релиза
 												и&nbsp;питчинг <span> по&nbsp;договоренности</span>;
 											</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Размещение в&mnsp;плейлистах
+											<p>размещение в&mnsp;плейлистах
 												<span> по&nbsp;договоренности</span>.</p>
 										</li>
 									</ul>
@@ -109,11 +108,11 @@ export const SectionDistribution = ({baseUrl}) => {
 				<div className="service-description__body top-box">
 					<div className='service-description__content _container'>
 						<div className="service-description__description">
-							<h2>Преимущества:</h2>
+							<h2>Преимущества</h2>
 							<div className="service-description__row">
 								<div className="service-description__row-col">
 									<h3><i className="icon-volume-high _icon"></i>
-										Дистрибуция музыки по&nbsp;всему миру:</h3>
+										Дистрибуция музыки по&nbsp;всему миру</h3>
 									<p><i className="icon-hand-pointer _icon"></i>Мы
 										предоставляем
 										качественный и&nbsp;эффективный сервис дистрибуции музыки
@@ -125,7 +124,7 @@ export const SectionDistribution = ({baseUrl}) => {
 										получить максимальную отдачу от&nbsp;вашей музыки
 										и&nbsp;продвинуться на&nbsp;пути к&nbsp;успеху.</p>
 									<h3><i className="icon-volume-high _icon"></i>
-										Поддержка клиентов:</h3>
+										Поддержка клиентов</h3>
 									<p><i className="icon-hand-pointer _icon"></i>
 										Загрузите файлы вашего проекта на&nbsp;Яндекс
 										или&nbsp;Google диск и&nbsp;предоставьте ссылку
@@ -134,7 +133,7 @@ export const SectionDistribution = ({baseUrl}) => {
 										Мы готовы помочь вам разобраться во&nbsp;всех тонкостях
 										подготовки релизов к&nbsp;публикации.</p>
 									<h3><i className="icon-volume-high _icon"></i>
-										Доставка альбомов:
+										Доставка альбомов
 									</h3>
 									<p><i className="icon-hand-pointer _icon"></i>
 										Мы распространяем вашу музыку на&nbsp;всех актуальных
@@ -143,7 +142,7 @@ export const SectionDistribution = ({baseUrl}) => {
 								</div>
 								<div className="service-description__row-col">
 									<h3><i className="icon-volume-high _icon"></i>
-										Питчинг релизов:
+										Питчинг релизов
 									</h3>
 									<p><i className="icon-hand-pointer _icon"></i>
 										Отправляет ваши треки редакторам площадок
@@ -155,7 +154,7 @@ export const SectionDistribution = ({baseUrl}) => {
 										замечен.
 									</p>
 									<h3><i className="icon-volume-high _icon"></i>
-										Контроль качества:
+										Контроль качества
 									</h3>
 									<p><i className="icon-hand-pointer _icon"></i>
 										Мы помогаем вам соблюдать требования к&nbsp;оформлению
@@ -163,7 +162,7 @@ export const SectionDistribution = ({baseUrl}) => {
 										профессионально и&nbsp;привлекательно для&nbsp;слушателей.
 									</p>
 									<h3><i className="icon-volume-high _icon"></i>
-										Авторские права:
+										Авторские права
 									</h3>
 									<p><i className="icon-hand-pointer _icon"></i>Мы помогаем
 										защитить ваши авторские права&nbsp;с помощью систем

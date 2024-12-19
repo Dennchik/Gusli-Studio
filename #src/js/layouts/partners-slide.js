@@ -16,7 +16,7 @@ export function partnersSlide(
 			speed: 800,
 			spaceBetween: 30,
 			// autoHeight: true,
-			loop: true,
+			// loop: true,
 			grabCursor: true,
 			// mousewheel: true,
 			// centeredSlides: true,

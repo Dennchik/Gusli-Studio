@@ -55,13 +55,12 @@ export const SectionSessionMusicians = ({baseUrl}) => {
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<div className="service-description__row-col">
-									<p><i className="icon-guitar-line _icon"></i>
-										<span>Сессионный музыкант</span>,
-										как&nbsp;следует из&nbsp;названия, это&nbsp;профессионал,
-										который принимает участие в&nbsp;записи на&nbsp;определенный
-										период времени. Он&nbsp;обладает большим опытом
-										в&nbsp;звукозаписи и&nbsp;помогает сделать звук более живым
-										и&nbsp;насыщенным, добавляя интересные музыкальные партии.
+									<p><span>Сессионный музыкант</span>, как&nbsp;следует
+										из&nbsp;названия, это&nbsp;профессионал, который принимает
+										участие в&nbsp;записи на&nbsp;определенный период времени.
+										Он&nbsp;обладает большим опытом в&nbsp;звукозаписи
+										и&nbsp;помогает сделать звук более живым и&nbsp;насыщенным,
+										добавляя интересные музыкальные партии.
 									</p>
 									<p><i className="icon-hand-pointer _icon"></i>Если
 										у&nbsp;вас
@@ -126,7 +125,7 @@ export const SectionSessionMusicians = ({baseUrl}) => {
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<div className="service-description__row-col">
-									<h2>Плюсы использования сессионных музыкантов:</h2>
+									<h2>Плюсы использования сессионных музыкантов</h2>
 									<p><i className="icon-hand-pointer _icon"></i>Некоторые люди
 										могут
 										прийти со&nbsp;своим соседом-гитаристом, чтобы

@@ -12,8 +12,7 @@ import {
 	animationSvgText
 } from '../../animations/anime-js.jsx';
 import { buildSwiper } from '../../layouts/build-swiper.js';
-import { servicesSlide } from '../../layouts/services-slide.js';
-
+import { Slide } from '../../layouts/services-video-slide.js';
 import { Offer } from '../chunks/Offer.jsx';
 
 //* ----------------------------------------------------------------------------
@@ -21,13 +20,42 @@ export const ServiceDevelopment = ({baseUrl}) => {
 	const isHomepage = location.pathname === '/';
 	const boxImagesRef = useRef([]);
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
 	useEffect(() => {
-		const initSwiper = document.querySelector('.services-slide__body');
-		if (isMobile) {
-			initSwiper.classList.add('_swiper');
-			buildSwiper();
-			servicesSlide();
-		}
+		buildSwiper();
+		Slide();
+	}, []);
+
+	useEffect(() => {
+		const updatePaginationDisplay = () => {
+			const slideBody = document.querySelector('.services-slide__body._swiper');
+			const pagination = document.querySelector('.services-slide__pagination');
+
+			if (slideBody && pagination) {
+				const columns = slideBody.querySelectorAll('.services-slide__column');
+				const isSmallScreen = window.matchMedia('(max-width: 1024px)').matches;
+
+				if (columns.length > 5) {
+					pagination.classList.remove('hidden'); // Показываем элемент
+				} else if (isSmallScreen) {
+					pagination.classList.remove('hidden'); // Скрываем элемент
+				} else {
+					pagination.classList.remove('hidden'); // Показываем для больших
+																								 // экранов
+				}
+			}
+		};
+
+		// Первоначальная проверка
+		updatePaginationDisplay();
+
+		// Отслеживание изменения размеров окна
+		window.addEventListener('resize', updatePaginationDisplay);
+
+		// Убираем обработчик при размонтировании
+		return () => {
+			window.removeEventListener('resize', updatePaginationDisplay);
+		};
 	}, []);
 
 	useEffect(() => {
@@ -101,7 +129,7 @@ export const ServiceDevelopment = ({baseUrl}) => {
 		return `${baseUrl}/${fileName}`;
 	};
 	return (
-		<div className="categories-video">
+		<div className="categories-service">
 			<div className="material-parallax parallax">
 				<div className="parallax__image">
 					<img className="parallax__image-services bg"
@@ -113,11 +141,11 @@ export const ServiceDevelopment = ({baseUrl}) => {
 				<div className="services _container">
 					<div className="services__body top-box">
 						<h1 className="services__title">
-							Веб<span className="services__dash">-</span>дизайн
+							Разработка
 						</h1>
 						<div className="services__content">
 							<div className="services-slide">
-								<div className="services-slide__body slide-development">
+								<div className="services-slide__body slide-services _swiper">
 									<div className="services-slide__column line">
 										<a href={getPath('services/development/dev-sites.html')}
 											 className="services-slide__content">
@@ -141,36 +169,38 @@ export const ServiceDevelopment = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={getPath(
-																	 'img/cards/development/img_1.webp')}
-																 alt="image-3"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={getPath(
-																	 'img/cards/development/img_1.png')}
-																 alt="image-3"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.webp')}
-															alt="bg-img"
-														/>
-													) : (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.png')}
-															alt="bg-img"
-														/>
-													)}
-												</picture>
+												<div className="services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={getPath(
+																		 'img/cards/development/img_1.webp')}
+																	 alt="image-3"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={getPath(
+																		 'img/cards/development/img_1.png')}
+																	 alt="image-3"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.webp')}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.png')}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
 													<p>Разработка сайтов</p>
 												</div>
@@ -200,38 +230,40 @@ export const ServiceDevelopment = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={getPath(
-																	 'img/cards/development/img_2.webp')}
-																 alt="image-3"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={getPath(
-																	 'img/cards/development/img_2.png')}
-																 alt="image-3"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.webp')}
-															alt="bg-img"
-														/>
-													) : (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.png')}
-															alt="bg-img"
-														/>
-													)}
-												</picture>
+												<div className=" services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={getPath(
+																		 'img/cards/development/img_2.webp')}
+																	 alt="image-3"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={getPath(
+																		 'img/cards/development/img_2.png')}
+																	 alt="image-3"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.webp')}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.png')}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
-													<p>Дизайн обложек и&nbsp;буклетов</p>
+													<p>Дизайн</p>
 												</div>
 											</div>
 										</a>
@@ -260,36 +292,38 @@ export const ServiceDevelopment = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={getPath(
-																	 'img/cards/development/img_3.webp')}
-																 alt="image-3"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={getPath(
-																	 'img/cards/development/img_3.png')}
-																 alt="image-3"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.webp')}
-															alt="bg-img"
-														/>
-													) : (
-														<img
-															className="services-slide__bg-img"
-															src={getPath('img/cards/bg_img.png')}
-															alt="bg-img"
-														/>
-													)}
-												</picture>
+												<div className="services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={getPath(
+																		 'img/cards/development/img_3.webp')}
+																	 alt="image-3"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={getPath(
+																		 'img/cards/development/img_3.png')}
+																	 alt="image-3"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.webp')}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={getPath('img/cards/bg_img.png')}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
 													<p>Создание сборников</p>
 												</div>
@@ -297,6 +331,7 @@ export const ServiceDevelopment = ({baseUrl}) => {
 										</a>
 									</div>
 								</div>
+								<div className="services-slide__pagination"></div>
 							</div>
 						</div>
 					</div>

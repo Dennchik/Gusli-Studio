@@ -59,37 +59,37 @@ export const SectionMastering = ({baseUrl}) => {
 									<h2>Сведение включает в&nbsp;себя:</h2>
 									<ul>
 										<li><i className="icon-check _icon"></i>
-											<p>Полное сведение дорожек вашего голоса и&nbsp;бита;</p>
-										</li>
-										<li><i className="icon-check _icon"></i>Тональную
-											<p>коррекцию голоса (auto-tune);</p>
+											<p>полное сведение дорожек вашего голоса и&nbsp;бита;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Частотную, динамическую и&nbsp;пространственную
+											<p>тональную коррекцию голоса (auto-tune);</p>
+										</li>
+										<li><i className="icon-check _icon"></i>
+											<p>частотную, динамическую и&nbsp;пространственную
 												обработку;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Ритмическую коррекцию;</p>
+											<p>ритмическую коррекцию;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Дикторы для&nbsp;аудиокниг;</p>
+											<p>дикторы для&nbsp;аудиокниг;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Работу с&nbsp;инструменталом;</p>
+											<p>работу с&nbsp;инструменталом;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Саунд-дизайн проекта, создание различных эффектов
+											<p>саунд-дизайн проекта, создание различных эффектов
 												на&nbsp;голосе.</p>
 										</li>
 									</ul>
 									<h3>Цены:</h3>
 									<ul>
 										<li><i className="icon-check _icon"></i>
-											Сведение&nbsp;-<span>&nbsp;4990&nbsp;рублей</span>.
+											сведение&nbsp;-<span>&nbsp;4990&nbsp;рублей</span>.
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<span>490&nbsp;рублей</span>&nbsp;за&nbsp;каждую дорожку
-											свыше 15&nbsp;штук.
+											за&nbsp;каждую дорожку свыше
+											15&nbsp;штук&nbsp;-&ensp;<span>490&nbsp;рублей</span>;
 										</li>
 									</ul>
 								</div>
@@ -97,20 +97,20 @@ export const SectionMastering = ({baseUrl}) => {
 									<h2>Мастеринг включает в себя:</h2>
 									<ul>
 										<li><i className="icon-check _icon"></i>
-											<p>Лимитирование и&nbsp;компрессия финального
+											<p>лимитирование и&nbsp;компрессия финального
 												материала;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Эквализация, улучшение стерео;</p>
+											<p>эквализация, улучшение стерео;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Приведение всего релизу к&nbsp;одному звучанию.</p>
+											<p>приведение всего релизу к&nbsp;одному звучанию.</p>
 										</li>
 									</ul>
 									<h3>Цены:</h3>
 									<ul>
 										<li><i className="icon-check _icon"></i>
-											<p>Мастеринг&nbsp;- <span>2&nbsp;490&nbsp;руб</span>.</p>
+											<p>мастеринг&nbsp;- <span>2&nbsp;490&nbsp;руб</span>.</p>
 										</li>
 									</ul>
 									<ul>
@@ -126,15 +126,15 @@ export const SectionMastering = ({baseUrl}) => {
 									<ul>
 										<h3>Дополнительные услуги:</h3>
 										<li><i className="icon-check _icon"></i>
-											<p>Сведение &quot;Online&quot;
+											<p>сведение &quot;Online&quot;
 												по&nbsp;видеосвязи&nbsp;- <span>4990 рублей</span>;
 											</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Мастеринг&nbsp;- <span>2490&nbsp;рублей</span>;</p>
+											<p>мастеринг&nbsp;- <span>2490&nbsp;рублей</span>;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Чистка и&nbsp;подготовка
+											<p>чистка и&nbsp;подготовка
 												проекта&nbsp;- <span>990&nbsp;рублей</span>.</p>
 										</li>
 									</ul>

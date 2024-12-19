@@ -158,7 +158,7 @@ export function fadeInSlide() {
 
 //* --------------------------- Анимация линий ---------------------------------
 export function animationSvgLine(target, reverse) {
-	const path = target.querySelector('.services-slide__svg .lines path');
+	const path = target.querySelector('.services-slide__image .lines path');
 	// Создаем переменную path
 	anime({
 		targets: path,

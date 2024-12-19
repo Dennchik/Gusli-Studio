@@ -177,29 +177,28 @@ export const SectionArrangement = ({baseUrl}) => {
 									<h2>Бит на&nbsp;заказ включает в&nbsp;себя:</h2>
 									<ul>
 										<li><i className="icon-check _icon"></i>
-											<p>Бит специально сделанный для&nbsp;вас, по&nbsp;вашим
+											<p>бит специально сделанный для&nbsp;вас, по&nbsp;вашим
 												пожеланиям. (Wav+trackout);</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Передача полных прав;</p>
+											<p>передача полных прав;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Разрешается заливать на&nbsp;любые доступные
+											<p>разрешается заливать на&nbsp;любые доступные
 												площадки.</p>
 										</li>
 									</ul>
 								</div>
-
 								<div className="service-description__row-col">
 									<h2>Цены:</h2>
 									<ul>
 										<li><i className="icon-check _icon"></i>
-											<p>Авторский
+											<p>авторский
 												бит&nbsp;- <span> от&nbsp;8000&nbsp;руб</span>;
 											</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Покупка бита из&nbsp;каталога&nbsp;-
+											<p>покупка бита из&nbsp;каталога&nbsp;-
 												<span>от&nbsp;3000&nbsp;руб</span>.</p>
 										</li>
 									</ul>

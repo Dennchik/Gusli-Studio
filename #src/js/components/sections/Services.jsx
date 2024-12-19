@@ -43,8 +43,8 @@ export const Services = ({baseUrl}) => {
 				} else if (isSmallScreen) {
 					pagination.classList.remove('hidden'); // Скрываем элемент
 				} else {
-					pagination.classList.remove('hidden'); // Показываем для больших
-																								 // экранов
+					// Показываем для больших экранов
+					pagination.classList.remove('hidden');
 				}
 			}
 		};
@@ -190,29 +190,31 @@ export const Services = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={'img/cards/services/img_1.webp'}
-																 alt="image-1"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={'img/cards/services/img_1.png'}
-																 alt="image-1"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported()
-														? (<img className="services-slide__bg-img"
-																		src={'img/cards/bg_img.webp'}
-																		alt="bg-image" />)
-														: (<img className="services-slide__bg-img"
-																		src={'img/cards/bg_img.png'}
-																		alt="bg-image" />
+												<div className="services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={'img/cards/services/img_1.webp'}
+																	 alt="image-1"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={'img/cards/services/img_1.png'}
+																	 alt="image-1"
+															/>
 														)}
-												</picture>
+													</picture>
+													<picture>
+														{isWebpSupported()
+															? (<img className="services-slide__bg-img"
+																			src={'img/cards/bg_img.webp'}
+																			alt="bg-image" />)
+															: (<img className="services-slide__bg-img"
+																			src={'img/cards/bg_img.png'}
+																			alt="bg-image" />
+															)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
 													<svg viewBox="0 0 250 40">
 														<defs>
@@ -336,34 +338,36 @@ export const Services = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={'img/cards/services/img_2.webp'}
-																 alt="image-2"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={'img/cards/services/img_2.png'}
-																 alt="image-2"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
-															src={'img/cards/bg_img.webp'}
-															alt="bg-img"
-														/>
-													) : (
-														<img
-															className="services-slide__bg-img"
-															src={'img/cards/bg_img.png'}
-															alt="bg-img"
-														/>
-													)}
-												</picture>
+												<div className="services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={'img/cards/services/img_2.webp'}
+																	 alt="image-2"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={'img/cards/services/img_2.png'}
+																	 alt="image-2"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.webp'}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.png'}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
 													<svg viewBox="0 0 250 40">
 														<g
@@ -422,34 +426,36 @@ export const Services = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={'img/cards/services/img_3.webp'}
-																 alt="image-3"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={'img/cards/services/img_3.png'}
-																 alt="image-3"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
-															src={'img/cards/bg_img.webp'}
-															alt="bg-img"
-														/>
-													) : (
-														<img
-															className="services-slide__bg-img"
-															src={'img/cards/bg_img.png'}
-															alt="bg-img"
-														/>
-													)}
-												</picture>
+												<div className="services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={'img/cards/services/img_3.webp'}
+																	 alt="image-3"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={'img/cards/services/img_3.png'}
+																	 alt="image-3"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.webp'}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.png'}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
 													<svg viewBox="0 0 250 40">
 														<g
@@ -508,34 +514,36 @@ export const Services = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={'img/cards/services/img_4.webp'}
-																 alt="image-4"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={'img/cards/services/img_4.png'}
-																 alt="image-4"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
-															src={'img/cards/bg_img.webp'}
-															alt="bg-img"
-														/>
-													) : (
-														<img
-															className="services-slide__bg-img"
-															src={'img/cards/bg_img.png'}
-															alt="bg-img"
-														/>
-													)}
-												</picture>
+												<div className="services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={'img/cards/services/img_4.webp'}
+																	 alt="image-4"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={'img/cards/services/img_4.png'}
+																	 alt="image-4"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.webp'}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.png'}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
 													<svg viewBox="0 0 250 40">
 														<g
@@ -618,34 +626,36 @@ export const Services = ({baseUrl}) => {
 														</g>
 													</svg>
 												</div>
-												<picture>
-													{isWebpSupported() ? (
-														<img className="services-slide__img"
-																 src={'img/cards/services/img_5.webp'}
-																 alt="image-5"
-														/>
-													) : (
-														<img className="services-slide__img"
-																 src={'img/cards/services/img_5.png'}
-																 alt="image-5"
-														/>
-													)}
-												</picture>
-												<picture>
-													{isWebpSupported() ? (
-														<img
-															className="services-slide__bg-img"
-															src={'img/cards/bg_img.webp'}
-															alt="bg-img"
-														/>
-													) : (
-														<img
-															className="services-slide__bg-img"
-															src={'img/cards/bg_img.png'}
-															alt="bg-img"
-														/>
-													)}
-												</picture>
+												<div className="services-slide__picture">
+													<picture>
+														{isWebpSupported() ? (
+															<img className="services-slide__img"
+																	 src={'img/cards/services/img_5.webp'}
+																	 alt="image-5"
+															/>
+														) : (
+															<img className="services-slide__img"
+																	 src={'img/cards/services/img_5.png'}
+																	 alt="image-5"
+															/>
+														)}
+													</picture>
+													<picture>
+														{isWebpSupported() ? (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.webp'}
+																alt="bg-img"
+															/>
+														) : (
+															<img
+																className="services-slide__bg-img"
+																src={'img/cards/bg_img.png'}
+																alt="bg-img"
+															/>
+														)}
+													</picture>
+												</div>
 												<div className="services-slide__text">
 													<svg viewBox="0 0 250 40">
 														<defs>
