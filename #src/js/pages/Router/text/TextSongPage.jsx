@@ -55,7 +55,7 @@ function TextSongPage() {
 						<section className="main-content__body">
 							<SectionTextSong baseUrl={baseUrl} isHomePage={true} />
 						</section>
-						<section className="main-content__offer gradient-neon-color">
+						<section className="main-content__offer">
 							<Offer baseUrl={baseUrl} />
 						</section>
 						<footer className="main-content__footer" id="footer">
