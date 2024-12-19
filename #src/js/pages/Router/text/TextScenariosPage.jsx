@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import { Offer } from '../../../components/chunks/Offer.jsx';
 
 import returnToSavedPosition from '../../../modules/return-position.js';
 import { applyParallax } from '../../../animations/animations.jsx';
@@ -54,6 +55,9 @@ function TextPage() {
 					<div className="main-content__content" id="content">
 						<section className="main-content__body">
 							<SectionTextScenarios baseUrl={baseUrl} isHomePage={true} />
+						</section>
+						<section className="main-content__offer">
+							<Offer baseUrl={baseUrl} />
 						</section>
 						<footer className="main-content__footer" id="footer">
 							<Footer baseUrl={baseUrl} isHomePage={true} />

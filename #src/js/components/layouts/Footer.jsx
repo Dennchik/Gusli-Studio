@@ -25,7 +25,6 @@ export const Footer = ({baseUrl, isHomePage}) => {
 	return (
 		<Element className="footer">
 			<div className="footer__content">
-				<div className="footer__polygon"></div>
 				<div className="footer__info _container">
 					{isHomePage && <AboutCompany baseUrl={baseUrl} />}
 					<div className="footer__help el-4">
