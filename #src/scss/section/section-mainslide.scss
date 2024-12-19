@@ -114,22 +114,23 @@
 
 			&:nth-child(3) {
 				font: {
-					family: $font-family-exclude;
-					size: 54px;
-					weight: 600;
+					// family: $font-family-exclude;
+					// size: 54px;
+					// weight: 600;
 				}
+				text-transform: uppercase;
 				font-stretch: expanded;
-				letter-spacing: 1.5px;
-
+				// letter-spacing: 1.5px;
+				white-space: nowrap;
 				color: $liquid-neon;
 
-				@include minmax-490-1920 {
-					font-size: calc(32px + (54 - 32) * ((100vw - 490px) / (1920 - 490)));
-				}
-
-				@include screen-490 {
-					font-size: 32px;
-				}
+				// @include minmax-490-1920 {
+				// 	font-size: calc(32px + (54 - 32) * ((100vw - 490px) / (1920 - 490)));
+				// }
+				//
+				// @include screen-490 {
+				// 	font-size: 32px;
+				// }
 			}
 		}
 

@@ -86,6 +86,11 @@
 		width: 50px;
 		height: 53px;
 		opacity: 0.9;
+
+		@include max-690 {
+			width: 40px;
+			height: 43px
+		}
 	}
 
 	// .header__text
@@ -112,6 +117,11 @@
 
 		span {
 			opacity: 0.7;
+		}
+
+		@include max-690 {
+			font-size: 28px;
+			transform: translateY(4px);
 		}
 	}
 
@@ -211,7 +221,7 @@
 	}
 
 	.icon-phone-ringing {
-		font-size: 4.6rem;
+		font-size: 4.4rem;
 		color: $electric-lime;
 		margin-right: 1rem;
 		text-shadow: 1px 1px 3px #000;
@@ -222,6 +232,10 @@
 
 		@include screen-425 {
 			margin-right: 0;
+		}
+
+		@include max-690 {
+			font-size: 32px;
 		}
 	}
 

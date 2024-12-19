@@ -87,7 +87,7 @@ export function timeLineHeaderItem() {
 		easing: 'easeInOutSine',
 		begin: function (anim) {
 			anim.animatables.forEach(function (animatable) {
-				animatable.target.style.transition = 'all 0.5s ease-out';
+				animatable.target.style.transition = 'all 0.3s ease-out';
 			});
 		}
 	}).add({
@@ -103,7 +103,7 @@ export function timeLineHeaderItem() {
 		easing: 'easeInOutSine',
 		begin: function (anim) {
 			anim.animatables.forEach(function (animatable) {
-				animatable.target.style.transition = 'opacity 0.5s ease-out';
+				animatable.target.style.transition = 'opacity 0.3s ease-out';
 			});
 		}
 	}, 50).add({
@@ -111,13 +111,13 @@ export function timeLineHeaderItem() {
 		opacity: [0, 1],
 		translateX: [200, 0],
 
-		translateY: [9, 13],
+		translateY: [9, 10],
 		// rotate: [-90, 0],
 		duration: 1250,
 		easing: 'easeInOutSine',
 		begin: function (anim) {
 			anim.animatables.forEach(function (animatable) {
-				animatable.target.style.transition = 'opacity 0.5s ease-out';
+				animatable.target.style.transition = 'opacity 0.3s ease-out';
 			});
 		}
 	}, 50);
