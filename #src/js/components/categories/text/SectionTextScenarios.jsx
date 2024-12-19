@@ -38,12 +38,12 @@ export const SectionTextScenarios = ({baseUrl}) => {
 						<picture>
 							{isWebpSupported() ? (
 									<img className="parallax__image-services"
-											 src={getPath('img/parallax/text/fotoram_bg_01.webp')}
+											 src={getPath('img/parallax/text/fotoram_bg_011.webp')}
 											 alt="image" />
 								)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/text/fotoram_bg_01.png')}
+											 src={getPath('img/parallax/text/fotoram_bg_011.png')}
 											 alt="image" />
 								)}
 						</picture>

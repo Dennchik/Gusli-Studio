@@ -72,10 +72,7 @@ function TextSongPage() {
 			<div className="page__aside" id="scrollButton">
 				<i className="icon-angle-down _button"></i>
 			</div>
-			<div className="page__form-modal"
-					 role="dialog"
-					 aria-labelledby="modalTitle"
-					 aria-modal="true">
+			<div className="page__form-modal">
 				<FormModal />
 			</div>
 		</>
