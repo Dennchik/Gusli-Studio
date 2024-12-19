@@ -11,7 +11,7 @@ ScrollTrigger.normalizeScroll(false);
 ScrollTrigger.config({ignoreMobileResize: true});
 
 //* ----------------------------------------------------------------------------
- 
+
 //* ----------------------- Создание ScrollTrigger -----------------------------
 export function refreshScrollTrigger() {
 	return ScrollTrigger.refresh();
@@ -225,7 +225,7 @@ export function animateTitles(element, trigger, endTrigger, start, end) {
 	// Анимация для смещения по Y
 	timeline.from(element, {
 		y: 100,
-		duration: 1, // Продолжительность смещения
+		duration: 0.8, // Продолжительность смещения
 		ease: 'power1.out', // Мягкая анимация
 	});
 
@@ -234,7 +234,7 @@ export function animateTitles(element, trigger, endTrigger, start, end) {
 		element,
 		{
 			opacity: 0,
-			duration: 2, // Увеличиваем продолжительность для opacity
+			duration: 1.2, // Увеличиваем продолжительность для opacity
 			ease: 'power1.out', // Мягкая анимация
 		},
 		'< ',

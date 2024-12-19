@@ -243,9 +243,9 @@
 	// .main-content__offer
 	&__offer {
 		position: relative;
-		z-index: 111;
+		z-index: 19;
 		@extend .gradient-border-before-revers;
-		// @extend .gradient-border-after-revers;
+		@extend .gradient-border-after-revers;
 	}
 
 	// .main-content__footer
