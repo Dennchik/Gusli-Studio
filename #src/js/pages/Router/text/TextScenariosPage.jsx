@@ -7,20 +7,21 @@ import returnToSavedPosition from '../../../modules/return-position.js';
 import { applyParallax } from '../../../animations/animations.jsx';
 
 import { Header } from '../../../components/layouts/Header.jsx';
-import { ServiceText } from '../../../components/categories/ServiceText.jsx';
+import {
+	SectionTextScenarios
+} from '../../../components/categories/text/SectionTextScenarios.jsx';
 import { Footer } from '../../../components/layouts/Footer.jsx';
 import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
 import { FormModal } from '../../../components/layouts/FormModal.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
-const baseUrl = '..';
+const baseUrl = '../..';
 
 function TextPage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
 	useGSAP(
 		() => {
-			// create the smooth scroller FIRST!
 			if (!isMobile) {
 				const smoother = ScrollSmoother.create({
 					wrapper: '#wrapper',
@@ -30,7 +31,7 @@ function TextPage() {
 					smoothTouch: 0.1,
 				});
 				return () => {
-					smoother.kill(); // Удаляем Smooth при размонтировании
+					smoother.kill();
 				};
 			}
 		},
@@ -51,8 +52,8 @@ function TextPage() {
 			<main className="page__main-content">
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
-						<section className="main-content__services">
-							<ServiceText baseUrl={baseUrl} />
+						<section className="main-content__body">
+							<SectionTextScenarios baseUrl={baseUrl} isHomePage={true} />
 						</section>
 						<footer className="main-content__footer" id="footer">
 							<Footer baseUrl={baseUrl} isHomePage={true} />
@@ -60,6 +61,7 @@ function TextPage() {
 					</div>
 				</div>
 			</main>
+
 			<div className="page__menu-float">
 				<MenuFloat baseUrl={baseUrl} />
 			</div>

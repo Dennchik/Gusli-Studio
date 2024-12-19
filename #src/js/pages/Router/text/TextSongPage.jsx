@@ -65,7 +65,6 @@ function TextSongPage() {
 				</div>
 			</main>
 
-
 			<div className="page__menu-float">
 				<MenuFloat baseUrl={baseUrl} />
 			</div>
