@@ -11,7 +11,6 @@ export function buttonShow() {
 				cta_button_hide.play();
 			});
 	});
-
 	document.querySelector('._close-button').addEventListener(
 		'mouseup', function () {
 			if (drawer_open) {
@@ -31,7 +30,6 @@ export function buttonShow() {
 		complete: function () {
 		}
 	});
-
 	let cta_button_hide = anime({
 		targets: '._open-button',
 		translateY: ['0', '-15'],
@@ -46,7 +44,6 @@ export function buttonShow() {
 			drawer_open = true;
 		}
 	});
-
 	let slideDown = anime({
 		targets: '.page__form-modal',
 		translateY: ['0', '100%'],
@@ -57,7 +54,6 @@ export function buttonShow() {
 			drawer_open = false;
 		}
 	});
-
 	let slideUp = anime({
 		targets: '.page__form-modal',
 		translateY: ['100%', '0'],
@@ -66,8 +62,6 @@ export function buttonShow() {
 			show_hideCTA('none');
 		}
 	});
-
-
 	function show_hideCTA(param) {
 		document.querySelector('._open-button').style.display = param;
 		// document.querySelector('.cta-text').style.display = param;
@@ -83,7 +77,7 @@ export function timeLineHeaderItem() {
 		targets: '.header__item',
 		opacity: [0, 1],
 		translateY: [-100, 0],
-		delay: anime.stagger(100, {start: 100}),
+		delay: anime.stagger(100, { start: 100 }),
 		easing: 'easeInOutSine',
 		begin: function (anim) {
 			anim.animatables.forEach(function (animatable) {
@@ -92,13 +86,12 @@ export function timeLineHeaderItem() {
 		}
 	}).add({
 		targets: '.header__item',
-		delay: anime.stagger(100, {start: 500}),
+		delay: anime.stagger(100, { start: 500 }),
 		easing: 'easeInOutSine',
 	}, '-=250').add({
 		targets: '.el-logo',
 		opacity: [0, 1],
 		translateX: [-200, 0],
-		// rotate: [-90, 0],
 		duration: 1250,
 		easing: 'easeInOutSine',
 		begin: function (anim) {
@@ -110,9 +103,7 @@ export function timeLineHeaderItem() {
 		targets: '.el-community',
 		opacity: [0, 1],
 		translateX: [200, 0],
-
 		translateY: [9, 10],
-		// rotate: [-90, 0],
 		duration: 1250,
 		easing: 'easeInOutSine',
 		begin: function (anim) {
@@ -121,7 +112,6 @@ export function timeLineHeaderItem() {
 			});
 		}
 	}, 50);
-
 }
 
 //* ----------------------------------------------------------------------------
@@ -133,7 +123,7 @@ export function fadeInSlide() {
 		targets: '.swiper-slide-active .main-slide__title',
 		opacity: [0, 1],
 		translateY: [80, 0],
-		delay: anime.stagger(100, {start: 500}),
+		delay: anime.stagger(100, { start: 500 }),
 		easing: 'easeInOutSine',
 		duration: 1000,
 		begin: function (anim) {
@@ -145,7 +135,7 @@ export function fadeInSlide() {
 		targets: '.swiper-slide-active .main-slide__text',
 		opacity: [0, 1],
 		translateY: [100, 0],
-		delay: anime.stagger(100, {start: 500}),
+		delay: anime.stagger(100, { start: 500 }),
 		duration: 1000,
 		easing: 'easeInOutSine',
 		begin: function (anim) {

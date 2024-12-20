@@ -12,93 +12,83 @@
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
+		padding: 6rem 0;
+
+		@include min-1440 {
+			// overflow: hidden;
+		}
+
+		@include min-1140 {
+			padding: 10rem 0;
+		}
 	}
 
 	// .services__title
 	&__title {
+		margin-bottom: 6rem;
 		font: {
 			family: 'AA Neon', Helvetica, sans-serif;
 			size: 60px;
 			weight: normal;
 		}
+
 		line-height: 100%;
 		position: relative;
 		z-index: 9;
-		display: inline;
-		margin-top: 8rem;
-		padding: 0 5rem;
 		text-align: center;
 		letter-spacing: 0;
 		color: $neon-blue;
 		filter: $filter;
 
+		@include min-1140 {
+			margin-bottom: 10rem;
+		}
 		@include minmax-320-1920 {
-			font-size: calc(27px + (60 - 27) * ((100vw - 320px) / (1920 - 320)));
+			font-size: calc(24px + (60 - 24) * ((100vw - 320px) / (1920 - 320)));
 		}
 
 		@include screen-320 {
-			font-size: 27px;
-			margin-bottom: 2rem;
-		}
-
-		&::before {
-			position: absolute;
-			z-index: -1;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 70%;
-			content: '';
-		}
-
-		&:nth-child(1) {
-			perspective-origin: 45% 320%;
-			transform-style: preserve-3d;
-			perspective: 100px;
-
-			&::before {
-				transform: translate(0, 58%);
-			}
-
-			&::after {
-				font: {
-					weight: 900;
-				}
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 70%;
-				content: 'наши услуги';
-				transform: rotateX(15deg) translateZ(-11px);
-				@extend .shadow-after;
-			}
+			font-size: 24px;
 		}
 	}
 
 	// .services__content
 	&__content {
 		width: 100%;
-		padding-top: 8rem;
+	}
+
+	&__dash {
+		font-family: $font-default;
+		// font-size: 56px;
 	}
 }
 
 .services-slide {
+	display: flex;
+	flex-direction: column;
 	// .services-slide__body
 	&__body {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
-		gap: 2.5rem;
+		// align-items: center;
+
+		.slide-services {
+			// justify-content: space-evenly;
+			justify-content: center;
+		}
 	}
 
 	// .services-slide__column
 	&__column {
 		position: relative;
-		min-width: 150px;
+		min-width: 130px;
 		max-width: 300px;
+	}
 
-		border-radius: 10px;
+	// .services-slide__content
+	&__content {
+		position: relative;
 		box-shadow: 0 0 20px #000;
 
 		&::before {
@@ -112,7 +102,7 @@
 			content: '';
 			transition: all 0.3s ease-in-out;
 			opacity: 0.3;
-			border-radius: 10px;
+			border-radius: 4px;
 			box-shadow: $boxShadow;
 
 			@include screen-1024 {
@@ -124,46 +114,49 @@
 		}
 
 		&:hover {
-			&::before {
-				top: -3px;
-				right: -3px;
-				bottom: -3px;
-				left: -3px;
-				opacity: 0.8;
-			}
+			@include min-1024 {
+				&::before {
+					top: -3px;
+					right: -3px;
+					bottom: -3px;
+					left: -3px;
+					opacity: 0.8;
+				}
 
-			.services-slide__image {
-				scale: 1.1;
-			}
+				.services-slide__img {
+					position: relative;
+					scale: 1.1;
+				}
 
-			.services-slide__bg-img {
-				transform: translateY(0);
-				opacity: 1;
-			}
+				.services-slide__bg-img {
+					transform: translateY(0);
+					opacity: 1;
+				}
 
-			.services-slide__text {
-				transform: translateY(-50px);
+				.services-slide__text {
+					transform: translateY(-50px);
+				}
 			}
 		}
 	}
 
-	// .services-slide__content
-	&__content {
-		overflow: hidden;
-		border-radius: 10px;
-		height: 100%;
+	// .services-slide__img
+	&__img {
+		position: relative;
+		z-index: -1;
 	}
 
 	// .services-slide__image
 	&__image {
+		overflow: hidden;
+		width: 100%;
 		height: 100%;
 		cursor: pointer;
 		transition: all 0.5s ease-in-out;
-		border-radius: 10px;
-		overflow: hidden;
-		filter: $filter;
+		border-radius: 4px;
 
 		img {
+			max-height: 300px;
 			width: 100%;
 			height: 100%;
 			transition: scale 0.4s ease-in-out;
@@ -193,6 +186,7 @@
 	&__svg {
 		width: 100%;
 		object-fit: cover;
+		pointer-events: none;
 
 		img {
 			max-width: 100%;
@@ -214,16 +208,17 @@
 	&__text {
 		position: absolute;
 		pointer-events: none;
+		height: 52px;
 		left: 0;
 		right: 0;
 		bottom: 1rem;
 		display: flex;
+		color: $neon-blue;
+		align-items: center;
 		justify-content: center;
 		transition: transform 0.4s ease-in-out;
 		text-align: center;
-		color: $neon-blue;
-		background-color: #0b0813bb;
-		text-shadow: 0 0 7px #000;
+		background-color: rgba(11, 8, 19, 0.9);
 
 		p {
 			font-size: 12px;
@@ -239,15 +234,15 @@
 			}
 
 			&:nth-child(2) {
-				color: $electric-lime;
+				color: $liquid-neon;
 			}
-		}
 
-		@include minmax-320-1920 {
-			font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
-		}
-		@include screen-320 {
-			font-size: 14px;
+			@include minmax-320-1920 {
+				font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320)));
+			}
+			@include screen-320 {
+				font-size: 10px;
+			}
 		}
 
 		svg {
@@ -264,5 +259,9 @@
 	// .services-slide__pagination
 	&__pagination {
 		@extend .pagination;
+
+		&.hidden {
+			display: none !important;
+		}
 	}
 }
