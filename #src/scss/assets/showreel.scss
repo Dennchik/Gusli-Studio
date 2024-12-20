@@ -11,19 +11,23 @@
 	&__content {
 		position: absolute;
 		padding-right: 6rem;
+		z-index: 2;
 	}
 
 	// .main-video__box
 	&__box {
+		overflow: initial;
 		height: 100vh;
+		width: 100vw;
 		video {
-			position: relative;
-			left: 0;
-			top: 0;
-			width: 100vw;
-			height: 100vh;
+			// position: relative;
+			// left: 0;
+			// top: 0;
+			width: 100%;
+			height: 100%;
 			object-fit: cover;
 			object-position: center;
+			z-index: 1;
 		}
 	}
 }
