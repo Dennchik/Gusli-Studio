@@ -18,7 +18,7 @@ import { FormModal } from '../../../components/layouts/FormModal.jsx';
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';
 
-function TextPage() {
+function TextScenariosPage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
 	useGSAP(
@@ -79,4 +79,4 @@ function TextPage() {
 	);
 }
 
-export default TextPage;
+export default TextScenariosPage;

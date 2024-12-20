@@ -2,18 +2,18 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import { Offer } from '../../../components/chunks/Offer.jsx';
 
 import returnToSavedPosition from '../../../modules/return-position.js';
 import { applyParallax } from '../../../animations/animations.jsx';
 
 import { Header } from '../../../components/layouts/Header.jsx';
-import { Footer } from '../../../components/layouts/Footer.jsx';
-import { Offer } from '../../../components/chunks/Offer.jsx';
-import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
-import { FormModal } from '../../../components/layouts/FormModal.jsx';
 import {
 	SectionTextSong
 } from '../../../components/categories/text/SectionTextSong.jsx';
+import { Footer } from '../../../components/layouts/Footer.jsx';
+import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
+import { FormModal } from '../../../components/layouts/FormModal.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';

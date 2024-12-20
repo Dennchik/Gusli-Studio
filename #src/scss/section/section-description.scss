@@ -149,7 +149,7 @@
 
 		h2 {
 			margin-bottom: 2rem;
-			font-size: 32px;
+			font-size: 30px;
 			font-weight: 450;
 			color: $neon-blue;
 			opacity: 0.8;
@@ -160,11 +160,11 @@
 			}
 
 			@include minmax-320-1920 {
-				font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1920 - 320)));
+				font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
 			}
-			// @include screen-490 {
-			text-align: center;
-			// }
+			@include screen-490 {
+				text-align: center;
+			}
 
 			@include screen-320 {
 				font-size: 20px;
