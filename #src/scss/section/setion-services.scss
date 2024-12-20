@@ -63,18 +63,20 @@
 }
 
 .services-slide {
+	display: flex;
+	flex-direction: column;
 	// .services-slide__body
 	&__body {
 		position: relative;
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		// align-items: center;
-		gap: 2.5rem;
 
-		// .swiper-wrapper,
-		// .slide-services {
-		// 	justify-content: space-evenly;
-		// }
+		.swiper-wrapper,
+		.slide-services {
+			// justify-content: space-evenly;
+			width: auto !important;
+		}
 	}
 
 	// .services-slide__column
