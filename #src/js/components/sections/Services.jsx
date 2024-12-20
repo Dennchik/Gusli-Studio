@@ -15,7 +15,7 @@ import { buildSwiper } from '../../layouts/build-swiper.js';
 import { servicesSlide } from '../../layouts/services-slide.js';
 import { Offer } from '../chunks/Offer.jsx';
 //* ----------------------------------------------------------------------------
-export const Services = ({baseUrl}) => {
+export const Services = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
 	const boxImagesRef = useRef([]);
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
@@ -139,14 +139,14 @@ export const Services = ({baseUrl}) => {
 				<div className="parallax__image">
 					<picture>
 						{isWebpSupported() ? (
-								<img className="parallax__image-services bg"
-										 src={'img/parallax/serv_bg.webp'}
-										 alt="image" />
-							)
+							<img className="parallax__image-services bg"
+								src={'img/parallax/serv_bg.webp'}
+								alt="image" />
+						)
 							: (
 								<img className="parallax__image-services bg"
-										 src={'img/parallax/serv_bg.png'}
-										 alt="image" />
+									src={'img/parallax/serv_bg.png'}
+									alt="image" />
 							)}
 					</picture>
 				</div>
@@ -160,7 +160,7 @@ export const Services = ({baseUrl}) => {
 								<div className="services-slide__body _swiper">
 									<div className="services-slide__column line">
 										<a href={getPath('services/service-sound.html')}
-											 className="services-slide__content">
+											className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
 													<svg viewBox="0 0 700 430">
@@ -194,24 +194,24 @@ export const Services = ({baseUrl}) => {
 													<picture>
 														{isWebpSupported() ? (
 															<img className="services-slide__img"
-																	 src={'img/cards/services/img_1.webp'}
-																	 alt="image-1"
+																src={'img/cards/services/img_1.webp'}
+																alt="image-1"
 															/>
 														) : (
 															<img className="services-slide__img"
-																	 src={'img/cards/services/img_1.png'}
-																	 alt="image-1"
+																src={'img/cards/services/img_1.png'}
+																alt="image-1"
 															/>
 														)}
 													</picture>
 													<picture>
 														{isWebpSupported()
 															? (<img className="services-slide__bg-img"
-																			src={'img/cards/bg_img.webp'}
-																			alt="bg-image" />)
+																src={'img/cards/bg_img.webp'}
+																alt="bg-image" />)
 															: (<img className="services-slide__bg-img"
-																			src={'img/cards/bg_img.png'}
-																			alt="bg-image" />
+																src={'img/cards/bg_img.png'}
+																alt="bg-image" />
 															)}
 													</picture>
 												</div>
@@ -317,7 +317,7 @@ export const Services = ({baseUrl}) => {
 									</div>
 									<div className="services-slide__column line">
 										<a href={getPath('services/service-video.html')}
-											 className="services-slide__content">
+											className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
 													<svg viewBox="0 0 700 430">
@@ -342,13 +342,13 @@ export const Services = ({baseUrl}) => {
 													<picture>
 														{isWebpSupported() ? (
 															<img className="services-slide__img"
-																	 src={'img/cards/services/img_2.webp'}
-																	 alt="image-2"
+																src={'img/cards/services/img_2.webp'}
+																alt="image-2"
 															/>
 														) : (
 															<img className="services-slide__img"
-																	 src={'img/cards/services/img_2.png'}
-																	 alt="image-2"
+																src={'img/cards/services/img_2.png'}
+																alt="image-2"
 															/>
 														)}
 													</picture>
@@ -405,7 +405,7 @@ export const Services = ({baseUrl}) => {
 									</div>
 									<div className="services-slide__column line">
 										<a href={getPath('services/service-text.html')}
-											 className="services-slide__content">
+											className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
 													<svg viewBox="0 0 700 430">
@@ -430,13 +430,13 @@ export const Services = ({baseUrl}) => {
 													<picture>
 														{isWebpSupported() ? (
 															<img className="services-slide__img"
-																	 src={'img/cards/services/img_3.webp'}
-																	 alt="image-3"
+																src={'img/cards/services/img_3.webp'}
+																alt="image-3"
 															/>
 														) : (
 															<img className="services-slide__img"
-																	 src={'img/cards/services/img_3.png'}
-																	 alt="image-3"
+																src={'img/cards/services/img_3.png'}
+																alt="image-3"
 															/>
 														)}
 													</picture>
@@ -493,7 +493,7 @@ export const Services = ({baseUrl}) => {
 									</div>
 									<div className="services-slide__column line">
 										<a href={getPath('services/service-events.html')}
-											 className="services-slide__content">
+											className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
 													<svg viewBox="0 0 700 430">
@@ -518,13 +518,13 @@ export const Services = ({baseUrl}) => {
 													<picture>
 														{isWebpSupported() ? (
 															<img className="services-slide__img"
-																	 src={'img/cards/services/img_4.webp'}
-																	 alt="image-4"
+																src={'img/cards/services/img_4.webp'}
+																alt="image-4"
 															/>
 														) : (
 															<img className="services-slide__img"
-																	 src={'img/cards/services/img_4.png'}
-																	 alt="image-4"
+																src={'img/cards/services/img_4.png'}
+																alt="image-4"
 															/>
 														)}
 													</picture>
@@ -605,7 +605,7 @@ export const Services = ({baseUrl}) => {
 									</div>
 									<div className="services-slide__column line">
 										<a href={getPath('services/development.html')}
-											 className="services-slide__content">
+											className="services-slide__content">
 											<div className="services-slide__image el">
 												<div className="services-slide__svg">
 													<svg viewBox="0 0 700 430">
@@ -630,13 +630,13 @@ export const Services = ({baseUrl}) => {
 													<picture>
 														{isWebpSupported() ? (
 															<img className="services-slide__img"
-																	 src={'img/cards/services/img_5.webp'}
-																	 alt="image-5"
+																src={'img/cards/services/img_5.webp'}
+																alt="image-5"
 															/>
 														) : (
 															<img className="services-slide__img"
-																	 src={'img/cards/services/img_5.png'}
-																	 alt="image-5"
+																src={'img/cards/services/img_5.png'}
+																alt="image-5"
 															/>
 														)}
 													</picture>
