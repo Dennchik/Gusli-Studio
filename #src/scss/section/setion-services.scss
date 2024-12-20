@@ -42,8 +42,6 @@
 		@include min-1140 {
 			margin-bottom: 10rem;
 		}
-	;
-
 		@include minmax-320-1920 {
 			font-size: calc(24px + (60 - 24) * ((100vw - 320px) / (1920 - 320)));
 		}
@@ -65,7 +63,6 @@
 }
 
 .services-slide {
-
 	// .services-slide__body
 	&__body {
 		position: relative;
@@ -74,8 +71,9 @@
 		align-items: center;
 		gap: 2.5rem;
 
-		.swiper-wrapper, .slide-services {
-			justify-content: space-evenly;
+		.swiper-wrapper,
+		.slide-services {
+			// justify-content: space-evenly;
 		}
 	}
 
@@ -174,8 +172,9 @@
 		z-index: 2;
 		top: 0;
 		left: 0;
-		transition: opacity 1.5s,
-		box-shadow 0.3s ease-in-out 0.2s;
+		transition:
+			opacity 1.5s,
+			box-shadow 0.3s ease-in-out 0.2s;
 		opacity: 0;
 	}
 
