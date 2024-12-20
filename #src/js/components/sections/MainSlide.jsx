@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 
 //* ------------------------ Component's MainSlide -----------------------------
 
-export const MainSlide = ({baseUrl}) => {
+export const MainSlide = ({ baseUrl }) => {
 	const videoRef = useRef(null);
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
@@ -94,8 +94,8 @@ export const MainSlide = ({baseUrl}) => {
 						preload="auto"
 						loop
 						muted
-						poster={getPath('img/audio/showreel-1.png')}
-						src={getPath('img/audio/showreel-1.mp4')}>
+						poster={getPath('img/audio/showreel-1.png')} >
+						<source src={getPath('img/audio/showreel-1.mp4')} type="video/mp4" />
 					</video>
 				</div>
 				<div className="main-video__content _container">
@@ -113,7 +113,7 @@ export const MainSlide = ({baseUrl}) => {
 					</div>
 					<div className="offer-container__button _open-button">
 						<button className="order-button btn-grad"
-										type={'button'}>
+							type={'button'}>
 							<span>оставить заявку</span>
 						</button>
 					</div>
