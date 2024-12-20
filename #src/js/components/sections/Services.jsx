@@ -62,39 +62,39 @@ export const Services = ({ baseUrl }) => {
 	}, []);
 
 	useEffect(() => {
-		if (!isMobile) {
-			const handleMouseOver = (event) => {
-				const target = event.currentTarget;
-				// Запускаем анимацию при наведении
-				animationSvgLine(target, false);
-				animationSvgText(target, false);
-			};
-			const handleMouseLeave = (event) => {
-				const target = event.currentTarget;
-				setTimeout(() => {
-					/*  Запускаем анимацию в обратном направлении с задержкой при уходе
-					 мыши */
-					animationSvgLine(target, true);
-					animationSvgText(target, true);
-				}, 500);
-			};
-			const boxImages = Array.from(
-				document.querySelectorAll('.services-slide__image'),
-			);
-			// Сохраняем ссылку на элементы в useRef
-			boxImagesRef.current = boxImages;
-			boxImages.forEach((boxImage) => {
-				boxImage.addEventListener('mouseover', handleMouseOver);
-				boxImage.addEventListener('mouseleave', handleMouseLeave);
-			});
+		// if (!isMobile) {
+		const handleMouseOver = (event) => {
+			const target = event.currentTarget;
+			// Запускаем анимацию при наведении
+			animationSvgLine(target, false);
+			animationSvgText(target, false);
+		};
+		const handleMouseLeave = (event) => {
+			const target = event.currentTarget;
+			setTimeout(() => {
+				/*  Запускаем анимацию в обратном направлении с задержкой при уходе
+				 мыши */
+				animationSvgLine(target, true);
+				animationSvgText(target, true);
+			}, 500);
+		};
+		const boxImages = Array.from(
+			document.querySelectorAll('.services-slide__image'),
+		);
+		// Сохраняем ссылку на элементы в useRef
+		boxImagesRef.current = boxImages;
+		boxImages.forEach((boxImage) => {
+			boxImage.addEventListener('mouseover', handleMouseOver);
+			boxImage.addEventListener('mouseleave', handleMouseLeave);
+		});
 
-			return () => {
-				boxImages.forEach((boxImage) => {
-					boxImage.removeEventListener('mouseover', handleMouseOver);
-					boxImage.removeEventListener('mouseleave', handleMouseLeave);
-				});
-			};
-		}
+		return () => {
+			boxImages.forEach((boxImage) => {
+				boxImage.removeEventListener('mouseover', handleMouseOver);
+				boxImage.removeEventListener('mouseleave', handleMouseLeave);
+			});
+		};
+		// }
 	}, []);
 
 	useEffect(() => {
