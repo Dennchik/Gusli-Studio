@@ -69,12 +69,13 @@
 	&__body {
 		position: relative;
 		display: flex;
-		// justify-content: center;
+		justify-content: space-between;
 		// align-items: center;
 
 		.swiper-wrapper,
 		.slide-services {
 			// justify-content: space-evenly;
+			justify-content: center;
 		}
 	}
 
