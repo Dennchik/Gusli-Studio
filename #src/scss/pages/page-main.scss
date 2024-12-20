@@ -244,7 +244,7 @@
 	&__offer {
 		position: relative;
 		z-index: 19;
-		@extend .gradient-border-before-revers;
+		// @extend .gradient-border-before-revers;
 		@extend .gradient-border-after-revers;
 	}
 
