@@ -17,8 +17,8 @@ import { Offer } from '../chunks/Offer.jsx';
 //* ----------------------------------------------------------------------------
 export const Services = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
-	const boxImagesRef = useRef([]);
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
 
 	useEffect(() => {
 		// const initSwiper = document.querySelector('.services-slide__body');
@@ -61,8 +61,8 @@ export const Services = ({ baseUrl }) => {
 		};
 	}, []);
 
+	const boxImagesRef = useRef([]);
 	useEffect(() => {
-		// if (!isMobile) {
 		const handleMouseOver = (event) => {
 			const target = event.currentTarget;
 			// Запускаем анимацию при наведении
@@ -94,7 +94,6 @@ export const Services = ({ baseUrl }) => {
 				boxImage.removeEventListener('mouseleave', handleMouseLeave);
 			});
 		};
-		// }
 	}, []);
 
 	useEffect(() => {
