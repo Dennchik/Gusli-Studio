@@ -13,7 +13,6 @@
 		&._parallax-column {
 			background-color: $color;
 		}
-
 	}
 
 	// .service-description_body
@@ -34,9 +33,9 @@
 			left: 0;
 			z-index: -1;
 			background-image: linear-gradient(
-											to left,
-											rgb(56, 31, 71) 30%,
-											rgb(2, 1, 1) 70%
+				to left,
+				rgb(56, 31, 71) 30%,
+				rgb(2, 1, 1) 70%
 			);
 		}
 
@@ -238,7 +237,7 @@
 	&__row {
 		width: 100%;
 		display: grid;
-		grid-template-columns: repeat( auto-fit, minmax(265px, 1fr) );
+		grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
 		gap: 3rem;
 
 		&:not(:last-child) {

@@ -95,7 +95,7 @@ export const MainSlide = ({ baseUrl }) => {
 						loop
 						muted
 						poster={getPath('img/audio/showreel-1.png')} >
-						<source src={getPath('img/audio/showreel-1.mp4')} type="video/mp4" />
+						<source src='https://этопольза.рф/local/templates/cult/video/index-hero-video.mp4' type="video/mp4" />
 					</video>
 				</div>
 				<div className="main-video__content _container">
