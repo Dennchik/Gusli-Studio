@@ -68,13 +68,13 @@
 		position: relative;
 		display: flex;
 		justify-content: space-between;
-		// align-items: center;
+		align-items: center;
 		gap: 2.5rem;
 
-		// .swiper-wrapper,
-		// .slide-services {
-		// 	justify-content: space-evenly;
-		// }
+		.swiper-wrapper,
+		.slide-services {
+			justify-content: space-evenly;
+		}
 	}
 
 	// .services-slide__column
