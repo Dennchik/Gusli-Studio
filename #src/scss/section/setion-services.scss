@@ -58,7 +58,6 @@
 
 	&__dash {
 		font-family: $font-default;
-		// font-size: 56px;
 	}
 }
 
@@ -71,10 +70,10 @@
 		align-items: center;
 		gap: 2.5rem;
 
-		.swiper-wrapper,
-		.slide-services {
-			justify-content: space-evenly;
-		}
+		// .swiper-wrapper,
+		// .slide-services {
+		// 	justify-content: space-evenly;
+		// }
 	}
 
 	// .services-slide__column
