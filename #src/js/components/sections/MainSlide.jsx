@@ -93,7 +93,10 @@ export const MainSlide = ({ baseUrl }) => {
 						className="video-js"
 						preload="auto"
 						loop
-						muted
+						autoPlay
+						role="application"
+						muted="muted"
+						tabIndex="-1"
 						poster={getPath('img/audio/showreel-1.png')} >
 						<source src='https://этопольза.рф/local/templates/cult/video/index-hero-video.mp4' type="video/mp4" />
 					</video>
