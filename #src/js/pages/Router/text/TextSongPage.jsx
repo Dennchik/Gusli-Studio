@@ -20,22 +20,23 @@ const baseUrl = '../..';
 
 function TextSongPage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
 	useGSAP(
 		() => {
-			// create the smooth scroller FIRST!
-			const smoother = ScrollSmoother.create({
-				wrapper: '#wrapper',
-				content: '#content',
-				smooth: 1.5,
-				effects: true,
-				smoothTouch: 0.1,
-			});
-			return () => {
-				smoother.kill(); // Удаляем Smooth при размонтировании
-			};
+			if (!isMobile) {
+				const smoother = ScrollSmoother.create({
+					wrapper: '#wrapper',
+					content: '#content',
+					smooth: 1.5,
+					effects: true,
+					smoothTouch: 0.1,
+				});
+				return () => {
+					smoother.kill();
+				};
+			}
 		},
 	);
-
 
 	useEffect(() => {
 		if (!isMobile) {
@@ -55,7 +56,7 @@ function TextSongPage() {
 						<section className="main-content__body">
 							<SectionTextSong baseUrl={baseUrl} isHomePage={true} />
 						</section>
-						<section className="main-content__offer">
+						<section className="main-content__offer gradient-neon-color">
 							<Offer baseUrl={baseUrl} />
 						</section>
 						<footer className="main-content__footer" id="footer">
@@ -71,9 +72,9 @@ function TextSongPage() {
 			<div className="page__aside" id="scrollButton">
 				<i className="icon-angle-down _button"></i>
 			</div>
-			<div className="page__form-modal">
+			<section className="page__form-modal">
 				<FormModal />
-			</div>
+			</section>
 		</>
 	);
 }
