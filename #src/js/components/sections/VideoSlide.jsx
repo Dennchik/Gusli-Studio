@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 
 //* ------------------------ Component's MainSlide -----------------------------
 
-export const VideoSlide = ({baseUrl}) => {
+export const VideoSlide = ({ baseUrl }) => {
 	const videoRef = useRef(null);
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
@@ -88,11 +88,11 @@ export const VideoSlide = ({baseUrl}) => {
 					<video
 						ref={videoRef}
 						id="player-id"
-						playsInline
 						className="video-js"
 						preload="auto"
+						muted="muted"
+						playsInline
 						loop
-						muted
 						poster={getPath('img/audio/showreel-1.png')}
 						src={getPath('img/audio/showreel-2.mp4')}>
 					</video>
@@ -109,7 +109,7 @@ export const VideoSlide = ({baseUrl}) => {
 					</div>
 					<div className="offer-container__button _open-button">
 						<button className="order-button btn-grad"
-										type={'button'}>
+							type={'button'}>
 							<span>оставить заявку</span>
 						</button>
 					</div>
