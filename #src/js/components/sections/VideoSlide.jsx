@@ -92,6 +92,7 @@ export const VideoSlide = ({ baseUrl }) => {
 						preload="auto"
 						muted="muted"
 						playsInline
+						autoPlay
 						loop
 						poster={getPath('img/audio/showreel-1.png')}
 						src={getPath('img/audio/showreel-2.mp4')}>
