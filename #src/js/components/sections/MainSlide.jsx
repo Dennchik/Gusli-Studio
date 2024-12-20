@@ -93,7 +93,7 @@ export const MainSlide = ({ baseUrl }) => {
 						// role="application"
 						preload="auto"
 						muted="muted"
-						// tabIndex="-1"
+						tabIndex="-1"
 						loop
 						autoPlay
 						playsInline

@@ -42,6 +42,7 @@
 	box-sizing: content-box;
 	margin: 0 auto;
 	padding: 0 2rem;
+	overflow: hidden;
 }
 
 [class*='icon-'] {
@@ -50,4 +51,3 @@
 	align-items: center;
 	justify-content: center;
 }
-
