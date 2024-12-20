@@ -19,7 +19,7 @@ export function servicesSlide(
 			grabCursor: true,
 			// mousewheel: true,
 			// centeredSlides: true,
-			// slidesPerView: 5,
+			slidesPerView: 5,
 			pagination: {
 				el: pagination,
 				clickable: true,
