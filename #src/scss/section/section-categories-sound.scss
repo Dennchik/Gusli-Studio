@@ -1,0 +1,39 @@
+@use '../core/all' as *;
+
+.categories-sound {
+
+	.services-slide {
+		//  .services-slide__image
+		&__image {
+			width: 100%;
+
+			img {
+				max-height: 290px;
+				width: 100%;
+				max-width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		// .services-slide__text
+		&__text {
+			flex-direction: column;
+		}
+
+		// .services-slide__body
+		&__column {
+			display: flex;
+			flex-direction: column;
+			gap: 5rem;
+
+			@include screen-1024 {
+				gap: 30px;
+			}
+
+			@include screen-490 {
+				gap: 15px;
+			}
+		}
+	}
+}

@@ -89,22 +89,25 @@
 .gradient-neon-revers {
 	background: radial-gradient(
 									at 95% 7%,
-									rgba(56, 31, 71, 0.35) 0px,
+									rgba(50, 38, 98, 0.45) 0px,
 									transparent 50%
 	),
 	radial-gradient(
-									at 7% 102%,
-									rgba(56, 31, 71, 0.35) 0px,
+									at -15% 102%,
+									rgba(50, 38, 98, 0.45) 0px,
 									transparent 50%);
 }
 
 .gradient-neon-color {
 	background: radial-gradient(
-									at 9% 1%,
-									rgba(56, 31, 71, 0.35) 0px,
+									at -15% 1%,
+									rgba(50, 38, 98, 0.45) 0px,
 									transparent 50%
 	),
-	radial-gradient(at 90% 90%, rgba(56, 31, 71, 0.35) 0px, transparent 50%);
+	radial-gradient(
+									at 90% 90%,
+									rgba(50, 38, 98, 0.45) 0px,
+									transparent 50%);
 }
 
 .gradient-border-before {

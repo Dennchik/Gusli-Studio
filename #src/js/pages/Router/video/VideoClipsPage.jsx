@@ -2,41 +2,42 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
-import { ShowreelSlide } from '../../../components/sections/ShowreelSlide.jsx';
+import { Offer } from '../../../components/chunks/Offer.jsx';
 
 import returnToSavedPosition from '../../../modules/return-position.js';
 import { applyParallax } from '../../../animations/animations.jsx';
 
 import { Header } from '../../../components/layouts/Header.jsx';
-import { Footer } from '../../../components/layouts/Footer.jsx';
-import { Offer } from '../../../components/chunks/Offer.jsx';
-import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
-import { FormModal } from '../../../components/layouts/FormModal.jsx';
 import {
 	SectionVideoClips
 } from '../../../components/categories/video/SectionVideoClips.jsx';
+import { ShowreelSlide } from '../../../components/sections/ShowreelSlide.jsx';
+import { Footer } from '../../../components/layouts/Footer.jsx';
+import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
+import { FormModal } from '../../../components/layouts/FormModal.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';
 
 function VideoClipsPage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
 	useGSAP(
 		() => {
-			// create the smooth scroller FIRST!
-			const smoother = ScrollSmoother.create({
-				wrapper: '#wrapper',
-				content: '#content',
-				smooth: 1.5,
-				effects: true,
-				smoothTouch: 0.1,
-			});
-			return () => {
-				smoother.kill(); // Удаляем Smooth при размонтировании
-			};
+			if (!isMobile) {
+				const smoother = ScrollSmoother.create({
+					wrapper: '#wrapper',
+					content: '#content',
+					smooth: 1.5,
+					effects: true,
+					smoothTouch: 0.1,
+				});
+				return () => {
+					smoother.kill();
+				};
+			}
 		},
 	);
-
 
 	useEffect(() => {
 		if (!isMobile) {
@@ -68,16 +69,14 @@ function VideoClipsPage() {
 					</div>
 				</div>
 			</main>
+
 			<div className="page__menu-float">
 				<MenuFloat baseUrl={baseUrl} />
 			</div>
 			<div className="page__aside" id="scrollButton">
 				<i className="icon-angle-down _button"></i>
 			</div>
-			<div className="page__form-modal"
-					 role="dialog"
-					 aria-labelledby="modalTitle"
-					 aria-modal="true">
+			<div className="page__form-modal">
 				<FormModal />
 			</div>
 		</>

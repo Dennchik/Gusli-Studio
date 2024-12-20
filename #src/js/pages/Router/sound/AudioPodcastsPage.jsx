@@ -57,7 +57,7 @@ function AudioPodcastsPage() {
 						<section className="main-content__body">
 							<SectionAudioPodcasts baseUrl={baseUrl} isHomePage={true} />
 						</section>
-						<section className="main-content__offer">
+						<section className="main-content__offer gradient-neon-color">
 							<Offer baseUrl={baseUrl} />
 						</section>
 						<footer className="main-content__footer" id="footer">

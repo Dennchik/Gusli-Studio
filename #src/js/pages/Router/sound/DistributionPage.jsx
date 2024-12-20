@@ -56,7 +56,7 @@ function DistributionPage() {
 						<section className="main-content__body">
 							<SectionDistribution baseUrl={baseUrl} isHomePage={true} />
 						</section>
-						<section className="main-content__offer">
+						<section className="main-content__offer gradient-neon-color">
 							<Offer baseUrl={baseUrl} />
 						</section>
 						<footer className="main-content__footer" id="footer">

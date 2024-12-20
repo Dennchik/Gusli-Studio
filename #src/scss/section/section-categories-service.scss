@@ -1,0 +1,39 @@
+@use '../core/all' as *;
+
+.categories-service {
+
+	.services-slide__pagination {
+		display: flex;
+	}
+
+	.services {
+		// services__body
+		&__body {
+
+			@include min-1140 {
+				overflow: hidden;
+			}
+		}
+	}
+
+	.services-slide {
+		//  .services-slide__body
+		&__body {
+			@include min-1140 {
+				margin: 0 10px;
+			}
+		}
+
+		// .services-slide__text
+		&__text {
+			flex-direction: column;
+		}
+
+		// .services-slide__column
+		&__column {
+			display: flex;
+			flex-direction: column;
+			gap: 5rem;
+		}
+	}
+}
