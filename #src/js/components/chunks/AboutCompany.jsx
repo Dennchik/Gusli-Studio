@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 //* ----------------------------------------------------------------------------
-export const AboutCompany = ({baseUrl}) => {
+export const AboutCompany = ({ baseUrl }) => {
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
 	};
@@ -31,7 +31,7 @@ export const AboutCompany = ({baseUrl}) => {
 				</div>
 				<div className="about-company__footer">
 					<a className="about-company__button btn-grad"
-						 href={getPath('about.html')}>читать всё</a>
+						href={getPath('about.html')}>читать всё</a>
 				</div>
 			</div>
 			<div className="about-company__column el-2">
@@ -57,8 +57,8 @@ export const AboutCompany = ({baseUrl}) => {
 				</div>
 				<div className="about-company__footer">
 					<a className="about-company__button btn-grad"
-						 href={getPath('services.html')}
-						 type="button">читать всё</a>
+						href={getPath('services.html')}
+						type="button">читать всё</a>
 				</div>
 			</div>
 

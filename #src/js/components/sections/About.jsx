@@ -61,9 +61,9 @@ export const About = () => {
 					<picture>
 						{isWebpSupported()
 							? <img className='parallax__image bg'
-										 src={'img/about/ab-img-01.webp'} alt="image" />
+								src={'img/about/ab-img-01.webp'} alt="image" />
 							: <img className='parallax__image bg'
-										 src={'img/about/ab-img-01.png'} alt="image" />}
+								src={'img/about/ab-img-01.png'} alt="image" />}
 					</picture>
 				</div>
 			</div>
