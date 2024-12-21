@@ -193,16 +193,18 @@
 		position: absolute;
 		pointer-events: none;
 		height: 52px;
+		width: 100%;
 		left: 0;
 		right: 0;
 		bottom: 1rem;
 		display: flex;
+		align-items: center;
 		justify-content: center;
 		transition: transform 0.4s ease-in-out;
 		text-align: center;
 		color: $neon-blue;
-		background-color: #0b0813bb;
-		text-shadow: 0 0 7px #000;
+		background-color: rgba(11, 8, 19, 0.733);
+		// text-shadow: 0 0 7px #000;
 
 		p {
 			font-size: 12px;
@@ -225,6 +227,7 @@
 		@include minmax-320-1920 {
 			font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
 		}
+
 		@include screen-320 {
 			font-size: 14px;
 		}
