@@ -55,19 +55,6 @@
 
 	&__dash {
 		font-family: $font-default;
-		// font-size: 56px;
-	}
-}
-
-.categories {
-	// .categories__body
-	&__body {
-		height: 100%;
-		padding: 10rem 0;
-
-		.offer-container__body {
-			padding-bottom: 0;
-		}
 	}
 }
 
@@ -205,6 +192,7 @@
 	&__text {
 		position: absolute;
 		pointer-events: none;
+		height: 52px;
 		left: 0;
 		right: 0;
 		bottom: 1rem;
@@ -255,5 +243,9 @@
 	// .services-slide__pagination
 	&__pagination {
 		@extend .pagination;
+
+		&.hidden {
+			display: none !important;
+		}
 	}
 }
