@@ -12,6 +12,11 @@
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
+		padding: 6rem 0;
+
+		@include min-1140 {
+			padding: 10rem 0;
+		}
 	}
 
 	// .services__title
@@ -22,16 +27,18 @@
 			size: 60px;
 			weight: normal;
 		}
+
 		line-height: 100%;
 		position: relative;
 		z-index: 9;
-		display: inline;
-		padding: 0 5rem;
 		text-align: center;
 		letter-spacing: 0;
 		color: $neon-blue;
 		filter: $filter;
 
+		@include min-1140 {
+			margin-bottom: 10rem;
+		}
 		@include minmax-320-1920 {
 			font-size: calc(27px + (60 - 27) * ((100vw - 320px) / (1920 - 320)));
 		}
@@ -39,70 +46,29 @@
 		@include screen-320 {
 			font-size: 27px;
 		}
-
-		&::before {
-			position: absolute;
-			z-index: -1;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 70%;
-			content: '';
-		}
-
-		&:nth-child(1) {
-			perspective-origin: 45% 320%;
-			transform-style: preserve-3d;
-			perspective: 100px;
-
-			&::before {
-				transform: translate(0, 58%);
-			}
-
-			&::after {
-				font: {
-					weight: 900;
-				}
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 70%;
-				transform: rotateX(15deg) translateZ(-11px);
-				@extend .shadow-after;
-			}
-		}
-
-		&.video-title {
-			&::after {
-				content: 'видео';
-			}
-		}
-
-		&.services-title {
-			&::after {
-				content: 'наши услуги';
-			}
-		}
 	}
 
 	// .services__content
 	&__content {
 		width: 100%;
 	}
-}
 
-.categories {
-	// .categories__body
-	&__body {
-		height: 100%;
-		padding: 10rem 0;
-
-		.offer-container__body {
-			padding-bottom: 0;
-		}
+	&__dash {
+		font-family: $font-default;
 	}
 }
+
+// .categories {
+// 	// .categories__body
+// 	&__body {
+// 		height: 100%;
+// 		padding: 10rem 0;
+
+// 		.offer-container__body {
+// 			padding-bottom: 0;
+// 		}
+// 	}
+// }
 
 .services-slide {
 	// .services-slide__body
@@ -110,7 +76,6 @@
 		position: relative;
 		display: flex;
 		justify-content: space-between;
-		gap: 2.5rem;
 	}
 
 	// .services-slide__column
@@ -121,14 +86,12 @@
 
 		@include screen-1024 {
 			max-width: 245px;
-			// flex: 0 1 20%;
 		}
 	}
 
 	// .services-slide__content
 	&__content {
 		position: relative;
-		border-radius: 10px;
 		height: 100%;
 		box-shadow: 0 0 20px #000;
 
@@ -143,7 +106,7 @@
 			content: '';
 			transition: all 0.3s ease-in-out;
 			opacity: 0.3;
-			border-radius: 10px;
+			border-radius: 4px;
 			box-shadow: $boxShadow;
 
 			@include screen-1024 {
@@ -190,11 +153,11 @@
 		overflow: hidden;
 		height: 100%;
 		cursor: pointer;
-		transition: all 0.5s ease-in-out;
-		border-radius: 10px;
-		filter: $filter;
+		transition: all 0.4s ease-in-out;
+		border-radius: 4px;
 
 		img {
+			max-height: 300px;
 			width: 100%;
 			height: 100%;
 			transition: scale 0.4s ease-in-out;
