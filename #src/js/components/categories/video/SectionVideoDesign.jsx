@@ -116,7 +116,7 @@ export const SectionVideoDesign = ({baseUrl}) => {
 				</div>
 			</div>
 			<div className="service-description__column">
-				<div className="service-description__body top-box">
+				<div className="service-description__body">
 					<div className='service-description__content _container'>
 						<div className="service-description__description">
 							<div className="service-description__row">

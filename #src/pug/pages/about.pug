@@ -1,10 +1,10 @@
 extends ../layouts/app_layout
 prepend script
+	script(defer="defer" src="@@webRoot/js/about.min.js")
 	script(defer="defer" src="@@webRoot/js/vendors/runtime.min.js")
 	script(defer="defer" src="@@webRoot/js/vendors/anime-vendors.min.js")
 	script(defer="defer" src="@@webRoot/js/vendors/swiper-bundle.min.js")
 	script(defer="defer" src="@@webRoot/js/vendors/react-vendors.min.js")
-	script(defer="defer" src="@@webRoot/js/about.min.js")
 append link
 	link(rel="stylesheet" type="text/css" href="@@webRoot/css/about.min.css")
 block title

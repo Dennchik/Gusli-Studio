@@ -253,7 +253,7 @@
 		position: relative;
 		background-color: $black-color;
 		z-index: 9;
-		// box-shadow: 0 0 2px #561e77;
+		@extend .gradient-border-before;
 
 	}
 

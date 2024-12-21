@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 
 //* ------------------------ Component's MainSlide -----------------------------
 
-export const VideoSlide = ({ baseUrl }) => {
+export const VideoSlide = ({baseUrl}) => {
 	const videoRef = useRef(null);
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
@@ -108,11 +108,15 @@ export const VideoSlide = ({ baseUrl }) => {
 						а&nbsp;именно напишем идеи и&nbsp;сделаем&nbsp;смету&nbsp;
 						<i className="icon-angles-right-solid _icon"></i>
 					</div>
-					<div className="offer-container__button _open-button">
-						<button className="order-button btn-grad"
-							type={'button'}>
-							<span>оставить заявку</span>
-						</button>
+					<div className="main-slide__button">
+						<a target={'_blank'} rel="noopener noreferrer"
+							 href={'https://widgets.paykeeper.ru/v2/forms/a3a691ed2efc50dded3aa04bbeb3f929ddcbb75608b86279587f6111e5956e28'}
+							 className="button-buy btn-grad"
+							 type={'button'}>
+												<span> <i className="icon-arrow-right"></i>
+													Заказать
+												</span>
+						</a>
 					</div>
 				</div>
 			</div>

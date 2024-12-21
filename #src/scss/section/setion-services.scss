@@ -140,7 +140,7 @@
 		height: 100%;
 		cursor: pointer;
 		transition: all 0.5s ease-in-out;
-		border-radius: 10px;
+		border-radius: 5px;
 		filter: $filter;
 
 		img {
@@ -163,9 +163,8 @@
 		z-index: 2;
 		top: 0;
 		left: 0;
-		transition:
-			opacity 1.5s,
-			box-shadow 0.3s ease-in-out 0.2s;
+		transition: opacity 1.5s,
+		box-shadow 0.3s ease-in-out 0.2s;
 		opacity: 0;
 	}
 
@@ -240,6 +239,38 @@
 				fill: url(#grad);
 				stroke: currentColor;
 				stroke-width: 1px;
+			}
+		}
+	}
+
+	// .services-slide__button
+	&__button {
+		width: 100%;
+
+		.button-buy {
+			display: flex;
+			justify-content: center;
+			padding: 1.2rem;
+			width: 100%;
+			height: 100%;
+			transition: all 0.4s ease-in-out;
+			border-radius: 4px;
+
+			&:hover {
+				i {
+					transform: rotate(0);
+					color: $neon-blue;
+				}
+			}
+
+			span {
+				text-transform: uppercase;
+
+				i {
+					transition: transform 0.4s, color 0.4s ease-in-out;
+					transform: rotate(-45deg);
+					margin-right: 1.6rem;
+				}
 			}
 		}
 	}

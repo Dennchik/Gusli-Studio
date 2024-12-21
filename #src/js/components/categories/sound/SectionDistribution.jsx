@@ -63,7 +63,7 @@ export const SectionDistribution = ({baseUrl}) => {
 									<ul>
 										<li><i className="icon-check _icon"></i>
 											<p>выгрузка трека на&nbsp;площадки&nbsp;—
-												<span>1500&nbsp;рублей</span></p></li>
+												<span>1500&nbsp;рублей</span>;</p></li>
 										<li><i className="icon-check _icon"></i>
 											высокая доходность от&nbsp;прослушиваний;
 										</li>
@@ -105,7 +105,7 @@ export const SectionDistribution = ({baseUrl}) => {
 				</div>
 			</div>
 			<div className="service-description__column">
-				<div className="service-description__body top-box">
+				<div className="service-description__body">
 					<div className='service-description__content _container'>
 						<div className="service-description__description">
 							<h2>Преимущества</h2>

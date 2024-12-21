@@ -97,7 +97,7 @@ export const SectionSongWriting = ({baseUrl}) => {
 								проекты, корпоративные гимны)</h2>
 							<div className="service-description__row">
 								<div className="service-description__row-col">
-									<h3>пакет 1&nbsp;- 100&nbsp;000₽</h3>
+									<h3>Пакет 1&nbsp;- 100&nbsp;000₽</h3>
 									<ul>
 										<li><i className="icon-check _icon"></i>
 											<p>написание текста</p>
@@ -140,7 +140,7 @@ export const SectionSongWriting = ({baseUrl}) => {
 											<p>бек вокалисты</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>звукозапись;</p></li>
+											<p>звукозапись</p></li>
 										<li><i className="icon-check _icon"></i>
 											<p>сведение и&nbsp;мастеринг</p>
 										</li>
@@ -159,46 +159,46 @@ export const SectionSongWriting = ({baseUrl}) => {
 									</ul>
 								</div>
 								<div className="service-description__row-col">
-									<h3>пакет 3&nbsp;- от&nbsp;200&nbsp;000₽</h3>
+									<h3>Пакет 3&nbsp;- от&nbsp;200&nbsp;000₽</h3>
 									<ul>
 										<li><i className="icon-check _icon"></i>
-											<p>написание текста;</p>
+											<p>написание текста</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>написание мелодии;</p>
+											<p>написание мелодии</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
 											<p>авторская аранжировка
 												<span>(до&nbsp;100&nbsp;дорожек)</span>
-												живые инструменты;</p>
+												живые инструменты</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
 											<p>сессионные
-												музыканты;</p>
+												музыканты</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>бек вокалисты;</p>
+											<p>бек вокалисты</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>звукозапись;</p>
+											<p>звукозапись</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>сведение и мастеринг;</p>
+											<p>сведение и мастеринг</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>дизайн обложки;</p>
+											<p>дизайн обложки</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>дистрибуция на цифровые площадки;</p>
+											<p>дистрибуция на цифровые площадки</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>съемка видео Reels для&nbsp;презентация релиза;</p>
+											<p>съемка видео Reels для&nbsp;презентация релиза</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>передача авторских прав;</p>
+											<p>передача авторских прав</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>правки без&nbsp;ограничений.</p>
+											<p>правки без&nbsp;ограничений</p>
 										</li>
 									</ul>
 								</div>

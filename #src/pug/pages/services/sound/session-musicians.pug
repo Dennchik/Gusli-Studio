@@ -2,10 +2,10 @@ extends ../../../layouts/app_layout
 append link
 	link(rel="stylesheet" type="text/css" href="@@webRoot/css/service-style.min.css")
 prepend script
+	script(defer="defer" src="@@webRoot/js/session-musicians.min.js")
 	script(defer="defer" src="@@webRoot/js/vendors/runtime.min.js")
 	script(defer="defer" src="@@webRoot/js/vendors/anime-vendors.min.js")
 	script(defer="defer" src="@@webRoot/js/vendors/react-vendors.min.js")
-	script(defer="defer" src="@@webRoot/js/session-musicians.min.js")
 block title
 	- var text='Студия звукозаписи "Gusli" Media-Group'
 

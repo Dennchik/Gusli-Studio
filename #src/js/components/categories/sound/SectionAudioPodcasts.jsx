@@ -118,7 +118,7 @@ export const SectionAudioPodcasts = ({baseUrl}) => {
 											<p>сведение;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>мастеринг и&nbsp;мастеринг для&nbsp;iTunes.</p>
+											<p>мастеринг и&nbsp;мастеринг для&nbsp;iTunes;</p>
 										</li>
 									</ul>
 									<p>Срок сдачи готового материала: <span> 1-4&nbsp;дня</span>.

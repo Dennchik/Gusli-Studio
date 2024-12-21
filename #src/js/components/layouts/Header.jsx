@@ -81,7 +81,7 @@ export const Header = ({baseUrl}) => {
 							</div>
 							<div className="header__item">
 								<a className="header__link-key"
-									 href={getPath('services/development.html')}>
+									 href={getPath('products.html')}>
 									<span>Товары</span>
 								</a>
 							</div>
