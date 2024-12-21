@@ -12,11 +12,6 @@
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
-		padding: 6rem 0;
-
-		@include min-1140 {
-			padding: 10rem 0;
-		}
 	}
 
 	// .services__title
@@ -27,10 +22,11 @@
 			size: 60px;
 			weight: normal;
 		}
-
 		line-height: 100%;
 		position: relative;
 		z-index: 9;
+		display: inline;
+		padding: 0 5rem;
 		text-align: center;
 		letter-spacing: 0;
 		color: $neon-blue;
@@ -43,29 +39,70 @@
 		@include screen-320 {
 			font-size: 27px;
 		}
+
+		&::before {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 70%;
+			content: '';
+		}
+
+		&:nth-child(1) {
+			perspective-origin: 45% 320%;
+			transform-style: preserve-3d;
+			perspective: 100px;
+
+			&::before {
+				transform: translate(0, 58%);
+			}
+
+			&::after {
+				font: {
+					weight: 900;
+				}
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 70%;
+				transform: rotateX(15deg) translateZ(-11px);
+				@extend .shadow-after;
+			}
+		}
+
+		&.video-title {
+			&::after {
+				content: 'видео';
+			}
+		}
+
+		&.services-title {
+			&::after {
+				content: 'наши услуги';
+			}
+		}
 	}
 
 	// .services__content
 	&__content {
 		width: 100%;
 	}
-
-	&__dash {
-		font-family: $font-default;
-	}
 }
 
-// .categories {
-// 	// .categories__body
-// 	&__body {
-// 		height: 100%;
-// 		padding: 10rem 0;
+.categories {
+	// .categories__body
+	&__body {
+		height: 100%;
+		padding: 10rem 0;
 
-// 		.offer-container__body {
-// 			padding-bottom: 0;
-// 		}
-// 	}
-// }
+		.offer-container__body {
+			padding-bottom: 0;
+		}
+	}
+}
 
 .services-slide {
 	// .services-slide__body
