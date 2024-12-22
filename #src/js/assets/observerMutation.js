@@ -13,7 +13,7 @@ export function observerMutation() {
 			if (pagination?.classList.contains('swiper-pagination-lock')) {
 				swiperWrapper.style.justifyContent = 'center';
 			} else {
-				swiperWrapper.style.justifyContent = 'left';
+				swiperWrapper.style.justifyContent = 'space-between';
 			}
 		}
 	};
