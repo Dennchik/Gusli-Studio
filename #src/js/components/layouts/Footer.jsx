@@ -8,7 +8,7 @@ import {
 } from '../../animations/animations.jsx';
 import { AboutCompany } from '../chunks/AboutCompany.jsx';
 //* ----------------------------------------------------------------------------
-export const Footer = ({baseUrl, isHomePage}) => {
+export const Footer = ({ baseUrl, isHomePage }) => {
 	useEffect(() => {
 		const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 		if (!isMobile) {
@@ -35,7 +35,6 @@ export const Footer = ({baseUrl, isHomePage}) => {
 						<a href="tel:++79106044424">
 							<i className="icon-services"></i>
 						</a>
-						<i className="icon-reviews"></i>
 						<a href="mailto:studio@obninsk-gusli.ru">
 							<i className="icon-contacts"></i>
 						</a>
@@ -82,8 +81,7 @@ export const Footer = ({baseUrl, isHomePage}) => {
 						</div>
 						<div className="community__icons">
 							<div className="community__icon">
-								<a
-									className="wa"
+								<a className="wa"
 									title="WhatsApp"
 									target="blank"
 									href="https://wa.me/79106044424"
@@ -92,8 +90,7 @@ export const Footer = ({baseUrl, isHomePage}) => {
 								</a>
 							</div>
 							<div className="community__icon">
-								<a
-									className="wa"
+								<a className="wa"
 									title="VK"
 									target="blank"
 									href="https://vk.com/studio_gusli"
@@ -102,8 +99,7 @@ export const Footer = ({baseUrl, isHomePage}) => {
 								</a>
 							</div>
 							<div className="community__icon">
-								<a
-									className="wa"
+								<a className="wa"
 									title="TG"
 									target="blank"
 									href="https://t.me/gusli_studio"
@@ -112,8 +108,7 @@ export const Footer = ({baseUrl, isHomePage}) => {
 								</a>
 							</div>
 							<div className="community__icon">
-								<a
-									className="wa"
+								<a className="wa"
 									title="youtube"
 									target="blank"
 									href="https://youtube.com/@guslistudio6257?si=36fe20TYpLAJyB3m"

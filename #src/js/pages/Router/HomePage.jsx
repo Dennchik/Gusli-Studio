@@ -7,7 +7,7 @@ import { applyParallax } from '../../animations/animations.jsx';
 import returnToSavedPosition from '../../modules/return-position.js';
 
 import { Header } from '../../components/layouts/Header.jsx';
-import { MainSlide } from '../../components/sections/MainSlide.jsx';
+import { Showreel } from '../../components/sections/Showreel.jsx';
 import { Services } from '../../components/sections/Services.jsx';
 import { Footer } from '../../components/layouts/Footer.jsx';
 import { MenuFloat } from '../../components/layouts/Menu-float.jsx';
@@ -53,7 +53,7 @@ function HomePage() {
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
 						<section className="main-content__slide">
-							<MainSlide baseUrl={baseUrl} />
+							<Showreel baseUrl={baseUrl} />
 						</section>
 						<section className="main-content__categories">
 							<Services baseUrl={baseUrl} />

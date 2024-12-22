@@ -137,20 +137,14 @@ export const MenuFloat = ({baseUrl}) => {
 											</a>
 										</div>
 										<div className="menu-float__menu-link menu-float__menu-link--services">
-											<Link className="menu-float__link"
-														to='services'
-														activeClass="_active"
-														spy={true}
-														smooth='easeInQuad'
-														ignoreCancelEvents={false}
-														duration={500}
-														offset={offset}>
+											<a className="menu-float__link"
+												 href={getPath('services.html')}>
 												<span>Услуги</span>
-											</Link>
+											</a>
 										</div>
 										<div className="menu-float__menu-link menu-float__menu-link--footer">
 											<Link className='menu-float__link'
-														to='footer'
+														to='contacts'
 														activeClass="_active"
 														spy={true}
 														duration={500}

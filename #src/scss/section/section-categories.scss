@@ -4,13 +4,13 @@
 	// .categories__body
 	&__body {
 		height: 100%;
-
 	}
 
 	.services {
 		// .categories__body
 		&__body {
 			justify-content: flex-end;
+			overflow: visible;
 		}
 	}
 
@@ -107,15 +107,9 @@
 }
 
 .categories-service {
-
-	.services-slide__pagination {
-		display: flex;
-	}
-
 	.services {
 		// services__body
 		&__body {
-
 			@include min-1140 {
 				overflow: hidden;
 			}
@@ -145,7 +139,6 @@
 }
 
 .categories-sound {
-
 	.services-slide {
 		//  .services-slide__image
 		&__image {

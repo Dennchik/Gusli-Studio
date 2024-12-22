@@ -103,9 +103,8 @@
 			color: white;
 			font-size: 1.6rem;
 			font-weight: 500;
-			box-shadow:
-				0 10px 20px rgba(245, 0, 0, 0.1),
-				0 6px 6px rgba(0, 0, 0, 0.05);
+			box-shadow: 0 10px 20px rgba(245, 0, 0, 0.1),
+			0 6px 6px rgba(0, 0, 0, 0.05);
 			animation: shadow-pulse 1.5s infinite;
 			transition: all 0.4s ease-in-out;
 		}
@@ -114,7 +113,7 @@
 			position: relative;
 			z-index: 9;
 			display: inline-flex;
-			padding: 2rem 5rem;
+			padding: 1.6rem 5rem;
 			text-transform: uppercase;
 			justify-content: center;
 			overflow: hidden;

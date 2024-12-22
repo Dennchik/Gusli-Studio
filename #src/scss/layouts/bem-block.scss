@@ -129,7 +129,7 @@
 .h1_01901 {
 	@include minmax-490-1920 {
 		font-size: calc(
-						28px + (50 - 28) * ((100vw - 490px) / (1920 - 490))
+			28px + (50 - 28) * ((100vw - 490px) / (1920 - 490))
 		) !important;
 	}
 	@include screen-490 {
@@ -140,7 +140,7 @@
 .h2_01901 {
 	@include minmax-490-1920 {
 		font-size: calc(
-						28px + (50 - 28) * ((100vw - 490px) / (1920 - 490))
+			28px + (50 - 28) * ((100vw - 490px) / (1920 - 490))
 		) !important;
 	}
 	@include screen-490 {
@@ -151,11 +151,11 @@
 .t_01901 {
 	@include minmax-490-1920 {
 		font-size: calc(
-						16px + (28 - 16) * ((100vw - 490px) / (1920 - 490))
+			16px + (28 - 16) * ((100vw - 490px) / (1920 - 490))
 		) !important;
 	}
 	@include screen-490 {
-		font-size: 12px !important;
+		font-size: 16px !important;
 	}
 }
 
@@ -163,13 +163,42 @@
 	border: 0;
 	border-radius: 4px;
 	color: white;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1),
-	0 6px 6px rgba(0, 0, 0, 0.05);
+	box-shadow:
+		0 10px 20px rgba(0, 0, 0, 0.1),
+		0 6px 6px rgba(0, 0, 0, 0.05);
 	transition: all 0.5s ease-in-out;
 	animation: shadow-pulse 1.5s infinite;
 
 	span {
 		line-height: 162.5%;
+	}
+}
+
+.button-buy {
+	display: inline-flex;
+	justify-content: center;
+	padding: 1.2rem;
+	height: 100%;
+	transition: all 0.4s ease-in-out;
+	border-radius: 4px;
+
+	&:hover {
+		i {
+			transform: rotate(0);
+			color: $neon-blue;
+		}
+	}
+
+	span {
+		text-transform: uppercase;
+
+		i {
+			transition:
+				transform 0.4s,
+				color 0.4s ease-in-out;
+			transform: rotate(-45deg);
+			margin-right: 1.6rem;
+		}
 	}
 }
 
@@ -189,10 +218,10 @@ button {
 
 .btn-grad {
 	background-image: linear-gradient(
-									-45deg,
-									#0b0813ff 10%,
-									rgba(87, 87, 255, 0.63) 51%,
-									#0b0813ff 90%
+		-45deg,
+		#0b0813ff 10%,
+		rgba(87, 87, 255, 0.63) 51%,
+		#0b0813ff 90%
 	);
 	// background-position: 100% center;
 	background-size: 200% auto;
@@ -215,9 +244,8 @@ button {
 		border: none;
 		width: 80%;
 		border-bottom: 1px solid rgba(56, 31, 71, 0.47);
-		box-shadow: 0 20px 20px -20px #100e10
+		box-shadow: 0 20px 20px -20px #100e10;
 	}
-
 }
 
 //* ----------------------------------------------------------------------------

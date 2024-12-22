@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 
 //* ------------------------ Component's MainSlide -----------------------------
 
-export const MainSlide = ({ baseUrl }) => {
+export const Showreel = ({ baseUrl }) => {
 	const videoRef = useRef(null);
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
@@ -96,28 +96,33 @@ export const MainSlide = ({ baseUrl }) => {
 						playsInline
 						autoPlay
 						loop
-						poster={getPath('img/audio/showreel-1.png')} >
-						<source src='https://этопольза.рф/local/templates/cult/video/index-hero-video.mp4' type="video/mp4" />
+						poster={getPath('img/audio/showreel-1.png')}>
+						<source src='https://этопольза.рф/local/templates/cult/video/index-hero-video.mp4'
+							type="video/mp4" />
 					</video>
 				</div>
 				<div className="main-video__content _container">
-					<h1 className="main-slide__title el-slidetitle h1_01901">
-						<span>Профессиональная </span>
-						<span>студия звукозаписи </span>
-						<span>ГУСЛИ Media-Group</span> в&nbsp;Обнинске
-					</h1>
-					<div className="main-slide__text t_01901">
-						Мы — современная студия звукозаписи, в&nbsp;которой работают
-						лучшие специалисты в&nbsp;области записи и&nbsp;продюсирования
-						музыки, предоставляем самый лучший сервис и&nbsp;удобства
-						для&nbsp;современных артистов, как&nbsp;подписанных, так
-						и &nbsp;независимых.
+					<div className="main-video__row">
+						<h1 className="main-video__title el-slidetitle h1_01901">
+							<span>Профессиональная </span>
+							<span>студия звукозаписи </span>
+							<span>ГУСЛИ Media-Group</span> в&nbsp;Обнинске
+						</h1>
+						<div className="main-video__text t_01901">
+							Мы — современная студия звукозаписи, в&nbsp;которой работают
+							лучшие специалисты в&nbsp;области записи и&nbsp;продюсирования
+							музыки, предоставляем самый лучший сервис и&nbsp;удобства
+							для&nbsp;современных артистов, как&nbsp;подписанных, так
+							и &nbsp;независимых.
+						</div>
 					</div>
-					<div className="offer-container__button _open-button">
-						<button className="order-button btn-grad"
+					<div className="main-video__button">
+						<a target={'_blank'} rel="noopener noreferrer"
+							href={'https://n1106820.yclients.com/company/1021942/personal/select-services?o='}
+							className="button-buy btn-grad"
 							type={'button'}>
-							<span>оставить заявку</span>
-						</button>
+							<span>Забронировать </span>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -125,6 +130,6 @@ export const MainSlide = ({ baseUrl }) => {
 	);
 };
 
-MainSlide.propTypes = {
+Showreel.propTypes = {
 	baseUrl: PropTypes.string.isRequired,
 };
