@@ -14,7 +14,7 @@ import { Footer } from '../../components/layouts/Footer.jsx';
 import { MenuFloat } from '../../components/layouts/Menu-float.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
-const baseUrl = '..';
+const baseUrl = '.';
 
 function ProductsPage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
