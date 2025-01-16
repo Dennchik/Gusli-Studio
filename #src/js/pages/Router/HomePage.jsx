@@ -52,7 +52,7 @@ function HomePage() {
 			<main className="page__main-content">
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
-						<section className="main-content__slide">
+						<section className="main-content__video">
 							<Showreel baseUrl={baseUrl} />
 						</section>
 						<section className="main-content__categories">
@@ -71,9 +71,9 @@ function HomePage() {
 				<i className="icon-angle-down _button"></i>
 			</div>
 			<section className="page__form-modal"
-				// role="dialog"
-				// aria-labelledby="modalTitle"
-				// aria-modal="true"
+			// role="dialog"
+			// aria-labelledby="modalTitle"
+			// aria-modal="true"
 			>
 				<FormModal />
 			</section>

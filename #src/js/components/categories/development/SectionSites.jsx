@@ -6,7 +6,7 @@ import {
 	refreshScrollTrigger
 } from '../../../animations/animations.jsx';
 //* ----------------------------------------------------------------------------
-export const SectionSites = ({baseUrl}) => {
+export const SectionSites = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -34,17 +34,11 @@ export const SectionSites = ({baseUrl}) => {
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
-									<img className="parallax__image-services"
-											 src={getPath(
-												 'img/parallax/development/fotoram_bg_01.webp')}
-											 alt="image" />
-								)
-								: (
-									<img className="parallax__image-services bg"
-											 src={getPath(
-												 'img/parallax/development/fotoram_bg_01.png')}
-											 alt="image" />
-								)}
+								<img className="parallax__image-services"
+									src={getPath('img/parallax/development/fotoram_bg_01.webp')} alt="image" />
+							) : (
+								<img className="parallax__image-services bg" src={getPath('img/parallax/development/fotoram_bg_01.png')} alt="image" />
+							)}
 						</picture>
 					</div>
 				</div>
@@ -66,54 +60,17 @@ export const SectionSites = ({baseUrl}) => {
 										<li><i className="icon-check _icon"></i>Каталог</li>
 										<li><i className="icon-check _icon"></i>Сайт-визитка</li>
 									</ul>
-									<p><i className="icon-hand-pointer _icon"></i>
-										Создание сайта&nbsp;- это&nbsp;возможность произвести
-										хорошее впечатление на пользователей. Мы&nbsp;принимаем
-										решение, нравится нам сайт или&nbsp;нет, всего
-										за&nbsp;10&nbsp;секунд. Поэтому удобство и&nbsp;качество
-										ресурса напрямую влияют на&nbsp;количество онлайн-продаж.
-										Важно поддерживать внимание аудитории, поэтому
-										мы&nbsp;тщательно продумываем структуру сайта, дизайн
-										и&nbsp;контент. В&nbsp;результате сайт способен значительно
-										увеличить поток клиентов.
-									</p>
-									<p><i className="icon-hand-pointer _icon"></i>
-										Мы предоставляем полный цикл услуг по&nbsp;созданию сайтов:
-										проектирование, разработка мобильного и&nbsp;адаптивного
-										дизайна, интеграция с&nbsp;системами 1С и&nbsp;Битрикс,
-										внедрение различных внешних систем.
-									</p>
+									<p><i className="icon-hand-pointer _icon"></i>Создание сайта&nbsp;- это&nbsp;возможность произвести хорошее впечатление на пользователей. Мы&nbsp;принимаем решение, нравится нам сайт или&nbsp;нет, всего за&nbsp;10&nbsp;секунд. Поэтому удобство и&nbsp;качество ресурса напрямую влияют на&nbsp;количество онлайн-продаж. Важно поддерживать внимание аудитории, поэтому мы&nbsp;тщательно продумываем структуру сайта, дизайн и&nbsp;контент. В&nbsp;результате сайт способен значительно увеличить поток клиентов.</p>
+									<p><i className="icon-hand-pointer _icon"></i>Мы предоставляем полный цикл услуг по&nbsp;созданию сайтов: проектирование, разработка мобильного и&nbsp;адаптивного дизайна, интеграция с&nbsp;системами 1С и&nbsp;Битрикс, внедрение различных внешних систем.</p>
 								</div>
 								<div className="service-description__row-col">
 									<h3>Что входит в&nbsp;комплексный подход?</h3>
-									<p><i className="icon-check _icon"></i>
-										Проект, который решит поставленные бизнес-задачи
-										с&nbsp;учетом особенностей ниши и&nbsp;пользовательского
-										опыта.
-									</p>
-									<p><i className="icon-check _icon"></i>
-										Адаптивный дизайн. Мы&nbsp;создаем дизайн который
-										нравится вам.
-									</p>
-									<p><i className="icon-check _icon"></i>
-										Расширенные возможности: стабильная работа
-										при&nbsp;большом количестве информации, возможность
-										подключения дополнительных сервисов и&nbsp;передачи
-										данных между разными системами.
-									</p>
-									<p><i className="icon-check _icon"></i>
-										Продвижение сайта: увеличение конверсии, грамотная
-										оптимизация под&nbsp;поисковые системы Яндекс
-										и&nbsp;Google, генерация лидов.
-									</p>
-									<p><i className="icon-check _icon"></i>
-										Функционал любой сложности.
-									</p>
-									<p><i className="icon-check _icon"></i>
-										Все наши сайты адаптивные, со&nbsp;встроенным алгоритмом,
-										распознающим устройство и&nbsp;подстраивающим под&nbsp;него
-										необходимый дизайн в&nbsp;точно рассчитанной конфигурации.
-									</p>
+									<p><i className="icon-check _icon"></i>Проект, который решит поставленные бизнес-задачи с&nbsp;учетом особенностей ниши и&nbsp;пользовательского опыта.</p>
+									<p><i className="icon-check _icon"></i>Адаптивный дизайн. Мы&nbsp;создаем дизайн который нравится вам.</p>
+									<p><i className="icon-check _icon"></i>Расширенные возможности: стабильная работа при&nbsp;большом количестве информации, возможность подключения дополнительных сервисов и&nbsp;передачи данных между разными системами.</p>
+									<p><i className="icon-check _icon"></i>Продвижение сайта: увеличение конверсии, грамотная оптимизация под&nbsp;поисковые системы Яндекс и&nbsp;Google, генерация лидов.</p>
+									<p><i className="icon-check _icon"></i>Функционал любой сложности.</p>
+									<p><i className="icon-check _icon"></i>Все наши сайты адаптивные, со&nbsp;встроенным алгоритмом,распознающим устройство и&nbsp;подстраивающим под&nbsp;негонеобходимый дизайн в&nbsp;точно рассчитанной конфигурации.</p>
 								</div>
 							</div>
 						</div>

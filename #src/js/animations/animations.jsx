@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText, Observer);
 
 //* --------------------- Конфигурация - ScrollTrigger -------------------------
 ScrollTrigger.normalizeScroll(false);
-ScrollTrigger.config({ignoreMobileResize: true});
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 //* ----------------------------------------------------------------------------
 
@@ -21,10 +21,10 @@ export function LagTextFunction() {
 	const smoother = ScrollSmoother.get();
 
 	if (window.innerWidth > 490) {
-		smoother.effects('.lag-1', {lag: 2, speed: 1});
-		smoother.effects('.lag-2', {lag: 2, speed: 1.2});
-		smoother.effects('.col-1', {lag: 1.5, speed: 0.8});
-		smoother.effects('.col-2', {lag: 1.5, speed: 1});
+		smoother.effects('.lag-1', { lag: 2, speed: 1 });
+		smoother.effects('.lag-2', { lag: 2, speed: 1.2 });
+		smoother.effects('.col-1', { lag: 1.5, speed: 0.8 });
+		smoother.effects('.col-2', { lag: 1.5, speed: 1 });
 	}
 }
 
@@ -39,12 +39,10 @@ export function applyParallax(element) {
 export function initSectionTriggerMove(trigger, targets) {
 	ScrollTrigger.create({
 		trigger: trigger,
-		/* Начинаем событие, когда верхняя граница элемента-1 находится на 100px
-		 ниже верха окна браузера*/
+		/* Начинаем событие, когда верхняя граница элемента-1 находится на 100px ниже верха окна браузера*/
 		start: 'top center',
 		endTrigger: trigger, //* Конец события - конец документа
-		/*Конец событие когда верхняя граница элемента 1 достигнет верха окна
-		 браузера*/
+		/*Конец событие когда верхняя граница элемента 1 достигнет верха окна браузера*/
 		end: 'bottom center',
 		toggleClass: {
 			targets: targets,

@@ -30,7 +30,7 @@ export const app = {
 		},
 
 		entry: {
-			main: {import: ['./#src/js/main.js']},
+			main: { import: ['./#src/js/main.js'] },
 			index: {
 				import: ['./#src/js/pages/index.jsx'],
 				dependOn: ['react-vendors', 'anime-vendors', 'swiper-bundle'],
@@ -213,7 +213,7 @@ export const app = {
 			},
 			'create-collections': {
 				import: ['./#src/js/pages/services/development/create-collections.jsx'],
-				dependOn: ['react-vendors', 'anime-vendors'],
+				dependOn: ['react-vendors'],
 				filename: '[name].min.js'
 			},
 			//! depend On - vendors
@@ -342,7 +342,7 @@ export const app = {
 			$('[stroke]').removeAttr('stroke');
 			$('[style]').removeAttr('style');
 		},
-		parserOptions: {xmlMode: true}
+		parserOptions: { xmlMode: true }
 	},
 	svgSprite: {
 		shape: {
@@ -379,17 +379,17 @@ export const app = {
 		[
 			svgo({
 				plugins: [
-					{optimizationLevel: 5},
-					{progessive: true},
-					{interlaced: true},
-					{removeViewBox: false},
-					{removeUselessStrokeAndFill: false},
-					{cleanupIDs: false}
+					{ optimizationLevel: 5 },
+					{ progessive: true },
+					{ interlaced: true },
+					{ removeViewBox: false },
+					{ removeUselessStrokeAndFill: false },
+					{ cleanupIDs: false }
 				],
 			}),
-			gifsicle({interlaced: true}),
-			optipng({optimizationLevel: 3}),
-			mozjpeg({quality: 75, progressive: true}),
+			gifsicle({ interlaced: true }),
+			optipng({ optimizationLevel: 3 }),
+			mozjpeg({ quality: 75, progressive: true }),
 		]),
 	include: {
 		prefix: '@@',

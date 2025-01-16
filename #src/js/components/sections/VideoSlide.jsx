@@ -85,17 +85,7 @@ export const VideoSlide = ({ baseUrl }) => {
 		<div className="main-video">
 			<div className="main-video__body">
 				<div className="main-video__box _img">
-					<video
-						ref={videoRef}
-						id="player-id"
-						className="video-js"
-						preload="auto"
-						muted="muted"
-						playsInline
-						autoPlay
-						loop
-						poster={getPath('img/audio/showreel-1.png')}
-						src={getPath('img/audio/showreel-2.mp4')}>
+					<video ref={videoRef} id="player-id" className="video-js" preload="auto" muted="muted" playsInline autoPlay loop poster={getPath('img/audio/showreel-2.png')} src={getPath('img/audio/showreel-2.mp4')}>
 					</video>
 				</div>
 				<div className="main-video__content _container">

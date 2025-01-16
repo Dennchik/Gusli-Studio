@@ -60,76 +60,15 @@
 			font-size: 20px;
 		}
 	}
+}
 
-	// .order-place__row
+.form-order {
+	// .form-order__row
 	&__row {
 		&:not(:last-child) {
 			margin-bottom: 4rem;
 		}
-
-		&:last-child {
-			display: flex;
-			justify-content: center;
-		}
 	}
-
-	// .order-place__button
-	&__button {
-		border-radius: 7px;
-		margin-top: 5rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: fit-content;
-		box-shadow: 0 0 6px #000;
-
-		&:before {
-			border-radius: 7px;
-		}
-
-		&:hover {
-			.submit-button {
-				animation: shadow-pulse 0;
-			}
-		}
-
-		@include max-375 {
-			width: 100%;
-		}
-
-		.submit-button {
-			border: 0;
-			border-radius: 7px;
-			color: white;
-			font-size: 1.6rem;
-			font-weight: 500;
-			box-shadow: 0 10px 20px rgba(245, 0, 0, 0.1),
-			0 6px 6px rgba(0, 0, 0, 0.05);
-			animation: shadow-pulse 1.5s infinite;
-			transition: all 0.4s ease-in-out;
-		}
-
-		button {
-			position: relative;
-			z-index: 9;
-			display: inline-flex;
-			padding: 1.6rem 5rem;
-			text-transform: uppercase;
-			justify-content: center;
-			overflow: hidden;
-
-			@include max-375 {
-				width: 100%;
-			}
-
-			span {
-				text-shadow: 1px 1px 1px #000;
-			}
-		}
-	}
-}
-
-.form-order {
 	// .form-order__column
 	&__column {
 		&:not(:last-child) {
@@ -172,6 +111,62 @@
 		&:focus {
 			border-radius: 5px;
 			box-shadow: 0 0 7px 1px $neon-blue-dark;
+		}
+	}
+
+	// .order-place__button
+	&__button {
+		border-radius: 7px;
+		margin-top: 5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+		box-shadow: 0 0 6px #000;
+
+		&:before {
+			border-radius: 7px;
+		}
+
+		&:hover {
+			.submit-button {
+				animation: shadow-pulse 0;
+			}
+		}
+
+		@include max-375 {
+			width: 100%;
+		}
+
+		.submit-button {
+			border: 0;
+			border-radius: 7px;
+			color: white;
+			font-size: 1.6rem;
+			font-weight: 500;
+			box-shadow:
+				0 10px 20px rgba(245, 0, 0, 0.1),
+				0 6px 6px rgba(0, 0, 0, 0.05);
+			animation: shadow-pulse 1.5s infinite;
+			transition: all 0.4s ease-in-out;
+		}
+
+		button {
+			position: relative;
+			z-index: 9;
+			display: inline-flex;
+			padding: 1.6rem 5rem;
+			text-transform: uppercase;
+			justify-content: center;
+			overflow: hidden;
+
+			@include max-375 {
+				width: 100%;
+			}
+
+			span {
+				text-shadow: 1px 1px 1px #000;
+			}
 		}
 	}
 }
@@ -220,7 +215,7 @@
 			width: 20px;
 
 			.icon-angle-down {
-				position: absolute;
+				position: relative;
 				transition: all 0.3s ease-in-out;
 				margin-left: -30px;
 				opacity: 0;

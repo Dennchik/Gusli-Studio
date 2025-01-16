@@ -2,6 +2,7 @@
 
 .services {
 	height: 100%;
+	overflow: hidden;
 
 	// .services__body
 	&__body {
@@ -16,7 +17,6 @@
 
 		@include min-1140 {
 			padding: 10rem 0;
-			overflow: hidden;
 		}
 	}
 
@@ -35,7 +35,6 @@
 		text-align: center;
 		letter-spacing: 0;
 		color: $neon-blue;
-		filter: $filter;
 
 		@include min-1140 {
 			margin-bottom: 10rem;
@@ -65,6 +64,7 @@
 		position: relative;
 		display: flex;
 		justify-content: space-between;
+		width: 100%;
 	}
 
 	// .services-slide__column
@@ -251,6 +251,27 @@
 
 		.button-buy {
 			width: 100%;
+		}
+	}
+}
+
+.categories-service {
+	.services-slide {
+		// .services-slide__body
+
+		// .services-slide__text
+		&__text {
+			flex-direction: column;
+		}
+
+		// .services-slide__column
+		&__column {
+			display: flex;
+			flex-direction: column;
+			gap: 5rem;
+			&:last-child {
+				margin-right: 0 !important;
+			}
 		}
 	}
 }

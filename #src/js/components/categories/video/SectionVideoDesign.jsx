@@ -7,7 +7,7 @@ import {
 } from '../../../animations/animations.jsx';
 
 //* ----------------------------------------------------------------------------
-export const SectionVideoDesign = ({baseUrl}) => {
+export const SectionVideoDesign = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	// Инициализируем useRef для всех групп элементов
@@ -37,14 +37,14 @@ export const SectionVideoDesign = ({baseUrl}) => {
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
-									<img className="parallax__image-services"
-											 src={getPath('img/parallax/video/fotoram_bg_05.webp')}
-											 alt="image" />
-								)
+								<img className="parallax__image-services"
+									src={getPath('img/parallax/video/fotoram_bg_05.webp')}
+									alt="image" />
+							)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/video/fotoram_bg_05.png')}
-											 alt="image" />
+										src={getPath('img/parallax/video/fotoram_bg_05.png')}
+										alt="image" />
 								)}
 						</picture>
 					</div>
@@ -59,54 +59,34 @@ export const SectionVideoDesign = ({baseUrl}) => {
 								<div className="service-description__row-col">
 									<h2>Ваш бренд хочет привлечь внимание и&nbsp;заставить людей
 										задуматься?</h2>
-									<p><i className="icon-hand-pointer _icon"></i>
-										3D-анимация&nbsp;— это идеальное решение. Она
-										создает детализированные, объемные и&nbsp;реалистичные
-										изображения, позволяя зрителям рассмотреть объекты
-										со&nbsp;всех сторон и&nbsp;оценить каждую деталь.
-										3D-анимация&nbsp;— это&nbsp;не&nbsp;просто красочный
-										способ визуализации, но&nbsp;и&nbsp;мощный инструмент
-										для&nbsp;продаж и&nbsp;обучения. С&nbsp;ее&nbsp;помощью вы
-										сможете создавать увлекательные и&nbsp;запоминающиеся
-										видеоролики, которые точно донесут ваше сообщение
-										до&nbsp;аудитории
+									<p><i className="icon-hand-pointer _icon"></i>3D-анимация&nbsp;— это идеальное решение. Она создает детализированные, объемные и&nbsp;реалистичные изображения, позволяя зрителям рассмотреть объекты со&nbsp;всех сторон и&nbsp;оценить каждую деталь. 3D-анимация&nbsp;— это&nbsp;не&nbsp;просто красочный способ визуализации, но&nbsp;и&nbsp;мощный инструмент для&nbsp;продаж и&nbsp;обучения. С&nbsp;ее&nbsp;помощью вы сможете создавать увлекательные и&nbsp;запоминающиеся видеоролики, которые точно донесут ваше сообщение до&nbsp; аудитории.
 									</p>
-									<p><i className="icon-hand-pointer _icon"></i>
-										В то время как&nbsp;2D-анимация хорошо подходит
-										для&nbsp;создания логотипов и&nbsp;других элементов
-										фирменного стиля, 3D-анимация добавляет глубину
-										и&nbsp;реализм вашим проектам. Это&nbsp;не&nbsp;просто
-										стиль, это&nbsp;целый мир, который&nbsp;придает вашему
-										бренду уникальность и&nbsp;целостность. Позвольте вашей
-										компании выделиться среди конкурентов и&nbsp;завоевать
-										сердца клиентов с&nbsp;помощью захватывающей 3D-анимации»
+									<p><i className="icon-hand-pointer _icon"></i>В то время как&nbsp;2D-анимация хорошо подходит для&nbsp;создания логотипов и&nbsp;других элементов фирменного стиля, 3D-анимация добавляет глубину и&nbsp;реализм вашим проектам. Это&nbsp;не&nbsp;просто стиль, это&nbsp;целый мир, который&nbsp;придает вашему бренду уникальность и&nbsp;целостность. Позвольте вашей компании выделиться среди конкурентов и&nbsp;завоевать сердца клиентов с&nbsp;помощью захватывающей 3D-анимации»
 									</p>
 								</div>
 								<div className="service-description__row-col">
-									<h2>Основные преимущества 3D-анимации</h2>
+									<h2>Основные преимущества 3D-анимации:</h2>
 									<ul>
 										<li><i className="icon-check _icon"></i>
-											Детализированность и&nbsp;объемность изображений
+											<p>Детализированность и&nbsp;объемность изображений;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Возможность рассмотреть объект со&nbsp;всех сторон</p>
+											<p>Возможность рассмотреть объект со&nbsp;всех сторон;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Уникальная возможность продаж и&nbsp;обучения
-												через&nbsp;визуальные материалы</p>
+											<p>Уникальная возможность продаж и&nbsp;обучения через&nbsp;визуальные материалы;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Создание увлекательных и&nbsp;запоминающихся
-												видеороликов</p>
+											<p>Создание увлекательных и&nbsp;запоминающихся видеороликов;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Добавление глубины и&nbsp;реализма проектам</p>
+											<p>Добавление глубины и&nbsp;реализма проектам;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Помощь в&nbsp;выделении бренда среди конкурентов</p>
+											<p>Помощь в&nbsp;выделении бренда среди конкурентов;</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>Придание уникальности и&nbsp;целостности компании</p>
+											<p>Придание уникальности и&nbsp;целостности компании.</p>
 										</li>
 									</ul>
 								</div>

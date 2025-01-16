@@ -6,8 +6,7 @@ import {
 	refreshScrollTrigger
 } from '../../../animations/animations.jsx';
 
-//* ----------------------------------------------------------------------------
-export const SectionVoiceActing = ({baseUrl}) => {
+export const SectionVoiceActing = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -35,108 +34,46 @@ export const SectionVoiceActing = ({baseUrl}) => {
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
-									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/sound/fotoram_bg_08.webp')}
-											 alt="image" />
-								)
+								<img className="parallax__image-services bg"
+									src={getPath('img/parallax/sound/fotoram_bg_08.webp')}
+									alt="image" />
+							)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/sound/fotoram_bg_08.png')}
-											 alt="image" />
+										src={getPath('img/parallax/sound/fotoram_bg_08.png')}
+										alt="image" />
 								)}
 						</picture>
 					</div>
 				</div>
 				<div className="service-description__body top-box">
 					<div className="service-description__content _container">
-						<h1 className="service-description__title voice-acting-title">
-							Дикторская озвучка</h1>
+						<h1 className="service-description__title voice-acting-title"> Дикторская озвучка</h1>
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<div className="service-description__row-col">
-									<p><i className="icon-hand-pointer _icon"></i>
-										Если Вы еще не&nbsp;сталкивались с&nbsp;такой задачей
-										как&nbsp;дикторская запись, то&nbsp;Вы
-										не&nbsp;представляете, насколько это&nbsp;кропотливый
-										процесс. Постараюсь вкратце рассказать,
-										что&nbsp;из&nbsp;себя представляет дикторская речь
-										и&nbsp;как ее&nbsp;записать.
+									<p><i className="icon-hand-pointer _icon"></i>Если Вы еще не&nbsp;сталкивались с&nbsp;такой задачей как&nbsp;дикторская запись, то&nbsp;Вы не&nbsp;представляете, насколько это&nbsp;кропотливый процесс. Постараюсь вкратце рассказать, что&nbsp;из&nbsp;себя представляет дикторская речь и&nbsp;как ее&nbsp;записать.
 									</p>
-									<p><i className="icon-hand-pointer _icon"></i>
-										За записью дикторской речи к&nbsp;нам обращаются для
-										озвучки рекламы, озвучки фильмов, передач, записи
-										подкастов (современных аналогов радиопередач)
-										и&nbsp;так&nbsp;далее. Наверняка Вы обращали внимание,
-										что&nbsp;ведущие большинства передач обладают отличным
-										произношением и&nbsp;приятным голосом
-										и&nbsp;их&nbsp;хочется слушать. А бывают случаи,
-										когда&nbsp;с&nbsp;первых слов Вам&nbsp;хочется
-										переключиться на&nbsp;что-то&nbsp;другое. От качества
-										чтения текста сильно зависит восприятие слушателя.
+									<p><i className="icon-hand-pointer _icon"></i>За записью дикторской речи к&nbsp;нам обращаются для озвучки рекламы, озвучки фильмов, передач, записи подкастов (современных аналогов радиопередач) и&nbsp;так&nbsp;далее. Наверняка Вы обращали внимание, что&nbsp;ведущие большинства передач обладают отличным произношением и&nbsp;приятным голосом и&nbsp;их&nbsp;хочется слушать. А бывают случаи, когда&nbsp;с&nbsp;первых слов Вам&nbsp;хочется переключиться на&nbsp;что-то&nbsp;другое. От качества чтения текста сильно зависит восприятие слушателя.
 									</p>
-									<p><i className="icon-hand-pointer _icon"></i>
-										Как и&nbsp;в&nbsp;любом другом деле, в&nbsp;отработке
-										дикторских навыков нужно много времени
-										и&nbsp;упорство. Нельзя получить качественную запись,
-										если&nbsp;вы&nbsp;никогда не&nbsp;занимались ею.
-										Профессиональные дикторы оттачивают свои навыки годами
-										и&nbsp;их&nbsp;услугами пользуются ведущие каналы
-										и&nbsp;передачи. Вы замечали, что&nbsp;у&nbsp;каждого
-										телевизионного канала есть свой голос? Это&nbsp;может
-										быть голос непосредственно диктора или&nbsp;ключевого
-										ведущего, но&nbsp;факт в&nbsp;том, что&nbsp;Вы сразу
-										узнаете голос этого человека и настраиваетесь
-										на&nbsp;нужный лад.
+									<p><i className="icon-hand-pointer _icon"></i>Как и&nbsp;в&nbsp;любом другом деле, в&nbsp;отработке дикторских навыков нужно много времени и&nbsp;упорство. Нельзя получить качественную запись, если&nbsp;вы&nbsp;никогда не&nbsp;занимались ею. Профессиональные дикторы оттачивают свои навыки годами и&nbsp;их&nbsp;услугами пользуются ведущие каналы и&nbsp;передачи. Вы замечали, что&nbsp;у&nbsp;каждого телевизионного канала есть свой голос? Это&nbsp;может быть голос непосредственно диктора или&nbsp;ключевого ведущего, но&nbsp;факт в&nbsp;том, что&nbsp;Вы сразу узнаете голос этого на&nbsp;нужный лад.
 									</p>
-									<p><i className="icon-hand-pointer _icon"></i>
-										Если вы&nbsp;— профессиональный или&nbsp;начинающий
-										диктор, и&nbsp;вам нужны услуги звукозаписи,
-										мы&nbsp;с&nbsp;радостью запишем ваш&nbsp;голос.
+									<p><i className="icon-hand-pointer _icon"></i>Если вы&nbsp;— профессиональный или&nbsp;начинающий диктор, и&nbsp;вам нужны услуги звукозаписи, мы&nbsp;с&nbsp;радостью запишем ваш&nbsp;голос.
 									</p>
-									<p><i className="icon-hand-pointer _icon"></i>
-										Дикторская запись в&nbsp;студии.
+									<p><i className="icon-hand-pointer _icon"></i>Дикторская запись в&nbsp;студии.
 									</p>
 								</div>
 								<div className="service-description__row-col">
-									<h2>Приведем несколько советов, которые помогут
-										как &nbsp;новичкам, так&nbsp;и&nbsp;опытным
-										дикторам.</h2>
-									<p><i className="icon-hand-pointer _icon"></i>
-										приходите в&nbsp;студию подготовленными. Стоить
-										потратить время на&nbsp;отработку нужного текста дома
-										и&nbsp;попробовать слушать себя в&nbsp;записи
-										воспользуйтесь для&nbsp;этого
-										хотя&nbsp;бы&nbsp;диктофоном в&nbsp;своем мобильном
-										устройстве). Вы&nbsp;должны быть готовы на&nbsp;110%,
-										чтобы&nbsp;во&nbsp;время записи в&nbsp;студии
-										не&nbsp;возникло никаких проблем.
+									<h2>Приведем несколько советов, которые помогут как &nbsp;новичкам, так&nbsp;и&nbsp;опытным дикторам.</h2>
+									<p><i className="icon-hand-pointer _icon"></i>Приходите в&nbsp;студию подготовленными. Стоить потратить время на&nbsp;отработку нужного текста дома и&nbsp;попробовать слушать себя в&nbsp;записи (воспользуйтесь для&nbsp;этого хотя&nbsp;бы&nbsp;диктофоном в&nbsp;своем мобильном устройстве). Вы&nbsp;должны быть готовы на&nbsp;110%, чтобы&nbsp;во&nbsp;время записи в&nbsp;студии не&nbsp;возникло никаких проблем.
 									</p>
-									<p><i className="icon-hand-pointer _icon"></i>
-										Берегите свой голос. В&nbsp;день записи стоит
-										воздержаться от&nbsp;употребления алкоголя, сладкого,
-										жирного, острого и&nbsp;сильно соленого.
-										Также&nbsp;не&nbsp;стоит курить. Перед&nbsp;записью,
-										разогрейте свой голос, сделав необходимые
-										упражнения.
+									<p><i className="icon-hand-pointer _icon"></i>Берегите свой голос. В&nbsp;день записи стоит воздержаться от&nbsp;употребления алкоголя, сладкого, жирного, острого и&nbsp;сильно соленого. Также&nbsp;не&nbsp;стоит курить. Перед&nbsp;записью, разогрейте свой голос, сделав необходимые упражнения.
 									</p>
-									<p><i className="icon-hand-pointer _icon"></i>
-										Не волнуйтесь. В&nbsp;некоторых студиях
-										к&nbsp;клиентам относятся так, что&nbsp;они, стоя перед
-										микрофоном, чувствуют себя не&nbsp;в&nbsp;своей тарелке.
-										Этот момент очень индивидуален у&nbsp;каждого человека,
-										но&nbsp;мы очень стараемся «подружится» с&nbsp;каждым
-										нашим артистом, чтобы&nbsp;тот &nbsp;мог расслабиться
-										и&nbsp;получать удовольствие, хорошо выполняя свою
-										работу.
+									<p><i className="icon-hand-pointer _icon"></i>Не волнуйтесь. В&nbsp;некоторых студиях к&nbsp;клиентам относятся так, что&nbsp;они, стоя перед микрофоном, чувствуют себя не&nbsp;в&nbsp;своей тарелке. Этот момент очень индивидуален у&nbsp;каждого человека, но&nbsp;мы очень стараемся «подружится» с&nbsp;каждым нашим артистом, чтобы&nbsp;тот &nbsp;мог расслабиться и&nbsp;получать удовольствие, хорошо выполняя свою работу.
 									</p>
-									<div className="service-description__ps">
-										Так же в нашей студии можно пройти курсы актера дубляжа,
-										проработать свои способности на&nbsp;уроках ораторского
-										искусства с&nbsp;нашим профессиональным педагогом.
-										Скачать презентацию можно по&nbsp;ссылке&nbsp;-
-										<a className="service-description__link"
-											 href={getPath('img/documents/pr-do.pdf')}
-											 target="_blanck"> Основы дикторского мастерства</a>.
+									<div className="service-description__ps">Так же в нашей студии можно пройти курсы актера дубляжа, проработать свои способности на&nbsp;уроках ораторского искусства с&nbsp;нашим профессиональным педагогом. Скачать презентацию можно по&nbsp;ссылке&nbsp;- <a className="service-description__link"
+										href={getPath('img/documents/pr-do.pdf')}
+										target="_blanck"> Основы дикторского мастерства</a>.
 									</div>
 								</div>
 							</div>
@@ -153,10 +90,7 @@ export const SectionVoiceActing = ({baseUrl}) => {
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<div className="service-description__row-col">
-									<p><i className="icon-hand-pointer _icon"></i>Обратившись
-										к&nbsp;нам, чтобы&nbsp;озвучить рекламу, вы&nbsp;непременно
-										останетесь довольны! Мы&nbsp;работаем до&nbsp;достижения
-										наивысшего результата. Мы&nbsp;поможем Вам&nbsp;подобрать:
+									<p><i className="icon-hand-pointer _icon"></i>Обратившись к&nbsp;нам, чтобы&nbsp;озвучить рекламу, вы&nbsp;непременно останетесь довольны! Мы&nbsp;работаем до&nbsp;достижения наивысшего результата. Мы&nbsp;поможем Вам&nbsp;подобрать:
 									</p>
 									<ul>
 										<li><i className="icon-check _icon"></i>
@@ -183,86 +117,46 @@ export const SectionVoiceActing = ({baseUrl}) => {
 							<div className="service-description__row">
 								<div className="service-description__row-col">
 									<h2>Студийная дикторская озвучка ролика</h2>
-									<p>В&nbsp;студии
-										установлено
-										оборудование современного уровня, а&nbsp;режиссеры
-										работают на
-										новейшем программном обеспечении. Таким образом,
-										мы&nbsp;достигаем идеального качества аудиодорожки,
-										где&nbsp;исключены звуковые артефакты (призвуки, помехи,
-										и&nbsp;тому подобные дефекты).</p>
+									<p>В&nbsp;студии установлено оборудование современного уровня, а&nbsp;режиссеры работают на&nbsp;новейшем программном обеспечении. Таким образом, мы&nbsp;достигаем идеального качества аудиодорожки, где&nbsp;исключены звуковые артефакты (призвуки, помехи, и&nbsp;тому подобные дефекты).</p>
 								</div>
 							</div>
 							<div className="service-description__row">
 								<div className="service-description__row-col">
-									<p><i className="icon-hand-pointer _icon"></i>
-										Озвучивание отличается для&nbsp;каждого конкретного
-										проекта:
+									<p><i className="icon-hand-pointer _icon"></i>Озвучивание отличается для&nbsp;каждого конкретного проекта:
 									</p>
 									<ul>
 										<li><i className="icon-check _icon"></i>реклама;</li>
 										<li><i className="icon-check _icon"></i>аудиокниги;</li>
-										<li><i className="icon-check _icon"></i>дубляж фильма или
-											сериала;
+										<li><i className="icon-check _icon"></i>дубляж фильма или сериала;
 										</li>
-										<li><i className="icon-check _icon"></i>игровые
-											аудиоролики;
+										<li><i className="icon-check _icon"></i>игровые аудиоролики;
 										</li>
 										<li><i className="icon-check _icon"></i>аудиогиды;</li>
 									</ul>
 								</div>
 								<div className="service-description__row-col">
-									<p><i className="icon-hand-pointer _icon"></i>
-										Предлагаем заказать голос диктора для&nbsp;мужской,
-										женской и&nbsp;детской озвучки ролика
+									<p><i className="icon-hand-pointer _icon"></i>Предлагаем заказать голос диктора для&nbsp;мужской, женской и&nbsp;детской озвучки ролика.
 									</p>
 									<ul>
-										<li><i className="icon-check _icon"></i>актеры дубляжа;
-										</li>
-										<li><i className="icon-check _icon"></i>рекламные
-											исполнители;
-										</li>
-										<li><i className="icon-check _icon"></i>чтецы аудиокниг,
-											саммари;
-										</li>
+										<li><i className="icon-check _icon"></i>актеры дубляжа;</li>
+										<li><i className="icon-check _icon"></i>рекламные исполнители;</li>
+										<li><i className="icon-check _icon"></i>чтецы аудиокниг, саммари;</li>
 										<li><i className="icon-check _icon"></i>пародисты;</li>
-										<li><i className="icon-check _icon"></i>специалисты
-											закадровой озвучки;
-										</li>
+										<li><i className="icon-check _icon"></i>специалисты закадровой озвучки;</li>
 										<li><i className="icon-check _icon"></i>вокалисты.</li>
 									</ul>
 								</div>
 							</div>
 							<div className="service-description__row">
 								<div className="service-description__row-col">
-									<p className="service-description__ps">
-										Профессиональные исполнители выполнят озвучивание любого
-										объема и&nbsp;уровня сложности в&nbsp;указанный срок</p>
-									<p className="service-description__ps">Если вы никогда
-										не&nbsp;сотрудничали с&nbsp;дикторами, то&nbsp;мы советуем
-										воспользоваться услугами режиссера. Не&nbsp;менее важен
-										темп
-										исполнителя: одни специализируются на&nbsp;быстрых
-										и&nbsp;коротких роликах, другие красиво читают только
-										размеренно (идеальный диктор для&nbsp;озвучки книг).</p>
-									<p className="service-description__ps">С&nbsp;нами работают
-										профессиональные чтецы аудиокниг, рекламных дикторов
-										и&nbsp;других специалистов с&nbsp;идеальным владением
-										техникой речи. Каждый из&nbsp;них обладает разной скоростью
-										речи, отличается тембр.</p>
-									<p className="service-description__ps">
-										Возраст тоже имеет огромное значение. Мы&nbsp;предлагаем
-										голоса детей, людей среднего возраста
-										и&nbsp;пожилых.</p>
-									<p className="service-description__ps">Мы поможем найти
-										носителей иностранных языков. Можно подобрать
-										исполнителей с&nbsp;очень похожими звуковыми параметрами
-										для&nbsp;начитки текста на&nbsp;разных языках.</p>
-									<p className="service-description__ps">Дикторская озвучка
-										с&nbsp;созданием сценария и&nbsp;записью аудиоролика
-										для&nbsp;рекламы обойдется дороже, так&nbsp;как включает
-										обработку, подбор фона, сведение, наложение звуковых
-										эффектов и&nbsp;другую работу.</p></div>
+									<p className="service-description__ps">Профессиональные исполнители выполнят озвучивание любого объема и&nbsp;уровня сложности в&nbsp;указанный срок</p>
+									<p className="service-description__ps">Если вы никогда не&nbsp;сотрудничали с&nbsp;дикторами, то&nbsp;мы советуем воспользоваться услугами режиссера. Не&nbsp;менее важен темп исполнителя: одни специализируются на&nbsp;быстрых и&nbsp;коротких роликах, другие красиво читают только размеренно (идеальный диктор для&nbsp;озвучки книг).</p>
+									<p className="service-description__ps">С&nbsp;нами работают профессиональные чтецы аудиокниг, рекламных дикторов и&nbsp;других специалистов с&nbsp;идеальным владением техникой речи. Каждый из&nbsp;них обладает разной скоростью речи, отличается тембр.</p>
+									<p className="service-description__ps">Возраст тоже имеет огромное значение. Мы&nbsp;предлагаем голоса детей, людей среднего возраста и&nbsp;пожилых.</p>
+									<p className="service-description__ps">Мы поможем найти носителей иностранных языков. Можно подобрать исполнителей с&nbsp;очень похожими звуковыми параметрами для&nbsp;начитки текста на&nbsp;разных языках.</p>
+									<p className="service-description__ps">Дикторская озвучка с&nbsp;созданием сценария и&nbsp;записью аудиоролика для&nbsp;рекламы обойдется дороже, так&nbsp;как включает обработку, подбор фона, сведение, наложение звуковых эффектов и&nbsp;другую работу.
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>

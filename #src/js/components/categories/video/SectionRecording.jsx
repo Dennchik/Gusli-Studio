@@ -7,7 +7,7 @@ import {
 } from '../../../animations/animations.jsx';
 
 //* ----------------------------------------------------------------------------
-export const SectionRecording = ({baseUrl}) => {
+export const SectionRecording = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	// Инициализируем useRef для всех групп элементов
@@ -37,14 +37,14 @@ export const SectionRecording = ({baseUrl}) => {
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
-									<img className="parallax__image-services"
-											 src={getPath('img/parallax/video/fotoram_bg_01.webp')}
-											 alt="image" />
-								)
+								<img className="parallax__image-services"
+									src={getPath('img/parallax/video/fotoram_bg_01.webp')}
+									alt="image" />
+							)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/video/fotoram_bg_01.png')}
-											 alt="image" />
+										src={getPath('img/parallax/video/fotoram_bg_01.png')}
+										alt="image" />
 								)}
 						</picture>
 					</div>

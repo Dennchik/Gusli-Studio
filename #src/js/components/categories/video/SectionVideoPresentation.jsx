@@ -7,7 +7,7 @@ import {
 } from '../../../animations/animations.jsx';
 
 //* ----------------------------------------------------------------------------
-export const SectionVideoPresentation = ({baseUrl}) => {
+export const SectionVideoPresentation = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -35,14 +35,14 @@ export const SectionVideoPresentation = ({baseUrl}) => {
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
-									<img className="parallax__image-services"
-											 src={getPath('img/parallax/video/fotoram_bg_06.webp')}
-											 alt="image" />
-								)
+								<img className="parallax__image-services"
+									src={getPath('img/parallax/video/fotoram_bg_06.webp')}
+									alt="image" />
+							)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/video/fotoram_bg_06.png')}
-											 alt="image" />
+										src={getPath('img/parallax/video/fotoram_bg_06.png')}
+										alt="image" />
 								)}
 						</picture>
 					</div>
@@ -50,22 +50,15 @@ export const SectionVideoPresentation = ({baseUrl}) => {
 				<div className="service-description__body top-box">
 					<div className='service-description__content _container'>
 						<h1 className="service-description__title">
-							презентационные ролики
+							Презентационные ролики
 						</h1>
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<div className="service-description__row-col">
-									<p><i className="icon-hand-pointer _icon"></i>Яркий ролик
-										заставит человека остановиться и&nbsp;сконцентрировать
-										внимание на &nbsp;содержании.
+									<p><i className="icon-hand-pointer _icon"></i>Яркий ролик заставит человека остановиться и&nbsp;сконцентрировать внимание на &nbsp;содержании.
 									</p>
-									<p><i className="icon-hand-pointer _icon"></i>
-										В видео можно емко описать преимущества вашего торгового
-										предложения и&nbsp;подтвердить их&nbsp;визуально.</p>
-									<p><i className="icon-hand-pointer _icon"></i>
-										Презентационный ролик о&nbsp;компании снижает расходы
-										на &nbsp;проведение бизнес-встреч, ведь его&nbsp;можно
-										демонстрировать без &nbsp;привлечения доп. сотрудников.
+									<p><i className="icon-hand-pointer _icon"></i>В видео можно емко описать преимущества вашего торгового предложения и&nbsp;подтвердить их&nbsp;визуально.</p>
+									<p><i className="icon-hand-pointer _icon"></i>Презентационный ролик о&nbsp;компании снижает расходы на &nbsp;проведение бизнес-встреч, ведь его&nbsp;можно демонстрировать без &nbsp;привлечения доп. сотрудников.
 									</p>
 								</div>
 							</div>

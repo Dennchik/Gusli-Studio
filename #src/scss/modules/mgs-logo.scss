@@ -1,0 +1,70 @@
+
+.preloader {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	transition: all 0.4s ease-in-out;
+	background: #000;
+
+	.mgs-logo {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+
+		// .main-content__img-logo
+		&__img-logo {
+			position: relative;
+			width: auto;
+			opacity: 0;
+
+			img {
+				transform: translateX(10px);
+				position: relative;
+				bottom: 0;
+				left: 0;
+				z-index: 999;
+				// object-position: bottom;
+				max-height: 60px;
+			}
+		}
+
+		// .mgs-logo__svg-logo
+		&__svg-logo {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.loading-screen {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: #000; /* Цвет фона */
+		color: #fff; /* Цвет текста */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 9999;
+		opacity: 1;
+		transition: opacity 0.5s ease;
+	}
+
+	.loading-text {
+		font-size: 24px;
+		font-family: Arial, sans-serif;
+	}
+
+}
+
+.stripes path,
+.text-fills path,
+.katakana path,
+.line {
+	opacity: 0;
+}

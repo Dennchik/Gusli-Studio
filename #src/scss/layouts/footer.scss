@@ -1,7 +1,6 @@
 @use '../core/all' as *;
 
 .footer {
-
 	// .footer__contacts
 	&__contacts {
 		position: relative;
@@ -19,10 +18,10 @@
 			background-size: 111% 200%;
 			background-position: 0 0;
 			background-image: linear-gradient(
-											-45deg,
-											#20193bff 10%,
-											#332764 73%,
-											#020101 83%
+				-45deg,
+				#20193bff 10%,
+				#332764 73%,
+				#020101 83%
 			);
 		}
 	}

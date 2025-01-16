@@ -7,7 +7,7 @@ import {
 } from '../../../animations/animations.jsx';
 import { AppButton } from '../../../app/button.jsx';
 //* ----------------------------------------------------------------------------
-export const SectionEventsRent = ({baseUrl}) => {
+export const SectionEventsRent = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -35,14 +35,14 @@ export const SectionEventsRent = ({baseUrl}) => {
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
-									<img className="parallax__image-services"
-											 src={getPath('img/parallax/events/fotoram_bg_05.webp')}
-											 alt="image" />
-								)
+								<img className="parallax__image-services"
+									src={getPath('img/parallax/events/fotoram_bg_05.webp')}
+									alt="image" />
+							)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/events/fotoram_bg_05.png')}
-											 alt="image" />
+										src={getPath('img/parallax/events/fotoram_bg_05.png')}
+										alt="image" />
 								)}
 						</picture>
 					</div>

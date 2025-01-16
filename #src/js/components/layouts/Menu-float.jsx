@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 // '../animations/animation-HomePage.jsx';
 
 
-export const MenuFloat = ({baseUrl}) => {
+export const MenuFloat = ({ baseUrl }) => {
 	const [offset, setOffset] = useState(-100);
 	useEffect(() => {
 
@@ -58,28 +58,28 @@ export const MenuFloat = ({baseUrl}) => {
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														 href={getPath(
-															 'services/service-sound.html')}>Звук</a>
+														href={getPath(
+															'services/service-sound.html')}>Звук</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														 href={getPath(
-															 'services/service-video.html')}>Видео</a>
+														href={getPath(
+															'services/service-video.html')}>Видео</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														 href={getPath(
-															 'services/service-text.html')}>Текс</a>
+														href={getPath(
+															'services/service-text.html')}>Текс</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														 href={getPath(
-															 'services/service-events.html')}>Мероприятия</a>
+														href={getPath(
+															'services/service-events.html')}>Мероприятия</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														 href={getPath(
-															 'services/development.html')}>
+														href={getPath(
+															'services/development.html')}>
 														Товары</a>
 												</li>
 											</ul>
@@ -91,21 +91,21 @@ export const MenuFloat = ({baseUrl}) => {
 												</div>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														 href={getPath('services.html')}>Услуги</a>
+														href={getPath('services.html')}>Услуги</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														 href={getPath('about.html')}>Компания</a>
+														href={getPath('about.html')}>Компания</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														 href={getPath('about.html#partners')}>
+														href={getPath('about.html#partners')}>
 														С кем работали</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
-														 href={getPath(
-															 'services/service-sound.html#answers')}>
+														href={getPath(
+															'services/service-sound.html#answers')}>
 														Вопросы и ответы</a>
 												</li>
 											</ul>
@@ -118,7 +118,7 @@ export const MenuFloat = ({baseUrl}) => {
 							<div className="menu-float__layout menu-float__layout--primary">
 								<div className="menu-float__content">
 									<a className="menu-float__mail"
-										 href="tel:+79106044424">
+										href="tel:+79106044424">
 										<div className="menu-float__logo">
 											<i className="icon-phone-call"></i></div>
 										<div className="menu-float__breadcrumb">
@@ -132,24 +132,24 @@ export const MenuFloat = ({baseUrl}) => {
 									<div className="menu-float__nav">
 										<div className="menu-float__menu-link menu-float__menu-link--home">
 											<a className="menu-float__link"
-												 href={getPath('index.html')}>
+												href={getPath('index.html')}>
 												<i className="icon-home"></i>
 											</a>
 										</div>
 										<div className="menu-float__menu-link menu-float__menu-link--services">
 											<a className="menu-float__link"
-												 href={getPath('services.html')}>
+												href={getPath('services.html')}>
 												<span>Услуги</span>
 											</a>
 										</div>
 										<div className="menu-float__menu-link menu-float__menu-link--footer">
 											<Link className='menu-float__link'
-														to='contacts'
-														activeClass="_active"
-														spy={true}
-														duration={500}
-														smooth='easeInQuad'
-														offset={offset}>
+												to='contacts'
+												activeClass="_active"
+												spy={true}
+												duration={500}
+												smooth='easeInQuad'
+												offset={offset}>
 												<span>Контакты</span>
 											</Link>
 										</div>

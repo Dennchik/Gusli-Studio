@@ -8,7 +8,7 @@ import {
 import { AppButton } from '../../../app/button.jsx';
 
 //* ----------------------------------------------------------------------------
-export const SectionEventsFestival = ({baseUrl}) => {
+export const SectionEventsFestival = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -36,14 +36,14 @@ export const SectionEventsFestival = ({baseUrl}) => {
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
-									<img className="parallax__image-services"
-											 src={getPath('img/parallax/events/fotoram_bg_01.webp')}
-											 alt="image" />
-								)
+								<img className="parallax__image-services"
+									src={getPath('img/parallax/events/fotoram_bg_01.webp')}
+									alt="image" />
+							)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/events/fotoram_bg_01.png')}
-											 alt="image" />
+										src={getPath('img/parallax/events/fotoram_bg_01.png')}
+										alt="image" />
 								)}
 						</picture>
 					</div>
@@ -101,7 +101,7 @@ export const SectionEventsFestival = ({baseUrl}) => {
 									<p><i className="icon-hand-pointer _icon"></i>
 										Все желающие смогут перевоплотиться в&nbsp;любимого
 										персонажа
-										или&nbsp;весёлую зверюшку. :)
+										или&nbsp;весёлую зверюшку.
 									</p>
 									<h3>Твистинг. Фигурки из шариков</h3>
 									<p><i className="icon-hand-pointer _icon"></i>

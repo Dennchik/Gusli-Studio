@@ -12,9 +12,9 @@ html(lang="ru")
 		block link 
 			link(rel="icon" type="image/icon" href="@@webRoot/img/icons/icon-logo.ico")
 			link(rel="stylesheet" type="text/css" href="@@webRoot/css/main.min.css")
-		block style
+		//- block style
 		block script
-			script(defer="defer" src="@@webRoot/js/main.min.js")
+			script(defer="defer" src="@@webRoot/js/main.min.js") 
 		//- prepend script 
 
 		block title
@@ -27,4 +27,4 @@ html(lang="ru")
 		.wrapper#holder
 			block page-content
 				block header
-				block main-content
+				block main-content 

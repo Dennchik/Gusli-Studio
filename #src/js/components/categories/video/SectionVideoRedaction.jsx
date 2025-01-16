@@ -7,7 +7,7 @@ import {
 } from '../../../animations/animations.jsx';
 
 //* ----------------------------------------------------------------------------
-export const SectionVideoRedaction = ({baseUrl}) => {
+export const SectionVideoRedaction = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	// Инициализируем useRef для всех групп элементов
@@ -37,14 +37,14 @@ export const SectionVideoRedaction = ({baseUrl}) => {
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
-									<img className="parallax__image-services"
-											 src={getPath('img/parallax/video/fotoram_bg_08.webp')}
-											 alt="image" />
-								)
+								<img className="parallax__image-services"
+									src={getPath('img/parallax/video/fotoram_bg_08.webp')}
+									alt="image" />
+							)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/video/fotoram_bg_08.png')}
-											 alt="image" />
+										src={getPath('img/parallax/video/fotoram_bg_08.png')}
+										alt="image" />
 								)}
 						</picture>
 					</div>
@@ -147,8 +147,7 @@ export const SectionVideoRedaction = ({baseUrl}) => {
 										с&nbsp;сюжетом и&nbsp;влиять на&nbsp;развитие истории
 									</p>
 									<p>
-										<span>Монтаж в&nbsp;документальных фильмах:</span> в&nbsp;документальных
-										фильмах монтаж может&nbsp;быть использован
+										<span>Монтаж в&nbsp;документальных фильмах:</span> в&nbsp; может&nbsp;быть использован
 										для&nbsp;создания ритма, подчеркивания
 										ключевых моментов и&nbsp;передачи информации</p>
 								</div>

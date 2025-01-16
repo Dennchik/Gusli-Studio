@@ -96,9 +96,8 @@ export const Showreel = ({ baseUrl }) => {
 						playsInline
 						autoPlay
 						loop
-						poster={getPath('img/audio/showreel-1.png')}>
-						<source src='https://этопольза.рф/local/templates/cult/video/index-hero-video.mp4'
-							type="video/mp4" />
+						poster={getPath('img/audio/showreel-1.png')}
+						src={getPath('img/audio/showreel-1.mp4')}>
 					</video>
 				</div>
 				<div className="main-video__content _container">
@@ -108,12 +107,7 @@ export const Showreel = ({ baseUrl }) => {
 							<span>студия звукозаписи </span>
 							<span>ГУСЛИ Media-Group</span> в&nbsp;Обнинске
 						</h1>
-						<div className="main-video__text t_01901">
-							Мы — современная студия звукозаписи, в&nbsp;которой работают
-							лучшие специалисты в&nbsp;области записи и&nbsp;продюсирования
-							музыки, предоставляем самый лучший сервис и&nbsp;удобства
-							для&nbsp;современных артистов, как&nbsp;подписанных, так
-							и &nbsp;независимых.
+						<div className="main-video__text t_01901">Мы — современная студия звукозаписи, в&nbsp;которой работают лучшие специалисты в&nbsp;области записи и&nbsp;продюсирования музыки, предоставляем самый лучший сервис и&nbsp;удобства для&nbsp;современных артистов, как&nbsp;подписанных, так и &nbsp;независимых.
 						</div>
 					</div>
 					<div className="main-video__button">

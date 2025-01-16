@@ -7,10 +7,11 @@
 	}
 
 	.services {
+		overflow: visible;
+
 		// .categories__body
 		&__body {
 			justify-content: flex-end;
-			overflow: visible;
 		}
 	}
 
@@ -102,38 +103,6 @@
 				font-size: 12px;
 				margin: 0 !important;
 			}
-		}
-	}
-}
-
-.categories-service {
-	.services {
-		// services__body
-		&__body {
-			@include min-1140 {
-				overflow: hidden;
-			}
-		}
-	}
-
-	.services-slide {
-		//  .services-slide__body
-		&__body {
-			@include min-1140 {
-				margin: 0 10px;
-			}
-		}
-
-		// .services-slide__text
-		&__text {
-			flex-direction: column;
-		}
-
-		// .services-slide__column
-		&__column {
-			display: flex;
-			flex-direction: column;
-			gap: 5rem;
 		}
 	}
 }

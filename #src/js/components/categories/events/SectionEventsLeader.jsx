@@ -8,7 +8,7 @@ import {
 import { AppButton } from '../../../app/button.jsx';
 
 //* ----------------------------------------------------------------------------
-export const SectionEventsLeader = ({baseUrl}) => {
+export const SectionEventsLeader = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -36,14 +36,14 @@ export const SectionEventsLeader = ({baseUrl}) => {
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
-									<img className="parallax__image-services"
-											 src={getPath('img/parallax/events/fotoram_bg_02.webp')}
-											 alt="image" />
-								)
+								<img className="parallax__image-services"
+									src={getPath('img/parallax/events/fotoram_bg_02.webp')}
+									alt="image" />
+							)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/events/fotoram_bg_02.png')}
-											 alt="image" />
+										src={getPath('img/parallax/events/fotoram_bg_02.png')}
+										alt="image" />
 								)}
 						</picture>
 					</div>

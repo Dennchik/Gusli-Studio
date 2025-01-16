@@ -59,14 +59,14 @@ function reload(done) {
 const watcher = () => {
 	// gulp.watch(path.react.watch, gulp.series(react, reload));
 	gulp.watch(path.js.watch, gulp.series(js, reload));
-	gulp.watch(path.pug.watch, pugJade).on('all', browserSync.reload);
-	gulp.watch(path.json.watch, changeJson).on('all', browserSync.reload);
-	gulp.watch(path.json.readFile, pugJade).on('all', browserSync.reload);
+	gulp.watch(path.pug.watch, gulp.series(pugJade, reload));
+	gulp.watch(path.json.watch, gulp.series(changeJson, reload));
+	gulp.watch(path.json.readFile, gulp.series(pugJade, reload));
 	gulp.watch(path.scss.watch, gulp.series(scss, reload));
-	gulp.watch(path.image.watch, image).on('all', browserSync.reload);
-	gulp.watch(path.sprite.watch, sprite).on('all', browserSync.reload);
-	gulp.watch(path.fonts.watch, change).on('all', browserSync.reload);
-	gulp.watch(path.fontsStyle.watch, fontsStyle).on('all', browserSync.reload);
+	gulp.watch(path.image.watch, gulp.series(image, reload));
+	gulp.watch(path.sprite.watch, gulp.series(sprite, reload));
+	gulp.watch(path.fonts.watch, gulp.series(change, reload));
+	gulp.watch(path.fontsStyle.watch, gulp.series(fontsStyle, reload));
 
 };
 

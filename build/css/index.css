@@ -64,7 +64,7 @@
 }
 
 .top-box {
-  padding: 6rem 0;
+  padding: 6rem 0 0;
   padding-top: -webkit-calc(6rem + 64px) !important;
   padding-top: calc(6rem + 64px) !important;
 }
@@ -448,6 +448,7 @@ svg {
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
+  width: 100%;
   height: auto;
   max-width: 100%;
 }
@@ -596,6 +597,13 @@ h6 {
   font-style: normal;
 }
 @font-face {
+  font-family: "icon-set";
+  font-display: swap;
+  src: url("../fonts/icon-set.eot") format("eot"), url("../fonts/icon-set.woff") format("woff"), url("../fonts/icon-set.woff2") format("woff2"), url("../fonts/icon-set.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
   font-family: "irmologion Caps ieUcs";
   font-display: swap;
   src: url("../fonts/irmologion Caps ieUcs.eot") format("eot"), url("../fonts/irmologion Caps ieUcs.woff") format("woff"), url("../fonts/irmologion Caps ieUcs.woff2") format("woff2"), url("../fonts/irmologion Caps ieUcs.ttf") format("truetype");
@@ -606,13 +614,6 @@ h6 {
   font-family: "Manrope";
   font-display: swap;
   src: url("../fonts/Manrope.eot") format("eot"), url("../fonts/Manrope.woff") format("woff"), url("../fonts/Manrope.woff2") format("woff2"), url("../fonts/Manrope.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "icon-set";
-  font-display: swap;
-  src: url("../fonts/icon-set.eot") format("eot"), url("../fonts/icon-set.woff") format("woff"), url("../fonts/icon-set.woff2") format("woff2"), url("../fonts/icon-set.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -738,6 +739,7 @@ h6 {
 
 .services {
   height: 100%;
+  overflow: hidden;
 }
 .services__body {
   height: 100%;
@@ -773,8 +775,6 @@ h6 {
   text-align: center;
   letter-spacing: 0;
   color: rgb(4, 217, 255);
-  -webkit-filter: drop-shadow(1px 0px 3px rgb(32, 25, 71)) invert(5%);
-  filter: drop-shadow(1px 0px 3px rgb(32, 25, 71)) invert(5%);
 }
 .services__content {
   width: 100%;
@@ -793,6 +793,7 @@ h6 {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  width: 100%;
 }
 .services-slide__column {
   min-width: 130px;
@@ -938,6 +939,29 @@ h6 {
 .services-slide__button .button-buy {
   width: 100%;
 }
+
+.categories-service .services-slide__text {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.categories-service .services-slide__column {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 5rem;
+}
+.categories-service .services-slide__column:last-child {
+  margin-right: 0 !important;
+}
 @media (min-width: 320.98px) and (max-width: 1920px){
   .services__title {
     font-size: -webkit-calc(24px + 36 * (100vw - 320px) / 1600);
@@ -1079,7 +1103,6 @@ h6 {
 @media (min-width: 1140.99px){
   .services__body {
     padding: 10rem 0;
-    overflow: hidden;
   }
   .services__title {
     margin-bottom: 10rem;

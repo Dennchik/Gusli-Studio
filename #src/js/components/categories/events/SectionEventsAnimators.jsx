@@ -8,7 +8,7 @@ import {
 import { AppButton } from '../../../app/button.jsx';
 
 //* ----------------------------------------------------------------------------
-export const SectionEventsAnimators = ({baseUrl}) => {
+export const SectionEventsAnimators = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -36,14 +36,14 @@ export const SectionEventsAnimators = ({baseUrl}) => {
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
-									<img className="parallax__image-services"
-											 src={getPath('img/parallax/events/fotoram_bg_04.webp')}
-											 alt="image" />
-								)
+								<img className="parallax__image-services"
+									src={getPath('img/parallax/events/fotoram_bg_04.webp')}
+									alt="image" />
+							)
 								: (
 									<img className="parallax__image-services bg"
-											 src={getPath('img/parallax/events/fotoram_bg_04.png')}
-											 alt="image" />
+										src={getPath('img/parallax/events/fotoram_bg_04.png')}
+										alt="image" />
 								)}
 						</picture>
 					</div>
@@ -82,7 +82,7 @@ export const SectionEventsAnimators = ({baseUrl}) => {
 										ваше мероприятие особенным и&nbsp;уникальным.
 										Мы&nbsp;гарантируем, что&nbsp;с&nbsp;нашей помощью каждый
 										момент праздника станет незабываемым и&nbsp;оставит яркие
-										воспоминания для&nbsp;вас и&nbsp;ваших гостей
+										воспоминания для&nbsp;вас и&nbsp;ваших гостей.
 									</p>
 								</div>
 							</div>
@@ -100,7 +100,7 @@ export const SectionEventsAnimators = ({baseUrl}) => {
 								<p><i className="icon-hand-pointer _icon"></i>
 									Все желающие смогут перевоплотиться в&nbsp;любимого
 									персонажа
-									или&nbsp;весёлую зверюшку. :)</p>
+									или&nbsp;весёлую зверюшку.</p>
 								<h3>Твистинг. Фигурки из&nbsp;шариков.</h3>
 								<p><i className="icon-hand-pointer _icon"></i>
 									Детям очень нравятся воздушные шарики, а&nbsp;когда их
@@ -152,7 +152,7 @@ export const SectionEventsAnimators = ({baseUrl}) => {
 											лучший вариант для&nbsp;любого праздника
 										</li>
 										<li><i className="icon-check _icon"></i>
-											любые персонажи на&nbsp;выбор
+											любой персонаж на&nbsp;выбор
 										</li>
 										<li><i className="icon-check _icon"></i>
 											музыкальное сопровождение

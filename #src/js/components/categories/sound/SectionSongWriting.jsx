@@ -6,8 +6,7 @@ import {
 	refreshScrollTrigger
 } from '../../../animations/animations.jsx';
 
-//* ----------------------------------------------------------------------------
-export const SectionSongWriting = ({baseUrl}) => {
+export const SectionSongWriting = ({ baseUrl }) => {
 	const isHomepage = location.pathname === '/';
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -35,17 +34,10 @@ export const SectionSongWriting = ({baseUrl}) => {
 					<div className="parallax__image">
 						<picture>
 							{isWebpSupported() ? (
-									<img className="parallax__image-services bg"
-											 src={getPath(
-												 'img/parallax/sound/fotoram_bg_01.webp')}
-											 alt="image" />
-								)
-								: (
-									<img className="parallax__image-services bg"
-											 src={getPath(
-												 'img/parallax/sound/fotoram_bg_01.png')}
-											 alt="image" />
-								)}
+								<img className="parallax__image-services bg" src={getPath('img/parallax/sound/fotoram_bg_01.webp')} alt="image" />
+							) : (
+								<img className="parallax__image-services bg" src={getPath('img/parallax/sound/fotoram_bg_01.png')} alt="image" />
+							)}
 						</picture>
 					</div>
 				</div>
@@ -57,31 +49,11 @@ export const SectionSongWriting = ({baseUrl}) => {
 						<div className="service-description__description">
 							<div className="service-description__row">
 								<div className="service-description__row-col">
-									<p><i className="icon-piano _icon"></i>
-										Если вам нужна мелодия для&nbsp;фильма или&nbsp;рекламы
-										на&nbsp;телевидении, наши специалисты создадут
-										ее&nbsp;в&nbsp;соответствии с&nbsp;требованиями
-										заказчика. Мы также можем написать слова и&nbsp;создать
-										музыкальную композицию в&nbsp;радиоформате.
+									<p><i className="icon-piano _icon"></i>Если вам нужна мелодия для&nbsp;фильма или&nbsp;рекламы на&nbsp;телевидении, наши специалисты создадут ее&nbsp;в&nbsp;соответствии с&nbsp;требованиями заказчика. Мы также можем написать слова и&nbsp;создать музыкальную композицию в&nbsp;радиоформате.
 									</p>
-									<p><i className="icon-piano _icon"></i>Наши авторы
-										работают в&nbsp;разных направлениях:
-										от&nbsp;классического до&nbsp;народного
-										и&nbsp;авторского. Мы&nbsp;можем создать музыку
-										для&nbsp;любого проекта, будь то&nbsp;фильм,
-										реклама или&nbsp;корпоративное мероприятие.
+									<p><i className="icon-piano _icon"></i>Наши авторы работают в&nbsp;разных направлениях: от&nbsp;классического до&nbsp;народного и&nbsp;авторского. Мы&nbsp;можем создать музыку для&nbsp;любого проекта, будь то&nbsp;фильм, реклама или&nbsp;корпоративное мероприятие.
 									</p>
-									<p><i className="icon-piano _icon"></i>В&nbsp;студии
-										звукозаписи вы&nbsp;можете приобрести готовую песню,
-										заказать создание музыки у&nbsp;профессиональных
-										композиторов и&nbsp;аранжировщиков. Наши музыканты
-										работают
-										в&nbsp;различных жанрах: от&nbsp;популярной эстрады
-										до&nbsp;авангарда. Они могут написать слова
-										и&nbsp;создать
-										музыкальную композицию в&nbsp;любом стиле,
-										от&nbsp;классического до&nbsp;народного
-										и&nbsp;авторского.
+									<p><i className="icon-piano _icon"></i>В&nbsp;студии звукозаписи вы&nbsp;можете приобрести готовую песню, заказать создание музыки у&nbsp;профессиональных композиторов и&nbsp;аранжировщиков. Наши музыканты работают в&nbsp;различных жанрах: от&nbsp;популярной эстрады до&nbsp;авангарда. Они могут написать слова и&nbsp;создать музыкальную композицию в&nbsp;любом стиле, от&nbsp;классического до&nbsp;народного и&nbsp;авторского.
 									</p>
 								</div>
 							</div>
@@ -93,8 +65,7 @@ export const SectionSongWriting = ({baseUrl}) => {
 				<div className="service-description__body">
 					<div className='service-description__content _container'>
 						<div className="service-description__description">
-							<h2>Цены на&nbsp;создание песни (песни на&nbsp;заказ, авторские
-								проекты, корпоративные гимны)</h2>
+							<h2>Цены на&nbsp;создание песни (песни на&nbsp;заказ, авторские проекты, корпоративные гимны)</h2>
 							<div className="service-description__row">
 								<div className="service-description__row-col">
 									<h3>Пакет 1&nbsp;- 100&nbsp;000₽</h3>
@@ -107,7 +78,7 @@ export const SectionSongWriting = ({baseUrl}) => {
 										</li>
 										<li><i className="icon-check _icon"></i>
 											<p>авторская аранжировка
-												<span>(до&nbsp;40&nbsp;дорожек)</span>;
+												<span>(до&nbsp;40&nbsp;дорожек)</span>
 											</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
@@ -145,7 +116,7 @@ export const SectionSongWriting = ({baseUrl}) => {
 											<p>сведение и&nbsp;мастеринг</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>дизайн обложки;</p>
+											<p>дизайн обложки</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
 											<p>дистрибуция на&nbsp;цифровые площадки</p>
@@ -173,8 +144,7 @@ export const SectionSongWriting = ({baseUrl}) => {
 												живые инструменты</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
-											<p>сессионные
-												музыканты</p>
+											<p>сессионные музыканты</p>
 										</li>
 										<li><i className="icon-check _icon"></i>
 											<p>бек вокалисты</p>

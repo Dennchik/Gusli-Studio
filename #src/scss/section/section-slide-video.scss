@@ -1,5 +1,8 @@
 @use '../core/all.scss' as *;
-
+.swiper-slide {
+	transform: none !important;
+	transition: none !important;
+}
 .showreel {
 	overflow: hidden;
 	// .video-showreel__body
@@ -60,13 +63,14 @@
 
 	// .showreel-slide__video
 	&__video {
+		position: relative;
 		width: 100%;
 		height: 100%;
 		border-radius: 5px;
 		overflow: hidden;
 
 		video {
-			height: auto;
+			height: 100%;
 			max-width: 100%;
 		}
 
@@ -83,7 +87,8 @@
 		display: flex;
 	}
 
-	&__next, &__prev {
+	&__next,
+	&__prev {
 		cursor: pointer;
 		position: absolute;
 		color: $neon-blue;

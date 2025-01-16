@@ -18,7 +18,6 @@ import { FormModal } from '../../../components/layouts/FormModal.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';
-
 function RecordingPage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 

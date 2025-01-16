@@ -9,8 +9,13 @@ export function observerMutation() {
 	};
 
 	const updateStyles = (pagination) => {
-		const swiperWrapper = document.querySelector('.swiper-wrapper'); if (pagination && swiperWrapper) {
-			if (pagination?.classList.contains('swiper-pagination-lock')) {
+		const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+		if (pagination && swiperWrapper) {
+			const serviceColumns = swiperWrapper.querySelectorAll('.services-slide__column');
+			const hasFewColumns = serviceColumns.length < 5; // Проверка: меньше либо равно 5
+
+			if (pagination.classList.contains('swiper-pagination-lock') && hasFewColumns) {
 				swiperWrapper.style.justifyContent = 'center';
 			} else {
 				swiperWrapper.style.justifyContent = 'space-between';
