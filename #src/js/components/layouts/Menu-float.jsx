@@ -80,7 +80,7 @@ export const MenuFloat = ({ baseUrl }) => {
 													<a className="main-menu__menu-link"
 														href={getPath(
 															'services/development.html')}>
-														Товары</a>
+														Разработка</a>
 												</li>
 											</ul>
 										</div>
@@ -96,6 +96,12 @@ export const MenuFloat = ({ baseUrl }) => {
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
 														href={getPath('about.html')}>Компания</a>
+												</li>
+												<li className="main-menu__menu-link">
+													<a className="main-menu__menu-link"
+														href={getPath(
+															'products.html')}>
+														Товары</a>
 												</li>
 												<li className="main-menu__menu-link">
 													<a className="main-menu__menu-link"
