@@ -10,9 +10,9 @@ export const SectionCollectionsPage = ({ postData }) => {
 	const isHomepage = location.pathname === '/';
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
-
 	useEffect(() => {
-		if (!isMobile) {
+		if (!isMobile && postData) {
+			// Animatsiyani postData yuklanganidan keyin ishga tushirish
 			animateTitles(
 				'.service-description__title',
 				'.service-description__title',
@@ -22,7 +22,7 @@ export const SectionCollectionsPage = ({ postData }) => {
 			);
 			refreshScrollTrigger();
 		}
-	}, [location.pathname, isHomepage]);
+	}, [postData, isMobile]);
 
 
 	const postContent = postData ? postData.content.rendered : null;
