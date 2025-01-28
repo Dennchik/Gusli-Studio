@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
@@ -8,12 +8,12 @@ import returnToSavedPosition from '../../../modules/return-position.js';
 import { applyParallax } from '../../../animations/animations.jsx';
 
 import { Header } from '../../../components/layouts/Header.jsx';
-import {
-	SectionSongWriting
-} from '../../../components/categories/sound/SectionSongWriting.jsx';
 import { Footer } from '../../../components/layouts/Footer.jsx';
 import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
 import { FormModal } from '../../../components/layouts/FormModal.jsx';
+import Seo from '../../../Seo.jsx';
+import {SectionCollectionsPage} from '../../../components/categories/development/SectionCollectionsPage.jsx';
+import axios from 'axios';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';
@@ -44,9 +44,28 @@ function SongWritingPage() {
 		}
 		returnToSavedPosition();
 	}, []);
-
+	const [postData, setPost] = useState(null);
+	useEffect(() => {
+		axios
+			.get(
+				"https://wp-api.gusli-studio.ru/wp-json/wp/v2/posts/273"
+			)
+			.then((response) => {
+				console.log(response.data);
+				if (response.data) {
+					setPost(response.data);
+				} else {
+					console.error("Post data not found or empty array.");
+				}
+			})
+			.catch((error) => {
+				console.error("Error fetching post:", error);
+			});
+	}, []);
+	const seoData = postData ? postData.yoast_head_json : null;
 	return (
 		<>
+			{seoData && <Seo seoData={seoData} />}
 			<header className="page__header">
 				<Header baseUrl={baseUrl} />
 			</header>
@@ -54,7 +73,7 @@ function SongWritingPage() {
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
 						<section className="main-content__body">
-							<SectionSongWriting baseUrl={baseUrl} isHomePage={true} />
+							<SectionCollectionsPage baseUrl={baseUrl} isHomePage={true} postData={postData} />
 						</section>
 						<section className="main-content__offer gradient-neon-color">
 							<Offer baseUrl={baseUrl} />

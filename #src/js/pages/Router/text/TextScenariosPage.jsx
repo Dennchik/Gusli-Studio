@@ -14,6 +14,7 @@ import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
 import { FormModal } from '../../../components/layouts/FormModal.jsx';
 import Seo from '../../../Seo.jsx';
 import axios from 'axios';
+import {SectionCollectionsPage} from '../../../components/categories/development/SectionCollectionsPage.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';
@@ -48,13 +49,12 @@ function TextScenariosPage() {
 	useEffect(() => {
 		axios
 			.get(
-				"https://wp-api.gusli-studio.ru/wp-json/wp/v2/posts",
-				{ params: { slug: "76-napisanie-teksta-razlichnykh-stsenariev" } } // So‘rov parametrlari
+				"https://wp-api.gusli-studio.ru/wp-json/wp/v2/posts/210"
 			)
 			.then((response) => {
 				console.log(response.data);
-				if (Array.isArray(response.data) && response.data.length > 0) {
-					setPost(response.data[0]);
+				if (response.data) {
+					setPost(response.data);
 				} else {
 					console.error("Post data not found or empty array.");
 				}
@@ -74,7 +74,7 @@ function TextScenariosPage() {
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
 						<section className="main-content__body">
-							<SectionTextScenarios baseUrl={baseUrl} isHomePage={true} postData={postData} />
+							<SectionCollectionsPage baseUrl={baseUrl} isHomePage={true} postData={postData} />
 						</section>
 						<section className="main-content__offer gradient-neon-color">
 							<Offer baseUrl={baseUrl} />

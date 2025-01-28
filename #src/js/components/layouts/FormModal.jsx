@@ -6,6 +6,39 @@ export const FormModal = () => {
 	useEffect(() => {
 		buttonShow();
 		modalOpen();
+		const checkInterval = 2000; // Har 2 sekundda tekshirish
+		const timeout = 15000; // 15 sekundda to'xtatish
+		let intervalId;
+		let timeoutId;
+
+		// `service-description__content` klassi bor yoki yo'qligini tekshirish
+		const checkClassExistence = () => {
+			const element = document.querySelector('.service-description__content');
+
+			if (element) {
+				// Element topildi, tekshiruvni to'xtatish
+				clearInterval(intervalId); // Tekshiruvni to'xtatish
+				clearTimeout(timeoutId); // Timeoutni to'xtatish
+				// Bu yerda kerakli funksiyalarni chaqirishingiz mumkin
+				buttonShow();
+				modalOpen();
+			}
+		};
+
+		// Har 2 sekundda class mavjudligini tekshirish
+		intervalId = setInterval(checkClassExistence, checkInterval);
+
+		// Agar 15 sekundda element topilmasa, tekshiruvni to'xtatish
+		timeoutId = setTimeout(() => {
+			clearInterval(intervalId);
+			console.warn('Class "service-description__content" not found after 15 seconds');
+		}, timeout);
+
+		// Component unmount bo'lganda interval va timeoutni to'xtatish
+		return () => {
+			clearInterval(intervalId);
+			clearTimeout(timeoutId);
+		};
 	}, []);
 
 	const [isChecked, setIsChecked] = useState(true);

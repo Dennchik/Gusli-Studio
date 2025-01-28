@@ -7,7 +7,6 @@ import {
 
 //* ----------------------------------------------------------------------------
 export const SectionCollectionsPage = ({ postData }) => {
-	const isHomepage = location.pathname === '/';
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
 	useEffect(() => {

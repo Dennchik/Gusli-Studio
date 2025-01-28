@@ -50,13 +50,12 @@ function CreateCollectionsPage() {
 	useEffect(() => {
 		axios
 			.get(
-				"https://wp-api.gusli-studio.ru/wp-json/wp/v2/posts",
-				{ params: { slug: "sozdanie-sbornikov" } } // So‘rov parametrlari
+				"https://wp-api.gusli-studio.ru/wp-json/wp/v2/posts/245"
 			)
 			.then((response) => {
 				console.log(response.data);
-				if (Array.isArray(response.data) && response.data.length > 0) {
-					setPost(response.data[0]);
+				if (response.data) {
+					setPost(response.data);
 				} else {
 					console.error("Post data not found or empty array.");
 				}
