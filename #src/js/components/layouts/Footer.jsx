@@ -12,11 +12,9 @@ export const Footer = ({ baseUrl, isHomePage }) => {
 	useEffect(() => {
 		const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 		if (!isMobile) {
-			if (isHomePage) {
-				tlFooterParallel();
-				tlFooterHorizontal();
-				initSectionTriggerMove('#footer', '.link-key--contacts');
-			}
+			tlFooterParallel();
+			tlFooterHorizontal();
+			initSectionTriggerMove('#footer', '.link-key--contacts');
 		}
 	}, []);
 	const getPath = (fileName) => {
@@ -81,38 +79,22 @@ export const Footer = ({ baseUrl, isHomePage }) => {
 						</div>
 						<div className="community__icons">
 							<div className="community__icon">
-								<a className="wa"
-									title="WhatsApp"
-									target="blank"
-									href="https://wa.me/79106044424"
-								>
+								<a className="wa" title="WhatsApp" target="blank" href="https://wa.me/79106044424">
 									<i className="icon-whatsapp"></i>
 								</a>
 							</div>
 							<div className="community__icon">
-								<a className="wa"
-									title="VK"
-									target="blank"
-									href="https://vk.com/studio_gusli"
-								>
+								<a className="wa" title="VK" target="blank" href="https://vk.com/studio_gusli">
 									<i className="icon-vk-brand"></i>
 								</a>
 							</div>
 							<div className="community__icon">
-								<a className="wa"
-									title="TG"
-									target="blank"
-									href="https://t.me/gusli_studio"
-								>
+								<a className="wa" title="TG" target="blank" href="https://t.me/gusli_studio">
 									<i className="icon-telegram-fly"></i>
 								</a>
 							</div>
 							<div className="community__icon">
-								<a className="wa"
-									title="youtube"
-									target="blank"
-									href="https://youtube.com/@guslistudio6257?si=36fe20TYpLAJyB3m"
-								>
+								<a className="wa" title="youtube" target="blank" href="https://youtube.com/@guslistudio6257?si=36fe20TYpLAJyB3m">
 									<i className="icon-youtube-logo"></i>
 								</a>
 							</div>

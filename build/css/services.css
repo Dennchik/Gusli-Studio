@@ -597,13 +597,6 @@ h6 {
   font-style: normal;
 }
 @font-face {
-  font-family: "icon-set";
-  font-display: swap;
-  src: url("../fonts/icon-set.eot") format("eot"), url("../fonts/icon-set.woff") format("woff"), url("../fonts/icon-set.woff2") format("woff2"), url("../fonts/icon-set.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "irmologion Caps ieUcs";
   font-display: swap;
   src: url("../fonts/irmologion Caps ieUcs.eot") format("eot"), url("../fonts/irmologion Caps ieUcs.woff") format("woff"), url("../fonts/irmologion Caps ieUcs.woff2") format("woff2"), url("../fonts/irmologion Caps ieUcs.ttf") format("truetype");
@@ -614,6 +607,13 @@ h6 {
   font-family: "Manrope";
   font-display: swap;
   src: url("../fonts/Manrope.eot") format("eot"), url("../fonts/Manrope.woff") format("woff"), url("../fonts/Manrope.woff2") format("woff2"), url("../fonts/Manrope.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "icon-set";
+  font-display: swap;
+  src: url("../fonts/icon-set.eot") format("eot"), url("../fonts/icon-set.woff") format("woff"), url("../fonts/icon-set.woff2") format("woff2"), url("../fonts/icon-set.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
