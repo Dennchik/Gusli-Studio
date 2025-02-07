@@ -13,7 +13,6 @@ const Seo = ({ seoData }) => {
         robots,
         og_title,
         og_description,
-        og_url,
         og_site_name,
         article_published_time,
         article_modified_time,
@@ -32,7 +31,6 @@ const Seo = ({ seoData }) => {
             )}
             {og_title && <meta property="og:title" content={og_title} />}
             {og_description && <meta property="og:description" content={og_description} />}
-            {og_url && <meta property="og:url" content={og_url} />}
             {og_site_name && <meta property="og:site_name" content={og_site_name} />}
             {article_published_time && (
                 <meta
@@ -65,7 +63,6 @@ Seo.propTypes = {
         }),
         og_title: PropTypes.string,
         og_description: PropTypes.string,
-        og_url: PropTypes.string,
         og_site_name: PropTypes.string,
         article_published_time: PropTypes.string,
         article_modified_time: PropTypes.string,

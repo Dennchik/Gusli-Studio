@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
 import {
@@ -7,6 +7,7 @@ import {
 	tlFooterParallel,
 } from '../../animations/animations.jsx';
 import { AboutCompany } from '../chunks/AboutCompany.jsx';
+import axios from 'axios';
 //* ----------------------------------------------------------------------------
 export const Footer = ({ baseUrl, isHomePage }) => {
 	useEffect(() => {
@@ -22,6 +23,7 @@ export const Footer = ({ baseUrl, isHomePage }) => {
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
 	};
+
 	return (
 		<Element className="footer">
 			<div className="footer__content">

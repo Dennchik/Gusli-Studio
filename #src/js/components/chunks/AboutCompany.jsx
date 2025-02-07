@@ -1,32 +1,40 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
+import axios from 'axios';
 //* ----------------------------------------------------------------------------
 export const AboutCompany = ({ baseUrl }) => {
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
 	};
+	const [footerData, setFooter] = useState(null);
+	useEffect(() => {
+		axios
+			.get(
+				"https://wp-api.gusli-studio.ru/wp-json/wp/v2/posts/452"
+			)
+			.then((response) => {
+				console.log(response.data);
+				if (response.data) {
+					setFooter(response.data);
+				} else {
+					console.error("Post data not found or empty array.");
+				}
+			})
+			.catch((error) => {
+				console.error("Error fetching post:", error);
+			});
+	}, []);
+    const acf = footerData ? footerData.acf : null;
 	return (
 		<div className="about-company">
 			<div className="about-company__column el-1">
 				<div className="about-company__body">
 					<div className="about-company__title">КОМПАНИЯ</div>
 					<div className="about-company__text">
-						<p>Наша медиа-группа представляет собой превосходную студию
-							звукозаписи и продюсерскую компанию. Мы&nbsp;специализируемся на
-							создании текстов, продюсировании, звукозаписи и&nbsp;развитии
-							талантов.
-							Готовы к&nbsp;сотрудничеству с&nbsp;вами в&nbsp;любое время.</p>
-						<p>Мы признаём и ценим значимость каждого проекта. Наше
-							обязательство - обеспечить высочайшее качество звукозаписи,
-							гибкость и&nbsp;терпение, необходимые для&nbsp;достижения вами
-							высокого
-							уровня в&nbsp;конкурентной среде современного рынка.</p>
-						<p>В нашей студии вас ждёт дружелюбная и&nbsp;уютная атмосфера,
-							создающая
-							идеальное окружение для&nbsp;раскрытия вашего таланта
-							и&nbsp;создания ваших
-							лучших произведений.</p>
+						<p>{acf && acf.footer_data[0].companiya.text_1}</p>
+						<p>{acf && acf.footer_data[0].companiya.text_2}</p>
+						<p>{acf && acf.footer_data[0].companiya.text_3}</p>
 					</div>
 				</div>
 				<div className="about-company__footer">
@@ -39,20 +47,15 @@ export const AboutCompany = ({ baseUrl }) => {
 					<div className="about-company__title">СЕРВИС</div>
 					<div className="about-company__item-services">
 						<i className="icon-microphone"></i>
-						<span>Мы предлагаем услуги аналоговой и цифровой записи, а&nbsp;также
-							микширования в&nbsp;широком спектре жанров.</span>
+						<span>{acf && acf.footer_data[0].servis.text_1}</span>
 					</div>
 					<div className="about-company__item-services">
 						<i className="icon-fast-forward"></i>
-						<span>Наша студия привлекает великолепным интерьером и&nbsp;оборудованными
-							комфортабельными помещениями, идеально подходящими для&nbsp;создания
-							лучших произведений.</span>
+						<span>{acf && acf.footer_data[0].servis.text_1}</span>
 					</div>
 					<div className="about-company__item-services">
 						<i className="icon-music"></i>
-						<span>В нашей студии мы внедряем передовое оборудование и&nbsp;программное
-							обеспечение для&nbsp;микширования, обеспечивая высочайшее качество
-							звучания ваших треков. Ваше творчество&nbsp;- наш приоритет.</span>
+						<span>{acf && acf.footer_data[0].servis.text_1}</span>
 					</div>
 				</div>
 				<div className="about-company__footer">

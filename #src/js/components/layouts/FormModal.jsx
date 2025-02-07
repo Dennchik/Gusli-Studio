@@ -61,8 +61,8 @@ export const FormModal = () => {
 					<div className="order-place__body">
 						<form className="form-order order-place__form"
 							id="form-order"
-							method="get"
-							action="">
+							method="post"
+							action="https://gusli-studio.ru/adsasd">
 							<div className="order-place__row">
 								<div className="form-order__column">
 									<div className="form-order__input">
@@ -133,6 +133,7 @@ export const FormModal = () => {
 								<div className="order-place__button">
 									<button className="submit-button btn-grad"
 										form="form-order"
+										name="send_msg"
 										aria-label="отправить"
 										type={'submit'}>
 										<span>отправить</span>
