@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
-import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 import {
 	animateTitles,
 	refreshScrollTrigger
@@ -9,7 +8,7 @@ import { buildSwiper } from '../../layouts/build-swiper.js';
 import { partnersSlide } from '../../layouts/partners-slide.js';
 
 
-export const Partners = () => {
+export const Partners = ({partners}) => {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	useEffect(() => {
 		buildSwiper();
@@ -33,113 +32,22 @@ export const Partners = () => {
 				<div className="partners__content">
 					<div className="partners-slide">
 						<div className="partners-slide__body _swiper">
-							<div className="partners-slide__column container">
-								<div className="partners-slide__content">
-									<div className="partners-slide__image">
-										<picture> {isWebpSupported()
-											? <img src={'img/partners/partn-1.webp'}
-												alt="Игорь Угольников" />
-											: <img src={'img/partners/partn-1.png'}
-												alt="Игорь Угольников" />}
-										</picture>
+							{partners  &&
+								partners.map((client, index) => (
+									// eslint-disable-next-line react/jsx-key
+									<div className={`partners-slide__column ${index === 0 ? 'container' : ''}`}>
+										<div className="partners-slide__content">
+											<div className="partners-slide__image">
+												<picture>
+													<img src={client.img} alt={client.name}/>
+												</picture>
+											</div>
+											<div className="box partners-slide__title el">{client.name}</div>
+											<div className="partners-slide__text">{client.desc}</div>
+										</div>
 									</div>
-									<div className="box partners-slide__title el"> Игорь
-										Угольников
-									</div>
-									<div className="partners-slide__text">Советский
-										и&nbsp;российский актёр, кинорежиссёр, сценарист, продюсер,
-										телеведущий.
-									</div>
-								</div>
-							</div>
-							<div className="partners-slide__column">
-								<div className="partners-slide__content">
-									<div className="partners-slide__image">
-										<picture> {isWebpSupported()
-											? <img src={'img/partners/partn_2.webp'}
-												alt="Маргарита Калан" />
-											: <img src={'img/partners/partn_2.jpg'}
-												alt="Маргарита Калан" />}
-										</picture>
-									</div>
-									<div className="partners-slide__title">Маргарита Калан</div>
-									<div className="partners-slide__text">
-										Певица, композитор, поэтесса. Родилась
-										в&nbsp;г.&nbsp;Обнинск.
-										Закончив гимназию и&nbsp;муз.школу поступила в&nbsp;МСИ.
-									</div>
-								</div>
-							</div>
-							<div className="partners-slide__column">
-								<div className="partners-slide__content">
-									<div className="partners-slide__image">
-										<picture> {isWebpSupported()
-											? <img src={'img/partners/partn_3.webp'}
-												alt="Иеромонах Фотий" />
-											: <img src={'img/partners/partn_3.jpg'}
-												alt="Иеромонах Фотий" />}
-										</picture>
-									</div>
-									<div className="partners-slide__title">Епископ Иосиф</div>
-									<div className="partners-slide__text">Викарий патриарха
-										Московского и&nbsp;всея&nbsp;Руси. Наместник Оптиной
-										пустыни.
-										Церковный историк.
-									</div>
-								</div>
-							</div>
-							<div className="partners-slide__column">
-								<div className="partners-slide__content">
-									<div className="partners-slide__image">
-										<picture> {isWebpSupported()
-											? <img src={'img/partners/partn_4.webp'}
-												alt="Алексей Егоров" />
-											: <img src={'img/partners/partn_4.jpg'}
-												alt="Алексей Егоров" />}
-										</picture>
-									</div>
-									<div className="partners-slide__title">Алексей Егоров</div>
-									<div className="partners-slide__text">Российский
-										боксер-профессионал, выступающий в&nbsp;первой тяжёлой
-										весовой категории. Мастер спорта.
-									</div>
-								</div>
-							</div>
-							<div className="partners-slide__column">
-								<div className="partners-slide__content">
-									<div className="partners-slide__image">
-										<picture>
-											{isWebpSupported()
-												? <img src={'img/partners/partn_6.webp'}
-													alt="Епископ Иосиф<" />
-												: <img src={'img/partners/partn_6.jpg'}
-													alt="Епископ Иосиф " />}
-										</picture>
-									</div>
-									<div className="partners-slide__title">Иеромонах Фотий</div>
-									<div className="partners-slide__text">
-										Победитель телевизионного шоу «Голос».
-									</div>
-								</div>
-							</div>
-							<div className="partners-slide__column">
-								<div className="partners-slide__content">
-									<div className="partners-slide__image">
-										<picture> {isWebpSupported()
-											? <img src={'img/partners/partn_5.webp'}
-												alt="Александр Яковлев" />
-											: <img src={'img/partners/partn_5.jpg'}
-												alt="Александр Яковлев" />}
-										</picture>
-									</div>
-									<div className="partners-slide__title">Александр Яковлев</div>
-									<div className="partners-slide__text">Российский
-										боксер-профессионал, выступающий в&nbsp;первой тяжёлой
-										весовой
-										категории. Мастер спорта.
-									</div>
-								</div>
-							</div>
+								))
+							}
 						</div>
 						<div className="partners-slide__pagination"></div>
 					</div>

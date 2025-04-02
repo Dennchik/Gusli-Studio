@@ -124,7 +124,7 @@ export const MenuFloat = ({ baseUrl }) => {
 							<div className="menu-float__layout menu-float__layout--primary">
 								<div className="menu-float__content">
 									<a className="menu-float__mail"
-										href="tel:+79106044424">
+										href="tel:+79023944484">
 										<div className="menu-float__logo">
 											<i className="icon-phone-call"></i></div>
 										<div className="menu-float__breadcrumb">

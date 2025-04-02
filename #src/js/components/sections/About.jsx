@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 //* ----------------------------------------------------------------------------
-export const About = () => {
+export const About = ({post_banner}) => {
 	const [isContentExpanded, setIsContentExpanded] = useState(
 		window.innerWidth > 920);
 	const toggleButtonRef = useRef(null);
@@ -59,33 +58,29 @@ export const About = () => {
 			<div className="material-parallax parallax">
 				<div className="parallax__image">
 					<picture>
-						{isWebpSupported()
-							? <img className='parallax__image bg'
-								src={'img/about/ab-img-01.webp'} alt="image" />
-							: <img className='parallax__image bg'
-								src={'img/about/ab-img-01.png'} alt="image" />}
+						<img className='parallax__image bg'
+							 src={post_banner.img} alt="image" />
 					</picture>
 				</div>
 			</div>
 			<div className="about__container">
 				<div className="content-body about__content">
 					<div className="content-body__column">
-						<h1 className="content-body__title h1_01901">В нашей студии:</h1>
+						<h1 className="content-body__title h1_01901">
+							{post_banner.title}
+						</h1>
 						<div ref={textBlockRef} className="content-body__text">
-							<p>- описав свой проект, Вы&nbsp;получаете уникальные
-								предложения от&nbsp;ведущих профессионалов. Наймите именно
-								того&nbsp;специалиста, который идеально подходит
-								для&nbsp;воплощения вашей музыкальной идеи!
+							<p>
+								{post_banner.desc1}
 								<span ref={toggleButtonRef} className="content-body__icon">
 									<i className="content-body__ellipsis"></i>
 								</span>
 							</p>
 							<div ref={hideBoxRef} className="content-body__hide-box">
 								<div className="content-body__wrapper">
-									<span>- мы понимаем, что&nbsp;талант без&nbsp;правильного
-										оборудования может оставаться скрытым. Именно поэтому
-										мы&nbsp;предлагаем все&nbsp; необходимое для&nbsp;раскрытия
-										вашего потенциала.</span>
+									<span>
+										{post_banner.desc2}
+									</span>
 								</div>
 							</div>
 						</div>

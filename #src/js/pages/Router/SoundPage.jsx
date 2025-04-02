@@ -1,24 +1,29 @@
-import React, { useEffect } from 'react';
-import { gsap } from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import React, {useEffect, useState} from 'react';
+import {gsap} from 'gsap';
+import {useGSAP} from '@gsap/react';
+import {ScrollSmoother} from 'gsap/ScrollSmoother';
 
 import returnToSavedPosition from '../../modules/return-position.js';
-import { applyParallax } from '../../animations/animations.jsx';
+import {applyParallax} from '../../animations/animations.jsx';
 
-import { Header } from '../../components/layouts/Header.jsx';
-import { ServiceSound } from '../../components/categories/ServiceSound.jsx';
-import { Answers } from '../../components/sections/Answers.jsx';
-import { Footer } from '../../components/layouts/Footer.jsx';
-import { MenuFloat } from '../../components/layouts/Menu-float.jsx';
-import { FormModal } from '../../components/layouts/FormModal.jsx';
+import {Header} from '../../components/layouts/Header.jsx';
+import {ServiceSound} from '../../components/categories/ServiceSound.jsx';
+import {Answers} from '../../components/sections/Answers.jsx';
+import {Footer} from '../../components/layouts/Footer.jsx';
+import {MenuFloat} from '../../components/layouts/Menu-float.jsx';
+import {FormModal} from '../../components/layouts/FormModal.jsx';
+import axios from 'axios';
+import loaded from '../../assets/preloader.js';
+import Seo from '../../Seo.jsx';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '..';
 
 function SoundPage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-
+	const [postData, setPost] = useState(null);
+	const [Uslugi, setUslugi] = useState(null);
+	const [SeoData, setSeoData] = useState(null);
 	useGSAP(
 		() => {
 			// create the smooth scroller FIRST!
@@ -36,13 +41,15 @@ function SoundPage() {
 			}
 		},
 	);
-
 	useEffect(() => {
 		if (!isMobile) {
 			applyParallax('.material-parallax');
 		}
 		returnToSavedPosition();
-	}, []);
+		if (!postData){
+			loaded('.preloader');
+		}
+	}, [postData]);
 
 	// Переход к якорю из URL
 	useEffect(() => {
@@ -60,8 +67,33 @@ function SoundPage() {
 		}
 	}, []);
 
+	useEffect(() => {
+		axios
+			.get(
+				'https://wp-api.gusli-studio.ru/wp-json/wp/v2/posts/495'
+			)
+			.then((response) => {
+				console.log(response.data);
+				if (response.data) {
+					setPost(response.data);
+					setSeoData(response.data.yoast_head_json);
+					setUslugi(response.data.acf.uslugi);
+					let storedData = JSON.parse(sessionStorage.getItem('offer')) || {};
+					storedData['sound'] = response.data.acf.prays;
+					sessionStorage.setItem('offer', JSON.stringify(storedData));
+					console.log(Uslugi);
+
+				} else {
+					console.error('Post data not found or empty array.');
+				}
+			})
+			.catch((error) => {
+				console.error('Error fetching post:', error);
+			});
+	}, []);
 	return (
 		<>
+			{SeoData && <Seo SeoData={SeoData} />}
 			<header className="page__header">
 				<Header baseUrl={baseUrl} />
 			</header>
@@ -69,7 +101,7 @@ function SoundPage() {
 				<div className="main-content" id="wrapper">
 					<div className="main-content__content" id="content">
 						<section className="main-content__categories">
-							<ServiceSound baseUrl={baseUrl} isHomePage={true} />
+							{Uslugi && <ServiceSound Uslugi={Uslugi} baseUrl={baseUrl} isHomePage={true} />}
 						</section>
 						<section className="main-content__questions" id="answers">
 							<Answers baseUrl={baseUrl} />

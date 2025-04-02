@@ -31,7 +31,7 @@ export const Footer = ({ baseUrl, isHomePage }) => {
 							<i className="icon-achievements">
 							</i>
 						</a>
-						<a href="tel:++79106044424">
+						<a href="tel:++79023944484">
 							<i className="icon-services"></i>
 						</a>
 						<a href="mailto:studio@obninsk-gusli.ru">
@@ -53,9 +53,9 @@ export const Footer = ({ baseUrl, isHomePage }) => {
 								</div>
 							</div>
 							<div className="contacts__item">
-								<a href="tel:+79106044424">
+								<a href="tel:+79023944484">
 									<i className="icon-phone-call"></i>
-									<span>+7 910 604-44-24</span>
+									<span>+7 902 394-44-84</span>
 								</a>
 							</div>
 							<div className="contacts__item">

@@ -341,7 +341,7 @@ export const Answers = () => {
 						<div className="questions__collapse">
 							<div className="questions__text">
 								<p>Позвоните по&nbsp;телефону&ensp;
-									<a href="tel:++79106044424">+7 (910) 604-44-24</a>&ensp;
+									<a href="tel:++79023944484">+7 (902) 394-44-84</a>&ensp;
 									или&nbsp;оставьте заявку на&nbsp;нашем сайте.</p>
 							</div>
 						</div>
@@ -352,8 +352,8 @@ export const Answers = () => {
 						</div>
 						<div className="questions__collapse">
 							<div className="questions__text">
-								<p>Позвоните по телефону:&nbsp;<a href="tel:++79106044424">+7
-									(910) 604-44-24</a>&ensp;
+								<p>Позвоните по телефону:&nbsp;<a href="tel:++79023944484">+7
+									(902) 394-44-84</a>&ensp;
 									или оставьте заявку на нашем сайте.</p>
 							</div>
 						</div>

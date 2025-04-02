@@ -3,12 +3,12 @@ import React, { useEffect, useRef } from 'react';
 
 //* ------------------------ Component's MainSlide -----------------------------
 
-export const VideoSlide = ({ baseUrl }) => {
+export const VideoSlide = ({ baseUrl, post_banner }) => {
 	const videoRef = useRef(null);
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
 	};
-
+	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	useEffect(() => {
 		if (videoRef.current) {
 			const video = videoRef.current;
@@ -80,21 +80,29 @@ export const VideoSlide = ({ baseUrl }) => {
 			};
 		}
 	}, []);
-
+	const showreelVideo = isMobile ? post_banner.showreel_mobile : post_banner.showreel_desctop;
+	const showreelPoster = post_banner.img;
 	return (
 		<div className="main-video">
 			<div className="main-video__body">
 				<div className="main-video__box _img">
-					<video ref={videoRef} id="player-id" className="video-js" preload="auto" muted="muted" playsInline autoPlay loop poster={getPath('img/audio/showreel-2.png')} src={getPath('img/audio/showreel-2.mp4')}>
+					<video
+						ref={videoRef}
+						id="player-id"
+						className="video-js"
+						preload="auto"
+						muted="muted"
+						playsInline
+						autoPlay
+						loop
+						poster={showreelPoster}
+						src={showreelVideo}>
 					</video>
 				</div>
 				<div className="main-video__content _container">
-					<h1 className="main-video__title el-slidetitle h1_01901">
-						<span>Видеопродакшн. Создаем</span>
-						<span>видеоролики под&nbsp;ключ</span>
-					</h1>
+					<h1 className="main-video__title el-slidetitle h1_01901" dangerouslySetInnerHTML={{__html: post_banner.title}}/>
 					<div className="main-video__text t_01901">
-						Подготовим КП, а&nbsp;именно напишем идеи и&nbsp;сделаем&nbsp;смету.
+						{post_banner.desc}
 					</div>
 					<div className="main-video__button _open-button">
 						<button className="order-button btn-grad"

@@ -9,7 +9,7 @@ import {
 } from '../../animations/anime-js.jsx';
 import { Offer } from '../chunks/Offer.jsx';
 
-export const Categories = ({ baseUrl }) => {
+export const Categories = ({ baseUrl, descCategories }) => {
 	// const isHomepage = location.pathname === '/';
 	const boxImagesRef = useRef([]);
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
@@ -168,8 +168,7 @@ export const Categories = ({ baseUrl }) => {
 											</a>
 										</div>
 										<div className="services-slide__info split-stagger lag-1">
-											Чистый звук, профессиональное оборудование, опытные
-											специалисты.
+											{descCategories.desc_1}
 										</div>
 									</div>
 									<div className="services-slide__row">
@@ -260,8 +259,7 @@ export const Categories = ({ baseUrl }) => {
 											</a>
 										</div>
 										<div className="services-slide__info split-stagger lag-2">
-											Видеозапись: сохраним важных моментов жизни
-											в&nbsp;высоком качестве.
+											{descCategories.desc_2}
 										</div>
 									</div>
 									<div className="services-slide__row">
@@ -352,8 +350,7 @@ export const Categories = ({ baseUrl }) => {
 											</a>
 										</div>
 										<div className="services-slide__info split-stagger lag-1">
-											Текст: пишем песни, сценарии на&nbsp;основе вашей
-											или&nbsp;нашей оригинальной идеи.
+											{descCategories.desc_3}
 										</div>
 									</div>
 									<div className="services-slide__row">
@@ -468,8 +465,7 @@ export const Categories = ({ baseUrl }) => {
 											</a>
 										</div>
 										<div className="services-slide__info split-stagger lag-2">
-											Мероприятия: детские праздники, ведущие, диджеи,
-											аниматоры.
+											{descCategories.desc_4}
 										</div>
 									</div>
 									<div className="services-slide__row">
@@ -573,8 +569,7 @@ export const Categories = ({ baseUrl }) => {
 											</a>
 										</div>
 										<div className="services-slide__info split-stagger lag-1">
-											Разработка сайтов. Дизайн обложек и&nbsp;буклетов.
-											Создание сборников, плей-листов.
+											{descCategories.desc_5}
 										</div>
 									</div>
 								</div>
@@ -586,7 +581,7 @@ export const Categories = ({ baseUrl }) => {
 			<div className="hr-shelf _container">
 				<div className="hr-shelf__content"></div>
 			</div>
-			{<Offer baseUrl={baseUrl} />}
+			{<Offer baseUrl={baseUrl} page={'index'}/>}
 		</div>
 	);
 };

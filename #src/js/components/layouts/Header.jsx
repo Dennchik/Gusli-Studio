@@ -99,12 +99,12 @@ export const Header = ({ baseUrl }) => {
 						<div className="header__bookmark"></div>
 					</div>
 					<div className="header__column el-community">
-						<a href="tel:++79106044424"
+						<a href="tel:++79023944484"
 							className="el-community__phone">
 							<i className="icon-phone-ringing"></i>
 							<div className="el-community__content">
 								<h5 className="el-community__title">Связаться с нами</h5>
-								<span>+7 910 604-44-24</span>
+								<span>+7 902 394-44-84</span>
 							</div>
 						</a>
 					</div>

@@ -374,7 +374,7 @@ export const Services = ({ baseUrl }) => {
 			<div className="hr-shelf _container">
 				<div className="hr-shelf__content"></div>
 			</div>
-			{<Offer baseUrl={baseUrl} />}
+			{<Offer baseUrl={baseUrl} page={'index'}/>}
 		</div>
 	);
 };

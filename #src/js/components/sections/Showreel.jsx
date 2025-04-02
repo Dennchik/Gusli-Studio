@@ -3,12 +3,8 @@ import React, { useEffect, useRef } from 'react';
 
 //* ------------------------ Component's MainSlide -----------------------------
 
-export const Showreel = ({ baseUrl }) => {
+export const Showreel = ({ post_banner }) => {
 	const videoRef = useRef(null);
-	const getPath = (fileName) => {
-		return `${baseUrl}/${fileName}`;
-	};
-
 	useEffect(() => {
 		if (videoRef.current) {
 			const video = videoRef.current;
@@ -80,8 +76,10 @@ export const Showreel = ({ baseUrl }) => {
 			};
 		}
 	}, []);
+	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
-
+	const showreelVideo = isMobile ? post_banner.showreel_mobile : post_banner.showreel_desctop;
+	const showreelPoster = post_banner.img;
 	return (
 		<div className="main-video">
 			<div className="main-video__body">
@@ -96,23 +94,20 @@ export const Showreel = ({ baseUrl }) => {
 						playsInline
 						autoPlay
 						loop
-						poster={getPath('img/audio/showreel-1.png')}
-						src={getPath('img/audio/showreel-1.mp4')}>
+						poster={showreelPoster}
+						src={showreelVideo}>
 					</video>
 				</div>
 				<div className="main-video__content _container">
 					<div className="main-video__row">
-						<h1 className="main-video__title el-slidetitle h1_01901">
-							<span>Профессиональная </span>
-							<span>студия звукозаписи </span>
-							<span>ГУСЛИ Media-Group</span> в&nbsp;Обнинске
-						</h1>
-						<div className="main-video__text t_01901">Мы — современная студия звукозаписи, в&nbsp;которой работают лучшие специалисты в&nbsp;области записи и&nbsp;продюсирования музыки, предоставляем самый лучший сервис и&nbsp;удобства для&nbsp;современных артистов, как&nbsp;подписанных, так и &nbsp;независимых.
+						<h1 className="main-video__title el-slidetitle h1_01901" dangerouslySetInnerHTML={{__html: post_banner.title}}/>
+						<div className="main-video__text t_01901">
+							{post_banner.desc}
 						</div>
 					</div>
 					<div className="main-video__button">
 						<a target={'_blank'} rel="noopener noreferrer"
-							href={'https://n1106820.yclients.com/company/1021942/personal/select-services?o='}
+							href={post_banner.btn_url}
 							className="button-buy btn-grad"
 							type={'button'}>
 							<span>Забронировать </span>
@@ -125,5 +120,5 @@ export const Showreel = ({ baseUrl }) => {
 };
 
 Showreel.propTypes = {
-	baseUrl: PropTypes.string.isRequired,
+	post_banner: PropTypes.array.isRequired,
 };

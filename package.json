@@ -108,7 +108,6 @@
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.3.10",
     "typescript-eslint": "^8.8.1",
-    "video.js": "^8.19.1",
     "webpack": "^5.95.0",
     "webpack-stream": "^7.0.0"
   },
@@ -126,6 +125,7 @@
     "rellax": "^1.12.1",
     "stats.js": "^0.17.0",
     "swiper": "^11.1.14",
-    "three": "^0.170.0"
+    "three": "^0.170.0",
+    "video.js": "^8.21.0"
   }
 }

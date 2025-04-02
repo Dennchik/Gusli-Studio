@@ -24,15 +24,15 @@ export const SectionVoiceActing = ({ postData }) => {
 
 			if (element) {
 				element.setAttribute(
-					"href",
-					"https://wp-api.gusli-studio.ru/wp-content/uploads/2025/01/pr-do.pdf"
+					'href',
+					'https://wp-api.gusli-studio.ru/wp-content/uploads/2025/01/pr-do.pdf'
 				);
 
 				// URL boshqa sahifada ochilishi uchun target atributini o'rnatish
-				element.setAttribute("target", "_blank");
+				element.setAttribute('target', '_blank');
 
 				// rel atributini xavfsizlik uchun o'rnatish
-				element.setAttribute("rel", "noreferrer noopener");
+				element.setAttribute('rel', 'noreferrer noopener');
 			} else {
 				console.warn('Element with class "service-description__link" not found.');
 			}

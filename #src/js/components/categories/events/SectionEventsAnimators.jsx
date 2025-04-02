@@ -21,7 +21,7 @@ export const SectionEventsAnimators = ({ postData }) => {
 			refreshScrollTrigger();
 
 
-			const targetElements = document.querySelectorAll(".service-description__content");
+			const targetElements = document.querySelectorAll('.service-description__content');
 
 			let targetElement;
 			if (postData.id === 358) {
@@ -32,18 +32,18 @@ export const SectionEventsAnimators = ({ postData }) => {
 
 			if (targetElement) {
 				// Yangi HTML elementni yaratish
-				const newDiv = document.createElement("div");
-				newDiv.className = "service-description__button _open-button";
-				newDiv.style.transform = "translateY(0px)";
-				newDiv.style.opacity = "1";
-				newDiv.style.display = "flex";
+				const newDiv = document.createElement('div');
+				newDiv.className = 'service-description__button _open-button';
+				newDiv.style.transform = 'translateY(0px)';
+				newDiv.style.opacity = '1';
+				newDiv.style.display = 'flex';
 
-				const button = document.createElement("button");
-				button.className = "order-button btn-grad";
-				button.type = "button";
+				const button = document.createElement('button');
+				button.className = 'order-button btn-grad';
+				button.type = 'button';
 
-				const span = document.createElement("span");
-				span.textContent = "оставить заявку";
+				const span = document.createElement('span');
+				span.textContent = 'оставить заявку';
 
 				// Elementlarni o‘zaro bog‘lash
 				button.appendChild(span);

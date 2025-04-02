@@ -1,8 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 const Seo = ({ seoData }) => {
+    console.log(seoData);
     if (!seoData) {
         return null; // Agar seoData bo'sh bo'lsa, hech narsa qaytarilmaydi
     }

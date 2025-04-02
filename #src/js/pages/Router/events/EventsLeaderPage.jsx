@@ -1,21 +1,19 @@
 import React, {useEffect, useState} from 'react';
-import { gsap } from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import {gsap} from 'gsap';
+import {useGSAP} from '@gsap/react';
+import {ScrollSmoother} from 'gsap/ScrollSmoother';
 
 import returnToSavedPosition from '../../../modules/return-position.js';
-import { applyParallax } from '../../../animations/animations.jsx';
+import {applyParallax} from '../../../animations/animations.jsx';
 
-import { Header } from '../../../components/layouts/Header.jsx';
-import {
-	SectionEventsLeader
-} from '../../../components/categories/events/SectionEventsLeader.jsx';
-import { Footer } from '../../../components/layouts/Footer.jsx';
-import { MenuFloat } from '../../../components/layouts/Menu-float.jsx';
-import { FormModal } from '../../../components/layouts/FormModal.jsx';
+import {Header} from '../../../components/layouts/Header.jsx';
+import {Footer} from '../../../components/layouts/Footer.jsx';
+import {MenuFloat} from '../../../components/layouts/Menu-float.jsx';
+import {FormModal} from '../../../components/layouts/FormModal.jsx';
 import axios from 'axios';
 import Seo from '../../../Seo.jsx';
 import {SectionEventsAnimators} from '../../../components/categories/events/SectionEventsAnimators.jsx';
+import loaded from '../../../assets/preloader.js';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother);
 const baseUrl = '../..';
@@ -45,24 +43,27 @@ function EventsLeaderPage() {
 			applyParallax('.material-parallax');
 		}
 		returnToSavedPosition();
-	}, []);
+		if (!postData){
+			loaded('.preloader');
+		}
+	}, [postData]);
 
 	const [postData, setPost] = useState(null);
 	useEffect(() => {
 		axios
 			.get(
-				"https://wp-api.gusli-studio.ru/wp-json/wp/v2/posts/369"
+				'https://wp-api.gusli-studio.ru/wp-json/wp/v2/posts/369'
 			)
 			.then((response) => {
 				console.log(response.data);
 				if (response.data) {
 					setPost(response.data);
 				} else {
-					console.error("Post data not found or empty array.");
+					console.error('Post data not found or empty array.');
 				}
 			})
 			.catch((error) => {
-				console.error("Error fetching post:", error);
+				console.error('Error fetching post:', error);
 			});
 	}, []);
 	const seoData = postData ? postData.yoast_head_json : null;

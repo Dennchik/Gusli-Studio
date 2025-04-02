@@ -1,40 +1,49 @@
 import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
-import { isWebpSupported } from 'react-image-webp/dist/utils/index.js';
 import axios from 'axios';
 //* ----------------------------------------------------------------------------
 export const AboutCompany = ({ baseUrl }) => {
 	const getPath = (fileName) => {
 		return `${baseUrl}/${fileName}`;
 	};
-	const [footerData, setFooter] = useState(null);
+	const [FooterData, setFooterData] = useState(null);
 	useEffect(() => {
-		axios
-			.get(
-				"https://wp-api.gusli-studio.ru/wp-json/wp/v2/posts/452"
-			)
-			.then((response) => {
-				console.log(response.data);
-				if (response.data) {
-					setFooter(response.data);
-				} else {
-					console.error("Post data not found or empty array.");
-				}
-			})
-			.catch((error) => {
-				console.error("Error fetching post:", error);
-			});
+		const localFooterData = JSON.parse(sessionStorage.getItem('FooterData'));
+		console.log(localFooterData);
+		if (localFooterData){
+			setFooterData(localFooterData);
+		} else {
+			axios
+				.get(
+					'https://wp-api.gusli-studio.ru/wp-json/wp/v2/posts/452'
+				)
+				.then((response) => {
+					console.log(response.data);
+					if (response.data) {
+						setFooterData(response.data.acf.footer_data[0]);
+						sessionStorage.setItem('FooterData', JSON.stringify(response.data.acf.footer_data[0]));
+
+						let storedData = JSON.parse(sessionStorage.getItem('offer')) || {};
+						storedData['index'] = response.data.acf.prays;
+						sessionStorage.setItem('offer', JSON.stringify(storedData));
+					} else {
+						console.error('Post data not found or empty array.');
+					}
+				})
+				.catch((error) => {
+					console.error('Error fetching post:', error);
+				});
+		}
 	}, []);
-    const acf = footerData ? footerData.acf : null;
 	return (
 		<div className="about-company">
 			<div className="about-company__column el-1">
 				<div className="about-company__body">
 					<div className="about-company__title">КОМПАНИЯ</div>
 					<div className="about-company__text">
-						<p>{acf && acf.footer_data[0].companiya.text_1}</p>
-						<p>{acf && acf.footer_data[0].companiya.text_2}</p>
-						<p>{acf && acf.footer_data[0].companiya.text_3}</p>
+						<p>{FooterData && FooterData.companiya.text_1}</p>
+						<p>{FooterData && FooterData.companiya.text_2}</p>
+						<p dangerouslySetInnerHTML={{__html: FooterData && FooterData.companiya.text_3}}/>
 					</div>
 				</div>
 				<div className="about-company__footer">
@@ -47,15 +56,15 @@ export const AboutCompany = ({ baseUrl }) => {
 					<div className="about-company__title">СЕРВИС</div>
 					<div className="about-company__item-services">
 						<i className="icon-microphone"></i>
-						<span>{acf && acf.footer_data[0].servis.text_1}</span>
+						<span>{FooterData && FooterData.servis.text_1}</span>
 					</div>
 					<div className="about-company__item-services">
 						<i className="icon-fast-forward"></i>
-						<span>{acf && acf.footer_data[0].servis.text_1}</span>
+						<span>{FooterData && FooterData.servis.text_1}</span>
 					</div>
 					<div className="about-company__item-services">
 						<i className="icon-music"></i>
-						<span>{acf && acf.footer_data[0].servis.text_1}</span>
+						<span>{FooterData && FooterData.servis.text_1}</span>
 					</div>
 				</div>
 				<div className="about-company__footer">
@@ -69,92 +78,26 @@ export const AboutCompany = ({ baseUrl }) => {
 				<div className="about-company__body">
 					<div className="about-company__title">НАША КОМАНДА</div>
 					<div className="team-mates about-company__team-items">
-						<ul className="team-mates__list">
-							<li>
-								<div className="team-mates__image">
-									<picture> {isWebpSupported()
-										? <img src={getPath(
-											'img/teammates/team-1.webp')} alt="image" />
-										: <img src={getPath(
-											'img/teammates/team-1.png')} alt="image" />}
-									</picture>
-								</div>
-							</li>
-							<li>
-								<div className="team-mates__name">
-									Георгий Дудунов
-								</div>
-								<div className="team-mates__text">
-									<p>Георгий - основатель студии и&nbsp;ведущий звукорежиссер.
-										Инженер.</p>
-								</div>
-							</li>
-						</ul>
-						<ul className="team-mates__list">
-							<li>
-								<div className="team-mates__image">
-									<picture>
-										{isWebpSupported()
-											? <img src={getPath(
-												'img/teammates/team-2.webp')} alt="image" />
-											: <img src={getPath(
-												'img/teammates/team-2.png')} alt="image" />}
-									</picture>
-								</div>
-							</li>
-							<li>
-								<div className="team-mates__name">
-									Ryan Gosling
-								</div>
-								<div className="team-mates__text">
-									<p>Райан - ассистент звукорежиссера в&nbsp;студии
-										звукозаписи.</p>
-								</div>
-							</li>
-						</ul>
-						<ul className="team-mates__list">
-							<li>
-								<div className="team-mates__image">
-									<picture>
-										{isWebpSupported()
-											? <img src={getPath(
-												'img/teammates/team-3.webp')} alt="image" />
-											: <img src={getPath(
-												'img/teammates/team-3.png')} alt="image" />}
-									</picture>
-								</div>
-							</li>
-							<li>
-								<div className="team-mates__name">
-									Ryan Gosling
-								</div>
-								<div className="team-mates__text">
-									<p>Райан - ассистент звукорежиссера в&nbsp;студии
-										звукозаписи.</p>
-								</div>
-							</li>
-						</ul>
-						<ul className="team-mates__list">
-							<li>
-								<div className="team-mates__image">
-									<picture>
-										{isWebpSupported()
-											? <img src={getPath(
-												'img/teammates/team-4.webp')} alt="image" />
-											: <img src={getPath(
-												'img/teammates/team-4.png')} alt="image" />}
-									</picture>
-								</div>
-							</li>
-							<li>
-								<div className="team-mates__name">
-									Маргарита Калан
-								</div>
-								<div className="team-mates__text">
-									<p>Певица, композитор, поэтесса.</p>
-								</div>
-							</li>
-						</ul>
+						{FooterData &&
+							FooterData.komanda.slice(0, 4).map((member, i) => (
+								<ul className="team-mates__list" key={i}>
+									<li>
+										<div className="team-mates__image">
+											<picture>
+												<img src={member.img} alt="image" />
+											</picture>
+										</div>
+									</li>
+									<li>
+										<div className="team-mates__name">{member.name}</div>
+										<div className="team-mates__text">
+											<p>{member.desc}</p>
+										</div>
+									</li>
+								</ul>
+							))}
+
+
 					</div>
 				</div>
 			</div>

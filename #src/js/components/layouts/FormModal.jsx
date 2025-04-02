@@ -7,7 +7,7 @@ export const FormModal = () => {
 		buttonShow();
 		modalOpen();
 		const checkInterval = 2000; // Har 2 sekundda tekshirish
-		const timeout = 15000; // 15 sekundda to'xtatish
+		const timeout = 60000; // 60 sekundda to'xtatish
 		let intervalId;
 		let timeoutId;
 
