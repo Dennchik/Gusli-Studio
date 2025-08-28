@@ -10,15 +10,15 @@ loaded('.preloader');
 // const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 // //* Ищем элемент с атрибутом data-page
 // const pageElement = document.body.querySelector('[data-page]');
-//
+
 // //* Получаем значение data-page, если элемент найден
 // const currentPage = pageElement ? pageElement.getAttribute(
 // 	'data-page') : null;
 // if (currentPage !== 'index' && !isMobile) {
 // 	document.addEventListener('DOMContentLoaded', () => {
-// 		const waves = new
-// 		Waves('#holder', {waves: 3, width: 300,});
-// 		waves.animate();
+// 	const waves = new
+// 		Waves('#holder', { waves: 3, width: 300, });
+// 	waves.animate();
 // 	});
 // }
 //* ----------------------------------------------------------------------------

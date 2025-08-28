@@ -1,4 +1,4 @@
-//* Importing modules 
+//* Importing modules
 // noinspection JSUnusedGlobalSymbols
 
 import browserSync from 'browser-sync';
@@ -31,20 +31,19 @@ import { server } from './gulp/tasks/server.js';
 import { sprite } from './gulp/tasks/sprite.js';
 //* Global variables;
 global.$ = {
-	path: path,
-	app: app,
-	gulp: gulp,
-	sourcemaps: sourcemaps,
-	browserSync: browserSync,
-	plumber: plumber,
-	notify: notify,
-	debug: debug,
-	newer: newer,
-	babel: babel,
-	fileInclude: fileInclude,
-	size: size,
-	gulpIf: gulpIf,
-
+  path: path,
+  app: app,
+  gulp: gulp,
+  sourcemaps: sourcemaps,
+  browserSync: browserSync,
+  plumber: plumber,
+  notify: notify,
+  debug: debug,
+  newer: newer,
+  babel: babel,
+  fileInclude: fileInclude,
+  size: size,
+  gulpIf: gulpIf,
 };
 
 //* Watcher
@@ -52,43 +51,45 @@ const change = gulp.series(clearFonts, fonts, fontsStyle);
 const changeJson = gulp.series(json, pugJade);
 
 function reload(done) {
-	browserSync.reload();
-	done();
+  browserSync.reload();
+  done();
 }
 
 const watcher = () => {
-	// gulp.watch(path.react.watch, gulp.series(react, reload));
-	gulp.watch(path.js.watch, gulp.series(js, reload));
-	gulp.watch(path.pug.watch, gulp.series(pugJade, reload));
-	gulp.watch(path.json.watch, gulp.series(changeJson, reload));
-	gulp.watch(path.json.readFile, gulp.series(pugJade, reload));
-	gulp.watch(path.scss.watch, gulp.series(scss, reload));
-	gulp.watch(path.image.watch, gulp.series(image, reload));
-	gulp.watch(path.sprite.watch, gulp.series(sprite, reload));
-	gulp.watch(path.fonts.watch, gulp.series(change, reload));
-	gulp.watch(path.fontsStyle.watch, gulp.series(fontsStyle, reload));
-
+  // gulp.watch(path.react.watch, gulp.series(react, reload));
+  gulp.watch(path.js.watch, gulp.series(js, reload));
+  gulp.watch(path.pug.watch, gulp.series(pugJade, reload));
+  gulp.watch(path.json.watch, gulp.series(changeJson, reload));
+  gulp.watch(path.json.readFile, gulp.series(pugJade, reload));
+  gulp.watch(path.scss.watch, gulp.series(scss, reload));
+  gulp.watch(path.image.watch, gulp.series(image, reload));
+  gulp.watch(path.sprite.watch, gulp.series(sprite, reload));
+  gulp.watch(path.fonts.watch, gulp.series(change, reload));
+  gulp.watch(path.fontsStyle.watch, gulp.series(fontsStyle, reload));
 };
 
-const end = gulp.series(clear, clearFonts, json,
-	gulp.parallel(pugJade, scss, js, fonts, image, sprite), fontsStyle,
+const end = gulp.series(
+  clear,
+  clearFonts,
+  json,
+  gulp.parallel(pugJade, scss, js, fonts, image, sprite),
+  fontsStyle
 );
 const dev = gulp.series(end, gulp.parallel(watcher, server));
 //* Call back
 export {
-	clear,
-	clearFonts,
-	fonts,
-	fontsStyle,
-	image,
-	js,
-	json,
-	pugJade,
-	scss,
-	server,
-	sprite,
-	redirect
+  clear,
+  clearFonts,
+  fonts,
+  fontsStyle,
+  image,
+  js,
+  json,
+  pugJade,
+  scss,
+  server,
+  sprite,
+  redirect,
 };
 //* Default Task
 export default app.isProd ? end : dev;
-

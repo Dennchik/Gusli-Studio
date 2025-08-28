@@ -44,9 +44,8 @@ export const ServiceText = ({ baseUrl }) => {
 			};
 			const handleMouseLeave = (event) => {
 				const target = event.currentTarget;
+				// Запускаем анимацию в обратном направлении с задержкой при уходе мыши 
 				setTimeout(() => {
-					/*  Запускаем анимацию в обратном направлении с задержкой при уходе
-					 мыши */
 					animationSvgLine(target, true);
 					animationSvgText(target, true);
 				}, 500);

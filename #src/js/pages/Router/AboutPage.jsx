@@ -21,22 +21,21 @@ const baseUrl = '.';
 function AboutPage() {
 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
-	useGSAP(
-		() => {
-			// create the smooth scroller FIRST!
-			if (!isMobile) {
-				const smoother = ScrollSmoother.create({
-					wrapper: '#wrapper',
-					content: '#content',
-					smooth: 1.5,
-					effects: true,
-					smoothTouch: 0.5,
-				});
-				return () => {
-					smoother.kill(); // Удаляем Smooth при размонтировании
-				};
-			}
-		},
+	useGSAP(() => {
+		// create the smooth scroller FIRST!
+		if (!isMobile) {
+			const smoother = ScrollSmoother.create({
+				wrapper: '#wrapper',
+				content: '#content',
+				smooth: 1.5,
+				effects: true,
+				smoothTouch: 0.5,
+			});
+			return () => {
+				smoother.kill(); // Удаляем Smooth при размонтировании
+			};
+		}
+	},
 	);
 
 	useEffect(() => {

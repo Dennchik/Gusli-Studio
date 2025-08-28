@@ -22,11 +22,9 @@ export default function modal() {
 			modal.classList.remove('_hide');
 			modal.style.zIndex = '13';
 
-			setTimeout(
-				() => {
-					modal.classList.add('_complete'); // Убираем границу через 1.75 секунды
-				}, 1000// Длительность анимации
-			);
+			setTimeout(() => {
+				modal.classList.add('_complete'); // Убираем границу через 1.75 секунды
+			}, 1000);
 
 			closeButton.addEventListener('click', () => {
 				console.log(closeButton);

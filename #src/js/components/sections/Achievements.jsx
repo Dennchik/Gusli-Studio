@@ -40,9 +40,9 @@ export function Achievements() {
 					<picture>
 						{isWebpSupported()
 							? <img className='parallax__image-achieve bg'
-										 src={'img/about/pattern.webp'} alt="image" />
+								src={'img/about/pattern.webp'} alt="image" />
 							: <img className='parallax__image-achieve bg'
-										 src={'img/about/pattern.png'} alt="image" />}
+								src={'img/about/pattern.png'} alt="image" />}
 					</picture>
 				</div>
 			</div>
@@ -52,28 +52,28 @@ export function Achievements() {
 					<section className="gallery">
 						<div className="gallery__items">
 							<input type="radio" id="in-1" value="1" name="tractor"
-										 checked={selectedRadio === '1'}
-										 onChange={handleRadioChange}
+								checked={selectedRadio === '1'}
+								onChange={handleRadioChange}
 							/>
 							<input type="radio" id="in-2" value="2" name="tractor"
-										 checked={selectedRadio === '2'}
-										 onChange={handleRadioChange}
+								checked={selectedRadio === '2'}
+								onChange={handleRadioChange}
 							/>
 							<input type="radio" id="in-3" value="3" name="tractor"
-										 checked={selectedRadio === '3'}
-										 onChange={handleRadioChange}
+								checked={selectedRadio === '3'}
+								onChange={handleRadioChange}
 							/>
 							<input type="radio" id="in-4" value="4" name="tractor"
-										 checked={selectedRadio === '4'}
-										 onChange={handleRadioChange}
+								checked={selectedRadio === '4'}
+								onChange={handleRadioChange}
 							/>
 							<input type="radio" id="in-5" value="5" name="tractor"
-										 checked={selectedRadio === '5'}
-										 onChange={handleRadioChange}
+								checked={selectedRadio === '5'}
+								onChange={handleRadioChange}
 							/>
 							<input type="radio" id="in-6" value="6" name="tractor"
-										 checked={selectedRadio === '6'}
-										 onChange={handleRadioChange}
+								checked={selectedRadio === '6'}
+								onChange={handleRadioChange}
 							/>
 							{/* --------------- gallery__card sv-1 --------------- */}
 							<article className="gallery__card sv-1">
@@ -103,10 +103,10 @@ export function Achievements() {
 									</div>
 									<div className="gallery__footer">
 										<label htmlFor="in-6"
-													 className="icon-arrow-left otra"></label>
+											className="icon-arrow-left otra"></label>
 										<i className="icon-magnifying-glass otra _open-button"></i>
 										<label htmlFor="in-2"
-													 className="icon-arrow-right otra"></label>
+											className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-1" className="icon-cycle afin"></label>
 								</div>
@@ -139,10 +139,10 @@ export function Achievements() {
 									</div>
 									<div className="gallery__footer">
 										<label htmlFor="in-1"
-													 className="icon-arrow-left otra"></label>
+											className="icon-arrow-left otra"></label>
 										<i className="icon-magnifying-glass otra _open-button"></i>
 										<label htmlFor="in-3"
-													 className="icon-arrow-right otra"></label>
+											className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-2" className="icon-cycle afin"></label>
 								</div>
@@ -177,10 +177,10 @@ export function Achievements() {
 									</div>
 									<div className="gallery__footer">
 										<label htmlFor="in-2"
-													 className="icon-arrow-left otra"></label>
+											className="icon-arrow-left otra"></label>
 										<i className="icon-magnifying-glass otra _open-button"></i>
 										<label htmlFor="in-4"
-													 className="icon-arrow-right otra"></label>
+											className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-3" className="icon-cycle afin"></label>
 								</div>
@@ -216,10 +216,10 @@ export function Achievements() {
 									</div>
 									<div className="gallery__footer">
 										<label htmlFor="in-3"
-													 className="icon-arrow-left otra"></label>
+											className="icon-arrow-left otra"></label>
 										<i className="icon-magnifying-glass otra _open-button"></i>
 										<label htmlFor="in-5"
-													 className="icon-arrow-right otra"></label>
+											className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-4" className="icon-cycle afin"></label>
 								</div>
@@ -254,10 +254,10 @@ export function Achievements() {
 									</div>
 									<div className="gallery__footer">
 										<label htmlFor="in-4"
-													 className="icon-arrow-left otra"></label>
+											className="icon-arrow-left otra"></label>
 										<i className="icon-magnifying-glass otra _open-button"></i>
 										<label htmlFor="in-6"
-													 className="icon-arrow-right otra"></label>
+											className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-5" className="icon-cycle afin"></label>
 								</div>
@@ -294,10 +294,10 @@ export function Achievements() {
 									</div>
 									<div className="gallery__footer">
 										<label htmlFor="in-5"
-													 className="icon-arrow-left otra"></label>
+											className="icon-arrow-left otra"></label>
 										<i className="icon-magnifying-glass otra _open-button"></i>
 										<label htmlFor="in-1"
-													 className="icon-arrow-right otra"></label>
+											className="icon-arrow-right otra"></label>
 									</div>
 									<label htmlFor="in-6" className="icon-cycle afin"></label>
 								</div>

@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { buildSwiper } from '../../layouts/build-swiper.js';
 import { Slide } from '../../layouts/showreel-slide.js';
 
-export const ShowreelSlide = ({ baseUrl }) => {
+export const ShowreelSlide = () => {
 	useEffect(() => {
 		buildSwiper();
 		Slide();
@@ -34,7 +34,6 @@ export const ShowreelSlide = ({ baseUrl }) => {
 											height="360"
 											style={{ border: 'none' }}
 											allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-											allowFullScreen
 											title={`Video ${index + 1}`}
 										></iframe>
 									</div>
